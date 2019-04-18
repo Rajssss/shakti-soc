@@ -1,2 +1,2 @@
-# shakti-soc
-
+Central repository for Shakti SoC's
+===================================
