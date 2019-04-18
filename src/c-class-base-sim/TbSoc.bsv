@@ -29,7 +29,7 @@ Details:
 --------------------------------------------------------------------------------------------------
 */
 package TbSoc;
-  import SoC:: *;
+  import Soc:: *;
   import Clocks::*;
   import GetPut:: *;
 	import Semi_FIFOF:: *;
@@ -55,7 +55,7 @@ package TbSoc;
     MakeResetIfc trst <- mkReset(0,False,tck_clk.new_clk);
 
 
-    Ifc_SoC soc <- mkSoC(tck_clk.new_clk,trst.new_rst);
+    Ifc_Soc soc <- mkSoc(tck_clk.new_clk,trst.new_rst);
     
     UserInterface#(`paddr,XLEN,16) uart <- mkuart_user(5);
     Reg#(Bool) rg_read_rx<- mkDReg(False);

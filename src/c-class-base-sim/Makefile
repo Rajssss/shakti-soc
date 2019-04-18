@@ -153,10 +153,11 @@ override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -
 
 DEPS=./deps
 CORE_ROOT=${DEPS}/c-class/src
+COMMON_ROOT=../common
 CORE:=${CORE_ROOT}/core:${CORE_ROOT}/core/fpu:${DEPS}/caches_mmu/src:${CORE_ROOT}/core/predictors
 M_EXT:=${CORE_ROOT}/core/m_ext
 FABRIC:=${DEPS}/fabrics/axi4:${DEPS}/fabrics/axi4lite:${DEPS}/fabrics/tilelink_lite
-UNCORE:=${CORE_ROOT}/uncore
+UNCORE:=${COMMON_ROOT}/uncore
 TESTBENCH:=${CORE_ROOT}/testbench
 PERIPHERALS:=${DEPS}/devices/bootrom:${DEPS}/devices/pwm:${DEPS}/devices/uart:${DEPS}/devices/clint:${DEPS}/devices/bram:${DEPS}/devices/riscvDebug013:${DEPS}/devices/jtagdtm
 WRAPPERS:=${CORE_ROOT}/wrappers
