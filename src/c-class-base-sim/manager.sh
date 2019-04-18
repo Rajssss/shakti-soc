@@ -32,6 +32,7 @@ err() { echo "$*" 1>&2 ;}
 ## Checking dependencies function
 update_deps () {
     printf "\n"
+    mkdir -p deps
     git clone -b $BRANCH --single-branch $CCLASS_REPO deps/c-class || err "c-class repo already exists"
     git clone $CACHES_REPO deps/caches_mmu || err "caches_mmu already exists"
     git clone --recursive $COMMON_REPO deps/common_bsv || err "common_bsv already exists"

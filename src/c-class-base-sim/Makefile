@@ -199,7 +199,7 @@ check-restore: update_xlen
 
 .PHONY: update_xlen
 update_xlen:
-	@echo "XLEN=$(XLEN)" > ./deps/dts/Makefile.inc
+	#@echo "XLEN=$(XLEN)" > ./deps/dts/Makefile.inc
 
 .PHONY:  compile_bluesim
 compile_bluesim: check-restore check-env
