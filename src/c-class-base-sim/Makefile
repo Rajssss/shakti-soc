@@ -158,11 +158,11 @@ CORE:=${CORE_ROOT}/core:${CORE_ROOT}/core/fpu:${DEPS}/caches_mmu/src:${CORE_ROOT
 M_EXT:=${CORE_ROOT}/core/m_ext
 FABRIC:=${DEPS}/fabrics/axi4:${DEPS}/fabrics/axi4lite:${DEPS}/fabrics/tilelink_lite
 UNCORE:=${COMMON_ROOT}/uncore
-TESTBENCH:=${CORE_ROOT}/testbench
+TESTBENCH:=${COMMON_ROOT}/testbench
 PERIPHERALS:=${DEPS}/devices/bootrom:${DEPS}/devices/pwm:${DEPS}/devices/uart:${DEPS}/devices/clint:${DEPS}/devices/bram:${DEPS}/devices/riscvDebug013:${DEPS}/devices/jtagdtm
 WRAPPERS:=${CORE_ROOT}/wrappers
 LIB:=${DEPS}/common_bsv
-COMMON_VERILOG:=${CORE_ROOT}/common_verilog
+COMMON_VERILOG:=${COMMON_ROOT}/common_verilog
 VERILATOR_FLAGS += --stats -O3 -CFLAGS -O3 -LDFLAGS "-static" --x-assign fast --x-initial fast \
 --noassert sim_main.cpp --bbox-sys -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH \
 -Wno-lint -Wno-COMBDLY -Wno-INITIALDLY --autoflush $(coverage) $(trace) --threads $(THREADS) \
