@@ -39,7 +39,9 @@ update_deps () {
     git clone $FABRICS_REPO deps/fabrics || err "fabrics already exists"
 }
 
-# Check if no command line args passed, print help and exit
+### Main Script
+
+## Check if no command line args passed, print help and exit
 if [ "$#" -eq 0 ]; then
     usage
 fi

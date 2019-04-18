@@ -25,9 +25,9 @@ define presim_config
 #	@ln -fs src/caches/*.mem .
 endef
 
-TOP_MODULE:=mkTbSoC
-TOP_FILE:=TbSoC.bsv
-TOP_DIR:=./src/testbench
+TOP_MODULE:=mkTbSoc
+TOP_FILE:=TbSoc.bsv
+TOP_DIR:=.
 WORKING_DIR := $(shell pwd)
 
 ifneq (,$(findstring RV64,$(ISA)))
@@ -151,14 +151,17 @@ override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -
 								 -D bpureset=$(BPURESET) -D causesize=$(CAUSESIZE) -D $(PREDICTOR)=True
 		
 
-CORE:=./src/core/:./src/core/fpu/:./src/caches_mmu/src/:./src/core/predictors/
-M_EXT:=./src/core/m_ext/
-FABRIC:=./src/fabrics/axi4:./src/fabrics/axi4lite:./src/fabrics/tilelink_lite
-UNCORE:=./src/uncore
-TESTBENCH:=./src/testbench/
-PERIPHERALS:=./src/devices/bootrom:./src/devices/pwm:./src/devices/uart:./src/devices/clint:./src/devices/bram:./src/devices/riscvDebug013:./src/devices/jtagdtm/
-WRAPPERS:=./src/wrappers/
-LIB:=./src/common_bsv
+DEPS=./deps
+CORE_ROOT=${DEPS}/c-class/src
+CORE:=${CORE_ROOT}/core:${CORE_ROOT}/core/fpu:${DEPS}/caches_mmu/src:${CORE_ROOT}/core/predictors
+M_EXT:=${CORE_ROOT}/core/m_ext
+FABRIC:=${DEPS}/fabrics/axi4:${DEPS}/fabrics/axi4lite:${DEPS}/fabrics/tilelink_lite
+UNCORE:=${CORE_ROOT}/uncore
+TESTBENCH:=${CORE_ROOT}/testbench
+PERIPHERALS:=${DEPS}/devices/bootrom:${DEPS}/devices/pwm:${DEPS}/devices/uart:${DEPS}/devices/clint:${DEPS}/devices/bram:${DEPS}/devices/riscvDebug013:${DEPS}/devices/jtagdtm
+WRAPPERS:=${CORE_ROOT}/wrappers
+LIB:=${DEPS}/common_bsv
+COMMON_VERILOG:=${CORE_ROOT}/common_verilog
 VERILATOR_FLAGS += --stats -O3 -CFLAGS -O3 -LDFLAGS "-static" --x-assign fast --x-initial fast \
 --noassert sim_main.cpp --bbox-sys -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH \
 -Wno-lint -Wno-COMBDLY -Wno-INITIALDLY --autoflush $(coverage) $(trace) --threads $(THREADS) \
@@ -196,7 +199,7 @@ check-restore: update_xlen
 
 .PHONY: update_xlen
 update_xlen:
-	@echo "XLEN=$(XLEN)" > verification/dts/Makefile.inc
+	@echo "XLEN=$(XLEN)" > ./deps/dts/Makefile.inc
 
 .PHONY:  compile_bluesim
 compile_bluesim: check-restore check-env
@@ -237,9 +240,9 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BELoad.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BE.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2.v ${VERILOGDIR}
-	@cp src/common_verilog/bram_1r1w.v ${VERILOGDIR}
-	@cp src/common_verilog/bram_1rw.v ${VERILOGDIR}
-	@cp src/common_verilog/BRAM1Load.v ${VERILOGDIR}
+	@cp ${COMMON_VERILOG}/bram_1r1w.v ${VERILOGDIR}
+	@cp ${COMMON_VERILOG}/bram_1rw.v ${VERILOGDIR}
+	@cp ${COMMON_VERILOG}/BRAM1Load.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}

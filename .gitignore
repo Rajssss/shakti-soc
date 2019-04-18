@@ -3,3 +3,6 @@ verilog
 
 deps
 logs
+
+bsv_build
+old_vars
