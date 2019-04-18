@@ -8,7 +8,7 @@ CCLASS_REPO=https://gitlab.com/anmolsahoo25/c-class
 CACHES_REPO=https://gitlab.com/shaktiproject/uncore/caches_mmu
 COMMON_REPO=https://gitlab.com/shaktiproject/common_bsv
 DEVICES_REPO=https://gitlab.com/shaktiproject/uncore/devices
-FABRICS_REPO=https://gitlab.com/shaktiproject/uncore/fabrics
+FABRICS_REPO=https://gitlab.com/anmolsahoo25/fabrics
 
 
 ### Functions to be re-used
