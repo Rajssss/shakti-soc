@@ -179,7 +179,7 @@ package Soc;
     method Bit#(1)wire_tdo;                                                                       
       return tdo.crossed();                                                                       
     endmethod
-    interface mem_master = fabric.v_to_slaves[`Memory_slave_num];
       // -------------------------------------------- //
+    interface mem_master = fabric.v_to_slaves[`Memory_slave_num];
   endmodule: mkSoc
 endpackage: Soc
