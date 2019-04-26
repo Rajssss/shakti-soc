@@ -4,3 +4,8 @@ common_verilog
 devices
 fabrics
 caches_mmu
+fpga_project
+*.jou
+
+*.log
+
