@@ -240,14 +240,20 @@ generate_boot_files: update_xlen
 
 .PHONY: ip_build
 ip_build: ## build Xilinx Core-IPs used in this project
-	vivado -mode tcl -notrace -source tcl/create_ip_project.tcl -tclargs $(FPGA) || (echo "Could \
-not create IP project"; exit 1)
-	@vivado -mode tcl -notrace -source tcl/create_multiplier.tcl -tclargs $(XLEN) $(MULSTAGES) ||\
-(echo "Could not create Multiplier IP"; exit 1)
+	vivado -mode tcl -notrace -source tcl/create_ip_project.tcl -tclargs $(FPGA) \
+		|| (echo "Could not create IP project"; exit 1)
+	@vivado -mode tcl -notrace -source tcl/create_multiplier.tcl -tclargs $(XLEN) $(MULSTAGES) \
+		|| (echo "Could not create Multiplier IP"; exit 1)
+
+.PHONY: arty_build
+arty_build: 
+	vivado -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
+	|| (echo "Could not create core project"; exit 1)
+	#@vivado -mode tcl -source tcl/run.tcl || (echo "ERROR: While running synthesis")
 
 .PHONY: clean
 clean:
-	rm -rf $(BSVBUILDDIR) *.log 
+	rm -rf $(BSVBUILDDIR) *.log fpga_project
 	rm -f *.jou rm *.log *.mem old_vars log
 
 clean_verilog: clean 
@@ -260,9 +266,3 @@ restore: clean_verilog
 #	@vivado -mode tcl -notrace -source $(SHAKTI_HOME)/src/tcl/create_divider.tcl -tclargs $(XLEN) $(DIVSTAGES) ||\
 (echo "Could not create Divider IP"; exit 1)
 
-#.PHONY: vivado_build
-#vivado_build: 
-#	@vivado -mode tcl -source $(SHAKTI_HOME)/src/tcl/create_project.tcl -tclargs \
-#  $(SYNTHTOP) $(FPGA) $(ISA) || (echo "Could not create core project"; exit 1)
-#	@vivado -mode tcl -source $(SHAKTI_HOME)/src/tcl/run.tcl || (echo "ERROR: While\
-#  running synthesis")

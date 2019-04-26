@@ -1,3 +1,6 @@
+set curdir [ file dirname [ file normalize [ info script ] ] ]
+source $curdir/env.tcl
+
 if { $argc != 3 } {
   puts "Please pass the top module name that needs to be synthesized along with the fpga part"
   puts " -tclargs <mkTbSoc> <xc7a100tcsg324-1> <isa>"
@@ -6,9 +9,6 @@ if { $argc != 3 } {
   puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] "
 }
 
-
-set curdir [ file dirname [ file normalize [ info script ] ] ]
-source $curdir/env.tcl
 
 set isa [lindex $argv 2]
 
