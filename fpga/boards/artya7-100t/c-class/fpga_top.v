@@ -58,7 +58,6 @@ module fpga_top#
    
    input         sys_clk,
    
-   output        pin_tg_compare_error,
    output        init_calib_complete,
    output        pin_aresetn,
    
