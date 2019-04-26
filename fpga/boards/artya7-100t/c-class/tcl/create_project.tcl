@@ -11,7 +11,7 @@ if { $argc != 3 } {
 
 
 set isa [lindex $argv 2]
-
+set base_version [string range [version -short] 0 3]
 # create folders
 file mkdir $fpga_dir
 
@@ -54,14 +54,14 @@ if {[string first "M" $isa] != -1} {
   import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/multiplier/multiplier.xci
   generate_target all [get_ips]
 }
+import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {
-    create_run -flow {Vivado Synthesis 2018} -part [lindex $argv 1] -strategy\
-"Vivado Synthesis Defaults" -constrset constrs_1 core_synth_1
+    create_run -flow "Vivado Synthesis $base_version" -part [lindex $argv 1] -strategy "Vivado Synthesis Defaults" -constrset constrs_1 core_synth_1
 } else {
     set_property strategy "Vivado Synthesis Defaults" [get_runs core_synth_1]
-    set_property flow "Vivado Synthesis 2018" [get_runs core_synth_1]
+    set_property flow "Vivado Synthesis $base_version" [get_runs core_synth_1]
 }
 # do not flatten design
 set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
@@ -72,11 +72,11 @@ current_run -synthesis [get_runs core_synth_1]
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet core_impl_1] ""]} {
-  create_run -part [lindex $argv 1] -flow {Vivado Implementation 2018} -strategy\
+  create_run -part [lindex $argv 1] -flow "Vivado Implementation $base_version" -strategy\
  "Vivado Implementation Defaults" -constrset constrs_1 -parent_run core_synth_1 core_impl_1
 } else {
   set_property strategy "Vivado Implementation Defaults" [get_runs core_impl_1]
-  set_property flow "Vivado Implementation 2018" [get_runs core_impl_1]
+  set_property flow "Vivado Implementation $base_version" [get_runs core_impl_1]
 }
 set obj [get_runs core_impl_1]
 set_property -name "part" -value [lindex $argv 1] -objects $obj

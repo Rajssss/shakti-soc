@@ -7,7 +7,7 @@ set_property "simulator_language" "Mixed" [current_project]
 set_property "target_language" "Verilog" [current_project]
 
 if { [get_ips -quiet clk_divider] eq "" } {
-    create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_divider 
+    create_ip -name clk_wiz -vendor xilinx.com -library ip -module_name clk_divider 
 } else {
     reset_run clk_divider_synth_1
 }
