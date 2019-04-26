@@ -19,9 +19,9 @@ file mkdir $fpga_dir
 create_project -force $core_project -dir $core_project_dir -part [lindex $argv 1]
 
 # Set project properties
-set obj [get_projects $core_project]
-set_property "default_lib" "xil_defaultlib" $obj
-set_property "simulator_language" "Mixed" $obj
+set project_obj [get_projects $core_project]
+set_property "default_lib" "xil_defaultlib" $project_obj
+set_property "simulator_language" "Mixed" $project_obj
 
 # Create 'sources_1' fileset (if not found)
 if {[string equal [get_filesets -quiet sources_1] ""]} {
@@ -30,10 +30,6 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set 'sources_1' fileset object
 add_files -norecurse -fileset [get_filesets sources_1] $home_dir/verilog/
-if {[string first "M" $isa] != -1} {
-  remove_files -fileset sources_1 multiplier.v
-  remove_files -fileset sources_1 divider.v
-}
 
 # add include path
 set_property include_dirs $home_dir/verilog/ [get_filesets sources_1]
@@ -47,11 +43,11 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 }
 
 # Set 'constrs_1' fileset object
-set obj [get_filesets constrs_1]
+#set file_obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
 #set file "[file normalize "$core_project_dir/constraints/constraints.xdc"]"
-#set file_added [add_files -norecurse -fileset $obj $file]
+#set file_added [add_files -norecurse -fileset $file_obj $file]
 
 # generate all IP source code
 if {[string first "M" $isa] != -1} {
@@ -68,8 +64,8 @@ if {[string equal [get_runs -quiet core_synth_1] ""]} {
     set_property flow "Vivado Synthesis 2018" [get_runs core_synth_1]
 }
 # do not flatten design
-#set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
-set_property -name "steps.synth_design.args.more options" -value {-verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY} -objects $obj
+set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
+set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value {-verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY} -objects [get_runs core_synth_1]
 
 current_run -synthesis [get_runs core_synth_1]
 #et_property strategy Flow_PerfOptimized_high [get_runs core_synth_1]
