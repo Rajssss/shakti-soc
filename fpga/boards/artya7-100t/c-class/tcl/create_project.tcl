@@ -29,7 +29,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 }
 
 # Set 'sources_1' fileset object
-add_files -norecurse -fileset [get_filesets sources_1] $home_dir/verilog/
+add_files -norecurse -fileset [get_filesets sources_1] $home_dir/verilog/ ./fpga_top.v
 
 # add include path
 set_property include_dirs $home_dir/verilog/ [get_filesets sources_1]
