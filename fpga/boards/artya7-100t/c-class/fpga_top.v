@@ -33,7 +33,7 @@ module fpga_top#
    parameter AXI_ADDR_WIDTH = 28
    )
   (
-
+   // ---- DDR ports --------------//
    // Inouts
    inout [15:0]   ddr3_dq,
    inout [1:0]    ddr3_dqs_n,
@@ -60,35 +60,36 @@ module fpga_top#
    
    output        init_calib_complete,
    output        pin_aresetn,
-   
+   // ---- JTAG ports ------- //
    input         pin_tck,
    input         pin_trst,
    input         pin_tms,
    input         pin_tdi,
    output        pin_tdo,
-    
+   
+   // ---- UART ports --------//
    input         uart_SIN,
    output        uart_SOUT,   
 
+   // ---- System Reset ------//
    input         sys_rst	//Active Low
    );
    
-      
-	clk_wiz_0 clk_wizard 
-	(
-		// Clock in ports
-		.clk_in1(sys_clk),
-
-		// Clock out ports  
-		.clk_out1(core_clk),
-		.clk_out2(ddr3_main),
-		.clk_out3(ddr3_ref),
-
-		// Status and control signals               
-		.resetn(sys_rst), 
-		.locked(locked)            
-	);
-
+   // ---------- Clock divider ----------------//
+    wire                            core_clk;
+    wire                            ddr3_main;
+    wire                            ddr3_ref;
+    wire                            locked;
+    clk_divider clk_div (
+                        .clk_in1(sys_clk),  
+                        .clk_out1(core_clk),
+                        .clk_out2(ddr3_main),
+                        .clk_out3(ddr3_ref),
+                        .resetn(sys_rst), 
+                        .locked(locked) );
+    // ----------------------------------------- //
+    
+    
   wire                              clk;
   wire                              rst;
   wire                              mmcm_locked;
