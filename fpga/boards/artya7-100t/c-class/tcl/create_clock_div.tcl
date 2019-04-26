@@ -1,7 +1,6 @@
 set curdir [ file dirname [ file normalize [ info script ] ] ]
 source $curdir/env.tcl
 
-
 open_project $ip_project_dir/$ip_project.xpr
 set_property "simulator_language" "Mixed" [current_project]
 set_property "target_language" "Verilog" [current_project]
