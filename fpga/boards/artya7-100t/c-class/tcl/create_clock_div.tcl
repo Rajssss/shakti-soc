@@ -35,3 +35,4 @@ set_property -dict [list \
 create_ip_run [get_ips clk_divider]
 launch_run clk_divider_synth_1
 wait_on_run clk_divider_synth_1
+exit
