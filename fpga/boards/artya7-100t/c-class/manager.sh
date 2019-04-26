@@ -37,7 +37,17 @@ usage () {
     printf "Available commands: \n\n"
     printf "./manager.sh help \t\t Displays help\n"
     printf "./manager.sh update_deps \t Clones/Updates the Dependent Repos\n"
+    printf "./manager.sh nuke \t\t Resets the folder to original settings\n"
     exit 1
+}
+
+nuke () {
+  make restore
+  for i in ${!repo_list[*]}; do
+    local dirname=$(extract_name "${repo_list[$i]}") 
+    echo "Deleting folder: ${driname}"
+    rm -rf $dirname
+  done
 }
 
 check_version () {
@@ -89,5 +99,9 @@ case $1 in
         printf "======================================\n"
         check_version dtc 1.4.7
         update_deps
+        ;;
+    nuke)
+        printf "\nshakti-soc manager ${VERSION} - nuking all changes"
+        nuke
         ;;
 esac
