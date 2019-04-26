@@ -295,7 +295,7 @@ module fpga_top#
  assign pin_aresetn= rst;
 
  
- axi_clock_converter_0 axi_clock_converter_inst (
+ clock_converter clock_converter (
        .s_axi_aclk(core_clk),
        .s_axi_aresetn(locked),
        .s_axi_awid(s_axi_awid),
