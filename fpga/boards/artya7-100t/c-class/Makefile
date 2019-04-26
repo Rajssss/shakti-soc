@@ -22,8 +22,8 @@ endif
 SHAKTI_HOME=$(PWD)
 export SHAKTI_HOME
 
-TOP_MODULE:=mkTbSoc
-TOP_FILE:=TbSoc.bsv
+TOP_MODULE:=mkSoc
+TOP_FILE:=Soc.bsv
 TOP_DIR:=./
 WORKING_DIR := $(shell pwd)
 
@@ -140,9 +140,9 @@ override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -
 		
 # ------------------------------------------------------------------------------------------------ #
 # ------------------ Include directories for bsv compilation ------------------------------------- #
-CORE:=../src/core/:../src/core/predictors/
-F_EXT:=../src/core/fpu/
-M_EXT:=../src/core/m_ext/
+CORE:=c-class/src/core/:c-class/src/core/predictors/
+F_EXT:=c-class/src/core/fpu/
+M_EXT:=c-class/src/core/m_ext/
 FABRIC:=./fabrics/axi4:./fabrics/axi4lite
 CACHES:=./caches_mmu/src/
 PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/
@@ -169,8 +169,7 @@ endif
 # ------------------------------------------------------------------------------------------------ #
 
 # ------------------------------------- Makefile TARGETS ----------------------------------------- #
-default: generate_verilog link_verilator generate_boot_files
-gdb: generate_verilog link_verilator_gdb generate_boot_files
+default: generate_verilog
 
 .PHONY: help
 help: ## This help dialog.
