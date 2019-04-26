@@ -45,7 +45,7 @@ nuke () {
   make restore
   for i in ${!repo_list[*]}; do
     local dirname=$(extract_name "${repo_list[$i]}") 
-    echo "Deleting folder: ${driname}"
+    echo "Deleting folder: ${dirname}"
     rm -rf $dirname
   done
 }
@@ -101,7 +101,8 @@ case $1 in
         update_deps
         ;;
     nuke)
-        printf "\nshakti-soc manager ${VERSION} - nuking all changes"
+        printf "\nshakti-soc manager ${VERSION} - nuking all changes\n"
+        printf "======================================\n"
         nuke
         ;;
 esac
