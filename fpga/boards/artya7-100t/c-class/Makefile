@@ -26,6 +26,7 @@ TOP_MODULE:=mkSoc
 TOP_FILE:=Soc.bsv
 TOP_DIR:=./
 WORKING_DIR := $(shell pwd)
+Vivado_loc=$(shell which vivado)
 
 
 # ------------------ based on the config generate define macros for bsv compilation --------------#
@@ -241,7 +242,7 @@ ip_build: ## build Xilinx Core-IPs used in this project
 		|| (echo "Could not create IP project"; exit 1)
 
 .PHONY: arty_build
-arty_build: 
+arty_build:
 	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
 	|| (echo "Could not create core project"; exit 1)
 	vivado -nojournal -log artybuild.log -notrace -mode tcl -source tcl/run.tcl \
@@ -249,7 +250,7 @@ arty_build:
 
 .PHONY: program
 program: ## program the fpga
-	vivado -nojournal -nolog -mode tcl -source tcl/program.tcl
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program.tcl
 
 .PHONY: clean-bsv
 clean-bsv: ## clean bsv build director

@@ -17,3 +17,5 @@ open_hw_target
 set_property PROGRAM.FILE $bit [lindex [get_hw_devices] 0]
 program_hw_devices [current_hw_device]
 disconnect_hw_server
+puts "INFO: FPGA has been programmed with the given bitstream"
+exit
