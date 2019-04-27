@@ -13,7 +13,10 @@ if { [get_ips -quiet clk_converter] eq "" } {
     reset_run clk_converter_synth_1
 }
 
-set_property -dict [list CONFIG.DATA_WIDTH {128} CONFIG.ID_WIDTH {4}] [get_ips clk_converter]
+set_property -dict [list \
+  CONFIG.DATA_WIDTH {64} \
+  CONFIG.ID_WIDTH {4} \
+  CONFIG.ADDR_WIDTH {28} ] [get_ips clk_converter]
 
 create_ip_run [get_ips clk_converter]
 #launch_run clk_converter_synth_1
