@@ -247,6 +247,9 @@ module fpga_top#
 
         .mmcm_locked                    (mmcm_locked),
         .aresetn                        (aresetn),
+        .app_sr_req                     ( 1'b0),
+        .app_ref_req                    ( 1'b0),
+        .app_zq_req                     ( 1'b0),
         .app_sr_active                  (),
         .app_ref_ack                    (),
         .app_zq_ack                     (),
