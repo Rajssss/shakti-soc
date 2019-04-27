@@ -236,13 +236,13 @@ generate_boot_files: update_xlen
 
 .PHONY: ip_build
 ip_build: ## build Xilinx Core-IPs used in this project
-	@vivado -nojournal -mode tcl -notrace -source tcl/create_ip_project.tcl \
+	@vivado -log ipbuild.log -nojournal -mode tcl -notrace -source tcl/create_ip_project.tcl \
 		-tclargs $(FPGA) $(XLEN) $(MULSTAGES) $(ISA) $(JOBS) \
 		|| (echo "Could not create IP project"; exit 1)
 
 .PHONY: arty_build
 arty_build: 
-	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
+	vivado -nojournal -log artybuild.log -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
 	|| (echo "Could not create core project"; exit 1)
 	#@vivado -mode tcl -source tcl/run.tcl || (echo "ERROR: While running synthesis")
 
