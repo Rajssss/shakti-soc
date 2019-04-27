@@ -52,17 +52,12 @@ $ make ip_build
 ```
 $ make arty_build
 ```
-
-8. The generate bitstream will be at :
- ```
- shakti-soc/fpga/boards/artya7-100t/c-class/fpga_project/c-class/
- c-class.runs/core_impl_1/fpga_top.bit
- ```
- 
- 9. Programming the FPGA (Requires sudo access)
+8. Programming the FPGA (Requires sudo access)*
 ```
 $ make program
 ```
+
+\* The "*make program*" command creates a folder whose owner is root. Therefore, before running "*make arty_build*" command again, delete the *shakti-soc/fpga/boards/artya7-100t/c-class/fpga_project/c-class* folder.
 
 ## Connecting to the board
 
