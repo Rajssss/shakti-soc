@@ -32,6 +32,7 @@ CONFIG.Use_Custom_Output_Width {false} \
 CONFIG.PipeStages $stages \
 CONFIG.ClockEnable {false} \
 CONFIG.SyncClear {false} ] [get_ips multiplier] 
+generate_target {instantiation_template} [get_ips mig_ddr3]
 create_ip_run [get_ips multiplier]
 #launch_run multiplier_synth_1
 #wait_on_run multiplier_synth_1

@@ -17,7 +17,7 @@ set_property -dict [list \
   CONFIG.DATA_WIDTH {64} \
   CONFIG.ID_WIDTH {4} \
   CONFIG.ADDR_WIDTH {28} ] [get_ips clk_converter]
-
+generate_target {instantiation_template} [get_ips clk_converter]
 create_ip_run [get_ips clk_converter]
 #launch_run clk_converter_synth_1
 #wait_on_run clk_converter_synth_1

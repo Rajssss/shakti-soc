@@ -33,6 +33,7 @@ set_property -dict [list \
                         CONFIG.CLKOUT3_DRIVES {BUFG} \
                         CONFIG.CLKOUT3_USED {1} ] [get_ips clk_divider]
 
+generate_target {instantiation_template} [get_ips clk_divider]
 create_ip_run [get_ips clk_divider]
 #launch_run clk_divider_synth_1
 #wait_on_run clk_divider_synth_1

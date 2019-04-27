@@ -14,6 +14,7 @@ if { [get_ips -quiet mig_7series_0] eq "" } {
 }
 
 set_property CONFIG.XML_INPUT_FILE [file normalize $home_dir/tcl/artya7100t_mig.prj] [get_ips mig_ddr3]
+generate_target {instantiation_template} [get_ips mig_ddr3]
 create_ip_run [get_ips mig_ddr3]
 #launch_run mig_7series_0_synth_1
 #wait_on_run mig_7series_0_synth_1
