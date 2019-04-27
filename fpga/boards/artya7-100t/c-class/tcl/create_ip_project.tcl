@@ -2,11 +2,12 @@ set curdir [ file dirname [ file normalize [ info script ] ] ]
 source $curdir/env.tcl
 
 if { $argc != 5 } {
-  puts "Please pass the top module name that needs to be synthesized along with the fpga part"
-  puts " -tclargs <fpga-part-no> <xlen> <mulstages> <isa> <jobs>"
+  puts "ERROR: Please pass the top module name that needs to be synthesized along with the fpga part"
+  puts "       -tclargs <fpga-part-no> <xlen> <mulstages> <isa> <jobs>"
   exit 2
 }
 
+# set variable based on the arguments passed
 set fpga_part [lindex $argv 0]
 set mul_width [lindex $argv 1]
 set mul_stages [lindex $argv 2]
@@ -31,6 +32,7 @@ set_property "target_language" "Verilog" [current_project]
 source $home_dir/tcl/create_axi_converter.tcl
 source $home_dir/tcl/create_clock_div.tcl
 
+# Create the multiplier IP only if "M" extension is present
 if {[string first "M" $isa] != -1} {
   set argv [list $mul_width $mul_stages]
   set argc 2
@@ -38,7 +40,13 @@ if {[string first "M" $isa] != -1} {
   unset argv
   unset argc
 }
+
+# capture all runs except the default synth_1
 set run_list [get_runs *_synth_1]
+
+# launch all runs parallel. $jobs is argument from user
 launch_runs $run_list -jobs $jobs
+
+# Wait for each run to complete
 foreach my_run $run_list {wait_on_run $my_run}
 exit
