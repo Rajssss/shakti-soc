@@ -13,7 +13,7 @@ set core_project_dir $fpga_dir/c-class
 # set ip project name
 set ip_project manage_ip
 set core_project c-class
-puts "home_dir: $home_dir"
-puts "fpga_dir: $fpga_dir"
-puts "ip_project_dir: $ip_project_dir"
-puts "core_project_dir: $core_project_dir"
+puts "\nDEBUG: home_dir:          $home_dir"
+puts "DEBUG: fpga_dir:          $fpga_dir"
+puts "DEBUG: ip_project_dir:    $ip_project_dir"
+puts "DEBUG: core_project_dir:  $core_project_dir"
