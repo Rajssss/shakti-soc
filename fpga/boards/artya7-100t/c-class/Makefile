@@ -183,7 +183,7 @@ check-py:
 
 .PHONY: check-restore
 check-restore:
-	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean ;	fi;
+	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv ;	fi;
 
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
