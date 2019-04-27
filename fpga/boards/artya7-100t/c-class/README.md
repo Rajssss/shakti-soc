@@ -50,7 +50,7 @@ $ make ip_build
 
 7. Synthesize and implement the SoC
 ```
-$ make arty build
+$ make arty_build
 ```
 
 8. The generate bitstream will be at :
@@ -59,8 +59,10 @@ $ make arty build
  c-class.runs/core_impl_1/fpga_top.bit
  ```
  
- One can then use this generated bitstream to program the FPGA.
-
+ 9. Programming the FPGA (Requires sudo access)
+```
+$ make program
+```
 
 ## Connecting to the board
 
