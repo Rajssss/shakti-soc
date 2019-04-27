@@ -236,14 +236,9 @@ generate_boot_files: update_xlen
 
 .PHONY: ip_build
 ip_build: ## build Xilinx Core-IPs used in this project
-	@vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_ip_project.tcl -tclargs $(FPGA) \
+	@vivado -nojournal -mode tcl -notrace -source tcl/create_ip_project.tcl \
+		-tclargs $(FPGA) $(XLEN) $(MULSTAGES) $(ISA) $(JOBS) \
 		|| (echo "Could not create IP project"; exit 1)
-	@vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_clock_div.tcl \
-		|| (echo "Could not create Multiplier IP"; exit 1)
-	@vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_multiplier.tcl -tclargs $(XLEN) $(MULSTAGES) \
-		|| (echo "Could not create Multiplier IP"; exit 1)
-	@vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_axi_converter.tcl \
-		|| (echo "Could not create Multiplier IP"; exit 1)
 
 .PHONY: arty_build
 arty_build: 
