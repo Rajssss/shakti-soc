@@ -45,7 +45,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 }
 
 # Add/Import constrs file and set constrs file properties
-add_files -norecurse -fileset constrs_1 $home_dir/constr_synth.xdc
+add_files -norecurse -fileset constrs_1 $home_dir/constr_impl.xdc
 
 # generate all IP source code
 if {[string first "M" $isa] != -1} {
