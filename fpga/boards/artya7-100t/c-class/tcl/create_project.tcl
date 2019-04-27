@@ -9,14 +9,15 @@ if { $argc != 3 } {
   puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] "
 }
 
-
+set top_module [lindex $argv 0]
+set fpga_part [lindex $argv 1]
 set isa [lindex $argv 2]
 set base_version [string range [version -short] 0 3]
 # create folders
 file mkdir $fpga_dir
 
 # create project
-create_project -force $core_project -dir $core_project_dir -part [lindex $argv 1]
+create_project -force $core_project -dir $core_project_dir -part $fpga_part
 
 # Set project properties
 set project_obj [get_projects $core_project]
@@ -35,7 +36,7 @@ add_files -norecurse -fileset [get_filesets sources_1] $home_dir/verilog/ ./fpga
 set_property include_dirs $home_dir/verilog/ [get_filesets sources_1]
 
 # Set 'sources_1' fileset properties
-set_property "top" [lindex $argv 0] [get_filesets sources_1]
+set_property "top" $top_module [get_filesets sources_1]
 
 # Create 'constrs_1' fileset (if not found)
 if {[string equal [get_filesets -quiet constrs_1] ""]} {
@@ -59,7 +60,8 @@ import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {
-    create_run -flow "Vivado Synthesis $base_version" -part [lindex $argv 1] -strategy "Vivado Synthesis Defaults" -constrset constrs_1 core_synth_1
+    create_run -flow "Vivado Synthesis $base_version" -part $fpga_part \
+    -strategy "Vivado Synthesis Defaults" -constrset constrs_1 core_synth_1
 } else {
     set_property strategy "Vivado Synthesis Defaults" [get_runs core_synth_1]
     set_property flow "Vivado Synthesis $base_version" [get_runs core_synth_1]
@@ -73,14 +75,14 @@ current_run -synthesis [get_runs core_synth_1]
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet core_impl_1] ""]} {
-  create_run -part [lindex $argv 1] -flow "Vivado Implementation $base_version" -strategy\
+  create_run -part $fpga_part -flow "Vivado Implementation $base_version" -strategy\
  "Vivado Implementation Defaults" -constrset constrs_1 -parent_run core_synth_1 core_impl_1
 } else {
   set_property strategy "Vivado Implementation Defaults" [get_runs core_impl_1]
   set_property flow "Vivado Implementation $base_version" [get_runs core_impl_1]
 }
 set obj [get_runs core_impl_1]
-set_property -name "part" -value [lindex $argv 1] -objects $obj
+set_property -name "part" -value $fpga_part -objects $obj
 set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
 set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
 
