@@ -9,8 +9,6 @@ SUPERVISOR=disable
 ARITH_TRAP=disable
 MULSTAGES=10
 DIVSTAGES=64
-FPGA=xc7a100tcsg324-1
-SYNTHTOP=fpga_top
 RESETPC=4096
 PADDR=32
 
@@ -75,3 +73,8 @@ ASIDWIDTH=9
 
 # Trigger Setup
 TRIGGERS=2
+
+# For Vivado Synthesis
+FPGA=xc7a100tcsg324-1
+SYNTHTOP=fpga_top
+JOBS=4
