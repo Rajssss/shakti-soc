@@ -27,6 +27,7 @@ create_project -force $ip_project -dir $ip_project_dir -part [lindex $argv 0]
 
 set_property "simulator_language" "Mixed" [current_project]
 set_property "target_language" "Verilog" [current_project]
+set_property board_part digilentinc.com:arty-a7-100:part0:1.0 [current_project]
 
 # source IP tcls
 source $home_dir/tcl/create_axi_converter.tcl

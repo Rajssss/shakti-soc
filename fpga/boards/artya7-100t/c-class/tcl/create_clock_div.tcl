@@ -14,6 +14,7 @@ if { [get_ips -quiet clk_divider] eq "" } {
 }
 
 set_property -dict [list \
+                        CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
                         CONFIG.PRIMITIVE {MMCM} \
                         CONFIG.RESET_TYPE {ACTIVE_LOW} \
                         CONFIG.RESET_PORT {resetn} \
