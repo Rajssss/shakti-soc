@@ -246,15 +246,19 @@ arty_build:
 	|| (echo "Could not create core project"; exit 1)
 	#@vivado -mode tcl -source tcl/run.tcl || (echo "ERROR: While running synthesis")
 
-.PHONY: clean
-clean:
-	rm -rf $(BSVBUILDDIR) *.log fpga_project
-	rm -f *.jou rm *.log *.mem old_vars log
+.PHONY: clean-bsv
+clean-bsv: ## clean bsv build director
+	rm -rf $(BSVBUILDDIR) old_vars
 
-clean_verilog: clean 
+clean-verilog: ## delete verilog folder
+clean-verilog: clean 
 	rm -rf verilog/
 
-restore: clean_verilog
+clean-fpga: ## delete fpga_prject and journal/log files as well
+	rm -rf fpga_project *.jou *.log
+
+restore: ## clean bsv-build, verilog and fpga folders
+restore: clean-bsv clean-verilog clean-fpga
 
 #	@vivado -mode tcl -notrace -source $(SHAKTI_HOME)/src/tcl/create_nexys4_mig.tcl ||\
 (echo "Could not create NEXYS4DDR-MIG  IP"; exit 1)
