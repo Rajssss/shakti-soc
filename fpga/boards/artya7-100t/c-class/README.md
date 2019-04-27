@@ -3,7 +3,7 @@
 This repo contains the flow for porting an instance of the C-class on the [ARTY A7-100T](https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/) board from digilent. 
 
 ## Features Available
-Please see Soc.defines for the memory-map.
+Please see Soc.defines for the memory-map. Given below are the default configs that have been used.
 * __C-class Config__:
     1. RV64IMAC
     2. No Caches
@@ -23,23 +23,52 @@ Please see Soc.defines for the memory-map.
 
 ## Steps to build
 
-Make sure you have connected your arty-board before running the last command
-
-
+1. Clone the *shakti-soc* repository.
 ```
-./manager.sh update_deps
-make generate_verilog
-make ip_build arty_build
-make program
+$ git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 ```
+
+2. Change present working directory to shakti-soc/fpga/boards/artya7-100t/c-class.
+```
+$ cd shakti-soc/fpga/boards/artya7-100t/c-class
+```
+3. Run the script to clone various repositories that contain the source code.
+```
+$ ./manager.sh update_deps
+```
+4. You can now change required SoC configurations in soc_config.inc, or change the address maps in SoC.defines. You can also connect new peripherals by modifying SoC.bsv and SoC.defines. For more information on the SoC parameters, refer [this link](https://gitlab.com/shaktiproject/cores/c-class/blob/master/docs/configuring_core.md).
+
+5. Generate verilog from bluespec source code.
+```
+$ make generate_verilog
+```
+
+6. Generate and synthesize the various Xilinx IPs that have been used
+```
+$ make ip_build
+```
+
+7. Synthesize and implement the SoC
+```
+$ make arty build
+```
+
+8. The generate bitstream will be at :
+ ```
+ shakti-soc/fpga/boards/artya7-100t/c-class/fpga_project/c-class/
+ c-class.runs/core_impl_1/fpga_top.bit
+ ```
+ 
+ One can then use this generated bitstream to program the FPGA.
+
 
 ## Connecting to the board
 
 Currently the arty build only supports booting in debug mode. On reset the, the core will start executing the infinite debug-loop at `0x00000000`. Once the board has been programmed using the above commands do the following:
 
-1. Open a terminal and launch OpenOCD
+1. Open a terminal and launch OpenOCD with sudo permissions
 `cd shakti-soc/fpga/boards/artya7-100t/c-class`
-`openocd -f shakti_ocd.cfg`
+`sudo openocd -f shakti_ocd.cfg`
 
 2. Open another terminal and launch gdb
 `riscv64-unknown-elf-gdb -x gdb.script`
