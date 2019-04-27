@@ -56,6 +56,7 @@ module fpga_top#
    output        ddr3_odt,
     
    output        pin_aresetn,
+   output        init_calib_complete,
    
    // ---- JTAG ports ------- //
    input         pin_tck,
@@ -173,8 +174,6 @@ module fpga_top#
 
     wire [11:0]                       device_temp;
     
-    wire                              init_calib_complete;
-
     // ------- Data width conversion from SoC master width to MIG width ---------- //
     reg [63:0] temp_axi_rdata;
     wire [5:0] temp_shift;
