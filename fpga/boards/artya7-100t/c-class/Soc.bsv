@@ -54,6 +54,9 @@ package Soc;
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
 
+	import gpio				::*;
+	import plic				::*;
+	import i2c			 :: *;
  
   function Bit#(TLog#(`Num_Slaves)) fn_slave_map (Bit#(`paddr) addr);
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
@@ -65,6 +68,12 @@ package Soc;
       slave_num = `Clint_slave_num;
     else if(addr>= `DebugBase && addr<= `DebugEnd)
       slave_num = `Debug_slave_num;
+    else if(addr>= `GPIOBase && addr<= `GPIOEnd)
+      slave_num = `GPIO_slave_num;
+    else if(addr>= `PLICBase && addr<= `PLICEnd)
+      slave_num = `PLIC_slave_num;
+    else if(addr>= `I2CBase && addr<= `I2CEnd)
+      slave_num = `I2C_slave_num;
     else
       slave_num = `Err_slave_num;
       
@@ -84,9 +93,15 @@ package Soc;
     (*always_enabled,always_ready*)                                                               
     method Bit#(1)wire_tdo;                                                                       
       // ---------------------------------------------//
+		method I2C_out i2c_out;									//I2c IO interface
+
+    (*always_enabled,always_ready*)                                                               
+		method Action interrupts(Bit#(8) inp);	//External interrupts to PLIC
+    interface GPIO#(16) gpio_io;						//GPIO IO interface
   endinterface
 
   (*synthesize*)
+	(*conflict_free = "rl_core_plic_connection, operation"*)
   module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
@@ -98,6 +113,9 @@ package Soc;
 	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68);
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
     Ifc_err_slave#(`paddr,ELEN,0) err_slave <- mkerr_slave;
+		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
+		Ifc_gpio_axi4#(`paddr, ELEN, 0, 16) gpio <- mkgpio_axi4;
+		Ifc_plic_axi4#(`paddr, ELEN, 0, 26, 2, 0) plic <-mkplic_axi4(`PLICBase);
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
@@ -113,6 +131,7 @@ package Soc;
     SyncFIFOIfc#(Bit#(41)) sync_request_to_dm <-mkSyncFIFOToCC(1,tck_clk,trst);                     
     SyncFIFOIfc#(Bit#(34)) sync_response_from_dm <-mkSyncFIFOFromCC(1,tck_clk);                     
                            
+		Wire#(Bit#(8)) wr_external_interrupts <- mkDWire('d0);
              // ----------- Connect JTAG IOs through null-crossing registers ------ //
     rule assign_jtag_inputs;                                                                                
       jtag_tap.tms_i(tms.crossed);                                                                  
@@ -149,7 +168,22 @@ package Soc;
       sync_response_from_dm.deq;                                                                    
       jtag_tap.response_from_dm(sync_response_from_dm.first);                                       
     endrule                                                                                         
-                                                                                                    
+    
+		//Rule to connect PLIC interrupt to the core's sideband
+		rule rl_core_plic_connection;
+			let {lv_plic_intr, x}<- plic.intrpt_note_sb.get;
+			cclass.sb_externalinterrupt.put(pack(lv_plic_intr));
+		endrule
+
+		//Rule to connect interrupts from various sources to PLIC
+		rule rl_connect_plic_connections;
+			let tmp<- gpio.sb_gpio_to_plic.get;
+			Bit#(16) lv_gpio_intr= pack(tmp);
+			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
+			plic.ifc_external_irq_io(plic_inputs);
+		endrule
+
+
     mkConnection (cclass.debug_server ,debug_module.hart);
       
     // ------------------------------------------------------------------------------------------//
@@ -161,6 +195,9 @@ package Soc;
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
     mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
+   	mkConnection (fabric.v_to_slaves [`I2C_slave_num ],		i2c.slave);
+		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
+		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
 
     // sideband connection
     mkConnection(cclass.sb_clint_msip,clint.sb_clint_msip);
@@ -172,14 +209,25 @@ package Soc;
       // ------------- JTAG IOs ----------------------//
     method Action wire_tms(Bit#(1)tms_in);                                                        
       tms <= tms_in;                                                                              
-    endmethod                                                                                     
+    endmethod                    
+
     method Action wire_tdi(Bit#(1)tdi_in);                                                        
       tdi <= tdi_in;                                                                              
     endmethod                                                                                     
+
     method Bit#(1)wire_tdo;                                                                       
       return tdo.crossed();                                                                       
     endmethod
+
       // -------------------------------------------- //
     interface mem_master = fabric.v_to_slaves[`Memory_slave_num];
+
+		method I2C_out i2c_out= i2c.io;
+
+		method Action interrupts(Bit#(8) inp);
+			wr_external_interrupts<= inp;
+		endmethod
+
+    interface gpio_io= gpio.io;
   endmodule: mkSoc
 endpackage: Soc
