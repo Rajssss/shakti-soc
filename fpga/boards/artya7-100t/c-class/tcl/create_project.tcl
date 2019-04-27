@@ -3,7 +3,7 @@ source $curdir/env.tcl
 
 if { $argc != 3 } {
   puts "Please pass the top module name that needs to be synthesized along with the fpga part"
-  puts " -tclargs <mkTbSoc> <xc7a100tcsg324-1> <isa>"
+  puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa>"
   exit 2
 } else {
   puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] "
@@ -42,12 +42,11 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
   create_fileset -constrset constrs_1
 }
 
-# Set 'constrs_1' fileset object
-#set file_obj [get_filesets constrs_1]
-
 # Add/Import constrs file and set constrs file properties
-#set file "[file normalize "$core_project_dir/constraints/constraints.xdc"]"
-#set file_added [add_files -norecurse -fileset $file_obj $file]
+add_files -norecurse -fileset constrs_1 $home_dir/constr_synth.xdc
+add_files -norecurse -fileset constrs_1 $home_dir/constr_impl.xdc
+set_property used_in_implementation false [get_files  $home_dir/constr_synth.xdc]
+set_property used_in_synthesis false [get_files  $home_dir/constr_impl.xdc]
 
 # generate all IP source code
 if {[string first "M" $isa] != -1} {
