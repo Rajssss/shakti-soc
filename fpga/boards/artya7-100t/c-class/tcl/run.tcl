@@ -24,7 +24,7 @@ report_timing_summary -delay_type min_max -report_unconstrained -check_timing_ve
 #report_timing -max_paths 1 -significant_digits 3 -from [all_inputs] -to [get_cells [all_rams]] -file $core_project_dir/timing_i2m.txt
 #report_timing -max_paths 1 -significant_digits 3 -from [get_cells [all_rams]] -to [all_outputs] -file $core_project_dir/timing_m2o.txt
 
-launch_runs core_impl_1 -jobs $jobs
+launch_runs core_impl_1 -to_step write_bitstream -jobs $jobs
 wait_on_run core_impl_1
 #
 exit 
