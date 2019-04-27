@@ -242,10 +242,14 @@ ip_build: ## build Xilinx Core-IPs used in this project
 
 .PHONY: arty_build
 arty_build: 
-	vivado -nojournal -nolog-mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
+	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
 	|| (echo "Could not create core project"; exit 1)
 	@vivado -nojournal -log artybuild.log -notrace -mode tcl -source tcl/run.tcl \
 		-tclargs $(JOBS) || (echo "ERROR: While running synthesis")
+
+.PHONY: program
+program: ## program the fpga
+	vivado -nojournal -nolog -mode tcl -source tcl/program.tcl
 
 .PHONY: clean-bsv
 clean-bsv: ## clean bsv build director
