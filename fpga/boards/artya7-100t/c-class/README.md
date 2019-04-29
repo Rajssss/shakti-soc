@@ -28,14 +28,16 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 $ git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 ```
 
-2. Change present working directory to shakti-soc/fpga/boards/artya7-100t/c-class.
+2. Change present working directory to *shakti-soc/fpga/boards/artya7-100t/c-class*.
 ```
 $ cd shakti-soc/fpga/boards/artya7-100t/c-class
 ```
+
 3. Run the script to clone various repositories that contain the source code.
 ```
 $ ./manager.sh update_deps
 ```
+
 4. You can now change required SoC configurations in soc_config.inc, or change the address maps in SoC.defines. You can also connect new peripherals by modifying SoC.bsv and SoC.defines. For more information on the SoC parameters, refer [this link](https://gitlab.com/shaktiproject/cores/c-class/blob/master/docs/configuring_core.md).
 
 5. Generate verilog from bluespec source code.
@@ -48,15 +50,17 @@ $ make generate_verilog
 $ make ip_build
 ```
 
-7. Synthesize and implement the SoC
+7. Synthesize, implement and generate the bitstream (The bitstream is generated at *shakti-soc/fpga/boards/artya7-100t/c-class/fpga_project/c-class/c-class.runs/core_impl_1/fpga_top.bit*)
 ```
 $ make arty_build
 ```
-8. Programming the FPGA (Requires sudo access)*
+
+8. Connect the Arty-A7 100T board.
+
+9. Program the FPGA with the generated bitstream (Requires sudo access)*
 ```
 $ make program
 ```
-
 \* The "*make program*" command creates a folder whose owner is root. Therefore, before running "*make arty_build*" command again, delete the *shakti-soc/fpga/boards/artya7-100t/c-class/fpga_project/c-class* folder.
 
 ## Connecting to the board
@@ -64,16 +68,22 @@ $ make program
 Currently the arty build only supports booting in debug mode. On reset the, the core will start executing the infinite debug-loop at `0x00000000`. Once the board has been programmed using the above commands do the following:
 
 1. Open a terminal and launch OpenOCD with sudo permissions
-`cd shakti-soc/fpga/boards/artya7-100t/c-class`
-`sudo openocd -f shakti_ocd.cfg`
+```
+$ cd shakti-soc/fpga/boards/artya7-100t/c-class
+$ sudo openocd -f shakti_ocd.cfg
+```
 
 2. Open another terminal and launch gdb
-`riscv64-unknown-elf-gdb -x gdb.script`
+```
+$ riscv64-unknown-elf-gdb -x gdb.script
+```
 
-3. Open another terminal to capture UART output
-`sudo miniterm /dev/ttyUSB1 19200`
+3. Open another terminal to capture UART output (The default baud rate is 19200)
+```
+$ sudo miniterm /dev/ttyUSB1 19200
+```
 
-Using the GDB you can now load programs into the DDR and execute form there.
+You can now use the gdb to load programs into the memory (DDR3) and run them.
 
 ## Reporting Issues
 While reporting issues with this board/build please make sure to mark the issues with the `arty-a7-100t` label
