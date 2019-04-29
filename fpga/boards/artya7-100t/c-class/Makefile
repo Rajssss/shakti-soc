@@ -141,12 +141,12 @@ override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -
 		
 # ------------------------------------------------------------------------------------------------ #
 # ------------------ Include directories for bsv compilation ------------------------------------- #
-CORE:=c-class/src/core/:c-class/src/core/predictors/
-F_EXT:=c-class/src/core/fpu/
-M_EXT:=c-class/src/core/m_ext/
+CORE:=./c-class/src/core/:./c-class/src/core/predictors/
+F_EXT:=./c-class/src/core/fpu/
+M_EXT:=./c-class/src/core/m_ext/
 FABRIC:=./fabrics/axi4:./fabrics/axi4lite
 CACHES:=./caches_mmu/src/
-PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/
+PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/:./devices/gpio/:./devices/plic/:./devices/i2c/
 COMMON_BSV:=./common_bsv/
 COMMON_VERILOG:=./common_verilog/
 BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(F_EXT):$(M_EXT):$(FABRIC):$(PERIPHERALS):$(COMMON_BSV):$(COMMON_VERILOG):$(CACHES)
