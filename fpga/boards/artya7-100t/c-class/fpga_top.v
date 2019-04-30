@@ -491,7 +491,7 @@ module fpga_top#
              .O(gpio_in[index]),
              .IO(gpio[index]),
              .I(gpio_out[index]),
-             .T(gpio_out_en[index])
+             .T(~gpio_out_en[index])
 				 );
       end
    endgenerate
@@ -500,13 +500,13 @@ module fpga_top#
              .O(i2c_scl_in),
              .IO(i2c_scl),
              .I(i2c_scl_out),
-             .T(i2c_scl_out_en)
+             .T(~i2c_scl_out_en)
          );
    
    IOBUF i2c_sda_inst(
              .O(i2c_sda_in),
              .IO(i2c_sda),
              .I(i2c_sda_out),
-             .T(i2c_sda_out_en)
+             .T(~i2c_sda_out_en)
          );
 endmodule
