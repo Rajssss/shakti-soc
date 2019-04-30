@@ -3,7 +3,7 @@
 `define Mem_master_num 1
 `define Fetch_master_num 2
 
-`define Num_Slaves 9
+`define Num_Slaves 8
 `define Memory_slave_num 0
 `define Uart_slave_num 1
 `define Clint_slave_num 2
