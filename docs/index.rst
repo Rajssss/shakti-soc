@@ -1,16 +1,16 @@
-.. shakti-soc documentation master file, created by
-   sphinx-quickstart on Tue Apr 30 14:54:32 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to shakti-soc's documentation!
-======================================
+Shakti System Documentation
+===========================
+This is the central repository for all documentation required
+for end-users to use the Shakti ecosystem consisting of the 
+cores, boards and other components.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   ./boards/index.rst
+   ./cores/index.rst
+   ./ip/index.rst
 
 Indices and tables
 ==================
