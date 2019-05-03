@@ -111,8 +111,8 @@ module fpga_top#
    wire                              m_axi_awvalid;
    wire                              m_axi_awready;
 
-   wire [127:0]                      m_axi_wdata;
-   wire [15:0]                       m_axi_wstrb;
+   wire [63:0]                      m_axi_wdata;
+   wire [7:0]                       m_axi_wstrb;
    wire                              m_axi_wlast;
    wire                              m_axi_wvalid;
    wire                              m_axi_wready;
@@ -188,33 +188,6 @@ module fpga_top#
   
    wire [15:0] gpio_in, gpio_out, gpio_out_en;
    
-   // ------- Data width conversion from SoC master width to MIG width ---------- //
-   reg [63:0] temp_axi_rdata;
-   wire [5:0] temp_shift;
-   assign temp_shift= {m_axi_araddr[2:0],3'd0};
-  
-   wire [63:0] temp1_axi_rdata, temp2_axi_rdata;
-   assign temp1_axi_rdata= m_axi_araddr[3]==0? m_axi_rdata[63:0] : m_axi_rdata[127:64];
-   assign temp2_axi_rdata= temp1_axi_rdata >> temp_shift;
-                                            
-   always@(m_axi_araddr) begin
-       if(m_axi_arsize=='d3)
-           temp_axi_rdata= temp2_axi_rdata;
-       else if(m_axi_arsize=='d2)
-           temp_axi_rdata= {2{temp2_axi_rdata[31:0]}};
-       else if(m_axi_arsize=='d1)
-         temp_axi_rdata= {4{temp2_axi_rdata[15:0]}};
-       else //if(m_axi_arsize=='d0)
-         temp_axi_rdata= {8{temp2_axi_rdata[7:0]}};
-   end
-  
-   wire [7:0] temp_axi_wstrb;
-   wire [15:0]temp_temp_axi_wstrb;
-   assign temp_temp_axi_wstrb[7:0]= temp_axi_wstrb;
-   assign m_axi_wstrb= m_axi_awaddr[3]==0? {8'd0, temp_axi_wstrb}: (temp_temp_axi_wstrb<<8); 
-  
-   wire [63:0] temp_axi_wdata;
-   assign m_axi_wdata= {temp_axi_wdata, temp_axi_wdata};
    // ---------------------------------------------------------------------------- //
    
    // --------- Address width truncation and Reset generation for SoC ------------ //
@@ -380,8 +353,8 @@ module fpga_top#
        .m_axi_awqos(),
        .m_axi_awvalid(m_axi_awvalid),
        .m_axi_awready(m_axi_awready),
-       .m_axi_wdata(temp_axi_wdata),
-       .m_axi_wstrb(temp_axi_wstrb),
+       .m_axi_wdata(m_axi_wdata),
+       .m_axi_wstrb(m_axi_wstrb),
        .m_axi_wlast(m_axi_wlast),
        .m_axi_wvalid(m_axi_wvalid),
        .m_axi_wready(m_axi_wready),
@@ -402,7 +375,7 @@ module fpga_top#
        .m_axi_arvalid(m_axi_arvalid),
        .m_axi_arready(m_axi_arready),
        .m_axi_rid(m_axi_rid),
-       .m_axi_rdata(temp_axi_rdata),
+       .m_axi_rdata(m_axi_rdata),
        .m_axi_rresp(m_axi_rresp),
        .m_axi_rlast(m_axi_rlast),
        .m_axi_rvalid(m_axi_rvalid), 
