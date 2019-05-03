@@ -190,6 +190,7 @@ package Soc;
     mkConnection(debug_module.debug_master,fabric.v_from_masters[`Debug_master_num]);
    	mkConnection(cclass.master_d,	fabric.v_from_masters[`Mem_master_num]);
    	mkConnection(cclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
+  	mkConnection(cclass.master_io, fabric.v_from_masters[`IO_master_num]);
 
  	  mkConnection (fabric.v_to_slaves [`Uart_slave_num ],uart.slave);
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
