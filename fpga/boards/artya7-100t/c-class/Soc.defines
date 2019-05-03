@@ -1,7 +1,8 @@
-`define Num_Masters 3
+`define Num_Masters 4
 `define Debug_master_num 0
 `define Mem_master_num 1
-`define Fetch_master_num 2
+`define IO_master_num 2
+`define Fetch_master_num 3
 
 `define Num_Slaves 8
 `define Memory_slave_num 0
