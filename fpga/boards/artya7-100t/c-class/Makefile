@@ -208,10 +208,10 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/SyncReset0.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
+	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
 #	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
-#	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
