@@ -38,7 +38,7 @@ $ cd shakti-soc/fpga/boards/artya7-100t/c-class
 $ ./manager.sh update_deps
 ```
 
-4. You can now change required SoC configurations in soc_config.inc, or change the address maps in SoC.defines. You can also connect new peripherals by modifying SoC.bsv and SoC.defines. For more information on the SoC parameters, refer [this link](https://gitlab.com/shaktiproject/cores/c-class/blob/master/docs/configuring_core.md).
+4. You can now change required SoC configurations in core_config.inc, or change the address maps in SoC.defines. You can also connect new peripherals by modifying SoC.bsv and SoC.defines. For more information on the SoC parameters, refer [this link](https://gitlab.com/shaktiproject/cores/c-class/blob/master/docs/configuring_core.md).
 
 5. Generate verilog from bluespec source code.
 ```
