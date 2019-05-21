@@ -112,7 +112,7 @@ package Soc;
     Ifc_debug_halt_loop#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop;
 	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68);
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
-    Ifc_err_slave#(`paddr,ELEN,0) err_slave <- mkerr_slave;
+    Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
 		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
 		Ifc_gpio_axi4#(`paddr, ELEN, 0, 16) gpio <- mkgpio_axi4;
 		Ifc_plic_axi4#(`paddr, ELEN, 0, 26, 2, 0) plic <-mkplic_axi4(`PLICBase);
