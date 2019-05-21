@@ -15,12 +15,12 @@ repo_list=(
   )
 
 branch_list=(
-  b59b29cb06bb184de654209567b78b0fb22786d4
-  c702339de090548ad097b537e2b1fb0ffc15a16a
-  97370550fb703feac87aa733a588ffc53b1f03bd
-  37359fb021e1cf346d65abfb8601eee963b6e418
-  5404af586e0f14a1c705b91fe18d545524b0990a
-  13fa935d57880a51b38c8ff6452960bea9172874
+  0.15.2
+  2.0.0
+  master
+  2.2.0
+  1.0.0
+  master
   )
 COUNT=${#repo_list[*]}
 
@@ -79,6 +79,7 @@ update_deps () {
       echo "Cloning Repo: " ${repo_list[$i]} 
       git clone ${repo_list[$i]} $DEPS_FOLDER/$dirname --recursive
       (cd $DEPS_FOLDER/$dirname; git checkout ${branch_list[$i]})
+      (cd $DEPS_FOLDER/$dirname; git submodule update --init --recursive)
     fi
   done
 }
