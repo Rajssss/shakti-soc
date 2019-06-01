@@ -1,4 +1,4 @@
-## 			Makefile for C-Class on Arty-A7
+## 			Makefile for E-Class on Arty-A7
 
 ifeq (, $(wildcard ./old_vars))
 	old_define_macros = ""
@@ -48,22 +48,11 @@ endif
 ifneq (,$(findstring A,$(ISA)))
   override define_macros += -D atomic=True
 endif
-ifneq (,$(findstring F,$(ISA)))
-  override define_macros += -D spfpu=True
-  FLOAT=--float
-endif
-ifneq (,$(findstring D,$(ISA)))
-  override define_macros += -D dpfpu=True
-  FLOAT=--float
-endif
 ifneq (,$(findstring C,$(ISA)))
   override define_macros += -D compressed=True
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
-endif
-ifeq ($(BOOTROM), enable)
-  override define_macros += -D BOOTROM=True
 endif
 ifeq ($(COREFABRIC), AXI4Lite)
   override define_macros += -D CORE_AXI4Lite=True
@@ -77,30 +66,13 @@ endif
 ifeq ($(RTLDUMP), enable)
   override define_macros += -D rtldump=True
 endif
-ifeq ($(SUPERVISOR),  enable)
-  override define_macros += -D supervisor=True
-endif
 ifeq ($(ASSERTIONS), enable)
   override define_macros += -D ASSERT=True
-endif
-ifeq ($(ICACHE), enable)
-  override define_macros += -D icache=True
-endif
-ifeq ($(DCACHE), enable)
-  override define_macros += -D dcache=True
 endif
 ifeq ($(PMP), enable)
 	override define_macros += -D pmp=True
 endif
-ifneq ($(PREDICTOR), none)
-	override define_macros += -D bpu=True 
-  ifneq (,$(findstring C,$(ISA)))
-		override define_macros += -D $(PREDICTOR)_c=True
-  else
-		override define_macros += -D $(PREDICTOR)_nc=True
-  endif
-endif
-ifeq ($(ARITH_TRAP), enable)
+ifeq ($(ARITHTRAP), enable)
 	override define_macros += -D arith_trap=True
 endif
 ifeq ($(DEBUG), enable)
@@ -109,13 +81,6 @@ endif
 ifeq ($(OPENOCD), enable)
 	override define_macros += -D openocd=True
 endif
-# Generate ifence if icache or bpu is enabled
-ifeq ($(ICACHE), enable)
-	override define_macros += -D ifence=True
-else ifneq ($(PREDICTOR), none)
-	override define_macros += -D ifence=True
-endif
-
 ifneq ($(TRIGGERS), 0)
 	override define_macros += -D triggers=True -D trigger_num=$(TRIGGERS)
 	ifeq ($(XLEN), 64)
@@ -125,19 +90,14 @@ ifneq ($(TRIGGERS), 0)
 	endif
 endif
 
-override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -D MULSTAGES=$(MULSTAGES) \
-								 -D DIVSTAGES=$(DIVSTAGES) -D Counters=$(COUNTERS)\
-								 -D iwords=$(IWORDS) -D iblocks=$(IBLOCKS) -D iways=$(IWAYS) -D isets=$(ISETS) \
-								 -D ifbsize=$(IFBSIZE) -D irepl=$(IREPL) -D icachereset=$(IRESET) -D iesize=$(IESIZE) \
-								 -D idbanks=$(IDBANKS) -D itbanks=$(ITBANKS) -D ddbanks=$(DDBANKS) -D dtbanks=$(DTBANKS) \
-								 -D dwords=$(DWORDS) -D dblocks=$(DBLOCKS) -D dways=$(DWAYS) -D dsets=$(DSETS) \
-								 -D dfbsize=$(DFBSIZE) -D drepl=$(DREPL) -D dcachereset=$(DRESET) -D desize=$(DESIZE) \
-								 -D dsbsize=$(DSBSIZE) -D ibuswidth=$(IBUSWIDTH) \
-								 -D PIPE$(PIPE)=True -D paddr=$(PADDR) -D vaddr=$(XLEN) -D PMPSIZE=$(PMPSIZE) \
-								 -D resetpc=$(RESETPC) -D asidwidth=$(ASIDWIDTH) \
-								 -D btbdepth=$(BTBDEPTH) -D bhtdepth=$(BHTDEPTH) -D histlen=$(HISTLEN) \
-								 -D extrahist=$(EXTRAHIST) -D rasdepth=$(RASDEPTH) -D rastagdepth=$(RASTAGDEPTH) \
-								 -D bpureset=$(BPURESET) -D causesize=$(CAUSESIZE) -D $(PREDICTOR)=True
+ifneq ($(COUNTERS), 0)
+	override define_macros += -D perfmonitors=True -D counters=$(COUNTERS)
+endif
+
+override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True \
+													-D MULSTAGES=$(MULSTAGES) -D DIVSTAGES=$(DIVSTAGES) \
+													-D Counters=$(COUNTERS) -D paddr=$(PADDR) -D vaddr=$(XLEN) \
+													-D PMPSIZE=$(PMPSIZE) -D resetpc=$(RESETPC) -D causesize=$(CAUSESIZE)
 		
 # ------------------------------------------------------------------------------------------------ #
 # ------------------ Include directories for bsv compilation ------------------------------------- #
@@ -154,7 +114,8 @@ BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(M_EXT):$(FABRIC
 # ---------------- Setting the variables for bluespec compile  --------------------------------- #
 BSC_CMD:= bsc -u -verilog -elab 
 BSVCOMPILEOPTS:= +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined-vals \
-								 -remove-false-rules -remove-empty-rules -remove-starved-rules -remove-dollar
+								 -remove-false-rules -remove-empty-rules -remove-starved-rules -remove-dollar \
+								 -opt-undetermined-vals -unspecified-to X
 VERILOGDIR:=./verilog/
 BSVBUILDDIR:=./bsv_build/
 ifeq (, $(wildcard ${TOOLS_DIR}/shakti-tools/insert_license.sh))
@@ -177,12 +138,9 @@ help: ## This help dialog.
 check-env:
 	@if test -z "$$BLUESPECDIR"; then echo "BLUESPECDIR variable not set"; exit 1; fi;
 
-check-py:
-	@if ! [ -a /usr/bin/python3 ] ; then echo "Python3 is required in /usr/bin to run AAPG" ; exit 1; fi;
-
 .PHONY: check-restore
 check-restore:
-	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv ;	fi;
+	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv;	fi;
 
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
