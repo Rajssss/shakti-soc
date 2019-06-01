@@ -115,7 +115,7 @@ BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(M_EXT):$(FABRIC
 BSC_CMD:= bsc -u -verilog -elab 
 BSVCOMPILEOPTS:= +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined-vals \
 								 -remove-false-rules -remove-empty-rules -remove-starved-rules -remove-dollar \
-								 -opt-undetermined-vals -unspecified-to X
+								 -unspecified-to X
 VERILOGDIR:=./verilog/
 BSVBUILDDIR:=./bsv_build/
 ifeq (, $(wildcard ${TOOLS_DIR}/shakti-tools/insert_license.sh))
