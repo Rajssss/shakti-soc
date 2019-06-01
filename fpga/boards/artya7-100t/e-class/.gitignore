@@ -1,0 +1,10 @@
+e-class
+common_bsv
+common_verilog
+devices
+fabrics
+fpga_project
+*.jou
+
+*.log
+
