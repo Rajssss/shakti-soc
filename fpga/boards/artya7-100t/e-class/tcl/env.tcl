@@ -8,11 +8,11 @@ global ip_project
 set home_dir .
 set fpga_dir $home_dir/fpga_project
 set ip_project_dir $fpga_dir/manage_ip
-set core_project_dir $fpga_dir/c-class
+set core_project_dir $fpga_dir/e-class
 
 # set ip project name
 set ip_project manage_ip
-set core_project c-class
+set core_project e-class
 puts "\nDEBUG: home_dir:          $home_dir"
 puts "DEBUG: fpga_dir:          $fpga_dir"
 puts "DEBUG: ip_project_dir:    $ip_project_dir"

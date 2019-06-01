@@ -213,7 +213,7 @@ clean-bsv: ## clean bsv build director
 	rm -rf $(BSVBUILDDIR) old_vars
 
 clean-verilog: ## delete verilog folder
-clean-verilog: clean 
+clean-verilog:
 	rm -rf verilog/
 
 clean-fpga: ## delete fpga_prject and journal/log files as well

@@ -66,7 +66,7 @@ $ make program
 
 ## Connecting to the board
 
-Currently the arty build only supports booting in debug mode. On reset the, the core will start executing the infinite debug-loop at `0x00000000`. Once the board has been programmed using the above commands do the following:
+Currently the arty build only supports booting in debug mode. On reset the, the core will start executing the infinite debug-loop at `0x00000010`. Once the board has been programmed using the above commands do the following:
 
 1. Open a terminal and launch OpenOCD with sudo permissions
 ```
