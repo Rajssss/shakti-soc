@@ -51,10 +51,10 @@ package Soc;
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
 
-	import gpio				::*;
-	import plic				::*;
-	import i2c			 :: *;
-  import uart::*;
+  import pwm_cluster :: * :
+  import uart_clock :: * ;
+  import spi_cluster :: * ;
+  import mixed_cluster :: * ;
  
   function Bit#(TLog#(`Num_Slaves)) fn_slave_map (Bit#(`paddr) addr);
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
@@ -79,23 +79,22 @@ package Soc;
   endfunction:fn_slave_map
 
   interface Ifc_Soc;
-    interface AXI4_Master_IFC#(`paddr, XLEN, USERSPACE) mem_master;
-    interface RS232 uart_io;
-      // ------------- JTAG IOs ----------------------//
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tms(Bit#(1)tms_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tdi(Bit#(1)tdi_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Bit#(1)wire_tdo;                                                                       
-      // ---------------------------------------------//
+    interface PWMIO pwm0_io;
+    interface PWMIO pwm1_io;
+    interface PWMIO pwm2_io;
+    interface PWMIO pwm3_io;
+    interface PWMIO pwm4_io;
+    interface PWMIO pwm5_io;
+    interface Ifc_spi_io spi0_io;
+    interface Ifc_spi_io spi1_io;
+    interface Ifc_spi_io spi2_io;
+    interface RS232 uart0_io;
+    interface RS232 uart1_io;
+    interface RS232 uart2_io;
 		method I2C_out i2c_out;									//I2c IO interface
-
-    (*always_enabled,always_ready*)                                                               
-		method Action interrupts(Bit#(8) inp);	//External interrupts to PLIC
+    (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
+    interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
   endinterface
 
   (*synthesize*)
@@ -108,12 +107,8 @@ package Soc;
     AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, XLEN, USERSPACE) 
                                                     fabric <- mkAXI4_Fabric(fn_slave_map);
     Ifc_debug_halt_loop#(`paddr, XLEN, USERSPACE) debug_memory <- mkdebug_halt_loop;
-	  Ifc_uart_axi4#(`paddr,XLEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68);
     Ifc_clint_axi4#(`paddr, XLEN, 0, 1, 16) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4;
-		Ifc_i2c_axi4#(`paddr, XLEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
-		Ifc_gpio_axi4#(`paddr, XLEN, 0, 16) gpio <- mkgpio_axi4;
-		Ifc_plic_axi4#(`paddr, XLEN, 0, 26, 2, 0) plic <-mkplic_axi4(`PLICBase);
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
@@ -167,21 +162,6 @@ package Soc;
       jtag_tap.response_from_dm(sync_response_from_dm.first);                                       
     endrule                                                                                         
     
-		//Rule to connect PLIC interrupt to the core's sideband
-		rule rl_core_plic_connection;
-			let {lv_plic_intr, x}<- plic.intrpt_note_sb.get;
-			eclass.sb_ext_interrupt.put(pack(lv_plic_intr));
-		endrule
-
-		//Rule to connect interrupts from various sources to PLIC
-		rule rl_connect_plic_connections;
-			let tmp<- gpio.sb_gpio_to_plic.get;
-			Bit#(16) lv_gpio_intr= pack(tmp);
-			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
-			plic.ifc_external_irq_io(plic_inputs);
-		endrule
-
-
     mkConnection (eclass.debug_server ,debug_module.hart);
       
     // ------------------------------------------------------------------------------------------//
@@ -189,13 +169,9 @@ package Soc;
    	mkConnection(eclass.master_d,	fabric.v_from_masters[`Mem_master_num]);
    	mkConnection(eclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
- 	  mkConnection (fabric.v_to_slaves [`Uart_slave_num ],uart.slave);
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
     mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
-   	mkConnection (fabric.v_to_slaves [`I2C_slave_num ],		i2c.slave);
-		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
-		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
 
     // sideband connection
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
@@ -217,15 +193,9 @@ package Soc;
       return tdo.crossed();                                                                       
     endmethod
 
-      // -------------------------------------------- //
-    interface mem_master = fabric.v_to_slaves[`Memory_slave_num];
-
-		method I2C_out i2c_out= i2c.io;
-
 		method Action interrupts(Bit#(8) inp);
 			wr_external_interrupts<= inp;
 		endmethod
 
-    interface gpio_io= gpio.io;
   endmodule: mkSoc
 endpackage: Soc

@@ -41,14 +41,13 @@ package mixed_cluster;
   import plic :: * ;
   `include "Soc.defines"
 
-
   interface Ifc_mixed_cluster;
 		method I2C_out i2c_out;									//I2c IO interface
     method Bit#(1) sb_ext_interrupt;
-    interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
 		method Action interrupts(Bit#(8) inp);
+    interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
   endinterface
 
