@@ -55,23 +55,18 @@ package Soc;
   import uart_clock :: * ;
   import spi_cluster :: * ;
   import mixed_cluster :: * ;
+  import uart :: *;
+  import spi :: *;
+  import pwm :: *;
  
   function Bit#(TLog#(`Num_Slaves)) fn_slave_map (Bit#(`paddr) addr);
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
     if(addr >= `MemoryBase && addr<= `MemoryEnd)
       slave_num = `Memory_slave_num;
-    else if(addr>= `UartBase && addr<= `UartEnd)
-      slave_num = `Uart_slave_num;
     else if(addr>= `ClintBase && addr<= `ClintEnd)
       slave_num = `Clint_slave_num;
     else if(addr>= `DebugBase && addr<= `DebugEnd)
       slave_num = `Debug_slave_num;
-    else if(addr>= `GPIOBase && addr<= `GPIOEnd)
-      slave_num = `GPIO_slave_num;
-    else if(addr>= `PLICBase && addr<= `PLICEnd)
-      slave_num = `PLIC_slave_num;
-    else if(addr>= `I2CBase && addr<= `I2CEnd)
-      slave_num = `I2C_slave_num;
     else
       slave_num = `Err_slave_num;
       
