@@ -162,17 +162,17 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
 	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
 #	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/MakeClock.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/UngatedClockMux.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/MakeResetA.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncResetA.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncHandshake.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/MakeClock.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/UngatedClockMux.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/MakeResetA.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/SyncResetA.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/SyncHandshake.v ${VERILOGDIR}
 	@$(VERILOGLICENSE)
 	@echo Compilation finished
 
