@@ -46,6 +46,7 @@ package mixed_cluster;
     method Bit#(1) sb_ext_interrupt;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
+    (*always_ready, always_enabled*)
 		method Action interrupts(Bit#(8) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
