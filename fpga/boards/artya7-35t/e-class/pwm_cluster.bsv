@@ -91,7 +91,7 @@ package pwm_cluster;
   endmodule
 
   (*synthesize*)
-  module mkpwm_cluster#(Clock pwm_clk, Reset pwm_reset)(Ifc_pwm_cluster);
+  module mkpwm_cluster(Ifc_pwm_cluster);
     let curr_clk<- exposeCurrentClock;
     let curr_reset <- exposeCurrentReset;
 		AXI4_Lite_Master_Xactor_IFC #(`paddr, 32, 0) c2m_xactor <- mkAXI4_Lite_Master_Xactor;

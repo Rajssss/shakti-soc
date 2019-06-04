@@ -90,6 +90,7 @@ package mixed_cluster;
     return slave_num;
   endfunction:fn_slave_map
 
+  (*synthesize*)
   module mkmixed_cluster(Ifc_mixed_cluster);
 	
 		AXI4_Lite_Master_Xactor_IFC #(`paddr, 32, 0) c2m_xactor <- mkAXI4_Lite_Master_Xactor;

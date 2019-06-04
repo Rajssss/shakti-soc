@@ -22,8 +22,8 @@ endif
 SHAKTI_HOME=$(PWD)
 export SHAKTI_HOME
 
-TOP_MODULE:=mkuart_cluster
-TOP_FILE:=uart_cluster.bsv
+TOP_MODULE:=mkSoc
+TOP_FILE:=Soc.bsv
 TOP_DIR:=./
 WORKING_DIR := $(shell pwd)
 Vivado_loc=$(shell which vivado)
@@ -53,9 +53,6 @@ ifneq (,$(findstring C,$(ISA)))
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
-endif
-ifeq ($(COREFABRIC), AXI4Lite)
-  override define_macros += -D CORE_AXI4Lite=True
 endif
 ifeq ($(USERTRAPS), enable)
   override define_macros += -D usertraps=True
@@ -104,7 +101,7 @@ override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True \
 CORE:=./e-class/src/core/
 M_EXT:=./e-class/src/core/m_ext/
 FABRIC:=./fabrics/axi4:./fabrics/axi4lite
-PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/:./devices/gpio/:./devices/plic/:./devices/i2c/:./devices/spi/
+PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/:./devices/gpio/:./devices/plic/:./devices/i2c/:./devices/spi/:devices/qspi/
 COMMON_BSV:=./common_bsv/
 COMMON_VERILOG:=./common_verilog/
 BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(M_EXT):$(FABRIC):$(PERIPHERALS):$(COMMON_BSV):$(COMMON_VERILOG)

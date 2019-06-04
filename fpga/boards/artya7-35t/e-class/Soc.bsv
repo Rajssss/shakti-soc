@@ -31,8 +31,8 @@ Details:
 package Soc;
   // project related imports
 	import Semi_FIFOF:: *;
-	import AXI4_Types:: *;
-	import AXI4_Fabric:: *;
+	import AXI4_Lite_Types:: *;
+	import AXI4_Lite_Fabric:: *;
   import Clocks :: *;
   import common_types::*;
   `include "Soc.defines"
@@ -40,24 +40,28 @@ package Soc;
   // peripheral imports
   import clint::*;
   import err_slave::*;
-  import eclass:: * ;
-  // package imports
-  import Connectable:: *;
-  import GetPut:: *;
-  import Vector::*;
-
-  import debug_types::*;                                                                          
-  import jtagdtm::*;                                                                              
-  import riscvDebug013::*;                                                                        
-  import debug_halt_loop::*;
-
-  import pwm_cluster :: * :
-  import uart_clock :: * ;
+  import eclass_axi4lite:: * ;
+  import pwm_cluster :: * ;
+  import uart_cluster :: * ;
   import spi_cluster :: * ;
   import mixed_cluster :: * ;
   import uart :: *;
   import spi :: *;
   import pwm :: *;
+  import i2c :: *;
+  import gpio :: *;
+  import qspi :: *;
+  import debug_types::*;                                                                          
+  import jtagdtm::*;                                                                              
+  import riscvDebug013::*;                                                                        
+  import debug_halt_loop::*;
+
+
+  // package imports
+  import Connectable:: *;
+  import GetPut:: *;
+  import Vector::*;
+
  
   function Bit#(TLog#(`Num_Slaves)) fn_slave_map (Bit#(`paddr) addr);
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
@@ -72,6 +76,15 @@ package Soc;
       
     return slave_num;
   endfunction:fn_slave_map
+
+  (*synthesize*)
+  module mkqspi(Ifc_qspi_axi4lite#(`paddr,XLEN,0));
+    let curr_clk <- exposeCurrentClock;
+    let curr_reset <- exposeCurrentReset;
+    let ifc();
+    mkqspi_axi4lite#(curr_clk, curr_reset) _temp(ifc);
+    return ifc;
+  endmodule
 
   interface Ifc_Soc;
     interface PWMIO pwm0_io;
@@ -90,20 +103,37 @@ package Soc;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
+    interface QSPI_out qspi_io;
+      // ------------- JTAG IOs ----------------------//
+    (*always_enabled,always_ready*)                                                               
+    method Action wire_tms(Bit#(1)tms_in);                                                        
+
+    (*always_enabled,always_ready*)                                                               
+    method Action wire_tdi(Bit#(1)tdi_in);                                                        
+
+    (*always_enabled,always_ready*)                                                               
+    method Bit#(1)wire_tdo;                                                                       
+      // ---------------------------------------------//
   endinterface
 
   (*synthesize*)
-	(*conflict_free = "rl_core_plic_connection, operation"*)
   module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
-    Ifc_eclass_axi4 eclass <- mkeclass_axi4(`resetpc);
 
-    AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, XLEN, USERSPACE) 
-                                                    fabric <- mkAXI4_Fabric(fn_slave_map);
-    Ifc_debug_halt_loop#(`paddr, XLEN, USERSPACE) debug_memory <- mkdebug_halt_loop;
-    Ifc_clint_axi4#(`paddr, XLEN, 0, 1, 16) clint <- mkclint_axi4();
-    Ifc_err_slave_axi4#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4;
+    Ifc_eclass_axi4lite eclass <- mkeclass_axi4lite(`resetpc);
+
+    AXI4_Lite_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, XLEN, USERSPACE) 
+                                                        fabric <- mkAXI4_Lite_Fabric(fn_slave_map);
+    Ifc_clint_axi4lite#(`paddr, XLEN, 0, 1, 16) clint <- mkclint_axi4lite();
+    Ifc_debug_halt_loop_axi4lite#(`paddr, XLEN, USERSPACE) debug_memory <-
+                                                                        mkdebug_halt_loop_axi4lite;
+    let qspi <- mkqspi();
+    Ifc_pwm_cluster pwm_cluster <- mkpwm_cluster;
+    Ifc_uart_cluster uart_cluster <- mkuart_cluster;
+    Ifc_spi_cluster spi_cluster <- mkspi_cluster;
+    Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
+    Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
@@ -137,9 +167,9 @@ package Soc;
     rule connect_tap_request_to_syncfifo;                                                           
       let x<-jtag_tap.request_to_dm;                                                                
       sync_request_to_dm.enq(zeroExtend(x));          
+    endrule                                                                                         
 
     // send captured synced jtag tap request to the debug module
-    endrule                                                                                         
     rule read_synced_request_to_dm;                                                                 
       sync_request_to_dm.deq;                                                                       
       debug_module.dtm.putCommand.put(sync_request_to_dm.first);                                    
@@ -165,15 +195,19 @@ package Soc;
    	mkConnection(eclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
-    mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
+    mkConnection (fabric.v_to_slaves [`QSPI_slave_num ], qspi.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
+    mkConnection (fabric.v_to_slaves [`PWMCluster_slave_num], pwm_cluster.slave);
+    mkConnection (fabric.v_to_slaves [`UARTCluster_slave_num], uart_cluster.slave);
+    mkConnection (fabric.v_to_slaves [`SPICluster_slave_num], spi_cluster.slave);
+    mkConnection (fabric.v_to_slaves [`MixedCluster_slave_num], mixed_cluster.slave);
+    mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
 
     // sideband connection
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
     mkConnection(eclass.sb_clint_mtip,clint.sb_clint_mtip);
     mkConnection(eclass.sb_clint_mtime,clint.sb_clint_mtime);
 
-    interface uart_io=uart.io;
 
       // ------------- JTAG IOs ----------------------//
     method Action wire_tms(Bit#(1)tms_in);                                                        
@@ -187,10 +221,22 @@ package Soc;
     method Bit#(1)wire_tdo;                                                                       
       return tdo.crossed();                                                                       
     endmethod
-
-		method Action interrupts(Bit#(8) inp);
-			wr_external_interrupts<= inp;
-		endmethod
+    interface pwm0_io = pwm_cluster.pwm0_io;
+    interface pwm1_io = pwm_cluster.pwm1_io;
+    interface pwm2_io = pwm_cluster.pwm2_io;
+    interface pwm3_io = pwm_cluster.pwm3_io;
+    interface pwm4_io = pwm_cluster.pwm4_io;
+    interface pwm5_io = pwm_cluster.pwm5_io;
+    interface spi0_io = spi_cluster.spi0_io;
+    interface spi1_io = spi_cluster.spi1_io;
+    interface spi2_io = spi_cluster.spi2_io;
+    interface uart0_io = uart_cluster.uart0_io;
+    interface uart1_io = uart_cluster.uart1_io;
+    interface uart2_io = uart_cluster.uart2_io;
+		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
+    interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
+    interface xadc_master = mixed_cluster.xadc_master;
+    interface qspi_io = qspi.out;
 
   endmodule: mkSoc
 endpackage: Soc

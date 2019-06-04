@@ -70,7 +70,7 @@ package uart_cluster;
   endmodule
 
   (*synthesize*)
-  module mkuart_cluster#(Clock uart_clk, Reset uart_reset)(Ifc_uart_cluster);
+  module mkuart_cluster(Ifc_uart_cluster);
     let curr_clk<- exposeCurrentClock;
     let curr_reset <- exposeCurrentReset;
 		AXI4_Lite_Master_Xactor_IFC #(`paddr, 32, 0) c2m_xactor <- mkAXI4_Lite_Master_Xactor;

@@ -70,7 +70,7 @@ package spi_cluster;
   endmodule
 
   (*synthesize*)
-  module mkspi_cluster#(Clock spi_clk, Reset spi_reset)(Ifc_spi_cluster);
+  module mkspi_cluster(Ifc_spi_cluster);
     let curr_clk<- exposeCurrentClock;
     let curr_reset <- exposeCurrentReset;
 		AXI4_Lite_Master_Xactor_IFC #(`paddr, 32, 0) c2m_xactor <- mkAXI4_Lite_Master_Xactor;
