@@ -71,6 +71,18 @@ package Soc;
       slave_num = `Clint_slave_num;
     else if(addr>= `DebugBase && addr<= `DebugEnd)
       slave_num = `Debug_slave_num;
+    else if(addr >= `QSPI0Base && addr<= `QSPI0End)
+      slave_num = `QSPI_slave_num;
+    else if(addr >= `QSPI0MemBase && addr <= `QSPI0MemEnd)
+      slave_num = `QSPI_slave_num;
+    else if(addr> `PWMClusterBase && addr <= `PWMClusterEnd)
+      slave_num = `PWMCluster_slave_num;
+    else if(addr> `UARTClusterBase && addr <= `UARTClusterEnd)
+      slave_num = `UARTCluster_slave_num;
+    else if(addr> `SPIClusterBase && addr <= `SPIClusterEnd)
+      slave_num = `SPICluster_slave_num;
+    else if(addr> `MixedClusterBase && addr <= `MixedClusterEnd)
+      slave_num = `MixedCluster_slave_num;
     else
       slave_num = `Err_slave_num;
       
@@ -114,6 +126,8 @@ package Soc;
     (*always_enabled,always_ready*)                                                               
     method Bit#(1)wire_tdo;                                                                       
       // ---------------------------------------------//
+    (*always_ready, always_enabled*)
+    method Action ext_interrupts(Bit#(2) i);
   endinterface
 
   (*synthesize*)
@@ -134,6 +148,7 @@ package Soc;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
+    Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
@@ -186,6 +201,16 @@ package Soc;
       sync_response_from_dm.deq;                                                                    
       jtag_tap.response_from_dm(sync_response_from_dm.first);                                       
     endrule                                                                                         
+
+    // TODO qspi interrupts
+    rule connect_interrupt_lines;
+      mixed_cluster.interrupts({wr_ext_interrutps, pwm_cluster.pwm0_sb_interrupt, 
+                                                  pwm_cluster.pwm1_sb_interrupt, 
+                                                  pwm_cluster.pwm2_sb_interrupt, 
+                                                  pwm_cluster.pwm3_sb_interrupt, 
+                                                  pwm_cluster.pwm4_sb_interrupt, 
+                                                  pwm_cluster.pwm5_sb_interrupt});
+    endrule
     
     mkConnection (eclass.debug_server ,debug_module.hart);
       
@@ -237,6 +262,9 @@ package Soc;
     interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
     interface xadc_master = mixed_cluster.xadc_master;
     interface qspi_io = qspi.out;
+    method Action ext_interrupts(Bit#(2) i);
+      wr_ext_interrutps <= i;
+    endmethod
 
   endmodule: mkSoc
 endpackage: Soc
