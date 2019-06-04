@@ -2,7 +2,7 @@ ISA=RV32I
 MUL=fpga
 SYNTH=FPGA
 VERBOSITY=0
-USERTRAPS=enable
+USERTRAPS=disable
 USER=enable
 COREFABRIC=AXI4Lite
 MULSTAGES=6
@@ -26,14 +26,14 @@ RTLDUMP=disable
 ASSERTIONS=disable
 
 # Trigger Setup
-TRIGGERS=2
+TRIGGERS=0
 
 # performance counters
-COUNTERS=4
+COUNTERS=0
 
 # pmp
-PMP=enable
-PMPSIZE=4
+PMP=disable
+PMPSIZE=0
 
 # For Vivado Synthesis
 FPGA=xc7a35tcsg324-1
