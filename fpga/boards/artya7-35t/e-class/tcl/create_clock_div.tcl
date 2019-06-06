@@ -24,15 +24,9 @@ set_property -dict [list \
                         CONFIG.MMCM_CLKOUT0_DIVIDE_F {48.000} \
                         CONFIG.PRIM_IN_FREQ {100} \
                         CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
-                        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.833} \
+                        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} \
                         CONFIG.CLKOUT1_DRIVES {BUFG} \
-                        CONFIG.CLKOUT1_USED {1} \
-                        CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {166.667} \
-                        CONFIG.CLKOUT2_DRIVES {BUFG} \
-                        CONFIG.CLKOUT2_USED {1} \
-                        CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {200.000} \
-                        CONFIG.CLKOUT3_DRIVES {BUFG} \
-                        CONFIG.CLKOUT3_USED {1} ] [get_ips clk_divider]
+                        CONFIG.CLKOUT1_USED {1} ] [get_ips clk_divider]
 
 generate_target {instantiation_template} [get_ips clk_divider]
 create_ip_run [get_ips clk_divider]

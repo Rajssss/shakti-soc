@@ -6,7 +6,7 @@ if { $argc != 3 } {
   puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa>"
   exit 2
 } else {
-  puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] "
+  puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] FPGA: [lindex $argv 1]"
 }
 
 set top_module [lindex $argv 0]
@@ -53,8 +53,8 @@ if {[string first "M" $isa] != -1} {
   generate_target all [get_ips]
 }
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
-import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
-import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
+#import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
+#import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {

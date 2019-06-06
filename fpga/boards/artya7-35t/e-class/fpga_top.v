@@ -68,8 +68,6 @@ module fpga_top
    
    wire                            soc_reset;      // reset to the SoC
    wire                            core_clk;       // clock to the SoC
-   wire                            ddr3_main;      // main clock to the ddr3-mig
-   wire                            ddr3_ref;       // reference clock to dr3 mig
    wire                            locked;         // indicates pll is stable
    wire                            mmcm_locked;    // indicates the ui clock from mig is stable
 
@@ -86,8 +84,6 @@ module fpga_top
    clk_divider clk_div (
                        .clk_in1(sys_clk),  
                        .clk_out1(core_clk),
-                       .clk_out2(ddr3_main),
-                       .clk_out3(ddr3_ref),
                        .resetn(sys_rst), 
                        .locked(locked) );
    // ----------------------------------------- //
