@@ -36,6 +36,6 @@ PMP=disable
 PMPSIZE=0
 
 # For Vivado Synthesis
-FPGA=xc7a35tcsg324-1
+FPGA=xc7a35ticsg324-1l
 SYNTHTOP=fpga_top
 JOBS=4
