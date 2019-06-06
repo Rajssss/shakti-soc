@@ -27,11 +27,7 @@ Details:
 
 --------------------------------------------------------------------------------------------------
 */
-module fpga_top#
-  (
-   parameter AXI_ID_WIDTH   = 4,
-   parameter AXI_ADDR_WIDTH = 28
-   )
+module fpga_top
   (
    
    // ---- JTAG ports ------- //
@@ -75,11 +71,7 @@ module fpga_top#
    wire                            ddr3_main;      // main clock to the ddr3-mig
    wire                            ddr3_ref;       // reference clock to dr3 mig
    wire                            locked;         // indicates pll is stable
-   wire                            clk;            // mig ui clk            
-   wire                            rst;            // mig ui reset
    wire                            mmcm_locked;    // indicates the ui clock from mig is stable
-   reg                             aresetn;
-   reg                             aresetn_s;
 
    wire i2c_scl_out, i2c_scl_in, i2c_scl_out_en;
    wire i2c_sda_out, i2c_sda_in, i2c_sda_out_en;
@@ -87,7 +79,7 @@ module fpga_top#
    wire [15:0] gpio_in, gpio_out, gpio_out_en;
    
    // ---------------------------------------------------------------------------- //
-   
+   assign soc_reset = locked;
 
    // ---------- Clock divider ----------------//
    
@@ -101,11 +93,6 @@ module fpga_top#
    // ----------------------------------------- //
 
 
-   always @(posedge clk) begin
-     aresetn <= ~rst;
-   end
-   
-   
    // ---- Instantiating the C-class SoC -------------//
    mkSoc core(
        // Main Clock and Reset to the SoC
@@ -137,12 +124,10 @@ module fpga_top#
         .spi0_io_sclk(spi0_sclk),
         .spi0_io_nss(spi0_nss),
 	      .spi0_io_miso_dat(spi0_miso),
-        
         .spi1_io_mosi(),
         .spi1_io_sclk(),
         .spi1_io_nss(),
 	      .spi1_io_miso_dat(),
-
         .spi2_io_mosi(),
         .spi2_io_sclk(),
         .spi2_io_nss(),
@@ -151,10 +136,8 @@ module fpga_top#
        // UART port definitions
         .uart0_io_SIN(uart0_SIN),
         .uart0_io_SOUT(uart0_SOUT),
-       
         .uart1_io_SIN(),
         .uart1_io_SOUT(),
-       
         .uart2_io_SIN(),
         .uart2_io_SOUT(),
         
@@ -189,6 +172,7 @@ module fpga_top#
 	      .xadc_master_m_rvalid_rdata(),
 	      .xadc_master_rready(),
 
+      // QSPI connections
 	      .qspi_io_clk_o(),
 	      .qspi_io_io_o(),
 	      .qspi_io_io0_sdio_ctrl(),
