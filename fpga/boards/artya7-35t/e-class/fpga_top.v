@@ -35,7 +35,7 @@ module fpga_top#
   (
    // ---- DDR ports --------------//
    // Inouts
-   inout [15:0]   ddr3_dq,
+  /* inout [15:0]   ddr3_dq,
    inout [1:0]    ddr3_dqs_n,
    inout [1:0]    ddr3_dqs_p,
 
@@ -56,7 +56,7 @@ module fpga_top#
    output        ddr3_odt,
     
    output        pin_aresetn,
-   output        init_calib_complete,
+   output        init_calib_complete,*/
    
    // ---- JTAG ports ------- //
    input         pin_tck,
@@ -72,6 +72,12 @@ module fpga_top#
    // ---- I2C ports --------//
    inout         i2c_sda,
    inout         i2c_scl,
+   
+   // ---- SPI ports ---------//
+   output       spi_mosi,
+   output       spi_sclk,
+   output       spi_nss,
+   input        spi_miso,
 
    // ---- GPIO ports --------//
    inout[15:0] gpio,
@@ -194,7 +200,7 @@ module fpga_top#
    wire [31:0] temp_s_axi_awaddr, temp_s_axi_araddr;
    assign s_axi_awaddr= temp_s_axi_awaddr [AXI_ADDR_WIDTH-1:0];
    assign s_axi_araddr= temp_s_axi_araddr [AXI_ADDR_WIDTH-1:0];
-   assign soc_reset = locked & init_calib_complete;
+   assign soc_reset = locked ;
    // ---------------------------------------------------------------------------- //
 
    // ---------- Clock divider ----------------//
@@ -210,7 +216,7 @@ module fpga_top#
 
    // ------------ MIG for DDR3 ---------------//
 
-   mig_ddr3 mig_ddr3 (
+   /*mig_ddr3 mig_ddr3 (
         // Memory interface ports
        .ddr3_addr                      (ddr3_addr),
        .ddr3_ba                        (ddr3_ba),
@@ -288,16 +294,16 @@ module fpga_top#
        .clk_ref_i                      (ddr3_ref),
        .device_temp                    (device_temp),
        .sys_rst                        (locked)
-   );
+   );*/
 
    always @(posedge clk) begin
      aresetn <= ~rst;
    end
    
-   assign pin_aresetn= rst;
+   //assign pin_aresetn= rst;
 
    // Instantiating the clock converter between the SoC and DDR3 MIG
-   clk_converter clock_converter (
+   /*clk_converter clock_converter (
        .s_axi_aclk(core_clk),
        .s_axi_aresetn(locked),
        .s_axi_awid(s_axi_awid),
@@ -380,7 +386,7 @@ module fpga_top#
        .m_axi_rlast(m_axi_rlast),
        .m_axi_rvalid(m_axi_rvalid), 
        .m_axi_rready(m_axi_rready)
-   );
+   );*/
 
    
    // ---- Instantiating the C-class SoC -------------//
@@ -397,57 +403,15 @@ module fpga_top#
        .wire_tdo(pin_tdo),
 
        // UART port definitions
-       .uart_io_SIN(uart_SIN),
-       .uart_io_SOUT(uart_SOUT),
+       .uart0_io_SIN(uart_SIN),
+       .uart0_io_SOUT(uart_SOUT),
+       
+       // SPI port definitions
+       .spi0_io_mosi(spi_mosi),
+       .spi0_io_sclk(spi_sclk),
+	   .spi0_io_nss(spi_nss),
+	   .spi0_io_miso_dat(spi_miso),
 
-       // AXI4 Master interface to be connected to DDR3
-		   .mem_master_AWVALID (s_axi_awvalid),
-		   .mem_master_AWADDR  (temp_s_axi_awaddr),
-		   .mem_master_AWSIZE  (s_axi_awsize),
-		   .mem_master_AWPROT  (s_axi_awprot),
-		   .mem_master_AWLEN   (s_axi_awlen),
-		   .mem_master_AWBURST (s_axi_awburst),
-		   .mem_master_AWID    (s_axi_awid),
-		   .mem_master_AWREADY (s_axi_awready),
-                
-		   .mem_master_WVALID  (s_axi_wvalid),
-		   .mem_master_WDATA   (s_axi_wdata),
-		   .mem_master_WSTRB   (s_axi_wstrb),
-		   .mem_master_WLAST   (s_axi_wlast),
-		   .mem_master_WID     (),
-		   .mem_master_WREADY  (s_axi_wready),
-                
-		   .mem_master_BVALID  (s_axi_bvalid),
-		   .mem_master_BRESP   (s_axi_bresp),
-		   .mem_master_BID     (s_axi_bid),
-		   .mem_master_BREADY  (s_axi_bready),
-                
-		   .mem_master_ARVALID (s_axi_arvalid),
-		   .mem_master_ARADDR  (temp_s_axi_araddr),
-		   .mem_master_ARSIZE  (s_axi_arsize),
-		   .mem_master_ARPROT  (s_axi_arprot),
-		   .mem_master_ARLEN   (s_axi_arlen),
-		   .mem_master_ARBURST (s_axi_arburst),
-		   .mem_master_ARID    (s_axi_arid),
-		   .mem_master_ARREADY (s_axi_arready),
-                
-		   .mem_master_RVALID (s_axi_rvalid),
-		   .mem_master_RRESP  (s_axi_rresp),
-		   .mem_master_RDATA  (s_axi_rdata),
-		   .mem_master_RLAST  (s_axi_rlast),
-		   .mem_master_RID    (s_axi_rid),
-		   .mem_master_RREADY(s_axi_rready),
-
-			 //I2C ports
-		   .i2c_out_scl_out (i2c_scl_out),
-       .i2c_out_scl_in_in(i2c_scl_in),
-       .i2c_out_scl_out_en(i2c_scl_out_en),
-       .i2c_out_sda_out(i2c_sda_out),
-       .i2c_out_sda_in_in(i2c_sda_in),
-       .i2c_out_sda_out_en(i2c_sda_out_en),
-
-			 //External interrupts ports
-       .interrupts_inp(interrupts),
        
 			 //GPIO ports
        .gpio_io_gpio_in_inp(gpio_in),

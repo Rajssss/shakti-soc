@@ -51,6 +51,7 @@ package Soc;
   import i2c :: *;
   import gpio :: *;
   import qspi :: *;
+  import bram :: *;
   import debug_types::*;                                                                          
   import jtagdtm::*;                                                                              
   import riscvDebug013::*;                                                                        
@@ -148,6 +149,7 @@ package Soc;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
+    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  17) mem <- mkbram_axi4lite('h80000000, "code.mem", "code.mem","Memory");
     Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
@@ -227,6 +229,7 @@ package Soc;
     mkConnection (fabric.v_to_slaves [`SPICluster_slave_num], spi_cluster.slave);
     mkConnection (fabric.v_to_slaves [`MixedCluster_slave_num], mixed_cluster.slave);
     mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
+	mkConnection (fabric.v_to_slaves [`Memory_slave_num], mem.slave);
 
     // sideband connection
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
