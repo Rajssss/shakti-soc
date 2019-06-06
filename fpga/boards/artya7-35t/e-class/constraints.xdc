@@ -8,13 +8,10 @@ set_multicycle_path -hold 4 -from [get_clocks clk_out1_clk_divider] -to [get_clo
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pin_tck_IBUF]
 set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets sys_clk_IBUF]
 
-
 set_property -dict { PACKAGE_PIN C2    IOSTANDARD LVCMOS33 } [get_ports { sys_rst             }]; #IO_L16P_T2_35 Sch=ck_rst
-set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { init_calib_complete }]; #IO_L24N_T3_A00_D16_14 Sch=led[7]
-set_property -dict { PACKAGE_PIN J5    IOSTANDARD LVCMOS33 } [get_ports { pin_aresetn         }]; #IO_25_35 Sch=led[5]
 
-set_property -dict { PACKAGE_PIN D10   IOSTANDARD LVCMOS33 } [get_ports { uart_SOUT           }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
-set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { uart_SIN            }]; #IO_L14N_T2_SRCC_16 Sch=uart_txd_in
+set_property -dict { PACKAGE_PIN D10   IOSTANDARD LVCMOS33 } [get_ports { uart0_SOUT           }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
+set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { uart0_SIN            }]; #IO_L14N_T2_SRCC_16 Sch=uart_txd_in
 
 ##Pmod Header JA
 set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { pin_tms             }]; #IO_0_15 Sch=ja[1]
@@ -26,10 +23,10 @@ set_property -dict { PACKAGE_PIN D13   IOSTANDARD LVCMOS33 } [get_ports { pin_td
 set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { pin_tck             }]; #IO_L10P_T1_AD11P_15 Sch=ja[8]
 
 ##Pmod Header JB
-set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { spi_nss             }];
-set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { spi_sclk             }];
-set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { spi_miso             }];
-set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { spi_mosi            }];
+set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { spi0_nss             }];
+set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { spi0_sclk             }];
+set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { spi0_miso             }];
+set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { spi0_mosi            }];
 
 ## ChipKit Outer Digital Header
 set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { gpio[0]  }]; #IO_L16P_T2_CSI_B_14 Sch=ck_io[0]
@@ -70,18 +67,6 @@ set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { interr
 set_property PULLDOWN true [get_ports {interrupts[0]}];
 set_property -dict { PACKAGE_PIN R10   IOSTANDARD LVCMOS33 } [get_ports { interrupts[1] }]; #IO_25_14 Sch=ck_io[29]
 set_property PULLDOWN true [get_ports {interrupts[1]}];
-set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports { interrupts[2] }]; #IO_0_14 Sch=ck_io[30]
-set_property PULLDOWN true [get_ports {interrupts[2]}];
-set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { interrupts[3] }]; #IO_L5N_T0_D07_14 Sch=ck_io[31]
-set_property PULLDOWN true [get_ports {interrupts[3]}];
-set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { interrupts[4] }]; #IO_L13N_T2_MRCC_14 Sch=ck_io[32]
-set_property PULLDOWN true [get_ports {interrupts[4]}];
-set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { interrupts[5] }]; #IO_L13P_T2_MRCC_14 Sch=ck_io[33]
-set_property PULLDOWN true [get_ports {interrupts[5]}];
-set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { interrupts[6] }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=ck_io[34]
-set_property PULLDOWN true [get_ports {interrupts[6]}];
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { interrupts[7] }]; #IO_L11N_T1_SRCC_14 Sch=ck_io[35]
-set_property PULLDOWN true [get_ports {interrupts[7]}];
 
 ## ChipKit I2C
 set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS33 } [get_ports { i2c_scl }]; #IO_L4P_T0_D04_14 Sch=ck_scl
