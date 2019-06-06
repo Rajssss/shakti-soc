@@ -40,7 +40,7 @@ package Soc;
   // peripheral imports
   import clint::*;
   import err_slave::*;
-  import eclass_axi4lite:: * ;
+  import eclass:: * ;
   import pwm_cluster :: * ;
   import uart_cluster :: * ;
   import spi_cluster :: * ;
@@ -68,21 +68,21 @@ package Soc;
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
     if(addr >= `MemoryBase && addr<= `MemoryEnd)
       slave_num = `Memory_slave_num;
-    else if(addr>= `ClintBase && addr<= `ClintEnd)
+    else if(addr >= `ClintBase && addr <= `ClintEnd)
       slave_num = `Clint_slave_num;
-    else if(addr>= `DebugBase && addr<= `DebugEnd)
+    else if(addr >= `DebugBase && addr <= `DebugEnd)
       slave_num = `Debug_slave_num;
-    else if(addr >= `QSPI0Base && addr<= `QSPI0End)
+    else if(addr >= `QSPI0Base && addr <= `QSPI0End)
       slave_num = `QSPI_slave_num;
     else if(addr >= `QSPI0MemBase && addr <= `QSPI0MemEnd)
       slave_num = `QSPI_slave_num;
-    else if(addr> `PWMClusterBase && addr <= `PWMClusterEnd)
+    else if(addr >= `PWMClusterBase && addr <= `PWMClusterEnd)
       slave_num = `PWMCluster_slave_num;
-    else if(addr> `UARTClusterBase && addr <= `UARTClusterEnd)
+    else if(addr >= `UARTClusterBase && addr <= `UARTClusterEnd)
       slave_num = `UARTCluster_slave_num;
-    else if(addr> `SPIClusterBase && addr <= `SPIClusterEnd)
+    else if(addr >= `SPIClusterBase && addr <= `SPIClusterEnd)
       slave_num = `SPICluster_slave_num;
-    else if(addr> `MixedClusterBase && addr <= `MixedClusterEnd)
+    else if(addr >= `MixedClusterBase && addr <= `MixedClusterEnd)
       slave_num = `MixedCluster_slave_num;
     else
       slave_num = `Err_slave_num;
@@ -130,13 +130,20 @@ package Soc;
     (*always_ready, always_enabled*)
     method Action ext_interrupts(Bit#(2) i);
   endinterface
+    
+  (*synthesize*)
+  module mkeclass(Ifc_eclass_axi4lite);
+    let ifc();
+    mkeclass_axi4lite#(`resetpc) _temp(ifc);
+    return ifc;
+  endmodule
 
   (*synthesize*)
   module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
 
-    Ifc_eclass_axi4lite eclass <- mkeclass_axi4lite(`resetpc);
+    let eclass <- mkeclass();
 
     AXI4_Lite_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, XLEN, USERSPACE) 
                                                         fabric <- mkAXI4_Lite_Fabric(fn_slave_map);
