@@ -65,7 +65,7 @@ package uart_cluster;
 	  let core_clock<-exposeCurrentClock;
   	let core_reset<-exposeCurrentReset;
     let ifc();
-    mkuart_axi4lite#(core_clock, core_reset, 68) _temp(ifc);
+    mkuart_axi4lite#(core_clock, core_reset, 163) _temp(ifc);
     return ifc;
   endmodule
 
