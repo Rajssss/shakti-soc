@@ -5,11 +5,7 @@ This repo contains the flow for porting an instance of the E-class on the [ARTY 
 ## Features Available
 Please see Soc.defines for the memory-map. Given below are the default configs that have been used.
 * __E-class Config__:
-    1. RV64IMAC
-    2. User-Traps enabled
-    3. 4 pmp regions
-    4. 2 Triggers
-    5. 4 performance counters
+    1. RV32I
 * __UART__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/uart/uart_driver.c) for more info on the uart.
 * __DEBUGGER__: Connects with riscv-openocd.
 * __CLINT__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/clint/clint.defines) for more info.
