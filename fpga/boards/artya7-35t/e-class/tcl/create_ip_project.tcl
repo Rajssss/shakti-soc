@@ -30,9 +30,9 @@ set_property "target_language" "Verilog" [current_project]
 set_property board_part digilentinc.com:arty-a7-35:part0:1.0 [current_project]
 
 # source IP tcls
-source $home_dir/tcl/create_axi_converter.tcl
+#source $home_dir/tcl/create_axi_converter.tcl
 source $home_dir/tcl/create_clock_div.tcl
-source $home_dir/tcl/create_mig.tcl
+#source $home_dir/tcl/create_mig.tcl
 
 # Create the multiplier IP only if "M" extension is present
 if {[string first "M" $isa] != -1} {
