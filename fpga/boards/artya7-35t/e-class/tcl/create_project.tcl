@@ -55,6 +55,7 @@ if {[string first "M" $isa] != -1} {
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
 #import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
 #import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
+import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {

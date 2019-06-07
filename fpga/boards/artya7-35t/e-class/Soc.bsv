@@ -50,7 +50,6 @@ package Soc;
   import pwm :: *;
   import i2c :: *;
   import gpio :: *;
-  import qspi :: *;
   import bram :: *;
   import debug_types::*;                                                                          
   import jtagdtm::*;                                                                              
@@ -72,10 +71,6 @@ package Soc;
       slave_num = `Clint_slave_num;
     else if(addr >= `DebugBase && addr <= `DebugEnd)
       slave_num = `Debug_slave_num;
-    else if(addr >= `QSPI0Base && addr <= `QSPI0End)
-      slave_num = `QSPI_slave_num;
-    else if(addr >= `QSPI0MemBase && addr <= `QSPI0MemEnd)
-      slave_num = `QSPI_slave_num;
     else if(addr >= `PWMClusterBase && addr <= `PWMClusterEnd)
       slave_num = `PWMCluster_slave_num;
     else if(addr >= `UARTClusterBase && addr <= `UARTClusterEnd)
@@ -89,15 +84,6 @@ package Soc;
       
     return slave_num;
   endfunction:fn_slave_map
-
-  (*synthesize*)
-  module mkqspi(Ifc_qspi_axi4lite#(`paddr,XLEN,0));
-    let curr_clk <- exposeCurrentClock;
-    let curr_reset <- exposeCurrentReset;
-    let ifc();
-    mkqspi_axi4lite#(curr_clk, curr_reset) _temp(ifc);
-    return ifc;
-  endmodule
 
   interface Ifc_Soc;
     interface PWMIO pwm0_io;
@@ -116,7 +102,6 @@ package Soc;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
-    interface QSPI_out qspi_io;
       // ------------- JTAG IOs ----------------------//
     (*always_enabled,always_ready*)                                                               
     method Action wire_tms(Bit#(1)tms_in);                                                        
@@ -150,7 +135,6 @@ package Soc;
     Ifc_clint_axi4lite#(`paddr, XLEN, 0, 1, 16) clint <- mkclint_axi4lite();
     Ifc_debug_halt_loop_axi4lite#(`paddr, XLEN, USERSPACE) debug_memory <-
                                                                         mkdebug_halt_loop_axi4lite;
-    let qspi <- mkqspi();
     Ifc_pwm_cluster pwm_cluster <- mkpwm_cluster;
     Ifc_uart_cluster uart_cluster <- mkuart_cluster;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
@@ -211,7 +195,6 @@ package Soc;
       jtag_tap.response_from_dm(sync_response_from_dm.first);                                       
     endrule                                                                                         
 
-    // TODO qspi interrupts
     rule connect_interrupt_lines;
       mixed_cluster.interrupts({wr_ext_interrutps, pwm_cluster.pwm0_sb_interrupt, 
                                                   pwm_cluster.pwm1_sb_interrupt, 
@@ -229,7 +212,6 @@ package Soc;
    	mkConnection(eclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
-    mkConnection (fabric.v_to_slaves [`QSPI_slave_num ], qspi.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
     mkConnection (fabric.v_to_slaves [`PWMCluster_slave_num], pwm_cluster.slave);
     mkConnection (fabric.v_to_slaves [`UARTCluster_slave_num], uart_cluster.slave);
@@ -271,7 +253,6 @@ package Soc;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
     interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
     interface xadc_master = mixed_cluster.xadc_master;
-    interface qspi_io = qspi.out;
     method Action ext_interrupts(Bit#(2) i);
       wr_ext_interrutps <= i;
     endmethod
