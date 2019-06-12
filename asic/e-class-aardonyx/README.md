@@ -79,9 +79,9 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 $ git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 ```
 
-2. Change present working directory to *shakti-soc/fpga/boards/artya7-100t/e-class*.
+2. Change present working directory to *shakti-soc/asic/e-class-aardonyx*.
 ```
-$ cd shakti-soc/fpga/boards/artya7-100t/e-class
+$ cd shakti-soc/asic/e-class-aardonyx
 ```
 
 3. Run the script to clone various repositories that contain the source code.
