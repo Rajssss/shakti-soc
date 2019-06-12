@@ -1,6 +1,6 @@
-# C-Class on ARTY-A7-100t Board
+# E-Class ASIC Dev Kit (AARDONYX)
 
-This repo contains the flow for porting an instance of the E-class on the [ARTY A7-100T](https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/) board from digilent. 
+This project contains a simple SoC targtted for dev modules which uses the e-class core.
 
 ## Features Available
 Please see Soc.defines for the memory-map. Given below are the default configs that have been used.
