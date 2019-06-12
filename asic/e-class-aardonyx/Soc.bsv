@@ -114,7 +114,6 @@ package Soc;
 		method I2C_out i2c_out;									//I2c IO interface
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
-    interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
     interface QSPI_out qspi_io;
       // ------------- JTAG IOs ----------------------//
     (*always_enabled,always_ready*)                                                               
@@ -267,7 +266,6 @@ package Soc;
     interface uart2_io = uart_cluster.uart2_io;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
     interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
-    interface xadc_master = mixed_cluster.xadc_master;
     interface qspi_io = qspi.out;
     method Action ext_interrupts(Bit#(2) i);
       wr_ext_interrutps <= i;
