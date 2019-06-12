@@ -150,7 +150,6 @@ generate_verilog: check-restore check-env
   $(define_macros) $(BSVCOMPILEOPTS) $(VERILOG_FILTER) \
   -p $(BSVINCDIR) -g $(TOP_MODULE) $(TOP_DIR)/$(TOP_FILE)  || (echo "BSC COMPILE ERROR"; exit 1) 
 	@cp ${BLUESPECDIR}/Verilog.Vivado/RegFile.v ${VERILOGDIR}  
-	@cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BELoad.v ${VERILOGDIR}  
 	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}
@@ -162,12 +161,13 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/SyncReset0.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
-	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
+#	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
 #	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
+# @cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BELoad.v ${VERILOGDIR}  
 	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/MakeClock.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/UngatedClockMux.v ${VERILOGDIR}
