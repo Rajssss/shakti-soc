@@ -19,7 +19,7 @@
 `define QSPI0Base         'h0000_0100
 `define QSPI0End          'h0000_01FF
 `define QSPI0MemBase      'h1000_0000
-`define QSPI0MemEnd       'h10FF_FFFF
+`define QSPI0MemEnd       'h1FFF_FFFF
 `define UARTClusterBase   'h0001_1300
 `define UARTClusterEnd    'h0001_1540
 `define SPIClusterBase    'h0002_0000
@@ -27,11 +27,13 @@
 `define PWMClusterBase    'h0003_0000
 `define PWMClusterEnd     'h0003_05FF
 `define MixedClusterBase  'h0004_0000
-`define MixedClusterEnd   'h0004_1400
+`define MixedClusterEnd   'h0004_02FF
 `define ClintBase         'h0200_0000
 `define ClintEnd          'h020B_FFFF
 `define MemoryBase        'h8000_0000
-`define MemoryEnd         'h87FF_FFFF
+`define MemoryEnd         'hBFFF_FFFF
+`define SDRAMCfgBase      'h0000_0200
+`define SDRAMCfgEnd       'h0000_02FF
 
 // - PWM cluster
 `define PWMCluster_Num_Slaves 7
@@ -92,14 +94,13 @@
 `define UART2End      'h0001_1540
 
 // - Mixed Cluster
-`define MixedCluster_Num_Slaves 5
+`define MixedCluster_Num_Slaves 4
 `define MixedCluster_Num_Masters 1
 
 `define I2C_slave_num 0
 `define PLIC_slave_num 1
 `define GPIO_slave_num 2
-`define XADC_slave_num 3
-`define MixedCluster_err_slave_num 4
+`define MixedCluster_err_slave_num 3
 
 `define I2CBase    	'h0004_0000
 `define I2CEnd     	'h0004_00FF
@@ -107,5 +108,3 @@
 `define PLICEnd		  'h0004_01FF
 `define GPIOBase	  'h0004_0200
 `define GPIOEnd		  'h0004_02FF
-`define XADCBase    'h0004_1000
-`define XADCEnd     'h0004_1400
