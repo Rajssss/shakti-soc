@@ -50,7 +50,7 @@ package Soc;
   import Vector::*;
 
   import debug_types::*;                                                                          
-  import jtagdtm::*;                                                                              
+  import xilinxdtm::*;                                                                              
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
 
@@ -84,14 +84,24 @@ package Soc;
     interface AXI4_Master_IFC#(`paddr, XLEN, USERSPACE) mem_master;
     interface RS232 uart_io;
       // ------------- JTAG IOs ----------------------//
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tms(Bit#(1)tms_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tdi(Bit#(1)tdi_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Bit#(1)wire_tdo;                                                                       
+      (*always_enabled,always_ready*)
+      method Action wire_tms(Bit#(1) tms_in);
+      (*always_enabled,always_ready*)
+      method Action wire_tdi(Bit#(1) tdi_in);
+      /*    Shift Register Control     */
+      (*always_enabled,always_ready*)
+      method Action wire_capture(Bit#(1) capture_in);
+      (*always_enabled,always_ready*)
+      method Action wire_run_test(Bit#(1) run_test_in);
+      (* always_enabled,always_ready*)
+      method Action wire_sel (Bit#(1) sel_in);
+      (* always_enabled,always_ready*)
+      method Action wire_shift (Bit#(1) shift_in);
+      (* always_enabled,always_ready*)
+      method Action wire_update (Bit#(1) update_in);
+      /*======= JTAG Output Pins ====== */
+      (*always_enabled,always_ready*)
+      method Bit#(1) wire_tdo;                                                            
       // ---------------------------------------------//
 		method I2C_out i2c_out;									//I2c IO interface
 
@@ -120,11 +130,16 @@ package Soc;
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
     CrossingReg#(Bit#(1)) tdi<-mkNullCrossingReg(tck_clk,0);                                        
-    CrossingReg#(Bit#(1)) tms<-mkNullCrossingReg(tck_clk,0);                                        
+    CrossingReg#(Bit#(1)) tms<-mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) capture <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) run_test <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) sel <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) shift <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) update <- mkNullCrossingReg(tck_clk,0);                                        
     // null crossing registers to transfer signals from tck to curr_clock domain.
     CrossingReg#(Bit#(1)) tdo<-mkNullCrossingReg(curr_clk,0,clocked_by tck_clk, reset_by trst);     
                                                                                                     
-    Ifc_jtagdtm jtag_tap <- mkjtagdtm(clocked_by tck_clk, reset_by trst);                           
+    Ifc_xilinxdtm jtag_tap <- mkxilinxdtm(clocked_by tck_clk, reset_by trst);                                                  
     Ifc_riscvDebug013 debug_module <- mkriscvDebug013();                                           
 
     // synFIFOs to transact data between JTAG and debug module                                                                                                    
@@ -136,8 +151,11 @@ package Soc;
     rule assign_jtag_inputs;                                                                                
       jtag_tap.tms_i(tms.crossed);                                                                  
       jtag_tap.tdi_i(tdi.crossed);                                                                  
-      jtag_tap.bs_chain_i(0);                                                                       
-      jtag_tap.debug_tdi_i(0);                                                                      
+      jtag_tap.capture_i(capture.crossed);
+      jtag_tap.run_test_i(run_test.crossed);
+      jtag_tap.sel_i(sel.crossed);
+      jtag_tap.shift_i(shift.crossed);
+      jtag_tap.update_i(update.crossed);                                                                   
     endrule                                                                                         
                                                                                                     
     rule assign_jtag_output;                                                                                 
@@ -214,7 +232,21 @@ package Soc;
     method Action wire_tdi(Bit#(1)tdi_in);                                                        
       tdi <= tdi_in;                                                                              
     endmethod                                                                                     
-
+    method Action wire_capture(Bit#(1) capture_in);
+      capture <= capture_in;
+    endmethod
+    method Action wire_run_test(Bit#(1) run_test_in);
+      run_test <= run_test_in;
+    endmethod
+    method Action wire_sel (Bit#(1) sel_in);
+      sel <= sel_in;
+    endmethod
+    method Action wire_shift (Bit#(1) shift_in);
+      shift <= shift_in;
+    endmethod
+    method Action wire_update (Bit#(1) update_in);
+      update <= update_in;
+    endmethod
     method Bit#(1)wire_tdo;                                                                       
       return tdo.crossed();                                                                       
     endmethod

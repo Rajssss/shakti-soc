@@ -50,7 +50,6 @@ package Soc;
   import Vector::*;
 
   import debug_types::*;                                                                          
-  //import jtagdtm::*;
   import xilinxdtm::*;                                                                              
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
@@ -140,7 +139,6 @@ package Soc;
     // null crossing registers to transfer signals from tck to curr_clock domain.
     CrossingReg#(Bit#(1)) tdo<-mkNullCrossingReg(curr_clk,0,clocked_by tck_clk, reset_by trst);     
                                                                                                     
-    //Ifc_jtagdtm jtag_tap <- mkjtagdtm(clocked_by tck_clk, reset_by trst);    
     Ifc_xilinxdtm jtag_tap <- mkxilinxdtm(clocked_by tck_clk, reset_by trst);                                                  
     Ifc_riscvDebug013 debug_module <- mkriscvDebug013();                                           
 
