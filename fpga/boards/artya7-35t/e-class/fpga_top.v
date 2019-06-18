@@ -40,16 +40,39 @@ module fpga_top
    // ---- UART ports --------//
    input         uart0_SIN,
    output        uart0_SOUT,   
+   input         uart1_SIN,
+   output        uart1_SOUT,   
+   input         uart2_SIN,
+   output        uart2_SOUT,   
+
+
 
 //   // ---- I2C ports --------//
-//   inout         i2c_sda,
-//   inout         i2c_scl,
+   inout         i2c_sda,
+   inout         i2c_scl,
    
 //   // ---- SPI ports ---------//
-//   output       spi0_mosi,
-//   output       spi0_sclk,
-//   output       spi0_nss,
-//   input        spi0_miso,
+   output       spi0_mosi,
+   output       spi0_sclk,
+   output       spi0_nss,
+   input        spi0_miso,
+   output       spi1_mosi,
+   output       spi1_sclk,
+   output       spi1_nss,
+   input        spi1_miso,
+   output       spi2_mosi,
+   output       spi2_sclk,
+   output       spi2_nss,
+   input        spi2_miso,
+
+//   // ---- PWM ports ---------//
+   output pwm0,
+   output pwm1,
+   output pwm2,
+   output pwm3,
+   output pwm4,
+   output pwm5,
+
 
    // ---- GPIO ports --------//
    inout[15:0] gpio,
@@ -149,42 +172,42 @@ module fpga_top
         .gpio_io_gpio_out_en(gpio_out_en),
 
       // PWM ports
-        .pwm0_io_pwm_o(),
-        .pwm1_io_pwm_o(),
-        .pwm2_io_pwm_o(),
-        .pwm3_io_pwm_o(),
-        .pwm4_io_pwm_o(),
-        .pwm5_io_pwm_o(),
+        .pwm0_io_pwm_o(pwm0),
+        .pwm1_io_pwm_o(pwm1),
+        .pwm2_io_pwm_o(pwm2),
+        .pwm3_io_pwm_o(pwm3),
+        .pwm4_io_pwm_o(pwm4),
+        .pwm5_io_pwm_o(pwm5),
     
       // SPI ports
-//        .spi0_io_mosi(spi0_mosi),
-//        .spi0_io_sclk(spi0_sclk),
-//        .spi0_io_nss(spi0_nss),
-//	      .spi0_io_miso_dat(spi0_miso),
-        .spi1_io_mosi(),
-        .spi1_io_sclk(),
-        .spi1_io_nss(),
-	      .spi1_io_miso_dat(),
-        .spi2_io_mosi(),
-        .spi2_io_sclk(),
-        .spi2_io_nss(),
-	      .spi2_io_miso_dat(),
+        .spi0_io_mosi(spi0_mosi),
+        .spi0_io_sclk(spi0_sclk),
+        .spi0_io_nss(spi0_nss),
+	      .spi0_io_miso_dat(spi0_miso),
+        .spi1_io_mosi(spi1_mosi),
+        .spi1_io_sclk(spi1_sclk),
+        .spi1_io_nss(spi1_nss),
+	      .spi1_io_miso_dat(spi1_miso),
+        .spi2_io_mosi(spi2_mosi),
+        .spi2_io_sclk(spi2_sclk),
+        .spi2_io_nss(spi2_nss), 
+	      .spi2_io_miso_dat(spi2_miso),
 
        // UART port definitions
         .uart0_io_SIN(uart0_SIN),
         .uart0_io_SOUT(uart0_SOUT),
-        .uart1_io_SIN(),
-        .uart1_io_SOUT(),
-        .uart2_io_SIN(),
-        .uart2_io_SOUT(),
+        .uart1_io_SIN(uart1_SIN),
+        .uart1_io_SOUT(uart1_SOUT),
+        .uart2_io_SIN(uart2_SIN),
+        .uart2_io_SOUT(uart2_SOUT),
         
 			 //I2C ports
-//      .i2c_out_scl_out (i2c_scl_out),
-//      .i2c_out_scl_in_in(i2c_scl_in),
-//      .i2c_out_scl_out_en(i2c_scl_out_en),
-//      .i2c_out_sda_out(i2c_sda_out),
-//      .i2c_out_sda_in_in(i2c_sda_in),
-//      .i2c_out_sda_out_en(i2c_sda_out_en),
+      .i2c_out_scl_out (i2c_scl_out),
+      .i2c_out_scl_in_in(i2c_scl_in),
+      .i2c_out_scl_out_en(i2c_scl_out_en),
+      .i2c_out_sda_out(i2c_sda_out),
+      .i2c_out_sda_in_in(i2c_sda_in),
+      .i2c_out_sda_out_en(i2c_sda_out_en),
 
       // XADC connection
     .xadc_master_awvalid(xadc_master_awvalid),
@@ -265,18 +288,19 @@ xadc_wiz_inst (
 				 );
       end
    endgenerate
-   
-//   IOBUF i2c_scl_inst(
-//             .O(i2c_scl_in),
-//             .IO(i2c_scl),
-//             .I(i2c_scl_out),
-//             .T(~i2c_scl_out_en)
-//         );
-   
-//   IOBUF i2c_sda_inst(
-//             .O(i2c_sda_in),
-//             .IO(i2c_sda),
-//             .I(i2c_sda_out),
-//             .T(~i2c_sda_out_en)
-//         );
+//---- IOBUF FOR I2C -----//   
+   IOBUF i2c_scl_inst(
+             .O(i2c_scl_in),
+             .IO(i2c_scl),
+             .I(i2c_scl_out),
+             .T(~i2c_scl_out_en)
+         );
+ 
+   IOBUF i2c_sda_inst(
+             .O(i2c_sda_in),
+             .IO(i2c_sda),
+             .I(i2c_sda_out),
+             .T(~i2c_sda_out_en)
+         );
+
 endmodule
