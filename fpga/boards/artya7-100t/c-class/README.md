@@ -21,6 +21,20 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 4. `riscv-openocd` should be installed in your system.
 5. `miniterm` should be installed.
 
+## Quick Start :: Get started with an Arty A7 100t
+
+### Use integrated Xilinx Jtag Chain (recomended)    
+'''
+# SET BSCAN2E in core_config.ing to enable
+make quickk_build_xilinx
+ 
+'''
+### USE your Own External Jtag Controller    
+```
+# Clone 
+# SET BSCAN2E to disable
+make quick_build_raw_jtag
+```
 ## Steps to build
 
 1. Clone the *shakti-soc* repository.
