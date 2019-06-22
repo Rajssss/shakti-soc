@@ -126,7 +126,7 @@ endif
 # ------------------------------------------------------------------------------------------------ #
 
 # ------------------------------------- Makefile TARGETS ----------------------------------------- #
-default: generate_verilog
+default: generate_verilog ip_build arty_build
 
 .PHONY: help
 help: ## This help dialog.
