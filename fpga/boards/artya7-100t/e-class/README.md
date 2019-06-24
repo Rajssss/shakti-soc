@@ -24,14 +24,14 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 
 ## Quick Start (default Config) :: Get started with an Arty A7 100t
 
-### Debug over integrated Xilinx tunneled bscan tap (recomended)
+### Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
 ``` bash
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-100t/e-class
 sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
 make quick_build_xilinx
 echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
-'''
+```
 #### Connect to target and Launch Debugger
 In a New Terminal window     
 ``` bash
@@ -41,7 +41,7 @@ In yet Another Terminal window
 ``` bash
 riscv64-unknown-elf-gdb -x gdb.script
 ```
-### USE your Own External Jtag Controller   
+### Debug Interface over External Jtag Adapter
 ```bash
 # Clone 
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
@@ -49,8 +49,19 @@ cd shakti-soc/fpga/boards/artya7-100t/e-class
 sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc
 make quick_build_raw_jtag
 ```
+Make the Following Physical Connections to your external Jtag driver      
+| JTAG Signal   |  Package PIN  |
+|---------------|---------------|
+| TMS | JA1 |
+| TDI | JA2 |
+| TRST | JA4 |
+| TDO | JA7 |
+| TCK | JA8 |
+
 #### Connect to target and Launch Debugger      
 ``` bash
+## NOTE This Configuration file is designed to support the SEGGER Jlink V10.1+ Jtag Adapters
+## Please Refer to the /riscv-openocd/tcl/target for adding support for your Adapter
 sudo openocd -f shakti-jlink-jtag.cfg
 ```
 In yet Another Terminal window      
