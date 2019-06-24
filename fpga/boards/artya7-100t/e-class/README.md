@@ -24,7 +24,7 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 
 ## Quick Start (default Config) :: Get started with an Arty A7 100t
 
-### Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
+### [A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
 ``` bash
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-100t/e-class
@@ -41,7 +41,7 @@ In yet Another Terminal window
 ``` bash
 riscv64-unknown-elf-gdb -x gdb.script
 ```
-### Debug Interface over External Jtag Adapter
+### [B] Debug Interface over External Jtag Adapter
 ```bash
 # Clone 
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
@@ -50,13 +50,13 @@ sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc
 make quick_build_raw_jtag
 ```
 Make the Following Physical Connections to your external Jtag driver      
-| JTAG Signal   |  Package PIN  |
-|---------------|---------------|
-| TMS | JA1 |
-| TDI | JA2 |
-| TRST | JA4 |
-| TDO | JA7 |
-| TCK | JA8 |
+| JTAG Signal | Package PIN |
+| ----------- | ----------- |
+|     TMS     |     JA1     |
+|     TDI     |     JA2     |
+|     TRST    |     JA4     |
+|     TDO     |     JA7     |
+|     TCK     |     JA8     |
 
 #### Connect to target and Launch Debugger      
 ``` bash
