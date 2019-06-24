@@ -32,14 +32,10 @@ sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc
 make quick_build_xilinx
 echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
 ```
-#### Connect to target and Launch Debugger
+##### Connecting to the Target and launching the OpenOcd Debug Server
 In a New Terminal window     
 ``` bash
 sudo openocd -f shakti-arty.cfg
-```
-In yet Another Terminal window
-``` bash
-riscv64-unknown-elf-gdb -x gdb.script
 ```
 ### [B] Debug Interface over External Jtag Adapter
 ```bash
@@ -50,6 +46,7 @@ sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc
 make quick_build_raw_jtag
 ```
 Make the Following Physical Connections to your external Jtag driver      
+
 | JTAG Signal | Package PIN |
 | ----------- | ----------- |
 |     TMS     |     JA1     |
@@ -58,15 +55,22 @@ Make the Following Physical Connections to your external Jtag driver
 |     TDO     |     JA7     |
 |     TCK     |     JA8     |
 
-#### Connect to target and Launch Debugger      
+##### Connecting to the Target and launching the OpenOcd Debug Server
 ``` bash
 ## NOTE This Configuration file is designed to support the SEGGER Jlink V10.1+ Jtag Adapters
 ## Please Refer to the /riscv-openocd/tcl/target for adding support for your Adapter
 sudo openocd -f shakti-jlink-jtag.cfg
 ```
-In yet Another Terminal window      
+
+#### Launch GDB
+`In yet Another Terminal window      
 ``` bash
 riscv64-unknown-elf-gdb -x gdb.script
+```
+
+#### Launch UART Console
+```bash
+sudo miniterm /dev/ttyUSB1 19200
 ```
 
 ## Extended Setup Guide 
