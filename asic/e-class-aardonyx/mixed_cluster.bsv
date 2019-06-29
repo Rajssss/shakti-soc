@@ -34,6 +34,7 @@ package mixed_cluster;
   import err_slave::*;
   import Connectable:: *;
   import GetPut:: *;
+  import bootrom :: * ;
   
   import i2c :: * ;
   import gpio :: * ;
@@ -50,6 +51,13 @@ package mixed_cluster;
 		method Action interrupts(Bit#(8) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
   endinterface
+
+  (*synthesize*)
+  module mkbootrom(Ifc_bootrom_axi4lite#(32, 32, 0, 8));
+    let ifc();
+    mkbootrom_axi4lite#(`BootromBase) _temp(ifc);
+    return ifc;
+  endmodule
 
   (*synthesize*)
   module mki2c (Ifc_i2c_axi4lite#(`paddr, 32, 0));
@@ -82,6 +90,8 @@ package mixed_cluster;
       slave_num = `PLIC_slave_num;
     else if(addr>= `I2CBase && addr<= `I2CEnd)
       slave_num = `I2C_slave_num;
+    else if(addr >= `BootromBase && addr <= `BootromEnd)
+      slave_num = `Bootrom_slave_num;
     else
       slave_num = `MixedCluster_err_slave_num;
       
@@ -98,6 +108,7 @@ package mixed_cluster;
     let i2c <- mki2c;
     let gpio <- mkgpio();
     let plic <- mkplic();
+    let bootrom <- mkbootrom();
     Ifc_err_slave_axi4lite#(`paddr, 32, 0 ) err_slave <- mkerr_slave_axi4lite;
 		Wire#(Bit#(8)) wr_external_interrupts <- mkDWire('d0);
     Wire#(Bit#(1)) wr_sb_ext_interrupt <- mkDWire(0);
@@ -126,6 +137,7 @@ package mixed_cluster;
    	mkConnection (fabric.v_to_slaves [`I2C_slave_num ],		i2c.slave);
 		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
 		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
+		mkConnection (fabric.v_to_slaves [`Bootrom_slave_num ], bootrom.slave);
     mkConnection (fabric.v_to_slaves [`MixedCluster_err_slave_num ] , err_slave.slave);
 		
     method I2C_out i2c_out= i2c.io;

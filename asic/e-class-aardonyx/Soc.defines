@@ -27,7 +27,7 @@
 `define PWMClusterBase    'h0003_0000
 `define PWMClusterEnd     'h0003_05FF
 `define MixedClusterBase  'h0004_0000
-`define MixedClusterEnd   'h0004_02FF
+`define MixedClusterEnd   'h0004_03FF
 `define ClintBase         'h0200_0000
 `define ClintEnd          'h020B_FFFF
 `define MemoryBase        'h8000_0000
@@ -94,13 +94,14 @@
 `define UART2End      'h0001_1540
 
 // - Mixed Cluster
-`define MixedCluster_Num_Slaves 4
+`define MixedCluster_Num_Slaves 5
 `define MixedCluster_Num_Masters 1
 
 `define I2C_slave_num 0
 `define PLIC_slave_num 1
 `define GPIO_slave_num 2
-`define MixedCluster_err_slave_num 3
+`define Bootrom_slave_num 3
+`define MixedCluster_err_slave_num 4
 
 `define I2CBase    	'h0004_0000
 `define I2CEnd     	'h0004_00FF
@@ -108,3 +109,5 @@
 `define PLICEnd		  'h0004_01FF
 `define GPIOBase	  'h0004_0200
 `define GPIOEnd		  'h0004_02FF
+`define BootromBase 'h0004_0300
+`define BootromEnd  'h0004_03FF
