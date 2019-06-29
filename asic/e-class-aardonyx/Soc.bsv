@@ -132,20 +132,13 @@ package Soc;
     (*always_ready, always_enabled*)
     interface Ifc_sdram_out#(32) sdram_io;
   endinterface
-    
-  (*synthesize*)
-  module mkeclass(Ifc_eclass_axi4lite);
-    let ifc();
-    mkeclass_axi4lite#(`resetpc) _temp(ifc);
-    return ifc;
-  endmodule
 
   (*synthesize*)
-  module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
+  module mkSoc#(Bit#(`vaddr) resetpc, Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
 
-    let eclass <- mkeclass();
+    Ifc_eclass_axi4lite eclass <- mkeclass_axi4lite(resetpc);
 
     AXI4_Lite_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, XLEN, USERSPACE) 
                                                         fabric <- mkAXI4_Lite_Fabric(fn_slave_map);
