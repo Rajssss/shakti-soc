@@ -55,6 +55,7 @@ package Soc;
   import jtagdtm::*;                                                                              
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
+  import sdram_axi4_lite :: *;
 
 
   // package imports
@@ -127,6 +128,9 @@ package Soc;
       // ---------------------------------------------//
     (*always_ready, always_enabled*)
     method Action ext_interrupts(Bit#(2) i);
+    
+    (*always_ready, always_enabled*)
+    interface Ifc_sdram_out#(32) sdram_io;
   endinterface
     
   (*synthesize*)
@@ -154,6 +158,7 @@ package Soc;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
+	  Ifc_sdram_wrap#(`paddr,XLEN,`paddr,XLEN,0,32,12,3) sdram <- mksdram_wrap ;
     Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
@@ -270,6 +275,8 @@ package Soc;
     method Action ext_interrupts(Bit#(2) i);
       wr_ext_interrutps <= i;
     endmethod
+
+    interface sdram_io = sdram.io;
 
   endmodule: mkSoc
 endpackage: Soc
