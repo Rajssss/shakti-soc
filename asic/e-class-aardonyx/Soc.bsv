@@ -264,7 +264,7 @@ package Soc;
     interface uart2_io = uart_cluster.uart2_io;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
     interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
-    interface qspi_io = qspi.out;
+    interface qspi_io = qspi.io;
     method Action ext_interrupts(Bit#(2) i);
       wr_ext_interrutps <= i;
     endmethod

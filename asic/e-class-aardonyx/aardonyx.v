@@ -104,19 +104,11 @@ module aardonyx(
 
 	  qspi_io_clk_o,
 
-	  qspi_io_io_o,
-
-	  qspi_io_io0_sdio_ctrl,
-
-	  qspi_io_io1_sdio_ctrl,
-
-	  qspi_io_io2_sdio_ctrl,
-
-	  qspi_io_io3_sdio_ctrl,
+	  qspi_io_io_out,
 
 	  qspi_io_io_enable,
 
-	  qspi_io_io_i_io_i,
+	  qspi_io_io_in_io_in,
 
 	  qspi_io_ncs_o,
 
@@ -261,26 +253,14 @@ module aardonyx(
   // value method qspi_io_clk_o
   output qspi_io_clk_o;
 
-  // value method qspi_io_io_o
-  output [3 : 0] qspi_io_io_o;
-
-  // value method qspi_io_io0_sdio_ctrl
-  output [8 : 0] qspi_io_io0_sdio_ctrl;
-
-  // value method qspi_io_io1_sdio_ctrl
-  output [8 : 0] qspi_io_io1_sdio_ctrl;
-
-  // value method qspi_io_io2_sdio_ctrl
-  output [8 : 0] qspi_io_io2_sdio_ctrl;
-
-  // value method qspi_io_io3_sdio_ctrl
-  output [8 : 0] qspi_io_io3_sdio_ctrl;
+  // value method qspi_io_io_out
+  output [3 : 0] qspi_io_io_out;
 
   // value method qspi_io_io_enable
   output [3 : 0] qspi_io_io_enable;
 
-  // action method qspi_io_io_i
-  input  [3 : 0] qspi_io_io_i_io_i;
+  // action method qspi_io_io_in
+  input  [3 : 0] qspi_io_io_in_io_in;
 
   // value method qspi_io_ncs_o
   output qspi_io_ncs_o;
@@ -374,10 +354,6 @@ module aardonyx(
               .gpio_io_gpio_out_en            (gpio_io_gpio_out_en            ),
               .qspi_io_clk_o                  (qspi_io_clk_o                  ),
               .qspi_io_io_o                   (qspi_io_io_o                   ),
-              .qspi_io_io0_sdio_ctrl          (qspi_io_io0_sdio_ctrl          ),
-              .qspi_io_io1_sdio_ctrl          (qspi_io_io1_sdio_ctrl          ),
-              .qspi_io_io2_sdio_ctrl          (qspi_io_io2_sdio_ctrl          ),
-              .qspi_io_io3_sdio_ctrl          (qspi_io_io3_sdio_ctrl          ),
               .qspi_io_io_enable              (qspi_io_io_enable              ),
               .qspi_io_ncs_o                  (qspi_io_ncs_o                  ),
               .wire_tdo                       (wire_tdo                       ),
