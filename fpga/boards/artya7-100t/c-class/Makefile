@@ -109,6 +109,12 @@ endif
 ifeq ($(OPENOCD), enable)
 	override define_macros += -D openocd=True
 endif
+ifeq ($(BSCAN2E), enable)
+	override define_macros += -D bscan2e=True
+	JTAG_TYPE:=JTAG_BSCAN2E
+else
+	JTAG_TYPE:=JTAG_EXTERNAL
+endif
 # Generate ifence if icache or bpu is enabled
 ifeq ($(ICACHE), enable)
 	override define_macros += -D ifence=True
@@ -186,6 +192,16 @@ check-py:
 check-restore:
 	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv ;	fi;
 
+.PHONY: call_manager
+call_manager:
+	@/bin/bash ./manager.sh update_deps
+
+.PHONY: quick_build_xilinx
+quick_build_xilinx: call_manager generate_verilog ip_build arty_build program_mcs_debugger
+	
+.PHONY: quick_build_raw_jtag
+quick_build_raw_jtag: call_manager generate_verilog ip_build arty_build program
+
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
 generate_verilog: check-restore check-env
@@ -243,7 +259,7 @@ ip_build: ## build Xilinx Core-IPs used in this project
 
 .PHONY: arty_build
 arty_build:
-	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
+	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) $(JTAG_TYPE) \
 	|| (echo "Could not create core project"; exit 1)
 	vivado -nojournal -log artybuild.log -notrace -mode tcl -source tcl/run.tcl \
 		-tclargs $(JOBS) || (echo "ERROR: While running synthesis")
@@ -252,12 +268,18 @@ arty_build:
 program: ## program the fpga
 	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program.tcl
 
+.PHONY: program_mcs_debugger
+program_mcs_debugger: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_debugger.tcl
+	echo "Please Disconnect and reconnect Your Arty Board from your PC"
+	echo "After programming reset the device once and run \"sudo openocd \
+	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
+
 .PHONY: clean-bsv
 clean-bsv: ## clean bsv build director
 	rm -rf $(BSVBUILDDIR) old_vars
 
 clean-verilog: ## delete verilog folder
-clean-verilog: clean 
 	rm -rf verilog/
 
 clean-fpga: ## delete fpga_prject and journal/log files as well

@@ -77,4 +77,5 @@ TRIGGERS=2
 # For Vivado Synthesis
 FPGA=xc7a100tcsg324-1
 SYNTHTOP=fpga_top
+BSCAN2E=disable
 JOBS=4

@@ -16,16 +16,6 @@ set_property -dict { PACKAGE_PIN J5    IOSTANDARD LVCMOS33 } [get_ports { pin_ar
 set_property -dict { PACKAGE_PIN D10   IOSTANDARD LVCMOS33 } [get_ports { uart_SOUT           }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
 set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { uart_SIN            }]; #IO_L14N_T2_SRCC_16 Sch=uart_txd_in
 
-##Pmod Header JA
-set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { pin_tms             }]; #IO_0_15 Sch=ja[1]
-set_property PULLUP   true [get_ports { pin_tms  }];
-set_property -dict { PACKAGE_PIN B11   IOSTANDARD LVCMOS33 } [get_ports { pin_tdi             }]; #IO_L4P_T0_15 Sch=ja[2]
-set_property -dict { PACKAGE_PIN D12   IOSTANDARD LVCMOS33 } [get_ports { pin_trst            }]; #IO_L6P_T0_15 Sch=ja[4]
-set_property PULLDOWN true [get_ports { pin_trst }];
-set_property -dict { PACKAGE_PIN D13   IOSTANDARD LVCMOS33 } [get_ports { pin_tdo             }]; #IO_L6N_T0_VREF_15 Sch=ja[7]
-set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { pin_tck             }]; #IO_L10P_T1_AD11P_15 Sch=ja[8]
-
-
 ## ChipKit Outer Digital Header
 set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { gpio[0]  }]; #IO_L16P_T2_CSI_B_14 Sch=ck_io[0]
 set_property PULLDOWN true [get_ports {gpio[0]}];
