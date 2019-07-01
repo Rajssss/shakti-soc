@@ -19,3 +19,5 @@ program_hw_devices [current_hw_device]
 disconnect_hw_server
 puts "INFO: FPGA has been programmed with the given bitstream"
 exit
+
+

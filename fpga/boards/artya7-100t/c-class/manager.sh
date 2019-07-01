@@ -18,7 +18,7 @@ branch_list=(
   0.15.2
   2.0.0
   master
-  2.2.0
+  2.3.0
   1.0.0
   master
   )
