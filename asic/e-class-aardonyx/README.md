@@ -17,9 +17,10 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
     * __SPI__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/spi/)
     * __PWM__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/pwm/)
     * __QSPI__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/qspi)
+    * __BOOTROM__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/bootrom/)
     * __DEBUGGER__: Connects with riscv-openocd. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/riscvDebug013)
     * __CLINT__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/clint/clint.defines) for more info.
-    * __SDRAM__: [WIP]
+    * __SDRAM__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/sdram/32-bit) for more info.
 
 * Mempry MAP:
   Following is the SoC Config for Aadronyx:
@@ -43,7 +44,9 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |PLICBase     | 'h0004_0100|
 |PLICEnd      | 'h0004_01FF|
 |GPIOBase     | 'h0004_0200| 
-|GPIOEnd      | 'h0004_03FF|
+|GPIOEnd      | 'h0004_02FF|
+|BootromBase  | 'h0004_0300|
+|BootromEnd   | 'h0004_03FF|
 |Uart0Base    | 'h0001_1300|
 |Uart0End     | 'h0001_1340|
 |Uart1Base    | 'h0001_1400|
