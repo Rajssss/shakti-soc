@@ -174,6 +174,7 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/MakeResetA.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncResetA.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncHandshake.v ${VERILOGDIR}
+	@cp aardonyx.v ${VERILOGDIR}
 	@$(VERILOGLICENSE)
 	@echo Compilation finished
 
