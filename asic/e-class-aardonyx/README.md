@@ -97,5 +97,7 @@ $ ./manager.sh update_deps
 $ make generate_verilog
 ```
 
+All files are available in the `verilog` folder with aardonyx.v being the top module
+
 ## Reporting Issues
 While reporting issues with this board/build please make sure to mark the issues with the `e-class-aardonyx` label
