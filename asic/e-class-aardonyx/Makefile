@@ -150,6 +150,7 @@ generate_verilog: check-restore check-env
   $(define_macros) $(BSVCOMPILEOPTS) $(VERILOG_FILTER) \
   -p $(BSVINCDIR) -g $(TOP_MODULE) $(TOP_DIR)/$(TOP_FILE)  || (echo "BSC COMPILE ERROR"; exit 1) 
 	@cp ${BLUESPECDIR}/Verilog.Vivado/RegFile.v ${VERILOGDIR}  
+	@cp ${BLUESPECDIR}/Verilog/BRAM1Load.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}
@@ -175,6 +176,7 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/SyncResetA.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncHandshake.v ${VERILOGDIR}
 	@cp aardonyx.v ${VERILOGDIR}
+	@cp devices/sdram/32-bit/controller/* ${VERILOGDIR}
 	@$(VERILOGLICENSE)
 	@echo Compilation finished
 
