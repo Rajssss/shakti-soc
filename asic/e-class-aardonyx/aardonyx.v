@@ -313,7 +313,7 @@ module aardonyx(
   // oscillator and gates for output clock CLK_sdram_io_sdram_clk
   output CLK_sdram_io_sdram_clk;
   output CLK_GATE_sdram_io_sdram_clk;
-)
+
   reg [31:0] resetpc;
   // boot mode options:
   // 'b00: debug mode
