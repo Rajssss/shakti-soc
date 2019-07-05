@@ -30,6 +30,7 @@ Details:
 */
 
 module aardonyx(
+    test_mode,
     boot_mode,
 	  CLK_tck_clk,
 	  RST_N_trst,
@@ -145,6 +146,7 @@ module aardonyx(
 	  CLK_sdram_io_sdram_clk,
 	  CLK_GATE_sdram_io_sdram_clk );
 
+  input test_mode; // 1: enable test-mode. 0: functional mode
   input [1:0] boot_mode;
   input  CLK_tck_clk;
   input  RST_N_trst;
