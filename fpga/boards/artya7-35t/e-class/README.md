@@ -113,7 +113,7 @@ $ sudo openocd -f shakti_ocd.cfg
 
 2. Open another terminal and launch gdb
 ```
-$ riscv64-unknown-elf-gdb -x gdb.script
+$ riscv32-unknown-elf-gdb -x gdb.script
 ```
 
 3. Open another terminal to capture UART output (The default baud rate is 19200)
