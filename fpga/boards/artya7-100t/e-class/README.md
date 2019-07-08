@@ -1,4 +1,4 @@
-# C-Class on ARTY-A7-100t Board
+# E-Class on ARTY-A7-100t Board
 
 This repo contains the flow for porting an instance of the E-class on the [ARTY A7-100T](https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/) board from digilent. 
 
