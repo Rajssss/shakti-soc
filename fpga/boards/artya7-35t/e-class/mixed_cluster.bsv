@@ -45,7 +45,7 @@ package mixed_cluster;
 		method I2C_out i2c_out;									//I2c IO interface
     method Bit#(1) sb_ext_interrupt;
     (*always_ready, always_enabled*)
-    interface GPIO#(16) gpio_io;						//GPIO IO interface
+    interface GPIO#(32) gpio_io;						//GPIO IO interface
     (*always_ready, always_enabled*)
 		method Action interrupts(Bit#(8) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
@@ -62,7 +62,7 @@ package mixed_cluster;
   endmodule
 
   (*synthesize*)
-  module mkgpio(Ifc_gpio_axi4lite#(`paddr, 32, 0, 16));
+  module mkgpio(Ifc_gpio_axi4lite#(`paddr, 32, 0, 32));
     let ifc();
     mkgpio_axi4lite _temp(ifc);
     return ifc;
@@ -112,8 +112,8 @@ package mixed_cluster;
 		endrule
 
     rule rl_connect_plic_connections;
-			let tmp<- gpio.sb_gpio_to_plic.get;
-			Bit#(16) lv_gpio_intr= pack(tmp);
+			let tmp <- gpio.sb_gpio_to_plic.get;
+			Bit#(16) lv_gpio_intr= truncate(pack(tmp));
 			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule

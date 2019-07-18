@@ -75,7 +75,7 @@ module fpga_top
 
 
    // ---- GPIO ports --------//
-   inout[15:0] gpio,
+   inout[31:0] gpio,
 
    // ---- External interrupts ports --------//
    input [1:0] interrupts,
@@ -119,7 +119,7 @@ module fpga_top
    wire i2c_scl_out, i2c_scl_in, i2c_scl_out_en;
    wire i2c_sda_out, i2c_sda_in, i2c_sda_out_en;
   
-   wire [15:0] gpio_in, gpio_out, gpio_out_en;
+   wire [31:0] gpio_in, gpio_out, gpio_out_en;
    
    // XADC Axi4-Lite Slave
     wire xadc_master_awvalid;
@@ -278,7 +278,7 @@ xadc_wiz_inst (
    // ---- Instantiating the C-class SoC -------------//
    genvar index;
    generate
-   for(index=0; index<16; index= index+1) 
+   for(index=0; index<32; index= index+1) 
       begin: connect_gpio_tristates
       IOBUF gpio_iobuf_inst (
              .O(gpio_in[index]),

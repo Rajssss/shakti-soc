@@ -100,7 +100,7 @@ package Soc;
     interface RS232 uart2_io;
 		method I2C_out i2c_out;									//I2c IO interface
     (*always_ready, always_enabled*)
-    interface GPIO#(16) gpio_io;						//GPIO IO interface
+    interface GPIO#(32) gpio_io;						//GPIO IO interface
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
       // ------------- JTAG IOs ----------------------//
     (*always_enabled,always_ready*)                                                               
