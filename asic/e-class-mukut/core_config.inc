@@ -2,7 +2,7 @@ ISA=RV32I
 MUL=asic
 SYNTH=fpga
 VERBOSITY=0
-USERTRAPS=enable
+USERTRAPS=disable
 USER=enable
 COREFABRIC=AXI4Lite
 MULSTAGES=8
@@ -28,11 +28,11 @@ RTLDUMP=disable
 ASSERTIONS=disable
 
 # Trigger Setup
-TRIGGERS=2
+TRIGGERS=0
 
 # performance counters
-COUNTERS=2
+COUNTERS=0
 
 # pmpsize
 PMP=disable
-PMPSIZE=2
+PMPSIZE=0
