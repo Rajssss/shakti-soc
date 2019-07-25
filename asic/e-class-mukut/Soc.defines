@@ -1,0 +1,32 @@
+`define Num_Masters 3
+`define Debug_master_num 0
+`define Mem_master_num 1
+`define Fetch_master_num 2
+
+`define Num_Slaves 10
+`define Bootrom_slave_num 0
+`define Clint_slave_num 1
+`define Debug_slave_num 2
+`define Uart0_slave_num 4
+`define Spi0_slave_num 5
+`define Spi1_slave_num 6
+`define I2C_slave_num 7
+`define Gpio_slave_num 8
+`define Err_slave_num 9
+
+`define DebugBase     'h0000_0010
+`define DebugEnd      'h0000_001F
+`define BootromBase   'h0000_1000
+`define BootromEnd    'h0000_13FF 
+`define UART0Base     'h0000_3000
+`define UART0End      'h0000_30FF
+`define Spi0Base      'h0000_3100
+`define Spi0End       'h0000_31FF
+`define Spi1Base      'h0000_3200
+`define Spi1End       'h0000_32FF
+`define I2CBase       'h0000_3300
+`define I2CEnd        'h0000_33FF
+`define GPIOBase      'h0000_3400
+`define GPIOEnd       'h0000_34FF
+`define ClintBase     'h0200_0000
+`define ClintEnd      'h020B_FFFF
