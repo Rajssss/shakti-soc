@@ -153,7 +153,7 @@ call_manager:
 	@/bin/bash ./manager.sh update_deps
 
 .PHONY: quick_build_xilinx
-quick_build_xilinx: call_manager generate_verilog ip_build arty_build program_mcs_debugger
+quick_build_xilinx: call_manager generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
 	
 .PHONY: quick_build_raw_jtag
 quick_build_raw_jtag: call_manager generate_verilog ip_build arty_build program
@@ -220,13 +220,24 @@ arty_build:
 	vivado -nojournal -log artybuild.log -notrace -mode tcl -source tcl/run.tcl \
 		-tclargs $(JOBS) || (echo "ERROR: While running synthesis")
 
-.PHONY: program
-program: ## program the fpga
+.PHONY: program_fpga_jlink
+program_fpga_jlink: ## program the fpga
 	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program.tcl
 
-.PHONY: program_mcs_debugger
-program_mcs_debugger: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
-	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_debugger.tcl
+.PHONY: generate_mcs
+generate_mcs: ## Generate the FPGA Configuration Memory file.
+	vivado -nojournal -nolog -mode tcl -source tcl/generate_mcs.tcl
+
+.PHONY: program_mcs_spansion
+program_mcs_spansion: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_arty_a7_spansion.tcl
+	echo "Please Disconnect and reconnect Your Arty Board from your PC"
+	echo "After programming reset the device once and run \"sudo openocd \
+	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
+
+.PHONY: program_mcs_micron
+program_mcs_micron: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_arty_a7_micron.tcl
 	echo "Please Disconnect and reconnect Your Arty Board from your PC"
 	echo "After programming reset the device once and run \"sudo openocd \
 	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
@@ -236,6 +247,7 @@ clean-bsv: ## clean bsv build director
 	rm -rf $(BSVBUILDDIR) old_vars
 
 clean-verilog: ## delete verilog folder
+clean-verilog:
 	rm -rf verilog/
 
 clean-fpga: ## delete fpga_prject and journal/log files as well

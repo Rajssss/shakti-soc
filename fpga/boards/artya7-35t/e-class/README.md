@@ -59,7 +59,56 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 4. `riscv-openocd` should be installed in your system.
 5. `miniterm` should be installed.
 
-## Steps to build
+## Quick Start (default Config) :: Get started with an Arty A7 35t
+
+### [A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended
+``` bash
+git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
+cd shakti-soc/fpga/boards/artya7-35t/e-class
+make quick_build_xilinx_spansion
+echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
+```
+##### Connecting to the Target and launching the OpenOcd Debug Server
+In a New Terminal window     
+``` bash
+sudo openocd -f shakti-arty.cfg
+```
+### [B] Debug Interface over External Jtag Adapter
+```bash
+# Clone 
+git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
+cd shakti-soc/fpga/boards/artya7-35t/e-class
+make quick_build_raw_jtag
+```
+Make the Following Physical Connections to your external Jtag driver      
+
+| JTAG Signal | Package PIN |
+| ----------- | ----------- |
+|     TMS     |     JA1     |
+|     TDI     |     JA2     |
+|     TRST    |     JA4     |
+|     TDO     |     JA7     |
+|     TCK     |     JA8     |
+
+##### Connecting to the Target and launching the OpenOcd Debug Server
+``` bash
+## NOTE This Configuration file is designed to support the SEGGER Jlink V10.1+ Jtag Adapters
+## Please Refer to the /riscv-openocd/tcl/target for adding support for your Adapter
+sudo openocd -f shakti-jlink-jtag.cfg
+```
+
+#### Launch GDB
+`In yet Another Terminal window      
+``` bash
+riscv64-unknown-elf-gdb -x gdb.script
+```
+
+#### Launch UART Console
+```bash
+sudo miniterm /dev/ttyUSB1 19200
+```
+
+## Extended Setup Guide 
 
 1. Clone the *shakti-soc* repository.
 ```

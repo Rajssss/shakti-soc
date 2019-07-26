@@ -78,6 +78,12 @@ endif
 ifeq ($(OPENOCD), enable)
 	override define_macros += -D openocd=True
 endif
+ifeq ($(BSCAN2E), enable)
+	override define_macros += -D bscan2e=True
+	JTAG_TYPE:=JTAG_BSCAN2E
+else
+	JTAG_TYPE:=JTAG_EXTERNAL
+endif
 ifneq ($(TRIGGERS), 0)
 	override define_macros += -D triggers=True -D trigger_num=$(TRIGGERS)
 	ifeq ($(XLEN), 64)
@@ -137,7 +143,25 @@ check-env:
 
 .PHONY: check-restore
 check-restore:
-	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv;	fi;
+	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv ;	fi;
+
+.PHONY: call_manager
+call_manager:
+	@/bin/bash ./manager.sh update_deps
+
+.PHONY: set_jtag_bscan2e
+set_jtag_bscan2e: 
+	@sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
+
+.PHONY: set_raw_jtag_jlink
+set_raw_jtag_jlink: 
+	@sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc 
+
+.PHONY: quick_build_xilinx_spansion
+quick_build_xilinx_spansion: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
+	
+.PHONY: quick_build_raw_jtag
+quick_build_raw_jtag: call_manager set_raw_jtag_jlink generate_verilog ip_build arty_build program_fpga_jlink
 
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
@@ -197,14 +221,32 @@ ip_build: ## build Xilinx Core-IPs used in this project
 
 .PHONY: arty_build
 arty_build:
-	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) \
+	vivado -nojournal -nolog -mode tcl -notrace -source tcl/create_project.tcl -tclargs $(SYNTHTOP) $(FPGA) $(ISA) $(JTAG_TYPE) \
 	|| (echo "Could not create core project"; exit 1)
 	vivado -nojournal -log artybuild.log -notrace -mode tcl -source tcl/run.tcl \
 		-tclargs $(JOBS) || (echo "ERROR: While running synthesis")
 
-.PHONY: program
-program: ## program the fpga
+.PHONY: program_fpga_jlink
+program_fpga_jlink: ## program the fpga
 	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program.tcl
+
+.PHONY: generate_mcs
+generate_mcs: ## Generate the FPGA Configuration Memory file.
+	vivado -nojournal -nolog -mode tcl -source tcl/generate_mcs.tcl
+
+.PHONY: program_mcs_spansion
+program_mcs_spansion: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_arty_a7_spansion.tcl
+	echo "Please Disconnect and reconnect Your Arty Board from your PC"
+	echo "After programming reset the device once and run \"sudo openocd \
+	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
+
+.PHONY: program_mcs_micron
+program_mcs_micron: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
+	sudo $(Vivado_loc) -nojournal -nolog -mode tcl -source tcl/program_mcs_arty_a7_micron.tcl
+	echo "Please Disconnect and reconnect Your Arty Board from your PC"
+	echo "After programming reset the device once and run \"sudo openocd \
+	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
 
 .PHONY: clean-bsv
 clean-bsv: ## clean bsv build director
