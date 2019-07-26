@@ -11,7 +11,7 @@ set mcs $core_project_dir/$top_module.mcs
 set bitload "up 0x00000000 $bit"
 
 puts "BITSTREAM: $bit  MCS: $mcs"
-write_cfgmem  -format mcs -size 16 -interface SPIx1 -loadbit $bitload  -force -file $mcs;
+#write_cfgmem  -format mcs -size 16 -interface SPIx1 -loadbit $bitload  -force -file $mcs;
 
 open_hw
 connect_hw_server
@@ -39,5 +39,3 @@ disconnect_hw_server localhost:3121;
 puts "INFO: FPGA CFG MEM  has been programmed with the given bitstream"
 puts "Please Disconnect FPGA from USB Port to use"
 exit
-
-

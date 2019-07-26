@@ -22,20 +22,21 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISI
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------------------------
 
-Author: Arjun Menon
+Author: Arjun Menon , P.George
 Details:
 
 --------------------------------------------------------------------------------------------------
 */
 module fpga_top
   (
-   
-   // ---- JTAG ports ------- //
-   input         pin_tck,
-   input         pin_trst,
-   input         pin_tms,
-   input         pin_tdi,
-   output        pin_tdo,
+  // ---- JTAG ports ------- //
+  `ifndef JTAG_BSCAN2E
+    input       pin_tck,
+    input       pin_trst,
+    input       pin_tms,
+    input       pin_tdi,
+    output      pin_tdo,
+  `endif
    
    // ---- UART ports --------//
    input         uart0_SIN,
@@ -121,6 +122,37 @@ module fpga_top
   
    wire [31:0] gpio_in, gpio_out, gpio_out_en;
    
+// ---------------------------------------------------------------------------- //
+  `ifdef JTAG_BSCAN2E
+    wire wire_tck_clk;
+    wire wire_trst;
+    wire wire_capture;
+    wire wire_run_test;
+    wire wire_sel;
+    wire wire_shift;
+    wire wire_tdi;
+    wire wire_tms;
+    wire wire_update;
+    wire wire_tdo;
+
+    BSCANE2 #(
+      .JTAG_CHAIN(4) // Value for USER command.
+    )
+    bse2_inst (
+      .CAPTURE(wire_capture), // 1-bit output: CAPTURE output from TAP controller.
+      .DRCK(), // 1-bit output: Gated TCK output. When SEL is asserted, DRCK toggles when CAPTURE or SHIFT are asserted.
+      .RESET(wire_trst), // 1-bit output: Reset output for TAP controller.
+      .RUNTEST(wire_run_test), // 1-bit output: Output asserted when TAP controller is in Run Test/Idle state.
+      .SEL(wire_sel), // 1-bit output: USER instruction active output.
+      .SHIFT(wire_shift), // 1-bit output: SHIFT output from TAP controller.
+      .TCK(wire_tck_clk), // 1-bit output: Test Clock output. Fabric connection to TAP Clock pin.
+      .TDI(wire_tdi), // 1-bit output: Test Data Input (TDI) output from TAP controller.
+      .TMS(wire_tms), // 1-bit output: Test Mode Select output. Fabric connection to TAP.
+      .UPDATE(wire_update), // 1-bit output: UPDATE output from TAP controller
+      .TDO(wire_tdo) // 1-bit input: Test Data Output (TDO) input for USER function.
+    );
+  `endif
+
    // XADC Axi4-Lite Slave
     wire xadc_master_awvalid;
     wire [11-1 : 0] xadc_master_awaddr;
@@ -159,12 +191,25 @@ module fpga_top
         .CLK(core_clk),
         .RST_N(soc_reset),
        
+`ifndef JTAG_BSCAN2E       
        // JTAG port definitions
-        .CLK_tck_clk(pin_tck),
-        .RST_N_trst(pin_trst),
-        .wire_tms_tms_in(pin_tms),
-        .wire_tdi_tdi_in(pin_tdi),
-        .wire_tdo(pin_tdo),
+       .CLK_tck_clk(pin_tck),
+       .RST_N_trst(pin_trst),
+       .wire_tms_tms_in(pin_tms),
+       .wire_tdi_tdi_in(pin_tdi),
+       .wire_tdo(pin_tdo),
+`else
+        .CLK_tck_clk(wire_tck_clk),
+        .RST_N_trst(~wire_trst),
+        .wire_capture_capture_in(wire_capture),     
+        .wire_run_test_run_test_in(wire_run_test),     
+        .wire_sel_sel_in(wire_sel),     
+        .wire_shift_shift_in(wire_shift),     
+        .wire_tdi_tdi_in(wire_tdi),     
+        .wire_tms_tms_in(wire_tms),     
+        .wire_update_update_in(wire_update),     
+        .wire_tdo(wire_tdo),
+`endif
 
 			 //GPIO ports
         .gpio_io_gpio_in_inp(gpio_in),

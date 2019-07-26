@@ -11,7 +11,7 @@ set mcs $core_project_dir/$top_module.mcs
 set bitload "up 0x00000000 $bit"
 
 puts "BITSTREAM: $bit  MCS: $mcs"
-write_cfgmem  -format mcs -size 16 -interface SPIx1 -loadbit $bitload  -force -file $mcs;
+#write_cfgmem  -format mcs -size 16 -interface SPIx1 -loadbit $bitload  -force -file $mcs;
 
 open_hw
 connect_hw_server
@@ -19,7 +19,7 @@ open_hw_target
 set_property PROGRAM.FILE $bit [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-create_hw_cfgmem -hw_device [get_hw_devices xc7a100t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl128sxxxxxx0-spi-x1_x2_x4}] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a100t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
 set_property PROGRAM.ADDRESS_RANGE  {entire_device} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
 
 set_property PROGRAM.FILES $mcs [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a100t_0] 0]]
@@ -39,5 +39,3 @@ disconnect_hw_server localhost:3121;
 puts "INFO: FPGA CFG MEM  has been programmed with the given bitstream"
 puts "Please Disconnect FPGA from USB Port to use"
 exit
-
-

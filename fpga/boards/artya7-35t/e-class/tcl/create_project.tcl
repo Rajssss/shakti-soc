@@ -1,18 +1,19 @@
 set curdir [ file dirname [ file normalize [ info script ] ] ]
 source $curdir/env.tcl
 
-if { $argc != 3 } {
-  puts "Please pass the top module name that needs to be synthesized along with the fpga part"
-  puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa>"
+if { $argc != 4 } {
+  puts "Please pass the top modu le name that needs to be synthesized along with the fpga part"
+  puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa> <jtag_type>"
   exit 2
 } else {
-  puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] FPGA: [lindex $argv 1]"
+  puts "Synthesizing with Top Module: [lindex $argv 0] for FPGA: [lindex $argv 1] ISA: [lindex $argv 2] with Jtag: [lindex $argv 3]"
 }
 
 set top_module [lindex $argv 0]
 set fpga_part [lindex $argv 1]
 set isa [lindex $argv 2]
 set base_version [string range [version -short] 0 3]
+set jtag_type [lindex $argv 3]
 # create folders
 file mkdir $fpga_dir
 
@@ -46,7 +47,9 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 
 # Add/Import constrs file and set constrs file properties
 add_files -norecurse -fileset constrs_1 $home_dir/constraints.xdc
-
+if { $jtag_type eq "JTAG_EXTERNAL" } {
+  add_files -norecurse -fileset constrs_1 $home_dir/jtag_constraints.xdc
+}
 # generate all IP source code
 if {[string first "M" $isa] != -1} {
   import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/multiplier/multiplier.xci
@@ -67,7 +70,14 @@ if {[string equal [get_runs -quiet core_synth_1] ""]} {
 }
 # do not flatten design
 set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
-set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value {-verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY} -objects [get_runs core_synth_1]
+
+## Add the verilog define argument to the string
+set verilog_define_args " -verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY "
+if { $jtag_type eq "JTAG_BSCAN2E" } {
+	append verilog_define_args "-verilog_define JTAG_BSCAN2E"
+}
+
+set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value $verilog_define_args -objects [get_runs core_synth_1]
 
 current_run -synthesis [get_runs core_synth_1]
 #et_property strategy Flow_PerfOptimized_high [get_runs core_synth_1]

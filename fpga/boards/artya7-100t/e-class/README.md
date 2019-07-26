@@ -24,12 +24,11 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 
 ## Quick Start (default Config) :: Get started with an Arty A7 100t
 
-### [A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
+### [A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended
 ``` bash
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-100t/e-class
-sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
-make quick_build_xilinx
+make quick_build_xilinx_spansion
 echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
 ```
 ##### Connecting to the Target and launching the OpenOcd Debug Server
@@ -42,7 +41,6 @@ sudo openocd -f shakti-arty.cfg
 # Clone 
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-100t/e-class
-sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc
 make quick_build_raw_jtag
 ```
 Make the Following Physical Connections to your external Jtag driver      

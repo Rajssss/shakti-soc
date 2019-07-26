@@ -51,10 +51,15 @@ package Soc;
   import i2c :: *;
   import gpio :: *;
   import bram :: *;
-  import debug_types::*;                                                                          
-  import jtagdtm::*;                                                                              
+  import debug_types::*;     
+  `ifdef bscan2e                                                         
+	import xilinxdtm::*;                                                                              
+  `else 
+	import jtagdtm::*;
+  `endif                                                                                                                         
   import riscvDebug013::*;                                                                        
   import debug_halt_loop::*;
+  import debug_types::*;                
 
 
   // package imports
@@ -102,16 +107,26 @@ package Soc;
     (*always_ready, always_enabled*)
     interface GPIO#(32) gpio_io;						//GPIO IO interface
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) xadc_master;
-      // ------------- JTAG IOs ----------------------//
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tms(Bit#(1)tms_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Action wire_tdi(Bit#(1)tdi_in);                                                        
-
-    (*always_enabled,always_ready*)                                                               
-    method Bit#(1)wire_tdo;                                                                       
-      // ---------------------------------------------//
+// ------------- JTAG IOs ----------------------//
+    (*always_enabled,always_ready*)
+    method Action wire_tms(Bit#(1) tms_in);
+    (*always_enabled,always_ready*)
+    method Action wire_tdi(Bit#(1) tdi_in);
+    `ifdef bscan2e //---  Shift Register Control ---//
+      (*always_enabled,always_ready*)
+      method Action wire_capture(Bit#(1) capture_in);
+      (*always_enabled,always_ready*)
+      method Action wire_run_test(Bit#(1) run_test_in);
+      (* always_enabled,always_ready*)
+      method Action wire_sel (Bit#(1) sel_in);
+      (* always_enabled,always_ready*)
+      method Action wire_shift (Bit#(1) shift_in);
+      (* always_enabled,always_ready*)
+      method Action wire_update (Bit#(1) update_in);
+    `endif
+    (*always_enabled,always_ready*)
+    method Bit#(1) wire_tdo;                                                            
+    // ---------------------------------------------//
     (*always_ready, always_enabled*)
     method Action ext_interrupts(Bit#(2) i);
   endinterface
@@ -146,11 +161,22 @@ package Soc;
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
     CrossingReg#(Bit#(1)) tdi<-mkNullCrossingReg(tck_clk,0);                                        
-    CrossingReg#(Bit#(1)) tms<-mkNullCrossingReg(tck_clk,0);                                        
+    CrossingReg#(Bit#(1)) tms<-mkNullCrossingReg(tck_clk,0);
+`ifdef bscan2e
+    CrossingReg#(Bit#(1)) capture <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) run_test <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) sel <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) shift <- mkNullCrossingReg(tck_clk,0);
+    CrossingReg#(Bit#(1)) update <- mkNullCrossingReg(tck_clk,0);   
+`endif                                        
     // null crossing registers to transfer signals from tck to curr_clock domain.
     CrossingReg#(Bit#(1)) tdo<-mkNullCrossingReg(curr_clk,0,clocked_by tck_clk, reset_by trst);     
-                                                                                                    
-    Ifc_jtagdtm jtag_tap <- mkjtagdtm(clocked_by tck_clk, reset_by trst);                           
+    // Tap Controller jtag_tap
+    `ifdef bscan2e
+      Ifc_xilinxdtm jtag_tap <- mkxilinxdtm(clocked_by tck_clk, reset_by trst);                                         
+    `else
+      Ifc_jtagdtm jtag_tap <- mkjtagdtm(clocked_by tck_clk, reset_by trst);            
+    `endif
     Ifc_riscvDebug013 debug_module <- mkriscvDebug013();                                           
 
     // synFIFOs to transact data between JTAG and debug module                                                                                                    
@@ -162,8 +188,13 @@ package Soc;
     rule assign_jtag_inputs;                                                                                
       jtag_tap.tms_i(tms.crossed);                                                                  
       jtag_tap.tdi_i(tdi.crossed);                                                                  
-      jtag_tap.bs_chain_i(0);                                                                       
-      jtag_tap.debug_tdi_i(0);                                                                      
+      `ifdef bscan2e
+        jtag_tap.capture_i(capture.crossed);
+      	jtag_tap.run_test_i(run_test.crossed);
+      	jtag_tap.sel_i(sel.crossed);
+      	jtag_tap.shift_i(shift.crossed);
+      	jtag_tap.update_i(update.crossed);                                                                   
+      `endif
     endrule                                                                                         
                                                                                                     
     rule assign_jtag_output;                                                                                 
@@ -226,18 +257,34 @@ package Soc;
     mkConnection(eclass.sb_clint_mtime,clint.sb_clint_mtime);
 
 
-      // ------------- JTAG IOs ----------------------//
+    // ------------- JTAG IOs ----------------------//
     method Action wire_tms(Bit#(1)tms_in);                                                        
       tms <= tms_in;                                                                              
     endmethod                    
-
     method Action wire_tdi(Bit#(1)tdi_in);                                                        
       tdi <= tdi_in;                                                                              
     endmethod                                                                                     
-
+    `ifdef bscan2e
+      method Action wire_capture(Bit#(1) capture_in);
+        capture <= capture_in;
+      endmethod
+      method Action wire_run_test(Bit#(1) run_test_in);
+        run_test <= run_test_in;
+      endmethod
+      method Action wire_sel (Bit#(1) sel_in);
+        sel <= sel_in;
+      endmethod
+      method Action wire_shift (Bit#(1) shift_in);
+        shift <= shift_in;
+      endmethod
+      method Action wire_update (Bit#(1) update_in);
+        update <= update_in;
+      endmethod
+    `endif
     method Bit#(1)wire_tdo;                                                                       
       return tdo.crossed();                                                                       
     endmethod
+    // -------------------------------------------- //
     interface pwm0_io = pwm_cluster.pwm0_io;
     interface pwm1_io = pwm_cluster.pwm1_io;
     interface pwm2_io = pwm_cluster.pwm2_io;
