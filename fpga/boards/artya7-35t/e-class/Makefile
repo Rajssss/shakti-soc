@@ -157,8 +157,8 @@ set_jtag_bscan2e:
 set_raw_jtag_jlink: 
 	@sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc 
 
-.PHONY: quick_build_xilinx_spansion
-quick_build_xilinx_spansion: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
+.PHONY: quick_build_xilinx
+quick_build_xilinx: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
 	
 .PHONY: quick_build_raw_jtag
 quick_build_raw_jtag: call_manager set_raw_jtag_jlink generate_verilog ip_build arty_build program_fpga_jlink

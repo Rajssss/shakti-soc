@@ -61,11 +61,20 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 
 ## Quick Start (default Config) :: Get started with an Arty A7 35t
 
-### [A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended
+### [A] Using the pre-built mcs file
+The folder `pre-built-mcs` contains an mcs file for this board configured using the above specs. 
+```
+cd pre-built-mcs
+make program_mcs_spansion
+OR
+make program_mcs_micorn
+```
+
+### [B] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
 ``` bash
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-35t/e-class
-make quick_build_xilinx_spansion
+make quick_build_xilinx
 echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
 ```
 ##### Connecting to the Target and launching the OpenOcd Debug Server
@@ -73,7 +82,11 @@ In a New Terminal window
 ``` bash
 sudo openocd -f shakti-arty.cfg
 ```
-### [B] Debug Interface over External Jtag Adapter
+In yet Another Terminal window
+``` bash
+riscv64-unknown-elf-gdb -x gdb.script
+```
+### [C] Debug Interface over External Jtag Adapter
 ```bash
 # Clone 
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
