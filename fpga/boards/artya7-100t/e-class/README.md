@@ -30,7 +30,7 @@ The folder `pre-built-mcs` contains an mcs file for this board configured using 
 cd pre-built-mcs
 make program_mcs_spansion
 OR
-make program_mcs_micorn
+make make program_mcs_micron
 ```
 
 ### [B] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
