@@ -110,7 +110,7 @@ package Soc;
     method I2C_out i2c_out;				 //I2c IO interface
     (*always_enabled,always_ready*)                                                               
 		method Action interrupts(Bit#(8) inp);  //External interrupts to PLIC
-    interface GPIO#(16) gpio_io;	//GPIO IO interface
+    interface GPIO#(32) gpio_io;						//GPIO IO interface
   endinterface
 
   (*synthesize*)
@@ -127,7 +127,7 @@ package Soc;
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
 		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
-		Ifc_gpio_axi4#(`paddr, ELEN, 0, 16) gpio <- mkgpio_axi4;
+		Ifc_gpio_axi4#(`paddr, ELEN, 0, 32) gpio <- mkgpio_axi4;
 		Ifc_plic_axi4#(`paddr, ELEN, 0, 26, 2, 0) plic <-mkplic_axi4(`PLICBase);
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
@@ -206,7 +206,7 @@ package Soc;
 		//Rule to connect interrupts from various sources to PLIC
 		rule rl_connect_plic_connections;
 			let tmp<- gpio.sb_gpio_to_plic.get;
-			Bit#(16) lv_gpio_intr= pack(tmp);
+			Bit#(16) lv_gpio_intr= truncate(pack(tmp));
 			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
