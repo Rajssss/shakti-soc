@@ -69,7 +69,7 @@ if {[string equal [get_runs -quiet core_synth_1] ""]} {
     set_property flow "Vivado Synthesis $base_version" [get_runs core_synth_1]
 }
 # do not flatten design
-set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
+#set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
 
 ## Add the verilog define argument to the string
 set verilog_define_args " -verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY "
