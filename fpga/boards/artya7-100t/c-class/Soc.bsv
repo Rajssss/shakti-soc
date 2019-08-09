@@ -122,7 +122,7 @@ package Soc;
 
     AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, ELEN, USERSPACE) 
                                                     fabric <- mkAXI4_Fabric(fn_slave_map);
-    Ifc_debug_halt_loop#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop;
+    Ifc_debug_halt_loop_axi4#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop_axi4;
 	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68);
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
