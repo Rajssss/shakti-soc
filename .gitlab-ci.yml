@@ -22,7 +22,7 @@ e-class-100t:
     - source /tools/setup.sh
     - source /tools/viv2018.sh
     - cd fpga/boards/artya7-100t/e-class
-    - make call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs
+    - make call_manager generate_verilog ip_build arty_build generate_mcs
     - cp fpga_project/e-class/fpga_top.mcs ../../../../
   only:
     refs:
@@ -41,7 +41,7 @@ c-class-100t:
     - source /tools/setup.sh
     - source /tools/viv2018.sh
     - cd fpga/boards/artya7-100t/c-class
-    - make call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs
+    - make call_manager generate_verilog ip_build arty_build generate_mcs
     - cp fpga_project/c-class/fpga_top.mcs ../../../../
   only:
     refs:
