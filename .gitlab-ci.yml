@@ -16,5 +16,4 @@ e-class-35t:
     paths:
       - fpga_top.mcs
   tags:
-    - core-runner
     - shakti-runner
