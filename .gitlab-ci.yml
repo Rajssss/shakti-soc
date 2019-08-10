@@ -10,9 +10,46 @@ e-class-35t:
       - master
     changes:
       - fpga/boards/artya7-35t/e-class/*
-      - .gitlab-ci.yml
   artifacts:
     name: e-class-35t
+    paths:
+      - fpga_top.mcs
+  tags:
+    - shakti-runner
+
+e-class-100t:
+  script:
+    - source /tools/setup.sh
+    - source /tools/viv2018.sh
+    - cd fpga/boards/artya7-100t/e-class
+    - make call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs
+    - cp fpga_project/e-class/fpga_top.mcs ../../../../
+  only:
+    refs:
+      - master
+    changes:
+      - fpga/boards/artya7-100t/e-class/*
+  artifacts:
+    name: e-class-100t
+    paths:
+      - fpga_top.mcs
+  tags:
+    - shakti-runner
+
+c-class-100t:
+  script:
+    - source /tools/setup.sh
+    - source /tools/viv2018.sh
+    - cd fpga/boards/artya7-100t/c-class
+    - make call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs
+    - cp fpga_project/c-class/fpga_top.mcs ../../../../
+  only:
+    refs:
+      - master
+    changes:
+      - fpga/boards/artya7-100t/c-class/*
+  artifacts:
+    name: c-class-100t
     paths:
       - fpga_top.mcs
   tags:
