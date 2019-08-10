@@ -196,11 +196,20 @@ check-restore:
 call_manager:
 	@/bin/bash ./manager.sh update_deps
 
+.PHONY: set_jtag_bscan2e
+set_jtag_bscan2e: 
+	@sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
+
+.PHONY: set_raw_jtag_jlink
+set_raw_jtag_jlink: 
+	@sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc 
+
+
 .PHONY: quick_build_xilinx
-quick_build_xilinx: call_manager generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
+quick_build_xilinx: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
 	
 .PHONY: quick_build_raw_jtag
-quick_build_raw_jtag: call_manager generate_verilog ip_build arty_build program
+quick_build_raw_jtag: call_manager set_raw_jtag_jlink generate_verilog ip_build arty_build program
 
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
