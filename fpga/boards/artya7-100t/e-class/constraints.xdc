@@ -11,7 +11,7 @@ set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets sys_clk_IBUF]
 
 set_property -dict { PACKAGE_PIN C2    IOSTANDARD LVCMOS33 } [get_ports { sys_rst             }]; #IO_L16P_T2_35 Sch=ck_rst
 set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { init_calib_complete }]; #IO_L24N_T3_A00_D16_14 Sch=led[7]
-set_property -dict { PACKAGE_PIN J5    IOSTANDARD LVCMOS33 } [get_ports { pin_aresetn         }]; #IO_25_35 Sch=led[5]
+#set_property -dict { PACKAGE_PIN J5    IOSTANDARD LVCMOS33 } [get_ports { pin_aresetn         }]; #IO_25_35 Sch=led[5]
 
 set_property -dict { PACKAGE_PIN D10   IOSTANDARD LVCMOS33 } [get_ports { uart_SOUT           }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
 set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { uart_SIN            }]; #IO_L14N_T2_SRCC_16 Sch=uart_txd_in

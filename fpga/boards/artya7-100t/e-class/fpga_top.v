@@ -63,7 +63,6 @@ module fpga_top#
     output      pin_tdo,
   `endif
     
-   output        pin_aresetn,
    output        init_calib_complete,
    
    // ---- UART ports --------//
@@ -331,7 +330,6 @@ module fpga_top#
      aresetn <= ~rst;
    end
    
-   assign pin_aresetn= rst;
 
    // Instantiating the clock converter between the SoC and DDR3 MIG
    clk_converter clock_converter (

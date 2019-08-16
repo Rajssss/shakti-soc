@@ -44,7 +44,6 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   output        ddr3_cs_n,
   output [1:0]  ddr3_dm,
   output        ddr3_odt,
-  output        pin_aresetn,
   output        init_calib_complete,
   // ---- JTAG ports ------- //
   `ifndef JTAG_BSCAN2E
@@ -285,7 +284,6 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
      aresetn <= ~rst;
    end
    
-   assign pin_aresetn= rst;
 
    // Instantiating the clock converter between the SoC and DDR3 MIG
    clk_converter clock_converter (
