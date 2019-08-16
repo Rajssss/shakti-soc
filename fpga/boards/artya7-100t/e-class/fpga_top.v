@@ -75,7 +75,7 @@ module fpga_top#
    inout         i2c_scl,
 
    // ---- GPIO ports --------//
-   inout[15:0] gpio,
+   inout[31:0] gpio,
 
    // ---- External interrupts ports --------//
    input [7:0] interrupts,
@@ -506,7 +506,7 @@ module fpga_top#
    // ---- Instantiating the C-class SoC -------------//
    genvar index;
    generate
-   for(index=0; index<16; index= index+1) 
+   for(index=0; index<32; index= index+1) 
       begin: connect_gpio_tristates
       IOBUF gpio_iobuf_inst (
              .O(gpio_in[index]),

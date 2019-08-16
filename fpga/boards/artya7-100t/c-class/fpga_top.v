@@ -61,7 +61,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   inout         i2c_sda,
   inout         i2c_scl,    
   // ---- GPIO ports --------//
-  inout [15:0]  gpio,   
+  inout [31:0]  gpio,   
   // ---- External interrupts ports --------//
   input [7:0]   interrupts,   
   // ---- System Reset ------//
@@ -460,7 +460,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
    // ---- Instantiating the C-class SoC -------------//
    genvar index;
    generate
-   for(index=0; index<16; index= index+1) 
+   for(index=0; index<32; index= index+1) 
       begin: connect_gpio_tristates
       IOBUF gpio_iobuf_inst (
              .O(gpio_in[index]),
