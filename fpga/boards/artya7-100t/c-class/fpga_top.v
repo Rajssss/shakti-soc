@@ -155,7 +155,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   wire [11:0]                       device_temp;    
   wire i2c_scl_out, i2c_scl_in, i2c_scl_out_en;
   wire i2c_sda_out, i2c_sda_in, i2c_sda_out_en;
-  wire [15:0] gpio_in, gpio_out, gpio_out_en;
+  wire [31:0] gpio_in, gpio_out, gpio_out_en;
 
    // ---------------------------------------------------------------------------- //
   `ifdef JTAG_BSCAN2E

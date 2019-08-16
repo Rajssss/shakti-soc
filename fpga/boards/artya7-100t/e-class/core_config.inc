@@ -38,5 +38,5 @@ PMPSIZE=4
 # For Vivado Synthesis
 FPGA=xc7a100tcsg324-1
 SYNTHTOP=fpga_top
-BSCAN2E=disable
+BSCAN2E=enable
 JOBS=4
