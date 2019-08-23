@@ -1,15 +1,15 @@
-/* 
+/*
 Copyright (c) 2018, IIT Madras All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
 
 * Redistributions of source code must retain the above copyright notice, this list of conditions
-  and the following disclaimer.  
-* Redistributions in binary form must reproduce the above copyright notice, this list of 
-  conditions and the following disclaimer in the documentation and/or other materials provided 
- with the distribution.  
-* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or 
+  and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of
+  conditions and the following disclaimer in the documentation and/or other materials provided
+ with the distribution.
+* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or
   promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
@@ -18,7 +18,7 @@ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYR
 CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
 DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
-IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------------------------
 
@@ -37,81 +37,79 @@ module fpga_top
     input       pin_tdi,
     output      pin_tdo,
   `endif
-   
+
    // ---- UART ports --------//
-   input         uart0_SIN,
-   output        uart0_SOUT,   
-   input         uart1_SIN,
-   output        uart1_SOUT,   
-   input         uart2_SIN,
-   output        uart2_SOUT,   
-
-
+    input         uart0_SIN,
+    output        uart0_SOUT,
+    input         uart1_SIN,
+    output        uart1_SOUT,
+    input         uart2_SIN,
+    output        uart2_SOUT,
 
 //   // ---- I2C ports --------//
-   inout         i2c_sda,
-   inout         i2c_scl,
-   
+    inout         i2c_sda,
+    inout         i2c_scl,
+
 //   // ---- SPI ports ---------//
-   output       spi0_mosi,
-   output       spi0_sclk,
-   output       spi0_nss,
-   input        spi0_miso,
-   output       spi1_mosi,
-   output       spi1_sclk,
-   output       spi1_nss,
-   input        spi1_miso,
-   output       spi2_mosi,
-   output       spi2_sclk,
-   output       spi2_nss,
-   input        spi2_miso,
+    output       spi0_mosi,
+    output       spi0_sclk,
+    output       spi0_nss,
+    input        spi0_miso,
+    output       spi1_mosi,
+    output       spi1_sclk,
+    output       spi1_nss,
+    input        spi1_miso,
+    output       spi2_mosi,
+    output       spi2_sclk,
+    output       spi2_nss,
+    input        spi2_miso,
 
 //   // ---- PWM ports ---------//
-   output pwm0,
-   output pwm1,
-   output pwm2,
-   output pwm3,
-   output pwm4,
-   output pwm5,
+    output pwm0,
+    output pwm1,
+    output pwm2,
+    output pwm3,
+    output pwm4,
+    output pwm5,
 
 
-   // ---- GPIO ports --------//
-   inout[31:0] gpio,
+    // ---- GPIO ports --------//
+    inout[31:0] gpio,
 
-   // ---- External interrupts ports --------//
-   input [1:0] interrupts,
+    // ---- External interrupts ports --------//
+    input [1:0] interrupts,
 
-   // ---- System Reset ------//
-   input         sys_rst,	//Active Low
-   
-   // ---- System Clock ------//
-   input         sys_clk,
-   
-   // ---- XADC signals -----//
-    input vauxp0,                                              
-    input vauxn0,                                              
-    input vauxp4,                                              
-    input vauxn4,                                              
-    input vauxp5,                                              
-    input vauxn5,                                              
-    input vauxp6,                                              
-    input vauxn6,                                              
-    input vauxp7,                                              
-    input vauxn7,                                              
-    input vauxp12,                                             
-    input vauxp13,                                             
-    input vauxp14,                                             
-    input vauxp15,                                             
-    input vauxn12,                                             
-    input vauxn13,                                             
-    input vauxn14,                                             
-    input vauxn15,                                             
-    input vp_in,                                               
+    // ---- System Reset ------//
+    input         sys_rst,	//Active Low
+
+    // ---- System Clock ------//
+    input         sys_clk,
+
+    // ---- XADC signals -----//
+    input vauxp0,
+    input vauxn0,
+    input vauxp4,
+    input vauxn4,
+    input vauxp5,
+    input vauxn5,
+    input vauxp6,
+    input vauxn6,
+    input vauxp7,
+    input vauxn7,
+    input vauxp12,
+    input vauxp13,
+    input vauxp14,
+    input vauxp15,
+    input vauxn12,
+    input vauxn13,
+    input vauxn14,
+    input vauxn15,
+    input vp_in,
     input vn_in
    );
-   
-   // Wire instantiations 
-   
+
+   // Wire instantiations
+
    wire                            soc_reset;      // reset to the SoC
    wire                            core_clk;       // clock to the SoC
    wire                            locked;         // indicates pll is stable
@@ -119,9 +117,9 @@ module fpga_top
 
    wire i2c_scl_out, i2c_scl_in, i2c_scl_out_en;
    wire i2c_sda_out, i2c_sda_in, i2c_sda_out_en;
-  
+
    wire [31:0] gpio_in, gpio_out, gpio_out_en;
-   
+
 // ---------------------------------------------------------------------------- //
   `ifdef JTAG_BSCAN2E
     wire wire_tck_clk;
@@ -176,11 +174,11 @@ module fpga_top
    assign soc_reset = locked;
 
    // ---------- Clock divider ----------------//
-   
+
    clk_divider clk_div (
-                       .clk_in1(sys_clk),  
+                       .clk_in1(sys_clk),
                        .clk_out1(core_clk),
-                       .resetn(sys_rst), 
+                       .resetn(sys_rst),
                        .locked(locked) );
    // ----------------------------------------- //
 
@@ -190,24 +188,24 @@ module fpga_top
        // Main Clock and Reset to the SoC
         .CLK(core_clk),
         .RST_N(soc_reset),
-       
-`ifndef JTAG_BSCAN2E       
-       // JTAG port definitions
-       .CLK_tck_clk(pin_tck),
-       .RST_N_trst(pin_trst),
-       .wire_tms_tms_in(pin_tms),
-       .wire_tdi_tdi_in(pin_tdi),
-       .wire_tdo(pin_tdo),
+
+`ifndef JTAG_BSCAN2E
+        // JTAG port definitions
+        .CLK_tck_clk(pin_tck),
+        .RST_N_trst(pin_trst),
+        .wire_tms_tms_in(pin_tms),
+        .wire_tdi_tdi_in(pin_tdi),
+        .wire_tdo(pin_tdo),
 `else
         .CLK_tck_clk(wire_tck_clk),
         .RST_N_trst(~wire_trst),
-        .wire_capture_capture_in(wire_capture),     
-        .wire_run_test_run_test_in(wire_run_test),     
-        .wire_sel_sel_in(wire_sel),     
-        .wire_shift_shift_in(wire_shift),     
-        .wire_tdi_tdi_in(wire_tdi),     
-        .wire_tms_tms_in(wire_tms),     
-        .wire_update_update_in(wire_update),     
+        .wire_capture_capture_in(wire_capture),
+        .wire_run_test_run_test_in(wire_run_test),
+        .wire_sel_sel_in(wire_sel),
+        .wire_shift_shift_in(wire_shift),
+        .wire_tdi_tdi_in(wire_tdi),
+        .wire_tms_tms_in(wire_tms),
+        .wire_update_update_in(wire_update),
         .wire_tdo(wire_tdo),
 `endif
 
@@ -223,7 +221,7 @@ module fpga_top
         .pwm3_io_pwm_o(pwm3),
         .pwm4_io_pwm_o(pwm4),
         .pwm5_io_pwm_o(pwm5),
-    
+
       // SPI ports
         .spi0_io_mosi(spi0_mosi),
         .spi0_io_sclk(spi0_sclk),
@@ -235,7 +233,7 @@ module fpga_top
 	      .spi1_io_miso_dat(spi1_miso),
         .spi2_io_mosi(spi2_mosi),
         .spi2_io_sclk(spi2_sclk),
-        .spi2_io_nss(spi2_nss), 
+        .spi2_io_nss(spi2_nss),
 	      .spi2_io_miso_dat(spi2_miso),
 
        // UART port definitions
@@ -245,85 +243,84 @@ module fpga_top
         .uart1_io_SOUT(uart1_SOUT),
         .uart2_io_SIN(uart2_SIN),
         .uart2_io_SOUT(uart2_SOUT),
-        
-			 //I2C ports
-      .i2c_out_scl_out (i2c_scl_out),
-      .i2c_out_scl_in_in(i2c_scl_in),
-      .i2c_out_scl_out_en(i2c_scl_out_en),
-      .i2c_out_sda_out(i2c_sda_out),
-      .i2c_out_sda_in_in(i2c_sda_in),
-      .i2c_out_sda_out_en(i2c_sda_out_en),
 
-      // XADC connection
-    .xadc_master_awvalid(xadc_master_awvalid),
-    .xadc_master_awaddr(xadc_master_awaddr),
-    .xadc_master_m_awready_awready(xadc_master_m_awready_awready),
-    .xadc_master_wvalid(xadc_master_wvalid),
-    .xadc_master_wdata(xadc_master_wdata),
-    .xadc_master_wstrb(xadc_master_wstrb),
-    .xadc_master_m_wready_wready(xadc_master_m_wready_wready),
-    .xadc_master_m_bvalid_bvalid(xadc_master_m_bvalid_bvalid),
-    .xadc_master_m_bvalid_bresp(xadc_master_m_bvalid_bresp),
-    .xadc_master_bready(xadc_master_bready),
-    .xadc_master_arvalid(xadc_master_arvalid),
-    .xadc_master_araddr(xadc_master_araddr),
-    .xadc_master_m_arready_arready(xadc_master_m_arready_arready),
-    .xadc_master_m_rvalid_rvalid(xadc_master_m_rvalid_rvalid),
-    .xadc_master_m_rvalid_rresp(xadc_master_m_rvalid_rresp),
-    .xadc_master_m_rvalid_rdata(xadc_master_m_rvalid_rdata),
-    .xadc_master_rready(xadc_master_rready),
+			  //I2C ports
+        .i2c_out_scl_out (i2c_scl_out),
+        .i2c_out_scl_in_in(i2c_scl_in),
+        .i2c_out_scl_out_en(i2c_scl_out_en),
+        .i2c_out_sda_out(i2c_sda_out),
+        .i2c_out_sda_in_in(i2c_sda_in),
+        .i2c_out_sda_out_en(i2c_sda_out_en),
+
+        // XADC connection
+        .xadc_master_awvalid(xadc_master_awvalid),
+        .xadc_master_awaddr(xadc_master_awaddr),
+        .xadc_master_m_awready_awready(xadc_master_m_awready_awready),
+        .xadc_master_wvalid(xadc_master_wvalid),
+        .xadc_master_wdata(xadc_master_wdata),
+        .xadc_master_wstrb(xadc_master_wstrb),
+        .xadc_master_m_wready_wready(xadc_master_m_wready_wready),
+        .xadc_master_m_bvalid_bvalid(xadc_master_m_bvalid_bvalid),
+        .xadc_master_m_bvalid_bresp(xadc_master_m_bvalid_bresp),
+        .xadc_master_bready(xadc_master_bready),
+        .xadc_master_arvalid(xadc_master_arvalid),
+        .xadc_master_araddr(xadc_master_araddr),
+        .xadc_master_m_arready_arready(xadc_master_m_arready_arready),
+        .xadc_master_m_rvalid_rvalid(xadc_master_m_rvalid_rvalid),
+        .xadc_master_m_rvalid_rresp(xadc_master_m_rvalid_rresp),
+        .xadc_master_m_rvalid_rdata(xadc_master_m_rvalid_rdata),
+        .xadc_master_rready(xadc_master_rready),
 
         .ext_interrupts_i(interrupts)
    );
    // --- Instantiating XADC -------------------------//
 
-xadc_wiz_0
-xadc_wiz_inst (
-    .s_axi_aclk      (core_clk),                    
-    .s_axi_aresetn   (soc_reset),                    
-    .s_axi_awaddr    (xadc_master_awaddr),                    
-    .s_axi_awvalid   (xadc_master_awvalid),                    
-    .s_axi_awready   (xadc_master_m_awready_awready),                    
-    .s_axi_wdata     (xadc_master_wdata),                    
-    .s_axi_wstrb     (xadc_master_wstrb),                    
-    .s_axi_wvalid    (xadc_master_wvalid),                    
-    .s_axi_wready    (xadc_master_m_wready_wready),                    
-    .s_axi_bresp     (xadc_master_m_bvalid_bresp),                    
-    .s_axi_bvalid    (xadc_master_m_bvalid_bvalid),                    
-    .s_axi_bready    (xadc_master_bready),                    
-    .s_axi_araddr    (xadc_master_araddr),                    
-    .s_axi_arvalid   (xadc_master_arvalid),                    
-    .s_axi_arready   (xadc_master_m_arready_arready),                    
-    .s_axi_rdata     (xadc_master_m_rvalid_rdata),                    
-    .s_axi_rresp     (xadc_master_m_rvalid_rresp),                    
-    .s_axi_rvalid    (xadc_master_m_rvalid_rvalid),                    
-    .s_axi_rready    (xadc_master_rready),
-    .vauxp0 (vauxp0),
-    .vauxn0 (vauxn0),
-    .vauxp4 (vauxp4),
-    .vauxn4 (vauxn4),
-    .vauxp5 (vauxp5),
-    .vauxn5 (vauxn5),
-    .vauxp6 (vauxp6),
-    .vauxn6 (vauxn6),
-    .vauxp7 (vauxp7),
-    .vauxn7 (vauxn7),
-    .vauxp12 (vauxp12),
-    .vauxn12 (vauxn12),
-    .vauxp13 (vauxp13),
-    .vauxn13 (vauxn13),
-    .vauxp14 (vauxp14),
-    .vauxn14 (vauxn14),
-    .vauxp15 (vauxp15),
-    .vauxn15 (vauxn15),
-    .vp_in (vp_in),
-    .vn_in (vn_in)
-      );
+xadc_wiz_0 xadc_wiz_inst (
+        .s_axi_aclk      (core_clk),
+        .s_axi_aresetn   (soc_reset),
+        .s_axi_awaddr    (xadc_master_awaddr),
+        .s_axi_awvalid   (xadc_master_awvalid),
+        .s_axi_awready   (xadc_master_m_awready_awready),
+        .s_axi_wdata     (xadc_master_wdata),
+        .s_axi_wstrb     (xadc_master_wstrb),
+        .s_axi_wvalid    (xadc_master_wvalid),
+        .s_axi_wready    (xadc_master_m_wready_wready),
+        .s_axi_bresp     (xadc_master_m_bvalid_bresp),
+        .s_axi_bvalid    (xadc_master_m_bvalid_bvalid),
+        .s_axi_bready    (xadc_master_bready),
+        .s_axi_araddr    (xadc_master_araddr),
+        .s_axi_arvalid   (xadc_master_arvalid),
+        .s_axi_arready   (xadc_master_m_arready_arready),
+        .s_axi_rdata     (xadc_master_m_rvalid_rdata),
+        .s_axi_rresp     (xadc_master_m_rvalid_rresp),
+        .s_axi_rvalid    (xadc_master_m_rvalid_rvalid),
+        .s_axi_rready    (xadc_master_rready),
+        .vauxp0 (vauxp0),
+        .vauxn0 (vauxn0),
+        .vauxp4 (vauxp4),
+        .vauxn4 (vauxn4),
+        .vauxp5 (vauxp5),
+        .vauxn5 (vauxn5),
+        .vauxp6 (vauxp6),
+        .vauxn6 (vauxn6),
+        .vauxp7 (vauxp7),
+        .vauxn7 (vauxn7),
+        .vauxp12 (vauxp12),
+        .vauxn12 (vauxn12),
+        .vauxp13 (vauxp13),
+        .vauxn13 (vauxn13),
+        .vauxp14 (vauxp14),
+        .vauxn14 (vauxn14),
+        .vauxp15 (vauxp15),
+        .vauxn15 (vauxn15),
+        .vp_in (vp_in),
+        .vn_in (vn_in)
+          );
 
    // ---- Instantiating the C-class SoC -------------//
    genvar index;
    generate
-   for(index=0; index<32; index= index+1) 
+   for(index=0; index<32; index= index+1)
       begin: connect_gpio_tristates
       IOBUF gpio_iobuf_inst (
              .O(gpio_in[index]),
@@ -333,14 +330,14 @@ xadc_wiz_inst (
 				 );
       end
    endgenerate
-//---- IOBUF FOR I2C -----//   
+//---- IOBUF FOR I2C -----//
    IOBUF i2c_scl_inst(
              .O(i2c_scl_in),
              .IO(i2c_scl),
              .I(i2c_scl_out),
              .T(~i2c_scl_out_en)
          );
- 
+
    IOBUF i2c_sda_inst(
              .O(i2c_sda_in),
              .IO(i2c_sda),
