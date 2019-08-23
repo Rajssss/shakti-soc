@@ -37,18 +37,6 @@ module aardonyx(
 	  CLK,
 	  RST_N,
 
-	  pwm0_io_pwm_o,
-
-	  pwm1_io_pwm_o,
-
-	  pwm2_io_pwm_o,
-
-	  pwm3_io_pwm_o,
-
-	  pwm4_io_pwm_o,
-
-	  pwm5_io_pwm_o,
-
 	  spi0_io_mosi,
 
 	  spi0_io_sclk,
@@ -65,25 +53,9 @@ module aardonyx(
 
 	  spi1_io_miso_dat,
 
-	  spi2_io_mosi,
-
-	  spi2_io_sclk,
-
-	  spi2_io_nss,
-
-	  spi2_io_miso_dat,
-
 	  uart0_io_SIN,
 
 	  uart0_io_SOUT,
-
-	  uart1_io_SIN,
-
-	  uart1_io_SOUT,
-
-	  uart2_io_SIN,
-
-	  uart2_io_SOUT,
 
 	  i2c_out_scl_out,
 
@@ -97,11 +69,71 @@ module aardonyx(
 
 	  i2c_out_sda_out_en,
 
-	  gpio_io_gpio_in_inp,
+	  iocell_io_io7_cell_in_in,
 
-	  gpio_io_gpio_out,
+	  iocell_io_io8_cell_in_in,
 
-	  gpio_io_gpio_out_en,
+	  iocell_io_io9_cell_in_in,
+
+	  iocell_io_io10_cell_in_in,
+
+	  iocell_io_io12_cell_in_in,
+
+	  iocell_io_io13_cell_in_in,
+
+	  iocell_io_io16_cell_in_in,
+
+	  iocell_io_io17_cell_in_in,
+
+	  iocell_io_io18_cell_in_in,
+
+	  iocell_io_io19_cell_in_in,
+
+	  iocell_io_io20_cell_in_in,
+
+	  iocell_io_io7_cell_out,
+
+	  iocell_io_io8_cell_out,
+
+	  iocell_io_io9_cell_out,
+
+	  iocell_io_io10_cell_out,
+
+	  iocell_io_io12_cell_out,
+
+	  iocell_io_io13_cell_out,
+
+	  iocell_io_io16_cell_out,
+
+	  iocell_io_io17_cell_out,
+
+	  iocell_io_io18_cell_out,
+
+	  iocell_io_io19_cell_out,
+
+	  iocell_io_io20_cell_out,
+
+	  iocell_io_io7_cell_outen,
+
+	  iocell_io_io8_cell_outen,
+
+	  iocell_io_io9_cell_outen,
+
+	  iocell_io_io10_cell_outen,
+
+	  iocell_io_io12_cell_outen,
+
+	  iocell_io_io13_cell_outen,
+
+	  iocell_io_io16_cell_outen,
+
+	  iocell_io_io17_cell_outen,
+
+	  iocell_io_io18_cell_outen,
+
+	  iocell_io_io19_cell_outen,
+
+	  iocell_io_io20_cell_outen,
 
 	  qspi_io_clk_o,
 
@@ -118,6 +150,36 @@ module aardonyx(
 	  wire_tdi_tdi_in,
 
 	  wire_tdo,
+
+          gpio_4_in,
+
+          gpio_7_in,
+
+          gpio_8_in,
+
+          gpio_14_in,
+
+          gpio_15_in,
+
+          gpio_4_out,
+
+          gpio_7_out,
+
+          gpio_8_out,
+
+          gpio_14_out,
+
+          gpio_15_out,
+
+          gpio_4_outen,
+
+          gpio_7_outen,
+
+          gpio_8_outen,
+
+          gpio_14_outen,
+
+          gpio_15_outen,
 
 	  ext_interrupts_i,
 
@@ -153,24 +215,6 @@ module aardonyx(
   input  CLK;
   input  RST_N;
 
-  // value method pwm0_io_pwm_o
-  output pwm0_io_pwm_o;
-
-  // value method pwm1_io_pwm_o
-  output pwm1_io_pwm_o;
-
-  // value method pwm2_io_pwm_o
-  output pwm2_io_pwm_o;
-
-  // value method pwm3_io_pwm_o
-  output pwm3_io_pwm_o;
-
-  // value method pwm4_io_pwm_o
-  output pwm4_io_pwm_o;
-
-  // value method pwm5_io_pwm_o
-  output pwm5_io_pwm_o;
-
   // value method spi0_io_mosi
   output spi0_io_mosi;
 
@@ -183,47 +227,23 @@ module aardonyx(
   // action method spi0_io_miso
   input  spi0_io_miso_dat;
 
-  // value method spi1_io_mosi
+  // value method spi2_io_mosi
   output spi1_io_mosi;
 
-  // value method spi1_io_sclk
+  // value method spi2_io_sclk
   output spi1_io_sclk;
 
-  // value method spi1_io_nss
+  // value method spi2_io_nss
   output spi1_io_nss;
 
-  // action method spi1_io_miso
+  // action method spi2_io_miso
   input  spi1_io_miso_dat;
 
-  // value method spi2_io_mosi
-  output spi2_io_mosi;
-
-  // value method spi2_io_sclk
-  output spi2_io_sclk;
-
-  // value method spi2_io_nss
-  output spi2_io_nss;
-
-  // action method spi2_io_miso
-  input  spi2_io_miso_dat;
-
-  // action method uart0_io_sin
+  // action method uart1_io_sin
   input  uart0_io_SIN;
 
-  // value method uart0_io_sout
-  output uart0_io_SOUT;
-
-  // action method uart1_io_sin
-  input  uart1_io_SIN;
-
   // value method uart1_io_sout
-  output uart1_io_SOUT;
-
-  // action method uart2_io_sin
-  input  uart2_io_SIN;
-
-  // value method uart2_io_sout
-  output uart2_io_SOUT;
+  output uart0_io_SOUT;
 
   // value method i2c_out_scl_out
   output i2c_out_scl_out;
@@ -244,13 +264,103 @@ module aardonyx(
   output i2c_out_sda_out_en;
 
   // action method gpio_io_gpio_in
-  input  [15 : 0] gpio_io_gpio_in_inp;
+  input  iocell_io_io7_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io8_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io9_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io10_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io12_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io13_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io16_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io17_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io18_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io19_cell_in_in;
+
+  // action method gpio_io_gpio_in
+  input  iocell_io_io20_cell_in_in;
 
   // value method gpio_io_gpio_out
-  output [15 : 0] gpio_io_gpio_out;
+  output iocell_io_io7_cell_out;
 
-  // value method gpio_io_gpio_out_en
-  output [15 : 0] gpio_io_gpio_out_en;
+  // value method gpio_io_gpio_out
+  output iocell_io_io8_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io9_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io10_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io12_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io13_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io16_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io17_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io18_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io19_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io20_cell_out;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io7_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io8_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io9_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io10_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io12_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io13_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io16_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io17_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io18_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io19_cell_outen;
+
+  // value method gpio_io_gpio_out
+  output iocell_io_io20_cell_outen;
 
   // value method qspi_io_clk_o
   output qspi_io_clk_o;
@@ -275,6 +385,51 @@ module aardonyx(
 
   // value method wire_tdo
   output wire_tdo;
+
+  // action method gpio_4
+  input  gpio_4_in;
+
+  // action method gpio_7
+  input  gpio_7_in;
+
+  // action method gpio_8
+  input  gpio_8_in;
+
+  // action method gpio_14
+  input  gpio_14_in;
+
+  // action method gpio_15
+  input  gpio_15_in;
+
+  // value method gpio_4_out
+  output gpio_4_out;
+
+  // value method gpio_7_out
+  output gpio_7_out;
+
+  // value method gpio_8_out
+  output gpio_8_out;
+
+  // value method gpio_14_out
+  output gpio_14_out;
+
+  // value method gpio_15_out
+  output gpio_15_out;
+
+  // value method gpio_4_outen
+  output gpio_4_outen;
+
+  // value method gpio_7_outen
+  output gpio_7_outen;
+
+  // value method gpio_8_outen
+  output gpio_8_outen;
+
+  // value method gpio_14_outen
+  output gpio_14_outen;
+
+  // value method gpio_15_outen
+  output gpio_15_outen;
 
   // action method ext_interrupts
   input  [1 : 0] ext_interrupts_i;
@@ -330,35 +485,54 @@ module aardonyx(
   end
 
   mkSoc soc ( .resetpc                        (resetpc                        ),
-              .pwm0_io_pwm_o                  (pwm0_io_pwm_o                  ),
-              .pwm1_io_pwm_o                  (pwm1_io_pwm_o                  ),
-              .pwm2_io_pwm_o                  (pwm2_io_pwm_o                  ),
-              .pwm3_io_pwm_o                  (pwm3_io_pwm_o                  ),
-              .pwm4_io_pwm_o                  (pwm4_io_pwm_o                  ),
-              .pwm5_io_pwm_o                  (pwm5_io_pwm_o                  ),
               .spi0_io_mosi                   (spi0_io_mosi                   ),
               .spi0_io_sclk                   (spi0_io_sclk                   ),
               .spi0_io_nss                    (spi0_io_nss                    ),
               .spi1_io_mosi                   (spi1_io_mosi                   ),
               .spi1_io_sclk                   (spi1_io_sclk                   ),
               .spi1_io_nss                    (spi1_io_nss                    ),
-              .spi2_io_mosi                   (spi2_io_mosi                   ),
-              .spi2_io_sclk                   (spi2_io_sclk                   ),
-              .spi2_io_nss                    (spi2_io_nss                    ),
               .uart0_io_SOUT                  (uart0_io_SOUT                  ),
-              .uart1_io_SOUT                  (uart1_io_SOUT                  ),
-              .uart2_io_SOUT                  (uart2_io_SOUT                  ),
               .i2c_out_scl_out                (i2c_out_scl_out                ),
               .i2c_out_scl_out_en             (i2c_out_scl_out_en             ),
               .i2c_out_sda_out                (i2c_out_sda_out                ),
               .i2c_out_sda_out_en             (i2c_out_sda_out_en             ),
-              .gpio_io_gpio_out               (gpio_io_gpio_out               ),
-              .gpio_io_gpio_out_en            (gpio_io_gpio_out_en            ),
+              .iocell_io_io7_cell_out         (iocell_io_io7_cell_out         ),
+              .iocell_io_io8_cell_out         (iocell_io_io8_cell_out         ),
+              .iocell_io_io9_cell_out         (iocell_io_io9_cell_out         ),
+              .iocell_io_io10_cell_out        (iocell_io_io10_cell_out        ),
+              .iocell_io_io12_cell_out        (iocell_io_io12_cell_out        ),
+              .iocell_io_io13_cell_out        (iocell_io_io13_cell_out        ),
+              .iocell_io_io16_cell_out        (iocell_io_io16_cell_out        ),
+              .iocell_io_io17_cell_out        (iocell_io_io17_cell_out        ),
+              .iocell_io_io18_cell_out        (iocell_io_io18_cell_out        ),
+              .iocell_io_io19_cell_out        (iocell_io_io19_cell_out        ),
+              .iocell_io_io20_cell_out        (iocell_io_io20_cell_out        ),
+              .iocell_io_io7_cell_outen       (iocell_io_io7_cell_outen       ),
+              .iocell_io_io8_cell_outen       (iocell_io_io8_cell_outen       ),
+              .iocell_io_io9_cell_outen       (iocell_io_io9_cell_outen       ),
+              .iocell_io_io10_cell_outen      (iocell_io_io10_cell_outen      ),
+              .iocell_io_io12_cell_outen      (iocell_io_io12_cell_outen      ),
+              .iocell_io_io13_cell_outen      (iocell_io_io13_cell_outen      ),
+              .iocell_io_io16_cell_outen      (iocell_io_io16_cell_outen      ),
+              .iocell_io_io17_cell_outen      (iocell_io_io17_cell_outen      ),
+              .iocell_io_io18_cell_outen      (iocell_io_io18_cell_outen      ),
+              .iocell_io_io19_cell_outen      (iocell_io_io19_cell_outen      ),
+              .iocell_io_io20_cell_outen      (iocell_io_io20_cell_outen      ),
               .qspi_io_clk_o                  (qspi_io_clk_o                  ),
               .qspi_io_io_out                 (qspi_io_io_out                 ),
               .qspi_io_io_enable              (qspi_io_io_enable              ),
               .qspi_io_ncs_o                  (qspi_io_ncs_o                  ),
               .wire_tdo                       (wire_tdo                       ),
+	      .gpio_4_out		      (gpio_4_out		      ),
+	      .gpio_7_out		      (gpio_7_out		      ),
+	      .gpio_8_out		      (gpio_8_out		      ),
+	      .gpio_14_out		      (gpio_14_out		      ),
+	      .gpio_15_out		      (gpio_15_out		      ),
+	      .gpio_4_outen		      (gpio_4_outen		      ),
+	      .gpio_7_outen		      (gpio_7_outen		      ),
+	      .gpio_8_outen		      (gpio_8_outen		      ),
+	      .gpio_14_outen		      (gpio_14_outen		      ),
+	      .gpio_15_outen		      (gpio_15_outen		      ),
               .sdram_io_osdr_dout             (sdram_io_osdr_dout             ),
               .sdram_io_osdr_den_n            (sdram_io_osdr_den_n            ),
               .sdram_io_osdr_cke              (sdram_io_osdr_cke              ),
@@ -377,17 +551,29 @@ module aardonyx(
               .RST_N                          (RST_N                          ),
               .spi0_io_miso_dat               (spi0_io_miso_dat               ),
               .spi1_io_miso_dat               (spi1_io_miso_dat               ),
-              .spi2_io_miso_dat               (spi2_io_miso_dat               ),
               .uart0_io_SIN                   (uart0_io_SIN                   ),
-              .uart1_io_SIN                   (uart1_io_SIN                   ),
-              .uart2_io_SIN                   (uart2_io_SIN                   ),
               .i2c_out_scl_in_in              (i2c_out_scl_in_in              ),
               .i2c_out_sda_in_in              (i2c_out_sda_in_in              ),
-              .gpio_io_gpio_in_inp            (gpio_io_gpio_in_inp            ),
+              .iocell_io_io7_cell_in_in       (iocell_io_io7_cell_in_in       ),
+              .iocell_io_io8_cell_in_in       (iocell_io_io8_cell_in_in       ),
+              .iocell_io_io9_cell_in_in       (iocell_io_io9_cell_in_in       ),
+              .iocell_io_io10_cell_in_in      (iocell_io_io10_cell_in_in      ),
+              .iocell_io_io12_cell_in_in      (iocell_io_io12_cell_in_in      ),
+              .iocell_io_io13_cell_in_in      (iocell_io_io13_cell_in_in      ),
+              .iocell_io_io16_cell_in_in      (iocell_io_io16_cell_in_in      ),
+              .iocell_io_io17_cell_in_in      (iocell_io_io17_cell_in_in      ),
+              .iocell_io_io18_cell_in_in      (iocell_io_io18_cell_in_in      ),
+              .iocell_io_io19_cell_in_in      (iocell_io_io19_cell_in_in      ),
+              .iocell_io_io20_cell_in_in      (iocell_io_io20_cell_in_in      ),
               .qspi_io_io_in_io_in            (qspi_io_io_in_io_in            ),
               .wire_tms_tms_in                (wire_tms_tms_in                ),
               .wire_tdi_tdi_in                (wire_tdi_tdi_in                ),
               .ext_interrupts_i               (ext_interrupts_i               ),
+	      .gpio_4_in 		      (gpio_4_in 		      ),
+	      .gpio_7_in 		      (gpio_7_in 		      ),
+	      .gpio_8_in 		      (gpio_8_in 		      ),
+	      .gpio_14_in 		      (gpio_14_in 		      ),
+	      .gpio_15_in 		      (gpio_15_in 		      ),
               .sdram_io_ipad_sdr_din_pad_sdr_din(sdram_io_ipad_sdr_din_pad_sdr_din) );
 endmodule
 
