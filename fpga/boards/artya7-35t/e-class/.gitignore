@@ -7,4 +7,4 @@ fpga_project
 *.jou
 
 *.log
-
+boot-code/outputs

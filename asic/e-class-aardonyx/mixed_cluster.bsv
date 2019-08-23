@@ -40,13 +40,18 @@ package mixed_cluster;
   import gpio :: * ;
   import clint :: * ;
   import plic :: * ;
+  import pinmux :: * ;
+  import pinmux_axi4lite :: * ;
   `include "Soc.defines"
 
   interface Ifc_mixed_cluster;
-		method I2C_out i2c_out;									//I2c IO interface
+    method I2C_out i2c_out;						//I2c IO interface
     method Bit#(1) sb_ext_interrupt;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
+    //interface Ifc_pinmux_axi4lite#(addr_width, data_width, user_width);	
+           interface IOCellSide pinmuxtop_iocell_side;
+           interface PeripheralSide pinmuxtop_peripheral_side;
     (*always_ready, always_enabled*)
 		method Action interrupts(Bit#(8) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
@@ -82,6 +87,13 @@ package mixed_cluster;
     return ifc;
   endmodule
 
+  (*synthesize*)
+  module mkpinmuxtop(Ifc_pinmux_axi4lite#(`paddr, 32, 0));
+    let ifc();
+    mkpinmux_axi4lite _temp(ifc);
+    return ifc;
+  endmodule
+
   function Bit#(TLog#(`MixedCluster_Num_Slaves)) fn_slave_map (Bit#(`paddr) addr);
     Bit#(TLog#(`MixedCluster_Num_Slaves)) slave_num = 0;
     if(addr>= `GPIOBase && addr<= `GPIOEnd)
@@ -92,6 +104,8 @@ package mixed_cluster;
       slave_num = `I2C_slave_num;
     else if(addr >= `BootromBase && addr <= `BootromEnd)
       slave_num = `Bootrom_slave_num;
+    else if(addr >= `PinmuxBase && addr <= `PinmuxEnd)
+      slave_num = `Pinmux_slave_num;
     else
       slave_num = `MixedCluster_err_slave_num;
       
@@ -109,6 +123,7 @@ package mixed_cluster;
     let gpio <- mkgpio();
     let plic <- mkplic();
     let bootrom <- mkbootrom();
+    let pinmuxtop <- mkpinmuxtop();
     Ifc_err_slave_axi4lite#(`paddr, 32, 0 ) err_slave <- mkerr_slave_axi4lite;
 		Wire#(Bit#(8)) wr_external_interrupts <- mkDWire('d0);
     Wire#(Bit#(1)) wr_sb_ext_interrupt <- mkDWire(0);
@@ -138,6 +153,7 @@ package mixed_cluster;
 		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
 		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
 		mkConnection (fabric.v_to_slaves [`Bootrom_slave_num ], bootrom.slave);
+		mkConnection (fabric.v_to_slaves [`Pinmux_slave_num ], pinmuxtop.slave);
     mkConnection (fabric.v_to_slaves [`MixedCluster_err_slave_num ] , err_slave.slave);
 		
     method I2C_out i2c_out= i2c.io;
@@ -146,6 +162,8 @@ package mixed_cluster;
 		method Action interrupts(Bit#(8) inp);
 			wr_external_interrupts<= inp;
 		endmethod
+    interface pinmuxtop_iocell_side = pinmuxtop.pinmuxaxi4lite_iocell_side;
+    interface pinmuxtop_peripheral_side = pinmuxtop.pinmuxaxi4lite_peripheral_side;
     interface slave= c2s_xactor.axi_side;
   endmodule
 endpackage
