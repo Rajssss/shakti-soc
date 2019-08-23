@@ -9,7 +9,7 @@ e-class-35t:
     refs:
       - master
     changes:
-      - fpga/boards/artya7-35t/e-class/*
+      - fpga/boards/*
   artifacts:
     name: e-class-35t
     paths:
@@ -28,7 +28,7 @@ e-class-100t:
     refs:
       - master
     changes:
-      - fpga/boards/artya7-100t/e-class/*
+      - fpga/boards/*
   artifacts:
     name: e-class-100t
     paths:
@@ -47,7 +47,7 @@ c-class-100t:
     refs:
       - master
     changes:
-      - fpga/boards/artya7-100t/c-class/*
+      - fpga/boards/*
   artifacts:
     name: c-class-100t
     paths:
