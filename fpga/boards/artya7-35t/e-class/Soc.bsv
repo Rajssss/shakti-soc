@@ -61,7 +61,6 @@ package Soc;
   import debug_halt_loop::*;
   import debug_types::*;                
 
-
   // package imports
   import Connectable:: *;
   import GetPut:: *;
@@ -84,6 +83,8 @@ package Soc;
       slave_num = `SPICluster_slave_num;
     else if(addr >= `MixedClusterBase && addr <= `MixedClusterEnd)
       slave_num = `MixedCluster_slave_num;
+    else if(addr >= `BootBase && addr <= `BootEnd)
+      slave_num = `Boot_slave_num;
     else
       slave_num = `Err_slave_num;
       
@@ -112,23 +113,26 @@ package Soc;
     method Action wire_tms(Bit#(1) tms_in);
     (*always_enabled,always_ready*)
     method Action wire_tdi(Bit#(1) tdi_in);
-    `ifdef bscan2e //---  Shift Register Control ---//
-      (*always_enabled,always_ready*)
-      method Action wire_capture(Bit#(1) capture_in);
-      (*always_enabled,always_ready*)
-      method Action wire_run_test(Bit#(1) run_test_in);
-      (* always_enabled,always_ready*)
-      method Action wire_sel (Bit#(1) sel_in);
-      (* always_enabled,always_ready*)
-      method Action wire_shift (Bit#(1) shift_in);
-      (* always_enabled,always_ready*)
-      method Action wire_update (Bit#(1) update_in);
-    `endif
+  `ifdef bscan2e //---  Shift Register Control ---//
+    (*always_enabled,always_ready*)
+    method Action wire_capture(Bit#(1) capture_in);
+    (*always_enabled,always_ready*)
+    method Action wire_run_test(Bit#(1) run_test_in);
+    (* always_enabled,always_ready*)
+    method Action wire_sel (Bit#(1) sel_in);
+    (* always_enabled,always_ready*)
+    method Action wire_shift (Bit#(1) shift_in);
+    (* always_enabled,always_ready*)
+    method Action wire_update (Bit#(1) update_in);
+  `endif
     (*always_enabled,always_ready*)
     method Bit#(1) wire_tdo;                                                            
     // ---------------------------------------------//
     (*always_ready, always_enabled*)
     method Action ext_interrupts(Bit#(2) i);
+  `ifdef rtldump
+    interface Get#(DumpType) io_dump;
+  `endif
   endinterface
     
   (*synthesize*)
@@ -156,6 +160,7 @@ package Soc;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
     Ifc_bram_axi4lite#(`paddr, XLEN, 0,  17) mem <- mkbram_axi4lite('h80000000, "code.mem", "code.mem","Memory");
+    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  13) boot <- mkbram_axi4lite('h1000, "boot.mem", "boot.mem","Boot");
     Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
@@ -249,7 +254,8 @@ package Soc;
     mkConnection (fabric.v_to_slaves [`SPICluster_slave_num], spi_cluster.slave);
     mkConnection (fabric.v_to_slaves [`MixedCluster_slave_num], mixed_cluster.slave);
     mkConnection (fabric.v_to_slaves [`Err_slave_num ] , err_slave.slave);
-	mkConnection (fabric.v_to_slaves [`Memory_slave_num], mem.slave);
+	  mkConnection (fabric.v_to_slaves [`Memory_slave_num], mem.slave);
+	  mkConnection (fabric.v_to_slaves [`Boot_slave_num], boot.slave);
 
     // sideband connection
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
@@ -303,6 +309,9 @@ package Soc;
     method Action ext_interrupts(Bit#(2) i);
       wr_ext_interrutps <= i;
     endmethod
+  `ifdef rtldump
+    interface io_dump= eclass.io_dump;
+  `endif
 
   endmodule: mkSoc
 endpackage: Soc

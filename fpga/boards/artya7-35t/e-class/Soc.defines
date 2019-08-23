@@ -3,7 +3,7 @@
 `define Mem_master_num 1
 `define Fetch_master_num 2
 
-`define Num_Slaves 8
+`define Num_Slaves 9
 `define Memory_slave_num 0
 `define Clint_slave_num 1
 `define Debug_slave_num 2
@@ -11,10 +11,13 @@
 `define UARTCluster_slave_num 4
 `define SPICluster_slave_num 5
 `define MixedCluster_slave_num 6
-`define Err_slave_num 7
+`define Boot_slave_num 7
+`define Err_slave_num 8
 
 `define DebugBase         'h0000_0010
 `define DebugEnd          'h0000_001F
+`define BootBase          'h0000_1000
+`define BootEnd           'h0000_2FFF
 `define UARTClusterBase   'h0001_1300
 `define UARTClusterEnd    'h0001_1540
 `define SPIClusterBase    'h0002_0000
@@ -26,7 +29,7 @@
 `define ClintBase         'h0200_0000
 `define ClintEnd          'h020B_FFFF
 `define MemoryBase        'h8000_0000
-`define MemoryEnd         'h87FF_FFFF
+`define MemoryEnd         'h8001_FFFF
 
 // - PWM cluster
 `define PWMCluster_Num_Slaves 7

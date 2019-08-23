@@ -149,6 +149,11 @@ check-restore:
 call_manager:
 	@/bin/bash ./manager.sh update_deps
 
+.PHONY: generate_boot_files
+generate_boot_files:
+	@cd boot-code; make
+	@cp boot-code/outputs/boot.mem $(VERILOGDIR)/
+
 .PHONY: set_jtag_bscan2e
 set_jtag_bscan2e: 
 	@sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
@@ -158,12 +163,12 @@ set_raw_jtag_jlink:
 	@sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc 
 
 .PHONY: quick_build_xilinx
-quick_build_xilinx: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
+quick_build_xilinx: call_manager set_jtag_bscan2e generate_verilog generate_boot_files ip_build arty_build generate_mcs program_mcs_spansion
 	
 .PHONY: quick_build_raw_jtag
-quick_build_raw_jtag: call_manager set_raw_jtag_jlink generate_verilog ip_build arty_build program_fpga_jlink
+quick_build_raw_jtag: call_manager set_raw_jtag_jlink generate_verilog generate_boot_files ip_build arty_build program_fpga_jlink
 
-.PHONY: generate_verilog 
+.PHONY: generate_verilog
 generate_verilog: ## Generete verilog from BSV 
 generate_verilog: check-restore check-env
 	@echo Compiling $(TOP_MODULE) in verilog ...
@@ -202,16 +207,6 @@ generate_verilog: check-restore check-env
 	@echo Compilation finished
 
 
-.PHONY: generate_boot_files
-generate_boot_files: ## to generate boot files for simulation
-generate_boot_files: update_xlen
-	@mkdir -p bin
-	@cd verification/dts/; make;
-	@cut -c1-8 verification/dts/boot.hex > bin/boot.MSB
-	@if [ "$(XLEN)" = "64" ]; then\
-	  cut -c9-16 verification/dts/boot.hex > bin/boot.LSB;\
-    else cp bin/boot.MSB bin/boot.LSB;\
-  fi
 
 .PHONY: ip_build
 ip_build: ## build Xilinx Core-IPs used in this project
@@ -261,6 +256,7 @@ clean-fpga: ## delete fpga_prject and journal/log files as well
 
 restore: ## clean bsv-build, verilog and fpga folders
 restore: clean-bsv clean-verilog clean-fpga
+	@cd boot-code; make clean
 
 #	@vivado -mode tcl -notrace -source $(SHAKTI_HOME)/src/tcl/create_nexys4_mig.tcl ||\
 (echo "Could not create NEXYS4DDR-MIG  IP"; exit 1)
