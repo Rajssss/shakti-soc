@@ -126,7 +126,7 @@ endif
 # ------------------------------------------------------------------------------------------------ #
 
 # ------------------------------------- Makefile TARGETS ----------------------------------------- #
-default: generate_verilog
+default: call_manager generate_verilog
 
 .PHONY: help
 help: ## This help dialog.
@@ -138,6 +138,11 @@ check-env:
 .PHONY: check-restore
 check-restore:
 	@if [ "$(define_macros)" != "$(old_define_macros)" ];	then	make clean-bsv;	fi;
+
+.PHONY: call_manager
+call_manager:
+	@/bin/bash ./manager.sh update_deps
+
 
 .PHONY: generate_verilog 
 generate_verilog: ## Generete verilog from BSV 
