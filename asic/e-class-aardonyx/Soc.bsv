@@ -381,7 +381,7 @@ package Soc;
     interface spi1_io = spi_cluster.spi1_io;
     interface uart0_io = uart_cluster.uart0_io;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
-    interface qspi_io = qspi.io;
+    interface qspi_io = qspi.out;
     interface iocell_io = mixed_cluster.pinmuxtop_iocell_side;
 
     method Action ext_interrupts(Bit#(2) i);
