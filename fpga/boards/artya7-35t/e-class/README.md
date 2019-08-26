@@ -71,10 +71,10 @@ The folder `pre-built-mcs` contains an mcs file for this board configured using 
 ``` bash
 git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
 cd shakti-soc/fpga/boards/artya7-35t/e-class/pre-built-mcs
-wget https://gitlab.com/shaktiproject/cores/shakti-soc/-/jobs/artifacts/master/raw/fpga_top.mcs/?job=e-class-35t
+wget https://gitlab.com/shaktiproject/cores/shakti-soc/-/jobs/artifacts/master/raw/fpga_top.mcs/?job=e-class-35t -O fpga_top.mcs
 make program_mcs_spansion
 OR
-make make program_mcs_micron
+make program_mcs_micron
 ```
 
 #### [B] Generating your own mcs file (recomended)
@@ -105,7 +105,7 @@ riscv32-unknown-elf-gdb -x gdb.script
 
 Launch UART Console
 ```bash
-sudo miniterm /dev/ttyUSB1 1920
+sudo miniterm /dev/ttyUSB1 19200
 ```
 
 On pressing the `reset-button` on the board the UART console should display the following:

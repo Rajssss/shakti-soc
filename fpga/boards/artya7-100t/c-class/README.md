@@ -27,10 +27,10 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 The folder `pre-built-mcs` contains an mcs file for this board configured using the above specs. 
 ```
 cd pre-built-mcs
-wget https://gitlab.com/shaktiproject/cores/shakti-soc/-/jobs/artifacts/master/raw/fpga_top.mcs/?job=c-class-100t
+wget https://gitlab.com/shaktiproject/cores/shakti-soc/-/jobs/artifacts/master/raw/fpga_top.mcs/?job=c-class-100t -O fpga_top.mcs
 make program_mcs_spansion
 OR
-make make program_mcs_micron
+make program_mcs_micron
 ```
 
 ### [B] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
