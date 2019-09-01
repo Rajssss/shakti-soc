@@ -1,15 +1,15 @@
-/* 
+/*
 Copyright (c) 2019, IIT Madras All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
 
 * Redistributions of source code must retain the above copyright notice, this list of conditions
-  and the following disclaimer.  
-* Redistributions in binary form must reproduce the above copyright notice, this list of 
-  conditions and the following disclaimer in the documentation and/or other materials provided 
-  with the distribution.  
-* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or 
+  and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of
+  conditions and the following disclaimer in the documentation and/or other materials provided
+  with the distribution.
+* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or
   promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
@@ -18,7 +18,7 @@ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYR
 CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
 DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
-IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------------------------
 
@@ -34,8 +34,7 @@ package mixed_cluster;
   import err_slave::*;
   import Connectable:: *;
   import GetPut:: *;
-  import bootrom :: * ;
-  
+
   import i2c :: * ;
   import gpio :: * ;
   import clint :: * ;
@@ -49,20 +48,15 @@ package mixed_cluster;
     method Bit#(1) sb_ext_interrupt;
     (*always_ready, always_enabled*)
     interface GPIO#(16) gpio_io;						//GPIO IO interface
-    //interface Ifc_pinmux_axi4lite#(addr_width, data_width, user_width);	
+    //interface Ifc_pinmux_axi4lite#(addr_width, data_width, user_width);
            interface IOCellSide pinmuxtop_iocell_side;
            interface PeripheralSide pinmuxtop_peripheral_side;
     (*always_ready, always_enabled*)
 		method Action interrupts(Bit#(8) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
+    interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) bootrom_master;
   endinterface
 
-  (*synthesize*)
-  module mkbootrom(Ifc_bootrom_axi4lite#(32, 32, 0, 8));
-    let ifc();
-    mkbootrom_axi4lite#(`BootromBase) _temp(ifc);
-    return ifc;
-  endmodule
 
   (*synthesize*)
   module mki2c (Ifc_i2c_axi4lite#(`paddr, 32, 0));
@@ -108,21 +102,20 @@ package mixed_cluster;
       slave_num = `Pinmux_slave_num;
     else
       slave_num = `MixedCluster_err_slave_num;
-      
+
     return slave_num;
   endfunction:fn_slave_map
 
   (*synthesize*)
   module mkmixed_cluster(Ifc_mixed_cluster);
-	
+
 		AXI4_Lite_Master_Xactor_IFC #(`paddr, 32, 0) c2m_xactor <- mkAXI4_Lite_Master_Xactor;
 		AXI4_Lite_Slave_Xactor_IFC #(`paddr, 32, 0) c2s_xactor <- mkAXI4_Lite_Slave_Xactor;
-    AXI4_Lite_Fabric_IFC #(`MixedCluster_Num_Masters, `MixedCluster_Num_Slaves, `paddr, 32,0) 
+    AXI4_Lite_Fabric_IFC #(`MixedCluster_Num_Masters, `MixedCluster_Num_Slaves, `paddr, 32,0)
                                                     fabric <- mkAXI4_Lite_Fabric(fn_slave_map);
     let i2c <- mki2c;
     let gpio <- mkgpio();
     let plic <- mkplic();
-    let bootrom <- mkbootrom();
     let pinmuxtop <- mkpinmuxtop();
     Ifc_err_slave_axi4lite#(`paddr, 32, 0 ) err_slave <- mkerr_slave_axi4lite;
 		Wire#(Bit#(8)) wr_external_interrupts <- mkDWire('d0);
@@ -135,7 +128,7 @@ package mixed_cluster;
 		endrule
 
     rule rl_connect_plic_connections;
-			let tmp<- gpio.sb_gpio_to_plic.get;
+			let tmp <- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= pack(tmp);
 			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
@@ -148,14 +141,13 @@ package mixed_cluster;
     mkConnection(c2m_xactor.o_wr_resp,c2s_xactor.i_wr_resp);
     mkConnection(c2s_xactor.o_rd_addr,c2m_xactor.i_rd_addr);
     mkConnection(c2m_xactor.o_rd_data,c2s_xactor.i_rd_data);
-		
+
    	mkConnection (fabric.v_to_slaves [`I2C_slave_num ],		i2c.slave);
 		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
 		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
-		mkConnection (fabric.v_to_slaves [`Bootrom_slave_num ], bootrom.slave);
 		mkConnection (fabric.v_to_slaves [`Pinmux_slave_num ], pinmuxtop.slave);
     mkConnection (fabric.v_to_slaves [`MixedCluster_err_slave_num ] , err_slave.slave);
-		
+
     method I2C_out i2c_out= i2c.io;
     method sb_ext_interrupt = wr_sb_ext_interrupt;
     interface gpio_io= gpio.io;
@@ -165,6 +157,7 @@ package mixed_cluster;
     interface pinmuxtop_iocell_side = pinmuxtop.pinmuxaxi4lite_iocell_side;
     interface pinmuxtop_peripheral_side = pinmuxtop.pinmuxaxi4lite_peripheral_side;
     interface slave= c2s_xactor.axi_side;
+		interface bootrom_master = fabric.v_to_slaves[`Bootrom_slave_num ];
   endmodule
 endpackage
 

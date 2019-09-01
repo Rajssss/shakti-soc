@@ -104,7 +104,7 @@ package Soc;
     interface Ifc_spi_io spi0_io;
     interface Ifc_spi_io spi1_io;
     interface RS232 uart0_io;
-	method I2C_out i2c_out;									//I2c IO interface
+  	method I2C_out i2c_out;									//I2c IO interface
     (*always_ready, always_enabled*)
     interface QSPI_out qspi_io;
     interface IOCellSide iocell_io;
@@ -154,6 +154,8 @@ package Soc;
 
     (*always_ready, always_enabled*)
     interface Ifc_sdram_out#(32) sdram_io;
+
+    interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) bootrom_master;
   endinterface
 
   (*synthesize*)
@@ -389,6 +391,8 @@ package Soc;
     endmethod
 
     interface sdram_io = sdram.io;
+
+    interface bootrom_master = mixed_cluster.bootrom_master;
 
   endmodule: mkSoc
 endpackage: Soc
