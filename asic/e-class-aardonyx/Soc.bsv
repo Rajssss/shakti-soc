@@ -58,6 +58,7 @@ package Soc;
   import sdram_axi4_lite :: *;
   import pinmux::*;
   import pinmux_axi4lite :: * ;
+  import bootrom :: * ;
 
   // package imports
   import Connectable:: *;
@@ -90,6 +91,13 @@ package Soc;
 
     return slave_num;
   endfunction:fn_slave_map
+
+  (*synthesize*)
+  module mkbootrom(Ifc_bootrom_axi4lite#(32, 32, 0, 8));
+    let ifc();
+    mkbootrom_axi4lite#(`BootromBase) _temp(ifc);
+    return ifc;
+  endmodule
 
   (*synthesize*)
   module mkqspi(Ifc_qspi_axi4lite#(`paddr,XLEN,0));

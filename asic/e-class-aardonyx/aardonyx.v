@@ -1,15 +1,15 @@
-/* 
+/*
 Copyright (c) 2019, IIT Madras All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
 
 * Redistributions of source code must retain the above copyright notice, this list of conditions
-  and the following disclaimer.  
-* Redistributions in binary form must reproduce the above copyright notice, this list of 
-  conditions and the following disclaimer in the documentation and/or other materials provided 
- with the distribution.  
-* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or 
+  and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of
+  conditions and the following disclaimer in the documentation and/or other materials provided
+ with the distribution.
+* Neither the name of IIT Madras  nor the names of its contributors may be used to endorse or
   promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
@@ -18,7 +18,7 @@ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYR
 CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
 DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
-IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------------------------
 
@@ -471,6 +471,66 @@ module aardonyx(
   output CLK_sdram_io_sdram_clk;
   output CLK_GATE_sdram_io_sdram_clk;
 
+  // value method bootrom_master_m_awvalid
+  wire bootrom_master_awvalid;
+
+  // value method bootrom_master_m_awaddr
+  wire [31 : 0] bootrom_master_awaddr;
+
+  // value method bootrom_master_m_awuser
+
+  // value method bootrom_master_m_awprot
+  wire [2 : 0] bootrom_master_awprot;
+
+  // value method bootrom_master_m_awsize
+  wire [1 : 0] bootrom_master_awsize;
+
+  // action method bootrom_master_m_awready
+  wire  bootrom_master_m_awready_awready;
+
+  // value method bootrom_master_m_wvalid
+  wire bootrom_master_wvalid;
+
+  // value method bootrom_master_m_wdata
+  wire [31 : 0] bootrom_master_wdata;
+
+  // value method bootrom_master_m_wstrb
+  wire [3 : 0] bootrom_master_wstrb;
+
+  // action method bootrom_master_m_wready
+  wire  bootrom_master_m_wready_wready;
+
+  // action method bootrom_master_m_bvalid
+  wire  bootrom_master_m_bvalid_bvalid;
+  wire  [1 : 0] bootrom_master_m_bvalid_bresp;
+
+  // value method bootrom_master_m_bready
+  wire bootrom_master_bready;
+
+  // value method bootrom_master_m_arvalid
+  wire bootrom_master_arvalid;
+
+  // value method bootrom_master_m_araddr
+  wire [31 : 0] bootrom_master_araddr;
+
+  // value method bootrom_master_m_aruser
+
+  // value method bootrom_master_m_arprot
+  wire [2 : 0] bootrom_master_arprot;
+
+  // value method bootrom_master_m_arsize
+  wire [1 : 0] bootrom_master_arsize;
+
+  // action method bootrom_master_m_arready
+  wire  bootrom_master_m_arready_arready;
+
+  // action method bootrom_master_m_rvalid
+  wire  bootrom_master_m_rvalid_rvalid;
+  wire  [1 : 0] bootrom_master_m_rvalid_rresp;
+  wire  [31 : 0] bootrom_master_m_rvalid_rdata;
+
+  // value method bootrom_master_m_rready
+  wire bootrom_master_rready;
   reg [31:0] resetpc;
   // boot mode options:
   // 'b00: debug mode
@@ -483,6 +543,30 @@ module aardonyx(
       default: resetpc  =  32'h00040300;
     endcase
   end
+
+  mkbootrom bootrom ( .CLK(CLK),
+                      .RST_N(RST_N),
+		                  .slave_m_awvalid_awvalid    (bootrom_master_awvalid),
+		                  .slave_m_awvalid_awaddr     (bootrom_master_awaddr),
+		                  .slave_m_awvalid_awsize     (bootrom_master_awprot),
+		                  .slave_m_awvalid_awprot     (bootrom_master_awsize),
+		                  .slave_awready              (bootrom_master_m_awready_awready),
+		                  .slave_m_wvalid_wvalid      (bootrom_master_wvalid),
+		                  .slave_m_wvalid_wdata       (bootrom_master_wdata),
+		                  .slave_m_wvalid_wstrb       (bootrom_master_wstrb),
+		                  .slave_wready               (bootrom_master_m_wready_wready),
+		                  .slave_bvalid               (bootrom_master_m_bvalid_bvalid),
+		                  .slave_bresp                (bootrom_master_m_bvalid_bresp),
+		                  .slave_m_bready_bready      (bootrom_master_bready),
+		                  .slave_m_arvalid_arvalid    (bootrom_master_arvalid),
+		                  .slave_m_arvalid_araddr     (bootrom_master_araddr),
+		                  .slave_m_arvalid_arsize     (bootrom_master_arprot),
+		                  .slave_m_arvalid_arprot     (bootrom_master_arsize),
+		                  .slave_arready              (bootrom_master_m_arready_arready),
+		                  .slave_rvalid               (bootrom_master_m_rvalid_rvalid),
+		                  .slave_rresp                (bootrom_master_m_rvalid_rresp),
+		                  .slave_rdata                (bootrom_master_m_rvalid_rdata),
+		                  .slave_m_rready_rready      (bootrom_master_rready)    );
 
   mkSoc soc ( .resetpc                        (resetpc                        ),
               .spi0_io_mosi                   (spi0_io_mosi                   ),
@@ -523,16 +607,16 @@ module aardonyx(
               .qspi_io_io_enable              (qspi_io_io_enable              ),
               .qspi_io_ncs_o                  (qspi_io_ncs_o                  ),
               .wire_tdo                       (wire_tdo                       ),
-	      .gpio_4_out		      (gpio_4_out		      ),
-	      .gpio_7_out		      (gpio_7_out		      ),
-	      .gpio_8_out		      (gpio_8_out		      ),
-	      .gpio_14_out		      (gpio_14_out		      ),
-	      .gpio_15_out		      (gpio_15_out		      ),
-	      .gpio_4_outen		      (gpio_4_outen		      ),
-	      .gpio_7_outen		      (gpio_7_outen		      ),
-	      .gpio_8_outen		      (gpio_8_outen		      ),
-	      .gpio_14_outen		      (gpio_14_outen		      ),
-	      .gpio_15_outen		      (gpio_15_outen		      ),
+	            .gpio_4_out		                  (gpio_4_out		      ),
+	            .gpio_7_out		                  (gpio_7_out		      ),
+	            .gpio_8_out		                  (gpio_8_out		      ),
+	            .gpio_14_out		                (gpio_14_out		      ),
+	            .gpio_15_out		                (gpio_15_out		      ),
+	            .gpio_4_outen		                (gpio_4_outen		      ),
+	            .gpio_7_outen		                (gpio_7_outen		      ),
+	            .gpio_8_outen		                (gpio_8_outen		      ),
+	            .gpio_14_outen		              (gpio_14_outen		      ),
+	            .gpio_15_outen		              (gpio_15_outen		      ),
               .sdram_io_osdr_dout             (sdram_io_osdr_dout             ),
               .sdram_io_osdr_den_n            (sdram_io_osdr_den_n            ),
               .sdram_io_osdr_cke              (sdram_io_osdr_cke              ),
@@ -569,11 +653,33 @@ module aardonyx(
               .wire_tms_tms_in                (wire_tms_tms_in                ),
               .wire_tdi_tdi_in                (wire_tdi_tdi_in                ),
               .ext_interrupts_i               (ext_interrupts_i               ),
-	      .gpio_4_in 		      (gpio_4_in 		      ),
-	      .gpio_7_in 		      (gpio_7_in 		      ),
-	      .gpio_8_in 		      (gpio_8_in 		      ),
-	      .gpio_14_in 		      (gpio_14_in 		      ),
-	      .gpio_15_in 		      (gpio_15_in 		      ),
-              .sdram_io_ipad_sdr_din_pad_sdr_din(sdram_io_ipad_sdr_din_pad_sdr_din) );
+	            .gpio_4_in 		                  (gpio_4_in 		      ),
+	            .gpio_7_in 		                  (gpio_7_in 		      ),
+	            .gpio_8_in 		                  (gpio_8_in 		      ),
+	            .gpio_14_in 		                (gpio_14_in 		      ),
+	            .gpio_15_in 		                (gpio_15_in 		      ),
+              .sdram_io_ipad_sdr_din_pad_sdr_din  (sdram_io_ipad_sdr_din_pad_sdr_din),
+	            .bootrom_master_awvalid             (bootrom_master_awvalid),
+	            .bootrom_master_awaddr              (bootrom_master_awaddr),
+	            .bootrom_master_awprot              (bootrom_master_awprot),
+	            .bootrom_master_awsize              (bootrom_master_awsize),
+	            .bootrom_master_m_awready_awready   (bootrom_master_m_awready_awready),
+	            .bootrom_master_wvalid              (bootrom_master_wvalid),
+	            .bootrom_master_wdata               (bootrom_master_wdata),
+	            .bootrom_master_wstrb               (bootrom_master_wstrb),
+	            .bootrom_master_m_wready_wready     (bootrom_master_m_wready_wready),
+	            .bootrom_master_m_bvalid_bvalid     (bootrom_master_m_bvalid_bvalid),
+	            .bootrom_master_m_bvalid_bresp      (bootrom_master_m_bvalid_bresp),
+	            .bootrom_master_bready              (bootrom_master_bready),
+	            .bootrom_master_arvalid             (bootrom_master_arvalid),
+	            .bootrom_master_araddr              (bootrom_master_araddr),
+	            .bootrom_master_arprot              (bootrom_master_arprot),
+	            .bootrom_master_arsize              (bootrom_master_arsize),
+	            .bootrom_master_m_arready_arready   (bootrom_master_m_arready_arready),
+	            .bootrom_master_m_rvalid_rvalid     (bootrom_master_m_rvalid_rvalid),
+	            .bootrom_master_m_rvalid_rresp      (bootrom_master_m_rvalid_rresp),
+	            .bootrom_master_m_rvalid_rdata      (bootrom_master_m_rvalid_rdata),
+	            .bootrom_master_rready              (bootrom_master_rready)    );
+
 endmodule
 
