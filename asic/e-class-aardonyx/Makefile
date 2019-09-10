@@ -155,7 +155,7 @@ generate_verilog: check-restore check-env
   $(define_macros) $(BSVCOMPILEOPTS) $(VERILOG_FILTER) \
   -p $(BSVINCDIR) -g $(TOP_MODULE) $(TOP_DIR)/$(TOP_FILE)  || (echo "BSC COMPILE ERROR"; exit 1) 
 	@cp ${BLUESPECDIR}/Verilog.Vivado/RegFile.v ${VERILOGDIR}  
-	@cp ${BLUESPECDIR}/Verilog/BRAM1Load.v ${VERILOGDIR}
+#	@cp ${BLUESPECDIR}/Verilog/BRAM1Load.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}
