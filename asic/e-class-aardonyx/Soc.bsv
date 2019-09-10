@@ -185,7 +185,7 @@ package Soc;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
 	  Ifc_sdram_wrap#(`paddr,XLEN,`paddr,XLEN,0,32,12,3) sdram <- mksdram_wrap ;
-    Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
+    Wire#(Bit#(2)) wr_ext_interrutps <- mkDWire(0);
 
     Wire#(Bit#(1)) wr_gpio4_in <- mkDWire(0);
     Wire#(Bit#(1)) wr_gpio7_in <- mkDWire(0);
