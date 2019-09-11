@@ -22,6 +22,8 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
     * __CLINT__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/clint/clint.defines) for more info.
     * __SDRAM__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/sdram/32-bit) for more info.
 
+* PinMap: [Excel sheet](https://docs.google.com/spreadsheets/d/1yA-pKs3_cNw3IYSj8Q-fh1bL_jA87MuPH5vjwz0L73s/edit#gid=0)
+
 * Mempry MAP:
   Following is the SoC Config for Aadronyx:
 
