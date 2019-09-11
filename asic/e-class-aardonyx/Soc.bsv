@@ -274,6 +274,9 @@ package Soc;
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
     mkConnection(eclass.sb_clint_mtip,clint.sb_clint_mtip);
     mkConnection(eclass.sb_clint_mtime,clint.sb_clint_mtime);
+    rule connect_ext_plic_interrupt;
+      eclass.sb_ext_interrupt.put(mixed_cluster.sb_ext_interrupt);
+    endrule
 
     rule connect_pinmux_peripheral_output_lines;
       mixed_cluster.pinmuxtop_peripheral_side.pwm0.out.put(pwm_cluster.pwm0_io.pwm_o);
