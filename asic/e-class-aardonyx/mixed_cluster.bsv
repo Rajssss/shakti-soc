@@ -52,7 +52,7 @@ package mixed_cluster;
            interface IOCellSide pinmuxtop_iocell_side;
            interface PeripheralSide pinmuxtop_peripheral_side;
     (*always_ready, always_enabled*)
-		method Action interrupts(Bit#(8) inp);
+		method Action interrupts(Bit#(6) inp);
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) bootrom_master;
   endinterface
@@ -75,7 +75,7 @@ package mixed_cluster;
   endmodule
 
   (*synthesize*)
-  module mkplic(Ifc_plic_axi4lite#(`paddr, 32, 0, 26, 2, 0));
+  module mkplic(Ifc_plic_axi4lite#(`paddr, 32, 0, 24, 2, 0));
     let ifc();
     mkplic_axi4lite#(`PLICBase)_temp(ifc);
     return ifc;
@@ -118,7 +118,7 @@ package mixed_cluster;
     let plic <- mkplic();
     let pinmuxtop <- mkpinmuxtop();
     Ifc_err_slave_axi4lite#(`paddr, 32, 0 ) err_slave <- mkerr_slave_axi4lite;
-		Wire#(Bit#(8)) wr_external_interrupts <- mkDWire('d0);
+		Wire#(Bit#(6)) wr_external_interrupts <- mkDWire('d0);
     Wire#(Bit#(1)) wr_sb_ext_interrupt <- mkDWire(0);
 
 		//Rule to connect PLIC interrupt to the core's sideband
@@ -130,7 +130,7 @@ package mixed_cluster;
     rule rl_connect_plic_connections;
 			let tmp <- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= pack(tmp);
-			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
+			Bit#(24) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
 

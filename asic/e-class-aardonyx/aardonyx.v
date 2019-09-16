@@ -181,7 +181,6 @@ module aardonyx(
 
           gpio_15_outen,
 
-	  ext_interrupts_i,
 
 	  sdram_io_ipad_sdr_din_pad_sdr_din,
 
@@ -431,9 +430,6 @@ module aardonyx(
   // value method gpio_15_outen
   output gpio_15_outen;
 
-  // action method ext_interrupts
-  input  [1 : 0] ext_interrupts_i;
-
   // action method sdram_io_ipad_sdr_din
   input  [31 : 0] sdram_io_ipad_sdr_din_pad_sdr_din;
 
@@ -652,7 +648,6 @@ module aardonyx(
               .qspi_io_io_i_io_i              (qspi_io_io_in_io_in            ),
               .wire_tms_tms_in                (wire_tms_tms_in                ),
               .wire_tdi_tdi_in                (wire_tdi_tdi_in                ),
-              .ext_interrupts_i               (ext_interrupts_i               ),
 	            .gpio_4_in 		                  (gpio_4_in 		      ),
 	            .gpio_7_in 		                  (gpio_7_in 		      ),
 	            .gpio_8_in 		                  (gpio_8_in 		      ),

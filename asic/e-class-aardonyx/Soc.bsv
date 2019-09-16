@@ -157,8 +157,6 @@ package Soc;
     (*always_enabled,always_ready*)
     method Bit#(1)gpio_15_outen;
       // ---------------------------------------------//
-    (*always_ready, always_enabled*)
-    method Action ext_interrupts(Bit#(2) i);
 
     (*always_ready, always_enabled*)
     interface Ifc_sdram_out#(32) sdram_io;
@@ -185,7 +183,6 @@ package Soc;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
 	  Ifc_sdram_wrap#(`paddr,XLEN,`paddr,XLEN,0,32,12,3) sdram <- mksdram_wrap ;
-    Wire#(Bit#(2)) wr_ext_interrutps <- mkDWire(0);
 
     Wire#(Bit#(1)) wr_gpio4_in <- mkDWire(0);
     Wire#(Bit#(1)) wr_gpio7_in <- mkDWire(0);
@@ -246,12 +243,12 @@ package Soc;
 
     // TODO qspi interrupts
     rule connect_interrupt_lines;
-      mixed_cluster.interrupts({wr_ext_interrutps, pwm_cluster.pwm0_sb_interrupt,
-                                                  pwm_cluster.pwm1_sb_interrupt,
-                                                  pwm_cluster.pwm2_sb_interrupt,
-                                                  pwm_cluster.pwm3_sb_interrupt,
-                                                  pwm_cluster.pwm4_sb_interrupt,
-                                                  pwm_cluster.pwm5_sb_interrupt});
+      mixed_cluster.interrupts({pwm_cluster.pwm0_sb_interrupt,
+                                pwm_cluster.pwm1_sb_interrupt,
+                                pwm_cluster.pwm2_sb_interrupt,
+                                pwm_cluster.pwm3_sb_interrupt,
+                                pwm_cluster.pwm4_sb_interrupt,
+                                pwm_cluster.pwm5_sb_interrupt});
     endrule
 
     mkConnection (eclass.debug_server ,debug_module.hart);
@@ -286,7 +283,7 @@ package Soc;
       mixed_cluster.pinmuxtop_peripheral_side.pwm4.out.put(pwm_cluster.pwm4_io.pwm_o);
       mixed_cluster.pinmuxtop_peripheral_side.pwm5.out.put(pwm_cluster.pwm5_io.pwm_o);
 
-		   mixed_cluster.pinmuxtop_peripheral_side.gpioa.out.put(
+		  mixed_cluster.pinmuxtop_peripheral_side.gpioa.out.put(
 						{ mixed_cluster.gpio_io.gpio_out[13],
 						  mixed_cluster.gpio_io.gpio_out[12],
 						  mixed_cluster.gpio_io.gpio_out[11],
@@ -298,7 +295,7 @@ package Soc;
 						  mixed_cluster.gpio_io.gpio_out[2],
 						  mixed_cluster.gpio_io.gpio_out[1],
     					mixed_cluster.gpio_io.gpio_out[0]} );
-		   mixed_cluster.pinmuxtop_peripheral_side.gpioa.out_en.put(
+		  mixed_cluster.pinmuxtop_peripheral_side.gpioa.out_en.put(
 						{ mixed_cluster.gpio_io.gpio_out_en[13],
 						  mixed_cluster.gpio_io.gpio_out_en[12],
 						  mixed_cluster.gpio_io.gpio_out_en[11],
@@ -396,10 +393,6 @@ package Soc;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
     interface qspi_io = qspi.io;
     interface iocell_io = mixed_cluster.pinmuxtop_iocell_side;
-
-    method Action ext_interrupts(Bit#(2) i);
-      wr_ext_interrutps <= i;
-    endmethod
 
     interface sdram_io = sdram.io;
 
