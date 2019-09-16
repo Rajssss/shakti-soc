@@ -204,8 +204,7 @@ module aardonyx(
 
 	  sdram_io_osdr_addr,
 
-	  CLK_sdram_io_sdram_clk,
-	  CLK_GATE_sdram_io_sdram_clk );
+	  CLK_sdram_io_sdram_clk);
 
   input test_mode; // 1: enable test-mode. 0: functional mode
   input [1:0] boot_mode;
@@ -465,7 +464,9 @@ module aardonyx(
 
   // oscillator and gates for output clock CLK_sdram_io_sdram_clk
   output CLK_sdram_io_sdram_clk;
-  output CLK_GATE_sdram_io_sdram_clk;
+
+
+  wire CLK_GATE_sdram_io_sdram_clk;
 
   // value method bootrom_master_m_awvalid
   wire bootrom_master_awvalid;
