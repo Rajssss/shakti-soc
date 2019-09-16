@@ -151,7 +151,7 @@ package mixed_cluster;
     method I2C_out i2c_out= i2c.io;
     method sb_ext_interrupt = wr_sb_ext_interrupt;
     interface gpio_io= gpio.io;
-		method Action interrupts(Bit#(8) inp);
+		method Action interrupts(Bit#(6) inp);
 			wr_external_interrupts<= inp;
 		endmethod
     interface pinmuxtop_iocell_side = pinmuxtop.pinmuxaxi4lite_iocell_side;
