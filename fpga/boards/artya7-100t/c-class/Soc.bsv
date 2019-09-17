@@ -118,7 +118,7 @@ package Soc;
   module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
-    Ifc_cclass_axi4 cclass <- mkcclass_axi4();
+    Ifc_cclass_axi4 cclass <- mkcclass_axi4(`resetpc, 0);
 
     AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, ELEN, USERSPACE) 
                                                     fabric <- mkAXI4_Fabric(fn_slave_map);

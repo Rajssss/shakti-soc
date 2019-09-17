@@ -50,11 +50,6 @@ add_files -norecurse -fileset constrs_1 $home_dir/constraints.xdc
 if { $jtag_type eq "JTAG_EXTERNAL" } {
   add_files -norecurse -fileset constrs_1 $home_dir/jtag_constraints.xdc
 }
-# generate all IP source code
-if {[string first "M" $isa] != -1} {
-  import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/multiplier/multiplier.xci
-  generate_target all [get_ips]
-}
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci

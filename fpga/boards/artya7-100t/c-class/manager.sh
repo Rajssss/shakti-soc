@@ -15,11 +15,11 @@ repo_list=(
   )
 
 branch_list=(
-  0.18.1
-  2.0.0
+  1.1.1
+  4.4.0
   master
-  3.8.1
-  1.0.0
+  4.4.0
+  1.1.0
   master
   )
 COUNT=${#repo_list[*]}

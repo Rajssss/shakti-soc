@@ -38,12 +38,13 @@ ifneq (,$(findstring RV32,$(ISA)))
   override define_macros += -D RV32=True
   XLEN=32
 endif
-ifneq (,$(findstring M,$(ISA)))
-  ifeq ($(MUL), fpga)
-    override define_macros += -D muldiv_fpga=True -D muldiv=True
+
+ifneq (,$(findstring RV64,$(ISA)))
+	IBUSWIDTH = 64
+else ifneq (,$(findstring D,$(ISA)))
+	IBUSWIDTH = 64
   else
-    override define_macros += -D $(MUL)=True -D muldiv=True
-  endif
+	IBUSWIDTH = 32
 endif
 ifneq (,$(findstring A,$(ISA)))
   override define_macros += -D atomic=True
@@ -58,6 +59,10 @@ ifneq (,$(findstring D,$(ISA)))
 endif
 ifneq (,$(findstring C,$(ISA)))
   override define_macros += -D compressed=True
+endif
+
+ifneq (,$(findstring M,$(ISA)))
+  override define_macros += -D muldiv=True
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
@@ -77,8 +82,8 @@ endif
 ifeq ($(RTLDUMP), enable)
   override define_macros += -D rtldump=True
 endif
-ifeq ($(SUPERVISOR),  enable)
-  override define_macros += -D supervisor=True
+ifneq ($(SUPERVISOR),  none)
+  override define_macros += -D supervisor=True -D $(SUPERVISOR)
 endif
 ifeq ($(ASSERTIONS), enable)
   override define_macros += -D ASSERT=True
@@ -94,11 +99,6 @@ ifeq ($(PMP), enable)
 endif
 ifneq ($(PREDICTOR), none)
 	override define_macros += -D bpu=True 
-  ifneq (,$(findstring C,$(ISA)))
-		override define_macros += -D $(PREDICTOR)_c=True
-  else
-		override define_macros += -D $(PREDICTOR)_nc=True
-  endif
 endif
 ifeq ($(ARITH_TRAP), enable)
 	override define_macros += -D arith_trap=True
@@ -131,47 +131,86 @@ ifneq ($(TRIGGERS), 0)
 	endif
 endif
 
-override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True -D MULSTAGES=$(MULSTAGES) \
-								 -D DIVSTAGES=$(DIVSTAGES) -D Counters=$(COUNTERS)\
+ifneq ($(RASDEPTH), 0)
+	override define_macros += -D bpu_ras
+endif
+
+ifeq ($(CSR_LATENCY),low)
+	override define_macros += -D csr_low_latency=True
+endif
+
+ifneq ($(COUNTERS_GRP4), 0)
+	override define_macros += -D perfmonitors=True
+	override define_macros += -D csr_grp4=True
+	ifneq ($(COUNTERS_GRP5), 0)
+		override define_macros += -D csr_grp5=True
+		ifneq ($(COUNTERS_GRP6), 0)
+			override define_macros += -D csr_grp6=True
+			ifneq ($(COUNTERS_GRP7), 0)
+				override define_macros += -D csr_grp7=True
+			endif
+		endif
+	endif
+endif
+
+ifneq ($(COUNTERS_GRP4), 0)
+	ifneq ($(COUNTERS_GRP5), 0)
+		ifneq ($(COUNTERS_GRP6), 0)
+			ifneq ($(COUNTERS_GRP7), 0)
+				override define_macros += -D counters_size=$(shell echo $(COUNTERS_GRP4) + $(COUNTERS_GRP5) + $(COUNTERS_GRP6) + $(COUNTERS_GRP7) | bc)
+			else
+				override define_macros += -D counters_size=$(shell echo $(COUNTERS_GRP4) + $(COUNTERS_GRP5) + $(COUNTERS_GRP6) | bc)
+			endif
+		else
+			override define_macros += -D counters_size=$(shell echo $(COUNTERS_GRP4) + $(COUNTERS_GRP5) | bc)
+		endif
+	else
+		override define_macros += -D counters_size=$(COUNTERS_GRP4)
+	endif
+endif
+
+override define_macros += -D CORE_$(COREFABRIC)=True -D MULSTAGES=$(MULSTAGES) \
+								 -D DIVSTAGES=$(DIVSTAGES) -D counters_grp4=$(COUNTERS_GRP4)\
+								 -D counters_grp5=$(COUNTERS_GRP5) -D counters_grp6=$(COUNTERS_GRP6)\
+								 -D counters_grp7=$(COUNTERS_GRP7)\
 								 -D iwords=$(IWORDS) -D iblocks=$(IBLOCKS) -D iways=$(IWAYS) -D isets=$(ISETS) \
 								 -D ifbsize=$(IFBSIZE) -D irepl=$(IREPL) -D icachereset=$(IRESET) -D iesize=$(IESIZE) \
 								 -D idbanks=$(IDBANKS) -D itbanks=$(ITBANKS) -D ddbanks=$(DDBANKS) -D dtbanks=$(DTBANKS) \
 								 -D dwords=$(DWORDS) -D dblocks=$(DBLOCKS) -D dways=$(DWAYS) -D dsets=$(DSETS) \
 								 -D dfbsize=$(DFBSIZE) -D drepl=$(DREPL) -D dcachereset=$(DRESET) -D desize=$(DESIZE) \
 								 -D dsbsize=$(DSBSIZE) -D ibuswidth=$(IBUSWIDTH) \
-								 -D PIPE$(PIPE)=True -D paddr=$(PADDR) -D vaddr=$(XLEN) -D PMPSIZE=$(PMPSIZE) \
+								 -D paddr=$(PADDR) -D vaddr=$(XLEN) -D PMPSIZE=$(PMPSIZE) \
 								 -D resetpc=$(RESETPC) -D asidwidth=$(ASIDWIDTH) \
 								 -D btbdepth=$(BTBDEPTH) -D bhtdepth=$(BHTDEPTH) -D histlen=$(HISTLEN) \
-								 -D extrahist=$(EXTRAHIST) -D rasdepth=$(RASDEPTH) -D rastagdepth=$(RASTAGDEPTH) \
-								 -D bpureset=$(BPURESET) -D causesize=$(CAUSESIZE) -D $(PREDICTOR)=True
+								 -D extrahist=$(EXTRAHIST) -D rasdepth=$(RASDEPTH) \
+								 -D bpureset=$(BPURESET) -D causesize=$(CAUSESIZE) -D $(PREDICTOR)=True\
+								 -D itlbsize=$(ITLBSIZE) -D dtlbsize=$(DTLBSIZE)
+
 		
 # ------------------------------------------------------------------------------------------------ #
 # ------------------ Include directories for bsv compilation ------------------------------------- #
-CORE:=./c-class/src/core/:./c-class/src/core/predictors/
-F_EXT:=./c-class/src/core/fpu/
-M_EXT:=./c-class/src/core/m_ext/
-FABRIC:=./fabrics/axi4:./fabrics/axi4lite
-CACHES:=./caches_mmu/src/
-PERIPHERALS:=./devices/bootrom:./devices/pwm:./devices/uart:./devices/clint:./devices/bram:./devices/riscvDebug013:./devices/jtagdtm/:./devices/err_slave/:./devices/gpio/:./devices/plic/:./devices/i2c/
-COMMON_BSV:=./common_bsv/
-COMMON_VERILOG:=./common_verilog/
-BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(F_EXT):$(M_EXT):$(FABRIC):$(PERIPHERALS):$(COMMON_BSV):$(COMMON_VERILOG):$(CACHES)
+BSVDEFAULT:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC
+VARIABLE := $(BSVDEFAULT)$(shell sed 's/^/:.\//g' bsvpath)
+BSVINCDIR := $(shell echo $(VARIABLE) | sed 's/ //g' )
 # ------------------------------------------------------------------------------------------------ #
 
 
 # ---------------- Setting the variables for bluespec compile  --------------------------------- #
 BSC_CMD:= bsc -u -verilog -elab 
 BSVCOMPILEOPTS:= +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined-vals \
-								 -remove-false-rules -remove-empty-rules -remove-starved-rules -remove-dollar
+									$(suppresswarn) -remove-false-rules -remove-empty-rules -remove-starved-rules \
+									-remove-dollar -unspecified-to X -show-schedule -show-module-use
+BSVLINKOPTS:=-parallel-sim-link 8 -keep-fires
 VERILOGDIR:=./verilog/
 BSVBUILDDIR:=./bsv_build/
 ifeq (, $(wildcard ${TOOLS_DIR}/shakti-tools/insert_license.sh))
-  VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout
+  VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout \
+									 -verilog-filter ./rename_translate.sh
 else
   VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout \
 									 -verilog-filter ${TOOLS_DIR}/shakti-tools/insert_license.sh \
-									 -verilog-filter ${TOOLS_DIR}/shakti-tools/rename_translate.sh
-  VERILOGLICENSE:= cp ${TOOLS_DIR}/shakti-tools/IITM_LICENSE.txt ${VERILOGDIR}
+									 -verilog-filter ./rename_translate.sh
+	VERILOGLICENSE:= cp ${TOOLS_DIR}/shakti-tools/IITM_LICENSE.txt ${VERILOGDIR}/LICENSE.txt
 endif
 # ------------------------------------------------------------------------------------------------ #
 
@@ -234,8 +273,9 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
 	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
+	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
+	@cp common_verilog/signedmul.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
 #	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
 #	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
@@ -263,7 +303,7 @@ generate_boot_files: update_xlen
 .PHONY: ip_build
 ip_build: ## build Xilinx Core-IPs used in this project
 	vivado -log ipbuild.log -nojournal -mode tcl -notrace -source tcl/create_ip_project.tcl \
-		-tclargs $(FPGA) $(XLEN) $(MULSTAGES) $(ISA) $(JOBS) \
+		-tclargs $(FPGA) $(XLEN) $(ISA) $(JOBS) \
 		|| (echo "Could not create IP project"; exit 1)
 
 .PHONY: arty_build

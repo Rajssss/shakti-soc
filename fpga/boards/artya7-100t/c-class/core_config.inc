@@ -1,61 +1,47 @@
 ISA=RV64IMAFDC
-MUL=fpga
-COREFABRIC=AXI4
-SYNTH=FPGA
-VERBOSITY=0
+
+# User mode related settings
 USERTRAPS=disable
 USER=enable
-SUPERVISOR=disable
-ARITH_TRAP=disable
-MULSTAGES=10
-DIVSTAGES=64
-RESETPC=0
-PADDR=32
 
-# Predictor Config
+# Supervisor related settings
+SUPERVISOR=sv39
+ITLBSIZE=4
+DTLBSIZE=4
+
+# Configuring M extension
+MULSTAGES=2
+DIVSTAGES=32
+
+# Configuring the branch predictor
 PREDICTOR=none
 BPURESET=1
 BTBDEPTH=32
 BHTDEPTH=128
-HISTLEN=7
+HISTLEN=8
 EXTRAHIST=3
 RASDEPTH=8
-RASTAGDEPTH=64
 
-CAUSESIZE=6
-DEBUG=enable
-OPENOCD=disable
-
-# Verilator options
-COVERAGE=none
-TRACE=disable
-THREADS=1
-
-# DebugOptions
-RTLDUMP=disble
-ASSERTIONS=disable
-
-# Instruction cache
+# configuring the Instruction cache
 ICACHE=enable
-ISETS=128
+ISETS=64
 IWORDS=4
-IBLOCKS=8
-IWAYS=4
+IBLOCKS=16
+IWAYS=2
 IFBSIZE=4
 IESIZE=2
 IREPL=PLRU
 IRESET=1
 IDBANKS=1
 ITBANKS=1
-IBUSWIDTH=64
 
-# Instruction cache
+# configuring the Data cache
 DCACHE=enable
 DESIZE=1
-DSETS=128
+DSETS=64
 DWORDS=8
-DBLOCKS=4
-DWAYS=4
+DBLOCKS=8
+DWAYS=2
 DFBSIZE=8
 DSBSIZE=2
 DREPL=PLRU
@@ -63,19 +49,49 @@ DRESET=1
 DDBANKS=1
 DTBANKS=1
 
-#PIPELINE CONFIG
-PIPE=2
-
-#PMP CONFIG
+# Configuring the PMP CONFIG
 PMP=disable
 PMPSIZE=0
 ASIDWIDTH=9
 
-# Trigger Setup
-TRIGGERS=2
+# Configuring Debug and Trigger Setup
+TRIGGERS=0
+DEBUG=enable
+OPENOCD=enable
+
+
+#BSV compile options
+SUPPRESSWARNINGS=none
+
+# Simulation configurations and env settings
+COVERAGE=none
+TRACE=disable
+THREADS=1
+VERILATESIM=fast
+VERBOSITY=disable
+RTLDUMP=disable
+ASSERTIONS=disable
+
+# miscellaneous configs
+SYNTH=ASIC
+ARITH_TRAP=disable
+RESETPC=0
+PADDR=32
+COREFABRIC=AXI4
+
+# Do not change
+CAUSESIZE=6
+
+# Counter config for daisy-chain
+CSRTYPE=daisy
+CSR_LATENCY=low
+COUNTERS_GRP4=0
+COUNTERS_GRP5=0
+COUNTERS_GRP6=0
+COUNTERS_GRP7=0
 
 # For Vivado Synthesis
 FPGA=xc7a100tcsg324-1
 SYNTHTOP=fpga_top
 BSCAN2E=enable
-JOBS=4
+JOBS=6
