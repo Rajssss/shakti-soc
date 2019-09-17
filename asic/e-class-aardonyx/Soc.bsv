@@ -112,7 +112,8 @@ package Soc;
     interface Ifc_spi_io spi0_io;
     interface Ifc_spi_io spi1_io;
     interface RS232 uart0_io;
-  	method I2C_out i2c_out;									//I2c IO interface
+  	method I2C_out i2c0_out;									//I2c IO interface
+  	method I2C_out i2c1_out;									//I2c IO interface
     (*always_ready, always_enabled*)
     interface QSPI_out qspi_io;
     interface IOCellSide iocell_io;
@@ -390,7 +391,8 @@ package Soc;
     interface spi0_io = spi_cluster.spi0_io;
     interface spi1_io = spi_cluster.spi1_io;
     interface uart0_io = uart_cluster.uart0_io;
-		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
+		method  i2c0_out = mixed_cluster.i2c0_out;									//I2c IO interface
+		method  i2c1_out = mixed_cluster.i2c1_out;									//I2c IO interface
     interface qspi_io = qspi.io;
     interface iocell_io = mixed_cluster.pinmuxtop_iocell_side;
 

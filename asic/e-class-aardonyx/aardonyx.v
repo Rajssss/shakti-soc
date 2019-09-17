@@ -57,17 +57,29 @@ module aardonyx(
 
 	  uart0_io_SOUT,
 
-	  i2c_out_scl_out,
+	  i2c0_out_scl_out,
 
-	  i2c_out_scl_in_in,
+	  i2c0_out_scl_in_in,
 
-	  i2c_out_scl_out_en,
+	  i2c0_out_scl_out_en,
 
-	  i2c_out_sda_out,
+	  i2c0_out_sda_out,
 
-	  i2c_out_sda_in_in,
+	  i2c0_out_sda_in_in,
 
-	  i2c_out_sda_out_en,
+	  i2c0_out_sda_out_en,
+
+	  i2c1_out_scl_out,
+
+	  i2c1_out_scl_in_in,
+
+	  i2c1_out_scl_out_en,
+
+	  i2c1_out_sda_out,
+
+	  i2c1_out_sda_in_in,
+
+	  i2c1_out_sda_out_en,
 
 	  iocell_io_io7_cell_in_in,
 
@@ -243,23 +255,41 @@ module aardonyx(
   // value method uart1_io_sout
   output uart0_io_SOUT;
 
-  // value method i2c_out_scl_out
-  output i2c_out_scl_out;
+  // value method i2c0_out_scl_out
+  output i2c0_out_scl_out;
 
-  // action method i2c_out_scl_in
-  input  i2c_out_scl_in_in;
+  // action method i2c0_out_scl_in
+  input  i2c0_out_scl_in_in;
 
-  // value method i2c_out_scl_out_en
-  output i2c_out_scl_out_en;
+  // value method i2c0_out_scl_out_en
+  output i2c0_out_scl_out_en;
 
-  // value method i2c_out_sda_out
-  output i2c_out_sda_out;
+  // value method i2c0_out_sda_out
+  output i2c0_out_sda_out;
 
-  // action method i2c_out_sda_in
-  input  i2c_out_sda_in_in;
+  // action method i2c0_out_sda_in
+  input  i2c0_out_sda_in_in;
 
-  // value method i2c_out_sda_out_en
-  output i2c_out_sda_out_en;
+  // value method i2c0_out_sda_out_en
+  output i2c0_out_sda_out_en;
+
+  // value method i2c1_out_scl_out
+  output i2c1_out_scl_out;
+
+  // action method i2c1_out_scl_in
+  input  i2c1_out_scl_in_in;
+
+  // value method i2c1_out_scl_out_en
+  output i2c1_out_scl_out_en;
+
+  // value method i2c1_out_sda_out
+  output i2c1_out_sda_out;
+
+  // action method i2c1_out_sda_in
+  input  i2c1_out_sda_in_in;
+
+  // value method i2c1_out_sda_out_en
+  output i2c1_out_sda_out_en;
 
   // action method gpio_io_gpio_in
   input  iocell_io_io7_cell_in_in;
@@ -573,10 +603,14 @@ module aardonyx(
               .spi1_io_sclk                   (spi1_io_sclk                   ),
               .spi1_io_nss                    (spi1_io_nss                    ),
               .uart0_io_SOUT                  (uart0_io_SOUT                  ),
-              .i2c_out_scl_out                (i2c_out_scl_out                ),
-              .i2c_out_scl_out_en             (i2c_out_scl_out_en             ),
-              .i2c_out_sda_out                (i2c_out_sda_out                ),
-              .i2c_out_sda_out_en             (i2c_out_sda_out_en             ),
+              .i2c0_out_scl_out                (i2c0_out_scl_out                ),
+              .i2c0_out_scl_out_en             (i2c0_out_scl_out_en             ),
+              .i2c0_out_sda_out                (i2c0_out_sda_out                ),
+              .i2c0_out_sda_out_en             (i2c0_out_sda_out_en             ),
+              .i2c1_out_scl_out                (i2c1_out_scl_out                ),
+              .i2c1_out_scl_out_en             (i2c1_out_scl_out_en             ),
+              .i2c1_out_sda_out                (i2c1_out_sda_out                ),
+              .i2c1_out_sda_out_en             (i2c1_out_sda_out_en             ),
               .iocell_io_io7_cell_out         (iocell_io_io7_cell_out         ),
               .iocell_io_io8_cell_out         (iocell_io_io8_cell_out         ),
               .iocell_io_io9_cell_out         (iocell_io_io9_cell_out         ),
@@ -633,8 +667,10 @@ module aardonyx(
               .spi0_io_miso_dat               (spi0_io_miso_dat               ),
               .spi1_io_miso_dat               (spi1_io_miso_dat               ),
               .uart0_io_SIN                   (uart0_io_SIN                   ),
-              .i2c_out_scl_in_in              (i2c_out_scl_in_in              ),
-              .i2c_out_sda_in_in              (i2c_out_sda_in_in              ),
+              .i2c0_out_scl_in_in              (i2c0_out_scl_in_in              ),
+              .i2c0_out_sda_in_in              (i2c0_out_sda_in_in              ),
+              .i2c1_out_scl_in_in              (i2c1_out_scl_in_in              ),
+              .i2c1_out_sda_in_in              (i2c1_out_sda_in_in              ),
               .iocell_io_io7_cell_in_in       (iocell_io_io7_cell_in_in       ),
               .iocell_io_io8_cell_in_in       (iocell_io_io8_cell_in_in       ),
               .iocell_io_io9_cell_in_in       (iocell_io_io9_cell_in_in       ),
