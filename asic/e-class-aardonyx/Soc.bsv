@@ -70,6 +70,8 @@ package Soc;
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
     if(addr >= `MemoryBase && addr<= `MemoryEnd)
       slave_num = `Memory_slave_num;
+    else if( addr >= `SDRAMCfgBase && addr <= `SDRAMCfgEnd )
+      slave_num = `Memory_cfg_slave_num;
     else if(addr >= `ClintBase && addr <= `ClintEnd)
       slave_num = `Clint_slave_num;
     else if(addr >= `DebugBase && addr <= `DebugEnd)
@@ -260,6 +262,8 @@ package Soc;
    	mkConnection(eclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
+  	mkConnection (fabric.v_to_slaves [`Memory_slave_num], sdram.slave_mem);
+  	mkConnection (fabric.v_to_slaves [`Memory_cfg_slave_num], sdram.slave_cfg);
     mkConnection (fabric.v_to_slaves [`QSPI_slave_num ], qspi.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
     mkConnection (fabric.v_to_slaves [`PWMCluster_slave_num], pwm_cluster.slave);

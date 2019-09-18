@@ -3,16 +3,17 @@
 `define Mem_master_num 1
 `define Fetch_master_num 2
 
-`define Num_Slaves 9
+`define Num_Slaves 10
 `define Memory_slave_num 0
-`define Clint_slave_num 1
-`define Debug_slave_num 2
-`define PWMCluster_slave_num 3
-`define UARTCluster_slave_num 4
-`define SPICluster_slave_num 5
-`define MixedCluster_slave_num 6
-`define QSPI_slave_num 7
-`define Err_slave_num 8
+`define Memory_cfg_slave_num 1
+`define Clint_slave_num 2
+`define Debug_slave_num 3
+`define PWMCluster_slave_num 4
+`define UARTCluster_slave_num 5
+`define SPICluster_slave_num 6
+`define MixedCluster_slave_num 7
+`define QSPI_slave_num 8
+`define Err_slave_num 9
 
 `define DebugBase         'h0000_0010
 `define DebugEnd          'h0000_001F
