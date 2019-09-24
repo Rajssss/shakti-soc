@@ -159,8 +159,8 @@ package Soc;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
-    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  17) mem <- mkbram_axi4lite('h80000000, "code.mem", "code.mem","Memory");
-    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  13) boot <- mkbram_axi4lite('h1000, "boot.mem", "boot.mem","Boot");
+    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  17) mem <- mkbram_axi4lite('h80000000, "code.mem","Memory");
+    Ifc_bram_axi4lite#(`paddr, XLEN, 0,  13) boot <- mkbram_axi4lite('h1000, "boot.mem","Boot");
     Wire#(Bit#(2)) wr_ext_interrutps <- mkWire();
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
