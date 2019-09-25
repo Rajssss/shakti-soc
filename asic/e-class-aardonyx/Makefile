@@ -1,4 +1,4 @@
-## 			Makefile for E-Class on Arty-A7
+## 			Makefile for E-Class AARDONYX SoC
 
 ifeq (, $(wildcard ./old_vars))
 	old_define_macros = ""
@@ -6,7 +6,7 @@ else
 	include ./old_vars
 endif
 
-CONFIG=core_config.inc
+CONFIG?=asic_config.inc
 
 include $(CONFIG)
 
@@ -53,6 +53,11 @@ ifneq (,$(findstring C,$(ISA)))
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
+	TOP_MODULE=mkTbSoc
+	TOP_FILE=TbSoc.bsv
+endif
+ifeq ($(SYNTH),FPGA_ARTY)
+  override define_macros += -D fpga_arty=True
 endif
 ifeq ($(USERTRAPS), enable)
   override define_macros += -D usertraps=True
@@ -91,7 +96,7 @@ ifneq ($(COUNTERS), 0)
 	override define_macros += -D perfmonitors=True -D counters=$(COUNTERS)
 endif
 
-override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True \
+override define_macros += -D CORE_$(COREFABRIC)=True \
 													-D MULSTAGES=$(MULSTAGES) -D DIVSTAGES=$(DIVSTAGES) \
 													-D Counters=$(COUNTERS) -D paddr=$(PADDR) -D vaddr=$(XLEN) \
 													-D PMPSIZE=$(PMPSIZE) -D resetpc=$(RESETPC) -D causesize=$(CAUSESIZE)
@@ -107,6 +112,18 @@ COMMON_VERILOG:=./common_verilog/
 BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(M_EXT):$(FABRIC):$(PERIPHERALS):$(COMMON_BSV):$(COMMON_VERILOG)
 # ------------------------------------------------------------------------------------------------ #
 
+# ----------------- Setting up flags for verilator ----------------------------------------------- #
+VERILATOR_FLAGS += --stats -O3 $(verilate_fast) -LDFLAGS "-static" --x-assign fast --x-initial fast \
+--noassert sim_main.cpp --bbox-sys -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH \
+-Wno-lint -Wno-COMBDLY -Wno-INITIALDLY --autoflush $(coverage) $(trace) --threads $(THREADS) \
+-DBSV_RESET_FIFO_HEAD -DBSV_RESET_FIFO_ARRAY
+VCS_MACROS =  +define+BSV_RESET_FIFO_HEAD=True +define+BSV_RESET_FIFO_ARRAY=True
+
+ifeq (enable,$(VERBOSITY))
+	VERILATOR_FLAGS += -DVERBOSE
+	VCS_MACROS += +define+VERBOSE=True
+endif
+# ------------------------------------------------------------------------------------------------ #
 
 # ---------------- Setting the variables for bluespec compile  --------------------------------- #
 BSC_CMD:= bsc -u -verilog -elab 
@@ -115,6 +132,7 @@ BSVCOMPILEOPTS:= +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined
 								 -unspecified-to X
 VERILOGDIR:=./verilog/
 BSVBUILDDIR:=./bsv_build/
+BSVOUTDIR:=./bin
 ifeq (, $(wildcard ${TOOLS_DIR}/shakti-tools/insert_license.sh))
   VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout
 else
@@ -155,7 +173,6 @@ generate_verilog: check-restore check-env
   $(define_macros) $(BSVCOMPILEOPTS) $(VERILOG_FILTER) \
   -p $(BSVINCDIR) -g $(TOP_MODULE) $(TOP_DIR)/$(TOP_FILE)  || (echo "BSC COMPILE ERROR"; exit 1) 
 	@cp ${BLUESPECDIR}/Verilog.Vivado/RegFile.v ${VERILOGDIR}  
-#	@cp ${BLUESPECDIR}/Verilog/BRAM1Load.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}
@@ -168,12 +185,7 @@ generate_verilog: check-restore check-env
 	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
-#	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
-#	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
-# @cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BELoad.v ${VERILOGDIR}  
+	@cp ${BLUESPECDIR}/Verilog.Vivado/BRAM2BELoad.v ${VERILOGDIR}  
 	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/MakeClock.v ${VERILOGDIR}
 	@cp ${BLUESPECDIR}/Verilog/UngatedClockMux.v ${VERILOGDIR}
@@ -185,6 +197,103 @@ generate_verilog: check-restore check-env
 	@$(VERILOGLICENSE)
 	@echo Compilation finished
 
+.PHONY: link_vcs
+link_vcs: ## Generate simulation executable using Synopsys VCS
+	@rm -rf $(BSVOUTDIR)
+	@mkdir -p $(BSVOUTDIR)
+	vcs -LDFLAGS -Wl,--no-as-needed -l vcs_compile.log -sverilog +vpi +v2k -lca +define+TOP=$(TOP_MODULE) $(VCS_MACROS) \
+	+define+BSV_TIMESCALE=1ns/1ps +cli+4 +libext+.v +notimingcheck \
+	-y $(VERILOGDIR)/ -y bfms/ bfms/main.v -o out
+	@mv csrc out* $(BSVOUTDIR)
+
+.PHONY: link_ncverilog
+link_ncverilog: ## Generate simulation executable using Cadence NCVerilog
+	@echo "Linking $(TOP_MODULE) using ncverilog..."
+	@rm -rf work include $(BSVOUTDIR)/work
+	@mkdir -p $(BSVOUTDIR)
+	@mkdir work
+	@echo "define work ./work" > cds.lib
+	@echo "define WORK work" > hdl.var
+	ncvlog -sv -cdslib ./cds.lib -hdlvar ./hdl.var +define+TOP=$(TOP_MODULE) $(VCS_MACROS) \
+	bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+	@ncelab  -cdslib ./cds.lib -hdlvar ./hdl.var work.main -timescale 1ns/1ps
+	@echo 'ncsim -cdslib ./cds.lib -hdlvar ./hdl.var work.main "$$@"' > $(BSVOUTDIR)/out
+	@mv work cds.lib hdl.var $(BSVOUTDIR)/
+	@chmod +x $(BSVOUTDIR)/out
+	@echo Linking finished
+
+.PHONY: link_ncverilog_openocd
+link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS with VPI for GDB
+	@echo "Linking $(TOP_MODULE) using ncverilog..."
+	@rm -rf work include ${BSVOUTDIR}/work
+	@mkdir -p bin
+	@mkdir work
+	@echo "Building RBB VPI"
+	@echo "define work ./work" > cds.lib
+	@echo "define WORK work" > hdl.var
+	@ncvlog -64BIT -sv -cdslib ./cds.lib -hdlvar ./hdl.var +define+TOP=$(TOP_MODULE) \
+	bfms/main.v -y $(VERILOGDIR)/ -y ${BLUESPECDIR}/Verilog/ -y bfms/
+	@ncelab -64BIT -cdslib ./cds.lib -hdlvar ./hdl.var work.main -loadvpi rbb_vpi.so: -timescale 1ns/1ps
+	@echo 'ncsim -64BIT -cdslib ./cds.lib -hdlvar ./hdl.var -loadvpi rbb_vpi.so: work.main "$$@"' > $(BSVOUTDIR)/out
+	@mv ./*.so $(BSVOUTDIR)/
+	@mv work cds.lib hdl.var $(BSVOUTDIR)/
+	@chmod +x $(BSVOUTDIR)/out
+	@echo Linking finished
+
+.PHONY: link_irun
+link_irun:
+	rm -rf $(BSVOUTDIR) INCA_libs ncelab.log ncvlog.log irun.log irun.history
+	irun -libext .v +define+TOP=$(TOP_MODULE) $(VCS_MACROS) -timescale 1ns/1ps \
+		bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+
+.PHONY: link_msim
+link_msim: ## Generate simulation executable using Mentor's ModelSim tool
+	@echo "Linking $(TOP_MODULE) using modelsim..."
+	@rm -rf work* $(BSVOUTDIR)/*
+	@mkdir -p $(BSVOUTDIR)
+	vlib work
+	vlog -work work +libext+.v+.vqm -y $(VERILOGDIR) -y ${BLUESPECDIR}/Verilog \
+		+define+TOP=$(TOP_MODULE) $(VCS_MACROS) ${BLUESPECDIR}/Verilog/main.v \
+		./$(VERILOGDIR)/$(TOP_MODULE).v  > compile_log
+	mv compile_log ./$(BSVOUTDIR)
+	mv work ./$(BSVOUTDIR)
+	echo 'vsim -quiet -novopt -lib work -do "run -all; quit" -c main' > $(BSVOUTDIR)/out
+	@chmod +x $(BSVOUTDIR)/out
+	@echo Linking finished
+
+
+.PHONY: link_verilator
+link_verilator: ## Generate simulation executable using Verilator
+	@echo "Linking $(TOP_MODULE) using verilator"
+	@mkdir -p $(BSVOUTDIR) obj_dir
+	@echo "#define TOPMODULE V$(TOP_MODULE)" > sim_main.h
+	@echo '#include "V$(TOP_MODULE).h"' >> sim_main.h
+	verilator $(VERILATOR_FLAGS) --cc $(TOP_MODULE).v -y $(VERILOGDIR) -y common_verilog --exe
+	@ln -f -s sim_main.cpp obj_dir/sim_main.cpp
+	@ln -f -s sim_main.h obj_dir/sim_main.h
+	@make -j8 -C obj_dir -f V$(TOP_MODULE).mk
+	@cp obj_dir/V$(TOP_MODULE) $(BSVOUTDIR)/out
+
+.PHONY: link_verilator_gdb
+link_verilator_gdb: ## Generate simulation executable using Verilator and VPI for GDB
+	@echo "Linking Verilator With the Shakti RBB Vpi"
+	@mkdir -p bin
+	@echo "#define TOPMODULE V$(TOP_MODULE)_edited" >sim_main.h
+	@echo '#include "V$(TOP_MODULE)_edited.h"' >> sim_main.h
+	@sed  -f devices/jtagdtm/sed_script.txt  $(VERILOGDIR)/$(TOP_MODULE).v > tmp1.v
+	@cat  devices/jtagdtm/verilator_config.vlt \
+	      devices/jtagdtm/vpi_sv.v \
+	      tmp1.v                         > $(VERILOGDIR)/$(TOP_MODULE)_edited.v
+	@rm   -f  tmp1.v
+	verilator --threads-dpi all --cc $(TOP_MODULE)_edited.v --exe sim_main.cpp devices/jtagdtm/RBB_Shakti.c -y $(VERILOGDIR) $(VERILATOR_FLAGS)
+	@ln -f -s sim_main.cpp obj_dir/sim_main.cpp
+	@ln -f -s sim_main.h obj_dir/sim_main.h
+	@ln -f -s ./devices/jtagdtm/RBB_Shakti.c obj_dir/RBB_Shakti.c
+	@echo "INFO: Linking verilated files"
+	@make -j8 -C obj_dir -f V$(TOP_MODULE)_edited.mk
+	@cp obj_dir/V$(TOP_MODULE)_edited bin/out
+	@cp gdb_setup/code.mem* ./bin/
+	@echo Linking finished
 
 .PHONY: generate_boot_files
 generate_boot_files: ## to generate boot files for simulation
@@ -196,6 +305,8 @@ generate_boot_files: update_xlen
 	  cut -c9-16 verification/dts/boot.hex > bin/boot.LSB;\
     else cp bin/boot.MSB bin/boot.LSB;\
   fi
+
+
 
 .PHONY: program
 program: ## program the fpga

@@ -1,7 +1,6 @@
 ISA=RV32IMAC
 MUL=asic
-SYNTH=ASIC
-VERBOSITY=0
+SYNTH=SIM
 USERTRAPS=enable
 USER=enable
 COREFABRIC=AXI4Lite
@@ -21,8 +20,8 @@ TRACE=disable
 THREADS=1
 VERILATESIM=fast
 
-# DebugOptions
-RTLDUMP=disable
+VERBOSITY=enable
+RTLDUMP=enable
 ASSERTIONS=disable
 
 # Trigger Setup

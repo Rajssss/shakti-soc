@@ -55,10 +55,14 @@ package Soc;
   import jtagdtm::*;
   import riscvDebug013::*;
   import debug_halt_loop::*;
-  import sdram_axi4_lite :: *;
   import pinmux::*;
   import pinmux_axi4lite :: * ;
   import bootrom :: * ;
+`ifdef fpga_arty
+  import bram :: * ;
+`else
+  import sdram_axi4_lite :: *;
+`endif
 
   // package imports
   import Connectable:: *;
@@ -70,8 +74,10 @@ package Soc;
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
     if(addr >= `MemoryBase && addr<= `MemoryEnd)
       slave_num = `Memory_slave_num;
+  `ifndef fpga_arty
     else if( addr >= `SDRAMCfgBase && addr <= `SDRAMCfgEnd )
       slave_num = `Memory_cfg_slave_num;
+  `endif
     else if(addr >= `ClintBase && addr <= `ClintEnd)
       slave_num = `Clint_slave_num;
     else if(addr >= `DebugBase && addr <= `DebugEnd)
@@ -160,11 +166,14 @@ package Soc;
     (*always_enabled,always_ready*)
     method Bit#(1)gpio_15_outen;
       // ---------------------------------------------//
-
+  `ifndef fpga_arty
     (*always_ready, always_enabled*)
     interface Ifc_sdram_out#(32) sdram_io;
-
+  `endif
     interface AXI4_Lite_Master_IFC#(`paddr, 32, 0) bootrom_master;
+  `ifdef rtldump
+    interface Get#(DumpType) io_dump;
+  `endif
   endinterface
 
   (*synthesize*)
@@ -185,7 +194,11 @@ package Soc;
     Ifc_spi_cluster spi_cluster <- mkspi_cluster;
     Ifc_mixed_cluster mixed_cluster <- mkmixed_cluster;
     Ifc_err_slave_axi4lite#(`paddr,XLEN,0) err_slave <- mkerr_slave_axi4lite;
+  `ifdef fpga_arty
+    Ifc_bram_axi4lite#(`paddr, XLEN, 0, 19) bram <- mkbram_axi4lite(`MemoryBase,"code.mem","MainMEM");
+  `else
 	  Ifc_sdram_wrap#(`paddr,XLEN,`paddr,XLEN,0,32,12,3) sdram <- mksdram_wrap ;
+	`endif
 
     Wire#(Bit#(1)) wr_gpio4_in <- mkDWire(0);
     Wire#(Bit#(1)) wr_gpio7_in <- mkDWire(0);
@@ -262,8 +275,12 @@ package Soc;
    	mkConnection(eclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
+  `ifdef fpga_arty
+    mkConnection (fabric.v_to_slaves [`Memory_slave_num], bram.slave);
+  `else
   	mkConnection (fabric.v_to_slaves [`Memory_slave_num], sdram.slave_mem);
   	mkConnection (fabric.v_to_slaves [`Memory_cfg_slave_num], sdram.slave_cfg);
+  `endif
     mkConnection (fabric.v_to_slaves [`QSPI_slave_num ], qspi.slave);
     mkConnection (fabric.v_to_slaves [`Debug_slave_num ] , debug_memory.slave);
     mkConnection (fabric.v_to_slaves [`PWMCluster_slave_num], pwm_cluster.slave);
@@ -400,9 +417,13 @@ package Soc;
     interface qspi_io = qspi.io;
     interface iocell_io = mixed_cluster.pinmuxtop_iocell_side;
 
+  `ifndef fpga_arty
     interface sdram_io = sdram.io;
-
+  `endif
     interface bootrom_master = mixed_cluster.bootrom_master;
+  `ifdef rtldump
+    interface io_dump = eclass.io_dump;
+  `endif
 
   endmodule: mkSoc
 endpackage: Soc

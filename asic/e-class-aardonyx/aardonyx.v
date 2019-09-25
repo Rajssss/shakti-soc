@@ -191,10 +191,10 @@ module aardonyx(
 
           gpio_14_outen,
 
-          gpio_15_outen,
+          gpio_15_outen
 
-
-	  sdram_io_ipad_sdr_din_pad_sdr_din,
+`ifndef fpga_synth
+	  ,sdram_io_ipad_sdr_din_pad_sdr_din,
 
 	  sdram_io_osdr_dout,
 
@@ -216,7 +216,9 @@ module aardonyx(
 
 	  sdram_io_osdr_addr,
 
-	  CLK_sdram_io_sdram_clk);
+	  CLK_sdram_io_sdram_clk
+`endif 
+  );
 
   input test_mode; // 1: enable test-mode. 0: functional mode
   input [1:0] boot_mode;
@@ -459,6 +461,7 @@ module aardonyx(
   // value method gpio_15_outen
   output gpio_15_outen;
 
+`ifndef fpga_synth
   // action method sdram_io_ipad_sdr_din
   input  [31 : 0] sdram_io_ipad_sdr_din_pad_sdr_din;
 
@@ -497,6 +500,7 @@ module aardonyx(
 
 
   wire CLK_GATE_sdram_io_sdram_clk;
+`endif
 
   // value method bootrom_master_m_awvalid
   wire bootrom_master_awvalid;
@@ -648,6 +652,7 @@ module aardonyx(
 	            .gpio_8_outen		                (gpio_8_outen		      ),
 	            .gpio_14_outen		              (gpio_14_outen		      ),
 	            .gpio_15_outen		              (gpio_15_outen		      ),
+            `ifndef fpga_synth
               .sdram_io_osdr_dout             (sdram_io_osdr_dout             ),
               .sdram_io_osdr_den_n            (sdram_io_osdr_den_n            ),
               .sdram_io_osdr_cke              (sdram_io_osdr_cke              ),
@@ -660,6 +665,8 @@ module aardonyx(
               .sdram_io_osdr_addr             (sdram_io_osdr_addr             ),
               .CLK_sdram_io_sdram_clk         (CLK_sdram_io_sdram_clk         ),
               .CLK_GATE_sdram_io_sdram_clk    (CLK_GATE_sdram_io_sdram_clk    ),
+              .sdram_io_ipad_sdr_din_pad_sdr_din  (sdram_io_ipad_sdr_din_pad_sdr_din),
+            `endif
               .CLK_tck_clk                    (CLK_tck_clk                    ),
               .RST_N_trst                     (RST_N_trst                     ),
               .CLK                            (CLK                            ),
@@ -690,7 +697,6 @@ module aardonyx(
 	            .gpio_8_in 		                  (gpio_8_in 		      ),
 	            .gpio_14_in 		                (gpio_14_in 		      ),
 	            .gpio_15_in 		                (gpio_15_in 		      ),
-              .sdram_io_ipad_sdr_din_pad_sdr_din  (sdram_io_ipad_sdr_din_pad_sdr_din),
 	            .bootrom_master_awvalid             (bootrom_master_awvalid),
 	            .bootrom_master_awaddr              (bootrom_master_awaddr),
 	            .bootrom_master_awprot              (bootrom_master_awprot),
