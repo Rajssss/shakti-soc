@@ -8,3 +8,6 @@ fpga_project
 
 *.log
 
+obj_dir
+
+bin

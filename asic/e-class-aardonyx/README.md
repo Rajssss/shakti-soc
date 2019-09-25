@@ -68,6 +68,7 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |BootromBase  | 'h0004_0300|
 |BootromEnd   | 'h0004_03FF|
 |PinmuxBase   | 'h0004_0400|
+|PinmuxConfig | 'h0004_0410|
 |PinmuxEnd    | 'h0004_04FF|
 |I2C1Base     | 'h0004_0500|
 |I2C1End      | 'h0004_05FF|
@@ -78,32 +79,38 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |SDRAMMemBase | 'h8000_0000|
 |SDRAMMemEnd  | 'hBFFF_FFFF|
 
+## Generating ASIC RTL
+The following commands will generate the RTL for ASIC synthesis in the `verilog` folder:
+``` 
+make CONFIG=asic_config.inc generate_verilog
+cd shakti-soc/asic/e-class-aardonyx/
+```
+
+## Porting to ARTY-A7-100t
+The same RTL can be ported to ARTY-A7-100t. However the SDRAM should be replaced with BRAMs of
+512KB. To build the bitstream of ARTY-A7 do the following:
+
+```
+cd shakti-soc/asic/e-class-aardonyx/
+make CONFIG=fpga_arty generate_verilog
+cd fpga/test/artya7-100t-eval/
+make
+```
+
+## For Simulation
+A tesbench is available which can be used to simulate the aardonyx chip:
+```
+make CONFIG=sim_config.inc generate_verilog link_ncverilog
+```
+The above command will generate an `out` executable in the `bin` folder. 
+
+Following arguments can be used along with the `out`:
+1. `+rtldump`: This will generate a trace of instruction execution in rtldump
+2. `+fullverbose`: This will print all the display statements on the screen
+3. `+debugmode`: This will wait for openocd and gdb to connect
+
 ## Requirements
 1. `bsc` command should be available in your `$PATH` variable.
-
-## Steps to build
-
-1. Clone the *shakti-soc* repository.
-```
-$ git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
-```
-
-2. Change present working directory to *shakti-soc/asic/e-class-aardonyx*.
-```
-$ cd shakti-soc/asic/e-class-aardonyx
-```
-
-3. Run the script to clone various repositories that contain the source code.
-```
-$ ./manager.sh update_deps
-```
-
-4. Generate verilog from bluespec source code.
-```
-$ make generate_verilog
-```
-
-All files are available in the `verilog` folder with aardonyx.v being the top module
 
 ## Reporting Issues
 While reporting issues with this board/build please make sure to mark the issues with the `e-class-aardonyx` label

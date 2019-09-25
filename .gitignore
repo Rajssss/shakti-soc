@@ -6,3 +6,9 @@ logs
 
 bsv_build
 old_vars
+
+asic/e-class-aardonyx/INCA_libs/
+
+asic/e-class-aardonyx/irun.history
+
+asic/e-class-aardonyx/sim_main.h
