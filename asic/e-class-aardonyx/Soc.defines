@@ -32,8 +32,8 @@
 `define DebugEnd          'h0000_001F
 `define QSPI0Base         'h0000_0100
 `define QSPI0End          'h0000_01FF
-`define QSPI0MemBase      'h1000_0000
-`define QSPI0MemEnd       'h1FFF_FFFF
+`define QSPI0MemBase      'h9000_0000
+`define QSPI0MemEnd       'h9FFF_FFFF
 `define UARTClusterBase   'h0001_1300
 `define UARTClusterEnd    'h0001_1540
 `define SPIClusterBase    'h0002_0000

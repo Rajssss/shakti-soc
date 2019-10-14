@@ -41,14 +41,14 @@ bspboard:=../../bsp/third_party/$(TARGET)
 all: create_dir
 	make hello.riscv
 
-hello.riscv: crt.o syscalls.shakti create_dir
+issi_flash.riscv: crt.o syscalls.shakti create_dir
 	@echo -e "$(GREEN) Compiling code $(NC)"
 	@echo $(TARGET)
 	@echo -e "$(RED) Caveat: Code starts at 0x80000000. Configure RTL appropriately $(NC)"
-	@riscv$(XLEN)-unknown-elf-gcc -w $(DC) -mcmodel=medany -static -std=gnu99 -fno-builtin-printf $(flags) -I$(bspinc)  -c ./hello.c -o ./output/hello.o -march=$(MARCH) -mabi=$(MABI) -lm -lgcc
+	@riscv$(XLEN)-unknown-elf-gcc -w $(DC) -mcmodel=medany -static -std=gnu99 -fno-builtin-printf $(flags) -I$(bspinc)  -c ./qspi_micron.c -o ./output/issi_flash.o -march=$(MARCH) -mabi=$(MABI) -lm -lgcc
 	@riscv$(XLEN)-unknown-elf-gcc -w $(DC) -mcmodel=medany -static -std=gnu99 -fno-builtin-printf  -I$(bspinc)  -c $(bspboard)/uart.c -o ./output/uart.o -march=$(MARCH) -mabi=$(MABI) -lm -lgcc
-	@riscv$(XLEN)-unknown-elf-gcc -T $(bspboard)/link.ld ./output/hello.o ./output/syscalls.shakti ./output/uart.o ./output/crt.o -o ./output/hello.shakti -static -nostartfiles -lm -lgcc
-	@riscv$(XLEN)-unknown-elf-objdump -D ./output/hello.shakti > ./output/hello.dump
+	@riscv$(XLEN)-unknown-elf-gcc -T $(bspboard)/link.ld ./output/issi_flash.o ./output/syscalls.shakti ./output/uart.o ./output/crt.o -o ./output/issi_flash.shakti -static -nostartfiles -lm -lgcc
+	@riscv$(XLEN)-unknown-elf-objdump -D ./output/issi_flash.shakti > ./output/issi_flash.dump
 
 create_dir:
 	@mkdir -p ./output
