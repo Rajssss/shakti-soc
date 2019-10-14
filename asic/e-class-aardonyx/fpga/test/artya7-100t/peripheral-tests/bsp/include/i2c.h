@@ -59,7 +59,7 @@
 #define I2C_READ 1
 #define I2C_WRITE 0
 
-#define I2C_BASE_ADDRESS I2C_START
+#define I2C_BASE_ADDRESS I2C0_START
 
 
 //Following the memory map provided

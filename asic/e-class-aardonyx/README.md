@@ -82,7 +82,7 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 ## Generating ASIC RTL
 The following commands will generate the RTL for ASIC synthesis in the `verilog` folder:
 ``` 
-make CONFIG=asic_config.inc generate_verilog
+make CONFIG=asic_config.inc
 cd shakti-soc/asic/e-class-aardonyx/
 ```
 
@@ -92,7 +92,7 @@ The same RTL can be ported to ARTY-A7-100t. However the SDRAM should be replaced
 
 ```
 cd shakti-soc/asic/e-class-aardonyx/
-make CONFIG=fpga_arty generate_verilog
+make CONFIG=fpga_arty.inc
 cd fpga/test/artya7-100t-eval/
 make
 ```

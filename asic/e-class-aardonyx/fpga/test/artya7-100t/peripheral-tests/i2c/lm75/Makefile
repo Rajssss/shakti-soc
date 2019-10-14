@@ -1,33 +1,19 @@
-#Created by Sathya Narayanan N
-# Email id: sathya281@gmail.com
-
-#   Copyright (C) 2019  IIT Madras. All rights reserved.
-
-#This program is free software: you can redistribute it and/or modify
-#it under the terms of the GNU General Public License as published by
-#the Free Software Foundation, either version 3 of the License, or
-#(at your option) any later version.
-
-#This program is distributed in the hope that it will be useful,
-#but WITHOUT ANY WARRANTY; without even the implied warranty of
-#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU General Public License for more details.
-
-#    You should have received a copy of the GNU General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 SHELL := /bin/bash # Use bash syntax
-XLEN=64
+XLEN=32
 DC=
 
-TARGET ?= artix7_35t
+#default target board
+TARGET ?=aardonyx
 DEBUG ?=
+MARCH ?=
+MABI  ?=
 
-bspinc:=../../bsp/include
-bspdri:=../../bsp/drivers
-bsplib:=../../bsp/libwrap
-bspboard:=../../bsp/third_party/$(TARGET)
-
+ifeq ($(TARGET),aardonyx)
+	XLEN=32
+	flags= -D ARTIX7_35T
+	MARCH=rv32imafdc
+	MABI=ilp32d
+endif
 ifeq ($(TARGET),artix7_35t)
 	XLEN=32
 	flags= -D ARTIX7_35T
@@ -42,6 +28,10 @@ ifeq ($(DEBUG),DEBUG)
 	DC=-g
 endif
 
+bspinc:=../../bsp/include
+bspdri:=../../bsp/drivers
+bsplib:=../../bsp/libwrap
+bspboard:=../../bsp/third_party/$(TARGET)
 
 all: create_dir
 	make lm75.riscv

@@ -216,7 +216,7 @@ link_ncverilog: ## Generate simulation executable using Cadence NCVerilog
 	@echo "define WORK work" > hdl.var
 	ncvlog -sv -cdslib ./cds.lib -hdlvar ./hdl.var +define+TOP=$(TOP_MODULE) $(VCS_MACROS) \
 	bfms/main.v -y $(VERILOGDIR)/ -y bfms/
-	@ncelab  -cdslib ./cds.lib -hdlvar ./hdl.var work.main -timescale 1ns/1ps
+	@ncelab -access +r -cdslib ./cds.lib -hdlvar ./hdl.var work.main -timescale 1ns/1ps
 	@echo 'ncsim -cdslib ./cds.lib -hdlvar ./hdl.var work.main "$$@"' > $(BSVOUTDIR)/out
 	@mv work cds.lib hdl.var $(BSVOUTDIR)/
 	@chmod +x $(BSVOUTDIR)/out
@@ -314,7 +314,7 @@ program: ## program the fpga
 
 .PHONY: clean-bsv
 clean-bsv: ## clean bsv build director
-	rm -rf $(BSVBUILDDIR) old_vars
+	rm -rf $(BSVBUILDDIR) old_vars $(BSVOUTDIR)
 
 clean-verilog: ## delete verilog folder
 clean-verilog:

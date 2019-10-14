@@ -27,7 +27,8 @@
 
 void main()
 {	
-	printf("Hello world !\n");
+int a = 10;	
+printf("Hello world ! %d %x\n", a, a);
 }
 
 
