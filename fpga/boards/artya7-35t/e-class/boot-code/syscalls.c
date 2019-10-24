@@ -1,18 +1,48 @@
-// See LICENSE for license details.
+/***************************************************************************
+ * Project           			:  shakti devt board
+ * Name of the file	     		:  syscalls.c
+ * Created date			        :  3.10.2019
+ * Brief Description of file            :  It serves as UART Interface 
+                                           
+
+ Copyright (C) 2019  IIT Madras. All rights reserved.
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+ ***************************************************************************/
+
 
 #include <stdint.h>
-#include <string.h>
+//#include <string.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include <limits.h>
-#include <sys/signal.h>
-#include "util.h"
+//#include <sys/signal.h>
+//#include "util.h"
 
-#define SYS_write 64
+
+size_t strnlen(const char *s, size_t n)
+{
+  const char *p = s;
+  while (n-- && *p)
+    p++;
+  return p - s;
+}
 
 #undef putchar
 int putchar(int ch)
 {
+  
   register char a0 asm("a0") = ch;
   asm volatile ("li t1, 0x11300" "\n\t"	//The base address of UART config registers
         "uart_status_simple: lb a1, 12(t1)" "\n\t"
@@ -23,18 +53,21 @@ int putchar(int ch)
 				:
 				:"a0","t1","cc","memory");
   return 0;
+
 }
 
 void _init(int cid, int nc)
 {
   // only single-threaded programs should ever get here.
   int ret = main(0, 0);
+
 }
 
 
 static inline void printnum(void (*putch)(int, void**), void **putdat,
                     unsigned long long num, unsigned base, int width, int padc)
 {
+
   unsigned digs[sizeof(num)*CHAR_BIT];
   int pos = 0;
 
@@ -55,6 +88,7 @@ static inline void printnum(void (*putch)(int, void**), void **putdat,
 
 static unsigned long long getuint(va_list *ap, int lflag)
 {
+
   if (lflag >= 2)
     return va_arg(*ap, unsigned long long);
   else if (lflag)
@@ -62,7 +96,7 @@ static unsigned long long getuint(va_list *ap, int lflag)
   else
     return va_arg(*ap, unsigned int);
 }
-
+#if 0
 static long long getint(va_list *ap, int lflag)
 {
   if (lflag >= 2)
@@ -72,9 +106,10 @@ static long long getint(va_list *ap, int lflag)
   else
     return va_arg(*ap, int);
 }
-
+#endif
 static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt, va_list ap)
 {
+
   register const char* p;
   const char* last_fmt;
   register int ch, err;
@@ -100,7 +135,7 @@ static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt
     altflag = 0;
   reswitch:
     switch (ch = *(unsigned char *) fmt++) {
-
+#if 0
     // flag to pad on the right
     case '-':
       padc = '-';
@@ -151,12 +186,12 @@ static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt
     case 'l':
       lflag++;
       goto reswitch;
-
     // character
     case 'c':
       putch(va_arg(ap, int), putdat);
       break;
 
+#endif
     // string
     case 's':
       if ((p = va_arg(ap, char *)) == NULL)
@@ -171,7 +206,7 @@ static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt
       for (; width > 0; width--)
         putch(' ', putdat);
       break;
-
+#if 0
     // (signed) decimal
     case 'd':
       num = getint(&ap, lflag);
@@ -186,7 +221,7 @@ static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt
     case 'u':
       base = 10;
       goto unsigned_number;
-
+/*
     // (unsigned) octal
     case 'o':
       // should do something with padding so it's always 3 octits
@@ -199,8 +234,8 @@ static void vprintfmt(void (*putch)(int, void**), void **putdat, const char *fmt
       lflag = 1;
       putch('0', putdat);
       putch('x', putdat);
-      /* fall through to 'x' */
-
+*/      /* fall through to 'x' */
+#endif
     // (unsigned) hexadecimal
     case 'x':
       base = 16;
@@ -233,13 +268,5 @@ int printf(const char* fmt, ...)
 
   va_end(ap);
   return 0; // incorrect return value, but who cares, anyway?
-}
-
-size_t strnlen(const char *s, size_t n)
-{
-  const char *p = s;
-  while (n-- && *p)
-    p++;
-  return p - s;
 }
 

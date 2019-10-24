@@ -51,18 +51,18 @@ module fpga_top
     inout         i2c_scl,
 
 //   // ---- SPI ports ---------//
-    output       spi0_mosi,
-    output       spi0_sclk,
-    output       spi0_nss,
-    input        spi0_miso,
-    output       spi1_mosi,
-    output       spi1_sclk,
-    output       spi1_nss,
-    input        spi1_miso,
-    output       spi2_mosi,
-    output       spi2_sclk,
-    output       spi2_nss,
-    input        spi2_miso,
+   output       spi0_mosi,
+// output       spi0_sclk,// if external flash enable this or disable if onboard flash
+   output       spi0_nss,
+   input        spi0_miso,
+   output       spi1_mosi,
+   output       spi1_sclk,
+   output       spi1_nss,
+   input        spi1_miso,
+   output       spi2_mosi,
+   output       spi2_sclk,
+   output       spi2_nss,
+   input        spi2_miso,
 
 //   // ---- PWM ports ---------//
     output pwm0,
@@ -344,5 +344,22 @@ xadc_wiz_0 xadc_wiz_inst (
              .I(i2c_sda_out),
              .T(~i2c_sda_out_en)
          );
+
+// Enable if onboard flash or disable if external flash
+	 STARTUPE2#(.PROG_USR("False"),
+               .SIM_CCLK_FREQ(0.0))   startupe2_inst1(
+               .CFGCLK(open),
+               .CFGMCLK(open),
+               .EOS(open),
+               .PREQ(open),
+               .CLK(0),
+               .GSR(0),
+               .GTS(0),
+               .KEYCLEARB(0),
+               .PACK(0),
+               .USRCCLKO(spi0_sclk),
+               .USRCCLKTS(0),
+               .USRDONEO(1),
+               .USRDONETS(1));
 
 endmodule

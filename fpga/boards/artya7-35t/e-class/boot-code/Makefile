@@ -17,7 +17,7 @@ create_dir:
 boot.riscv: create_dir 	
 	@echo -e "$(GREEN) Compiling BOOT Polling code $(NC)"
 	@echo -e "$(RED) Caveat: BOOT Code starts at 0x2000. Configure RTL appropriately $(NC)"
-	@riscv$(XLEN)-unknown-elf-gcc -O2 -w -mcmodel=medany -static -std=gnu99 -fno-builtin-printf  -c boot.c -o $(OUTPUT)/boot.o -march=rv$(XLEN)imafdc -lm -lgcc
+	@riscv$(XLEN)-unknown-elf-gcc -w -mcmodel=medany -static -std=gnu99 -fno-builtin-printf  -c boot.c -o $(OUTPUT)/boot.o -march=rv$(XLEN)imafdc -lm -lgcc
 	@riscv$(XLEN)-unknown-elf-gcc -O2 -march=rv$(XLEN)imafdc  -mcmodel=medany -static -std=gnu99 -fno-common -fno-builtin-printf -D__ASSEMBLY__=1 -c crt.S -o $(OUTPUT)/crt.o
 	@riscv$(XLEN)-unknown-elf-gcc -O2 -march=rv$(XLEN)imafdc  -mcmodel=medany -static -std=gnu99 -fno-common -fno-builtin-printf  -c syscalls.c -o $(OUTPUT)/syscalls.shakti
 	@riscv$(XLEN)-unknown-elf-gcc -march=rv$(XLEN)imafdc -T bootlink.ld  $(OUTPUT)/boot.o $(OUTPUT)/syscalls.shakti $(OUTPUT)/crt.o -o $(OUTPUT)/boot.shakti -static -nostartfiles -lm -lgcc
