@@ -19,10 +19,10 @@ set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { uart2_
 
 ##Pmod Header JB
 ##SPI0
-set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { spi0_nss             }]; #IO_L11P_T1_SRCC_15 Sch=jb_p[1]
-set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { spi0_sclk            }]; #IO_L11N_T1_SRCC_15 Sch=jb_n[1]
-set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { spi0_miso            }]; #IO_L12P_T1_MRCC_15 Sch=jb_p[2]
-set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { spi0_mosi            }]; #IO_L12N_T1_MRCC_15 Sch=jb_n[2]
+#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { spi0_nss             }]; #IO_L11P_T1_SRCC_15 Sch=jb_p[1]
+#set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { spi0_sclk            }]; #IO_L11N_T1_SRCC_15 Sch=jb_n[1]
+#set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { spi0_miso            }]; #IO_L12P_T1_MRCC_15 Sch=jb_p[2]
+#set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { spi0_mosi            }]; #IO_L12N_T1_MRCC_15 Sch=jb_n[2]
 ##SPI1
 set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { spi1_nss             }]; #IO_L23P_T3_FOE_B_15 Sch=jb_p[3]
 set_property -dict { PACKAGE_PIN J18   IOSTANDARD LVCMOS33 } [get_ports { spi1_sclk            }]; #IO_L23N_T3_FWE_B_15 Sch=jb_n[3]
@@ -82,6 +82,12 @@ set_property PULLUP true [get_ports {i2c_scl}]
 set_property -dict { PACKAGE_PIN M18   IOSTANDARD LVCMOS33 } [get_ports { i2c_sda }]; #IO_L4N_T0_D05_14 Sch=ck_sda
 set_property PULLUP true [get_ports {i2c_sda}]
 
+## Quad SPI Flash
+set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { spi0_nss }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_cs
+set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { spi0_mosi }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_dq[0]
+set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { spi0_miso }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_dq[1]
+#set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
+#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
 
 # ChipKit Outer Analog Header - as Single-Ended Analog Inputs
 # NOTE: These ports can be used as single-ended analog inputs with voltages from 0-3.3V (ChipKit analog pins A0-A5) or as digital I/O.
