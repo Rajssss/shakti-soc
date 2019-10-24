@@ -83,6 +83,8 @@ package Soc;
       slave_num = `SPICluster_slave_num;
     else if(addr >= `MixedClusterBase && addr <= `MixedClusterEnd)
       slave_num = `MixedCluster_slave_num;
+    else if(addr >= `PLICBase && addr <= `PLICEnd)
+      slave_num = `MixedCluster_slave_num;
     else if(addr >= `BootBase && addr <= `BootEnd)
       slave_num = `Boot_slave_num;
     else

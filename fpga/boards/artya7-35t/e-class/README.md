@@ -49,7 +49,7 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |PWM4     | 'h0003_0400 | 'h0003_04FF|
 |PWM5     | 'h0003_0500 | 'h0003_05FF|
 |I2C      | 'h0004_0000 | 'h0004_00FF|
-|PLIC     | 'h0004_0100 | 'h0004_01FF|
+|PLIC     | 'h0C00_0000 | 'h0C01_001F|
 |GPIO     | 'h0004_0200 | 'h0004_02FF|
 |XADC     | 'h0004_1000 | 'h0004_1400|
 |Clint    | 'h0200_0000 | 'h020B_FFFF|

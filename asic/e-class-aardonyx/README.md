@@ -61,8 +61,6 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |PWM5End      | 'h0003_05FF|
 |I2C0Base     | 'h0004_0000|
 |I2C0End      | 'h0004_00FF|
-|PLICBase     | 'h0004_0100|
-|PLICEnd      | 'h0004_01FF|
 |GPIOBase     | 'h0004_0200| 
 |GPIOEnd      | 'h0004_02FF|
 |BootromBase  | 'h0004_0300|
@@ -74,6 +72,8 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |I2C1End      | 'h0004_05FF|
 |ClintBase    | 'h0200_0000|  
 |ClintEnd     | 'h020B_FFFF|
+|PLICBase     | 'h0C00_0000|
+|PLICEnd      | 'h0C01_001F|
 |QSPI0MemBase | 'h1000_0000|
 |QSPI0MemEnd  | 'h1FFF_FFFF|
 |SDRAMMemBase | 'h8000_0000|

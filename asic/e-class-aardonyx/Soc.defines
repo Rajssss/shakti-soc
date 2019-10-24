@@ -126,14 +126,14 @@
 
 `define I2C0Base    	'h0004_0000
 `define I2C0End     	'h0004_00FF
-`define PLICBase	    'h0004_0100
-`define PLICEnd		    'h0004_01FF
-`define GPIOBase	    'h0004_0200
-`define GPIOEnd		    'h0004_02FF
-`define BootromBase   'h0004_0300
-`define BootromEnd    'h0004_03FF
-`define PinmuxBase    'h0004_0400
-`define PinmuxEnd     'h0004_04FF
-`define I2C1Base    	'h0004_0500
-`define I2C1End     	'h0004_05FF
+`define GPIOBase	    'h0004_0100
+`define GPIOEnd		    'h0004_01FF
+`define BootromBase   'h0004_0200
+`define BootromEnd    'h0004_02FF
+`define PinmuxBase    'h0004_0300
+`define PinmuxEnd     'h0004_03FF
+`define I2C1Base    	'h0004_0400
+`define I2C1End     	'h0004_04FF
 `define PinmuxConfigReg 'h0004_0410
+`define PLICBase	    'h0C00_0000
+`define PLICEnd		    'h0C01_001F

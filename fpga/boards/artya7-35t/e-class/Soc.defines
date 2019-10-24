@@ -101,9 +101,9 @@
 
 `define I2CBase    	'h0004_0000
 `define I2CEnd     	'h0004_00FF
-`define PLICBase	  'h0004_0100
-`define PLICEnd		  'h0004_01FF
-`define GPIOBase	  'h0004_0200
-`define GPIOEnd		  'h0004_02FF
+`define GPIOBase	  'h0004_0100
+`define GPIOEnd		  'h0004_01FF
 `define XADCBase    'h0004_1000
 `define XADCEnd     'h0004_1400
+`define PLICBase	  'h0C00_0000
+`define PLICEnd		  'h0C01_001F
