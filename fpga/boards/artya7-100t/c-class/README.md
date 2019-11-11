@@ -5,9 +5,8 @@ This repo contains the flow for porting an instance of the C-class on the [ARTY 
 ## Features Available
 Please see Soc.defines for the memory-map. Given below are the default configs that have been used.
 * __C-class Config__:
-    1. RV64IMAC
-    2. No Caches
-    3. No Supervisor
+    1. RV64IMAFDC
+    2. 9KiB caches
     4. No Branch Predictor 
 * __UART__: Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/uart/uart_driver.c) for more info on the uart.
 * __DEBUGGER__: Connects with riscv-openocd.
