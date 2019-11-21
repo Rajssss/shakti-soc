@@ -58,7 +58,7 @@ package pinmux_axi4lite;
 	      Mul#(32, e__, data_width)
               );
 
-		Reg#(Bit#(32)) pinmux_muxsel_config <-mkReg(0);
+		Reg#(Bit#(32)) pinmux_muxsel_config <-mkRegA(0);
 		Ifc_pinmux pinmux <-mkpinmux();
 
 		rule rl_program_pinmux_mux_lines;

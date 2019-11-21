@@ -131,9 +131,9 @@ package TbSoc;
     UserInterface#(`paddr,XLEN,16) uart0 <- mkuart_user(5);
     UserInterface#(`paddr,XLEN,16) uart1 <- mkuart_user(5);
     UserInterface#(`paddr,XLEN,16) uart2 <- mkuart_user(5);
-    Reg#(Bool) rg_read_rx<- mkDReg(False);
+    Reg#(Bool) rg_read_rx<- mkDRegA(False);
 
-    Reg#(Bit#(5)) rg_cnt <-mkReg(0);
+    Reg#(Bit#(5)) rg_cnt <-mkRegA(0);
 
     rule display_eol;
 	    let timeval <- $time;
@@ -141,7 +141,7 @@ package TbSoc;
     endrule
 
   `ifdef rtldump
- 	  let dump <- mkReg(InvalidFile) ;
+ 	  let dump <- mkRegA(InvalidFile) ;
     rule open_file_rtldump(rg_cnt<5);
       let generate_dump <- $test$plusargs("rtldump");
       if(generate_dump) begin
@@ -156,7 +156,7 @@ package TbSoc;
     endrule
   `endif
 
- 	  let dump1 <- mkReg(InvalidFile) ;
+ 	  let dump1 <- mkRegA(InvalidFile) ;
     rule open_file_app(rg_cnt<5);
       String dumpFile1 = "app_log" ;
     	File lfh1 <- $fopen( dumpFile1, "w" ) ;
@@ -262,11 +262,11 @@ package TbSoc;
     Reg#(Bit#(1)) rg_initial <- mkRegA(0);
     Reg#(Bit#(1)) rg_end_sim <- mkRegA(0);
     Reg#(int) rg_client_fd <- mkRegA(32'hffffffff);
-    Reg#(Bit#(5)) delayed_actor <- mkReg(0);
-    Reg#(Bit#(5)) delayed_actor2 <- mkReg(0);
-    Reg#(Bit#(5)) delayed_actor3 <- mkReg(0);
-    Reg#(Bit#(5)) delayed_actor4 <- mkReg(0);
-    Reg#(Bit#(5)) delayed_actor5 <- mkReg(0);
+    Reg#(Bit#(5)) delayed_actor <- mkRegA(0);
+    Reg#(Bit#(5)) delayed_actor2 <- mkRegA(0);
+    Reg#(Bit#(5)) delayed_actor3 <- mkRegA(0);
+    Reg#(Bit#(5)) delayed_actor4 <- mkRegA(0);
+    Reg#(Bit#(5)) delayed_actor5 <- mkRegA(0);
     rule rl_initial(rg_initial == 0);
       let x <- init_rbb_jtag(0);
       if(x != 32'hffffffff)begin
