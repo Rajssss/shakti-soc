@@ -116,7 +116,7 @@ BSVINCDIR:=.:%/Prelude:%/Libraries:%/Libraries/BlueNoC:$(CORE):$(M_EXT):$(FABRIC
 VERILATOR_FLAGS += --stats -O3 $(verilate_fast) -LDFLAGS "-static" --x-assign fast --x-initial fast \
 --noassert sim_main.cpp --bbox-sys -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH \
 -Wno-lint -Wno-COMBDLY -Wno-INITIALDLY --autoflush $(coverage) $(trace) --threads $(THREADS) \
--DBSV_RESET_FIFO_HEAD -DBSV_RESET_FIFO_ARRAY
+-DBSV_RESET_FIFO_HEAD -DBSV_RESET_FIFO_ARRAY -DBSV_ASYNC_RESET
 VCS_MACROS =  +define+BSV_RESET_FIFO_HEAD=True +define+BSV_RESET_FIFO_ARRAY=True
 
 ifeq (enable,$(VERBOSITY))

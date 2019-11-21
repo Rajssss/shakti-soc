@@ -93,9 +93,6 @@ else
 ifeq ($(CLEAR),uart1_hello)
 	cd ./peripheral-tests/uart && $(MAKE) clean CLEAR=$(CLEAR)
 else
-ifeq ($(CLEAR),uartmp3)
-	cd ./peripheral-tests/uart && $(MAKE) clean CLEAR=$(CLEAR)
-else
 ifeq ($(CLEAR),lm75)
 	cd ./peripheral-tests/i2c && $(MAKE) clean CLEAR=$(CLEAR)
 else
@@ -111,7 +108,16 @@ else
 ifeq ($(CLEAR),pwmled)
 	cd ./peripheral-tests/pwm && $(MAKE) clean CLEAR=$(CLEAR)
 else
+ifeq ($(CLEAR),pwmmotor)
+	cd ./peripheral-tests/pwm && $(MAKE) clean CLEAR=$(CLEAR)
+else
 ifeq ($(CLEAR),spansion_flash)
+	cd ./peripheral-tests/spi && $(MAKE) clean CLEAR=$(CLEAR)
+else
+ifeq ($(CLEAR),mcp3202_adc)
+	cd ./peripheral-tests/spi && $(MAKE) clean CLEAR=$(CLEAR)
+else
+ifeq ($(CLEAR),issi_sram)
 	cd ./peripheral-tests/spi && $(MAKE) clean CLEAR=$(CLEAR)
 else
 ifeq ($(CLEAR),)
@@ -122,6 +128,8 @@ ifeq ($(CLEAR),)
 	cd ./peripheral-tests/qspi && $(MAKE) clean CLEAR=$(CLEAR)
 	cd ./peripheral-tests/pwm && $(MAKE) clean CLEAR=$(CLEAR)
 else
+endif
+endif
 endif
 endif
 endif

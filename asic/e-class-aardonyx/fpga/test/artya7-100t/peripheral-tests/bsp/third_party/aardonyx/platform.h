@@ -1,25 +1,3 @@
-/*
-    platform.h - header file for platform
-
-    Created by Sathya Narayanan N & Swathi Parthiban
-    Email id: sathya281@gmail.com
-
-    Copyright (C) 2019  IIT Madras. All rights reserved.
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-*/
 #ifndef PLATFORM_H
 #define PLATFORM_H
 
@@ -40,12 +18,8 @@ Refer https://gitlab.com/shaktiproject/cores/shakti-soc/tree/master/asic/e-class
 #define SDRAM_MEM_START 0x80000000
 
 /*!Pulse Width Modulation Start Offsets */
-#define PWM0_START 0x00030000 /*!Pulse Width Modulator 0 */
-#define PWM1_START 0x00030100 /*!Pulse Width Modulator 1 */
-#define PWM2_START 0x00030200 /*!Pulse Width Modulator 2 */
-#define PWM3_START 0x00030300 /*!Pulse Width Modulator 3 */
-#define PWM4_START 0x00030400 /*!Pulse Width Modulator 4 */
-#define PWM5_START 0x00030500 /*!Pulse Width Modulator 5 */
+#define PWM_BASE_ADDRESS 0x00030000 /*PWM Base address*/
+#define PWM_MODULE_OFFSET 0x00000100 /*Offset value to be incremented for each interface*/
 
 /*!Serial Peripheral Interface Offsets */
 #define SPI0_START 0x00020000 /* Serial Peripheral Interface 0 */
@@ -68,7 +42,8 @@ Refer https://gitlab.com/shaktiproject/cores/shakti-soc/tree/master/asic/e-class
 #define QSPI_START      0x10000000      
 
 /*! Programmable Logic Interrupt Interface */
-#define PLIC_START 0x00040100 /*! PLIC Interface Start */
+#define PLIC_START 0x0C000000 /*! PLIC Interface Start */
+#define PLIC_END 0x0C01001F /*! PLIC Interface End */
 
 /*!General Purpose Input / Output */
 #define GPIO_START 0x00040200 //GPIO Start Address */

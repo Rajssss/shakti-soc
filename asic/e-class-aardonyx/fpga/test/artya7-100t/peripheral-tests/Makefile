@@ -18,9 +18,6 @@ else
 ifeq ($(PROGRAM),uart1_hello)
 	cd uart/uart1_hello && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
 else
-ifeq ($(PROGRAM),uartmp3)
-	cd uart/uartmp3 && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
-else
 ifeq ($(PROGRAM),lm75)
 	cd i2c/lm75 && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
 else
@@ -36,8 +33,19 @@ else
 ifeq ($(PROGRAM),pwmled)
 	cd pwm/pwmled && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
 else
+ifeq ($(PROGRAM),pwmmotor)
+	cd pwm/pwmmotor && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
+else
 ifeq ($(PROGRAM),spansion_flash)
 	cd spi/spansion_flash && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
+else
+ifeq ($(PROGRAM),mcp3202_adc)
+	cd spi/mcp3202_adc && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
+else
+ifeq ($(PROGRAM),issi_sram)
+	cd spi/issi_sram && $(MAKE) $(PROGRAM).riscv TARGET=$(TARGET) DEBUG=$(DEBUG)
+endif
+endif
 endif
 endif
 endif
