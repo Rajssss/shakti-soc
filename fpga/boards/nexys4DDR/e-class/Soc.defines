@@ -1,0 +1,24 @@
+`define Num_Masters 3
+`define Debug_master_num 0
+`define Mem_master_num 1
+`define Fetch_master_num 2
+
+`define Num_Slaves 6
+`define Memory_slave_num 0
+`define DDR_Memory_slave_num 1
+`define Uart_slave_num 2
+`define Clint_slave_num 3
+`define Debug_slave_num 4
+`define Err_slave_num 5
+
+`define MemoryBase	'h8000_0000
+`define MemoryEnd	'h8007_FFFF
+`define DDRMemoryBase  	'h9000_0000
+`define DDRMemoryEnd   	'h97FF_FFFF
+`define UartBase    	'h0001_1300
+`define UartEnd     	'h0001_1340
+`define ClintBase   	'h0200_0000
+`define ClintEnd    	'h020B_FFFF
+`define DebugBase   	'h0000_0010
+`define DebugEnd    	'h0000_001F
+

@@ -24,7 +24,7 @@ create_project -force $core_project -dir $core_project_dir
 set project_obj [get_projects $core_project]
 set_property "default_lib" "xil_defaultlib" $project_obj
 set_property "simulator_language" "Mixed" $project_obj
-set_property board_part digilentinc.com:arty-a7-100:part0:1.0 [current_project]
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 
 # Create 'sources_1' fileset (if not found)
 if {[string equal [get_filesets -quiet sources_1] ""]} {
@@ -57,7 +57,7 @@ if {[string first "M" $isa] != -1} {
 }
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
-import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
+import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr2/mig_ddr2.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {
@@ -71,7 +71,7 @@ if {[string equal [get_runs -quiet core_synth_1] ""]} {
 #set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs core_synth_1]
 
 ## Add the verilog define argument to the string
-set verilog_define_args " -verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY -verilog_define BSV_ASYNC_RESET"
+set verilog_define_args " -verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY -verilog_define BSV_ASYNC_RESET "
 if { $jtag_type eq "JTAG_BSCAN2E" } {
 	append verilog_define_args "-verilog_define JTAG_BSCAN2E"
 }
