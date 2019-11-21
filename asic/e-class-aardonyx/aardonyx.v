@@ -571,7 +571,7 @@ module aardonyx(
   always@(boot_mode) begin
     case (boot_mode)
       2'b00: resetpc    =  32'h00000010;
-      default: resetpc  =  32'h00040300;
+      default: resetpc  =  32'h00040200;
     endcase
   end
 

@@ -39,6 +39,7 @@ package bootrom;
   import device_common::*;
 
   `include "Logger.bsv"
+  `include "bootrom.bsvi"
   export mkbootrom_axi4lite;
   export Ifc_bootrom_axi4lite (..);
 
@@ -65,13 +66,6 @@ package bootrom;
   	// we create 2 32-bit BRAMs since the xilinx tool is easily able to map them to BRAM32BE cells
   	// which makes it easy to use data2mem for updating the bit file.
 
-    // in case data_width is 32-bits, dmemMSB width becomes 0 and only dmemLSB is functional
-    /*doc:reg: */
-    Reg#(Bit#(data_width)) rg_boot_arr [size] ;
-    for (Integer i = 0; i< size; i = i + 1) begin
-      rg_boot_arr[i] <- mkReg(0);
-    end
-
     // A write request to bootrom has no significance.
     method Action write_request (Tuple3#(Bit#(addr_width), Bit#(data_width),  Bit#(TDiv#(data_width, 8))) req);
     	`logLevel( bootrom, 0, $format("BootROM: Illegal Write operation on BootROM"))
@@ -90,7 +84,7 @@ package bootrom;
                                                                                   byte_offset+1];
       `logLevel( bootrom, 0, $format("BootROM: Recieved Read Request for Address: %h \
 Index Address: %h b: %d", addr, index_address, byte_offset))
-      return tuple2(False, rg_boot_arr[index_address]);
+      return tuple2(False, fn_boot_ROM(index_address));
   	endmethod
   endmodule
 
