@@ -1,121 +1,43 @@
-//PWM Registers
-#define PERIOD_REGISTER 0x0	//16 bits (short)
-#define DUTY_REGISTER 0x4	//16 bits (short)
-#define CONTROL_REGISTER 0x8	//8 bits (char)
-#define CLOCK_REGISTER 0xc	//16 bits (short)
-//Control Register Individual Bits
-#define CLOCK_SELECTOR 0x1
-#define PWM_ENABLE 0x2
-#define PWM_START 0x4
-#define CONTINUOUS_ONCE 0x8
-#define PWM_OUTPUT_ENABLE 0x10
-#define INTERRUPT 0x20
-#define READ_ONLY 0x40
-#define RESET_COUNTER 0x80
+#include<stdbool.h>
 
-#define PWM_MODULE_OFFSET 0x100 /*Offset value to be incremented for each interface*/
+// PWM Registers 
+#define PERIOD_REGISTER     0x00000000	//16 bits (short)
+#define DUTY_REGISTER       0x00000004	//16 bits (short)
+#define CONTROL_REGISTER    0x00000008	//8 bits (char)
+#define CLOCK_REGISTER      0x0000000c	//16 bits (short)
 
-/** @fn void pwm_start(int module_number,int mode)
- * @brief Function to start a pwm module with a specific mode
- * 
- * @details This function will start a pwm module with a specific mode
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *            mode - mode to be selected
- *                  0-PWM Mode
- *                  1-Timer Mode run once
- *                  2-Timer Mode run contin
- * @param[Out] returns nothing.
- */
-//void pwm_start(int module_number,int mode);
+// Control Register Individual Bits 
+#define CLOCK_SELECTOR      0x00000001
+#define PWM_ENABLE          0x00000002
+#define PWM_START           0x00000004
+#define CONTINUOUS_ONCE     0x00000008
+#define PWM_OUTPUT_ENABLE   0x00000010
+#define INTERRUPT           0x00000020
+#define READ_ONLY           0x00000040
+#define RESET_COUNTER       0x00000080
 
-/** @fn void pwm_clear(int module_number)
- * @brief Function to clear all registers in a specific pwm module
- *
- * @details This function will be called to clear all registers in a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number- specifies the pwm module to be selected
- * @param[Out] returns nothing.
- */
-//void pwm_clear(int module_number);
+// PWM Modules 
+#define PWM_0 0
+#define PWM_1 1
+#define PWM_2 2
+#define PWM_3 3
+#define PWM_4 4
+#define PWM_5 5
 
-/** @fn void pwm_init()
- * @brief Function to initialize all pwm modules
- * 
- * @details This function will be called to initialize all pwm modules
- *
- * @warning 
- *
- * @param[in] takes no input
- * @param[Out] returns nothing.
- */
-//void pwm_init()
+//function prototype
+void pwm_configure(int module_number, int clock_divisor, int period, int duty, bool external_clock);
+void pwm_start(int module_number, int mode);
+void pwm_clear_registers(int module_number);
+void pwm_init();
+void pwm_set_external_clock(int module_number, bool value);
+void pwm_set_clock(int module_number, int clock_divisor);
+void pwm_set_duty_cycle(int module_number, int duty);
+void pwm_set_periodic_cycle(int module_number, int period);
+void pwm_stop(int module_number);
+void show_register_values(int module_number);
+int set_pwm_period_register(int module_number, int value);
+int set_pwm_duty_register(int module_number, int value);
+int set_pwm_control_register(int module_number, int value);
+int set_pwm_clock_register(int module_number, int value);
+int configure_control_register_mode(int mode);
 
-/** @fn void pwm_set_clock(int module_number,int clock_divisor)
- * @brief Function to set the clock divisor value of a specific pwm module
- * 
- * @details This function will set the clock divisor value of a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *            clock_divisor-  value of clock divisor to be used to divide base clock speed of 50MHz.
- * @param[Out] returns nothing.
- */
-//void pwm_set_clock(int module_number,int clock_divisor);
-
-/** @fn void pwm_set_duty(int module_number,int duty)
- * @brief Function to set the duty cycle value of a specific pwm module
- * 
- * @details This function will set the duty cycles value of a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *            clock_divisor-  value of duty cycles to be used to decide how many period cycles the pwm signal is set to 1.
- * @param[Out] returns nothing.
- */
-//void pwm_set_duty(int module_number,int duty);
-
-/** @fn void pwm_set_period(int module_number,int period)
- * @brief Function to set the period cycles value of a specific pwm module
- * 
- * @details This function will set the period cycles value of a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *            clock_divisor-  value of period cycles which is used to further divide the frequency into fixed period cycles.
- * @param[Out] returns nothing.
- */
-//void pwm_set_period(int module_number,int period);
-
-/** @fn void pwm_stop(int module_number)
- * @brief Function to stop a specific pwm module
- * 
- * @details This function will stop a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *
- * @param[Out] returns nothing.
- */
-//void pwm_stop(int module_number);
-
-/** @fn show_register_values(int module_number)
- * @brief Function to print the values of all the registers of a specific pwm module
- * 
- * @details This function will print the values of all the registers of a specific pwm module
- *
- * @warning 
- *
- * @param[in] module_number-  the pwm module to be selected
- *            
- * @param[Out] returns nothing.
- */
-//void show_register_values(int module_number);

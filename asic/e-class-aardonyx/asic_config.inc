@@ -31,7 +31,7 @@ TRIGGERS=2
 COUNTERS=2
 
 # pmp
-PMP=disable
+PMP=enable
 PMPSIZE=4
 
 # For Vivado Synthesis
