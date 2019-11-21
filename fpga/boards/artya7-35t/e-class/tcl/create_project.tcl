@@ -74,7 +74,7 @@ if {[string equal [get_runs -quiet core_synth_1] ""]} {
 ## Add the verilog define argument to the string
 set verilog_define_args " -verilog_define BSV_RESET_FIFO_HEAD -verilog_define BSV_RESET_FIFO_ARRAY -verilog_define BSV_ASYNC_RESET"
 if { $jtag_type eq "JTAG_BSCAN2E" } {
-	append verilog_define_args "-verilog_define JTAG_BSCAN2E"
+	append verilog_define_args " -verilog_define JTAG_BSCAN2E"
 }
 
 set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value $verilog_define_args -objects [get_runs core_synth_1]
