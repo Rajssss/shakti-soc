@@ -28,7 +28,7 @@ Details:
 
 --------------------------------------------------------------------------------------------------
 */
-package TbSoc;
+package bsvmkaardonyx_wrapper_tb;
   import Soc:: *;
   import Clocks::*;
   import GetPut:: *;
@@ -366,4 +366,4 @@ package TbSoc;
     endrule
   `endif
   endmodule
-endpackage: TbSoc
+endpackage: 
