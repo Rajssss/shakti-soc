@@ -219,7 +219,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
       .ddr3_reset_n                   (ddr3_reset_n),
       .init_calib_complete            (init_calib_complete),
 
-      .ddr3_cs_n                      (ddr3_cs_n),
+//      .ddr3_cs_n                      (ddr3_cs_n),
       .ddr3_dm                        (ddr3_dm),
       .ddr3_odt                       (ddr3_odt),
       .ui_clk                         (clk),
