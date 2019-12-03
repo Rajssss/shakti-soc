@@ -21,10 +21,10 @@ set_property -dict [list \
                         CONFIG.RESET_TYPE {ACTIVE_HIGH} \
                         CONFIG.RESET_PORT {reset} \
                         CONFIG.MMCM_DIVCLK_DIVIDE {1} \
-                        CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
+                        CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} \
                         CONFIG.MMCM_COMPENSATION {ZHOLD} \
-                        CONFIG.MMCM_CLKOUT0_DIVIDE_F {48.000} \
-                        CONFIG.PRIM_IN_FREQ {100} \
+                        CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
+                        CONFIG.PRIM_IN_FREQ {200} \
                         CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
                         CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} \
                         CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} \
@@ -37,6 +37,4 @@ create_ip_run [get_ips clk_divider]
 #wait_on_run clk_divider_synth_1
 #exit
 #
-#CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50}
-#CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER
-#{151.636}] [get_ips clk_wiz_0]
+

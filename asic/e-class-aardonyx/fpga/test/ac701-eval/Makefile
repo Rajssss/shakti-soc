@@ -22,7 +22,7 @@ Vivado_loc=$(shell which vivado)
 
 
 # ------------------------------------- Makefile TARGETS ----------------------------------------- #
-default: ip_build ac701_build generate_mcs program_mcs_spansion
+default: ip_build ac701_build generate_mcs program
 
 .PHONY: help
 help: ## This help dialog.
@@ -57,7 +57,7 @@ program_mcs_spansion: ## Program the FPGA Configuration Memory in order to use t
 	-f shakti-arty.cfg\" to start a gdb server at localhost:3333 "
 
 clean-fpga: ## delete fpga_prject and journal/log files as well
-	rm -rf fpga_project *.jou *.log
+	sudo rm -rf fpga_project *.jou *.log
 
 restore: ## clean bsv-build, verilog and fpga folders
 restore: clean-fpga
