@@ -64,7 +64,5 @@ set_property PULLUP true [get_ports {i2c_scl}]
 set_property -dict { PACKAGE_PIN AA6   IOSTANDARD LVCMOS33 } [get_ports { i2c_sda }]; #IO_L18N_T2_34 Sch=jc_n[1]
 set_property PULLUP true [get_ports {i2c_sda}]
 
-set_property -dict { PACKAGE_PIN AA8   IOSTANDARD LVCMOS33 } [get_ports { gpio[21 }]; #IO_L22P_T3_34 Sch=jc_p[2]
+set_property -dict { PACKAGE_PIN AA8   IOSTANDARD LVCMOS33 } [get_ports { gpio[21] }]; #IO_L22P_T3_34 Sch=jc_p[2]
 set_property -dict { PACKAGE_PIN AB8   IOSTANDARD LVCMOS33 } [get_ports { gpio[23] }]; #IO_L22N_T3_34 Sch=jc_n[2]
-
-

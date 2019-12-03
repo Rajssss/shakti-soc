@@ -41,7 +41,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   output        ddr3_ck_p,
   output        ddr3_ck_n,
   output        ddr3_cke,
-  output        ddr3_cs_n,
+  //output        ddr3_cs_n,
   output [1:0]  ddr3_dm,
   output        ddr3_odt,
   output        init_calib_complete,
