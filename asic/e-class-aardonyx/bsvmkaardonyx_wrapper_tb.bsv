@@ -22,46 +22,45 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISI
 OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------------------------
 
-Author: Neel Gala
-Email id: neelgala@gmail.com
+Author: Deepa N. Sarma
+Email id: deepans.88@gmail.com
 Details:
 
 --------------------------------------------------------------------------------------------------
 */
 package bsvmkaardonyx_wrapper_tb;
-  import Soc:: *;
+  
+  import Soc::*;
   import Clocks::*;
-  import GetPut:: *;
-	import Semi_FIFOF:: *;
-	import AXI4_Types:: *;
-	import AXI4_Fabric:: *;
+  import GetPut::*;
+	import Semi_FIFOF::*;
+	import AXI4_Types::*;
+	import AXI4_Fabric::*;
   import uart::*;
 	import common_types::*;
   `include "common_params.bsv"
   `include "Logger.bsv"
   `include "Soc.defines"
   import device_common::*;
-  import DReg :: *;
-  import bram :: *;
-  import Connectable :: *;
-  import bootrom :: *;
-  import i2c :: * ;
-  import pinmux :: * ;
-  import qspi :: * ;
-  import spi :: * ;
-
+  import DReg ::*;
+  import bram ::*;
+  import Connectable ::*;
+  import bootrom ::*;
+  import i2c ::* ;
+  import pinmux ::* ;
+  import qspi ::* ;
+  import spi ::* ;
   import bsvmkissiwrapper :: *;
   import sdram_axi4_lite :: * ;
-  import bsvmkCypressFlashWrapper::*;
-  import bsvmkissiflashwrapper::*;
   import TriState :: * ;
-
+  import bsvmkaardonyx_wrapper ::*;
 `ifdef openocd
   import "BDPI" function ActionValue #(int) init_rbb_jtag(Bit#(1) dummy);
   import "BDPI" function ActionValue #(Bit #(8))get_frame(int client_fd);
   import "BDPI" function Action send_tdo(Bit #(1) tdo , int client_fd);
 `endif
-  module mkTbSoc(Empty);
+  
+  module mktb_wrapper(Empty);
 
     MakeClockIfc#(Bit#(1)) tck_clk <-mkUngatedClock(1);
     MakeResetIfc trst <- mkReset(0,False,tck_clk.new_clk);
@@ -79,66 +78,68 @@ package bsvmkaardonyx_wrapper_tb;
  //   let bootrom <- mkbootrom;
 		Ifc_issi sdram_bfm <- mkissiwrapper();
 		
-    // ------------------- SDRAM connections ----------------------------------//
+    // ------------------- sdram connections ----------------------------------//
 		
 //    TriState#(Bit#(32)) tri_sio0 <- mkTriState(soc.sdram_io.osdr_den_n[0]==0,
 //  
 //    soc.sdram_io.osdr_dout);
     rule data_connect;
 
-     let data_io={soc_top.SDRAM_D31,soc_top.SDRAM_30,soc_top.SDRAM_29,soc_top.SDRAM_28,soc_top.SDRAM_27,
-     ,soc_top.SDRAM_26,soc_top.SDRAM_25,soc_top.SDRAM_24,soc_top.SDRAM_23,soc_top.SDRAM_22,soc_top.SDRAM_21,
-     ,soc_top.SDRAM_20,soc_top.SDRAM_19,soc_top.SDRAM_18,soc_top.SDRAM_17,soc_top.SDRAM_16,soc_top.SDRAM_15,
-     ,soc_top.SDRAM_14,soc_top.SDRAM_13,soc_top.SDRAM_12,soc_top.SDRAM_11,soc_top.SDRAM_10,soc_top.SDRAM_9,
-     ,soc_top.SDRAM_8,soc_top.SDRAM_7,soc_top.SDRAM_6,soc_top.SDRAM_5,soc_top.SDRAM_4,soc_top.SDRAM_3,
-     ,soc_top.SDRAM_2,soc_top.SDRAM_1,soc_top.SDRAM_30};
+
+/*     let data_io={soc_top.sdram_d31,soc_top.sdram_30,soc_top.sdram_29,soc_top.sdram_28,soc_top.sdram_27,
+     soc_top.sdram_26,soc_top.sdram_25,soc_top.sdram_24,soc_top.sdram_23,soc_top.sdram_22,soc_top.sdram_21,
+     soc_top.sdram_20,soc_top.sdram_19,soc_top.sdram_18,soc_top.sdram_17,soc_top.sdram_16,soc_top.sdram_15,
+     soc_top.sdram_14,soc_top.sdram_13,soc_top.sdram_12,soc_top.sdram_11,soc_top.sdram_10,soc_top.sdram_9,
+     soc_top.sdram_8,soc_top.sdram_7,soc_top.sdram_6,soc_top.sdram_5,soc_top.sdram_4,soc_top.sdram_3,
+     soc_top.sdram_2,soc_top.sdram_1,soc_top.sdram_30};
     endrule
-    mkConnection(data_io,sdram_bfm.dq);
+*/
+//    mkConnection(soc_top.sdram_d31,sdram_bfm.dq[0]);
 //    rule rl_connect_input_datapins;                                                             
 //      soc.sdram_io.ipad_sdr_din(tri_sio0._read);                                             
-//    endrule   
+    endrule   
 
 
     rule rl_iAddr_connection;                                                                   
       //let in = soc.sdram_io.osdr_addr();
-      Bit#(12) in = {soc_top.oSDRAM_A12,soc_top.oSDRAM_A11,soc_top.oSDRAM_A10,soc_top.oSDRAM_A9,
-      soc_top.oSDRAM_A8,soc_top.oSDRAM_A7,soc_top.oSDRAM_A6,soc_top.oSDRAM_A5,soc_top.oSDRAM_A4,
-      soc_top.oSDRAM_A3,soc_top.oSDRAM_A2,soc_top.oSDRAM_A1,soc_top.oSDRAM_A0}
+      Bit#(13) in = {soc_top.osdram_a12,soc_top.osdram_a11,soc_top.osdram_a10,soc_top.osdram_a9,
+      soc_top.osdram_a8,soc_top.osdram_a7,soc_top.osdram_a6,soc_top.osdram_a5,soc_top.osdram_a4,
+      soc_top.osdram_a3,soc_top.osdram_a2,soc_top.osdram_a1,soc_top.osdram_a0};
       sdram_bfm.iaddr(truncate(in));                                                          
     endrule                                                                                       
                                                                                                   
     rule rl_iBa_connection;                                                                       
-      let in = {soc_top.oSDRAM_BA1,soc_top.oSDRAM_BA0};                                                         
+      let in = {soc_top.osdram_ba1,soc_top.osdram_ba0};                                                         
       sdram_bfm.iba(in);                                                                     
     endrule                                                                                       
                                                                                                   
     rule rl_iCke_connection;                                                                      
-      let in = soc_top.oSDRAM_CKE;                                                        
+      let in = soc_top.osdram_cke;                                                        
       sdram_bfm.icke(pack(in));                                                              
     endrule                                                                                       
                                                                                                   
     rule rl_iCs_n_connection;                                                                     
-      let in = soc_top.oSDRAM_CS ;                                                       
+      let in = soc_top.osdram_cs ;                                                       
       sdram_bfm.ics_n(pack(in));                                                             
     endrule                                                                                       
                                                                                                   
     rule rl_iRas_n_connection;                                                                    
-      let in = soc_top.oSDRAM_RAS ;                                                      
+      let in = soc_top.osdram_ras ;                                                      
       sdram_bfm.iras_n(pack(in));                                                            
     endrule                                                                                       
                                                                                                   
     rule rl_iCas_n_connection;                                                                    
-      let in = soc_top.oSDRAM_CAS;                                                      
+      let in = soc_top.osdram_cas;                                                      
       sdram_bfm.icas_n(pack(in));                                                            
     endrule                                                                                       
                                                                                                   
     rule rl_iWe_n_connection;                                                                     
-      let in = soc_top.oSDRAM_WE();                                                       
+      let in = soc_top.osdram_we();                                                       
       sdram_bfm.iwe_n(pack(in));                                                             
     endrule                                                                                       
                                                                                                   
     rule rl_iDqm_connection;                                                                      
-      let in = {soc_top.oSDRAM_DQ3,soc_top.oSDRAM_DQ2,soc_top.oSDRAM_DQ1,soc_top.oSDRAM_DQ0};                                                        
+      let in = {soc_top.osdram_dq3,soc_top.osdram_dq2,soc_top.osdram_dq1,soc_top.osdram_dq0};                                                        
       sdram_bfm.idqm(extend(in));                                                            
     endrule
     // ------------------------------------------------------------------------- //
@@ -185,67 +186,12 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
 
     rule connect_uart0_out;
-      soc_top.iUART0_TX(uart0.io.sout);
+      soc_top.iuart0_rx(uart0.io.sout);
     endrule
     rule connect_uart0_in;
-      uart0.io.sin(soc_top.iUART0_RX);
+      uart0.io.sin(soc_top.ouart0_tx);
     endrule
    
-	//===========================QSPI connection=========================//
-	
-	Ifc_issiflashwrapper flash1 <- mkissiflashwrapper(clocked_by def_clk, reset_by def_rst);
-
-    TriState#(Bit#(1)) qspi0tri_sio0 <- mkTriState(soc.qspi_io.io_enable[0]==1, soc.qspi_io.io_o[0],clocked_by def_clk, reset_by def_rst);
-    TriState#(Bit#(1)) qspi0tri_sio1 <- mkTriState(soc.qspi_io.io_enable[1]==1, soc.qspi_io.io_o[1],clocked_by def_clk, reset_by def_rst);
-	TriState#(Bit#(1)) qspi0tri_sio2 <- mkTriState(soc.qspi_io.io_enable[2]==1, soc.qspi_io.io_o[2],clocked_by def_clk, reset_by def_rst);
-	TriState#(Bit#(1)) qspi0tri_sio3 <- mkTriState(soc.qspi_io.io_enable[3]==1, soc.qspi_io.io_o[3],clocked_by def_clk, reset_by def_rst);
-
-	mkConnection(qspi0tri_sio0.io,flash1.si);
-    mkConnection(qspi0tri_sio1.io,flash1.so);
-    mkConnection(qspi0tri_sio2.io,flash1.wp);
-    mkConnection(qspi0tri_sio3.io,flash1.sio3);
-
-    rule connect_flash1_ports1;
-        flash1.ics(soc.qspi_io.ncs_o);
-        flash1.isclk(soc.qspi_io.clk_o);
-    endrule
-
-    rule connect_flash1_input_ports;
-        soc.qspi_io.io_i({qspi0tri_sio3._read,qspi0tri_sio2._read,qspi0tri_sio1._read,qspi0tri_sio0._read});
-    endrule
-
-	//====================================================================//
-
-
-	//========================SPI Connection============================//
-		
-	Ifc_FlashWrapper flash2 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
-	Ifc_FlashWrapper flash3 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
-	TriState#(Bit#(1)) spi0_mosi <- mkTriState(True,soc.spi0_io.mosi, clocked_by def_clk, reset_by def_rst);
-	TriState#(Bit#(1)) spi0_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
-
-	TriState#(Bit#(1)) spi1_mosi <- mkTriState(True,soc.spi1_io.mosi, clocked_by def_clk, reset_by def_rst);
-	TriState#(Bit#(1)) spi1_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
-
-	mkConnection(spi0_mosi.io,flash2.si);
-	mkConnection(spi0_miso.io,flash2.so);
-
-	mkConnection(spi1_mosi.io,flash3.si);
-	mkConnection(spi1_miso.io,flash3.so);
-	
-	rule rl_connect_flash0_ports1;
-		flash2.iCSNeg(soc.spi0_io.nss);
-		flash2.iSCK(soc.spi0_io.sclk);
-		flash3.iCSNeg(soc.spi1_io.nss);
-		flash3.iSCK(soc.spi1_io.sclk);
-	endrule
-
-	rule rl_connect_io;
-		soc.spi0_io.miso(spi0_miso._read);
-		soc.spi1_io.miso(spi1_miso._read);
-	endrule
-	
-	//=================================================================//
 //    // -------- when uart1 is enabled through pinmux ----------//
 //    rule connect_uart1_out(soc.iocell_io.io7_cell_outen==1);
 //      soc.iocell_io.io8_cell_in(uart1.io.sout);
@@ -319,8 +265,8 @@ package bsvmkaardonyx_wrapper_tb;
     Wire#(Bit#(1)) wr_tdi <-mkWire();
     Wire#(Bit#(1)) wr_tms <-mkWire();
     rule connect_jtag_io;
-      soc_top.iTDI (wr_tdi);
-      soc_top.iTMS (wr_tms);
+      soc_top.itdi (wr_tdi);
+      soc_top.itms (wr_tms);
     endrule
   `endif
   `ifdef openocd
@@ -328,7 +274,7 @@ package bsvmkaardonyx_wrapper_tb;
     Wire#(Bit#(1)) wr_tck <-mkWire();
     Wire#(Bit#(1)) wr_trst <-mkWire();
     rule rl_wr_tdo;
-      wr_tdo <= soc_top.iTDO();
+      wr_tdo <= soc_top.itdo();
     endrule
     Reg#(Bit#(1)) rg_initial <- mkRegA(0);
     Reg#(Bit#(1)) rg_end_sim <- mkRegA(0);
@@ -366,4 +312,4 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
   `endif
   endmodule
-endpackage: 
+endpackage

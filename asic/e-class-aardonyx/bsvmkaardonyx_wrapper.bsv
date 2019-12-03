@@ -3,110 +3,110 @@
 // Created by: shakti6
 // Bluespec version: 2019.05.beta2 2019-05-24 a88bf40db
 
-
+(*always_enabled,always_ready*)
 interface Ifc_aardonyx_wrapper;
 
   interface Inout#(Bit#(1)) gpio_0;
-	interface Inout#(Bit(#1)) gpio_1;
-	interface Inout#(Bit(#1)) gpio_2;
-	interface Inout#(Bit(#1)) gpio_3;
-	interface Inout#(Bit(#1)) gpio_4;
-	interface Inout#(Bit(#1)) gpio_5;
-	interface Inout#(Bit(#1)) gpio_6;
-	interface Inout#(Bit(#1)) gpio_7;
-	interface Inout#(Bit(#1)) gpio_8;
-	interface Inout#(Bit(#1)) gpio_9;
-	interface Inout#(Bit(#1)) gpio_10;
-	interface Inout#(Bit(#1)) gpio_11;
-	interface Inout#(Bit(#1)) gpio_12;
-	interface Inout#(Bit(#1)) gpio_13;
-	interface Inout#(Bit(#1)) gpio_14;
-	interface Inout#(Bit(#1)) gpio_15;
-	interface Inout#(Bit(#1)) i2c1_scl;
-	interface Inout#(Bit(#1)) i2c1_sda;
-	interface Inout#(Bit(#1)) qspi0_io0;
-	interface Inout#(Bit(#1)) qspi0_io1;
-	interface Inout#(Bit(#1)) qspi0_io2;
-	interface Inout#(Bit(#1)) qspi0_io3;
-	interface Inout#(Bit(#1)) i2c0_sda;
-	interface Inout#(Bit(#1)) i2c0_scl;
-	interface Inout#(Bit(#1)) sdram_d0;
-	interface Inout#(Bit(#1)) sdram_d1;
-	interface Inout#(Bit(#1)) sdram_d2;
-	interface Inout#(Bit(#1)) sdram_d3;
-	interface Inout#(Bit(#1)) sdram_d4;
-	interface Inout#(Bit(#1)) sdram_d5;
-	interface Inout#(Bit(#1)) sdram_d6;
-	interface Inout#(Bit(#1)) sdram_d7;
-	interface Inout#(Bit(#1)) sdram_d8;
-	interface Inout#(Bit(#1)) sdram_d9;
-	interface Inout#(Bit(#1)) sdram_d10;
-	interface Inout#(Bit(#1)) sdram_d11;
-	interface Inout#(Bit(#1)) sdram_d12;
-	interface Inout#(Bit(#1)) sdram_d13;
-	interface Inout#(Bit(#1)) sdram_d14;
-	interface Inout#(Bit(#1)) sdram_d15;
-	interface Inout#(Bit(#1)) sdram_d16;
-	interface Inout#(Bit(#1)) sdram_d17;
-	interface Inout#(Bit(#1)) sdram_d18;
-	interface Inout#(Bit(#1)) sdram_d19;
-	interface Inout#(Bit(#1)) sdram_d20;
-	interface Inout#(Bit(#1)) sdram_d21;
-	interface Inout#(Bit(#1)) sdram_d22;
-	interface Inout#(Bit(#1)) sdram_d23;
-	interface Inout#(Bit(#1)) sdram_d24;
-	interface Inout#(Bit(#1)) sdram_d25;
-	interface Inout#(Bit(#1)) sdram_d26;
-	interface Inout#(Bit(#1)) sdram_d27;
-	interface Inout#(Bit(#1)) sdram_d28;
-	interface Inout#(Bit(#1)) sdram_d29;
-	interface Inout#(Bit(#1)) sdram_d30;
-	interface Inout#(Bit(#1)) sdram_d31;
-	method Action ispi0_miso ();
-	method Action iuart0_rx ();
-	method Action itms ();
-	method Action itrst ();
-	method Action itck ();
-	method Action itdi ();
-	method Action ispi1_miso ();
-	method Action iboot_mode0 ();
-	method Action iboot_mode1 ();
-	method Action itest_mode ();
-	method Bool ospi0_ncs ();
-	method Bool ospi0_clk ();
-	method Bool ospi0_mosi ();
-	method Bool oqspi0_clk ();
-	method Bool oqspi0_ncs ();
-	method Bool ouart0_tx ();
-	method Bool otdo ();
-	method Bool osdram_a0 ();
-	method Bool osdram_a1 ();
-	method Bool osdram_a2 ();
-	method Bool osdram_a3 ();
-	method Bool osdram_a4 ();
-	method Bool osdram_a5 ();
-	method Bool osdram_a6 ();
-	method Bool osdram_a7 ();
-	method Bool osdram_a8 ();
-	method Bool osdram_a9 ();
-	method Bool osdram_a10 ();
-	method Bool osdram_a11 ();
-	method Bool osdram_a12 ();
-	method Bool osdram_dq0 ();
-	method Bool osdram_dq1 ();
-	method Bool osdram_dq2 ();
-	method Bool osdram_dq3 ();
-	method Bool osdram_ba0 ();
-	method Bool osdram_ba1 ();
-	method Bool osdram_cs ();
-	method Bool osdram_ras ();
-	method Bool osdram_cas ();
-	method Bool osdram_we ();
-	method Bool osdram_clk ();
-	method Bool osdram_cke ();
-	method Bool ospi1_ncs ();
-	method Bool ospi1_clk ();
-	method Bool ospi1_mosi ();
+	interface Inout#(Bit#(1)) gpio_1;
+	interface Inout#(Bit#(1)) gpio_2;
+	interface Inout#(Bit#(1)) gpio_3;
+	interface Inout#(Bit#(1)) gpio_4;
+	interface Inout#(Bit#(1)) gpio_5;
+	interface Inout#(Bit#(1)) gpio_6;
+	interface Inout#(Bit#(1)) gpio_7;
+	interface Inout#(Bit#(1)) gpio_8;
+	interface Inout#(Bit#(1)) gpio_9;
+	interface Inout#(Bit#(1)) gpio_10;
+	interface Inout#(Bit#(1)) gpio_11;
+	interface Inout#(Bit#(1)) gpio_12;
+	interface Inout#(Bit#(1)) gpio_13;
+	interface Inout#(Bit#(1)) gpio_14;
+	interface Inout#(Bit#(1)) gpio_15;
+	interface Inout#(Bit#(1)) i2c1_scl;
+	interface Inout#(Bit#(1)) i2c1_sda;
+	interface Inout#(Bit#(1)) qspi0_io0;
+	interface Inout#(Bit#(1)) qspi0_io1;
+	interface Inout#(Bit#(1)) qspi0_io2;
+	interface Inout#(Bit#(1)) qspi0_io3;
+	interface Inout#(Bit#(1)) i2c0_sda;
+	interface Inout#(Bit#(1)) i2c0_scl;
+	interface Inout#(Bit#(1)) sdram_d0;
+	interface Inout#(Bit#(1)) sdram_d1;
+	interface Inout#(Bit#(1)) sdram_d2;
+	interface Inout#(Bit#(1)) sdram_d3;
+	interface Inout#(Bit#(1)) sdram_d4;
+	interface Inout#(Bit#(1)) sdram_d5;
+	interface Inout#(Bit#(1)) sdram_d6;
+	interface Inout#(Bit#(1)) sdram_d7;
+	interface Inout#(Bit#(1)) sdram_d8;
+	interface Inout#(Bit#(1)) sdram_d9;
+	interface Inout#(Bit#(1)) sdram_d10;
+	interface Inout#(Bit#(1)) sdram_d11;
+	interface Inout#(Bit#(1)) sdram_d12;
+	interface Inout#(Bit#(1)) sdram_d13;
+	interface Inout#(Bit#(1)) sdram_d14;
+	interface Inout#(Bit#(1)) sdram_d15;
+	interface Inout#(Bit#(1)) sdram_d16;
+	interface Inout#(Bit#(1)) sdram_d17;
+	interface Inout#(Bit#(1)) sdram_d18;
+	interface Inout#(Bit#(1)) sdram_d19;
+	interface Inout#(Bit#(1)) sdram_d20;
+	interface Inout#(Bit#(1)) sdram_d21;
+	interface Inout#(Bit#(1)) sdram_d22;
+	interface Inout#(Bit#(1)) sdram_d23;
+	interface Inout#(Bit#(1)) sdram_d24;
+	interface Inout#(Bit#(1)) sdram_d25;
+	interface Inout#(Bit#(1)) sdram_d26;
+	interface Inout#(Bit#(1)) sdram_d27;
+	interface Inout#(Bit#(1)) sdram_d28;
+	interface Inout#(Bit#(1)) sdram_d29;
+	interface Inout#(Bit#(1)) sdram_d30;
+	interface Inout#(Bit#(1)) sdram_d31;
+	method Action ispi0_miso (Bit#(1) spi0_miso);
+	method Action iuart0_rx (Bit#(1) uart0_rx);
+	method Action itms (Bit#(1) tms);
+	method Action itrst (Bit#(1) trst);
+	method Action itck (Bit#(1) tck);
+	method Action itdi (Bit#(1) tdi);
+	method Action ispi1_miso (Bit#(1) spi1_miso);
+	method Action iboot_mode0 (Bit#(1) boot_mode0);
+	method Action iboot_mode1 (Bit#(1) boot_mode1);
+	method Action itest_mode (Bit#(1) test_mode);
+	method Bit#(1) ospi0_ncs ();
+	method Bit#(1) ospi0_clk ();
+	method Bit#(1) ospi0_mosi ();
+	method Bit#(1) oqspi0_clk ();
+	method Bit#(1) oqspi0_ncs ();
+	method Bit#(1) ouart0_tx ();
+	method Bit#(1) otdo ();
+	method Bit#(1) osdram_a0 ();
+	method Bit#(1) osdram_a1 ();
+	method Bit#(1) osdram_a2 ();
+	method Bit#(1) osdram_a3 ();
+	method Bit#(1) osdram_a4 ();
+	method Bit#(1) osdram_a5 ();
+	method Bit#(1) osdram_a6 ();
+	method Bit#(1) osdram_a7 ();
+	method Bit#(1) osdram_a8 ();
+	method Bit#(1) osdram_a9 ();
+	method Bit#(1) osdram_a10 ();
+	method Bit#(1) osdram_a11 ();
+	method Bit#(1) osdram_a12 ();
+	method Bit#(1) osdram_dq0 ();
+	method Bit#(1) osdram_dq1 ();
+	method Bit#(1) osdram_dq2 ();
+	method Bit#(1) osdram_dq3 ();
+	method Bit#(1) osdram_ba0 ();
+	method Bit#(1) osdram_ba1 ();
+	method Bit#(1) osdram_cs ();
+	method Bit#(1) osdram_ras ();
+	method Bit#(1) osdram_cas ();
+	method Bit#(1) osdram_we ();
+	method Bit#(1) osdram_clk ();
+	method Bit#(1) osdram_cke ();
+	method Bit#(1) ospi1_ncs ();
+	method Bit#(1) ospi1_clk ();
+	method Bit#(1) ospi1_mosi ();
 endinterface
 
 import "BVI" aardonyx_wrapper =
@@ -118,27 +118,83 @@ module mkaardonyx_wrapper  (Ifc_aardonyx_wrapper);
 	input_clock clk_clk (clk)  <- exposeCurrentClock;
 	input_reset rst_reset (reset) clocked_by(clk_clk)  <- exposeCurrentReset;
 
-
-	method ispi0_miso ()
-		 enable(spi0_miso) clocked_by(clk_clk) reset_by(rst_reset);
-	method iuart0_rx ()
-		 enable(uart0_rx) clocked_by(clk_clk) reset_by(rst_reset);
-	method itms ()
-		 enable(tms) clocked_by(clk_clk) reset_by(rst_reset);
-	method itrst ()
-		 enable(trst) clocked_by(clk_clk) reset_by(rst_reset);
-	method itck ()
-		 enable(tck) clocked_by(clk_clk) reset_by(rst_reset);
-	method itdi ()
-		 enable(tdi) clocked_by(clk_clk) reset_by(rst_reset);
-	method ispi1_miso ()
-		 enable(spi1_miso) clocked_by(clk_clk) reset_by(rst_reset);
-	method iboot_mode0 ()
-		 enable(boot_mode0) clocked_by(clk_clk) reset_by(rst_reset);
-	method iboot_mode1 ()
-		 enable(boot_mode1) clocked_by(clk_clk) reset_by(rst_reset);
-	method itest_mode ()
-		 enable(test_mode) clocked_by(clk_clk) reset_by(rst_reset);
+  ifc_inout gpio_0   (gpi0_0);
+	ifc_inout gpio_1   (gpio_1);       
+	ifc_inout gpio_2   (gpio_2);
+	ifc_inout gpio_3   (gpio_3);
+	ifc_inout gpio_4   (gpio_4);
+	ifc_inout gpio_5   (gpio_5);
+	ifc_inout gpio_6   (gpio_6);
+	ifc_inout gpio_7   (gpio_7);
+	ifc_inout gpio_8   (gpio_8);
+	ifc_inout gpio_9   (gpio_9);
+	ifc_inout gpio_10  (gpio_10);
+	ifc_inout gpio_11  (gpio_11);
+	ifc_inout gpio_12  (gpio_12);
+	ifc_inout gpio_13  (gpio_13);
+	ifc_inout gpio_14  (gpio_14);
+	ifc_inout gpio_15  (gpio_15);
+	ifc_inout i2c1_scl (i2c1_scl);
+	ifc_inout i2c1_sda (i2c1_sda);
+	ifc_inout qspi0_io0(qspi0_io);
+	ifc_inout qspi0_io1(qspi0_io);
+	ifc_inout qspi0_io2(qspi0_io);
+	ifc_inout qspi0_io3(qspi0_io);
+	ifc_inout i2c0_sda (i2c0_sda);
+	ifc_inout i2c0_scl (i2c0_scl);
+	ifc_inout sdram_d0 (sdram_d0);
+	ifc_inout sdram_d1 (sdram_d1);
+	ifc_inout sdram_d2 (sdram_d2);
+	ifc_inout sdram_d3 (sdram_d3);
+	ifc_inout sdram_d4 (sdram_d4);
+	ifc_inout sdram_d5 (sdram_d5);
+	ifc_inout sdram_d6 (sdram_d6);
+	ifc_inout sdram_d7 (sdram_d7);
+	ifc_inout sdram_d8 (sdram_d8);
+	ifc_inout sdram_d9 (sdram_d9);
+	ifc_inout sdram_d10(sdram_d1);
+	ifc_inout sdram_d11(sdram_d1);
+	ifc_inout sdram_d12(sdram_d1);
+	ifc_inout sdram_d13(sdram_d1);
+	ifc_inout sdram_d14(sdram_d1);
+	ifc_inout sdram_d15(sdram_d1);
+	ifc_inout sdram_d16(sdram_d1);
+	ifc_inout sdram_d17(sdram_d1);
+	ifc_inout sdram_d18(sdram_d1);
+	ifc_inout sdram_d19(sdram_d1);
+	ifc_inout sdram_d20(sdram_d2);
+	ifc_inout sdram_d21(sdram_d2);
+	ifc_inout sdram_d22(sdram_d2);
+	ifc_inout sdram_d23(sdram_d2);
+	ifc_inout sdram_d24(sdram_d2);
+	ifc_inout sdram_d25(sdram_d2);
+	ifc_inout sdram_d26(sdram_d2);
+	ifc_inout sdram_d27(sdram_d2);
+	ifc_inout sdram_d28(sdram_d2);
+	ifc_inout sdram_d29(sdram_d2);
+	ifc_inout sdram_d30(sdram_d3);
+	ifc_inout sdram_d31(sdram_d3);
+  
+	method ispi0_miso (spi0_miso)
+		 enable(spi0_miso_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method iuart0_rx (uart0_rx )
+		 enable(uart0_rx_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method itms (tms)
+		 enable(tms_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method itrst (trst)
+		 enable(trst_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method itck (tck)
+		 enable(tck_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method itdi (tdi)
+		 enable(tdi_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method ispi1_miso (spi1_miso)
+		 enable(spi1_miso_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method iboot_mode0 (boot_mode0)
+		 enable(boot_mode0_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method iboot_mode1 (boot_mode1)
+		 enable(boot_mode1_en) clocked_by(clk_clk) reset_by(rst_reset);
+	method itest_mode (test_mode)
+		 enable(test_mode_en) clocked_by(clk_clk) reset_by(rst_reset);
 	method spi0_ncs ospi0_ncs ()
 		 clocked_by(clk_clk) reset_by(rst_reset);
 	method spi0_clk ospi0_clk ()
