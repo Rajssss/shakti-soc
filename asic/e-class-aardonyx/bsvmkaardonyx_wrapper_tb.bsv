@@ -54,6 +54,11 @@ package bsvmkaardonyx_wrapper_tb;
   import sdram_axi4_lite :: * ;
   import TriState :: * ;
   import bsvmkaardonyx_wrapper ::*;
+	import qspi :: * ;
+	import spi :: * ;
+	import bsvmkCypressFlashWrapper::*;
+	import bsvmkissiflashwrapper::*;
+
 `ifdef openocd
   import "BDPI" function ActionValue #(int) init_rbb_jtag(Bit#(1) dummy);
   import "BDPI" function ActionValue #(Bit #(8))get_frame(int client_fd);
@@ -61,6 +66,9 @@ package bsvmkaardonyx_wrapper_tb;
 `endif
   
   module mktb_wrapper(Empty);
+
+    let def_clk <- exposeCurrentClock;
+    let def_rst <- exposeCurrentReset;
 
     MakeClockIfc#(Bit#(1)) tck_clk <-mkUngatedClock(1);
     MakeResetIfc trst <- mkReset(0,False,tck_clk.new_clk);
@@ -181,6 +189,63 @@ package bsvmkaardonyx_wrapper_tb;
     rule connect_UART0_in;
       uart0.io.sin(soc_top.oUART0_TX);
     endrule
+
+
+	//===========================QSPI connection=========================//
+	
+	Ifc_issiflashwrapper flash1 <- mkissiflashwrapper(clocked_by def_clk, reset_by def_rst);
+
+//  TriState#(Bit#(1)) qspi0tri_sio0 <- mkTriState(soc.qspi_io.io_enable[0]==1, soc.qspi_io.io_o[0],clocked_by def_clk, reset_by def_rst);
+//  TriState#(Bit#(1)) qspi0tri_sio1 <- mkTriState(soc.qspi_io.io_enable[1]==1, soc.qspi_io.io_o[1],clocked_by def_clk, reset_by def_rst);
+//	TriState#(Bit#(1)) qspi0tri_sio2 <- mkTriState(soc.qspi_io.io_enable[2]==1, soc.qspi_io.io_o[2],clocked_by def_clk, reset_by def_rst);
+//	TriState#(Bit#(1)) qspi0tri_sio3 <- mkTriState(soc.qspi_io.io_enable[3]==1, soc.qspi_io.io_o[3],clocked_by def_clk, reset_by def_rst);
+
+	mkConnection(soc_top.ioQSPI0_IO0,flash1.si);
+  	mkConnection(soc_top.ioQSPI0_IO1,flash1.so);
+  	mkConnection(soc_top.ioQSPI0_IO2,flash1.wp);
+  	mkConnection(soc_top.ioQSPI0_IO3,flash1.sio3);
+
+  rule connect_flash1_ports1;
+  	flash1.ics(soc_top.oQSPI0_NCS);
+    flash1.isclk(soc_top.oQSPI0_CLK);
+  endrule
+
+//  rule connect_flash1_input_ports;
+//  	soc.qspi_io.io_i({qspi0tri_sio3._read,qspi0tri_sio2._read,qspi0tri_sio1._read,qspi0tri_sio0._read});
+//  endrule
+
+	//====================================================================//
+
+
+	//========================SPI Connection============================//
+		
+	Ifc_FlashWrapper flash2 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
+	Ifc_FlashWrapper flash3 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
+	TriState#(Bit#(1)) spi0_mosi <- mkTriState(True,soc_top.oSPI0_MOSI, clocked_by def_clk, reset_by def_rst);
+	TriState#(Bit#(1)) spi0_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
+
+	TriState#(Bit#(1)) spi1_mosi <- mkTriState(True,soc_top.oSPI1_MOSI, clocked_by def_clk, reset_by def_rst);
+	TriState#(Bit#(1)) spi1_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
+
+	mkConnection(spi0_mosi.io,flash2.si);
+	mkConnection(spi0_miso.io,flash2.so);
+
+	mkConnection(spi1_mosi.io,flash3.si);
+	mkConnection(spi1_miso.io,flash3.so);
+	
+	rule rl_connect_flash0_ports1;
+		flash2.iCSNeg(soc_top.oSPI0_NCS);
+		flash2.iSCK(soc_top.oSPI0_CLK);
+		flash3.iCSNeg(soc_top.oSPI1_NCS);
+		flash3.iSCK(soc_top.oSPI1_CLK);
+	endrule
+
+	rule rl_connect_io;
+		soc_top.iSPI0_MISO(spi0_miso._read);
+		soc_top.iSPI1_MISO(spi1_miso._read);
+	endrule
+	
+	//=================================================================//
    
 //    // -------- when uart1 is enabled through pinmux ----------//
 //    rule connect_uart1_out(soc.iocell_io.io7_cell_outen==1);
@@ -211,7 +276,10 @@ package bsvmkaardonyx_wrapper_tb;
 //      $fwrite(dump1,"%c",data);
 //    endrule
 
-//    rule drive_constants;
+    rule drive_constants;
+		soc_top.iBOOT_MODE0(0);
+		soc_top.iBOOT_MODE1(0);
+		soc_top.iTEST_MODE(0);
 //      soc.gpio_14(0);
 //      soc.gpio_15(0);
 //      soc.gpio_4(0);
@@ -233,7 +301,7 @@ package bsvmkaardonyx_wrapper_tb;
 //      soc.qspi_io.io_i(0);
 //      soc.spi0_io.miso(0);
 //      soc.spi1_io.miso(0);
-//    endrule
+    endrule
 
 //  `ifdef rtldump
 //    rule write_dump_file(rg_cnt>=5);
