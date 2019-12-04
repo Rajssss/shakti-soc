@@ -50,7 +50,7 @@ package bsvmkaardonyx_wrapper_tb;
   import pinmux ::* ;
   import qspi ::* ;
   import spi ::* ;
-  import bsvmkissiwrapper :: *;
+  import bsvmkissiwrapper_aardonyx :: *;
   import sdram_axi4_lite :: * ;
   import TriState :: * ;
   import bsvmkaardonyx_wrapper ::*;
@@ -74,72 +74,62 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
 
 
-    Ifc_aardonyx_wrapper soc_top<-mkaardonyx_wrapper();
+    Ifc_aardonyx_wrapper soc_top<-mkaardonyx_wrapper(tck_clk.new_clk,trst.new_rst);
  //   let bootrom <- mkbootrom;
-		Ifc_issi sdram_bfm <- mkissiwrapper();
+		Ifc_issi_aardonyx sdram_bfm <- mkissiwrapper_aardonyx();
 		
     // ------------------- sdram connections ----------------------------------//
 		
 //    TriState#(Bit#(32)) tri_sio0 <- mkTriState(soc.sdram_io.osdr_den_n[0]==0,
 //  
 //    soc.sdram_io.osdr_dout);
-    rule data_connect;
 
-
-/*     let data_io={soc_top.sdram_d31,soc_top.sdram_30,soc_top.sdram_29,soc_top.sdram_28,soc_top.sdram_27,
-     soc_top.sdram_26,soc_top.sdram_25,soc_top.sdram_24,soc_top.sdram_23,soc_top.sdram_22,soc_top.sdram_21,
-     soc_top.sdram_20,soc_top.sdram_19,soc_top.sdram_18,soc_top.sdram_17,soc_top.sdram_16,soc_top.sdram_15,
-     soc_top.sdram_14,soc_top.sdram_13,soc_top.sdram_12,soc_top.sdram_11,soc_top.sdram_10,soc_top.sdram_9,
-     soc_top.sdram_8,soc_top.sdram_7,soc_top.sdram_6,soc_top.sdram_5,soc_top.sdram_4,soc_top.sdram_3,
-     soc_top.sdram_2,soc_top.sdram_1,soc_top.sdram_30};
-    endrule
-*/
-//    mkConnection(soc_top.sdram_d31,sdram_bfm.dq[0]);
+//    mkConnection(soc_top.sdram_data,sdram_bfm.dq);
 //    rule rl_connect_input_datapins;                                                             
 //      soc.sdram_io.ipad_sdr_din(tri_sio0._read);                                             
-    endrule   
+//    endrule   
 
 
     rule rl_iAddr_connection;                                                                   
       //let in = soc.sdram_io.osdr_addr();
-      Bit#(13) in = {soc_top.osdram_a12,soc_top.osdram_a11,soc_top.osdram_a10,soc_top.osdram_a9,
-      soc_top.osdram_a8,soc_top.osdram_a7,soc_top.osdram_a6,soc_top.osdram_a5,soc_top.osdram_a4,
-      soc_top.osdram_a3,soc_top.osdram_a2,soc_top.osdram_a1,soc_top.osdram_a0};
+      Bit#(13) in = {soc_top.oSDRAM_A12,soc_top.oSDRAM_A11,soc_top.oSDRAM_A10,soc_top.oSDRAM_A9,
+      soc_top.oSDRAM_A8,soc_top.oSDRAM_A7,soc_top.oSDRAM_A6,soc_top.oSDRAM_A5,soc_top.oSDRAM_A4,
+      soc_top.oSDRAM_A3,soc_top.oSDRAM_A2,soc_top.oSDRAM_A1,soc_top.oSDRAM_A0};
       sdram_bfm.iaddr(truncate(in));                                                          
     endrule                                                                                       
                                                                                                   
     rule rl_iBa_connection;                                                                       
-      let in = {soc_top.osdram_ba1,soc_top.osdram_ba0};                                                         
+      let in = {soc_top.oSDRAM_BA1,soc_top.oSDRAM_BA0};                                                         
       sdram_bfm.iba(in);                                                                     
     endrule                                                                                       
                                                                                                   
     rule rl_iCke_connection;                                                                      
-      let in = soc_top.osdram_cke;                                                        
+      let in = soc_top.oSDRAM_CKE;                                                        
       sdram_bfm.icke(pack(in));                                                              
     endrule                                                                                       
                                                                                                   
     rule rl_iCs_n_connection;                                                                     
-      let in = soc_top.osdram_cs ;                                                       
+      let in = soc_top.oSDRAM_CS;                                                       
       sdram_bfm.ics_n(pack(in));                                                             
     endrule                                                                                       
                                                                                                   
     rule rl_iRas_n_connection;                                                                    
-      let in = soc_top.osdram_ras ;                                                      
+      let in = soc_top.oSDRAM_RAS ;                                                      
       sdram_bfm.iras_n(pack(in));                                                            
     endrule                                                                                       
                                                                                                   
     rule rl_iCas_n_connection;                                                                    
-      let in = soc_top.osdram_cas;                                                      
+      let in = soc_top.oSDRAM_CAS;                                                      
       sdram_bfm.icas_n(pack(in));                                                            
     endrule                                                                                       
                                                                                                   
     rule rl_iWe_n_connection;                                                                     
-      let in = soc_top.osdram_we();                                                       
+      let in = soc_top.oSDRAM_WE();                                                       
       sdram_bfm.iwe_n(pack(in));                                                             
     endrule                                                                                       
                                                                                                   
     rule rl_iDqm_connection;                                                                      
-      let in = {soc_top.osdram_dq3,soc_top.osdram_dq2,soc_top.osdram_dq1,soc_top.osdram_dq0};                                                        
+      let in = {soc_top.oSDRAM_DQ3,soc_top.oSDRAM_DQ2,soc_top.oSDRAM_DQ1,soc_top.oSDRAM_DQ0};                                                        
       sdram_bfm.idqm(extend(in));                                                            
     endrule
     // ------------------------------------------------------------------------- //
@@ -185,11 +175,11 @@ package bsvmkaardonyx_wrapper_tb;
     	rg_cnt <= rg_cnt+1 ;
     endrule
 
-    rule connect_uart0_out;
-      soc_top.iuart0_rx(uart0.io.sout);
+    rule connect_UART0_out;
+      soc_top.iUART0_RX(uart0.io.sout);
     endrule
-    rule connect_uart0_in;
-      uart0.io.sin(soc_top.ouart0_tx);
+    rule connect_UART0_in;
+      uart0.io.sin(soc_top.oUART0_TX);
     endrule
    
 //    // -------- when uart1 is enabled through pinmux ----------//
@@ -265,8 +255,10 @@ package bsvmkaardonyx_wrapper_tb;
     Wire#(Bit#(1)) wr_tdi <-mkWire();
     Wire#(Bit#(1)) wr_tms <-mkWire();
     rule connect_jtag_io;
-      soc_top.itdi (wr_tdi);
-      soc_top.itms (wr_tms);
+      soc_top.iTDI (wr_tdi);
+      soc_top.iTMS (wr_tms);
+      //soc_top.itck (tck_clk.new_clk);
+     // soc_top.itrst (trst.new_rst);
     endrule
   `endif
   `ifdef openocd
@@ -274,7 +266,7 @@ package bsvmkaardonyx_wrapper_tb;
     Wire#(Bit#(1)) wr_tck <-mkWire();
     Wire#(Bit#(1)) wr_trst <-mkWire();
     rule rl_wr_tdo;
-      wr_tdo <= soc_top.itdo();
+      wr_tdo <= soc_top.oTDO();
     endrule
     Reg#(Bit#(1)) rg_initial <- mkRegA(0);
     Reg#(Bit#(1)) rg_end_sim <- mkRegA(0);

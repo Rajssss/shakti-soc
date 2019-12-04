@@ -53,8 +53,8 @@ ifneq (,$(findstring C,$(ISA)))
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
-	TOP_MODULE=mkTbSoc
-	TOP_FILE=TbSoc.bsv
+	TOP_MODULE=mktb_wrapper
+	TOP_FILE=bsvmkaardonyx_wrapper_tb.bsv
 endif
 ifeq ($(SYNTH),FPGA_ARTY)
   override define_macros += -D fpga_arty=True
