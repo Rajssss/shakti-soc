@@ -245,11 +245,18 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 	@chmod +x $(BSVOUTDIR)/out
 	@echo Linking finished
 
+#.PHONY: link_irun
+#link_irun:
+#	rm -rf $(BSVOUTDIR) INCA_libs ncelab.log ncvlog.log irun.log irun.history
+#	irun -libext .v +define+TOP=$(TOP_MODULE) $(VCS_MACROS) -timescale 1ns/1ps \
+#		bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+
 .PHONY: link_irun
 link_irun:
-	rm -rf $(BSVOUTDIR) INCA_libs ncelab.log ncvlog.log irun.log irun.history
-	irun -libext .v +define+TOP=$(TOP_MODULE) $(VCS_MACROS) -timescale 1ns/1ps \
-		bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+	@irun -define TOP=mkTbSoc -logfile ncsim.log -access +r -timescale 1ns/1ps \
+-libext .v $(VERILOGDIR)/main.v -ncsimargs "+fullverbose" -define VERBOSE \
+	-y $(VERILOGDIR)/ \
+	-y ${BLUESPECDIR}/Verilog/
 
 .PHONY: link_msim
 link_msim: ## Generate simulation executable using Mentor's ModelSim tool
