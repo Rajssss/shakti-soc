@@ -24,7 +24,7 @@ set_property -dict [list \
                         CONFIG.MMCM_CLKOUT0_DIVIDE_F {48.000} \
                         CONFIG.PRIM_IN_FREQ {100} \
                         CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
-                        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} \
+                        CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40.000} \
                         CONFIG.CLKOUT1_DRIVES {BUFG} \
                         CONFIG.CLKOUT1_USED {1} ] [get_ips clk_divider]
 

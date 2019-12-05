@@ -32,7 +32,7 @@ COUNTERS=2
 
 # pmp
 PMP=enable
-PMPSIZE=3
+PMPSIZE=4
 
 # For Vivado Synthesis
 FPGA=xc7a35ticsg324-1l
