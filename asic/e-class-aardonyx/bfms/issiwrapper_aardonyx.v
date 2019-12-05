@@ -1,4 +1,4 @@
-module issiwrapper_aardonyx (dq, addr, ba, old_Clk, cke, cs_n, ras_n, cas_n, we_n, dqm);
+module issiwrapper_aardonyx (dq_31,dq_30,dq_29,dq_28,dq_27,dq_26,dq_25,dq_24,dq_23,dq_22,dq_21,dq_20,dq_19,dq_18,dq_17,dq_16,dq_15,dq_14,dq_13,dq_12,dq_11,dq_10,dq_9,dq_8,dq_7,dq_6,dq_5,dq_4,dq_3,dq_2,dq_1,dq_0,addr, ba, old_Clk, cke, cs_n, ras_n, cas_n, we_n, dqm);
 
 
     parameter ADDR_BITS        =      13; // Set this parameter to control how many Address bits are used

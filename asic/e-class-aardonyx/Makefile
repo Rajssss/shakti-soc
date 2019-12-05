@@ -56,7 +56,7 @@ ifeq ($(SYNTH),SIM)
 	TOP_MODULE=mkTbSoc
 	TOP_FILE=TbSoc.bsv
 endif
-ifeq ($(SYNTH),WRAPPER_SIM)
+ifeq ($(WRAPPER_SIM),enable)
   override define_macros += -D simulate=True
 	TOP_MODULE=mktb_wrapper
 	TOP_FILE=bsvmkaardonyx_wrapper_tb.bsv
@@ -253,7 +253,9 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 
 .PHONY: link_irun
 link_irun:
-	@irun -define TOP=mkTbSoc -logfile ncsim.log -access +r -timescale 1ns/1ps \
+	@cp bfms/* verilog/.
+	@cp aardonyx_wrapper.v verilog/.
+	@irun -define TOP=mktb_wrapper -logfile ncsim.log -access +r -timescale 1ns/1ps \
 -libext .v $(VERILOGDIR)/main.v -ncsimargs "+fullverbose" -define VERBOSE \
 	-y $(VERILOGDIR)/ \
 	-y ${BLUESPECDIR}/Verilog/
