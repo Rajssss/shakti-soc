@@ -36,7 +36,12 @@ Refer https://gitlab.com/shaktiproject/cores/shakti-soc/tree/master/asic/e-class
 
 /*! Inter Integrated Circuit (I2C) Interface */
 #define I2C0_START 0x00040000 /*! I2C Start Address */
-#define I2C1_START 0x00040500           
+#define I2C1_START 0x00040400           
+
+/*! Programmable Logic Interrupt Interface */
+#define PINMUX_START 	0x00040300 /*! PINMUX Start */
+#define PINMUX_END 	 	0x000403FF /*! PINMUX End */
+#define PINMUX_CONFIG 0x00040310 /*! PINMUX Config Register */
 
 /*! Quad SPI */
 #define QSPI_START      0x10000000      
@@ -46,10 +51,10 @@ Refer https://gitlab.com/shaktiproject/cores/shakti-soc/tree/master/asic/e-class
 #define PLIC_END 0x0C01001F /*! PLIC Interface End */
 
 /*!General Purpose Input / Output */
-#define GPIO_START 0x00040200 //GPIO Start Address */
+#define GPIO_START 0x00040100 //GPIO Start Address */
 #define GPIO_OFFSET 0x08 /*!Generic offset used to access GPIO registers*/
 
-#define BOOTROM_START 0X0004_0300
+#define BOOTROM_START 0X0004_0200
 
 /*
  * General Purpose IOs supported
