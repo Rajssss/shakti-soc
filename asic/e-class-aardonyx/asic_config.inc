@@ -1,6 +1,6 @@
 ISA=RV32IMAC
 MUL=asic
-SYNTH=SIM
+SYNTH=ASIC
 USERTRAPS=enable
 USER=enable
 COREFABRIC=AXI4Lite
@@ -12,7 +12,7 @@ ARITHTRAP=disable
 
 CAUSESIZE=6
 DEBUG=enable
-OPENOCD=enable
+OPENOCD=disable
 
 # Verilator options
 COVERAGE=none
@@ -32,7 +32,7 @@ COUNTERS=2
 
 # pmp
 PMP=enable
-PMPSIZE=4
+PMPSIZE=3
 
 # For Vivado Synthesis
 FPGA=xc7a35ticsg324-1l

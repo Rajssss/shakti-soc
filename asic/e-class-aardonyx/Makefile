@@ -53,6 +53,11 @@ ifneq (,$(findstring C,$(ISA)))
 endif
 ifeq ($(SYNTH),SIM)
   override define_macros += -D simulate=True
+	TOP_MODULE=mkTbSoc
+	TOP_FILE=TbSoc.bsv
+endif
+ifeq ($(SYNTH),WRAPPER_SIM)
+  override define_macros += -D simulate=True
 	TOP_MODULE=mktb_wrapper
 	TOP_FILE=bsvmkaardonyx_wrapper_tb.bsv
 endif
