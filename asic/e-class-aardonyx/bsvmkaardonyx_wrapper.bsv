@@ -111,13 +111,12 @@ module mkaardonyx_wrapper#(Clock iTCK,Reset iTRST)  (Ifc_aardonyx_wrapper);
 
 	default_clock clk_CLK;
 	default_reset rst_RESET;
-
 	input_clock clk_CLK (CLK)  <- exposeCurrentClock;
-//	input_clock clk_TCK (TCK)  <- tck_CLK;
+	input_clock clk_TCK (TCK)  = iTCK;
 	input_reset rst_RESET (RESET) clocked_by(clk_CLK)  <- exposeCurrentReset;
-	//input_reset rst_TRST (TRST) clocked_by(clk_TCK)  <-trst_RST;
+	input_reset rst_TRST (TRST) clocked_by(clk_TCK)  = iTRST;
 
-  	ifc_inout ioGPIO_0   (GPIO_0);
+  ifc_inout ioGPIO_0   (GPIO_0);
 	ifc_inout ioGPIO_1   (GPIO_1);       
 	ifc_inout ioGPIO_2   (GPIO_2);
 	ifc_inout ioGPIO_3   (GPIO_3);
@@ -133,12 +132,12 @@ module mkaardonyx_wrapper#(Clock iTCK,Reset iTRST)  (Ifc_aardonyx_wrapper);
 	ifc_inout ioGPIO_13  (GPIO_13);
 	ifc_inout ioGPIO_14  (GPIO_14);
 	ifc_inout ioGPIO_15  (GPIO_15);
-	ifc_inout ioI2C1_SCL (I2C1_SCL);
-	ifc_inout ioI2C1_SDA (I2C1_SDA);
-	ifc_inout ioQSPI0_IO0(QSPI0_IO0);
-	ifc_inout ioQSPI0_IO1(QSPI0_IO1);
-	ifc_inout ioQSPI0_IO2(QSPI0_IO2);
-	ifc_inout ioQSPI0_IO3(QSPI0_IO3);
+	ifc_inout ioI2C1_SCL  (I2C1_SCL);
+	ifc_inout ioI2C1_SDA  (I2C1_SDA);
+	ifc_inout ioQSPI0_IO0 (QSPI0_IO0);
+	ifc_inout ioQSPI0_IO1 (QSPI0_IO1);
+	ifc_inout ioQSPI0_IO2 (QSPI0_IO2);
+	ifc_inout ioQSPI0_IO3 (QSPI0_IO3);
 	ifc_inout ioI2C0_SDA (I2C0_SDA);
 	ifc_inout ioI2C0_SCL (I2C0_SCL);
 	ifc_inout ioSDRAM_D0 (SDRAM_D0);
@@ -180,7 +179,7 @@ module mkaardonyx_wrapper#(Clock iTCK,Reset iTRST)  (Ifc_aardonyx_wrapper);
 	method iUART0_RX (UART0_RX)
 		 enable((*inhigh*)UART0_RX_enable) clocked_by(clk_CLK) reset_by(rst_RESET);
 	method iTMS (TMS)
-		 enable((*inhigh*)MS_enable) clocked_by(clk_CLK) reset_by(rst_RESET);
+		 enable((*inhigh*)TMS_enable) clocked_by(clk_CLK) reset_by(rst_RESET);
 	method iTDI (TDI)
 		 enable((*inhigh*)TDI_enable) clocked_by(clk_CLK) reset_by(rst_RESET);
 	method iSPI1_MISO (SPI1_MISO)
