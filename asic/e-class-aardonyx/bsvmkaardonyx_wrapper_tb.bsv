@@ -307,7 +307,7 @@ package bsvmkaardonyx_wrapper_tb;
 
     rule drive_constants;
 		soc_top.iBOOT_MODE0(0);
-		soc_top.iBOOT_MODE1(0);
+		soc_top.iBOOT_MODE1(1);
 		soc_top.iTEST_MODE(0);
 //      soc.gpio_14(0);
 //      soc.gpio_15(0);
