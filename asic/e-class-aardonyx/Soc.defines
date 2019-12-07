@@ -49,7 +49,7 @@
   `define MemoryEnd         'h8007_FFFF
 `else
   `define MemoryBase        'h8000_0000
-  `define MemoryEnd         'hBFFF_FFFF
+  `define MemoryEnd         'h8FFF_FFFF
 `endif
 `define SDRAMCfgBase      'h0000_0200
 `define SDRAMCfgEnd       'h0000_02FF
