@@ -66,7 +66,7 @@ sw s0,0x4(sp)     #dcr
 #Begin reading from QSPI and write to RAM
 li a3,0x80000000
 li a5,0x90000000
-lw a4,0(a5)
+li a4,0x5
 li a5,0x90000004
 inc_addr:
 lw a2,0(a5)
