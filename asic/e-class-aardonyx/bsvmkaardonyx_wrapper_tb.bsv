@@ -202,7 +202,7 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
   `endif
 
- 	  let dump1 <- mkReg(InvalidFile) ;
+   let dump1 <- mkReg(InvalidFile) ;
     rule open_file_app(rg_cnt<5);
       String dumpFile1 = "app_log" ;
     	File lfh1 <- $fopen( dumpFile1, "w" ) ;
@@ -211,17 +211,28 @@ package bsvmkaardonyx_wrapper_tb;
     	  $finish(0);
     	end
       dump1 <= lfh1;
-    	rg_cnt <= rg_cnt+1 ;
+    rg_cnt <= rg_cnt+1 ;
     endrule
 
-    rule connect_UART0_out;
-      soc_top.iUART0_RX(uart0.io.sout);
-    endrule
-    rule connect_UART0_in;
-      uart0.io.sin(soc_top.oUART0_TX);
-    endrule
+  
+  rule connect_UART0_out;
+    soc_top.iUART0_RX(uart0.io.sout);
+  endrule
+  rule connect_UART0_in;
+    uart0.io.sin(soc_top.oUART0_TX);
+  endrule
 
 
+    rule check_if_character_present(!rg_read_rx);
+      let {data,err}<- uart0.read_req('hc,Byte);
+      if (data[3]==1) // character present
+        rg_read_rx<=True;
+    endrule
+
+    rule write_received_character(rg_cnt>=5 && rg_read_rx);
+      let {data,err}<-uart0.read_req('h8,Byte);
+      $fwrite(dump1,"%c",data);
+    endrule
 	//===========================QSPI connection=========================//
 	
 	Ifc_issiflashwrapper flash1 <- mkissiflashwrapper(clocked_by def_clk, reset_by def_rst);
