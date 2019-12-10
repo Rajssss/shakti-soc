@@ -817,17 +817,17 @@ package pinmux;
                interface out_en = interface Put#(11)
                  //method Action put(Vector#(11,Bit#(1)) in);
                  method Action put(Bit#(11) in);
-                   wrgpioa_a0_outen <= in[0];
-                   wrgpioa_a1_outen <= in[1];
-                   wrgpioa_a2_outen <= in[2];
-                   wrgpioa_a3_outen <= in[3];
-                   wrgpioa_a5_outen <= in[4];
-                   wrgpioa_a6_outen <= in[5];
-                   wrgpioa_a9_outen <= in[6];
-                   wrgpioa_a10_outen <= in[7];
-                   wrgpioa_a11_outen <= in[8];
-                   wrgpioa_a12_outen <= in[9];
-                   wrgpioa_a13_outen <= in[10];
+                   wrgpioa_a0_outen <= ~in[0];
+                   wrgpioa_a1_outen <= ~in[1];
+                   wrgpioa_a2_outen <= ~in[2];
+                   wrgpioa_a3_outen <= ~in[3];
+                   wrgpioa_a5_outen <= ~in[4];
+                   wrgpioa_a6_outen <= ~in[5];
+                   wrgpioa_a9_outen <= ~in[6];
+                   wrgpioa_a10_outen <= ~in[7];
+                   wrgpioa_a11_outen <= ~in[8];
+                   wrgpioa_a12_outen <= ~in[9];
+                   wrgpioa_a13_outen <= ~in[10];
                  endmethod
                endinterface;
                interface in = interface Get#(11)
