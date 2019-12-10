@@ -34,6 +34,33 @@ hello-shakti:
 				./common/syscalls.c ./common/crt.S
 	@$(RISCV_OBJDUMP) $(OUTDIR)/hello.riscv > $(OUTDIR)/hello.dump
 	@$(RISCV_HEX) $(OUTDIR)/hello.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
+
+.PHONY: qspi_issi
+qspi_issi:
+	@echo "Compiling QSPI ISSI"
+	@mkdir -p output/
+	$(RISCV_GCC) -I./common -I./qspi -DCONFIG_RISCV64=True \
+				-DITERATIONS=$(iterations) -D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math \
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static \
+				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/qspi.riscv ./qspi/qspi_micron.c \
+				./common/syscalls.c ./common/crt.S
+	@$(RISCV_OBJDUMP) $(OUTDIR)/qspi.riscv > $(OUTDIR)/qspi.dump
+	@$(RISCV_HEX) $(OUTDIR)/qspi.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
+
+.PHONY: spi_cypress
+spi_cypress:
+	@echo "Compiling SPI Cypress flash"
+	@mkdir -p output/
+	$(RISCV_GCC) -I./common -I./spi -DCONFIG_RISCV64=True \
+				-DITERATIONS=$(iterations) -D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math \
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static \
+				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/spi.riscv ./spi/spi.c \
+				./common/syscalls.c ./common/crt.S
+	@$(RISCV_OBJDUMP) $(OUTDIR)/spi.riscv > $(OUTDIR)/spi.dump
+	@$(RISCV_HEX) $(OUTDIR)/spi.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
 
 .PHONY: clean
 clean:
