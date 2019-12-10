@@ -29,6 +29,7 @@ Details:
 --------------------------------------------------------------------------------------------------
 */
 package bsvmkaardonyx_wrapper_tb;
+ 
   
   import Soc::*;
   import Clocks::*;
@@ -58,6 +59,7 @@ package bsvmkaardonyx_wrapper_tb;
 	import spi :: * ;
 	import bsvmkCypressFlashWrapper::*;
 	import bsvmkissiflashwrapper::*;
+  import bsvmkM24AA1025::*;
 
 `ifdef openocd
   import "BDPI" function ActionValue #(int) init_rbb_jtag(Bit#(1) dummy);
@@ -72,7 +74,6 @@ package bsvmkaardonyx_wrapper_tb;
 
     MakeClockIfc#(Bit#(1)) tck_clk <-mkUngatedClock(1);
     MakeResetIfc trst <- mkReset(0,False,tck_clk.new_clk);
-
     /*doc:wire: */
     Wire#(Bit#(32)) wr_reset_pc <- mkDWire(`MemoryBase);
     rule set_reset_pc;
@@ -91,7 +92,6 @@ package bsvmkaardonyx_wrapper_tb;
 //    TriState#(Bit#(32)) tri_sio0 <- mkTriState(soc.sdram_io.osdr_den_n[0]==0,
 //  
 //    soc.sdram_io.osdr_dout);
-
     mkConnection(soc_top.ioSDRAM_D0,sdram_bfm.dq_0);
     mkConnection(soc_top.ioSDRAM_D1,sdram_bfm.dq_1);
     mkConnection(soc_top.ioSDRAM_D2,sdram_bfm.dq_2);
@@ -127,6 +127,22 @@ package bsvmkaardonyx_wrapper_tb;
 //    rule rl_connect_input_datapins;                                                             
 //      soc.sdram_io.ipad_sdr_din(tri_sio0._read);                                             
 //    endrule   
+      
+      
+  TriState#(Bit#(1)) linescl0 <- mkTriState(False,1'b1);
+   IFC_EEPROM i2c_bfm_slave0 <- mkM24AA1025(); 
+      
+   mkConnection(soc_top.ioI2C0_SDA,i2c_bfm_slave0.linesda);
+   mkConnection(soc_top.ioI2C0_SCL,linescl0.io);
+ 
+    
+    rule connect_i2c0;
+      i2c_bfm_slave0.iSCL(linescl0._read);
+      i2c_bfm_slave0.iA0(1'b0);
+      i2c_bfm_slave0.iA1(1'b0);
+      i2c_bfm_slave0.iA2(1'b1);
+      i2c_bfm_slave0.iWP(1'b0);
+    endrule
 
 
     rule rl_iAddr_connection;                                                                   
