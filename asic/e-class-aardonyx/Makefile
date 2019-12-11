@@ -234,6 +234,7 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 	@mkdir -p bin
 	@mkdir work
 	@echo "Building RBB VPI"
+	@cp libs/*.so ./	
 	@echo "define work ./work" > cds.lib
 	@echo "define WORK work" > hdl.var
 	@ncvlog -64BIT -sv -cdslib ./cds.lib -hdlvar ./hdl.var +define+TOP=$(TOP_MODULE) \
