@@ -62,6 +62,32 @@ spi_cypress:
 	@$(RISCV_HEX) $(OUTDIR)/spi.riscv 2147483648 > $(OUTDIR)/code.mem
 	@cp $(OUTDIR)/code.mem ../.
 
+.PHONY: i2c
+i2c:
+	@echo "Compiling i2c polling code"
+	@mkdir -p output/
+	$(RISCV_GCC) -I./common -I./i2c -DCONFIG_RISCV64=True \
+				-DITERATIONS=$(iterations) -D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math \
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static \
+				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/i2c.riscv ./i2c/i2c.c \
+				./common/syscalls.c ./common/crt.S
+	@$(RISCV_OBJDUMP) $(OUTDIR)/i2c.riscv > $(OUTDIR)/i2c.dump
+	@$(RISCV_HEX) $(OUTDIR)/i2c.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
+
+.PHONY: i2c_eeprom
+i2c_eeprom:
+	@echo "Compiling i2c polling code"
+	@mkdir -p output/
+	$(RISCV_GCC) -I./common -I./i2c -DCONFIG_RISCV64=True \
+				-DITERATIONS=$(iterations) -D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math \
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static \
+				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/i2c.riscv ./i2c/i2c_eeprom_write.c \
+				./common/syscalls.c ./common/crt.S
+	@$(RISCV_OBJDUMP) $(OUTDIR)/i2c_eeprom.riscv > $(OUTDIR)/i2c_eeprom.dump
+	@$(RISCV_HEX) $(OUTDIR)/i2c_eeprom.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
+
 .PHONY: clean
 clean:
 	rm -rf $(OUTDIR)
