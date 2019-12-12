@@ -32,7 +32,9 @@ set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { pin_tc
 set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { i2c0_sda }]; #IO_L11P_T1_SRCC_15 Sch=jb_p[1]
 set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { i2c0_scl }]; #IO_L11N_T1_SRCC_15 Sch=jb_n[1]
 set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { gpio_14 }]; #IO_L12P_T1_MRCC_15 Sch=jb_p[2]
+set_property PULLDOWN true [get_ports { gpio_14 }]; 
 set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { gpio_15 }]; #IO_L12N_T1_MRCC_15 Sch=jb_n[2]
+set_property PULLDOWN true [get_ports { gpio_15 }]; 
 
 ## Pmod Header JC
 set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { spi1_nss }]; #IO_L20P_T3_A08_D24_14 Sch=jc_p[1]
@@ -54,19 +56,33 @@ set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { uart0_
 
 ## ChipKit Outer Digital Header
 set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { io7_cell  }]; #IO_L16P_T2_CSI_B_14 Sch=ck_io[0]
+set_property PULLDOWN true [get_ports { io7_cell }]; 
 set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS33 } [get_ports { io8_cell  }]; #IO_L18P_T2_A12_D28_14 Sch=ck_io[1]
+set_property PULLDOWN true [get_ports { io8_cell }]; 
 set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { io9_cell  }]; #IO_L8N_T1_D12_14 Sch=ck_io[2]
+set_property PULLDOWN true [get_ports { io9_cell }]; 
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { io10_cell  }]; #IO_L19P_T3_A10_D26_14 Sch=ck_io[3]
+set_property PULLDOWN true [get_ports { io10_cell }]; 
 set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { gpio_4  }]; #IO_L5P_T0_D06_14 Sch=ck_io[4]
+set_property PULLDOWN true [get_ports { gpio_4 }];
 set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { io12_cell  }]; #IO_L14P_T2_SRCC_14 Sch=ck_io[5]
+set_property PULLDOWN true [get_ports { io12_cell }]; 
 set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { io13_cell  }]; #IO_L14N_T2_SRCC_14 Sch=ck_io[6]
+set_property PULLDOWN true [get_ports { io13_cell }]; 
 set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { gpio_7 }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=ck_io[7]
+set_property PULLDOWN true [get_ports { gpio_7 }]; 
 set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { gpio_8  }]; #IO_L11P_T1_SRCC_14 Sch=ck_io[8]
+set_property PULLDOWN true [get_ports { gpio_8 }]; 
 set_property -dict { PACKAGE_PIN M16   IOSTANDARD LVCMOS33 } [get_ports { io16_cell  }]; #IO_L10P_T1_D14_14 Sch=ck_io[9]
+set_property PULLDOWN true [get_ports { io16_cell }]; 
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { io17_cell }]; #IO_L18N_T2_A11_D27_14 Sch=ck_io[10]
+set_property PULLDOWN true [get_ports { io17_cell }]; 
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { io18_cell }]; #IO_L17N_T2_A13_D29_14 Sch=ck_io[11]
+set_property PULLDOWN true [get_ports { io18_cell }]; 
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { io19_cell }]; #IO_L12N_T1_MRCC_14 Sch=ck_io[12]
+set_property PULLDOWN true [get_ports { io19_cell }]; 
 set_property -dict { PACKAGE_PIN P17   IOSTANDARD LVCMOS33 } [get_ports { io20_cell }]; #IO_L12P_T1_MRCC_14 Sch=ck_io[13]
+set_property PULLDOWN true [get_ports { io20_cell }]; 
 
 ## ChipKit Outer Analog Header - as Digital I/O
 ## NOTE: The following constraints should be used when using these ports as digital I/O.
