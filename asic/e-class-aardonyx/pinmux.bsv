@@ -383,10 +383,22 @@ package pinmux;
       // priority-in-muxer for cell idx 0
       rule assign_wrgpioa_a0_in_on_cell7(wrcell7_mux==0);
         wrgpioa_a0_in<=cell7_mux_in;
+        wruart1_rx<=val0;
       endrule
 
       rule assign_wruart1_rx_on_cell7(wrcell7_mux==1);
         wruart1_rx<=cell7_mux_in;
+        wrgpioa_a0_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell7_2(wrcell7_mux==2);
+        wruart1_rx<=val0;
+        wrgpioa_a0_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell7_3(wrcell7_mux==3);
+        wruart1_rx<=val0;
+        wrgpioa_a0_in<=val0;
       endrule
 
       // --------------------
@@ -411,6 +423,18 @@ package pinmux;
         wrgpioa_a1_in<=cell8_mux_in;
       endrule
 
+      rule assign_wr_on_cell8_1(wrcell8_mux==1);
+        wrgpioa_a1_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell8_2(wrcell8_mux==2);
+        wrgpioa_a1_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell8_3(wrcell8_mux==3);
+        wrgpioa_a1_in<=val0;
+      endrule
+
       // --------------------
       // ----- cell 9 -----
 
@@ -431,10 +455,22 @@ package pinmux;
       // priority-in-muxer for cell idx 2
       rule assign_wrgpioa_a2_in_on_cell9(wrcell9_mux==0);
         wrgpioa_a2_in<=cell9_mux_in;
+        wruart2_rx<=val0;
       endrule
 
       rule assign_wruart2_rx_on_cell9(wrcell9_mux==1);
+        wrgpioa_a2_in<=val0;
         wruart2_rx<=cell9_mux_in;
+      endrule
+
+      rule assign_wr_on_cell9_2(wrcell9_mux==2);
+        wrgpioa_a2_in<=val0;
+        wruart2_rx<=val0;
+      endrule
+
+      rule assign_wr_on_cell9_3(wrcell9_mux==3);
+        wrgpioa_a2_in<=val0;
+        wruart2_rx<=val0;
       endrule
 
       // --------------------
@@ -459,6 +495,19 @@ package pinmux;
         wrgpioa_a3_in<=cell10_mux_in;
       endrule
 
+      rule assign_wr_on_cell10_1(wrcell10_mux==1);
+        wrgpioa_a3_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell10_2(wrcell10_mux==2);
+        wrgpioa_a3_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell10_3(wrcell10_mux==3);
+        wrgpioa_a3_in<=val0;
+      endrule
+
+      // --------------------
       // --------------------
       // ----- cell 12 -----
 
@@ -479,6 +528,18 @@ package pinmux;
       // priority-in-muxer for cell idx 4
       rule assign_wrgpioa_a5_in_on_cell12(wrcell12_mux==0);
         wrgpioa_a5_in<=cell12_mux_in;
+      endrule
+
+      rule assign_wr_on_cell12_1(wrcell12_mux==1);
+        wrgpioa_a5_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell12_2(wrcell12_mux==2);
+        wrgpioa_a5_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell12_3(wrcell12_mux==3);
+        wrgpioa_a5_in<=val0;
       endrule
 
       // --------------------
@@ -503,6 +564,18 @@ package pinmux;
         wrgpioa_a6_in<=cell13_mux_in;
       endrule
 
+      rule assign_wr_on_cell13_1(wrcell13_mux==1);
+        wrgpioa_a6_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell13_2(wrcell13_mux==2);
+        wrgpioa_a6_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell13_3(wrcell13_mux==3);
+        wrgpioa_a6_in<=val0;
+      endrule
+
       // --------------------
       // ----- cell 16 -----
 
@@ -523,6 +596,18 @@ package pinmux;
       // priority-in-muxer for cell idx 16
       rule assign_wrgpioa_a9_in_on_cell16(wrcell16_mux==0);
         wrgpioa_a9_in<=cell16_mux_in;
+      endrule
+
+      rule assign_wr_on_cell16_1(wrcell16_mux==1);
+        wrgpioa_a9_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell16_2(wrcell16_mux==2);
+        wrgpioa_a9_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell16_3(wrcell16_mux==3);
+        wrgpioa_a9_in<=val0;
       endrule
 
       // --------------------
@@ -547,6 +632,18 @@ package pinmux;
         wrgpioa_a10_in<=cell17_mux_in;
       endrule
 
+      rule assign_wr_on_cell17_1(wrcell17_mux==1);
+        wrgpioa_a10_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell17_2(wrcell17_mux==2);
+        wrgpioa_a10_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell17_3(wrcell17_mux==3);
+        wrgpioa_a10_in<=val0;
+      endrule
+
       // --------------------
       // ----- cell 18 -----
 
@@ -569,6 +666,18 @@ package pinmux;
         wrgpioa_a11_in<=cell18_mux_in;
       endrule
 
+      rule assign_wr_on_cell18_1(wrcell18_mux==1);
+        wrgpioa_a11_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell18_2(wrcell18_mux==2);
+        wrgpioa_a11_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell18_3(wrcell18_mux==3);
+        wrgpioa_a11_in<=val0;
+      endrule
+
       // --------------------
       // ----- cell 19 -----
 
@@ -589,10 +698,22 @@ package pinmux;
       // priority-in-muxer for cell idx 19
       rule assign_wrgpioa_a12_in_on_cell19(wrcell19_mux==0);
         wrgpioa_a12_in<=cell19_mux_in;
+        wrmspi2_miso <=val0;
       endrule
 
       rule assign_wrmspi2_miso_in_on_cell19(wrcell19_mux==1);
+        wrgpioa_a12_in<=val0;
         wrmspi2_miso <=cell19_mux_in;
+      endrule
+
+      rule assign_wr_on_cell19_2(wrcell19_mux==2);
+        wrgpioa_a12_in<=val0;
+        wrmspi2_miso <=val0;
+      endrule
+
+      rule assign_wr_on_cell19_3(wrcell19_mux==3);
+        wrgpioa_a12_in<=val0;
+        wrmspi2_miso <=val0;
       endrule
 
       // --------------------
@@ -615,6 +736,18 @@ package pinmux;
       // priority-in-muxer for cell idx 20
       rule assign_wrgpioa_a13_in_on_cell20(wrcell20_mux==0);
         wrgpioa_a13_in<=cell20_mux_in;
+      endrule
+
+      rule assign_wr_on_cell20_1(wrcell20_mux==1);
+        wrgpioa_a13_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell20_2(wrcell20_mux==2);
+        wrgpioa_a13_in<=val0;
+      endrule
+
+      rule assign_wr_on_cell20_3(wrcell20_mux==3);
+        wrgpioa_a13_in<=val0;
       endrule
 
       /*=========================================*/
