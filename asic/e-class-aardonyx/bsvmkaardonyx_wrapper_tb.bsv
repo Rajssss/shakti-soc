@@ -331,21 +331,38 @@ package bsvmkaardonyx_wrapper_tb;
 		
 	Ifc_FlashWrapper flash2 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
 	Ifc_FlashWrapper flash3 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
+	Ifc_FlashWrapper flash4 <- mkCypressFlashWrapper(clocked_by def_clk, reset_by def_rst);
+
 	TriState#(Bit#(1)) spi0_mosi <- mkTriState(True,soc_top.oSPI0_MOSI, clocked_by def_clk, reset_by def_rst);
 	TriState#(Bit#(1)) spi0_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
+	
 	TriState#(Bit#(1)) spi1_mosi <- mkTriState(True,soc_top.oSPI1_MOSI, clocked_by def_clk, reset_by def_rst);
 	TriState#(Bit#(1)) spi1_miso <- mkTriState(False, ?, clocked_by def_clk, reset_by def_rst);
+	
+	TriState#(Bit#(1)) spi2_sclk <- mkTriState(False,1'b1);
+	TriState#(Bit#(1)) spi2_ncs  <- mkTriState(False,1'b1);
 
 	mkConnection(spi0_mosi.io,flash2.si);
 	mkConnection(spi0_miso.io,flash2.so);
+	
 	mkConnection(spi1_mosi.io,flash3.si);
 	mkConnection(spi1_miso.io,flash3.so);
+	
+	mkConnection(soc_top.ioGPIO_11,flash4.si);
+	mkConnection(soc_top.ioGPIO_12,flash4.so);
+	mkConnection(soc_top.ioGPIO_13,spi2_sclk.io);
+	mkConnection(soc_top.ioGPIO_10,spi2_ncs.io);
 	
 	rule rl_connect_flash0_ports1;
 		flash2.iCSNeg(soc_top.oSPI0_NCS);
 		flash2.iSCK(soc_top.oSPI0_CLK);
 		flash3.iCSNeg(soc_top.oSPI1_NCS);
 		flash3.iSCK(soc_top.oSPI1_CLK);
+	endrule
+
+	rule rl_spi2_connections;
+		flash4.iCSNeg(spi2_ncs._read);
+		flash4.iSCK(spi2_sclk._read);
 	endrule
 
 	rule rl_connect_io;

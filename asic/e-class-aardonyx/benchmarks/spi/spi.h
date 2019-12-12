@@ -1,16 +1,17 @@
 #include<stdlib.h>
 
-#define SPI_CR1 	 0x00020100
-#define SPI_CR2 	 0x00020104
-#define SPI_SR       0x00020108
-#define SPI_DR1  	 0x0002010C
-#define SPI_DR2  	 0x00020110
-#define SPI_DR3  	 0x00020114
-#define SPI_DR4		 0x00020118
-#define SPI_DR5		 0x0002011C
-#define SPI_CRCPR    0x00020120
-#define SPI_RXCRCR   0x00020124
-#define SPI_TXCRCR   0x00020128
+#define SPI_CR1 	 0x00020200
+#define SPI_CR2 	 0x00020204
+#define SPI_SR       0x00020208
+#define SPI_DR1  	 0x0002020C
+#define SPI_DR2  	 0x00020210
+#define SPI_DR3  	 0x00020214
+#define SPI_DR4		 0x00020218
+#define SPI_DR5		 0x0002021C
+#define SPI_CRCPR    0x00020220
+#define SPI_RXCRCR   0x00020224
+#define SPI_TXCRCR   0x00020228
+#define PINMUX_CFG   0x00040310
 
 // defining SPI_CR1 register
 
@@ -72,6 +73,7 @@ int* spi_dr5  = (int*) SPI_DR5 ;
 int* spi_crcpr  = (int*) SPI_CRCPR;
 int* spi_rxcrcr = (int*) SPI_RXCRCR;
 int* spi_txcrcr = (int*) SPI_TXCRCR; 
+int* pinmux_cfg = (int*) PINMUX_CFG;
 
 int read_data[4096];
 
