@@ -76,7 +76,7 @@ package mixed_cluster;
   endmodule
 
   (*synthesize*)
-  module mkplic(Ifc_plic_axi4lite#(`paddr, 32, 0, 24, 2, 0));
+  module mkplic(Ifc_plic_axi4lite#(`paddr, 32, 0, 25, 2, 0));
     let ifc();
     mkplic_axi4lite#(`PLICBase)_temp(ifc);
     return ifc;
@@ -134,7 +134,7 @@ package mixed_cluster;
     rule rl_connect_plic_connections;
 			let tmp <- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= pack(tmp);
-			Bit#(24) plic_inputs= {i2c1.isint, i2c0.isint, lv_gpio_intr, wr_external_interrupts};
+			Bit#(25) plic_inputs= {i2c1.isint, i2c0.isint, lv_gpio_intr, wr_external_interrupts,0};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
 
