@@ -30,7 +30,6 @@ Details:
 */
 package bsvmkaardonyx_wrapper_tb;
  
-  
   import Soc::*;
   import Clocks::*;
   import GetPut::*;
@@ -217,6 +216,59 @@ package bsvmkaardonyx_wrapper_tb;
       end
     endrule
   `endif
+
+
+  TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
+  TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
+   mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
+   mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
+
+  `ifdef UART1
+    // -------- when uart1 is enabled through pinmux ----------//
+    
+    rule connect_uart1_in;
+      uart1.io.sin(gpi0_1_uart_tx._read());
+    endrule
+    // --------------------------------------------------------//
+  `endif
+    
+//  `ifdef UART2
+//    // -------- when uart1 is enabled through pinmux ----------//
+//    rule connect_uart2_out;
+//      soc.iocell_io.io10_cell_in(uart2.io.sout);
+//    endrule
+//    rule connect_uart2_in;
+//      uart2.io.sin(soc.iocell_io.io10_cell_out);
+//    endrule
+//    // --------------------------------------------------------//
+//  `endif
+
+
+    rule check_if_character_present(!rg_read_rx);
+      let {data,err}<- uart0.read_req('hc,Byte);
+      if (data[3]==1) // character present
+        rg_read_rx<=True;
+    endrule
+
+    rule write_received_character(rg_cnt>=5 && rg_read_rx);
+      let {data,err}<-uart0.read_req('h8,Byte);
+      $fwrite(dump1,"%c",data);
+    endrule
+
+`ifdef UART1
+
+    rule check_if_character_present(!rg_read_rx);
+      let {data,err}<- uart1.read_req('hc,Byte);
+      if (data[3]==1) // character present
+        rg_read_rx<=True;
+    endrule
+
+    rule write_received_character(rg_cnt>=5 && rg_read_rx);
+      let {data,err}<-uart1.read_req('h8,Byte);
+      $fwrite(dump1,"%c",data);
+    endrule
+
+`endif
 
    let dump1 <- mkReg(InvalidFile) ;
     rule open_file_app(rg_cnt<5);
