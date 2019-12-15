@@ -217,59 +217,6 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
   `endif
 
-
-  TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
-  TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
-   mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
-   mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
-
-  `ifdef UART1
-    // -------- when uart1 is enabled through pinmux ----------//
-    
-    rule connect_uart1_in;
-      uart1.io.sin(gpi0_1_uart_tx._read());
-    endrule
-    // --------------------------------------------------------//
-  `endif
-    
-//  `ifdef UART2
-//    // -------- when uart1 is enabled through pinmux ----------//
-//    rule connect_uart2_out;
-//      soc.iocell_io.io10_cell_in(uart2.io.sout);
-//    endrule
-//    rule connect_uart2_in;
-//      uart2.io.sin(soc.iocell_io.io10_cell_out);
-//    endrule
-//    // --------------------------------------------------------//
-//  `endif
-
-
-    rule check_if_character_present(!rg_read_rx);
-      let {data,err}<- uart0.read_req('hc,Byte);
-      if (data[3]==1) // character present
-        rg_read_rx<=True;
-    endrule
-
-    rule write_received_character(rg_cnt>=5 && rg_read_rx);
-      let {data,err}<-uart0.read_req('h8,Byte);
-      $fwrite(dump1,"%c",data);
-    endrule
-
-`ifdef UART1
-
-    rule check_if_character_present(!rg_read_rx);
-      let {data,err}<- uart1.read_req('hc,Byte);
-      if (data[3]==1) // character present
-        rg_read_rx<=True;
-    endrule
-
-    rule write_received_character(rg_cnt>=5 && rg_read_rx);
-      let {data,err}<-uart1.read_req('h8,Byte);
-      $fwrite(dump1,"%c",data);
-    endrule
-
-`endif
-
    let dump1 <- mkReg(InvalidFile) ;
     rule open_file_app(rg_cnt<5);
       String dumpFile1 = "app_log" ;
@@ -282,25 +229,85 @@ package bsvmkaardonyx_wrapper_tb;
     rg_cnt <= rg_cnt+1 ;
     endrule
 
-  
-  rule connect_UART0_out;
-    soc_top.iUART0_RX(uart0.io.sout);
-  endrule
-  rule connect_UART0_in;
-    uart0.io.sin(soc_top.oUART0_TX);
-  endrule
+ rule connect_UART0_out;
+   soc_top.iUART0_RX(uart0.io.sout);
+ endrule
+ rule connect_UART0_in;
+   uart0.io.sin(soc_top.oUART0_TX);
+ endrule
 
+//`ifdef uarten0
+	rule uart0_check_if_character_present(!rg_read_rx);
+	  let {data,err}<- uart0.read_req('hc,Byte);
+	  if (data[3]==1) // character present
+	    rg_read_rx<=True;
+	 	$display("\n UART0 Checking status from TbSoc %b",data);	
+	endrule
+	
+	rule uart0_write_received_character(rg_cnt>=5 && rg_read_rx);
+	  let {data,err}<-uart0.read_req('h8,Byte);
+	  $fwrite(dump1,"%c",data);
+	  $display("\n UART0 Dumping to file from TbSoc %b",data);	
+	endrule
+//`endif
 
-    rule check_if_character_present(!rg_read_rx);
-      let {data,err}<- uart0.read_req('hc,Byte);
-      if (data[3]==1) // character present
-        rg_read_rx<=True;
+  TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
+  TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
+   mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
+   mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
+
+    // -------- when uart1 is enabled through pinmux ----------//
+    
+    rule connect_uart1_in;
+			Bit#(1) temp = gpi0_1_uart_tx._read;
+			uart1.io.sin(temp);
+//			$display("\n UART1 Value from TbSoc %b ",temp);
     endrule
+    // --------------------------------------------------------//
 
-    rule write_received_character(rg_cnt>=5 && rg_read_rx);
-      let {data,err}<-uart0.read_req('h8,Byte);
-      $fwrite(dump1,"%c",data);
+//`ifdef uarten1
+	
+//	rule uart1_check_if_character_present(!rg_read_rx);
+//	  let {data,err}<- uart1.read_req('hc,Byte);
+//	  if (data[3]==1) // character present
+//	    rg_read_rx<=True;
+//	 $display("\n UART1 Checking status from TbSoc %x ",data);	
+//	endrule
+//	
+//	rule uart1_write_received_character(rg_cnt>=5 && rg_read_rx);
+//	  let {data,err}<-uart1.read_req('h8,Byte);
+//	  $fwrite(dump1,"%c",data);
+//	  $display("\n UART1 Dumping to file from TbSoc %x ",data);	
+//	endrule
+//`endif
+
+  TriState#(Bit#(1)) gpi0_3_uart_tx <- mkTriState(False,1'b1);
+  TriState#(Bit#(1)) gpi0_2_uart_rx <- mkTriState(True,uart2.io.sout);
+   mkConnection(soc_top.ioGPIO_2,gpi0_2_uart_rx.io);
+   mkConnection(soc_top.ioGPIO_3,gpi0_3_uart_tx.io);
+
+    // -------- when uart2 is enabled through pinmux ----------//
+    
+    rule connect_uart2_in;
+      uart2.io.sin(gpi0_3_uart_tx._read);
     endrule
+    // --------------------------------------------------------//
+//`ifdef uarten2
+
+//   rule check_if_character_present(!rg_read_rx);
+//     let {data,err}<- uart2.read_req('hc,Byte);
+//     if (data[3]==1) // character present
+//       rg_read_rx<=True;
+//   endrule
+//
+//   rule write_received_character(rg_cnt>=5 && rg_read_rx);
+//     let {data,err}<-uart2.read_req('h8,Byte);
+//     $fwrite(dump1,"%c",data);
+//   endrule
+
+//`endif
+
+
 	//===========================QSPI connection=========================//
 	
 	Ifc_issiflashwrapper flash1 <- mkissiflashwrapper(clocked_by def_clk, reset_by def_rst);
@@ -417,17 +424,9 @@ package bsvmkaardonyx_wrapper_tb;
 //      soc.iocell_io.io7_cell_in(0);
 //      soc.iocell_io.io9_cell_in(0);
 //      soc.iocell_io.io12_cell_in(0);
-//      soc.iocell_io.io13_cell_in(0);
-//      soc.iocell_io.io16_cell_in(0);
-//      soc.iocell_io.io17_cell_in(0);
-//      soc.iocell_io.io18_cell_in(0);
-//      soc.iocell_io.io19_cell_in(0);
-//      soc.iocell_io.io20_cell_in(0);
-//      soc.qspi_io.io_i(0);
-//      soc.spi0_io.miso(0);
-//      soc.spi1_io.miso(0);
-    endrule
 
+	endrule
+   
 //  `ifdef rtldump
 //    rule write_dump_file(rg_cnt>=5);
 //      let generate_dump <- $test$plusargs("rtldump");
