@@ -62,6 +62,19 @@ spi_cypress:
 	@$(RISCV_HEX) $(OUTDIR)/spi.riscv 2147483648 > $(OUTDIR)/code.mem
 	@cp $(OUTDIR)/code.mem ../.
 
+.PHONY: pwm
+pwm:
+	@echo "Compiling PWM code"
+	@mkdir -p output/
+	$(RISCV_GCC) -I./common -I./pwm -DCONFIG_RISCV64=True \
+				-DITERATIONS=$(iterations) -D$(target)=True -mcmodel=medany -static -std=gnu99 -O2 -ffast-math \
+				-fno-common -fno-builtin-printf -march=rv$(xlen)$(march) -w -static \
+				-nostartfiles -lgcc -T ./common/link.ld -o $(OUTDIR)/pwm.riscv ./pwm/pwm.c \
+				./common/syscalls.c ./common/crt.S
+	@$(RISCV_OBJDUMP) $(OUTDIR)/pwm.riscv > $(OUTDIR)/pwm.dump
+	@$(RISCV_HEX) $(OUTDIR)/pwm.riscv 2147483648 > $(OUTDIR)/code.mem
+	@cp $(OUTDIR)/code.mem ../.
+
 .PHONY: i2c
 i2c:
 	@echo "Compiling i2c polling code"
