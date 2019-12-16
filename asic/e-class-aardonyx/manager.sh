@@ -16,7 +16,7 @@ repo_list=(
 branch_list=(
   1.10.0
   master
-  6.1.3
+  6.2.0
   1.2.0
   master
   )
