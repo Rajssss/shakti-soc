@@ -103,7 +103,8 @@ endif
 override define_macros += -D VERBOSITY=$(VERBOSITY) -D CORE_$(COREFABRIC)=True \
 													-D MULSTAGES=$(MULSTAGES) -D DIVSTAGES=$(DIVSTAGES) \
 													-D Counters=$(COUNTERS) -D paddr=$(PADDR) -D vaddr=$(XLEN) \
-													-D PMPSIZE=$(PMPSIZE) -D resetpc=$(RESETPC) -D causesize=$(CAUSESIZE)
+													-D PMPSIZE=$(PMPSIZE) -D resetpc=$(RESETPC) -D causesize=$(CAUSESIZE)\
+													-D DTVEC_BASE=$(DTVEC_BASE)
 		
 # ------------------------------------------------------------------------------------------------ #
 # ------------------ Include directories for bsv compilation ------------------------------------- #
