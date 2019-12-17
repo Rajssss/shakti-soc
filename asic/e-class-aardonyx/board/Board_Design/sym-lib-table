@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Aardonyx-rescue)(type Legacy)(uri ${KIPRJMOD}/Aardonyx-rescue.lib)(options "")(descr ""))
+)
