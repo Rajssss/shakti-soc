@@ -14,6 +14,7 @@ ARITHTRAP=disable
 CAUSESIZE=6
 DEBUG=enable
 OPENOCD=disable
+DTVEC_BASE=16
 
 # Verilator options
 COVERAGE=none

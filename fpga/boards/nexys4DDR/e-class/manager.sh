@@ -14,9 +14,9 @@ repo_list=(
   )
 
 branch_list=(
-  1.10.0
+  1.10.2
   master
-  5.0.2
+  6.2.0
   1.0.0
   master
   )
