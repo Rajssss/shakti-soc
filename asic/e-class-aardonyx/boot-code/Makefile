@@ -21,6 +21,12 @@ boot.shakti: create_dir
 	@riscv$(XLEN)-unknown-elf-objdump -D $(OUTPUT)/boot.shakti > $(OUTPUT)/boot.dump
 	@elf2hex 4 256 $(OUTPUT)/boot.shakti 2147483648 > $(OUTPUT)/boot.mem
 
+boot_simulation.shakti: create_dir
+	@echo -e "$(GREEN) Generating boot code for simulation $(NC)"
+	@riscv$(XLEN)-unknown-elf-gcc -w -mcmodel=medlow -static -std=gnu99 -fno-builtin-printf  -c boot_simulation.s -o $(OUTPUT)/boot.o -march=rv$(XLEN)ic
+	@riscv$(XLEN)-unknown-elf-gcc -T link.ld $(OUTPUT)/boot.o -o $(OUTPUT)/boot.shakti -static -nostartfiles
+	@riscv$(XLEN)-unknown-elf-objdump -D $(OUTPUT)/boot.shakti > $(OUTPUT)/boot.dump
+	@elf2hex 4 256 $(OUTPUT)/boot.shakti 2147483648 > $(OUTPUT)/boot.mem
 
 clean: 
 	@rm -rf $(OUTPUT)

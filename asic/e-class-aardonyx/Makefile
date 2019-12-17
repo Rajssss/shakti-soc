@@ -56,6 +56,11 @@ ifeq ($(SYNTH),SIM)
 	TOP_MODULE=mkTbSoc
 	TOP_FILE=TbSoc.bsv
 endif
+ifeq ($(SYNTH),WRAPPER_SIM)
+  override define_macros += -D simulate=True
+	TOP_MODULE=mktb_wrapper
+	TOP_FILE=bsvmkaardonyx_wrapper_tb.bsv
+endif
 ifeq ($(SYNTH),FPGA_ARTY)
   override define_macros += -D fpga_arty=True
 endif
@@ -229,6 +234,7 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 	@mkdir -p bin
 	@mkdir work
 	@echo "Building RBB VPI"
+	@cp libs/*.so ./	
 	@echo "define work ./work" > cds.lib
 	@echo "define WORK work" > hdl.var
 	@ncvlog -64BIT -sv -cdslib ./cds.lib -hdlvar ./hdl.var +define+TOP=$(TOP_MODULE) \
@@ -240,11 +246,20 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 	@chmod +x $(BSVOUTDIR)/out
 	@echo Linking finished
 
+#.PHONY: link_irun
+#link_irun:
+#	rm -rf $(BSVOUTDIR) INCA_libs ncelab.log ncvlog.log irun.log irun.history
+#	irun -libext .v +define+TOP=$(TOP_MODULE) $(VCS_MACROS) -timescale 1ns/1ps \
+#		bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+
 .PHONY: link_irun
 link_irun:
-	rm -rf $(BSVOUTDIR) INCA_libs ncelab.log ncvlog.log irun.log irun.history
-	irun -libext .v +define+TOP=$(TOP_MODULE) $(VCS_MACROS) -timescale 1ns/1ps \
-		bfms/main.v -y $(VERILOGDIR)/ -y bfms/
+	@cp bfms/* verilog/.
+	@cp aardonyx_wrapper.v verilog/.
+	@irun -define TOP=mktb_wrapper -logfile ncsim.log -access +r -timescale 1ns/1ps \
+-libext .v $(VERILOGDIR)/main.v -ncsimargs "+fullverbose" -define VERBOSE \
+	-y $(VERILOGDIR)/ \
+	-y ${BLUESPECDIR}/Verilog/
 
 .PHONY: link_msim
 link_msim: ## Generate simulation executable using Mentor's ModelSim tool

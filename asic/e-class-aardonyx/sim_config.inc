@@ -1,6 +1,6 @@
 ISA=RV32IMAC
 MUL=asic
-SYNTH=SIM
+SYNTH=WRAPPER_SIM
 USERTRAPS=enable
 USER=enable
 COREFABRIC=AXI4Lite
@@ -12,7 +12,7 @@ ARITHTRAP=disable
 
 CAUSESIZE=6
 DEBUG=enable
-OPENOCD=disable
+OPENOCD=enable
 
 # Verilator options
 COVERAGE=none
@@ -21,7 +21,7 @@ THREADS=1
 VERILATESIM=fast
 
 VERBOSITY=enable
-RTLDUMP=enable
+RTLDUMP=disable
 ASSERTIONS=disable
 
 # Trigger Setup
