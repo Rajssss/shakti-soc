@@ -56,7 +56,7 @@ ifeq ($(SYNTH),SIM)
 	TOP_MODULE=mkTbSoc
 	TOP_FILE=TbSoc.bsv
 endif
-ifeq ($(WRAPPER_SIM),enable)
+ifeq ($(SYNTH),WRAPPER_SIM)
   override define_macros += -D simulate=True
 	TOP_MODULE=mktb_wrapper
 	TOP_FILE=bsvmkaardonyx_wrapper_tb.bsv
