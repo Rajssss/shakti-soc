@@ -383,7 +383,7 @@ package pinmux;
       // priority-in-muxer for cell idx 0
       rule assign_wrgpioa_a0_in_on_cell7(wrcell7_mux==0);
         wrgpioa_a0_in<=cell7_mux_in;
-        wruart1_rx<=val0;
+        wruart1_rx<=val1;
       endrule
 
       rule assign_wruart1_rx_on_cell7(wrcell7_mux==1);
@@ -392,12 +392,12 @@ package pinmux;
       endrule
 
       rule assign_wr_on_cell7_2(wrcell7_mux==2);
-        wruart1_rx<=val0;
+        wruart1_rx<=val1;
         wrgpioa_a0_in<=val0;
       endrule
 
       rule assign_wr_on_cell7_3(wrcell7_mux==3);
-        wruart1_rx<=val0;
+        wruart1_rx<=val1;
         wrgpioa_a0_in<=val0;
       endrule
 
@@ -455,7 +455,7 @@ package pinmux;
       // priority-in-muxer for cell idx 2
       rule assign_wrgpioa_a2_in_on_cell9(wrcell9_mux==0);
         wrgpioa_a2_in<=cell9_mux_in;
-        wruart2_rx<=val0;
+        wruart2_rx<=val1;
       endrule
 
       rule assign_wruart2_rx_on_cell9(wrcell9_mux==1);
@@ -465,12 +465,12 @@ package pinmux;
 
       rule assign_wr_on_cell9_2(wrcell9_mux==2);
         wrgpioa_a2_in<=val0;
-        wruart2_rx<=val0;
+        wruart2_rx<=val1;
       endrule
 
       rule assign_wr_on_cell9_3(wrcell9_mux==3);
         wrgpioa_a2_in<=val0;
-        wruart2_rx<=val0;
+        wruart2_rx<=val1;
       endrule
 
       // --------------------
