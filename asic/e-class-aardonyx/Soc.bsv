@@ -261,7 +261,8 @@ package Soc;
 
     // TODO qspi interrupts
     rule connect_interrupt_lines;
-      mixed_cluster.interrupts({pwm_cluster.pwm0_sb_interrupt,
+      mixed_cluster.interrupts({uart_cluster.uart_interrupts,
+																pwm_cluster.pwm0_sb_interrupt,
                                 pwm_cluster.pwm1_sb_interrupt,
                                 pwm_cluster.pwm2_sb_interrupt,
                                 pwm_cluster.pwm3_sb_interrupt,

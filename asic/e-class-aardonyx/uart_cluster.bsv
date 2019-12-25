@@ -58,6 +58,7 @@ package uart_cluster;
     interface RS232 uart1_io;
     interface RS232 uart2_io;
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
+    method Bit#(3) uart_interrupts;
   endinterface
 
   (*synthesize*)
@@ -65,7 +66,7 @@ package uart_cluster;
 	  let core_clock<-exposeCurrentClock;
   	let core_reset<-exposeCurrentReset;
     let ifc();
-    mkuart_axi4lite#(core_clock, core_reset, `ifdef simulate 5 `else 326 `endif ) _temp(ifc);
+	mkuart_axi4lite#(core_clock, core_reset, `ifdef simulate 5 `else 326 `endif , 0, 0) _temp(ifc);
     return ifc;
   endmodule
 
@@ -99,6 +100,9 @@ package uart_cluster;
     interface uart1_io=uart1.io;
     interface uart2_io=uart2.io;
     interface slave= c2s_xactor.axi_side;
+		method Bit#(3) uart_interrupts;
+			return {uart2.interrupt, uart1.interrupt, uart0.interrupt};
+		endmethod
   endmodule
 endpackage
 
