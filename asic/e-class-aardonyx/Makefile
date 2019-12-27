@@ -1,4 +1,4 @@
-## 			Makefile for E-Class AARDONYX SoC
+### 			Makefile for E-Class AARDONYX SoC
 
 ifeq (, $(wildcard ./old_vars))
 	old_define_macros = ""
@@ -322,6 +322,10 @@ generate_boot_files: update_xlen
     else cp bin/boot.MSB bin/boot.LSB;\
   fi
 
+.PHONY: generate_boot_files_wrapper
+generate_boot_files_wrapper: 
+	@cd boot-code;make boot_simulation.shakti;./gen_bootrom_bsvi.sh 
+	@cp boot-code/bootrom.bsvi .
 
 
 .PHONY: program

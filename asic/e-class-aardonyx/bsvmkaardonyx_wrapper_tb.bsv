@@ -187,7 +187,6 @@ package bsvmkaardonyx_wrapper_tb;
       sdram_bfm.idqm(extend(in));                                                            
     endrule
     // ------------------------------------------------------------------------- //
-		//mkConnection(soc.bootrom_master, bootrom.slave);
 
     UserInterface#(`paddr,XLEN,16) uart0 <- mkuart_user(5);
     UserInterface#(`paddr,XLEN,16) uart1 <- mkuart_user(5);
@@ -217,7 +216,9 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
   `endif
 
-   let dump1 <- mkReg(InvalidFile) ;
+	//---------------UART0 connections--------------------//   
+
+	let dump1 <- mkReg(InvalidFile) ;
     rule open_file_app(rg_cnt<5);
       String dumpFile1 = "app_log" ;
     	File lfh1 <- $fopen( dumpFile1, "w" ) ;
@@ -229,84 +230,134 @@ package bsvmkaardonyx_wrapper_tb;
     rg_cnt <= rg_cnt+1 ;
     endrule
 
- rule connect_UART0_out;
-   soc_top.iUART0_RX(uart0.io.sout);
- endrule
- rule connect_UART0_in;
-   uart0.io.sin(soc_top.oUART0_TX);
- endrule
+	rule connect_UART0_out;
+	  soc_top.iUART0_RX(uart0.io.sout);
+	endrule
+	rule connect_UART0_in;
+	  uart0.io.sin(soc_top.oUART0_TX);
+	endrule
 
-//`ifdef uarten0
 	rule uart0_check_if_character_present(!rg_read_rx);
 	  let {data,err}<- uart0.read_req('hc,Byte);
 	  if (data[3]==1) // character present
 	    rg_read_rx<=True;
-	 	$display("\n UART0 Checking status from TbSoc %b",data);	
 	endrule
 	
 	rule uart0_write_received_character(rg_cnt>=5 && rg_read_rx);
-	  let {data,err}<-uart0.read_req('h8,Byte);
-	  $fwrite(dump1,"%c",data);
-	  $display("\n UART0 Dumping to file from TbSoc %b",data);	
+		let {data,err}<-uart0.read_req('h8,Byte);
+		$fwrite(dump1,"%c",data);
 	endrule
-//`endif
 
-  TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
-  TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
-   mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
-   mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
+    // ------------------------------------------------------------------------- //
 
-    // -------- when uart1 is enabled through pinmux ----------//
-    
-    rule connect_uart1_in;
-			Bit#(1) temp = gpi0_1_uart_tx._read;
+	Reg#(Bit#(1)) rg_count1 <- mkReg(0);
+
+	 TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
+	 TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
+	 mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
+	 mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
+
+  // -------- when uart1 is enabled through pinmux ----------//
+	rule connect_uart1_in;
+		Bit#(1) temp = gpi0_1_uart_tx._read;
+		if(rg_count1 ==0) begin
+			if(temp ==1)
+				rg_count1 <= 1;
+			uart1.io.sin(1);
+		end
+		else
 			uart1.io.sin(temp);
-//			$display("\n UART1 Value from TbSoc %b ",temp);
-    endrule
-    // --------------------------------------------------------//
+   endrule
 
-//`ifdef uarten1
+    Reg#(Bit#(5)) rg_cnt1 <-mkReg(0);
+   let dump2 <- mkReg(InvalidFile) ;
+    rule open_file_app_1(rg_cnt1<5);
+      String dumpFile1 = "app_log_1" ;
+    	File lfh1 <- $fopen( dumpFile1, "w" ) ;
+    	if (lfh1==InvalidFile )begin
+    	  `logLevel( tb, 0, $format("TB: cannot open %s", dumpFile1))
+    	  $finish(0);
+    	end
+      dump2 <= lfh1;
+    rg_cnt1 <= rg_cnt1+1 ;
+    endrule
 	
-//	rule uart1_check_if_character_present(!rg_read_rx);
-//	  let {data,err}<- uart1.read_req('hc,Byte);
-//	  if (data[3]==1) // character present
-//	    rg_read_rx<=True;
+	rule uart1_check_if_character_present(!rg_read_rx);
+	  let {data,err}<- uart1.read_req('hc,Byte);
+	  if (data[3]==1) // character present
+	    rg_read_rx<=True;
 //	 $display("\n UART1 Checking status from TbSoc %x ",data);	
-//	endrule
-//	
-//	rule uart1_write_received_character(rg_cnt>=5 && rg_read_rx);
-//	  let {data,err}<-uart1.read_req('h8,Byte);
-//	  $fwrite(dump1,"%c",data);
+	endrule
+	
+	rule uart1_write_received_character(rg_cnt1>=5 && rg_read_rx);
+	  let {data,err}<-uart1.read_req('h8,Byte);
+	  $fwrite(dump2,"%c",data);
 //	  $display("\n UART1 Dumping to file from TbSoc %x ",data);	
-//	endrule
-//`endif
+	endrule
+    // ------------------------------------------------------------------------- //
 
-  TriState#(Bit#(1)) gpi0_3_uart_tx <- mkTriState(False,1'b1);
-  TriState#(Bit#(1)) gpi0_2_uart_rx <- mkTriState(True,uart2.io.sout);
-   mkConnection(soc_top.ioGPIO_2,gpi0_2_uart_rx.io);
-   mkConnection(soc_top.ioGPIO_3,gpi0_3_uart_tx.io);
+  // -------- when uart2 is enabled through pinmux ----------//
 
-    // -------- when uart2 is enabled through pinmux ----------//
+	Reg#(Bit#(1)) rg_count2 <- mkReg(0);
+
+	 TriState#(Bit#(1)) gpi0_3_uart_tx <- mkTriState(False,1'b1);
+	 TriState#(Bit#(1)) gpi0_2_uart_rx <- mkTriState(True,uart2.io.sout);
+	  mkConnection(soc_top.ioGPIO_2,gpi0_2_uart_rx.io);
+	  mkConnection(soc_top.ioGPIO_3,gpi0_3_uart_tx.io);
+
+  
+	rule connect_uart2_in;
+		Bit#(1) temp = gpi0_3_uart_tx._read;
+		if(rg_count2 ==0) begin
+			if(temp ==1)
+				rg_count2 <= 1;
+			uart2.io.sin(1);
+		end
+		else
+			uart2.io.sin(temp);
+   endrule
     
-    rule connect_uart2_in;
-      uart2.io.sin(gpi0_3_uart_tx._read);
+    Reg#(Bit#(5)) rg_cnt2 <-mkReg(0);
+   let dump3 <- mkReg(InvalidFile) ;
+    rule open_file_app_2(rg_cnt2<5);
+      String dumpFile1 = "app_log_2" ;
+    	File lfh1 <- $fopen( dumpFile1, "w" ) ;
+    	if (lfh1==InvalidFile )begin
+    	  `logLevel( tb, 0, $format("TB: cannot open %s", dumpFile1))
+    	  $finish(0);
+    	end
+      dump3 <= lfh1;
+    rg_cnt2 <= rg_cnt2+1 ;
     endrule
-    // --------------------------------------------------------//
-//`ifdef uarten2
 
-//   rule check_if_character_present(!rg_read_rx);
-//     let {data,err}<- uart2.read_req('hc,Byte);
-//     if (data[3]==1) // character present
-//       rg_read_rx<=True;
-//   endrule
-//
-//   rule write_received_character(rg_cnt>=5 && rg_read_rx);
-//     let {data,err}<-uart2.read_req('h8,Byte);
-//     $fwrite(dump1,"%c",data);
-//   endrule
+   rule uart2_check_if_character_present(!rg_read_rx);
+     let {data,err}<- uart2.read_req('hc,Byte);
+     if (data[3]==1) // character present
+       rg_read_rx<=True;
+   endrule
 
-//`endif
+   rule uart2_write_received_character(rg_cnt2>=5 && rg_read_rx);
+     let {data,err}<-uart2.read_req('h8,Byte);
+     $fwrite(dump3,"%c",data);
+   endrule
 
+// --------------------------------------------------------//
+
+//================UART_V2_verification=====================//
+//	
+//	 TriState#(Bit#(1)) gpi0_1_uart_tx <- mkTriState(False,1'b1);
+//	 TriState#(Bit#(1)) gpi0_0_uart_rx <- mkTriState(True,uart1.io.sout);
+//	 mkConnection(soc_top.ioGPIO_0,gpi0_0_uart_rx.io);
+//	 mkConnection(soc_top.ioGPIO_1,gpi0_1_uart_tx.io);
+//	
+//	
+//	 TriState#(Bit#(1)) gpi0_3_uart_tx <- mkTriState(False,1'b1);
+//	 TriState#(Bit#(1)) gpi0_2_uart_rx <- mkTriState(True,gpi0_1_uart_tx._read);
+//	 mkConnection(soc_top.ioGPIO_2,gpi0_2_uart_rx.io);
+//	 mkConnection(soc_top.ioGPIO_3,gpi0_3_uart_tx.io);
+//	
+//	
+//========================================================//
 
 	//===========================QSPI connection=========================//
 	

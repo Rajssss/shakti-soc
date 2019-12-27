@@ -1,0 +1,12 @@
+QSPI start
+	Write Volatile Configuration Register to exit XIP
+	Abort QSPI function 0 
+
+ Abort done
+
+ Status = 0 
+ temp_data = ffffffff 
+	Reading the ID register and discovering the Flash Device
+	 device id 9d189d18
+	N25Q256 Device Detected 
+Flash Mem Init Success

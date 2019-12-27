@@ -39,8 +39,9 @@ void main()
 	//Assumption 1 ---> output, 0 ---> input
 	write_word(GPIO_DIRECTION_CNTRL_REG, 0x0000FFFF);
 	//printf("\nGPIO Direction Register: 0x%08x", GPIO_DIRECTION_CNTRL_REG);
+    int i =0;
 
-	while(1)
+	while(i<5)
 	{
 		unsigned long readData = 0;
 
@@ -61,6 +62,7 @@ void main()
 		printf("\nRead Data is :0x%08x", readData);
 
 		DelayLoop(10, 10);
+        i++;
 	}
 
 }
