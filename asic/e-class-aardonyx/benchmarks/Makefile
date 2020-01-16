@@ -179,7 +179,7 @@ tglgpio:
 	@$(RISCV_OBJDUMP) $(OUTDIR)/tglgpio.riscv > $(OUTDIR)/tglgpio.dump
 	@$(RISCV_HEX) $(OUTDIR)/tglgpio.riscv 2147483648 > $(OUTDIR)/code.mem
 	@cp $(OUTDIR)/code.mem ../.
-	@cd ..; timeout 15m make link_irun
+	@cd ..; timeout 5m make link_irun
 	@diff -w  ./gpio/tglgpio_log ../app_log >err.log
     
 

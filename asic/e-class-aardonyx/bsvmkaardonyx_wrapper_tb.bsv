@@ -188,10 +188,12 @@ package bsvmkaardonyx_wrapper_tb;
     endrule
     // ------------------------------------------------------------------------- //
 
-    UserInterface#(`paddr,XLEN,16) uart0 <- mkuart_user(5);
-    UserInterface#(`paddr,XLEN,16) uart1 <- mkuart_user(5);
-    UserInterface#(`paddr,XLEN,16) uart2 <- mkuart_user(5);
-    Reg#(Bool) rg_read_rx<- mkDReg(False);
+    UserInterface#(`paddr,XLEN,16) uart0 <- mkuart_user(5,0,0);
+    UserInterface#(`paddr,XLEN,16) uart1 <- mkuart_user(5,0,0);
+    UserInterface#(`paddr,XLEN,16) uart2 <- mkuart_user(5,0,0);
+    Reg#(Bool) rg_read_rx_0<- mkDReg(False);
+    Reg#(Bool) rg_read_rx_1<- mkDReg(False);
+    Reg#(Bool) rg_read_rx_2<- mkDReg(False);
 
     Reg#(Bit#(5)) rg_cnt <-mkReg(0);
 
@@ -237,13 +239,13 @@ package bsvmkaardonyx_wrapper_tb;
 	  uart0.io.sin(soc_top.oUART0_TX);
 	endrule
 
-	rule uart0_check_if_character_present(!rg_read_rx);
+	rule uart0_check_if_character_present(!rg_read_rx_0);
 	  let {data,err}<- uart0.read_req('hc,Byte);
-	  if (data[3]==1) // character present
-	    rg_read_rx<=True;
+	  if (data[2]==1) // character present
+	    rg_read_rx_0<=True;
 	endrule
 	
-	rule uart0_write_received_character(rg_cnt>=5 && rg_read_rx);
+	rule uart0_write_received_character(rg_cnt>=5 && rg_read_rx_0);
 		let {data,err}<-uart0.read_req('h8,Byte);
 		$fwrite(dump1,"%c",data);
 	endrule
@@ -282,14 +284,14 @@ package bsvmkaardonyx_wrapper_tb;
     rg_cnt1 <= rg_cnt1+1 ;
     endrule
 	
-	rule uart1_check_if_character_present(!rg_read_rx);
+	rule uart1_check_if_character_present(!rg_read_rx_1);
 	  let {data,err}<- uart1.read_req('hc,Byte);
-	  if (data[3]==1) // character present
-	    rg_read_rx<=True;
+	  if (data[2]==1) // character present
+	    rg_read_rx_1<=True;
 //	 $display("\n UART1 Checking status from TbSoc %x ",data);	
 	endrule
 	
-	rule uart1_write_received_character(rg_cnt1>=5 && rg_read_rx);
+	rule uart1_write_received_character(rg_cnt1>=5 && rg_read_rx_1 && rg_count1 == 1);
 	  let {data,err}<-uart1.read_req('h8,Byte);
 	  $fwrite(dump2,"%c",data);
 //	  $display("\n UART1 Dumping to file from TbSoc %x ",data);	
@@ -330,13 +332,13 @@ package bsvmkaardonyx_wrapper_tb;
     rg_cnt2 <= rg_cnt2+1 ;
     endrule
 
-   rule uart2_check_if_character_present(!rg_read_rx);
+   rule uart2_check_if_character_present(!rg_read_rx_2);
      let {data,err}<- uart2.read_req('hc,Byte);
-     if (data[3]==1) // character present
-       rg_read_rx<=True;
+     if (data[2]==1) // character present
+       rg_read_rx_2<=True;
    endrule
 
-   rule uart2_write_received_character(rg_cnt2>=5 && rg_read_rx);
+   rule uart2_write_received_character(rg_cnt2>=5 && rg_read_rx_2 && rg_count2 == 1);
      let {data,err}<-uart2.read_req('h8,Byte);
      $fwrite(dump3,"%c",data);
    endrule

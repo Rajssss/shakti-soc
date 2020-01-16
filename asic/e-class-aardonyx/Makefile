@@ -257,6 +257,7 @@ link_ncverilog_openocd: ## Generate simulation executable using Synopsys VCS wit
 link_irun:
 	@cp bfms/* verilog/.
 	@cp aardonyx_wrapper.v verilog/.
+	@cp code.mem verilog/.
 	@irun -define TOP=mktb_wrapper -logfile ncsim.log -access +r -timescale 1ns/1ps \
 -libext .v $(VERILOGDIR)/main.v -ncsimargs "+fullverbose" -define VERBOSE \
 	-y $(VERILOGDIR)/ \
@@ -324,7 +325,7 @@ generate_boot_files: update_xlen
 
 .PHONY: generate_boot_files_wrapper
 generate_boot_files_wrapper: 
-	@cd boot-code;make boot_simulation.shakti;./gen_bootrom_bsvi.sh 
+	@cd boot-code;make boot_simulation.shakti;cp outputs/boot.mem .;./gen_bootrom_bsvi.sh; 
 	@cp boot-code/bootrom.bsvi .
 
 
