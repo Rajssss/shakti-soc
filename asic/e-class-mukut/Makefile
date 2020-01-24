@@ -26,7 +26,7 @@ TOP_MODULE:=mkSoc
 TOP_FILE:=Soc.bsv
 TOP_DIR:=./
 WORKING_DIR := $(shell pwd)
-Vivado_loc=$(shell which vivado)
+Vivado_loc=$(shell which vivado || which vivado_lab)
 
 
 # ------------------ based on the config generate define macros for bsv compilation --------------#
