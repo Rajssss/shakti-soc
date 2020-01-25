@@ -17,7 +17,7 @@ SHAKTI_HOME=$(PWD)
 export SHAKTI_HOME
 
 WORKING_DIR := $(shell pwd)
-Vivado_loc=$(shell which vivado)
+Vivado_loc=$(shell which vivado || which vivado_lab)
 
 
 

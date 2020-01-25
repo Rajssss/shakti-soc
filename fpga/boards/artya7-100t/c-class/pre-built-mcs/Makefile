@@ -1,4 +1,4 @@
-Vivado_loc=$(shell which vivado)
+Vivado_loc=$(shell which vivado || which vivado_lab)
 
 .PHONY: program_mcs_spansion
 program_mcs_spansion: ## Program the FPGA Configuration Memory in order to use the onboard ftdi jtag chain
