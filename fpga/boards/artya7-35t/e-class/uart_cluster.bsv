@@ -45,8 +45,8 @@ package uart_cluster;
       slave_num =  `UART0_slave_num;
     else if(addr>= `UART1Base && addr<= `UART1End )
       slave_num =  `UART1_slave_num;
-    else if(addr>= `UART2Base && addr<= `UART2End )
-      slave_num =  `UART2_slave_num;
+    //else if(addr>= `UART2Base && addr<= `UART2End )
+    //  slave_num =  `UART2_slave_num;
     else
       slave_num = `UARTCluster_err_slave_num;
       
@@ -56,8 +56,9 @@ package uart_cluster;
   interface Ifc_uart_cluster;
     interface RS232 uart0_io;
     interface RS232 uart1_io;
-    interface RS232 uart2_io;
+    //interface RS232 uart2_io;
     interface AXI4_Lite_Slave_IFC#(`paddr, 32, 0) slave;
+    method Bit#(2) uart_interrupts;
   endinterface
 
   (*synthesize*)
@@ -65,7 +66,7 @@ package uart_cluster;
 	  let core_clock<-exposeCurrentClock;
   	let core_reset<-exposeCurrentReset;
     let ifc();
-    mkuart_axi4lite#(core_clock, core_reset, 163) _temp(ifc);
+    mkuart_axi4lite#(core_clock, core_reset, 163, 0, 0) _temp(ifc);
     return ifc;
   endmodule
 
@@ -79,7 +80,7 @@ package uart_cluster;
                                                     fabric <- mkAXI4_Lite_Fabric(fn_slave_map);
     let uart0 <- mkuart();
     let uart1 <- mkuart();
-    let uart2 <- mkuart();
+    //let uart2 <- mkuart();
     Ifc_err_slave_axi4lite#(`paddr, 32, 0 ) err_slave <- mkerr_slave_axi4lite;
    	
    	mkConnection(c2m_xactor.axi_side, fabric.v_from_masters[0]);
@@ -92,13 +93,17 @@ package uart_cluster;
 		
  	  mkConnection (fabric.v_to_slaves [`UART0_slave_num ],uart0.slave);
  	  mkConnection (fabric.v_to_slaves [`UART1_slave_num ],uart1.slave);
- 	  mkConnection (fabric.v_to_slaves [`UART2_slave_num ],uart2.slave);
+ 	  //mkConnection (fabric.v_to_slaves [`UART2_slave_num ],uart2.slave);
     mkConnection (fabric.v_to_slaves [`UARTCluster_err_slave_num ] , err_slave.slave);
 
     interface uart0_io=uart0.io;
     interface uart1_io=uart1.io;
-    interface uart2_io=uart2.io;
+    //interface uart2_io=uart2.io;
     interface slave= c2s_xactor.axi_side;
+		method Bit#(2) uart_interrupts;
+			return {uart1.interrupt, uart0.interrupt};
+			//return {uart2.interrupt, uart1.interrupt, uart0.interrupt};
+		endmethod
   endmodule
 endpackage
 
