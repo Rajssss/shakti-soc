@@ -19,9 +19,9 @@
 `define BootBase          'h0000_1000
 `define BootEnd           'h0000_2FFF
 `define UARTClusterBase   'h0001_1300
-`define UARTClusterEnd    'h0001_1540
+`define UARTClusterEnd    'h0001_1440
 `define SPIClusterBase    'h0002_0000
-`define SPIClusterEnd     'h0002_02FF
+`define SPIClusterEnd     'h0002_01FF
 `define PWMClusterBase    'h0003_0000
 `define PWMClusterEnd     'h0003_05FF
 `define MixedClusterBase  'h0004_0000
@@ -58,36 +58,36 @@
 `define PWM5End      'h0003_05FF
 
 // - SPI cluster
-`define SPICluster_Num_Slaves 4
+`define SPICluster_Num_Slaves 3
 `define SPICluster_Num_Masters 1
 
 `define SPI0_slave_num 0
 `define SPI1_slave_num 1
-`define SPI2_slave_num 2
-`define SPICluster_err_slave_num 3
+//`define SPI2_slave_num 2
+`define SPICluster_err_slave_num 2
 
 `define SPI0Base     'h0002_0000
 `define SPI0End      'h0002_00FF
 `define SPI1Base     'h0002_0100
 `define SPI1End      'h0002_01FF
-`define SPI2Base     'h0002_0200
-`define SPI2End      'h0002_02FF
+//`define SPI2Base     'h0002_0200
+//`define SPI2End      'h0002_02FF
 
 // - UART cluster
-`define UARTCluster_Num_Slaves 4
+`define UARTCluster_Num_Slaves 3
 `define UARTCluster_Num_Masters 1
 
 `define UART0_slave_num 0
 `define UART1_slave_num 1
-`define UART2_slave_num 2
-`define UARTCluster_err_slave_num 3
+//`define UART2_slave_num 2
+`define UARTCluster_err_slave_num 2
 
 `define UART0Base     'h0001_1300
 `define UART0End      'h0001_1340
 `define UART1Base     'h0001_1400
 `define UART1End      'h0001_1440
-`define UART2Base     'h0001_1500
-`define UART2End      'h0001_1540
+//`define UART2Base     'h0001_1500
+//`define UART2End      'h0001_1540
 
 // - Mixed Cluster
 `define MixedCluster_Num_Slaves 5

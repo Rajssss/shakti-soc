@@ -17,8 +17,8 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
     9. For more details visit this [page](https://gitlab.com/shaktiproject/cores/e-class)
 
 * Devices: 
-    * __UART__: 3 instances. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/uart/uart_driver.c) for more info on the uart.
-    * __SPI__ : 3 instances. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/spi) for more info
+    * __UART__: 2 instances. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/uart/uart_driver.c) for more info on the uart.
+    * __SPI__ : 2 instances. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/spi) for more info
     * __PWM__ : 6 instances. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/pwm) for more info.
     * __I2C__ : 1 instance. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/i2c) for more info.
     * __GPIO__: 16 gpios. Refer [here](https://gitlab.com/shaktiproject/uncore/devices/blob/master/gpio) for more info.
@@ -38,10 +38,8 @@ Please see Soc.defines for the memory-map. Given below are the default configs t
 |BootRAM  | 'h0000_1000 | 'h0000_2FFF|
 |UART0    | 'h0001_1300 | 'h0000_1340|
 |UART1    | 'h0001_1400 | 'h0000_1440|
-|UART2    | 'h0001_1500 | 'h0000_1540|
 |SPI0     | 'h0002_0000 | 'h0002_00FF|
 |SPI1     | 'h0002_0100 | 'h0002_01FF|
-|SPI2     | 'h0002_0200 | 'h0002_02FF|
 |PWM0     | 'h0003_0000 | 'h0003_00FF|
 |PWM1     | 'h0003_0100 | 'h0003_01FF|
 |PWM2     | 'h0003_0200 | 'h0003_02FF|

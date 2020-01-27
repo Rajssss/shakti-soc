@@ -102,10 +102,10 @@ package Soc;
     interface PWMIO pwm5_io;
     interface Ifc_spi_io spi0_io;
     interface Ifc_spi_io spi1_io;
-    interface Ifc_spi_io spi2_io;
+    //interface Ifc_spi_io spi2_io;
     interface RS232 uart0_io;
     interface RS232 uart1_io;
-    interface RS232 uart2_io;
+    //interface RS232 uart2_io;
 		method I2C_out i2c_out;									//I2c IO interface
     (*always_ready, always_enabled*)
     interface GPIO#(32) gpio_io;						//GPIO IO interface
@@ -234,7 +234,7 @@ package Soc;
     endrule                                                                                         
 
     rule connect_interrupt_lines;
-      mixed_cluster.interrupts({wr_ext_interrutps, pwm_cluster.pwm0_sb_interrupt, 
+      mixed_cluster.interrupts({uart_cluster.uart_interrupts, pwm_cluster.pwm0_sb_interrupt, 
                                                   pwm_cluster.pwm1_sb_interrupt, 
                                                   pwm_cluster.pwm2_sb_interrupt, 
                                                   pwm_cluster.pwm3_sb_interrupt, 
@@ -263,6 +263,10 @@ package Soc;
     mkConnection(eclass.sb_clint_msip,clint.sb_clint_msip);
     mkConnection(eclass.sb_clint_mtip,clint.sb_clint_mtip);
     mkConnection(eclass.sb_clint_mtime,clint.sb_clint_mtime);
+
+    rule connect_ext_plic_interrupt;
+      eclass.sb_ext_interrupt.put(mixed_cluster.sb_ext_interrupt);
+    endrule
 
 
     // ------------- JTAG IOs ----------------------//
@@ -301,10 +305,10 @@ package Soc;
     interface pwm5_io = pwm_cluster.pwm5_io;
     interface spi0_io = spi_cluster.spi0_io;
     interface spi1_io = spi_cluster.spi1_io;
-    interface spi2_io = spi_cluster.spi2_io;
+    //interface spi2_io = spi_cluster.spi2_io;
     interface uart0_io = uart_cluster.uart0_io;
     interface uart1_io = uart_cluster.uart1_io;
-    interface uart2_io = uart_cluster.uart2_io;
+    //interface uart2_io = uart_cluster.uart2_io;
 		method  i2c_out = mixed_cluster.i2c_out;									//I2c IO interface
     interface gpio_io = mixed_cluster.gpio_io;						//GPIO IO interface
     interface xadc_master = mixed_cluster.xadc_master;

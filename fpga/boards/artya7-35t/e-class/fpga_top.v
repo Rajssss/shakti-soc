@@ -43,8 +43,8 @@ module fpga_top
     output        uart0_SOUT,
     input         uart1_SIN,
     output        uart1_SOUT,
-    input         uart2_SIN,
-    output        uart2_SOUT,
+    //input         uart2_SIN,
+    //output        uart2_SOUT,
 
 //   // ---- I2C ports --------//
     inout         i2c_sda,
@@ -59,10 +59,10 @@ module fpga_top
    output       spi1_sclk,
    output       spi1_nss,
    input        spi1_miso,
-   output       spi2_mosi,
-   output       spi2_sclk,
-   output       spi2_nss,
-   input        spi2_miso,
+   //output       spi2_mosi,
+   //output       spi2_sclk,
+   //output       spi2_nss,
+   //input        spi2_miso,
 
 //   // ---- PWM ports ---------//
     output pwm0,
@@ -231,18 +231,18 @@ module fpga_top
         .spi1_io_sclk(spi1_sclk),
         .spi1_io_nss(spi1_nss),
 	      .spi1_io_miso_dat(spi1_miso),
-        .spi2_io_mosi(spi2_mosi),
-        .spi2_io_sclk(spi2_sclk),
-        .spi2_io_nss(spi2_nss),
-	      .spi2_io_miso_dat(spi2_miso),
+        //.spi2_io_mosi(spi2_mosi),
+        //.spi2_io_sclk(spi2_sclk),
+        //.spi2_io_nss(spi2_nss),
+	      //.spi2_io_miso_dat(spi2_miso),
 
        // UART port definitions
         .uart0_io_SIN(uart0_SIN),
         .uart0_io_SOUT(uart0_SOUT),
         .uart1_io_SIN(uart1_SIN),
         .uart1_io_SOUT(uart1_SOUT),
-        .uart2_io_SIN(uart2_SIN),
-        .uart2_io_SOUT(uart2_SOUT),
+        //.uart2_io_SIN(uart2_SIN),
+        //.uart2_io_SOUT(uart2_SOUT),
 
 			  //I2C ports
         .i2c_out_scl_out (i2c_scl_out),
