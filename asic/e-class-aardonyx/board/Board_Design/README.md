@@ -1,3 +1,5 @@
+This design is draft verison it not complete verision. 
+
 This folder contains all board design related files.
 
 ## Directory Structure
