@@ -15,7 +15,7 @@ Configuration:
 
 9. FREQUENCY: 75-100Mhz
 10. PACKAGE: CQFP
-11. PIN COUNT MAX:103 + VCC&GND (WITH PINMUX)
+11. PIN COUNT MAX:256
 
 Google Sheet(Aardonyx SOC I/O Pin Count):
 https://docs.google.com/spreadsheets/d/1yA-pKs3_cNw3IYSj8Q-fh1bL_jA87MuPH5vjwz0L73s/edit?usp=sharing
