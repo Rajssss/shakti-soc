@@ -27,7 +27,6 @@ $ENDCMP
 $CMP 74AUP1G09GW
 D Single AND Gate, Low-Voltage CMOS
 K Single Gate AND LVC CMOS
-F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
 $ENDCMP
 #
 $CMP Barrel_Jack_Switch
@@ -39,6 +38,18 @@ $ENDCMP
 $CMP C_Small
 D Unpolarized capacitor, small symbol
 K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP Conn_01x04
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x04_Female
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
 F ~
 $ENDCMP
 #
@@ -113,6 +124,18 @@ K inductor choke coil reactor magnetic
 F ~
 $ENDCMP
 #
+$CMP MCP3008
+D A/D Converter, 10-Bit, 8-Channel, SPI Interface , 2.7V-5.5V
+K 12bit ADC Reference Single Supply SPI 8CH
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21295d.pdf
+$ENDCMP
+#
+$CMP MCP3208
+D A/D Converter, 12-Bit, 8-Channel, SPI Interface , 2.7V-5.5V
+K 12bit ADC Reference Single Supply SPI 8ch
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf
+$ENDCMP
+#
 $CMP NB3N511
 D 3.3V / 5.0V 14 MHz to 200 MHz PLL Clock Multiplier, SOIC-8
 K oscillator clock multiplier PLL
@@ -122,6 +145,18 @@ $ENDCMP
 $CMP R_US
 D Resistor, US symbol
 K R res resistor
+F ~
+$ENDCMP
+#
+$CMP SW_DIP_x03
+D 3x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
+F ~
+$ENDCMP
+#
+$CMP SW_DPST
+D Double Pole Single Throw (DPST) Switch
+K switch dual double-pole single-throw OFF-ON
 F ~
 $ENDCMP
 #

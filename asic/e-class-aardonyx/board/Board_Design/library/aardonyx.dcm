@@ -41,6 +41,12 @@ K capacitor cap
 F ~
 $ENDCMP
 #
+$CMP Conn_01x04
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP Conn_1x10
 D Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
@@ -133,6 +139,12 @@ $ENDCMP
 $CMP R_US
 D Resistor, US symbol
 K R res resistor
+F ~
+$ENDCMP
+#
+$CMP SW_DIP_x03
+D 3x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
 F ~
 $ENDCMP
 #
