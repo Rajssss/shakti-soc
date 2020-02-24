@@ -1,5 +1,35 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74AHC1G08
+D Single AND Gate, Low-Voltage CMOS
+K Single Gate AND LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
+$CMP 74AHCT1G08
+D Single AND Gate, Low-Voltage CMOS
+K Single Gate AND LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
+$CMP 74AUC1G08
+D Single AND Gate, Low-Voltage CMOS
+K Single Gate AND LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
+$CMP 74AUP1G08
+D Single AND Gate, Low-Voltage CMOS
+K Single Gate AND LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
+$CMP 74AUP1G09GW
+D Single AND Gate, Low-Voltage CMOS
+K Single Gate AND LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
 $CMP Barrel_Jack_Switch
 D DC Barrel Jack with an internal switch
 K DC power barrel jack connector
@@ -9,18 +39,6 @@ $ENDCMP
 $CMP C_Small
 D Unpolarized capacitor, small symbol
 K capacitor cap
-F ~
-$ENDCMP
-#
-$CMP Conn_01x08_Female
-D Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)
-K connector
-F ~
-$ENDCMP
-#
-$CMP Conn_01x10_Female
-D Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)
-K connector
 F ~
 $ENDCMP
 #
@@ -80,6 +98,12 @@ $ENDCMP
 $CMP L
 D Inductor
 K inductor choke coil reactor magnetic
+F ~
+$ENDCMP
+#
+$CMP L_Core_Iron_Coupled
+D Coupled inductor with iron core
+K inductor choke coil reactor magnetic coupled
 F ~
 $ENDCMP
 #
