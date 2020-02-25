@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title "Aardonyx_Development_Board"
+Title "AARDONYX_DEVELOPMENT_BOARD"
 Date ""
 Rev "R1V0"
 Comp "IIT_MADRAS"
