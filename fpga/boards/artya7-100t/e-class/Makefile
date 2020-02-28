@@ -28,6 +28,8 @@ TOP_DIR:=./
 WORKING_DIR := $(shell pwd)
 Vivado_loc=$(shell which vivado || which vivado_lab)
 
+BSC_DIR:=$(shell which bsc)
+BSC_VDIR:=$(subst bin/bsc,bin/,${BSC_DIR})../lib/Verilog
 
 # ------------------ based on the config generate define macros for bsv compilation --------------#
 ifneq (,$(findstring RV64,$(ISA)))
@@ -125,25 +127,18 @@ BSVCOMPILEOPTS:= +RTS -K40000M -RTS -check-assert  -keep-fires -opt-undetermined
 								 -unspecified-to X
 VERILOGDIR:=./verilog/
 BSVBUILDDIR:=./bsv_build/
-ifeq (, $(wildcard ${TOOLS_DIR}/shakti-tools/insert_license.sh))
-  VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout
-else
-  VERILOG_FILTER:= -verilog-filter ${BLUESPECDIR}/bin/basicinout \
-									 -verilog-filter ${TOOLS_DIR}/shakti-tools/insert_license.sh \
-									 -verilog-filter ${TOOLS_DIR}/shakti-tools/rename_translate.sh
-  VERILOGLICENSE:= cp ${TOOLS_DIR}/shakti-tools/IITM_LICENSE.txt ${VERILOGDIR}
-endif
 # ------------------------------------------------------------------------------------------------ #
 
 # ------------------------------------- Makefile TARGETS ----------------------------------------- #
-default: generate_verilog
+default: call_manager generate_verilog ip_build arty_build
 
 .PHONY: help
 help: ## This help dialog.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//' | column	-c2 -t -s :
 
 check-env:
-	@if test -z "$$BLUESPECDIR"; then echo "BLUESPECDIR variable not set"; exit 1; fi;
+	@if test -z "$(BSC_DIR)"; then echo "BSC_DIR variable not set"; exit 1; fi;
+	@if test -z "$(BSC_VDIR)"; then echo "BSC_VDIR variable not set"; exit 1; fi;
 
 .PHONY: check-restore
 check-restore:
@@ -161,7 +156,6 @@ set_jtag_bscan2e:
 set_raw_jtag_jlink: 
 	@sed -i 's/BSCAN2E=.*/BSCAN2E=disable/g' core_config.inc 
 
-
 .PHONY: quick_build_xilinx
 quick_build_xilinx: call_manager set_jtag_bscan2e generate_verilog ip_build arty_build generate_mcs program_mcs_spansion
 	
@@ -176,33 +170,32 @@ generate_verilog: check-restore check-env
 	@mkdir -p $(VERILOGDIR); 
 	@echo "old_define_macros = $(define_macros)" > old_vars
 	$(BSC_CMD) -vdir $(VERILOGDIR) -bdir $(BSVBUILDDIR) -info-dir $(BSVBUILDDIR)\
-  $(define_macros) $(BSVCOMPILEOPTS) $(VERILOG_FILTER) \
+  $(define_macros) $(BSVCOMPILEOPTS) \
   -p $(BSVINCDIR) -g $(TOP_MODULE) $(TOP_DIR)/$(TOP_FILE)  || (echo "BSC COMPILE ERROR"; exit 1) 
-	@cp ${BLUESPECDIR}/Verilog.Vivado/RegFile.v ${VERILOGDIR}  
-	@cp ${BLUESPECDIR}/Verilog/FIFO2.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/FIFO1.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/FIFO10.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/FIFOL1.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/Counter.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/SizedFIFO.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/ResetEither.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/MakeReset0.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/SyncReset0.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/ClockInverter.v ${VERILOGDIR}
-	@cp ${BLUESPECDIR}/Verilog/SyncFIFO1.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/../Verilog.Vivado/RegFile.v ${VERILOGDIR}  
+	@cp ${BSC_VDIR}/FIFO2.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/FIFO1.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/FIFO10.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/FIFOL1.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/Counter.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/SizedFIFO.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/ResetEither.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/MakeReset0.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/SyncReset0.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/ClockInverter.v ${VERILOGDIR}
+	@cp ${BSC_VDIR}/SyncFIFO1.v ${VERILOGDIR}
 	@cp ./common_verilog/bram_1rw.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncFIFO.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/RevertReg.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/SyncFIFO.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/RevertReg.v ${VERILOGDIR}
 #	@cp ./common_verilog/bram_1r1w.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/FIFO20.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/RegFileLoad.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncRegister.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/MakeClock.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/UngatedClockMux.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/MakeResetA.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncResetA.v ${VERILOGDIR}
-#	@cp ${BLUESPECDIR}/Verilog/SyncHandshake.v ${VERILOGDIR}
-	@$(VERILOGLICENSE)
+#	@cp ${BSC_VDIR}/FIFO20.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/RegFileLoad.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/SyncRegister.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/MakeClock.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/UngatedClockMux.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/MakeResetA.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/SyncResetA.v ${VERILOGDIR}
+#	@cp ${BSC_VDIR}/SyncHandshake.v ${VERILOGDIR}
 	@echo Compilation finished
 
 
