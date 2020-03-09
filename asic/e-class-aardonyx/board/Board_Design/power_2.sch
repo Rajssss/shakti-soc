@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 6 7
 Title "AARDONYX_DEVELOPMENT_BOARD"
 Date ""
 Rev "R1V0"
@@ -1193,4 +1193,9 @@ Text HLabel 7650 5100 2    50   Input ~ 0
 RESET_AH
 Wire Wire Line
 	7650 5100 7650 5250
+Wire Wire Line
+	1650 1850 1650 2050
+Wire Wire Line
+	1650 2050 1850 2050
+Connection ~ 1650 1850
 $EndSCHEMATC

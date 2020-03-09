@@ -160,6 +160,12 @@ K switch lever
 F ~
 $ENDCMP
 #
+$CMP TestPoint
+D test point
+K test point tp
+F ~
+$ENDCMP
+#
 $CMP USB_OTG
 D USB mini/micro connector
 K connector USB
