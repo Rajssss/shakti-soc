@@ -14,18 +14,18 @@
 `define GPIO_slave_num 6
 `define Err_slave_num 7
 
-`define MemoryBase  'h8000_0000
-`define MemoryEnd   'h87FF_FFFF
-`define UartBase    'h11300
-`define UartEnd     'h11340
-`define ClintBase   'h0200_0000
-`define ClintEnd    'h020B_FFFF
-`define DebugBase   'h0000_0000
-`define DebugEnd    'h0000_000F
-`define I2CBase    	'h020C_0000
-`define I2CEnd     	'h020C_00FF
-`define PLICBase	'h020D_0000
-`define PLICEnd		'h020D_00FF
-`define GPIOBase	'h0210_0000
-`define GPIOEnd		'h0210_00FF
 
+`define MemoryBase  'h8000_0000                                                                     
+`define MemoryEnd   'h87FF_FFFF                                                                     
+`define UartBase    'h11300                                                                         
+`define UartEnd     'h11340                                                                         
+`define ClintBase   'h0200_0000                                                                     
+`define ClintEnd    'h020B_FFFF                                                                     
+`define DebugBase   'h0000_0000                                                                     
+`define DebugEnd    'h0000_000F                                                                     
+`define I2CBase     'h020C_0000                                                                     
+`define I2CEnd      'h020C_00FF                                                                     
+`define GPIOBase    'h020D_0000                                                                     
+`define GPIOEnd     'h020D_00FF                                                                     
+`define PLICBase    'h0C00_0000                                                                     
+`define PLICEnd     'h0C02_0000 
