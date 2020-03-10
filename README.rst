@@ -19,18 +19,37 @@ Install Open Bluespec Compiler
 An open source version of the Bluespec Compiler is available `here
 <https://github.com/B-Lang-org/bsc>`_. 
 
-By installing the open-source Bluespec compiler, you will be able to generate synthesizable verilog compatible for FPGA targets.
 
-.. code-block:: yaml
+.. code-block:: bash
 
-  $ sudo apt-get install ghc libghc-regex-compat-dev libghc-syb-dev libghc-old-time-dev libfontconfig1-dev libx11-dev libxft-dev flex bison
+  $ sudo apt-get install ghc libghc-regex-compat-dev libghc-syb-dev \
+    libghc-old-time-dev libfontconfig1-dev libx11-dev libxft-dev flex bison \
+    tcl-dev tk-dev libfontconfig1-dev libx11-dev libxft-dev gperf iverilog \
+    libghc-split-dev
+
+For Debian 8, Debian 9, Ubuntu 16.04, and Ubuntu 18.04 version 3.4 install the following:
+
+.. code-block:: bash
+
+  $ sudo apt-get install itcl3-dev itk3-dev
+  
+For Debian 10 and later, and Ubuntu 19.04 
+
+.. code-block:: bash
+
+  $ sudo apt-get install tk-itcl4-dev tk-itk4-dev
+  
+Clone and install BSC
+
+.. code-block:: bash
+  
   $ git clone --recursive  https://github.com/B-Lang-org/bsc
   $ cd bsc
   $ make PREFIX=</path/to/install>
 
 After you have done the above, add the path you have installed the bsc compiler to your $PATH in the .bashrc or .cshrc 
 
-.. code-block:: yaml
+.. code-block:: bash
 
   $ export PATH=$(pwd)/inst/bin:$PATH
 
@@ -92,20 +111,6 @@ To install riscv-gnu-toolchain:
   $ make
   $ ./configure --prefix=$RISCV --with-arch=rv32gc --with-abi=ilp32d # for  32-bit toolchain
   $ make
-
-Now install riscv-isa-sim: 
-
-.. code-block:: yaml
-
-  $ git clone https://github.com/riscv/riscv-isa-sim.git
-  $ cd riscv-isa-sim
-  $ git checkout 6d15c93fd75db322981fe58ea1db13035e0f7add
-  $ git apply  </your download path>/c-class/configure/spike.patch
-  $ mkdir build
-  $ cd build
-  $ ../configure --prefix=$RISCV
-  $ make
-  $ make install
 
 Now install riscv-openocd:
 
