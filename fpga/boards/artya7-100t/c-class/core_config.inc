@@ -1,4 +1,4 @@
-ISA=RV64IMAFDC
+ISA=RV64IMAC
 
 # User mode related settings
 USERTRAPS=disable

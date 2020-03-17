@@ -87,6 +87,8 @@ package Soc;
   interface Ifc_Soc;
     interface AXI4_Master_IFC#(`paddr, ELEN, USERSPACE) mem_master;
     interface RS232 uart_io;
+		//method Bit#(1) uart_interrupt;
+
     // ------------- JTAG IOs ----------------------//
     (*always_enabled,always_ready*)
     method Action wire_tms(Bit#(1) tms_in);
@@ -123,12 +125,12 @@ package Soc;
     AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, ELEN, USERSPACE) 
                                                     fabric <- mkAXI4_Fabric(fn_slave_map);
     Ifc_debug_halt_loop_axi4#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop_axi4;
-	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68);
+	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68, 0, 0);
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
 		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
 		Ifc_gpio_axi4#(`paddr, ELEN, 0, 32) gpio <- mkgpio_axi4;
-		Ifc_plic_axi4#(`paddr, ELEN, 0, 26, 2, 0) plic <-mkplic_axi4(`PLICBase);
+		Ifc_plic_axi4#(`paddr, ELEN, 0, 27, 2, 0) plic <-mkplic_axi4(`PLICBase);
 
     // -------------------------------- JTAG + Debugger Setup ---------------------------------- //
     // null crossing registers to transfer input signals from current_domain to tck domain
@@ -207,7 +209,7 @@ package Soc;
 		rule rl_connect_plic_connections;
 			let tmp<- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= truncate(pack(tmp));
-			Bit#(26) plic_inputs= {1'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
+			Bit#(27) plic_inputs= {1'b0, uart.interrupt, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
 
@@ -234,6 +236,10 @@ package Soc;
     mkConnection(cclass.sb_clint_mtime,clint.sb_clint_mtime);
 
     interface uart_io=uart.io;
+	
+		//method Bit#(1) uart_interrupt;
+		//	return uart.interrupt;
+		//endmethod
 
     // ------------- JTAG IOs ----------------------//
     method Action wire_tms(Bit#(1)tms_in);                                                        

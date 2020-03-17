@@ -160,7 +160,7 @@ Installing Vivado HLx 2018.3
 5. Click "I Agree" to all three statements if you agree :-).  Click "Next".
 6. Select "Vivado HL WebPACK" and click "Next".
 7. Under "Design Tools", make sure that "Vivado Design Suite" and "Software Developer Kit (SDK)" are selected.
-8. In the "Devices" menu, de-select all parts except "SoCs" -> "Zynq-7000".  Click "Next".
+8. In the "Devices" menu, de-select all parts except "7 Series" -> "Artix-7".  Click "Next".
 9. For the installation directory, create a directory called "/tools/Xilinx" select it.  Then de-select "Create program group entries" and "Create desktop shortcuts".  Click "Next".
 10. Click "Install" and wait for the installer to finish.  It will take about an hour.
 11. Install the Xilinx cable drivers:
@@ -195,6 +195,13 @@ Installing Vivado HLx 2018.3
   SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
   IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
   Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+15. To add Vivado Board Files for Digilent FPGA Boards:
+
+.. code-block:: yaml
+
+	$ git clone https://github.com/Digilent/vivado-boards.git
+	$ sudo cp -r vivado-boards/new/board_files /tools/Xilinx/Vivado/2018.3/data/boards/board_files
 
 Install Miniterm
 ----------------
