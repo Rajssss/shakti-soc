@@ -1,0 +1,3118 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title "AARDONYX_DEVELOPMENT_BOARD"
+Date ""
+Rev "R1V0"
+Comp "IIT_MADRAS"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C63
+U 1 1 5DD40122
+P 8500 1450
+F 0 "C63" H 8500 1550 50  0000 L CNN
+F 1 "0.1uF" H 8500 1350 50  0000 L CNN
+F 2 "" H 8500 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8500 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8500 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8500 1450 50  0001 C CNN "Part Number"
+	1    8500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C66
+U 1 1 5DD40128
+P 8750 1450
+F 0 "C66" H 8750 1550 50  0000 L CNN
+F 1 "0.1uF" H 8750 1350 50  0000 L CNN
+F 2 "" H 8750 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8750 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8750 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8750 1450 50  0001 C CNN "Part Number"
+	1    8750 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C69
+U 1 1 5DD4012E
+P 9000 1450
+F 0 "C69" H 9000 1550 50  0000 L CNN
+F 1 "0.1uF" H 9000 1350 50  0000 L CNN
+F 2 "" H 9000 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9000 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9000 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9000 1450 50  0001 C CNN "Part Number"
+	1    9000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C72
+U 1 1 5DD40134
+P 9250 1450
+F 0 "C72" H 9250 1550 50  0000 L CNN
+F 1 "0.1uF" H 9250 1350 50  0000 L CNN
+F 2 "" H 9250 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9250 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9250 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9250 1450 50  0001 C CNN "Part Number"
+	1    9250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C75
+U 1 1 5DD4013A
+P 9500 1450
+F 0 "C75" H 9500 1550 50  0000 L CNN
+F 1 "0.1uF" H 9500 1350 50  0000 L CNN
+F 2 "" H 9500 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9500 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9500 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9500 1450 50  0001 C CNN "Part Number"
+	1    9500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C78
+U 1 1 5DD40140
+P 9750 1450
+F 0 "C78" H 9750 1550 50  0000 L CNN
+F 1 "0.1uF" H 9750 1350 50  0000 L CNN
+F 2 "" H 9750 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9750 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9750 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9750 1450 50  0001 C CNN "Part Number"
+	1    9750 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C81
+U 1 1 5DD40146
+P 10000 1450
+F 0 "C81" H 10000 1550 50  0000 L CNN
+F 1 "0.1uF" H 10000 1350 50  0000 L CNN
+F 2 "" H 10000 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10000 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10000 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10000 1450 50  0001 C CNN "Part Number"
+	1    10000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C84
+U 1 1 5DD4014C
+P 10250 1450
+F 0 "C84" H 10250 1550 50  0000 L CNN
+F 1 "0.1uF" H 10250 1350 50  0000 L CNN
+F 2 "" H 10250 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10250 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10250 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10250 1450 50  0001 C CNN "Part Number"
+	1    10250 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1550 8500 1700
+Wire Wire Line
+	8500 1700 8750 1700
+Wire Wire Line
+	8500 1200 8500 1350
+Wire Wire Line
+	8750 1350 8750 1200
+Connection ~ 8750 1200
+Wire Wire Line
+	8750 1200 8500 1200
+Wire Wire Line
+	9000 1350 9000 1200
+Connection ~ 9000 1200
+Wire Wire Line
+	9000 1200 8750 1200
+Wire Wire Line
+	8750 1550 8750 1700
+Connection ~ 8750 1700
+Wire Wire Line
+	8750 1700 9000 1700
+Wire Wire Line
+	9000 1550 9000 1700
+Connection ~ 9000 1700
+Wire Wire Line
+	9000 1700 9250 1700
+Wire Wire Line
+	9250 1550 9250 1700
+Connection ~ 9250 1700
+Wire Wire Line
+	9250 1700 9500 1700
+Wire Wire Line
+	9250 1350 9250 1200
+Connection ~ 9250 1200
+Wire Wire Line
+	9250 1200 9000 1200
+Wire Wire Line
+	9500 1350 9500 1200
+Connection ~ 9500 1200
+Wire Wire Line
+	9500 1200 9250 1200
+Wire Wire Line
+	9500 1550 9500 1700
+Connection ~ 9500 1700
+Wire Wire Line
+	9500 1700 9750 1700
+Wire Wire Line
+	9750 1550 9750 1700
+Connection ~ 9750 1700
+Wire Wire Line
+	9750 1700 10000 1700
+Wire Wire Line
+	9750 1350 9750 1200
+Connection ~ 9750 1200
+Wire Wire Line
+	9750 1200 9500 1200
+Wire Wire Line
+	10000 1350 10000 1200
+Connection ~ 10000 1200
+Wire Wire Line
+	10000 1200 9750 1200
+Wire Wire Line
+	10000 1550 10000 1700
+Connection ~ 10000 1700
+Wire Wire Line
+	10000 1700 10250 1700
+Wire Wire Line
+	10250 1350 10250 1200
+Wire Wire Line
+	10250 1200 10000 1200
+Wire Wire Line
+	10250 1550 10250 1700
+Wire Wire Line
+	5950 2900 5950 3050
+$Comp
+L Aardonyx-rescue:V1P8-aardonyx-Aardonyx-rescue #PWR0128
+U 1 1 5DD1AD11
+P 6250 1100
+F 0 "#PWR0128" H 6400 1050 50  0001 C CNN
+F 1 "V1P8" H 6255 1275 50  0000 C CNN
+F 2 "" H 6250 1100 50  0001 C CNN
+F 3 "" H 6250 1100 50  0001 C CNN
+	1    6250 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx-Aardonyx-rescue #PWR0127
+U 1 1 5DD1B90C
+P 5950 2900
+F 0 "#PWR0127" H 6100 2850 50  0001 C CNN
+F 1 "V3P3" H 5955 3075 50  0000 C CNN
+F 2 "" H 5950 2900 50  0001 C CNN
+F 3 "" H 5950 2900 50  0001 C CNN
+	1    5950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0132
+U 1 1 5DD1C03B
+P 8150 4200
+F 0 "#PWR0132" H 8150 3950 50  0001 C CNN
+F 1 "GND" H 8155 4027 50  0000 C CNN
+F 2 "" H 8150 4200 50  0001 C CNN
+F 3 "" H 8150 4200 50  0001 C CNN
+	1    8150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V1P8-aardonyx-Aardonyx-rescue #PWR0134
+U 1 1 5DD7A800
+P 8500 1150
+F 0 "#PWR0134" H 8650 1100 50  0001 C CNN
+F 1 "V1P8" H 8505 1325 50  0000 C CNN
+F 2 "" H 8500 1150 50  0001 C CNN
+F 3 "" H 8500 1150 50  0001 C CNN
+	1    8500 1150
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	500  500  11200 500 
+Wire Notes Line
+	11200 500  11200 6500
+Wire Notes Line
+	11200 6500 6950 6500
+Wire Notes Line
+	6950 6500 6950 7750
+Wire Notes Line
+	500  7750 500  500 
+Text Notes 6700 950  0    79   Italic 0
+SKT32E - POWER
+Connection ~ 6250 3050
+Connection ~ 6250 3850
+Wire Wire Line
+	6250 3850 6250 3950
+Connection ~ 6250 3750
+Wire Wire Line
+	6250 3750 6250 3850
+Connection ~ 6250 3650
+Wire Wire Line
+	6250 3650 6250 3750
+Connection ~ 6250 3550
+Wire Wire Line
+	6250 3550 6250 3650
+Wire Wire Line
+	6450 3450 6250 3450
+Connection ~ 6250 3450
+Wire Wire Line
+	6250 3450 6250 3550
+Wire Wire Line
+	6250 3350 6450 3350
+Wire Wire Line
+	6250 3050 6250 3150
+Connection ~ 6250 3350
+Wire Wire Line
+	6250 3350 6250 3450
+Wire Wire Line
+	6450 3250 6250 3250
+Connection ~ 6250 3250
+Wire Wire Line
+	6250 3250 6250 3350
+Connection ~ 6250 3150
+Wire Wire Line
+	6250 3150 6250 3250
+Wire Wire Line
+	8000 1650 8150 1650
+Wire Wire Line
+	8150 1650 8150 1750
+Wire Wire Line
+	8000 3950 8150 3950
+Connection ~ 8150 3950
+Wire Wire Line
+	8150 3950 8150 4200
+Wire Wire Line
+	8000 3850 8150 3850
+Connection ~ 8150 3850
+Wire Wire Line
+	8150 3850 8150 3950
+Wire Wire Line
+	8000 3750 8150 3750
+Connection ~ 8150 3750
+Wire Wire Line
+	8150 3750 8150 3850
+Wire Wire Line
+	8000 3650 8150 3650
+Connection ~ 8150 3650
+Wire Wire Line
+	8150 3650 8150 3750
+Wire Wire Line
+	8000 3550 8150 3550
+Connection ~ 8150 3550
+Wire Wire Line
+	8150 3550 8150 3650
+Wire Wire Line
+	8000 3450 8150 3450
+Connection ~ 8150 3450
+Wire Wire Line
+	8150 3450 8150 3550
+Wire Wire Line
+	8000 3350 8150 3350
+Connection ~ 8150 3350
+Wire Wire Line
+	8150 3350 8150 3450
+Wire Wire Line
+	8000 3250 8150 3250
+Connection ~ 8150 3250
+Wire Wire Line
+	8150 3250 8150 3350
+Wire Wire Line
+	8150 3150 8000 3150
+Connection ~ 8150 3150
+Wire Wire Line
+	8150 3150 8150 3250
+Wire Wire Line
+	8000 3050 8150 3050
+Wire Wire Line
+	8150 3050 8150 3150
+Wire Wire Line
+	8150 2450 8000 2450
+Connection ~ 8150 2450
+Wire Wire Line
+	8150 2450 8150 2550
+Wire Wire Line
+	8000 2350 8150 2350
+Connection ~ 8150 2350
+Wire Wire Line
+	8150 2350 8150 2450
+Wire Wire Line
+	8150 2250 8000 2250
+Connection ~ 8150 2250
+Wire Wire Line
+	8150 2250 8150 2350
+Wire Wire Line
+	8000 2150 8150 2150
+Connection ~ 8150 2150
+Wire Wire Line
+	8150 2150 8150 2250
+Wire Wire Line
+	8150 2050 8000 2050
+Connection ~ 8150 2050
+Wire Wire Line
+	8150 2050 8150 2150
+Wire Wire Line
+	8000 1950 8150 1950
+Connection ~ 8150 1950
+Wire Wire Line
+	8150 1950 8150 2050
+Wire Wire Line
+	8150 1850 8000 1850
+Connection ~ 8150 1850
+Wire Wire Line
+	8150 1850 8150 1950
+Wire Wire Line
+	8000 1750 8150 1750
+Connection ~ 8150 1750
+Wire Wire Line
+	8150 1750 8150 1850
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C64
+U 1 1 5F22D8AB
+P 8500 2500
+F 0 "C64" H 8500 2600 50  0000 L CNN
+F 1 "0.1uF" H 8500 2400 50  0000 L CNN
+F 2 "" H 8500 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8500 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8500 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8500 2500 50  0001 C CNN "Part Number"
+	1    8500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C67
+U 1 1 5F22D8B1
+P 8750 2500
+F 0 "C67" H 8750 2600 50  0000 L CNN
+F 1 "0.1uF" H 8750 2400 50  0000 L CNN
+F 2 "" H 8750 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8750 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8750 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8750 2500 50  0001 C CNN "Part Number"
+	1    8750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2400 8500 2250
+Wire Wire Line
+	8500 2600 8500 2750
+Wire Wire Line
+	8750 2400 8750 2250
+Wire Wire Line
+	8750 2600 8750 2750
+Wire Wire Line
+	8500 2250 8750 2250
+Wire Wire Line
+	8500 2750 8750 2750
+Connection ~ 8750 2750
+Wire Wire Line
+	8500 1150 8500 1200
+Connection ~ 8500 1200
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C65
+U 1 1 5F38ACB1
+P 8500 3550
+F 0 "C65" H 8500 3650 50  0000 L CNN
+F 1 "0.1uF" H 8500 3450 50  0000 L CNN
+F 2 "" H 8500 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8500 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8500 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8500 3550 50  0001 C CNN "Part Number"
+	1    8500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C68
+U 1 1 5F38ACB7
+P 8750 3550
+F 0 "C68" H 8750 3650 50  0000 L CNN
+F 1 "0.1uF" H 8750 3450 50  0000 L CNN
+F 2 "" H 8750 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 8750 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 8750 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 8750 3550 50  0001 C CNN "Part Number"
+	1    8750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C71
+U 1 1 5F38ACBD
+P 9000 3550
+F 0 "C71" H 9000 3650 50  0000 L CNN
+F 1 "0.1uF" H 9000 3450 50  0000 L CNN
+F 2 "" H 9000 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9000 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9000 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9000 3550 50  0001 C CNN "Part Number"
+	1    9000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C74
+U 1 1 5F38ACC3
+P 9250 3550
+F 0 "C74" H 9250 3650 50  0000 L CNN
+F 1 "0.1uF" H 9250 3450 50  0000 L CNN
+F 2 "" H 9250 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9250 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9250 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9250 3550 50  0001 C CNN "Part Number"
+	1    9250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C77
+U 1 1 5F38ACC9
+P 9500 3550
+F 0 "C77" H 9500 3650 50  0000 L CNN
+F 1 "0.1uF" H 9500 3450 50  0000 L CNN
+F 2 "" H 9500 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9500 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9500 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9500 3550 50  0001 C CNN "Part Number"
+	1    9500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C80
+U 1 1 5F38ACCF
+P 9750 3550
+F 0 "C80" H 9750 3650 50  0000 L CNN
+F 1 "0.1uF" H 9750 3450 50  0000 L CNN
+F 2 "" H 9750 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9750 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9750 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9750 3550 50  0001 C CNN "Part Number"
+	1    9750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C83
+U 1 1 5F38ACD5
+P 10000 3550
+F 0 "C83" H 10000 3650 50  0000 L CNN
+F 1 "0.1uF" H 10000 3450 50  0000 L CNN
+F 2 "" H 10000 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10000 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10000 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10000 3550 50  0001 C CNN "Part Number"
+	1    10000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C86
+U 1 1 5F38ACDB
+P 10250 3550
+F 0 "C86" H 10250 3650 50  0000 L CNN
+F 1 "0.1uF" H 10250 3450 50  0000 L CNN
+F 2 "" H 10250 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10250 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10250 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10250 3550 50  0001 C CNN "Part Number"
+	1    10250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3650 8500 3800
+Wire Wire Line
+	8500 3800 8750 3800
+Wire Wire Line
+	8500 3300 8500 3450
+Wire Wire Line
+	8750 3450 8750 3300
+Connection ~ 8750 3300
+Wire Wire Line
+	8750 3300 8500 3300
+Wire Wire Line
+	9000 3450 9000 3300
+Connection ~ 9000 3300
+Wire Wire Line
+	9000 3300 8750 3300
+Wire Wire Line
+	8750 3650 8750 3800
+Connection ~ 8750 3800
+Wire Wire Line
+	8750 3800 9000 3800
+Wire Wire Line
+	9000 3650 9000 3800
+Connection ~ 9000 3800
+Wire Wire Line
+	9000 3800 9250 3800
+Wire Wire Line
+	9250 3650 9250 3800
+Connection ~ 9250 3800
+Wire Wire Line
+	9250 3800 9500 3800
+Wire Wire Line
+	9250 3450 9250 3300
+Connection ~ 9250 3300
+Wire Wire Line
+	9250 3300 9000 3300
+Wire Wire Line
+	9500 3450 9500 3300
+Connection ~ 9500 3300
+Wire Wire Line
+	9500 3300 9250 3300
+Wire Wire Line
+	9500 3650 9500 3800
+Connection ~ 9500 3800
+Wire Wire Line
+	9500 3800 9750 3800
+Wire Wire Line
+	9750 3650 9750 3800
+Connection ~ 9750 3800
+Wire Wire Line
+	9750 3800 10000 3800
+Wire Wire Line
+	9750 3450 9750 3300
+Connection ~ 9750 3300
+Wire Wire Line
+	9750 3300 9500 3300
+Wire Wire Line
+	10000 3450 10000 3300
+Connection ~ 10000 3300
+Wire Wire Line
+	10000 3300 9750 3300
+Wire Wire Line
+	10000 3650 10000 3800
+Connection ~ 10000 3800
+Wire Wire Line
+	10000 3800 10250 3800
+Wire Wire Line
+	10250 3450 10250 3300
+Wire Wire Line
+	10250 3300 10000 3300
+Wire Wire Line
+	10250 3650 10250 3800
+Connection ~ 10250 3800
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0139
+U 1 1 5F38AD0C
+P 10750 3800
+F 0 "#PWR0139" H 10750 3550 50  0001 C CNN
+F 1 "GND" H 10755 3627 50  0000 C CNN
+F 2 "" H 10750 3800 50  0001 C CNN
+F 3 "" H 10750 3800 50  0001 C CNN
+	1    10750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C88
+U 1 1 5F38AD12
+P 10500 3550
+F 0 "C88" H 10500 3650 50  0000 L CNN
+F 1 "0.1uF" H 10500 3450 50  0000 L CNN
+F 2 "" H 10500 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10500 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10500 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10500 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10500 3550 50  0001 C CNN "Part Number"
+	1    10500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C90
+U 1 1 5F38AD18
+P 10750 3550
+F 0 "C90" H 10750 3650 50  0000 L CNN
+F 1 "0.1uF" H 10750 3450 50  0000 L CNN
+F 2 "" H 10750 3550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10750 3550 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10750 3550 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10750 3550 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10750 3550 50  0001 C CNN "Part Number"
+	1    10750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 3450 10500 3300
+Wire Wire Line
+	10500 3650 10500 3800
+Wire Wire Line
+	10750 3450 10750 3300
+Wire Wire Line
+	10750 3650 10750 3800
+Wire Wire Line
+	10250 3300 10500 3300
+Connection ~ 10250 3300
+Connection ~ 10500 3300
+Wire Wire Line
+	10500 3300 10750 3300
+Wire Wire Line
+	10250 3800 10500 3800
+Connection ~ 10500 3800
+Wire Wire Line
+	10500 3800 10750 3800
+Connection ~ 10750 3800
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx-Aardonyx-rescue #PWR0136
+U 1 1 5F38AD2A
+P 8500 3250
+F 0 "#PWR0136" H 8650 3200 50  0001 C CNN
+F 1 "V3P3" H 8505 3425 50  0000 C CNN
+F 2 "" H 8500 3250 50  0001 C CNN
+F 3 "" H 8500 3250 50  0001 C CNN
+	1    8500 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3250 8500 3300
+Connection ~ 8500 3300
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C70
+U 1 1 5F55509B
+P 9000 2500
+F 0 "C70" H 9000 2600 50  0000 L CNN
+F 1 "0.1uF" H 9000 2400 50  0000 L CNN
+F 2 "" H 9000 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9000 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9000 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9000 2500 50  0001 C CNN "Part Number"
+	1    9000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C87
+U 1 1 5F5550A1
+P 10500 1450
+F 0 "C87" H 10500 1550 50  0000 L CNN
+F 1 "0.1uF" H 10500 1350 50  0000 L CNN
+F 2 "" H 10500 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10500 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10500 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10500 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10500 1450 50  0001 C CNN "Part Number"
+	1    10500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C89
+U 1 1 5F5550A7
+P 10750 1450
+F 0 "C89" H 10750 1550 50  0000 L CNN
+F 1 "0.1uF" H 10750 1350 50  0000 L CNN
+F 2 "" H 10750 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10750 1450 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10750 1450 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10750 1450 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10750 1450 50  0001 C CNN "Part Number"
+	1    10750 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2750 9000 2750
+Wire Wire Line
+	9000 2600 9000 2750
+Wire Wire Line
+	10250 1700 10500 1700
+Wire Wire Line
+	9000 2400 9000 2250
+Wire Wire Line
+	9000 2250 8750 2250
+Wire Wire Line
+	10500 1350 10500 1200
+Connection ~ 10500 1200
+Wire Wire Line
+	10500 1200 10250 1200
+Wire Wire Line
+	10500 1550 10500 1700
+Connection ~ 10500 1700
+Wire Wire Line
+	10500 1700 10750 1700
+Wire Wire Line
+	10750 1350 10750 1200
+Wire Wire Line
+	10750 1200 10500 1200
+Wire Wire Line
+	10750 1550 10750 1700
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0137
+U 1 1 5F5550BE
+P 10250 2800
+F 0 "#PWR0137" H 10250 2550 50  0001 C CNN
+F 1 "GND" H 10255 2627 50  0000 C CNN
+F 2 "" H 10250 2800 50  0001 C CNN
+F 3 "" H 10250 2800 50  0001 C CNN
+	1    10250 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C73
+U 1 1 5F5550C4
+P 9250 2500
+F 0 "C73" H 9250 2600 50  0000 L CNN
+F 1 "0.1uF" H 9250 2400 50  0000 L CNN
+F 2 "" H 9250 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9250 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9250 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9250 2500 50  0001 C CNN "Part Number"
+	1    9250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C76
+U 1 1 5F5550CA
+P 9500 2500
+F 0 "C76" H 9500 2600 50  0000 L CNN
+F 1 "0.1uF" H 9500 2400 50  0000 L CNN
+F 2 "" H 9500 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9500 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9500 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9500 2500 50  0001 C CNN "Part Number"
+	1    9500 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 2400 9250 2250
+Wire Wire Line
+	9250 2600 9250 2750
+Wire Wire Line
+	9500 2400 9500 2250
+Wire Wire Line
+	9500 2600 9500 2750
+Wire Wire Line
+	9250 2250 9500 2250
+Wire Wire Line
+	9250 2750 9500 2750
+Connection ~ 9500 2750
+Connection ~ 8750 2250
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0131
+U 1 1 5F5D5945
+P 8150 2550
+F 0 "#PWR0131" H 8150 2300 50  0001 C CNN
+F 1 "GND" H 8155 2377 50  0000 C CNN
+F 2 "" H 8150 2550 50  0001 C CNN
+F 3 "" H 8150 2550 50  0001 C CNN
+	1    8150 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1100 6250 1250
+Connection ~ 6250 1450
+Wire Wire Line
+	6450 1450 6250 1450
+Wire Wire Line
+	6250 1450 6250 1550
+Connection ~ 6250 1550
+Wire Wire Line
+	6450 1550 6250 1550
+Wire Wire Line
+	6250 1550 6250 1650
+Wire Wire Line
+	6450 1650 6250 1650
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R89
+U 1 1 5E93944E
+P 2100 7150
+F 0 "R89" V 2050 7000 50  0000 C CNN
+F 1 "22E" V 2050 7300 50  0000 C CNN
+F 2 "" V 2140 7140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 7150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 7150 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 7150 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 7150 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 7150 50  0001 C CNN "Part Number"
+	1    2100 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R88
+U 1 1 5E939448
+P 2100 7050
+F 0 "R88" V 2050 6900 50  0000 C CNN
+F 1 "22E" V 2050 7200 50  0000 C CNN
+F 2 "" V 2140 7040 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 7050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 7050 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 7050 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 7050 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 7050 50  0001 C CNN "Part Number"
+	1    2100 7050
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R87
+U 1 1 5E939442
+P 2100 6950
+F 0 "R87" V 2050 6800 50  0000 C CNN
+F 1 "22E" V 2050 7100 50  0000 C CNN
+F 2 "" V 2140 6940 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6950 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6950 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6950 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6950 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6950 50  0001 C CNN "Part Number"
+	1    2100 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R86
+U 1 1 5E93943C
+P 2100 6850
+F 0 "R86" V 2050 6700 50  0000 C CNN
+F 1 "22E" V 2050 7000 50  0000 C CNN
+F 2 "" V 2140 6840 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6850 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6850 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6850 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6850 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6850 50  0001 C CNN "Part Number"
+	1    2100 6850
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R85
+U 1 1 5E939436
+P 2100 6750
+F 0 "R85" V 2050 6600 50  0000 C CNN
+F 1 "22E" V 2050 6900 50  0000 C CNN
+F 2 "" V 2140 6740 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6750 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6750 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6750 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6750 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6750 50  0001 C CNN "Part Number"
+	1    2100 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R84
+U 1 1 5E939430
+P 2100 6650
+F 0 "R84" V 2050 6500 50  0000 C CNN
+F 1 "22E" V 2050 6800 50  0000 C CNN
+F 2 "" V 2140 6640 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6650 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6650 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6650 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6650 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6650 50  0001 C CNN "Part Number"
+	1    2100 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R83
+U 1 1 5E939424
+P 2100 6500
+F 0 "R83" V 2050 6350 50  0000 C CNN
+F 1 "22E" V 2050 6650 50  0000 C CNN
+F 2 "" V 2140 6490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6500 50  0001 C CNN "Part Number"
+	1    2100 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R82
+U 1 1 5E93941E
+P 2100 6400
+F 0 "R82" V 2050 6250 50  0000 C CNN
+F 1 "22E" V 2050 6550 50  0000 C CNN
+F 2 "" V 2140 6390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6400 50  0001 C CNN "Part Number"
+	1    2100 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R81
+U 1 1 5E939418
+P 2100 6250
+F 0 "R81" V 2050 6100 50  0000 C CNN
+F 1 "22E" V 2050 6400 50  0000 C CNN
+F 2 "" V 2140 6240 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6250 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6250 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6250 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6250 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6250 50  0001 C CNN "Part Number"
+	1    2100 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R80
+U 1 1 5E939412
+P 2100 6150
+F 0 "R80" V 2050 6000 50  0000 C CNN
+F 1 "22E" V 2050 6300 50  0000 C CNN
+F 2 "" V 2140 6140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6150 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6150 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6150 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6150 50  0001 C CNN "Part Number"
+	1    2100 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R79
+U 1 1 5E93940C
+P 2100 6050
+F 0 "R79" V 2050 5900 50  0000 C CNN
+F 1 "22E" V 2050 6200 50  0000 C CNN
+F 2 "" V 2140 6040 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 6050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 6050 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 6050 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 6050 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 6050 50  0001 C CNN "Part Number"
+	1    2100 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R78
+U 1 1 5E939406
+P 2100 5950
+F 0 "R78" V 2050 5800 50  0000 C CNN
+F 1 "22E" V 2050 6100 50  0000 C CNN
+F 2 "" V 2140 5940 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5950 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5950 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5950 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5950 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5950 50  0001 C CNN "Part Number"
+	1    2100 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R77
+U 1 1 5E906F83
+P 2100 5600
+F 0 "R77" V 2050 5450 50  0000 C CNN
+F 1 "22E" V 2050 5750 50  0000 C CNN
+F 2 "" V 2140 5590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5600 50  0001 C CNN "Part Number"
+	1    2100 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R76
+U 1 1 5E906F7D
+P 2100 5500
+F 0 "R76" V 2050 5350 50  0000 C CNN
+F 1 "22E" V 2050 5650 50  0000 C CNN
+F 2 "" V 2140 5490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5500 50  0001 C CNN "Part Number"
+	1    2100 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R75
+U 1 1 5E906F77
+P 2100 5400
+F 0 "R75" V 2050 5250 50  0000 C CNN
+F 1 "22E" V 2050 5550 50  0000 C CNN
+F 2 "" V 2140 5390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5400 50  0001 C CNN "Part Number"
+	1    2100 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R74
+U 1 1 5E906F71
+P 2100 5300
+F 0 "R74" V 2050 5150 50  0000 C CNN
+F 1 "22E" V 2050 5450 50  0000 C CNN
+F 2 "" V 2140 5290 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5300 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5300 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5300 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5300 50  0001 C CNN "Part Number"
+	1    2100 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R73
+U 1 1 5E906F6B
+P 2100 5200
+F 0 "R73" V 2050 5050 50  0000 C CNN
+F 1 "22E" V 2050 5350 50  0000 C CNN
+F 2 "" V 2140 5190 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5200 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5200 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5200 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5200 50  0001 C CNN "Part Number"
+	1    2100 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R72
+U 1 1 5E906F65
+P 2100 5100
+F 0 "R72" V 2050 4950 50  0000 C CNN
+F 1 "22E" V 2050 5250 50  0000 C CNN
+F 2 "" V 2140 5090 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5100 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5100 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5100 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5100 50  0001 C CNN "Part Number"
+	1    2100 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R71
+U 1 1 5E906F5F
+P 2100 5000
+F 0 "R71" V 2050 4850 50  0000 C CNN
+F 1 "22E" V 2050 5150 50  0000 C CNN
+F 2 "" V 2140 4990 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 5000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 5000 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 5000 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 5000 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 5000 50  0001 C CNN "Part Number"
+	1    2100 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R70
+U 1 1 5E906F59
+P 2100 4900
+F 0 "R70" V 2050 4750 50  0000 C CNN
+F 1 "22E" V 2050 5050 50  0000 C CNN
+F 2 "" V 2140 4890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4900 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4900 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4900 50  0001 C CNN "Part Number"
+	1    2100 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R69
+U 1 1 5E906F53
+P 2100 4800
+F 0 "R69" V 2050 4650 50  0000 C CNN
+F 1 "22E" V 2050 4950 50  0000 C CNN
+F 2 "" V 2140 4790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4800 50  0001 C CNN "Part Number"
+	1    2100 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R68
+U 1 1 5E906F4D
+P 2100 4700
+F 0 "R68" V 2050 4550 50  0000 C CNN
+F 1 "22E" V 2050 4850 50  0000 C CNN
+F 2 "" V 2140 4690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4700 50  0001 C CNN "Part Number"
+	1    2100 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R67
+U 1 1 5E906F47
+P 2100 4600
+F 0 "R67" V 2050 4450 50  0000 C CNN
+F 1 "22E" V 2050 4750 50  0000 C CNN
+F 2 "" V 2140 4590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4600 50  0001 C CNN "Part Number"
+	1    2100 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R66
+U 1 1 5E906F41
+P 2100 4500
+F 0 "R66" V 2050 4350 50  0000 C CNN
+F 1 "22E" V 2050 4650 50  0000 C CNN
+F 2 "" V 2140 4490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4500 50  0001 C CNN "Part Number"
+	1    2100 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R65
+U 1 1 5E906F3B
+P 2100 4400
+F 0 "R65" V 2050 4250 50  0000 C CNN
+F 1 "22E" V 2050 4550 50  0000 C CNN
+F 2 "" V 2140 4390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 2100 4400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 2100 4400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 2100 4400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 2100 4400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 2100 4400 50  0001 C CNN "Part Number"
+	1    2100 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R127
+U 1 1 5E7A81DF
+P 4600 7500
+F 0 "R127" V 4550 7350 50  0000 C CNN
+F 1 "22E" V 4550 7650 50  0000 C CNN
+F 2 "" V 4640 7490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7500 50  0001 C CNN "Part Number"
+	1    4600 7500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R126
+U 1 1 5E795474
+P 4600 7400
+F 0 "R126" V 4550 7250 50  0000 C CNN
+F 1 "22E" V 4550 7550 50  0000 C CNN
+F 2 "" V 4640 7390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7400 50  0001 C CNN "Part Number"
+	1    4600 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R125
+U 1 1 5E79546E
+P 4600 7300
+F 0 "R125" V 4550 7150 50  0000 C CNN
+F 1 "22E" V 4550 7450 50  0000 C CNN
+F 2 "" V 4640 7290 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7300 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7300 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7300 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7300 50  0001 C CNN "Part Number"
+	1    4600 7300
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R118
+U 1 1 5E7821FD
+P 4600 6600
+F 0 "R118" V 4550 6450 50  0000 C CNN
+F 1 "22E" V 4550 6750 50  0000 C CNN
+F 2 "" V 4640 6590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6600 50  0001 C CNN "Part Number"
+	1    4600 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R111
+U 1 1 5E75C936
+P 4600 5900
+F 0 "R111" V 4550 5750 50  0000 C CNN
+F 1 "22E" V 4550 6050 50  0000 C CNN
+F 2 "" V 4640 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5900 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5900 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5900 50  0001 C CNN "Part Number"
+	1    4600 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R110
+U 1 1 5E75C930
+P 4600 5800
+F 0 "R110" V 4550 5650 50  0000 C CNN
+F 1 "22E" V 4550 5950 50  0000 C CNN
+F 2 "" V 4640 5790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5800 50  0001 C CNN "Part Number"
+	1    4600 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R109
+U 1 1 5E75C92A
+P 4600 5700
+F 0 "R109" V 4550 5550 50  0000 C CNN
+F 1 "22E" V 4550 5850 50  0000 C CNN
+F 2 "" V 4640 5690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5700 50  0001 C CNN "Part Number"
+	1    4600 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R124
+U 1 1 5E54A406
+P 4600 7200
+F 0 "R124" V 4550 7050 50  0000 C CNN
+F 1 "22E" V 4550 7350 50  0000 C CNN
+F 2 "" V 4640 7190 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7200 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7200 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7200 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7200 50  0001 C CNN "Part Number"
+	1    4600 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R123
+U 1 1 5E53B3F2
+P 4600 7100
+F 0 "R123" V 4550 6950 50  0000 C CNN
+F 1 "22E" V 4550 7250 50  0000 C CNN
+F 2 "" V 4640 7090 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7100 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7100 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7100 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7100 50  0001 C CNN "Part Number"
+	1    4600 7100
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R122
+U 1 1 5E52C580
+P 4600 7000
+F 0 "R122" V 4550 6850 50  0000 C CNN
+F 1 "22E" V 4550 7150 50  0000 C CNN
+F 2 "" V 4640 6990 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 7000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 7000 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 7000 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 7000 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 7000 50  0001 C CNN "Part Number"
+	1    4600 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R121
+U 1 1 5E51D743
+P 4600 6900
+F 0 "R121" V 4550 6750 50  0000 C CNN
+F 1 "22E" V 4550 7050 50  0000 C CNN
+F 2 "" V 4640 6890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6900 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6900 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6900 50  0001 C CNN "Part Number"
+	1    4600 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R120
+U 1 1 5E50E860
+P 4600 6800
+F 0 "R120" V 4550 6650 50  0000 C CNN
+F 1 "22E" V 4550 6950 50  0000 C CNN
+F 2 "" V 4640 6790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6800 50  0001 C CNN "Part Number"
+	1    4600 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R119
+U 1 1 5E4FF973
+P 4600 6700
+F 0 "R119" V 4550 6550 50  0000 C CNN
+F 1 "22E" V 4550 6850 50  0000 C CNN
+F 2 "" V 4640 6690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6700 50  0001 C CNN "Part Number"
+	1    4600 6700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R117
+U 1 1 5E4F0A09
+P 4600 6500
+F 0 "R117" V 4550 6350 50  0000 C CNN
+F 1 "22E" V 4550 6650 50  0000 C CNN
+F 2 "" V 4640 6490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6500 50  0001 C CNN "Part Number"
+	1    4600 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R116
+U 1 1 5E4E1A96
+P 4600 6400
+F 0 "R116" V 4550 6250 50  0000 C CNN
+F 1 "22E" V 4550 6550 50  0000 C CNN
+F 2 "" V 4640 6390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6400 50  0001 C CNN "Part Number"
+	1    4600 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R115
+U 1 1 5E4D2C98
+P 4600 6300
+F 0 "R115" V 4550 6150 50  0000 C CNN
+F 1 "22E" V 4550 6450 50  0000 C CNN
+F 2 "" V 4640 6290 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6300 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6300 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6300 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6300 50  0001 C CNN "Part Number"
+	1    4600 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R114
+U 1 1 5E4C3D89
+P 4600 6200
+F 0 "R114" V 4550 6050 50  0000 C CNN
+F 1 "22E" V 4550 6350 50  0000 C CNN
+F 2 "" V 4640 6190 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6200 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6200 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6200 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6200 50  0001 C CNN "Part Number"
+	1    4600 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R113
+U 1 1 5E4B4FA8
+P 4600 6100
+F 0 "R113" V 4550 5950 50  0000 C CNN
+F 1 "22E" V 4550 6250 50  0000 C CNN
+F 2 "" V 4640 6090 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6100 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6100 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6100 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6100 50  0001 C CNN "Part Number"
+	1    4600 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R112
+U 1 1 5E4A616F
+P 4600 6000
+F 0 "R112" V 4550 5850 50  0000 C CNN
+F 1 "22E" V 4550 6150 50  0000 C CNN
+F 2 "" V 4640 5990 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 6000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 6000 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 6000 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 6000 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 6000 50  0001 C CNN "Part Number"
+	1    4600 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R108
+U 1 1 5E496E28
+P 4600 5600
+F 0 "R108" V 4550 5450 50  0000 C CNN
+F 1 "22E" V 4550 5750 50  0000 C CNN
+F 2 "" V 4640 5590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5600 50  0001 C CNN "Part Number"
+	1    4600 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R107
+U 1 1 5E488081
+P 4600 5500
+F 0 "R107" V 4550 5350 50  0000 C CNN
+F 1 "22E" V 4550 5650 50  0000 C CNN
+F 2 "" V 4640 5490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5500 50  0001 C CNN "Part Number"
+	1    4600 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R106
+U 1 1 5E4792DA
+P 4600 5400
+F 0 "R106" V 4550 5250 50  0000 C CNN
+F 1 "22E" V 4550 5550 50  0000 C CNN
+F 2 "" V 4640 5390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5400 50  0001 C CNN "Part Number"
+	1    4600 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R105
+U 1 1 5E46A533
+P 4600 5300
+F 0 "R105" V 4550 5150 50  0000 C CNN
+F 1 "22E" V 4550 5450 50  0000 C CNN
+F 2 "" V 4640 5290 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5300 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5300 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5300 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5300 50  0001 C CNN "Part Number"
+	1    4600 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R104
+U 1 1 5E45B78C
+P 4600 5200
+F 0 "R104" V 4550 5050 50  0000 C CNN
+F 1 "22E" V 4550 5350 50  0000 C CNN
+F 2 "" V 4640 5190 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5200 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5200 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5200 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5200 50  0001 C CNN "Part Number"
+	1    4600 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R103
+U 1 1 5E44C8E4
+P 4600 5100
+F 0 "R103" V 4550 4950 50  0000 C CNN
+F 1 "22E" V 4550 5250 50  0000 C CNN
+F 2 "" V 4640 5090 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5100 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5100 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5100 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5100 50  0001 C CNN "Part Number"
+	1    4600 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R102
+U 1 1 5E43DB20
+P 4600 5000
+F 0 "R102" V 4550 4850 50  0000 C CNN
+F 1 "22E" V 4550 5150 50  0000 C CNN
+F 2 "" V 4640 4990 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 5000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 5000 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 5000 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 5000 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 5000 50  0001 C CNN "Part Number"
+	1    4600 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R101
+U 1 1 5E42EC91
+P 4600 4900
+F 0 "R101" V 4550 4750 50  0000 C CNN
+F 1 "22E" V 4550 5050 50  0000 C CNN
+F 2 "" V 4640 4890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4900 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4900 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4900 50  0001 C CNN "Part Number"
+	1    4600 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R100
+U 1 1 5E41FEEA
+P 4600 4800
+F 0 "R100" V 4550 4650 50  0000 C CNN
+F 1 "22E" V 4550 4950 50  0000 C CNN
+F 2 "" V 4640 4790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4800 50  0001 C CNN "Part Number"
+	1    4600 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R99
+U 1 1 5E4110C5
+P 4600 4700
+F 0 "R99" V 4550 4550 50  0000 C CNN
+F 1 "22E" V 4550 4850 50  0000 C CNN
+F 2 "" V 4640 4690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4700 50  0001 C CNN "Part Number"
+	1    4600 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R98
+U 1 1 5E40223A
+P 4600 4600
+F 0 "R98" V 4550 4450 50  0000 C CNN
+F 1 "22E" V 4550 4750 50  0000 C CNN
+F 2 "" V 4640 4590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4600 50  0001 C CNN "Part Number"
+	1    4600 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R97
+U 1 1 5E3F33F8
+P 4600 4500
+F 0 "R97" V 4550 4350 50  0000 C CNN
+F 1 "22E" V 4550 4650 50  0000 C CNN
+F 2 "" V 4640 4490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4500 50  0001 C CNN "Part Number"
+	1    4600 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R96
+U 1 1 5E3B43DA
+P 4600 4400
+F 0 "R96" V 4550 4250 50  0000 C CNN
+F 1 "22E" V 4550 4550 50  0000 C CNN
+F 2 "" V 4640 4390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4600 4400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4600 4400 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4600 4400 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4600 4400 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4600 4400 50  0001 C CNN "Part Number"
+	1    4600 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4500 5350 4500
+Wire Wire Line
+	4750 4600 5350 4600
+Wire Wire Line
+	4750 4700 5350 4700
+Wire Wire Line
+	4750 4800 5350 4800
+Wire Wire Line
+	4750 4900 5350 4900
+Wire Wire Line
+	4750 5000 5350 5000
+Wire Wire Line
+	4750 5100 5350 5100
+Wire Wire Line
+	4750 5200 5350 5200
+Wire Wire Line
+	4750 5300 5350 5300
+Wire Wire Line
+	4750 5400 5350 5400
+Wire Wire Line
+	4750 5500 5350 5500
+Wire Wire Line
+	4750 5600 5350 5600
+Wire Wire Line
+	4750 5700 5350 5700
+Wire Wire Line
+	4750 5800 5350 5800
+Wire Wire Line
+	4750 5900 5350 5900
+Wire Wire Line
+	4750 6000 5350 6000
+Wire Wire Line
+	4750 6100 5350 6100
+Wire Wire Line
+	4750 6200 5350 6200
+Wire Wire Line
+	4750 6300 5350 6300
+Wire Wire Line
+	4750 6400 5350 6400
+Wire Wire Line
+	4750 6500 5350 6500
+Wire Wire Line
+	4750 6600 5350 6600
+Wire Wire Line
+	4750 6700 5350 6700
+Wire Wire Line
+	4750 6800 5350 6800
+Wire Wire Line
+	4750 6900 5350 6900
+Wire Wire Line
+	4750 7000 5350 7000
+Wire Wire Line
+	4750 7100 5350 7100
+Wire Wire Line
+	4750 7200 5350 7200
+Wire Wire Line
+	4750 7300 5350 7300
+Wire Wire Line
+	4750 7400 5350 7400
+Wire Wire Line
+	4750 7500 5350 7500
+Wire Wire Line
+	1350 4400 1950 4400
+Wire Wire Line
+	1350 4500 1950 4500
+Wire Wire Line
+	1350 4600 1950 4600
+Wire Wire Line
+	1350 4700 1950 4700
+Wire Wire Line
+	1350 4800 1950 4800
+Wire Wire Line
+	1350 4900 1950 4900
+Wire Wire Line
+	1350 5000 1950 5000
+Wire Wire Line
+	1350 5100 1950 5100
+Wire Wire Line
+	1350 5200 1950 5200
+Wire Wire Line
+	1350 5300 1950 5300
+Wire Wire Line
+	1350 5400 1950 5400
+Wire Wire Line
+	1350 5500 1950 5500
+Wire Wire Line
+	1350 5600 1950 5600
+Wire Wire Line
+	1350 5950 1950 5950
+Wire Wire Line
+	1350 6050 1950 6050
+Wire Wire Line
+	1350 6150 1950 6150
+Wire Wire Line
+	1350 6250 1950 6250
+Wire Wire Line
+	1350 6400 1950 6400
+Wire Wire Line
+	1350 6500 1950 6500
+Wire Wire Line
+	1350 6650 1950 6650
+Wire Wire Line
+	1350 6750 1950 6750
+Wire Wire Line
+	1350 6850 1950 6850
+Wire Wire Line
+	1350 6950 1950 6950
+Wire Wire Line
+	1350 7050 1950 7050
+Wire Wire Line
+	1950 7150 1350 7150
+Wire Wire Line
+	4750 4400 5350 4400
+Text Label 4900 4400 0    39   ~ 0
+SDRAM_D0
+Text Label 4900 4500 0    39   ~ 0
+SDRAM_D1
+Text Label 4900 4600 0    39   ~ 0
+SDRAM_D2
+Text Label 4900 4700 0    39   ~ 0
+SDRAM_D3
+Text Label 4900 4800 0    39   ~ 0
+SDRAM_D4
+Text Label 4900 4900 0    39   ~ 0
+SDRAM_D5
+Text Label 4900 5000 0    39   ~ 0
+SDRAM_D6
+Text Label 4900 5100 0    39   ~ 0
+SDRAM_D7
+Text Label 4900 5200 0    39   ~ 0
+SDRAM_D8
+Text Label 4900 5300 0    39   ~ 0
+SDRAM_D9
+Text Label 4900 5400 0    39   ~ 0
+SDRAM_D10
+Text Label 4900 5500 0    39   ~ 0
+SDRAM_D11
+Text Label 4900 5600 0    39   ~ 0
+SDRAM_D12
+Text Label 4900 5700 0    39   ~ 0
+SDRAM_D13
+Text Label 4900 5800 0    39   ~ 0
+SDRAM_D14
+Text Label 4900 5900 0    39   ~ 0
+SDRAM_D15
+Text Label 4900 6000 0    39   ~ 0
+SDRAM_D16
+Text Label 4900 6100 0    39   ~ 0
+SDRAM_D17
+Text Label 4900 6200 0    39   ~ 0
+SDRAM_D18
+Text Label 4900 6300 0    39   ~ 0
+SDRAM_D19
+Text Label 4900 6400 0    39   ~ 0
+SDRAM_D20
+Text Label 4900 6500 0    39   ~ 0
+SDRAM_D21
+Text Label 4900 6600 0    39   ~ 0
+SDRAM_D22
+Text Label 4900 6700 0    39   ~ 0
+SDRAM_D23
+Text Label 4900 6800 0    39   ~ 0
+SDRAM_D24
+Text Label 4900 6900 0    39   ~ 0
+SDRAM_D25
+Text Label 4900 7000 0    39   ~ 0
+SDRAM_D26
+Text Label 4900 7100 0    39   ~ 0
+SDRAM_D27
+Text Label 4900 7200 0    39   ~ 0
+SDRAM_D28
+Text Label 4900 7300 0    39   ~ 0
+SDRAM_D29
+Text Label 4900 7400 0    39   ~ 0
+SDRAM_D30
+Text Label 4900 7500 0    39   ~ 0
+SDRAM_D31
+Text Label 1500 4400 0    39   ~ 0
+SDRAM_A0
+Text Label 1500 4500 0    39   ~ 0
+SDRAM_A1
+Text Label 1500 4600 0    39   ~ 0
+SDRAM_A2
+Text Label 1500 4700 0    39   ~ 0
+SDRAM_A3
+Text Label 1500 4800 0    39   ~ 0
+SDRAM_A4
+Text Label 1500 4900 0    39   ~ 0
+SDRAM_A5
+Text Label 1500 5000 0    39   ~ 0
+SDRAM_A6
+Text Label 1500 5100 0    39   ~ 0
+SDRAM_A7
+Text Label 1500 5200 0    39   ~ 0
+SDRAM_A8
+Text Label 1500 5300 0    39   ~ 0
+SDRAM_A9
+Text Label 1500 5400 0    39   ~ 0
+SDRAM_A10
+Text Label 1500 5500 0    39   ~ 0
+SDRAM_A11
+Text Label 1500 5600 0    39   ~ 0
+SDRAM_A12
+Text Label 1500 5950 0    39   ~ 0
+SDRAM_DQM0
+Text Label 1500 6050 0    39   ~ 0
+SDRAM_DQM1
+Text Label 1500 6150 0    39   ~ 0
+SDRAM_DQM2
+Text Label 1500 6250 0    39   ~ 0
+SDRAM_DQM3
+Text Label 1500 6400 0    39   ~ 0
+SDRAM_BA0
+Text Label 1500 6500 0    39   ~ 0
+SDRAM_BA1
+Text Label 1500 6650 0    39   ~ 0
+SDRAM_CS
+Text Label 1500 6750 0    39   ~ 0
+SDRAM_RAS
+Text Label 1500 6850 0    39   ~ 0
+SDRAM_CAS
+Text Label 1500 6950 0    39   ~ 0
+SDRAM_WE
+Text Label 1500 7050 0    39   ~ 0
+SDRAM_CLK
+Text Label 1500 7150 0    39   ~ 0
+SDRAM_CKE
+Text Notes 2850 4150 0    79   Italic 0
+SKT32E - SDRAM
+Wire Wire Line
+	10750 1700 10750 1750
+Connection ~ 10250 1700
+$Comp
+L Aardonyx-rescue:V1P8-aardonyx-Aardonyx-rescue #PWR0135
+U 1 1 5F36DBCF
+P 8500 2200
+F 0 "#PWR0135" H 8650 2150 50  0001 C CNN
+F 1 "V1P8" H 8505 2375 50  0000 C CNN
+F 2 "" H 8500 2200 50  0001 C CNN
+F 3 "" H 8500 2200 50  0001 C CNN
+	1    8500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2200 8500 2250
+Connection ~ 8500 2250
+Wire Wire Line
+	5950 3050 6250 3050
+Wire Wire Line
+	6250 3950 6450 3950
+Wire Wire Line
+	6450 3850 6250 3850
+Wire Wire Line
+	6250 3750 6450 3750
+Wire Wire Line
+	6450 3650 6250 3650
+Wire Wire Line
+	6250 3550 6450 3550
+Wire Wire Line
+	6250 3150 6450 3150
+Wire Wire Line
+	6250 3050 6450 3050
+$Comp
+L Aardonyx-rescue:SKT32E-aardonyx-Aardonyx-rescue U?
+U 3 1 5EC91DB3
+P 7250 2700
+AR Path="/5EC91DB3" Ref="U?"  Part="3" 
+AR Path="/5D8B3740/5EC91DB3" Ref="U15"  Part="3" 
+F 0 "U15" H 6750 4300 50  0000 C CNN
+F 1 "SKT32E" H 7650 1250 50  0000 C CNN
+F 2 "" H 6400 3900 50  0001 C CNN
+F 3 "" H 6400 3900 50  0001 C CNN
+	3    7250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:SKT32E-aardonyx-Aardonyx-rescue U?
+U 2 1 5EC96C32
+P 3350 5800
+AR Path="/5EC96C32" Ref="U?"  Part="2" 
+AR Path="/5D8B3740/5EC96C32" Ref="U15"  Part="2" 
+F 0 "U15" H 2700 7400 50  0000 C CNN
+F 1 "SKT32E" H 3950 3900 50  0000 C CNN
+F 2 "" H 2500 7000 50  0001 C CNN
+F 3 "" H 2500 7000 50  0001 C CNN
+	2    3350 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:SKT32E-aardonyx-Aardonyx-rescue U?
+U 1 1 5EC9C740
+P 3250 2250
+AR Path="/5EC9C740" Ref="U?"  Part="1" 
+AR Path="/5D8B3740/5EC9C740" Ref="U15"  Part="1" 
+F 0 "U15" H 2450 3700 50  0000 C CNN
+F 1 "SKT32E" H 3950 600 50  0000 C CNN
+F 2 "" H 2400 3450 50  0001 C CNN
+F 3 "" H 2400 3450 50  0001 C CNN
+	1    3250 2250
+	1    0    0    -1  
+$EndComp
+Text Notes 2500 700  0    79   Italic 0
+SKT32E - PERIPHERALS
+Wire Wire Line
+	2050 1350 2150 1350
+Wire Wire Line
+	2150 1250 2050 1250
+Wire Wire Line
+	2050 1150 2150 1150
+Wire Wire Line
+	2050 1050 2150 1050
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R57
+U 1 1 5F567A40
+P 1900 1050
+F 0 "R57" V 1850 900 50  0000 C CNN
+F 1 "22E" V 1850 1200 50  0000 C CNN
+F 2 "" V 1940 1040 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1050 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1050 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1050 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1050 50  0001 C CNN "Part Number"
+	1    1900 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R58
+U 1 1 5F567A3A
+P 1900 1150
+F 0 "R58" V 1850 1000 50  0000 C CNN
+F 1 "22E" V 1850 1300 50  0000 C CNN
+F 2 "" V 1940 1140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1150 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1150 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1150 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1150 50  0001 C CNN "Part Number"
+	1    1900 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R59
+U 1 1 5F567A34
+P 1900 1250
+F 0 "R59" V 1850 1100 50  0000 C CNN
+F 1 "22E" V 1850 1400 50  0000 C CNN
+F 2 "" V 1940 1240 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1250 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1250 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1250 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1250 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1250 50  0001 C CNN "Part Number"
+	1    1900 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R60
+U 1 1 5F567A2E
+P 1900 1350
+F 0 "R60" V 1850 1200 50  0000 C CNN
+F 1 "22E" V 1850 1500 50  0000 C CNN
+F 2 "" V 1940 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1350 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1350 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1350 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1350 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1350 50  0001 C CNN "Part Number"
+	1    1900 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2100 2150 2100
+Wire Wire Line
+	1550 2200 2150 2200
+Wire Wire Line
+	1550 2300 2150 2300
+Wire Wire Line
+	1550 2400 2150 2400
+Wire Wire Line
+	1550 2500 2150 2500
+Wire Wire Line
+	1550 2600 2150 2600
+Wire Wire Line
+	1550 2700 2150 2700
+Wire Wire Line
+	1550 2800 2150 2800
+Wire Wire Line
+	1550 2900 2150 2900
+Wire Wire Line
+	1550 3000 2150 3000
+Wire Wire Line
+	1550 3100 2150 3100
+Wire Wire Line
+	1550 3200 2150 3200
+Wire Wire Line
+	1550 3300 2150 3300
+Wire Wire Line
+	1550 3400 2150 3400
+Wire Wire Line
+	4900 2500 4300 2500
+Wire Wire Line
+	4900 2600 4300 2600
+Wire Wire Line
+	1150 1500 1750 1500
+Wire Wire Line
+	1150 1600 1750 1600
+Wire Wire Line
+	1150 1700 1750 1700
+Wire Wire Line
+	1750 1800 1150 1800
+Wire Wire Line
+	1150 1050 1750 1050
+Wire Wire Line
+	1150 1150 1750 1150
+Wire Wire Line
+	1150 1250 1750 1250
+Wire Wire Line
+	1150 1350 1750 1350
+Text Label 1300 1050 0    39   ~ 0
+SPI0_nCS
+Text Label 1300 1150 0    39   ~ 0
+SPI0_CLK
+Text Label 1300 1250 0    39   ~ 0
+SPI0_MISO
+Text Label 1300 1350 0    39   ~ 0
+SPI0_MOSI
+Text Label 1700 2100 0    39   ~ 0
+IO_0
+Text Label 1700 2200 0    39   ~ 0
+IO_1
+Text Label 1700 2300 0    39   ~ 0
+IO_2
+Text Label 1700 2400 0    39   ~ 0
+IO_3
+Text Label 1700 2500 0    39   ~ 0
+IO_4
+Text Label 1700 2600 0    39   ~ 0
+IO_5
+Text Label 1700 2700 0    39   ~ 0
+IO_6
+Text Label 1700 2800 0    39   ~ 0
+IO_7
+Text Label 1700 2900 0    39   ~ 0
+IO_8
+Text Label 1700 3000 0    39   ~ 0
+IO_9
+Text Label 1700 3100 0    39   ~ 0
+IO_10
+Text Label 1700 3200 0    39   ~ 0
+IO_11
+Text Label 1700 3300 0    39   ~ 0
+IO_12
+Text Label 1700 3400 0    39   ~ 0
+IO_13
+Text Label 4750 2500 2    39   ~ 0
+I2C1_SCL
+Text Label 4750 2600 2    39   ~ 0
+I2C1_SDA
+Text Label 1300 1500 0    39   ~ 0
+SPI1_nCS
+Text Label 1300 1600 0    39   ~ 0
+SPI1_CLK
+Text Label 1300 1700 0    39   ~ 0
+SPI1_MISO
+Text Label 1300 1800 0    39   ~ 0
+SPI1_MOSI
+Text Label 4900 3600 2    39   ~ 0
+TEST_MODE
+Text Label 4900 3500 2    39   ~ 0
+BOOT_MODE1
+Text Label 4900 3400 2    39   ~ 0
+BOOT_MODE0
+Text Label 4400 3200 0    39   ~ 0
+TDO
+Text Label 4400 3100 0    39   ~ 0
+TDI
+Text Label 4400 3000 0    39   ~ 0
+TCK
+Text Label 4400 2900 0    39   ~ 0
+TRST
+Text Label 4400 2800 0    39   ~ 0
+TMS
+Text Label 4800 2100 0    39   ~ 0
+QSPI0_IO3
+Text Label 4800 2000 0    39   ~ 0
+QSPI0_IO2
+Text Label 4800 1900 0    39   ~ 0
+QSPI0_IO1
+Text Label 4800 1800 0    39   ~ 0
+QSPI0_IO0
+Text Label 4800 1700 0    39   ~ 0
+QSPI0_NCS
+Text Label 4800 1600 0    39   ~ 0
+QSPI0_CLK
+Text Label 4400 2350 0    39   ~ 0
+I2C0_SCL
+Text Label 4400 2250 0    39   ~ 0
+I2C0_SDA
+Text Label 4400 1450 0    39   ~ 0
+UART0_RX
+Text Label 4400 1350 0    39   ~ 0
+UART0_TX
+Text Label 4400 1150 0    39   ~ 0
+RESET
+Text Label 4400 1050 0    39   ~ 0
+CLK
+Wire Wire Line
+	4300 1150 4900 1150
+Wire Wire Line
+	4300 1050 4900 1050
+Wire Wire Line
+	4300 1450 4900 1450
+Wire Wire Line
+	4300 1350 4900 1350
+Wire Wire Line
+	4300 2350 4900 2350
+Wire Wire Line
+	4300 2250 4900 2250
+Wire Wire Line
+	4300 3600 4900 3600
+Wire Wire Line
+	4300 3500 4900 3500
+Wire Wire Line
+	4300 3400 4900 3400
+Wire Notes Line
+	6950 7750 500  7750
+Wire Wire Line
+	4300 4400 4450 4400
+Wire Wire Line
+	4300 4500 4450 4500
+Wire Wire Line
+	4300 4600 4450 4600
+Wire Wire Line
+	4300 4700 4450 4700
+Wire Wire Line
+	4300 4800 4450 4800
+Wire Wire Line
+	4300 4900 4450 4900
+Wire Wire Line
+	4450 5000 4300 5000
+Wire Wire Line
+	4300 5100 4450 5100
+Wire Wire Line
+	4300 5200 4450 5200
+Wire Wire Line
+	4300 5300 4450 5300
+Wire Wire Line
+	4300 5400 4450 5400
+Wire Wire Line
+	4300 5500 4450 5500
+Wire Wire Line
+	4300 5600 4450 5600
+Wire Wire Line
+	4300 5700 4450 5700
+Wire Wire Line
+	4450 5800 4300 5800
+Wire Wire Line
+	4300 5900 4450 5900
+Wire Wire Line
+	4300 6000 4450 6000
+Wire Wire Line
+	4300 6100 4450 6100
+Wire Wire Line
+	4300 6200 4450 6200
+Wire Wire Line
+	4300 6300 4450 6300
+Wire Wire Line
+	4300 6400 4450 6400
+Wire Wire Line
+	4300 6500 4450 6500
+Wire Wire Line
+	4300 6600 4450 6600
+Wire Wire Line
+	4300 6700 4450 6700
+Wire Wire Line
+	4300 6800 4450 6800
+Wire Wire Line
+	4300 7000 4450 7000
+Wire Wire Line
+	4300 7100 4450 7100
+Wire Wire Line
+	4300 6900 4450 6900
+Wire Wire Line
+	4300 7200 4450 7200
+Wire Wire Line
+	4300 7300 4450 7300
+Wire Wire Line
+	4300 7400 4450 7400
+Wire Wire Line
+	4300 7500 4450 7500
+Wire Wire Line
+	2250 7150 2450 7150
+Wire Wire Line
+	2250 7050 2450 7050
+Wire Wire Line
+	2250 6950 2450 6950
+Wire Wire Line
+	2250 6850 2450 6850
+Wire Wire Line
+	2250 6750 2450 6750
+Wire Wire Line
+	2250 6650 2450 6650
+Wire Wire Line
+	2250 6500 2450 6500
+Wire Wire Line
+	2250 6400 2450 6400
+Wire Wire Line
+	2250 6250 2450 6250
+Wire Wire Line
+	2250 6150 2450 6150
+Wire Wire Line
+	2250 6050 2450 6050
+Wire Wire Line
+	2250 5950 2450 5950
+Wire Wire Line
+	2250 5600 2450 5600
+Wire Wire Line
+	2250 5500 2450 5500
+Wire Wire Line
+	2250 5400 2450 5400
+Wire Wire Line
+	2250 5300 2450 5300
+Wire Wire Line
+	2250 5200 2450 5200
+Wire Wire Line
+	2250 5100 2450 5100
+Wire Wire Line
+	2250 5000 2450 5000
+Wire Wire Line
+	2250 4900 2450 4900
+Wire Wire Line
+	2250 4800 2450 4800
+Wire Wire Line
+	2250 4700 2450 4700
+Wire Wire Line
+	2250 4600 2450 4600
+Wire Wire Line
+	2250 4500 2450 4500
+Wire Wire Line
+	2250 4400 2450 4400
+Text HLabel 4900 1050 2    50   Input ~ 0
+CLK
+Text HLabel 4900 1150 2    50   Input ~ 0
+RESET
+Text HLabel 1150 1050 0    50   Output ~ 0
+SPI0_nCS
+Text HLabel 1150 1150 0    50   Output ~ 0
+SPI0_CLK
+Text HLabel 1150 1250 0    50   Input ~ 0
+SPI0_MISO
+Text HLabel 1150 1350 0    50   Output ~ 0
+SPI0_MOSI
+Text HLabel 4900 2500 2    50   BiDi ~ 0
+I2C1_SCL
+Text HLabel 4900 2600 2    50   BiDi ~ 0
+I2C1_SDA
+Text HLabel 1150 1500 0    50   Output ~ 0
+SPI1_nCS
+Text HLabel 1150 1600 0    50   Output ~ 0
+SPI1_CLK
+Text HLabel 1150 1700 0    50   Input ~ 0
+SPI1_MISO
+Text HLabel 1150 1800 0    50   Output ~ 0
+SPI1_MOSI
+Text HLabel 5200 1700 2    50   Output ~ 0
+QSPI0_NCS
+Text HLabel 5200 1600 2    50   Output ~ 0
+QSPI0_CLK
+Text HLabel 5200 1800 2    50   BiDi ~ 0
+QSPI0_IO0
+Text HLabel 5200 1900 2    50   BiDi ~ 0
+QSPI0_IO1
+Text HLabel 5200 2000 2    50   BiDi ~ 0
+QSPI0_IO2
+Text HLabel 5200 2100 2    50   BiDi ~ 0
+QSPI0_IO3
+Text HLabel 4900 2250 2    50   BiDi ~ 0
+I2C0_SCL
+Text HLabel 4900 2350 2    50   BiDi ~ 0
+I2C0_SDA
+Text HLabel 4900 1350 2    50   Output ~ 0
+UART0_TX
+Text HLabel 4900 1450 2    50   Input ~ 0
+UART0_RX
+$Comp
+L Aardonyx-rescue:SW_DIP_x03-aardonyx-Aardonyx-rescue SW3
+U 1 1 60474CCF
+P 7400 5700
+F 0 "SW3" H 7350 6050 50  0000 C CNN
+F 1 "SW_DIP_x03" H 7600 5550 50  0000 C CNN
+F 2 "" H 7400 5700 50  0001 C CNN
+F 3 "~" H 7400 5700 50  0001 C CNN
+	1    7400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx-Aardonyx-rescue #PWR0130
+U 1 1 604A31C5
+P 7850 5100
+F 0 "#PWR0130" H 8000 5050 50  0001 C CNN
+F 1 "V3P3" H 7855 5275 50  0000 C CNN
+F 2 "" H 7850 5100 50  0001 C CNN
+F 3 "" H 7850 5100 50  0001 C CNN
+	1    7850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V1P8-aardonyx-Aardonyx-rescue #PWR0133
+U 1 1 604D0ACB
+P 8350 5350
+F 0 "#PWR0133" H 8500 5300 50  0001 C CNN
+F 1 "V1P8" H 8355 5525 50  0000 C CNN
+F 2 "" H 8350 5350 50  0001 C CNN
+F 3 "" H 8350 5350 50  0001 C CNN
+	1    8350 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 5500 7850 5500
+Wire Wire Line
+	7700 5600 7850 5600
+Wire Wire Line
+	7850 5600 7850 5500
+Connection ~ 7850 5500
+Wire Wire Line
+	7700 5700 7850 5700
+Wire Wire Line
+	7850 5700 7850 5600
+Connection ~ 7850 5600
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R132
+U 1 1 605E3FF9
+P 8100 5500
+F 0 "R132" V 8000 5500 50  0000 C CNN
+F 1 "0E" V 8200 5500 50  0000 C CNN
+F 2 "" V 8140 5490 50  0001 C CNN
+F 3 "~" H 8100 5500 50  0001 C CNN
+F 4 "NA" V 8150 5650 50  0000 C CNN "Field4"
+	1    8100 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 5500 7950 5500
+Wire Wire Line
+	8250 5500 8350 5500
+Wire Wire Line
+	8350 5500 8350 5350
+Text Label 6300 5700 0    39   ~ 0
+TEST_MODE
+Text Label 6300 5600 0    39   ~ 0
+BOOT_MODE1
+Text Label 6300 5500 0    39   ~ 0
+BOOT_MODE0
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R131
+U 1 1 6070079E
+P 7850 5300
+F 0 "R131" H 7900 5450 50  0000 C CNN
+F 1 "0E" H 7950 5300 50  0000 C CNN
+F 2 "" V 7890 5290 50  0001 C CNN
+F 3 "~" H 7850 5300 50  0001 C CNN
+	1    7850 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R130
+U 1 1 6081E442
+P 7050 5900
+F 0 "R130" H 7200 5850 50  0000 C CNN
+F 1 "10K" H 7150 5750 50  0000 C CNN
+F 2 "" V 7090 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 7050 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 7050 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 7050 5900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 7050 5900 50  0001 C CNN "Manufacturer"
+F 7 "RC0805FR-0710KL" H 7050 5900 50  0001 C CNN "Part Number"
+	1    7050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R129
+U 1 1 6084D5E3
+P 6850 5900
+F 0 "R129" H 6950 6050 50  0000 C CNN
+F 1 "10K" H 6950 5750 50  0000 C CNN
+F 2 "" V 6890 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 6850 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 6850 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 6850 5900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 6850 5900 50  0001 C CNN "Manufacturer"
+F 7 "RC0805FR-0710KL" H 6850 5900 50  0001 C CNN "Part Number"
+	1    6850 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R128
+U 1 1 6087C5F5
+P 6700 5900
+F 0 "R128" H 6600 6050 50  0000 C CNN
+F 1 "10K" H 6600 5750 50  0000 C CNN
+F 2 "" V 6740 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 6700 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 6700 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 6700 5900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 6700 5900 50  0001 C CNN "Manufacturer"
+F 7 "RC0805FR-0710KL" H 6700 5900 50  0001 C CNN "Part Number"
+	1    6700 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 5750 6850 5600
+Wire Wire Line
+	6850 5600 7100 5600
+Wire Wire Line
+	6700 5750 6700 5700
+Wire Wire Line
+	6700 5700 7100 5700
+Wire Wire Line
+	6700 6050 6700 6150
+Wire Wire Line
+	6700 6150 6850 6150
+Wire Wire Line
+	6850 6050 6850 6150
+Connection ~ 6850 6150
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0129
+U 1 1 60AEF531
+P 6850 6200
+F 0 "#PWR0129" H 6850 5950 50  0001 C CNN
+F 1 "GND" H 6855 6027 50  0000 C CNN
+F 2 "" H 6850 6200 50  0001 C CNN
+F 3 "" H 6850 6200 50  0001 C CNN
+	1    6850 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 6150 6850 6200
+Wire Wire Line
+	6300 5600 6850 5600
+Connection ~ 6850 5600
+Wire Wire Line
+	6300 5700 6700 5700
+Connection ~ 6700 5700
+Wire Wire Line
+	7850 5100 7850 5150
+Wire Wire Line
+	7850 5450 7850 5500
+Text Notes 6650 4750 0    79   Italic 0
+MODE SELECT SWITCH
+Entry Wire Line
+	5350 7500 5450 7600
+Entry Wire Line
+	5350 7400 5450 7500
+Entry Wire Line
+	5350 7300 5450 7400
+Entry Wire Line
+	5350 7200 5450 7300
+Entry Wire Line
+	5350 7100 5450 7200
+Entry Wire Line
+	5350 7000 5450 7100
+Entry Wire Line
+	5350 6900 5450 7000
+Entry Wire Line
+	5350 6800 5450 6900
+Entry Wire Line
+	5350 6700 5450 6800
+Entry Wire Line
+	5350 6600 5450 6700
+Entry Wire Line
+	5350 6500 5450 6600
+Entry Wire Line
+	5350 6400 5450 6500
+Entry Wire Line
+	5350 6300 5450 6400
+Entry Wire Line
+	5350 6200 5450 6300
+Entry Wire Line
+	5350 6100 5450 6200
+Entry Wire Line
+	5350 6000 5450 6100
+Entry Wire Line
+	5350 5900 5450 6000
+Entry Wire Line
+	5350 5800 5450 5900
+Entry Wire Line
+	5350 5700 5450 5800
+Entry Wire Line
+	5350 5600 5450 5700
+Entry Wire Line
+	5350 5500 5450 5600
+Entry Wire Line
+	5350 5400 5450 5500
+Entry Wire Line
+	5350 5300 5450 5400
+Entry Wire Line
+	5350 5200 5450 5300
+Entry Wire Line
+	5350 5100 5450 5200
+Entry Wire Line
+	5350 5000 5450 5100
+Entry Wire Line
+	5350 4900 5450 5000
+Entry Wire Line
+	5350 4800 5450 4900
+Entry Wire Line
+	5350 4700 5450 4800
+Entry Wire Line
+	5350 4600 5450 4700
+Entry Wire Line
+	5350 4500 5450 4600
+Entry Wire Line
+	5350 4400 5450 4500
+Text HLabel 5450 4400 2    50   Input ~ 0
+SDRAM_D0-31
+Text HLabel 1350 7150 0    50   Output ~ 0
+SDRAM_CKE
+Text HLabel 1350 7050 0    50   Output ~ 0
+SDRAM_CLK
+Text HLabel 1350 6950 0    50   Output ~ 0
+SDRAM_WE
+Text HLabel 1350 6850 0    50   Output ~ 0
+SDRAM_CAS
+Text HLabel 1350 6750 0    50   Output ~ 0
+SDRAM_RAS
+Text HLabel 1350 6650 0    50   Output ~ 0
+SDRAM_CS
+Text HLabel 1350 6500 0    50   Output ~ 0
+SDRAM_BA1
+Text HLabel 1350 6400 0    50   Output ~ 0
+SDRAM_BA0
+Text HLabel 1250 5800 0    50   Output ~ 0
+SDRAM_DQM0-3
+Entry Wire Line
+	1250 4500 1350 4400
+Entry Wire Line
+	1250 4600 1350 4500
+Entry Wire Line
+	1250 4700 1350 4600
+Entry Wire Line
+	1250 4800 1350 4700
+Entry Wire Line
+	1250 4900 1350 4800
+Entry Wire Line
+	1250 5000 1350 4900
+Entry Wire Line
+	1250 5100 1350 5000
+Entry Wire Line
+	1250 5200 1350 5100
+Entry Wire Line
+	1250 5300 1350 5200
+Entry Wire Line
+	1250 5400 1350 5300
+Entry Wire Line
+	1250 5500 1350 5400
+Entry Wire Line
+	1250 5600 1350 5500
+Entry Wire Line
+	1250 5700 1350 5600
+Wire Wire Line
+	6300 5500 7050 5500
+Wire Wire Line
+	7050 5750 7050 5500
+Connection ~ 7050 5500
+Wire Wire Line
+	7050 5500 7100 5500
+Wire Wire Line
+	7050 6050 7050 6150
+Wire Wire Line
+	6850 6150 7050 6150
+Text HLabel 1250 4350 0    50   Output ~ 0
+SDRAM_A0-12
+Entry Wire Line
+	1250 6050 1350 5950
+Entry Wire Line
+	1250 6150 1350 6050
+Entry Wire Line
+	1250 6250 1350 6150
+Entry Wire Line
+	1250 6350 1350 6250
+Entry Wire Line
+	1450 2200 1550 2100
+Entry Wire Line
+	1450 2300 1550 2200
+Entry Wire Line
+	1450 2400 1550 2300
+Entry Wire Line
+	1450 2500 1550 2400
+Entry Wire Line
+	1450 2600 1550 2500
+Entry Wire Line
+	1450 2700 1550 2600
+Entry Wire Line
+	1450 2800 1550 2700
+Entry Wire Line
+	1450 2900 1550 2800
+Entry Wire Line
+	1450 3000 1550 2900
+Entry Wire Line
+	1450 3100 1550 3000
+Entry Wire Line
+	1450 3200 1550 3100
+Entry Wire Line
+	1450 3300 1550 3200
+Entry Wire Line
+	1450 3400 1550 3300
+Entry Wire Line
+	1450 3500 1550 3400
+Text HLabel 1450 2150 0    50   BiDi ~ 0
+IO_0-7
+Text HLabel 1450 2950 0    50   BiDi ~ 0
+IO_8-13
+Text Label 1950 3600 0    39   ~ 0
+IO_15
+Text Label 1950 3500 0    39   ~ 0
+IO_14
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R90
+U 1 1 62428E83
+P 4550 1600
+F 0 "R90" V 4500 1450 50  0000 C CNN
+F 1 "22E" V 4500 1750 50  0000 C CNN
+F 2 "" V 4590 1590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 1600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 1600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 1600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 1600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 1600 50  0001 C CNN "Part Number"
+	1    4550 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R91
+U 1 1 62428E89
+P 4550 1700
+F 0 "R91" V 4500 1550 50  0000 C CNN
+F 1 "22E" V 4500 1850 50  0000 C CNN
+F 2 "" V 4590 1690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 1700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 1700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 1700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 1700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 1700 50  0001 C CNN "Part Number"
+	1    4550 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R92
+U 1 1 62428E8F
+P 4550 1800
+F 0 "R92" V 4500 1650 50  0000 C CNN
+F 1 "22E" V 4500 1950 50  0000 C CNN
+F 2 "" V 4590 1790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 1800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 1800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 1800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 1800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 1800 50  0001 C CNN "Part Number"
+	1    4550 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R93
+U 1 1 62428E95
+P 4550 1900
+F 0 "R93" V 4500 1750 50  0000 C CNN
+F 1 "22E" V 4500 2050 50  0000 C CNN
+F 2 "" V 4590 1890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 1900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 1900 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 1900 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 1900 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 1900 50  0001 C CNN "Part Number"
+	1    4550 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 1600 4400 1600
+Wire Wire Line
+	4400 1700 4300 1700
+Wire Wire Line
+	4300 1800 4400 1800
+Wire Wire Line
+	4400 1900 4300 1900
+Wire Wire Line
+	4700 1600 5200 1600
+Wire Wire Line
+	4700 1700 5200 1700
+Wire Wire Line
+	4700 1800 5200 1800
+Wire Wire Line
+	4700 1900 5200 1900
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R94
+U 1 1 6272125A
+P 4550 2000
+F 0 "R94" V 4500 1850 50  0000 C CNN
+F 1 "22E" V 4500 2150 50  0000 C CNN
+F 2 "" V 4590 1990 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 2000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 2000 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 2000 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 2000 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 2000 50  0001 C CNN "Part Number"
+	1    4550 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R95
+U 1 1 62721260
+P 4550 2100
+F 0 "R95" V 4500 1950 50  0000 C CNN
+F 1 "22E" V 4500 2250 50  0000 C CNN
+F 2 "" V 4590 2090 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 4550 2100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 4550 2100 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 4550 2100 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 4550 2100 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 4550 2100 50  0001 C CNN "Part Number"
+	1    4550 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 2000 4400 2000
+Wire Wire Line
+	4400 2100 4300 2100
+Wire Wire Line
+	4700 2000 5200 2000
+Wire Wire Line
+	4700 2100 5200 2100
+Wire Wire Line
+	2150 3500 1950 3500
+Wire Wire Line
+	1950 3600 2150 3600
+Text HLabel 1950 3500 0    50   BiDi ~ 0
+IO_14
+Text HLabel 1950 3600 0    50   BiDi ~ 0
+IO_15
+Connection ~ 6250 1650
+Wire Wire Line
+	6450 2850 6250 2850
+Wire Wire Line
+	6250 1650 6250 1750
+Wire Wire Line
+	6250 1750 6250 1850
+Connection ~ 6250 1750
+Wire Wire Line
+	6450 1750 6250 1750
+Wire Wire Line
+	6250 1850 6250 1950
+Connection ~ 6250 1850
+Wire Wire Line
+	6450 1850 6250 1850
+Wire Wire Line
+	6250 1950 6250 2050
+Connection ~ 6250 1950
+Wire Wire Line
+	6450 1950 6250 1950
+Wire Wire Line
+	6250 2050 6250 2150
+Connection ~ 6250 2050
+Wire Wire Line
+	6450 2050 6250 2050
+Wire Wire Line
+	6250 2150 6250 2250
+Connection ~ 6250 2150
+Wire Wire Line
+	6450 2150 6250 2150
+Wire Wire Line
+	6250 2250 6250 2350
+Connection ~ 6250 2250
+Wire Wire Line
+	6450 2250 6250 2250
+Wire Wire Line
+	6250 2350 6250 2450
+Connection ~ 6250 2350
+Wire Wire Line
+	6450 2350 6250 2350
+Wire Wire Line
+	6250 2450 6250 2550
+Connection ~ 6250 2450
+Wire Wire Line
+	6250 2450 6450 2450
+Wire Wire Line
+	6250 2550 6250 2650
+Connection ~ 6250 2550
+Wire Wire Line
+	6450 2550 6250 2550
+Wire Wire Line
+	6250 2650 6250 2750
+Connection ~ 6250 2650
+Wire Wire Line
+	6250 2650 6450 2650
+Wire Wire Line
+	6250 2750 6250 2850
+Connection ~ 6250 2750
+Wire Wire Line
+	6450 2750 6250 2750
+Wire Wire Line
+	6450 1250 6250 1250
+Connection ~ 6250 1250
+Wire Wire Line
+	6250 1250 6250 1350
+Wire Wire Line
+	6450 1350 6250 1350
+Connection ~ 6250 1350
+Wire Wire Line
+	6250 1350 6250 1450
+Connection ~ 10250 1200
+$Comp
+L Aardonyx-rescue:GND-aardonyx-Aardonyx-rescue #PWR0138
+U 1 1 5F2FFB5A
+P 10750 1750
+F 0 "#PWR0138" H 10750 1500 50  0001 C CNN
+F 1 "GND" H 10755 1577 50  0000 C CNN
+F 2 "" H 10750 1750 50  0001 C CNN
+F 3 "" H 10750 1750 50  0001 C CNN
+	1    10750 1750
+	1    0    0    -1  
+$EndComp
+Connection ~ 10750 1700
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C79
+U 1 1 5E8200AF
+P 9750 2500
+F 0 "C79" H 9750 2600 50  0000 L CNN
+F 1 "0.1uF" H 9750 2400 50  0000 L CNN
+F 2 "" H 9750 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 9750 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 9750 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 9750 2500 50  0001 C CNN "Part Number"
+	1    9750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C82
+U 1 1 5E8200B5
+P 10000 2500
+F 0 "C82" H 10000 2600 50  0000 L CNN
+F 1 "0.1uF" H 10000 2400 50  0000 L CNN
+F 2 "" H 10000 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10000 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10000 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10000 2500 50  0001 C CNN "Part Number"
+	1    10000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2400 9750 2250
+Wire Wire Line
+	9750 2600 9750 2750
+Wire Wire Line
+	10000 2400 10000 2250
+Wire Wire Line
+	10000 2600 10000 2750
+Wire Wire Line
+	9750 2250 10000 2250
+Wire Wire Line
+	9750 2750 10000 2750
+Connection ~ 10000 2750
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx-Aardonyx-rescue C85
+U 1 1 5E8200C2
+P 10250 2500
+F 0 "C85" H 10250 2600 50  0000 L CNN
+F 1 "0.1uF" H 10250 2400 50  0000 L CNN
+F 2 "" H 10250 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 2500 50  0001 C CNN "Description"
+F 5 " 490-6328-1-ND " H 10250 2500 50  0001 C CNN "Digikey Part Number"
+F 6 "Murata" H 10250 2500 50  0001 C CNN "Manufacturer"
+F 7 "GRM155R71C104KA88J " H 10250 2500 50  0001 C CNN "Part Number"
+	1    10250 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2750 10250 2750
+Wire Wire Line
+	10250 2600 10250 2750
+Wire Wire Line
+	10250 2400 10250 2250
+Wire Wire Line
+	10250 2250 10000 2250
+Connection ~ 10000 2250
+Connection ~ 9750 2250
+Wire Wire Line
+	9000 2250 9250 2250
+Connection ~ 9000 2250
+Connection ~ 9250 2250
+Wire Wire Line
+	9500 2250 9750 2250
+Connection ~ 9500 2250
+Wire Wire Line
+	9750 2750 9500 2750
+Connection ~ 9750 2750
+Wire Wire Line
+	9250 2750 9000 2750
+Connection ~ 9250 2750
+Connection ~ 9000 2750
+Wire Wire Line
+	10250 2750 10250 2800
+Connection ~ 10250 2750
+Text HLabel 4900 3200 2    50   Output ~ 0
+TD0
+Text HLabel 4900 3100 2    50   Input ~ 0
+TDI
+Text HLabel 4900 3000 2    50   Input ~ 0
+TCK
+Text HLabel 4900 2900 2    50   Input ~ 0
+TRST
+Text HLabel 4900 2800 2    50   Input ~ 0
+TMS
+Wire Wire Line
+	4300 2800 4900 2800
+Wire Wire Line
+	4300 2900 4900 2900
+Wire Wire Line
+	4300 3000 4900 3000
+Wire Wire Line
+	4300 3100 4900 3100
+Wire Wire Line
+	4300 3200 4900 3200
+Wire Wire Line
+	2050 1800 2150 1800
+Wire Wire Line
+	2150 1700 2050 1700
+Wire Wire Line
+	2050 1600 2150 1600
+Wire Wire Line
+	2050 1500 2150 1500
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R61
+U 1 1 5E9B4B52
+P 1900 1500
+F 0 "R61" V 1850 1350 50  0000 C CNN
+F 1 "22E" V 1850 1650 50  0000 C CNN
+F 2 "" V 1940 1490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1500 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1500 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1500 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1500 50  0001 C CNN "Part Number"
+	1    1900 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R62
+U 1 1 5E9B4B58
+P 1900 1600
+F 0 "R62" V 1850 1450 50  0000 C CNN
+F 1 "22E" V 1850 1750 50  0000 C CNN
+F 2 "" V 1940 1590 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1600 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1600 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1600 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1600 50  0001 C CNN "Part Number"
+	1    1900 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R63
+U 1 1 5E9B4B5E
+P 1900 1700
+F 0 "R63" V 1850 1550 50  0000 C CNN
+F 1 "22E" V 1850 1850 50  0000 C CNN
+F 2 "" V 1940 1690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1700 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1700 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1700 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1700 50  0001 C CNN "Part Number"
+	1    1900 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx-Aardonyx-rescue R64
+U 1 1 5E9B4B64
+P 1900 1800
+F 0 "R64" V 1850 1650 50  0000 C CNN
+F 1 "22E" V 1850 1950 50  0000 C CNN
+F 2 "" V 1940 1790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-0722RL/311-22ERCT-ND/732200 " H 1900 1800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 5% 1/4W 1206" H 1900 1800 50  0001 C CNN "Description"
+F 5 "311-22ERCT-ND" H 1900 1800 50  0001 C CNN "Digikey Part Number"
+F 6 "Yageo" H 1900 1800 50  0001 C CNN "Manufacturer"
+F 7 "RC1206JR-0722RL" H 1900 1800 50  0001 C CNN "Part Number"
+	1    1900 1800
+	0    1    1    0   
+$EndComp
+Wire Bus Line
+	1250 5800 1250 6350
+Wire Bus Line
+	1450 2950 1450 3500
+Wire Bus Line
+	1450 2150 1450 2900
+Wire Bus Line
+	1250 4350 1250 5700
+Wire Bus Line
+	5450 4400 5450 7600
+$EndSCHEMATC
