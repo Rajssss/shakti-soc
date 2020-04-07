@@ -1,77 +1,13 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device_CP1_Small
+# Aardonyx-rescue_74AUP1G09GW-aardonyx
 #
-DEF Device_CP1_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_CP1_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- CP_*
-$ENDFPLIST
-DRAW
-A 0 -140 125 1186 614 0 1 12 N -60 -30 60 -30
-P 2 0 1 12 -60 20 60 20 N
-P 2 0 1 0 -50 60 -30 60 N
-P 2 0 1 0 -40 50 -40 70 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_LED_ALT
-#
-DEF Device_LED_ALT D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "Device_LED_ALT" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- LED*
- LED_SMD:*
- LED_THT:*
-$ENDFPLIST
-DRAW
-P 2 0 1 8 -50 -50 -50 50 N
-P 2 0 1 0 -50 0 50 0 N
-P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
-P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
-P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Polyfuse
-#
-DEF Device_Polyfuse F 0 0 N Y 1 F N
-F0 "F" -100 0 50 V V C CNN
-F1 "Device_Polyfuse" 100 0 50 V V C CNN
-F2 "" 50 -200 50 H I L CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *polyfuse*
- *PTC*
-$ENDFPLIST
-DRAW
-S -30 100 30 -100 0 1 10 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 -60 100 -60 60 60 -60 60 -100 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# aardonyx_74AUP1G09GW
-#
-DEF aardonyx_74AUP1G09GW U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_74AUP1G09GW-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -100 150 50 H V C CNN
-F1 "aardonyx_74AUP1G09GW" 500 -200 50 H V C CNN
+F1 "Aardonyx-rescue_74AUP1G09GW-aardonyx" 500 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS 74AHC1G08 74AHCT1G08 74AUC1G08 74AUP1G08
 $FPLIST
  SOT*
  SG-*
@@ -87,11 +23,11 @@ X VCC 5 0 100 0 U 40 40 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# aardonyx_ADC108S102CIMTX_NOPB
+# Aardonyx-rescue_ADC108S102CIMTX_NOPB-aardonyx
 #
-DEF aardonyx_ADC108S102CIMTX_NOPB U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_ADC108S102CIMTX_NOPB-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -249 577 50 H V L BNN
-F1 "aardonyx_ADC108S102CIMTX_NOPB" -298 -1332 50 H V L BNN
+F1 "Aardonyx-rescue_ADC108S102CIMTX_NOPB-aardonyx" -298 -1332 50 H V L BNN
 F2 "" 0 0 50 H I L BNN
 F3 "" 0 0 50 H I L BNN
 DRAW
@@ -118,11 +54,11 @@ X IN5 9 -700 -150 200 R 40 40 0 0 I
 ENDDRAW
 ENDDEF
 #
-# aardonyx_ADM1085
+# Aardonyx-rescue_ADM1085-aardonyx
 #
-DEF aardonyx_ADM1085 U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_ADM1085-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -100 300 50 H V C CNN
-F1 "aardonyx_ADM1085" 200 -400 50 H V C CNN
+F1 "Aardonyx-rescue_ADM1085-aardonyx" 200 -400 50 H V C CNN
 F2 "" -100 50 50 H I C CNN
 F3 "" -100 50 50 H I C CNN
 DRAW
@@ -136,11 +72,11 @@ X VIN ~ -450 -100 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Barrel_Jack_Switch
+# Aardonyx-rescue_Barrel_Jack_Switch-aardonyx
 #
-DEF aardonyx_Barrel_Jack_Switch J 0 20 Y N 1 F N
+DEF Aardonyx-rescue_Barrel_Jack_Switch-aardonyx J 0 20 Y N 1 F N
 F0 "J" 0 210 50 H V C CNN
-F1 "aardonyx_Barrel_Jack_Switch" 0 -200 50 H V C CNN
+F1 "Aardonyx-rescue_Barrel_Jack_Switch-aardonyx" 0 -200 50 H V C CNN
 F2 "" 50 -40 50 H I C CNN
 F3 "" 50 -40 50 H I C CNN
 $FPLIST
@@ -161,11 +97,11 @@ X ~ 3 300 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_CAT24M01WI-GT3
+# Aardonyx-rescue_CAT24M01WI-GT3-aardonyx
 #
-DEF aardonyx_CAT24M01WI-GT3 U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_CAT24M01WI-GT3-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -300 500 50 H V C CNN
-F1 "aardonyx_CAT24M01WI-GT3" 450 -500 50 H V C CNN
+F1 "Aardonyx-rescue_CAT24M01WI-GT3-aardonyx" 450 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -181,11 +117,11 @@ X VCC 8 0 650 197 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_CDCE913PW
+# Aardonyx-rescue_CDCE913PW-aardonyx
 #
-DEF aardonyx_CDCE913PW U 0 40 Y Y 1 L N
+DEF Aardonyx-rescue_CDCE913PW-aardonyx U 0 40 Y Y 1 L N
 F0 "U" -500 650 50 H V L BNN
-F1 "aardonyx_CDCE913PW" -112 -997 50 H V L BNN
+F1 "Aardonyx-rescue_CDCE913PW-aardonyx" -112 -997 50 H V L BNN
 F2 "SOP65P640X120-14N" 150 -200 50 H I L BNN
 F3 "CDCE913PW" 0 0 50 H I L BNN
 F4 "58M0317" 0 0 50 H I L BNN
@@ -214,11 +150,11 @@ X Y2 9 800 -500 200 L 40 40 0 0 O
 ENDDRAW
 ENDDEF
 #
-# aardonyx_C_Small
+# Aardonyx-rescue_C_Small-aardonyx
 #
-DEF aardonyx_C_Small C 0 10 N N 1 F N
+DEF Aardonyx-rescue_C_Small-aardonyx C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "aardonyx_C_Small" 10 -80 50 H V L CNN
+F1 "Aardonyx-rescue_C_Small-aardonyx" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -232,11 +168,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Conn_01x04
+# Aardonyx-rescue_Conn_01x04-aardonyx
 #
-DEF aardonyx_Conn_01x04 J 0 40 Y N 1 F N
+DEF Aardonyx-rescue_Conn_01x04-aardonyx J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "aardonyx_Conn_01x04" 0 -300 50 H V C CNN
+F1 "Aardonyx-rescue_Conn_01x04-aardonyx" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -259,11 +195,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Conn_1x10
+# Aardonyx-rescue_Conn_1x10-aardonyx
 #
-DEF aardonyx_Conn_1x10 J 0 40 Y N 1 F N
+DEF Aardonyx-rescue_Conn_1x10-aardonyx J 0 40 Y N 1 F N
 F0 "J" 0 500 50 H V C CNN
-F1 "aardonyx_Conn_1x10" 0 -600 50 H V C CNN
+F1 "Aardonyx-rescue_Conn_1x10-aardonyx" 0 -600 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -304,11 +240,11 @@ X Pin_9 9 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Conn_1x3_M
+# Aardonyx-rescue_Conn_1x3_M-aardonyx
 #
-DEF aardonyx_Conn_1x3_M J 0 40 Y N 1 F N
+DEF Aardonyx-rescue_Conn_1x3_M-aardonyx J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "aardonyx_Conn_1x3_M" 0 -200 50 H V C CNN
+F1 "Aardonyx-rescue_Conn_1x3_M-aardonyx" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -328,11 +264,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Conn_1x6_F
+# Aardonyx-rescue_Conn_1x6_F-aardonyx
 #
-DEF aardonyx_Conn_1x6_F J 0 40 Y N 1 F N
+DEF Aardonyx-rescue_Conn_1x6_F-aardonyx J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "aardonyx_Conn_1x6_F" 0 -400 50 H V C CNN
+F1 "Aardonyx-rescue_Conn_1x6_F-aardonyx" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -361,11 +297,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Conn_1x8
+# Aardonyx-rescue_Conn_1x8-aardonyx
 #
-DEF aardonyx_Conn_1x8 J 0 40 Y N 1 F N
+DEF Aardonyx-rescue_Conn_1x8-aardonyx J 0 40 Y N 1 F N
 F0 "J" 0 400 50 H V C CNN
-F1 "aardonyx_Conn_1x8" 0 -500 50 H V C CNN
+F1 "Aardonyx-rescue_Conn_1x8-aardonyx" 0 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -400,11 +336,11 @@ X Pin_8 8 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Crystal
+# Aardonyx-rescue_Crystal-aardonyx
 #
-DEF aardonyx_Crystal Y 0 40 N N 1 F N
+DEF Aardonyx-rescue_Crystal-aardonyx Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "aardonyx_Crystal" 0 -150 50 H V C CNN
+F1 "Aardonyx-rescue_Crystal-aardonyx" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -421,11 +357,11 @@ X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_D_BI
+# Aardonyx-rescue_D_BI-aardonyx
 #
-DEF aardonyx_D_BI D 0 40 N N 1 F N
+DEF Aardonyx-rescue_D_BI-aardonyx D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "aardonyx_D_BI" 0 -100 50 H V C CNN
+F1 "Aardonyx-rescue_D_BI-aardonyx" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -444,11 +380,11 @@ X A2 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_FDN339AN
+# Aardonyx-rescue_FDN339AN-aardonyx
 #
-DEF aardonyx_FDN339AN Q 0 40 N N 1 L N
+DEF Aardonyx-rescue_FDN339AN-aardonyx Q 0 40 N N 1 L N
 F0 "Q" 100 0 50 H V L BNN
-F1 "aardonyx_FDN339AN" 100 -100 50 H V L BNN
+F1 "Aardonyx-rescue_FDN339AN-aardonyx" 100 -100 50 H V L BNN
 F2 "SSOT-3" 0 0 50 H I L BNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -479,11 +415,11 @@ X D 3 0 200 100 D 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_FT2232H
+# Aardonyx-rescue_FT2232H-aardonyx
 #
-DEF aardonyx_FT2232H U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_FT2232H-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -1050 2100 50 H V L CNN
-F1 "aardonyx_FT2232H" 750 2100 50 H V L CNN
+F1 "Aardonyx-rescue_FT2232H-aardonyx" 750 2100 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -559,11 +495,11 @@ X VPLL 9 -400 2200 150 D 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# aardonyx_Ferrite_Bead_Small
+# Aardonyx-rescue_Ferrite_Bead_Small-aardonyx
 #
-DEF aardonyx_Ferrite_Bead_Small FB 0 0 N Y 1 F N
+DEF Aardonyx-rescue_Ferrite_Bead_Small-aardonyx FB 0 0 N Y 1 F N
 F0 "FB" 75 50 50 H V L CNN
-F1 "aardonyx_Ferrite_Bead_Small" 75 -50 50 H V L CNN
+F1 "Aardonyx-rescue_Ferrite_Bead_Small-aardonyx" 75 -50 50 H V L CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -580,11 +516,11 @@ X ~ 2 0 -100 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_GND
+# Aardonyx-rescue_GND-aardonyx
 #
-DEF aardonyx_GND #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_GND-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "aardonyx_GND" 0 -150 50 H V C CNN
+F1 "Aardonyx-rescue_GND-aardonyx" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -596,11 +532,11 @@ X GNDREF 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# aardonyx_IS25LP256x-xM
+# Aardonyx-rescue_IS25LP256x-xM-aardonyx
 #
-DEF aardonyx_IS25LP256x-xM U 0 20 Y Y 1 F N
+DEF Aardonyx-rescue_IS25LP256x-xM-aardonyx U 0 20 Y Y 1 F N
 F0 "U" -350 450 50 H V C CNN
-F1 "aardonyx_IS25LP256x-xM" 350 450 50 H V C CNN
+F1 "Aardonyx-rescue_IS25LP256x-xM-aardonyx" 350 450 50 H V C CNN
 F2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" 50 600 50 H I C CNN
 F3 "" 50 -500 50 H I C CNN
 $FPLIST
@@ -627,11 +563,11 @@ X ~WP~/IO2 9 -500 -100 100 R 50 50 0 1 B
 ENDDRAW
 ENDDEF
 #
-# aardonyx_IS42S32160F-TSOP2
+# Aardonyx-rescue_IS42S32160F-TSOP2-aardonyx
 #
-DEF aardonyx_IS42S32160F-TSOP2 U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_IS42S32160F-TSOP2-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -750 2150 50 H V C CNN
-F1 "aardonyx_IS42S32160F-TSOP2" -1050 -2250 50 H V C CNN
+F1 "Aardonyx-rescue_IS42S32160F-TSOP2-aardonyx" -1050 -2250 50 H V C CNN
 F2 "" 0 150 50 H I C CNN
 F3 "" 0 150 50 H I C CNN
 DRAW
@@ -725,11 +661,11 @@ X VDDQ 9 -450 2300 200 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_L
+# Aardonyx-rescue_L-aardonyx
 #
-DEF aardonyx_L L 0 40 N N 1 F N
+DEF Aardonyx-rescue_L-aardonyx L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "aardonyx_L" 75 0 50 V V C CNN
+F1 "Aardonyx-rescue_L-aardonyx" 75 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -748,11 +684,11 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_LSF0108PWR
+# Aardonyx-rescue_LSF0108PWR-aardonyx
 #
-DEF aardonyx_LSF0108PWR U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_LSF0108PWR-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -350 750 50 H V C CNN
-F1 "aardonyx_LSF0108PWR" 450 -750 50 H V C CNN
+F1 "Aardonyx-rescue_LSF0108PWR-aardonyx" 450 -750 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -780,11 +716,11 @@ X A7 9 -600 -300 197 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# aardonyx_L_Core_Iron_Coupled
+# Aardonyx-rescue_L_Core_Iron_Coupled-aardonyx
 #
-DEF aardonyx_L_Core_Iron_Coupled L 0 10 Y N 1 F N
+DEF Aardonyx-rescue_L_Core_Iron_Coupled-aardonyx L 0 10 Y N 1 F N
 F0 "L" 0 175 50 H V C CNN
-F1 "aardonyx_L_Core_Iron_Coupled" 0 -175 50 H V C CNN
+F1 "Aardonyx-rescue_L_Core_Iron_Coupled-aardonyx" 0 -175 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -819,11 +755,11 @@ X 4 4 200 100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_R_US
+# Aardonyx-rescue_R_US-aardonyx
 #
-DEF aardonyx_R_US R 0 0 N Y 1 F N
+DEF Aardonyx-rescue_R_US-aardonyx R 0 0 N Y 1 F N
 F0 "R" 100 0 50 V V C CNN
-F1 "aardonyx_R_US" -100 0 50 V V C CNN
+F1 "Aardonyx-rescue_R_US-aardonyx" -100 0 50 V V C CNN
 F2 "" 40 -10 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -840,11 +776,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_SKT32E
+# Aardonyx-rescue_SKT32E-aardonyx
 #
-DEF aardonyx_SKT32E U 0 40 Y Y 3 F N
+DEF Aardonyx-rescue_SKT32E-aardonyx U 0 40 Y Y 3 F N
 F0 "U" -700 1450 50 H V C CNN
-F1 "aardonyx_SKT32E" 600 -1900 50 H V C CNN
+F1 "Aardonyx-rescue_SKT32E-aardonyx" 600 -1900 50 H V C CNN
 F2 "" -850 1400 50 H I C CNN
 F3 "" -850 1400 50 H I C CNN
 DRAW
@@ -1003,11 +939,11 @@ X VSSO 97 750 -750 197 L 50 50 3 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_SW_DIP_x03
+# Aardonyx-rescue_SW_DIP_x03-aardonyx
 #
-DEF aardonyx_SW_DIP_x03 SW 0 0 Y N 1 F N
+DEF Aardonyx-rescue_SW_DIP_x03-aardonyx SW 0 0 Y N 1 F N
 F0 "SW" 0 350 50 H V C CNN
-F1 "aardonyx_SW_DIP_x03" 0 -150 50 H V C CNN
+F1 "Aardonyx-rescue_SW_DIP_x03-aardonyx" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -1033,11 +969,11 @@ X ~ 6 300 200 200 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_SW_DPST
+# Aardonyx-rescue_SW_DPST-aardonyx
 #
-DEF aardonyx_SW_DPST SW 0 0 Y N 1 F N
+DEF Aardonyx-rescue_SW_DPST-aardonyx SW 0 0 Y N 1 F N
 F0 "SW" 0 200 50 H V C CNN
-F1 "aardonyx_SW_DPST" 0 -200 50 H V C CNN
+F1 "Aardonyx-rescue_SW_DPST-aardonyx" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1058,11 +994,11 @@ X 4 4 200 -100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_SW_SPST
+# Aardonyx-rescue_SW_SPST-aardonyx
 #
-DEF aardonyx_SW_SPST SW 0 0 Y N 1 F N
+DEF Aardonyx-rescue_SW_SPST-aardonyx SW 0 0 Y N 1 F N
 F0 "SW" 0 125 50 H V C CNN
-F1 "aardonyx_SW_SPST" 0 -100 50 H V C CNN
+F1 "Aardonyx-rescue_SW_SPST-aardonyx" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1074,11 +1010,11 @@ X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_TPS54627DDAR
+# Aardonyx-rescue_TPS54627DDAR-aardonyx
 #
-DEF aardonyx_TPS54627DDAR U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_TPS54627DDAR-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -400 650 50 H V C CNN
-F1 "aardonyx_TPS54627DDAR" 550 -750 50 H V C CNN
+F1 "Aardonyx-rescue_TPS54627DDAR-aardonyx" 550 -750 50 H V C CNN
 F2 "" 0 -50 50 H I C CNN
 F3 "" 0 -50 50 H I C CNN
 DRAW
@@ -1095,11 +1031,11 @@ X PWPAD 9 -150 -750 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# aardonyx_TPS7A7002DDAR
+# Aardonyx-rescue_TPS7A7002DDAR-aardonyx
 #
-DEF aardonyx_TPS7A7002DDAR U 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_TPS7A7002DDAR-aardonyx U 0 40 Y Y 1 F N
 F0 "U" -300 550 50 H V C CNN
-F1 "aardonyx_TPS7A7002DDAR" 400 -500 50 H V C CNN
+F1 "Aardonyx-rescue_TPS7A7002DDAR-aardonyx" 400 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1115,11 +1051,11 @@ X GND 8 0 -550 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_TestPoint
+# Aardonyx-rescue_TestPoint-aardonyx
 #
-DEF aardonyx_TestPoint TP 0 30 N N 1 F N
+DEF Aardonyx-rescue_TestPoint-aardonyx TP 0 30 N N 1 F N
 F0 "TP" 0 270 50 H V C CNN
-F1 "aardonyx_TestPoint" 0 200 50 H V C CNN
+F1 "Aardonyx-rescue_TestPoint-aardonyx" 0 200 50 H V C CNN
 F2 "" 200 0 50 H I C CNN
 F3 "" 200 0 50 H I C CNN
 $FPLIST
@@ -1132,11 +1068,11 @@ X 1 1 0 0 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_USB_OTG
+# Aardonyx-rescue_USB_OTG-aardonyx
 #
-DEF aardonyx_USB_OTG J 0 40 Y Y 1 F N
+DEF Aardonyx-rescue_USB_OTG-aardonyx J 0 40 Y Y 1 F N
 F0 "J" -200 350 50 H V L CNN
-F1 "aardonyx_USB_OTG" 150 -350 50 H V L CNN
+F1 "Aardonyx-rescue_USB_OTG-aardonyx" 150 -350 50 H V L CNN
 F2 "" 150 -50 50 H I C CNN
 F3 "" 150 -50 50 H I C CNN
 $FPLIST
@@ -1165,11 +1101,11 @@ X Shield 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# aardonyx_V12P0
+# Aardonyx-rescue_V12P0-aardonyx
 #
-DEF aardonyx_V12P0 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_V12P0-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_V12P0" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_V12P0-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1178,11 +1114,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_V1P8
+# Aardonyx-rescue_V1P8-aardonyx
 #
-DEF aardonyx_V1P8 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_V1P8-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_V1P8" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_V1P8-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1191,11 +1127,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_V3P3
+# Aardonyx-rescue_V3P3-aardonyx
 #
-DEF aardonyx_V3P3 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_V3P3-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_V3P3" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_V3P3-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1204,11 +1140,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_V5P0
+# Aardonyx-rescue_V5P0-aardonyx
 #
-DEF aardonyx_V5P0 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_V5P0-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_V5P0" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_V5P0-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1217,11 +1153,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_VBUS
+# Aardonyx-rescue_VBUS-aardonyx
 #
-DEF aardonyx_VBUS #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_VBUS" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1230,11 +1166,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_VCORE_FTDI
+# Aardonyx-rescue_VCORE_FTDI-aardonyx
 #
-DEF aardonyx_VCORE_FTDI #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VCORE_FTDI-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_VCORE_FTDI" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VCORE_FTDI-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1243,16 +1179,79 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# aardonyx_VREF_AH
+# Aardonyx-rescue_VREF_AH-aardonyx
 #
-DEF aardonyx_VREF_AH #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VREF_AH-aardonyx #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "aardonyx_VREF_AH" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VREF_AH-aardonyx" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -50 100 50 100 N
 X ~ ~ 0 0 100 U 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# Device_CP1_Small
+#
+DEF Device_CP1_Small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Device_CP1_Small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -140 125 1186 614 0 1 12 N -60 -30 60 -30
+P 2 0 1 12 -60 20 60 20 N
+P 2 0 1 0 -50 60 -30 60 N
+P 2 0 1 0 -40 50 -40 70 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_LED_ALT
+#
+DEF Device_LED_ALT D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_LED_ALT" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Polyfuse
+#
+DEF Device_Polyfuse F 0 0 N Y 1 F N
+F0 "F" -100 0 50 V V C CNN
+F1 "Device_Polyfuse" 100 0 50 V V C CNN
+F2 "" 50 -200 50 H I L CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *polyfuse*
+ *PTC*
+$ENDFPLIST
+DRAW
+S -30 100 30 -100 0 1 10 N
+P 2 0 1 0 0 100 0 -100 N
+P 4 0 1 0 -60 100 -60 60 60 -60 60 -100 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
