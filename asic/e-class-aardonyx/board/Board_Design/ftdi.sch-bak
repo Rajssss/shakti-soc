@@ -243,6 +243,7 @@ F 0 "U1" H 4650 6650 50  0000 C CNN
 F 1 "FT2232H" H 6550 2450 50  0000 C CNN
 F 2 "" H 5650 4550 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT2232H.html" H 5650 4550 50  0001 C CNN
+F 4 "Single chip USB to UART (RS232, RS422 or RS485)" H 5650 4550 50  0001 C CNN "Description"
 	1    5650 4550
 	1    0    0    -1  
 $EndComp
@@ -322,7 +323,11 @@ P 3650 1800
 F 0 "FB3" V 3413 1800 50  0000 C CNN
 F 1 "600R" V 3504 1800 50  0000 C CNN
 F 2 "" V 3580 1800 50  0001 C CNN
-F 3 "~" H 3650 1800 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 3650 1800 50  0001 C CNN
+F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 3650 1800 50  0001 C CNN "Description"
+F 5 "732-1593-1-ND" H 3650 1800 50  0001 C CNN "Digikey PartNumber"
+F 6 "742792651" H 3650 1800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Würth Elektronik" H 3650 1800 50  0001 C CNN "Maufaturer"
 	1    3650 1800
 	0    1    1    0   
 $EndComp
@@ -333,7 +338,11 @@ P 3650 1350
 F 0 "FB2" V 3413 1350 50  0000 C CNN
 F 1 "600R" V 3504 1350 50  0000 C CNN
 F 2 "" V 3580 1350 50  0001 C CNN
-F 3 "~" H 3650 1350 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 3650 1350 50  0001 C CNN
+F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 3650 1350 50  0001 C CNN "Description"
+F 5 "732-1593-1-ND" H 3650 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "742792651" H 3650 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "Würth Elektronik" H 3650 1350 50  0001 C CNN "Maufaturer"
 	1    3650 1350
 	0    1    1    0   
 $EndComp
@@ -712,7 +721,11 @@ P 1550 2900
 F 0 "FB1" H 1450 2800 50  0000 C CNN
 F 1 "600R" H 1350 2900 50  0000 C CNN
 F 2 "" V 1480 2900 50  0001 C CNN
-F 3 "~" H 1550 2900 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 1550 2900 50  0001 C CNN
+F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 1550 2900 50  0001 C CNN "Description"
+F 5 "732-1593-1-ND" H 1550 2900 50  0001 C CNN "Digikey PartNumber"
+F 6 "742792651" H 1550 2900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Würth Elektronik" H 1550 2900 50  0001 C CNN "Maufaturer"
 	1    1550 2900
 	-1   0    0    1   
 $EndComp
@@ -787,8 +800,12 @@ P 3800 6150
 F 0 "Y1" H 3800 6418 50  0000 C CNN
 F 1 "12MHz" H 3800 6000 50  0000 C CNN
 F 2 "" H 3800 6150 50  0001 C CNN
-F 3 "" H 3800 6150 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/ecs-inc/ECS-120-20-5PXDN-TR/XC1298CT-ND/827762" H 3800 6150 50  0001 C CNN
 F 4 "9B-12.000MAAJ-B " H 3950 6300 50  0000 C CNN "Field4"
+F 5 "CRYSTAL 12.0000MHZ 20PF SMD" H 3800 6150 50  0001 C CNN "Description"
+F 6 "XC1298CT-ND" H 3800 6150 50  0001 C CNN "Digikey PartNumber"
+F 7 "ECS-120-20-5PXDN-TR" H 3800 6150 50  0001 C CNN "Manufactured Part Number"
+F 8 "ECS Inc." H 3800 6150 50  0001 C CNN "Maufaturer"
 	1    3800 6150
 	1    0    0    -1  
 $EndComp
@@ -1306,7 +1323,11 @@ P 7150 4450
 F 0 "R3" V 7200 4550 50  0000 L CNN
 F 1 "0E" V 7200 4250 50  0000 L CNN
 F 2 "" V 7190 4440 50  0001 C CNN
-F 3 "~" H 7150 4450 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 7150 4450 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 7150 4450 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 7150 4450 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 7150 4450 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 7150 4450 50  0001 C CNN "Maufaturer"
 	1    7150 4450
 	0    -1   -1   0   
 $EndComp
@@ -1317,7 +1338,11 @@ P 7150 4550
 F 0 "R4" V 7200 4650 50  0000 L CNN
 F 1 "0E" V 7200 4350 50  0000 L CNN
 F 2 "" V 7190 4540 50  0001 C CNN
-F 3 "~" H 7150 4550 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 7150 4550 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 7150 4550 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 7150 4550 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 7150 4550 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 7150 4550 50  0001 C CNN "Maufaturer"
 	1    7150 4550
 	0    -1   -1   0   
 $EndComp

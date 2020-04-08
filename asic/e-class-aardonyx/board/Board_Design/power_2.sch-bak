@@ -100,7 +100,11 @@ AR Path="/5E6E93B2/5E722817" Ref="R41"  Part="1"
 F 0 "R41" H 3068 1896 50  0000 L CNN
 F 1 "169K" H 3068 1805 50  0000 L CNN
 F 2 "" V 3040 1840 50  0001 C CNN
-F 3 "~" H 3000 1850 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1693V/P169KDACT-ND/3074985" H 3000 1850 50  0001 C CNN
+F 4 "RES 169K OHM 0.1% 1/8W 0805" H 3000 1850 50  0001 C CNN "Description"
+F 5 "P169KDACT-ND" H 3000 1850 50  0001 C CNN "Digikey PartNumber"
+F 6 "ERA-6AEB1693V" H 3000 1850 50  0001 C CNN "Manufactured Part Number"
+F 7 "Panasonic Electronic Components" H 3000 1850 50  0001 C CNN "Maufaturer"
 	1    3000 1850
 	1    0    0    -1  
 $EndComp
@@ -143,7 +147,11 @@ AR Path="/5E6E93B2/5E7228A5" Ref="D4"  Part="1"
 F 0 "D4" V 4500 2050 50  0000 R CNN
 F 1 "SML-LX1206GW" V 4150 2050 50  0000 R CNN
 F 2 "" H 4400 2100 50  0001 C CNN
-F 3 "~" H 4400 2100 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 4400 2100 50  0001 C CNN
+F 4 "LED GREEN DIFFUSED 1206 SMD" H 4400 2100 50  0001 C CNN "Description"
+F 5 "67-1002-1-ND" H 4400 2100 50  0001 C CNN "Digikey PartNumber"
+F 6 "SML-LX1206GW-TR" H 4400 2100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Lumex Opto/Components Inc." H 4400 2100 50  0001 C CNN "Maufaturer"
 	1    4400 2100
 	0    -1   -1   0   
 $EndComp
@@ -212,7 +220,11 @@ P 3200 4700
 F 0 "U11" H 2900 5000 50  0000 C CNN
 F 1 "ADM1085" H 3450 4350 50  0000 C CNN
 F 2 "" H 3100 4750 50  0001 C CNN
-F 3 "" H 3100 4750 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/analog-devices-inc/ADM1085AKSZ-REEL7/ADM1085AKSZ-REEL7CT-ND/820429" H 3100 4750 50  0001 C CNN
+F 4 "IC SUPERVISOR 1 CHANNEL SC70-6" H 3200 4700 50  0001 C CNN "Description"
+F 5 "ADM1085AKSZ-REEL7CT-ND" H 3200 4700 50  0001 C CNN "Digikey PartNumber"
+F 6 "ADM1085AKSZ-REEL7" H 3200 4700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Analog Devices Inc." H 3200 4700 50  0001 C CNN "Maufaturer"
 	1    3200 4700
 	1    0    0    -1  
 $EndComp
@@ -309,7 +321,11 @@ P 2300 1950
 F 0 "U10" H 2300 2565 50  0000 C CNN
 F 1 "TPS7A7002DDAR" H 2300 2474 50  0000 C CNN
 F 2 "" H 2300 1950 50  0001 C CNN
-F 3 "" H 2300 1950 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/TPS7A7002DDAR/296-40977-1-ND/5178854" H 2300 1950 50  0001 C CNN
+F 4 "IC REG LIN POS ADJ 3A 8SO PWRPAD" H 2300 1950 50  0001 C CNN "Description"
+F 5 "296-40977-1-ND" H 2300 1950 50  0001 C CNN "Digikey PartNumber"
+F 6 "TPS7A7002DDAR" H 2300 1950 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 2300 1950 50  0001 C CNN "Maufaturer"
 	1    2300 1950
 	1    0    0    -1  
 $EndComp
@@ -400,7 +416,11 @@ P 7950 2150
 F 0 "U13" H 7950 2765 50  0000 C CNN
 F 1 "TPS7A7002DDAR" H 7950 2674 50  0000 C CNN
 F 2 "" H 7950 2150 50  0001 C CNN
-F 3 "" H 7950 2150 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/TPS7A7002DDAR/296-40977-1-ND/5178854" H 7950 2150 50  0001 C CNN
+F 4 "IC REG LIN POS ADJ 3A 8SO PWRPAD" H 7950 2150 50  0001 C CNN "Description"
+F 5 "296-40977-1-ND" H 7950 2150 50  0001 C CNN "Digikey PartNumber"
+F 6 "TPS7A7002DDAR" H 7950 2150 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 7950 2150 50  0001 C CNN "Maufaturer"
 	1    7950 2150
 	1    0    0    -1  
 $EndComp
@@ -550,7 +570,11 @@ AR Path="/5E6E93B2/5EC6670A" Ref="D5"  Part="1"
 F 0 "D5" V 10450 2000 50  0000 R CNN
 F 1 "SML-LX1206GW" V 10250 1900 50  0000 R CNN
 F 2 "" H 10350 2050 50  0001 C CNN
-F 3 "~" H 10350 2050 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 10350 2050 50  0001 C CNN
+F 4 "LED GREEN DIFFUSED 1206 SMD" H 10350 2050 50  0001 C CNN "Description"
+F 5 "67-1002-1-ND" H 10350 2050 50  0001 C CNN "Digikey PartNumber"
+F 6 "SML-LX1206GW-TR" H 10350 2050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Lumex Opto/Components Inc." H 10350 2050 50  0001 C CNN "Maufaturer"
 	1    10350 2050
 	0    -1   -1   0   
 $EndComp
@@ -675,7 +699,11 @@ AR Path="/5E6E93B2/5ECD13C3" Ref="R39"  Part="1"
 F 0 "R39" V 2650 4750 50  0000 L CNN
 F 1 "0E" V 2450 4800 50  0000 L CNN
 F 2 "" V 2590 4790 50  0001 C CNN
-F 3 "~" H 2550 4800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2550 4800 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 2550 4800 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 2550 4800 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 2550 4800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 2550 4800 50  0001 C CNN "Maufaturer"
 	1    2550 4800
 	0    -1   -1   0   
 $EndComp
@@ -690,7 +718,11 @@ P 10350 2500
 F 0 "Q1" H 10448 2546 50  0000 L CNN
 F 1 "FDN339AN" H 10448 2455 50  0000 L CNN
 F 2 "SSOT-3" H 10350 2500 50  0001 L BNN
-F 3 "" H 10350 2500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/FDN339AN/FDN339ANCT-ND/965603" H 10350 2500 50  0001 C CNN
+F 4 "MOSFET N-CH 20V 3A SSOT3" H 10350 2500 50  0001 C CNN "Description"
+F 5 "FDN339ANCT-ND" H 10350 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "FDN339AN" H 10350 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "ON Semiconductor" H 10350 2500 50  0001 C CNN "Maufaturer"
 	1    10350 2500
 	1    0    0    -1  
 $EndComp
@@ -775,7 +807,11 @@ P 3250 6500
 F 0 "U12" H 2950 6800 50  0000 C CNN
 F 1 "ADM1085" H 3500 6150 50  0000 C CNN
 F 2 "" H 3150 6550 50  0001 C CNN
-F 3 "" H 3150 6550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/analog-devices-inc/ADM1085AKSZ-REEL7/ADM1085AKSZ-REEL7CT-ND/820429" H 3150 6550 50  0001 C CNN
+F 4 "IC SUPERVISOR 1 CHANNEL SC70-6" H 3250 6500 50  0001 C CNN "Description"
+F 5 "ADM1085AKSZ-REEL7CT-ND" H 3250 6500 50  0001 C CNN "Digikey PartNumber"
+F 6 "ADM1085AKSZ-REEL7" H 3250 6500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Analog Devices Inc." H 3250 6500 50  0001 C CNN "Maufaturer"
 	1    3250 6500
 	1    0    0    -1  
 $EndComp
@@ -869,7 +905,11 @@ AR Path="/5E6E93B2/5ECF8074" Ref="R40"  Part="1"
 F 0 "R40" V 2700 6550 50  0000 L CNN
 F 1 "0E" V 2500 6600 50  0000 L CNN
 F 2 "" V 2640 6590 50  0001 C CNN
-F 3 "~" H 2600 6600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2600 6600 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 2600 6600 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 2600 6600 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 2600 6600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 2600 6600 50  0001 C CNN "Maufaturer"
 	1    2600 6600
 	0    -1   -1   0   
 $EndComp
@@ -924,7 +964,11 @@ AR Path="/5E6E93B2/5ED4950E" Ref="U14"  Part="1"
 F 0 "U14" H 9150 5450 50  0000 C CNN
 F 1 "74AUP1G09GW" H 9550 5150 50  0000 C CNN
 F 2 "" H 9250 5300 50  0001 C CNN
-F 3 "" H 9250 5300 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/nexperia-usa-inc/74AUP1G09GW-125/1727-4492-1-ND/2530869" H 9250 5300 50  0001 C CNN
+F 4 "IC GATE AND 1CH 2-INP 5TSSOP" H 9250 5300 50  0001 C CNN "Description"
+F 5 "1727-4492-1-ND" H 9250 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "74AUP1G09GW,125" H 9250 5300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Nexperia USA Inc." H 9250 5300 50  0001 C CNN "Maufaturer"
 	1    9250 5300
 	1    0    0    -1  
 $EndComp
@@ -1035,7 +1079,11 @@ AR Path="/5E6E93B2/5ED6F07A" Ref="R54"  Part="1"
 F 0 "R54" V 10150 5250 50  0000 L CNN
 F 1 "0E" V 9950 5300 50  0000 L CNN
 F 2 "" V 10090 5290 50  0001 C CNN
-F 3 "~" H 10050 5300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 10050 5300 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 10050 5300 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 10050 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 10050 5300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 10050 5300 50  0001 C CNN "Maufaturer"
 	1    10050 5300
 	0    -1   -1   0   
 $EndComp
@@ -1231,7 +1279,11 @@ AR Path="/5E6E93B2/5EE0CD3F" Ref="R47"  Part="1"
 F 0 "R47" V 8400 6150 50  0000 L CNN
 F 1 "0E" V 8200 6200 50  0000 L CNN
 F 2 "" V 8340 6190 50  0001 C CNN
-F 3 "~" H 8300 6200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 8300 6200 50  0001 C CNN
+F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 8300 6200 50  0001 C CNN "Description"
+F 5 " 541-0.0ACT-ND " H 8300 6200 50  0001 C CNN "Digikey PartNumber"
+F 6 " CRCW08050000Z0EA " H 8300 6200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 8300 6200 50  0001 C CNN "Maufaturer"
 	1    8300 6200
 	0    -1   -1   0   
 $EndComp

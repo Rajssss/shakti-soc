@@ -24,7 +24,11 @@ P 2750 1950
 F 0 "U6" H 2400 2400 50  0000 C CNN
 F 1 "IS25LP256x-xM" H 3150 1500 50  0000 C CNN
 F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 2800 2550 50  0001 C CNN
-F 3 "" H 2800 1450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/issi-integrated-silicon-solution-inc/IS25LP256D-JMLE/706-1611-ND/7567432" H 2800 1450 50  0001 C CNN
+F 4 "IC FLASH 256M SPI 133MHZ 16SOIC" H 2750 1950 50  0001 C CNN "Description"
+F 5 "706-1611-ND" H 2750 1950 50  0001 C CNN "Digikey PartNumber"
+F 6 "IS25LP256D-JMLE" H 2750 1950 50  0001 C CNN "Manufactured Part Number"
+F 7 "ISSI, Integrated Silicon Solution Inc" H 2750 1950 50  0001 C CNN "Maufaturer"
 	1    2750 1950
 	1    0    0    -1  
 $EndComp
@@ -35,7 +39,11 @@ P 1500 5650
 F 0 "U5" H 1200 6150 50  0000 C CNN
 F 1 "CAT24M01WI-GT3" H 1900 5150 50  0000 C CNN
 F 2 "" H 1500 5650 50  0001 C CNN
-F 3 "" H 1500 5650 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/CAT24M01WI-GT3/CAT24M01WI-GT3OSCT-ND/2698362" H 1500 5650 50  0001 C CNN
+F 4 "IC EEPROM 1M I2C 1MHZ 8SOIC" H 1500 5650 50  0001 C CNN "Description"
+F 5 "CAT24M01WI-GT3OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
+F 6 "CAT24M01WI-GT3" H 1500 5650 50  0001 C CNN "Manufactured Part Number"
+F 7 "ON Semiconductor" H 1500 5650 50  0001 C CNN "Maufaturer"
 	1    1500 5650
 	1    0    0    -1  
 $EndComp
@@ -78,7 +86,11 @@ P 9750 2600
 F 0 "U9" H 9400 3350 50  0000 C CNN
 F 1 "LSF0108PWR" H 10050 1850 50  0000 C CNN
 F 2 "" H 9750 2600 50  0001 C CNN
-F 3 "" H 9750 2600 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 9750 2600 50  0001 C CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 9750 2600 50  0001 C CNN "Description"
+F 5 "296-37828-1-ND" H 9750 2600 50  0001 C CNN "Digikey PartNumber"
+F 6 "LSF0108PWR" H 9750 2600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 9750 2600 50  0001 C CNN "Maufaturer"
 	1    9750 2600
 	1    0    0    -1  
 $EndComp
@@ -136,7 +148,11 @@ P 6950 1350
 F 0 "R36" H 7018 1396 50  0000 L CNN
 F 1 "200K" H 7018 1305 50  0000 L CNN
 F 2 "" V 6990 1340 50  0001 C CNN
-F 3 "~" H 6950 1350 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 6950 1350 50  0001 C CNN
+F 4 " RES 200K OHM 0.1% 1/16W 0402 " H 6950 1350 50  0001 C CNN "Description"
+F 5 "2019-RN73H1ETTP2003B25CT-ND " H 6950 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "RN73H1ETTP2003B25" H 6950 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 6950 1350 50  0001 C CNN "Maufaturer"
 	1    6950 1350
 	1    0    0    -1  
 $EndComp
@@ -195,7 +211,11 @@ P 9900 1400
 F 0 "R37" H 9968 1446 50  0000 L CNN
 F 1 "200K" H 9968 1355 50  0000 L CNN
 F 2 "" V 9940 1390 50  0001 C CNN
-F 3 "~" H 9900 1400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 9900 1400 50  0001 C CNN
+F 4 " RES 200K OHM 0.1% 1/16W 0402 " H 9900 1400 50  0001 C CNN "Description"
+F 5 "2019-RN73H1ETTP2003B25CT-ND " H 9900 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RN73H1ETTP2003B25" H 9900 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 9900 1400 50  0001 C CNN "Maufaturer"
 	1    9900 1400
 	1    0    0    -1  
 $EndComp
@@ -299,7 +319,11 @@ P 6800 2550
 F 0 "U8" H 6450 3300 50  0000 C CNN
 F 1 "LSF0108PWR" H 7100 1800 50  0000 C CNN
 F 2 "" H 6800 2550 50  0001 C CNN
-F 3 "" H 6800 2550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 6800 2550 50  0001 C CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 6800 2550 50  0001 C CNN "Description"
+F 5 "296-37828-1-ND" H 6800 2550 50  0001 C CNN "Digikey PartNumber"
+F 6 "LSF0108PWR" H 6800 2550 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 6800 2550 50  0001 C CNN "Maufaturer"
 	1    6800 2550
 	1    0    0    -1  
 $EndComp
@@ -1587,7 +1611,11 @@ P 4300 5900
 F 0 "U?" H 3900 6400 50  0000 C CNN
 F 1 "ADC108S102CIMTX" H 4750 5400 50  0000 C CNN
 F 2 "" H 4300 5900 50  0001 L BNN
-F 3 "" H 4300 5900 50  0001 L BNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/ADC108S102CIMTX-NOPB/296-43835-1-ND/5875706" H 4300 5900 50  0001 L BNN
+F 4 "ADC108S102CIMTX/NOPB" H 4300 5900 50  0001 C CNN "Description"
+F 5 "296-43835-1-ND" H 4300 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "ADC108S102CIMTX/NOPB" H 4300 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 4300 5900 50  0001 C CNN "Maufaturer"
 	1    4300 5900
 	1    0    0    -1  
 $EndComp

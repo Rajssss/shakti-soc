@@ -463,7 +463,11 @@ AR Path="/5E6E93B2/5DC17243" Ref="U?"  Part="1"
 F 0 "U4" H 5300 5815 50  0000 C CNN
 F 1 "TPS54627DDAR" H 5300 5724 50  0000 C CNN
 F 2 "" H 5300 5000 50  0001 C CNN
-F 3 "" H 5300 5000 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/TPS54627DDAR/296-40808-1-ND/5178685" H 5300 5000 50  0001 C CNN
+F 4 "IC REG BUCK ADJUSTABLE 6A 8SOPWR" H 5300 5050 50  0001 C CNN "Description"
+F 5 "296-40808-1-ND" H 5300 5050 50  0001 C CNN "Digikey PartNumber"
+F 6 "TPS54627DDAR" H 5300 5050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 5300 5050 50  0001 C CNN "Maufaturer"
 	1    5300 5050
 	1    0    0    -1  
 $EndComp
@@ -695,7 +699,11 @@ AR Path="/5E6E93B2/5E541C92" Ref="F?"  Part="1"
 F 0 "F1" V 4550 1600 50  0000 C CNN
 F 1 "PTCCL13H921DBE" V 4850 1600 50  0000 C CNN
 F 2 "" H 4750 1400 50  0001 L CNN
-F 3 "~" H 4700 1600 50  0001 C CNN
+F 3 "https://www.digikey.in/products/en?keywords=PTCCL13H921DBE" H 4700 1600 50  0001 C CNN
+F 4 "PTC RESET FUSE 30V 920MA RADIAL" H 4700 1600 50  0001 C CNN "Description"
+F 5 "BC2323-ND" H 4700 1600 50  0001 C CNN "Digikey PartNumber"
+F 6 "PTCCL13H921DBE" H 4700 1600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
 	1    4700 1600
 	0    1    1    0   
 $EndComp
