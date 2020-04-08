@@ -51,11 +51,11 @@ AR Path="/5E6E93B2/5E7227E3" Ref="C56"  Part="1"
 F 0 "C56" H 3642 1946 50  0000 L CNN
 F 1 "10UF" H 3642 1855 50  0000 L CNN
 F 2 "" H 3550 1900 50  0001 C CNN
-F 3 "https://www.digikey.in/products/en?keywords=490-6473-1-ND%20" H 3550 1900 50  0001 C CNN
-F 4 "CAP CER 10UF 16V X5R 0805 " H 3550 1900 50  0001 C CNN "Description"
-F 5 "490-6473-1-ND " H 3550 1900 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM21BR61C106KE15K " H 3550 1900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 3550 1900 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C106J3RACAUTO/399-15734-1-ND/7427614" H 3550 1900 50  0001 C CNN
+F 4 "CAP CER 10UF 25V X7R 1206" H 3550 1900 50  0001 C CNN "Description"
+F 5 "399-15734-1-ND" H 3550 1900 50  0001 C CNN "Digikey PartNumber"
+F 6 "C1206C106J3RACAUTO" H 3550 1900 50  0001 C CNN "Manufactured Part Number"
+F 7 "KEMET" H 3550 1900 50  0001 C CNN "Maufaturer"
 	1    3550 1900
 	1    0    0    -1  
 $EndComp
@@ -79,8 +79,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5E72280C
 P 3000 2250
 AR Path="/5DB8A7DC/5E72280C" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5E72280C" Ref="R42"  Part="1" 
-F 0 "R42" H 3068 2296 50  0000 L CNN
+AR Path="/5E6E93B2/5E72280C" Ref="P_R42"  Part="1" 
+F 0 "P_R42" H 3068 2296 50  0000 L CNN
 F 1 "30.1K" H 3068 2205 50  0000 L CNN
 F 2 "" V 3040 2240 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB3012V/P30-1KDACT-ND/3075076" H 3000 2250 50  0001 C CNN
@@ -96,8 +96,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5E722817
 P 3000 1850
 AR Path="/5DB8A7DC/5E722817" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5E722817" Ref="R41"  Part="1" 
-F 0 "R41" H 3068 1896 50  0000 L CNN
+AR Path="/5E6E93B2/5E722817" Ref="P_R41"  Part="1" 
+F 0 "P_R41" H 3068 1896 50  0000 L CNN
 F 1 "169K" H 3068 1805 50  0000 L CNN
 F 2 "" V 3040 1840 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1693V/P169KDACT-ND/3074985" H 3000 1850 50  0001 C CNN
@@ -173,8 +173,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5E7228B7
 P 4400 1650
 AR Path="/5DB8A7DC/5E7228B7" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5E7228B7" Ref="R44"  Part="1" 
-F 0 "R44" H 4450 1750 50  0000 L CNN
+AR Path="/5E6E93B2/5E7228B7" Ref="P_R44"  Part="1" 
+F 0 "P_R44" H 4450 1750 50  0000 L CNN
 F 1 "120E" H 4450 1600 50  0000 L CNN
 F 2 "" V 4440 1640 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 4400 1650 50  0001 C CNN
@@ -263,11 +263,11 @@ AR Path="/5E6E93B2/5E781EF6" Ref="C57"  Part="1"
 F 0 "C57" H 3842 5096 50  0000 L CNN
 F 1 "15pf" H 3842 5005 50  0000 L CNN
 F 2 "" H 3750 5050 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/C0402C150J4GACTU/399-8947-1-ND/3522464" H 3750 5050 50  0001 C CNN
-F 4 " CAP CER 15PF 16V C0G/NP0 0402 " H 3750 5050 50  0001 C CNN "Description"
-F 5 "399-8947-1-ND " H 3750 5050 50  0001 C CNN "Digikey PartNumber"
-F 6 "C0402C150J4GACTU" H 3750 5050 50  0001 C CNN "Manufactured Part Number"
-F 7 "Kemet" H 3750 5050 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/885012007029/732-7828-1-ND/5454455" H 3750 5050 50  0001 C CNN
+F 4 "CAP CER 15PF 25V C0G/NP0 0805" H 3750 5050 50  0001 C CNN "Description"
+F 5 "732-7828-1-ND" H 3750 5050 50  0001 C CNN "Digikey PartNumber"
+F 6 "885012007029" H 3750 5050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Würth Elektronik" H 3750 5050 50  0001 C CNN "Maufaturer"
 	1    3750 5050
 	1    0    0    -1  
 $EndComp
@@ -485,8 +485,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5EC50B98
 P 8650 2050
 AR Path="/5DB8A7DC/5EC50B98" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5EC50B98" Ref="R49"  Part="1" 
-F 0 "R49" H 8718 2096 50  0000 L CNN
+AR Path="/5E6E93B2/5EC50B98" Ref="P_R49"  Part="1" 
+F 0 "P_R49" H 8718 2096 50  0000 L CNN
 F 1 "78.7K" H 8718 2005 50  0000 L CNN
 F 2 "" V 8690 2040 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB7872V/P78-7KDACT-ND/3075252" H 8650 2050 50  0001 C CNN
@@ -502,8 +502,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5EC50B92
 P 8650 2450
 AR Path="/5DB8A7DC/5EC50B92" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5EC50B92" Ref="R50"  Part="1" 
-F 0 "R50" H 8718 2496 50  0000 L CNN
+AR Path="/5E6E93B2/5EC50B92" Ref="P_R50"  Part="1" 
+F 0 "P_R50" H 8718 2496 50  0000 L CNN
 F 1 "30.1K" H 8718 2405 50  0000 L CNN
 F 2 "" V 8690 2440 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB3012V/P30-1KDACT-ND/3075076" H 8650 2450 50  0001 C CNN
@@ -538,11 +538,11 @@ AR Path="/5E6E93B2/5EC50B85" Ref="C62"  Part="1"
 F 0 "C62" H 9292 2146 50  0000 L CNN
 F 1 "10UF" H 9292 2055 50  0000 L CNN
 F 2 "" H 9200 2100 50  0001 C CNN
-F 3 "https://www.digikey.in/products/en?keywords=490-6473-1-ND%20" H 9200 2100 50  0001 C CNN
-F 4 "CAP CER 10UF 16V X5R 0805 " H 9200 2100 50  0001 C CNN "Description"
-F 5 "490-6473-1-ND " H 9200 2100 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM21BR61C106KE15K " H 9200 2100 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9200 2100 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C106J3RACAUTO/399-15734-1-ND/7427614" H 9200 2100 50  0001 C CNN
+F 4 "CAP CER 10UF 25V X7R 1206" H 9200 2100 50  0001 C CNN "Description"
+F 5 "399-15734-1-ND" H 9200 2100 50  0001 C CNN "Digikey PartNumber"
+F 6 "C1206C106J3RACAUTO" H 9200 2100 50  0001 C CNN "Manufactured Part Number"
+F 7 "KEMET" H 9200 2100 50  0001 C CNN "Maufaturer"
 	1    9200 2100
 	1    0    0    -1  
 $EndComp
@@ -596,8 +596,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5EC66716
 P 10350 1600
 AR Path="/5DB8A7DC/5EC66716" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5EC66716" Ref="R56"  Part="1" 
-F 0 "R56" H 10400 1700 50  0000 L CNN
+AR Path="/5E6E93B2/5EC66716" Ref="P_R56"  Part="1" 
+F 0 "P_R56" H 10400 1700 50  0000 L CNN
 F 1 "120E" H 10400 1550 50  0000 L CNN
 F 2 "" V 10390 1590 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 10350 1600 50  0001 C CNN
@@ -647,8 +647,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECC0496
 P 4050 4300
 AR Path="/5DB8A7DC/5ECC0496" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ECC0496" Ref="R43"  Part="1" 
-F 0 "R43" H 4118 4346 50  0000 L CNN
+AR Path="/5E6E93B2/5ECC0496" Ref="P_R43"  Part="1" 
+F 0 "P_R43" H 4118 4346 50  0000 L CNN
 F 1 "10K" H 4118 4255 50  0000 L CNN
 F 2 "" V 4090 4290 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 4050 4300 50  0001 C CNN
@@ -695,8 +695,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECD13C3
 P 2550 4800
 AR Path="/5DB8A7DC/5ECD13C3" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ECD13C3" Ref="R39"  Part="1" 
-F 0 "R39" V 2650 4750 50  0000 L CNN
+AR Path="/5E6E93B2/5ECD13C3" Ref="P_R39"  Part="1" 
+F 0 "P_R39" V 2650 4750 50  0000 L CNN
 F 1 "0E" V 2450 4800 50  0000 L CNN
 F 2 "" V 2590 4790 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2550 4800 50  0001 C CNN
@@ -748,15 +748,15 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECE41BC
 P 9950 2600
 AR Path="/5DB8A7DC/5ECE41BC" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ECE41BC" Ref="R53"  Part="1" 
-F 0 "R53" V 10050 2550 50  0000 L CNN
+AR Path="/5E6E93B2/5ECE41BC" Ref="P_R53"  Part="1" 
+F 0 "P_R53" V 10050 2550 50  0000 L CNN
 F 1 "1K" V 9850 2600 50  0000 L CNN
 F 2 "" V 9990 2590 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9950 2600 50  0001 C CNN
-F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 9950 2600 50  0001 C CNN "Description"
-F 5 "P1.0KJCT-ND " H 9950 2600 50  0001 C CNN "Digikey PartNumber"
-F 6 "ERA-2AEB123X" H 9950 2600 50  0001 C CNN "Manufactured Part Number"
-F 7 "Panasonic Electronic Components" H 9950 2600 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805JR-071KL/311-1-0KARCT-ND/731165" H 9950 2600 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/8W 0805" H 9950 2600 50  0001 C CNN "Description"
+F 5 "311-1.0KARCT-ND" H 9950 2600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0805JR-071KL" H 9950 2600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9950 2600 50  0001 C CNN "Maufaturer"
 	1    9950 2600
 	0    -1   -1   0   
 $EndComp
@@ -765,15 +765,15 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECE7DB2
 P 9700 2800
 AR Path="/5DB8A7DC/5ECE7DB2" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ECE7DB2" Ref="R52"  Part="1" 
-F 0 "R52" V 9800 2750 50  0000 L CNN
+AR Path="/5E6E93B2/5ECE7DB2" Ref="P_R52"  Part="1" 
+F 0 "P_R52" V 9800 2750 50  0000 L CNN
 F 1 "1K" V 9600 2800 50  0000 L CNN
 F 2 "" V 9740 2790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9700 2800 50  0001 C CNN
-F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 9700 2800 50  0001 C CNN "Description"
-F 5 "P1.0KJCT-ND " H 9700 2800 50  0001 C CNN "Digikey PartNumber"
-F 6 "ERA-2AEB123X" H 9700 2800 50  0001 C CNN "Manufactured Part Number"
-F 7 "Panasonic Electronic Components" H 9700 2800 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805JR-071KL/311-1-0KARCT-ND/731165" H 9700 2800 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/8W 0805" H 9700 2800 50  0001 C CNN "Description"
+F 5 "311-1.0KARCT-ND" H 9700 2800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0805JR-071KL" H 9700 2800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9700 2800 50  0001 C CNN "Maufaturer"
 	1    9700 2800
 	-1   0    0    1   
 $EndComp
@@ -850,11 +850,11 @@ AR Path="/5E6E93B2/5ECF8053" Ref="C58"  Part="1"
 F 0 "C58" H 3892 6896 50  0000 L CNN
 F 1 "15pf" H 3892 6805 50  0000 L CNN
 F 2 "" H 3800 6850 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/C0402C150J4GACTU/399-8947-1-ND/3522464" H 3800 6850 50  0001 C CNN
-F 4 " CAP CER 15PF 16V C0G/NP0 0402 " H 3800 6850 50  0001 C CNN "Description"
-F 5 "399-8947-1-ND " H 3800 6850 50  0001 C CNN "Digikey PartNumber"
-F 6 "C0402C150J4GACTU" H 3800 6850 50  0001 C CNN "Manufactured Part Number"
-F 7 "Kemet" H 3800 6850 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/885012007029/732-7828-1-ND/5454455" H 3800 6850 50  0001 C CNN
+F 4 "CAP CER 15PF 25V C0G/NP0 0805" H 3800 6850 50  0001 C CNN "Description"
+F 5 "732-7828-1-ND" H 3800 6850 50  0001 C CNN "Digikey PartNumber"
+F 6 "885012007029" H 3800 6850 50  0001 C CNN "Manufactured Part Number"
+F 7 "Würth Elektronik" H 3800 6850 50  0001 C CNN "Maufaturer"
 	1    3800 6850
 	1    0    0    -1  
 $EndComp
@@ -901,8 +901,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECF8074
 P 2600 6600
 AR Path="/5DB8A7DC/5ECF8074" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ECF8074" Ref="R40"  Part="1" 
-F 0 "R40" V 2700 6550 50  0000 L CNN
+AR Path="/5E6E93B2/5ECF8074" Ref="P_R40"  Part="1" 
+F 0 "P_R40" V 2700 6550 50  0000 L CNN
 F 1 "0E" V 2500 6600 50  0000 L CNN
 F 2 "" V 2640 6590 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2600 6600 50  0001 C CNN
@@ -933,8 +933,8 @@ L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ED10C81
 P 1200 5800
 AR Path="/5DB8A7DC/5ED10C81" Ref="R?"  Part="1" 
-AR Path="/5E6E93B2/5ED10C81" Ref="R38"  Part="1" 
-F 0 "R38" H 1268 5846 50  0000 L CNN
+AR Path="/5E6E93B2/5ED10C81" Ref="P_R38"  Part="1" 
+F 0 "P_R38" H 1268 5846 50  0000 L CNN
 F 1 "10K" H 1268 5755 50  0000 L CNN
 F 2 "" V 1240 5790 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 1200 5800 50  0001 C CNN
@@ -1038,11 +1038,11 @@ AR Path="/5E6E93B2/5ED5D11A" Ref="C61"  Part="1"
 F 0 "C61" H 8992 4796 50  0000 L CNN
 F 1 "0.1UF" H 8992 4705 50  0000 L CNN
 F 2 "" H 8900 4750 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8900 4750 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8900 4750 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8900 4750 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8900 4750 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8900 4750 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8900 4750 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8900 4750 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8900 4750 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8900 4750 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8900 4750 50  0001 C CNN "Maufaturer"
 	1    8900 4750
 	1    0    0    -1  
 $EndComp
@@ -1079,10 +1079,10 @@ AR Path="/5E6E93B2/5ED6F07A" Ref="R54"  Part="1"
 F 0 "R54" V 10150 5250 50  0000 L CNN
 F 1 "0E" V 9950 5300 50  0000 L CNN
 F 2 "" V 10090 5290 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 10050 5300 50  0001 C CNN
-F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 10050 5300 50  0001 C CNN "Description"
-F 5 " 541-0.0ACT-ND " H 10050 5300 50  0001 C CNN "Digikey PartNumber"
-F 6 " CRCW08050000Z0EA " H 10050 5300 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 10050 5300 50  0001 C CNN
+F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 10050 5300 50  0001 C CNN "Description"
+F 5 "541-0.0JCT-ND" H 10050 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "CRCW04020000Z0ED" H 10050 5300 50  0001 C CNN "Manufactured Part Number"
 F 7 "Vishay Dale" H 10050 5300 50  0001 C CNN "Maufaturer"
 	1    10050 5300
 	0    -1   -1   0   
@@ -1232,11 +1232,11 @@ AR Path="/5E6E93B2/5EDE585E" Ref="C60"  Part="1"
 F 0 "C60" H 7742 5546 50  0000 L CNN
 F 1 "0.1UF" H 7742 5455 50  0000 L CNN
 F 2 "" H 7650 5500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 7650 5500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 7650 5500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 7650 5500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 7650 5500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 7650 5500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 7650 5500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 7650 5500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 7650 5500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 7650 5500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 7650 5500 50  0001 C CNN "Maufaturer"
 	1    7650 5500
 	1    0    0    -1  
 $EndComp
@@ -1279,10 +1279,10 @@ AR Path="/5E6E93B2/5EE0CD3F" Ref="R47"  Part="1"
 F 0 "R47" V 8400 6150 50  0000 L CNN
 F 1 "0E" V 8200 6200 50  0000 L CNN
 F 2 "" V 8340 6190 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 8300 6200 50  0001 C CNN
-F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 8300 6200 50  0001 C CNN "Description"
-F 5 " 541-0.0ACT-ND " H 8300 6200 50  0001 C CNN "Digikey PartNumber"
-F 6 " CRCW08050000Z0EA " H 8300 6200 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 8300 6200 50  0001 C CNN
+F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 8300 6200 50  0001 C CNN "Description"
+F 5 "541-0.0JCT-ND" H 8300 6200 50  0001 C CNN "Digikey PartNumber"
+F 6 "CRCW04020000Z0ED" H 8300 6200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Vishay Dale" H 8300 6200 50  0001 C CNN "Maufaturer"
 	1    8300 6200
 	0    -1   -1   0   

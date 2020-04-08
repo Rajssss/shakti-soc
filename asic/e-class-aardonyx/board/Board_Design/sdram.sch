@@ -267,11 +267,11 @@ P 1650 1400
 F 0 "C18" H 1650 1500 50  0000 L CNN
 F 1 "0.1uF" H 1650 1300 50  0000 L CNN
 F 2 "" H 1650 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 1650 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 1650 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 1650 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 1650 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 1650 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 1650 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 1650 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 1650 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 1650 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 1650 1400 50  0001 C CNN "Maufaturer"
 	1    1650 1400
 	1    0    0    -1  
 $EndComp
@@ -282,11 +282,11 @@ P 1900 1400
 F 0 "C19" H 1900 1500 50  0000 L CNN
 F 1 "0.1uF" H 1900 1300 50  0000 L CNN
 F 2 "" H 1900 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 1900 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 1900 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 1900 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 1900 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 1900 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 1900 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 1900 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 1900 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 1900 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 1900 1400 50  0001 C CNN "Maufaturer"
 	1    1900 1400
 	1    0    0    -1  
 $EndComp
@@ -297,11 +297,11 @@ P 2150 1400
 F 0 "C20" H 2150 1500 50  0000 L CNN
 F 1 "0.1uF" H 2150 1300 50  0000 L CNN
 F 2 "" H 2150 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 2150 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 2150 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 2150 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 2150 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 2150 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2150 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 2150 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 2150 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 2150 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 2150 1400 50  0001 C CNN "Maufaturer"
 	1    2150 1400
 	1    0    0    -1  
 $EndComp
@@ -312,11 +312,11 @@ P 2400 1400
 F 0 "C21" H 2400 1500 50  0000 L CNN
 F 1 "0.1uF" H 2400 1300 50  0000 L CNN
 F 2 "" H 2400 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 2400 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 2400 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 2400 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 2400 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 2400 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2400 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 2400 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 2400 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 2400 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 2400 1400 50  0001 C CNN "Maufaturer"
 	1    2400 1400
 	1    0    0    -1  
 $EndComp
@@ -327,11 +327,11 @@ P 2650 1400
 F 0 "C22" H 2650 1500 50  0000 L CNN
 F 1 "0.1uF" H 2650 1300 50  0000 L CNN
 F 2 "" H 2650 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 2650 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 2650 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 2650 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 2650 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 2650 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2650 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 2650 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 2650 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 2650 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 2650 1400 50  0001 C CNN "Maufaturer"
 	1    2650 1400
 	1    0    0    -1  
 $EndComp
@@ -342,11 +342,11 @@ P 2900 1400
 F 0 "C23" H 2900 1500 50  0000 L CNN
 F 1 "0.1uF" H 2900 1300 50  0000 L CNN
 F 2 "" H 2900 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 2900 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 2900 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 2900 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 2900 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 2900 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2900 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 2900 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 2900 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 2900 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 2900 1400 50  0001 C CNN "Maufaturer"
 	1    2900 1400
 	1    0    0    -1  
 $EndComp
@@ -357,11 +357,11 @@ P 3150 1400
 F 0 "C24" H 3150 1500 50  0000 L CNN
 F 1 "0.1uF" H 3150 1300 50  0000 L CNN
 F 2 "" H 3150 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 3150 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 3150 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 3150 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 3150 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 3150 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3150 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3150 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3150 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3150 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3150 1400 50  0001 C CNN "Maufaturer"
 	1    3150 1400
 	1    0    0    -1  
 $EndComp
@@ -372,11 +372,11 @@ P 3400 1400
 F 0 "C25" H 3400 1500 50  0000 L CNN
 F 1 "0.1uF" H 3400 1300 50  0000 L CNN
 F 2 "" H 3400 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 3400 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 3400 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 3400 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 3400 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 3400 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3400 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3400 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3400 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3400 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3400 1400 50  0001 C CNN "Maufaturer"
 	1    3400 1400
 	1    0    0    -1  
 $EndComp
@@ -387,11 +387,11 @@ P 3650 1400
 F 0 "C26" H 3650 1500 50  0000 L CNN
 F 1 "0.1uF" H 3650 1300 50  0000 L CNN
 F 2 "" H 3650 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 3650 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 3650 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 3650 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 3650 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 3650 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3650 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3650 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3650 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3650 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3650 1400 50  0001 C CNN "Maufaturer"
 	1    3650 1400
 	1    0    0    -1  
 $EndComp
@@ -402,11 +402,11 @@ P 3900 1400
 F 0 "C27" H 3900 1500 50  0000 L CNN
 F 1 "0.1uF" H 3900 1300 50  0000 L CNN
 F 2 "" H 3900 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 3900 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 3900 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 3900 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 3900 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 3900 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3900 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3900 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3900 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3900 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3900 1400 50  0001 C CNN "Maufaturer"
 	1    3900 1400
 	1    0    0    -1  
 $EndComp
@@ -417,11 +417,11 @@ P 4150 1400
 F 0 "C28" H 4150 1500 50  0000 L CNN
 F 1 "0.1uF" H 4150 1300 50  0000 L CNN
 F 2 "" H 4150 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 4150 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 4150 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 4150 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 4150 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 4150 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4150 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 4150 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 4150 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 4150 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 4150 1400 50  0001 C CNN "Maufaturer"
 	1    4150 1400
 	1    0    0    -1  
 $EndComp
@@ -432,11 +432,11 @@ P 4400 1400
 F 0 "C29" H 4400 1500 50  0000 L CNN
 F 1 "0.1uF" H 4400 1300 50  0000 L CNN
 F 2 "" H 4400 1400 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 4400 1400 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 4400 1400 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 4400 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 4400 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 4400 1400 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4400 1400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 4400 1400 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 4400 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 4400 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 4400 1400 50  0001 C CNN "Maufaturer"
 	1    4400 1400
 	1    0    0    -1  
 $EndComp
@@ -800,11 +800,11 @@ AR Path="/5D8B37B8/5EFB4D13" Ref="C31"  Part="1"
 F 0 "C31" H 10000 2100 50  0000 L CNN
 F 1 "0.1uf" H 10000 1900 50  0000 L CNN
 F 2 "" H 10000 2000 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 2000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 2000 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10000 2000 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10000 2000 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10000 2000 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10000 2000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10000 2000 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10000 2000 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10000 2000 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10000 2000 50  0001 C CNN "Maufaturer"
 	1    10000 2000
 	1    0    0    -1  
 $EndComp
@@ -817,11 +817,11 @@ AR Path="/5D8B37B8/5EFB4D19" Ref="C32"  Part="1"
 F 0 "C32" H 10250 2100 50  0000 L CNN
 F 1 "0.1uf" H 10250 1900 50  0000 L CNN
 F 2 "" H 10250 2000 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 2000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 2000 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10250 2000 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10250 2000 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10250 2000 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10250 2000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10250 2000 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10250 2000 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10250 2000 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10250 2000 50  0001 C CNN "Maufaturer"
 	1    10250 2000
 	1    0    0    -1  
 $EndComp
@@ -983,7 +983,11 @@ AR Path="/5D8B37B8/5EFB4D80" Ref="R24"  Part="1"
 F 0 "R24" V 9900 2450 50  0000 C CNN
 F 1 "22E" V 9900 2750 50  0000 C CNN
 F 2 "" V 9990 2590 50  0001 C CNN
-F 3 "" H 9950 2600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 9950 2600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 9950 2600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 9950 2600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 9950 2600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9950 2600 50  0001 C CNN "Maufaturer"
 	1    9950 2600
 	0    1    1    0   
 $EndComp
@@ -1114,11 +1118,11 @@ AR Path="/5D8B37B8/5F8E5F7E" Ref="C30"  Part="1"
 F 0 "C30" H 7450 1650 50  0000 L CNN
 F 1 "0.1uf" H 7450 1450 50  0000 L CNN
 F 2 "" H 7450 1550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 7450 1550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 7450 1550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 7450 1550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 7450 1550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 7450 1550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 7450 1550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 7450 1550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 7450 1550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 7450 1550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 7450 1550 50  0001 C CNN "Maufaturer"
 	1    7450 1550
 	1    0    0    -1  
 $EndComp

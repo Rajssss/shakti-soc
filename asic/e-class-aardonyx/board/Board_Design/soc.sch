@@ -20,11 +20,11 @@ P 8500 1450
 F 0 "C63" H 8500 1550 50  0000 L CNN
 F 1 "0.1uF" H 8500 1350 50  0000 L CNN
 F 2 "" H 8500 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8500 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8500 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8500 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8500 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8500 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8500 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8500 1450 50  0001 C CNN "Maufaturer"
 	1    8500 1450
 	1    0    0    -1  
 $EndComp
@@ -35,11 +35,11 @@ P 8750 1450
 F 0 "C66" H 8750 1550 50  0000 L CNN
 F 1 "0.1uF" H 8750 1350 50  0000 L CNN
 F 2 "" H 8750 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8750 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8750 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8750 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8750 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8750 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8750 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8750 1450 50  0001 C CNN "Maufaturer"
 	1    8750 1450
 	1    0    0    -1  
 $EndComp
@@ -50,11 +50,11 @@ P 9000 1450
 F 0 "C69" H 9000 1550 50  0000 L CNN
 F 1 "0.1uF" H 9000 1350 50  0000 L CNN
 F 2 "" H 9000 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9000 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9000 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9000 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9000 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9000 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9000 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9000 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9000 1450 50  0001 C CNN "Maufaturer"
 	1    9000 1450
 	1    0    0    -1  
 $EndComp
@@ -65,11 +65,11 @@ P 9250 1450
 F 0 "C72" H 9250 1550 50  0000 L CNN
 F 1 "0.1uF" H 9250 1350 50  0000 L CNN
 F 2 "" H 9250 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9250 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9250 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9250 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9250 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9250 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9250 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9250 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9250 1450 50  0001 C CNN "Maufaturer"
 	1    9250 1450
 	1    0    0    -1  
 $EndComp
@@ -80,11 +80,11 @@ P 9500 1450
 F 0 "C75" H 9500 1550 50  0000 L CNN
 F 1 "0.1uF" H 9500 1350 50  0000 L CNN
 F 2 "" H 9500 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9500 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9500 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9500 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9500 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9500 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9500 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9500 1450 50  0001 C CNN "Maufaturer"
 	1    9500 1450
 	1    0    0    -1  
 $EndComp
@@ -95,11 +95,11 @@ P 9750 1450
 F 0 "C78" H 9750 1550 50  0000 L CNN
 F 1 "0.1uF" H 9750 1350 50  0000 L CNN
 F 2 "" H 9750 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9750 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9750 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9750 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9750 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9750 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9750 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9750 1450 50  0001 C CNN "Maufaturer"
 	1    9750 1450
 	1    0    0    -1  
 $EndComp
@@ -110,11 +110,11 @@ P 10000 1450
 F 0 "C81" H 10000 1550 50  0000 L CNN
 F 1 "0.1uF" H 10000 1350 50  0000 L CNN
 F 2 "" H 10000 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10000 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10000 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10000 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10000 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10000 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10000 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10000 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10000 1450 50  0001 C CNN "Maufaturer"
 	1    10000 1450
 	1    0    0    -1  
 $EndComp
@@ -125,11 +125,11 @@ P 10250 1450
 F 0 "C84" H 10250 1550 50  0000 L CNN
 F 1 "0.1uF" H 10250 1350 50  0000 L CNN
 F 2 "" H 10250 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10250 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10250 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10250 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10250 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10250 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10250 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10250 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10250 1450 50  0001 C CNN "Maufaturer"
 	1    10250 1450
 	1    0    0    -1  
 $EndComp
@@ -396,11 +396,11 @@ P 8500 2500
 F 0 "C64" H 8500 2600 50  0000 L CNN
 F 1 "0.1uF" H 8500 2400 50  0000 L CNN
 F 2 "" H 8500 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8500 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8500 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8500 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8500 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8500 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8500 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8500 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8500 2500 50  0001 C CNN "Maufaturer"
 	1    8500 2500
 	1    0    0    -1  
 $EndComp
@@ -411,11 +411,11 @@ P 8750 2500
 F 0 "C67" H 8750 2600 50  0000 L CNN
 F 1 "0.1uF" H 8750 2400 50  0000 L CNN
 F 2 "" H 8750 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8750 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8750 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8750 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8750 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8750 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8750 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8750 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8750 2500 50  0001 C CNN "Maufaturer"
 	1    8750 2500
 	1    0    0    -1  
 $EndComp
@@ -442,11 +442,11 @@ P 8500 3550
 F 0 "C65" H 8500 3650 50  0000 L CNN
 F 1 "0.1uF" H 8500 3450 50  0000 L CNN
 F 2 "" H 8500 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8500 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8500 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8500 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8500 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8500 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8500 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8500 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8500 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8500 3550 50  0001 C CNN "Maufaturer"
 	1    8500 3550
 	1    0    0    -1  
 $EndComp
@@ -457,11 +457,11 @@ P 8750 3550
 F 0 "C68" H 8750 3650 50  0000 L CNN
 F 1 "0.1uF" H 8750 3450 50  0000 L CNN
 F 2 "" H 8750 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 8750 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 8750 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 8750 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 8750 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 8750 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 8750 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 8750 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 8750 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 8750 3550 50  0001 C CNN "Maufaturer"
 	1    8750 3550
 	1    0    0    -1  
 $EndComp
@@ -472,11 +472,11 @@ P 9000 3550
 F 0 "C71" H 9000 3650 50  0000 L CNN
 F 1 "0.1uF" H 9000 3450 50  0000 L CNN
 F 2 "" H 9000 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9000 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9000 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9000 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9000 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9000 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9000 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9000 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9000 3550 50  0001 C CNN "Maufaturer"
 	1    9000 3550
 	1    0    0    -1  
 $EndComp
@@ -487,11 +487,11 @@ P 9250 3550
 F 0 "C74" H 9250 3650 50  0000 L CNN
 F 1 "0.1uF" H 9250 3450 50  0000 L CNN
 F 2 "" H 9250 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9250 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9250 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9250 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9250 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9250 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9250 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9250 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9250 3550 50  0001 C CNN "Maufaturer"
 	1    9250 3550
 	1    0    0    -1  
 $EndComp
@@ -502,11 +502,11 @@ P 9500 3550
 F 0 "C77" H 9500 3650 50  0000 L CNN
 F 1 "0.1uF" H 9500 3450 50  0000 L CNN
 F 2 "" H 9500 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9500 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9500 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9500 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9500 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9500 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9500 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9500 3550 50  0001 C CNN "Maufaturer"
 	1    9500 3550
 	1    0    0    -1  
 $EndComp
@@ -517,11 +517,11 @@ P 9750 3550
 F 0 "C80" H 9750 3650 50  0000 L CNN
 F 1 "0.1uF" H 9750 3450 50  0000 L CNN
 F 2 "" H 9750 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9750 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9750 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9750 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9750 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9750 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9750 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9750 3550 50  0001 C CNN "Maufaturer"
 	1    9750 3550
 	1    0    0    -1  
 $EndComp
@@ -532,11 +532,11 @@ P 10000 3550
 F 0 "C83" H 10000 3650 50  0000 L CNN
 F 1 "0.1uF" H 10000 3450 50  0000 L CNN
 F 2 "" H 10000 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10000 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10000 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10000 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10000 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10000 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10000 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10000 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10000 3550 50  0001 C CNN "Maufaturer"
 	1    10000 3550
 	1    0    0    -1  
 $EndComp
@@ -547,11 +547,11 @@ P 10250 3550
 F 0 "C86" H 10250 3650 50  0000 L CNN
 F 1 "0.1uF" H 10250 3450 50  0000 L CNN
 F 2 "" H 10250 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10250 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10250 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10250 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10250 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10250 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10250 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10250 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10250 3550 50  0001 C CNN "Maufaturer"
 	1    10250 3550
 	1    0    0    -1  
 $EndComp
@@ -646,11 +646,11 @@ P 10500 3550
 F 0 "C88" H 10500 3650 50  0000 L CNN
 F 1 "0.1uF" H 10500 3450 50  0000 L CNN
 F 2 "" H 10500 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10500 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10500 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10500 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10500 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10500 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10500 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10500 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10500 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10500 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10500 3550 50  0001 C CNN "Maufaturer"
 	1    10500 3550
 	1    0    0    -1  
 $EndComp
@@ -661,11 +661,11 @@ P 10750 3550
 F 0 "C90" H 10750 3650 50  0000 L CNN
 F 1 "0.1uF" H 10750 3450 50  0000 L CNN
 F 2 "" H 10750 3550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10750 3550 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10750 3550 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10750 3550 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10750 3550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10750 3550 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10750 3550 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10750 3550 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10750 3550 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10750 3550 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10750 3550 50  0001 C CNN "Maufaturer"
 	1    10750 3550
 	1    0    0    -1  
 $EndComp
@@ -710,11 +710,11 @@ P 9000 2500
 F 0 "C70" H 9000 2600 50  0000 L CNN
 F 1 "0.1uF" H 9000 2400 50  0000 L CNN
 F 2 "" H 9000 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9000 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9000 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9000 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9000 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9000 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9000 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9000 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9000 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9000 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9000 2500 50  0001 C CNN "Maufaturer"
 	1    9000 2500
 	1    0    0    -1  
 $EndComp
@@ -725,11 +725,11 @@ P 10500 1450
 F 0 "C87" H 10500 1550 50  0000 L CNN
 F 1 "0.1uF" H 10500 1350 50  0000 L CNN
 F 2 "" H 10500 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10500 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10500 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10500 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10500 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10500 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10500 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10500 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10500 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10500 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10500 1450 50  0001 C CNN "Maufaturer"
 	1    10500 1450
 	1    0    0    -1  
 $EndComp
@@ -740,11 +740,11 @@ P 10750 1450
 F 0 "C89" H 10750 1550 50  0000 L CNN
 F 1 "0.1uF" H 10750 1350 50  0000 L CNN
 F 2 "" H 10750 1450 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10750 1450 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10750 1450 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10750 1450 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10750 1450 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10750 1450 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10750 1450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10750 1450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10750 1450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10750 1450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10750 1450 50  0001 C CNN "Maufaturer"
 	1    10750 1450
 	1    0    0    -1  
 $EndComp
@@ -792,11 +792,11 @@ P 9250 2500
 F 0 "C73" H 9250 2600 50  0000 L CNN
 F 1 "0.1uF" H 9250 2400 50  0000 L CNN
 F 2 "" H 9250 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9250 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9250 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9250 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9250 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9250 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9250 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9250 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9250 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9250 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9250 2500 50  0001 C CNN "Maufaturer"
 	1    9250 2500
 	1    0    0    -1  
 $EndComp
@@ -807,11 +807,11 @@ P 9500 2500
 F 0 "C76" H 9500 2600 50  0000 L CNN
 F 1 "0.1uF" H 9500 2400 50  0000 L CNN
 F 2 "" H 9500 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9500 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9500 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9500 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9500 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9500 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9500 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9500 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9500 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9500 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9500 2500 50  0001 C CNN "Maufaturer"
 	1    9500 2500
 	1    0    0    -1  
 $EndComp
@@ -861,7 +861,11 @@ P 2100 7150
 F 0 "R89" V 2050 7000 50  0000 C CNN
 F 1 "22E" V 2050 7300 50  0000 C CNN
 F 2 "" V 2140 7140 50  0001 C CNN
-F 3 "" H 2100 7150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 7150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 7150 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 7150 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 7150 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 7150 50  0001 C CNN "Maufaturer"
 	1    2100 7150
 	0    1    1    0   
 $EndComp
@@ -872,7 +876,11 @@ P 2100 7050
 F 0 "R88" V 2050 6900 50  0000 C CNN
 F 1 "22E" V 2050 7200 50  0000 C CNN
 F 2 "" V 2140 7040 50  0001 C CNN
-F 3 "" H 2100 7050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 7050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 7050 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 7050 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 7050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 7050 50  0001 C CNN "Maufaturer"
 	1    2100 7050
 	0    1    1    0   
 $EndComp
@@ -883,7 +891,11 @@ P 2100 6950
 F 0 "R87" V 2050 6800 50  0000 C CNN
 F 1 "22E" V 2050 7100 50  0000 C CNN
 F 2 "" V 2140 6940 50  0001 C CNN
-F 3 "" H 2100 6950 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6950 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6950 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6950 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6950 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6950 50  0001 C CNN "Maufaturer"
 	1    2100 6950
 	0    1    1    0   
 $EndComp
@@ -894,7 +906,11 @@ P 2100 6850
 F 0 "R86" V 2050 6700 50  0000 C CNN
 F 1 "22E" V 2050 7000 50  0000 C CNN
 F 2 "" V 2140 6840 50  0001 C CNN
-F 3 "" H 2100 6850 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6850 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6850 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6850 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6850 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6850 50  0001 C CNN "Maufaturer"
 	1    2100 6850
 	0    1    1    0   
 $EndComp
@@ -905,7 +921,11 @@ P 2100 6750
 F 0 "R85" V 2050 6600 50  0000 C CNN
 F 1 "22E" V 2050 6900 50  0000 C CNN
 F 2 "" V 2140 6740 50  0001 C CNN
-F 3 "" H 2100 6750 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6750 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6750 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6750 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6750 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6750 50  0001 C CNN "Maufaturer"
 	1    2100 6750
 	0    1    1    0   
 $EndComp
@@ -916,7 +936,11 @@ P 2100 6650
 F 0 "R84" V 2050 6500 50  0000 C CNN
 F 1 "22E" V 2050 6800 50  0000 C CNN
 F 2 "" V 2140 6640 50  0001 C CNN
-F 3 "" H 2100 6650 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6650 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6650 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6650 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6650 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6650 50  0001 C CNN "Maufaturer"
 	1    2100 6650
 	0    1    1    0   
 $EndComp
@@ -927,7 +951,11 @@ P 2100 6500
 F 0 "R83" V 2050 6350 50  0000 C CNN
 F 1 "22E" V 2050 6650 50  0000 C CNN
 F 2 "" V 2140 6490 50  0001 C CNN
-F 3 "" H 2100 6500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6500 50  0001 C CNN "Maufaturer"
 	1    2100 6500
 	0    1    1    0   
 $EndComp
@@ -938,7 +966,11 @@ P 2100 6400
 F 0 "R82" V 2050 6250 50  0000 C CNN
 F 1 "22E" V 2050 6550 50  0000 C CNN
 F 2 "" V 2140 6390 50  0001 C CNN
-F 3 "" H 2100 6400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6400 50  0001 C CNN "Maufaturer"
 	1    2100 6400
 	0    1    1    0   
 $EndComp
@@ -949,7 +981,11 @@ P 2100 6250
 F 0 "R81" V 2050 6100 50  0000 C CNN
 F 1 "22E" V 2050 6400 50  0000 C CNN
 F 2 "" V 2140 6240 50  0001 C CNN
-F 3 "" H 2100 6250 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6250 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6250 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6250 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6250 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6250 50  0001 C CNN "Maufaturer"
 	1    2100 6250
 	0    1    1    0   
 $EndComp
@@ -960,7 +996,11 @@ P 2100 6150
 F 0 "R80" V 2050 6000 50  0000 C CNN
 F 1 "22E" V 2050 6300 50  0000 C CNN
 F 2 "" V 2140 6140 50  0001 C CNN
-F 3 "" H 2100 6150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6150 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6150 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6150 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6150 50  0001 C CNN "Maufaturer"
 	1    2100 6150
 	0    1    1    0   
 $EndComp
@@ -971,7 +1011,11 @@ P 2100 6050
 F 0 "R79" V 2050 5900 50  0000 C CNN
 F 1 "22E" V 2050 6200 50  0000 C CNN
 F 2 "" V 2140 6040 50  0001 C CNN
-F 3 "" H 2100 6050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 6050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 6050 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 6050 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 6050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 6050 50  0001 C CNN "Maufaturer"
 	1    2100 6050
 	0    1    1    0   
 $EndComp
@@ -982,7 +1026,11 @@ P 2100 5950
 F 0 "R78" V 2050 5800 50  0000 C CNN
 F 1 "22E" V 2050 6100 50  0000 C CNN
 F 2 "" V 2140 5940 50  0001 C CNN
-F 3 "" H 2100 5950 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5950 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5950 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5950 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5950 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5950 50  0001 C CNN "Maufaturer"
 	1    2100 5950
 	0    1    1    0   
 $EndComp
@@ -993,7 +1041,11 @@ P 2100 5600
 F 0 "R77" V 2050 5450 50  0000 C CNN
 F 1 "22E" V 2050 5750 50  0000 C CNN
 F 2 "" V 2140 5590 50  0001 C CNN
-F 3 "" H 2100 5600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5600 50  0001 C CNN "Maufaturer"
 	1    2100 5600
 	0    1    1    0   
 $EndComp
@@ -1004,7 +1056,11 @@ P 2100 5500
 F 0 "R76" V 2050 5350 50  0000 C CNN
 F 1 "22E" V 2050 5650 50  0000 C CNN
 F 2 "" V 2140 5490 50  0001 C CNN
-F 3 "" H 2100 5500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5500 50  0001 C CNN "Maufaturer"
 	1    2100 5500
 	0    1    1    0   
 $EndComp
@@ -1015,7 +1071,11 @@ P 2100 5400
 F 0 "R75" V 2050 5250 50  0000 C CNN
 F 1 "22E" V 2050 5550 50  0000 C CNN
 F 2 "" V 2140 5390 50  0001 C CNN
-F 3 "" H 2100 5400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5400 50  0001 C CNN "Maufaturer"
 	1    2100 5400
 	0    1    1    0   
 $EndComp
@@ -1026,7 +1086,11 @@ P 2100 5300
 F 0 "R74" V 2050 5150 50  0000 C CNN
 F 1 "22E" V 2050 5450 50  0000 C CNN
 F 2 "" V 2140 5290 50  0001 C CNN
-F 3 "" H 2100 5300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5300 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5300 50  0001 C CNN "Maufaturer"
 	1    2100 5300
 	0    1    1    0   
 $EndComp
@@ -1037,7 +1101,11 @@ P 2100 5200
 F 0 "R73" V 2050 5050 50  0000 C CNN
 F 1 "22E" V 2050 5350 50  0000 C CNN
 F 2 "" V 2140 5190 50  0001 C CNN
-F 3 "" H 2100 5200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5200 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5200 50  0001 C CNN "Maufaturer"
 	1    2100 5200
 	0    1    1    0   
 $EndComp
@@ -1048,7 +1116,11 @@ P 2100 5100
 F 0 "R72" V 2050 4950 50  0000 C CNN
 F 1 "22E" V 2050 5250 50  0000 C CNN
 F 2 "" V 2140 5090 50  0001 C CNN
-F 3 "" H 2100 5100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5100 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5100 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5100 50  0001 C CNN "Maufaturer"
 	1    2100 5100
 	0    1    1    0   
 $EndComp
@@ -1059,7 +1131,11 @@ P 2100 5000
 F 0 "R71" V 2050 4850 50  0000 C CNN
 F 1 "22E" V 2050 5150 50  0000 C CNN
 F 2 "" V 2140 4990 50  0001 C CNN
-F 3 "" H 2100 5000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 5000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 5000 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 5000 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 5000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 5000 50  0001 C CNN "Maufaturer"
 	1    2100 5000
 	0    1    1    0   
 $EndComp
@@ -1070,7 +1146,11 @@ P 2100 4900
 F 0 "R70" V 2050 4750 50  0000 C CNN
 F 1 "22E" V 2050 5050 50  0000 C CNN
 F 2 "" V 2140 4890 50  0001 C CNN
-F 3 "" H 2100 4900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4900 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4900 50  0001 C CNN "Maufaturer"
 	1    2100 4900
 	0    1    1    0   
 $EndComp
@@ -1081,7 +1161,11 @@ P 2100 4800
 F 0 "R69" V 2050 4650 50  0000 C CNN
 F 1 "22E" V 2050 4950 50  0000 C CNN
 F 2 "" V 2140 4790 50  0001 C CNN
-F 3 "" H 2100 4800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4800 50  0001 C CNN "Maufaturer"
 	1    2100 4800
 	0    1    1    0   
 $EndComp
@@ -1092,7 +1176,11 @@ P 2100 4700
 F 0 "R68" V 2050 4550 50  0000 C CNN
 F 1 "22E" V 2050 4850 50  0000 C CNN
 F 2 "" V 2140 4690 50  0001 C CNN
-F 3 "" H 2100 4700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4700 50  0001 C CNN "Maufaturer"
 	1    2100 4700
 	0    1    1    0   
 $EndComp
@@ -1103,7 +1191,11 @@ P 2100 4600
 F 0 "R67" V 2050 4450 50  0000 C CNN
 F 1 "22E" V 2050 4750 50  0000 C CNN
 F 2 "" V 2140 4590 50  0001 C CNN
-F 3 "" H 2100 4600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4600 50  0001 C CNN "Maufaturer"
 	1    2100 4600
 	0    1    1    0   
 $EndComp
@@ -1114,7 +1206,11 @@ P 2100 4500
 F 0 "R66" V 2050 4350 50  0000 C CNN
 F 1 "22E" V 2050 4650 50  0000 C CNN
 F 2 "" V 2140 4490 50  0001 C CNN
-F 3 "" H 2100 4500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4500 50  0001 C CNN "Maufaturer"
 	1    2100 4500
 	0    1    1    0   
 $EndComp
@@ -1125,7 +1221,11 @@ P 2100 4400
 F 0 "R65" V 2050 4250 50  0000 C CNN
 F 1 "22E" V 2050 4550 50  0000 C CNN
 F 2 "" V 2140 4390 50  0001 C CNN
-F 3 "" H 2100 4400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 2100 4400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 2100 4400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 2100 4400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 2100 4400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 2100 4400 50  0001 C CNN "Maufaturer"
 	1    2100 4400
 	0    1    1    0   
 $EndComp
@@ -1136,7 +1236,11 @@ P 4600 7500
 F 0 "R127" V 4550 7350 50  0000 C CNN
 F 1 "22E" V 4550 7650 50  0000 C CNN
 F 2 "" V 4640 7490 50  0001 C CNN
-F 3 "" H 4600 7500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7500 50  0001 C CNN "Maufaturer"
 	1    4600 7500
 	0    1    1    0   
 $EndComp
@@ -1147,7 +1251,11 @@ P 4600 7400
 F 0 "R126" V 4550 7250 50  0000 C CNN
 F 1 "22E" V 4550 7550 50  0000 C CNN
 F 2 "" V 4640 7390 50  0001 C CNN
-F 3 "" H 4600 7400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7400 50  0001 C CNN "Maufaturer"
 	1    4600 7400
 	0    1    1    0   
 $EndComp
@@ -1158,7 +1266,11 @@ P 4600 7300
 F 0 "R125" V 4550 7150 50  0000 C CNN
 F 1 "22E" V 4550 7450 50  0000 C CNN
 F 2 "" V 4640 7290 50  0001 C CNN
-F 3 "" H 4600 7300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7300 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7300 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7300 50  0001 C CNN "Maufaturer"
 	1    4600 7300
 	0    1    1    0   
 $EndComp
@@ -1169,7 +1281,11 @@ P 4600 6600
 F 0 "R118" V 4550 6450 50  0000 C CNN
 F 1 "22E" V 4550 6750 50  0000 C CNN
 F 2 "" V 4640 6590 50  0001 C CNN
-F 3 "" H 4600 6600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6600 50  0001 C CNN "Maufaturer"
 	1    4600 6600
 	0    1    1    0   
 $EndComp
@@ -1180,7 +1296,11 @@ P 4600 5900
 F 0 "R111" V 4550 5750 50  0000 C CNN
 F 1 "22E" V 4550 6050 50  0000 C CNN
 F 2 "" V 4640 5890 50  0001 C CNN
-F 3 "" H 4600 5900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5900 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5900 50  0001 C CNN "Maufaturer"
 	1    4600 5900
 	0    1    1    0   
 $EndComp
@@ -1191,7 +1311,11 @@ P 4600 5800
 F 0 "R110" V 4550 5650 50  0000 C CNN
 F 1 "22E" V 4550 5950 50  0000 C CNN
 F 2 "" V 4640 5790 50  0001 C CNN
-F 3 "" H 4600 5800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5800 50  0001 C CNN "Maufaturer"
 	1    4600 5800
 	0    1    1    0   
 $EndComp
@@ -1202,7 +1326,11 @@ P 4600 5700
 F 0 "R109" V 4550 5550 50  0000 C CNN
 F 1 "22E" V 4550 5850 50  0000 C CNN
 F 2 "" V 4640 5690 50  0001 C CNN
-F 3 "" H 4600 5700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5700 50  0001 C CNN "Maufaturer"
 	1    4600 5700
 	0    1    1    0   
 $EndComp
@@ -1213,7 +1341,11 @@ P 4600 7200
 F 0 "R124" V 4550 7050 50  0000 C CNN
 F 1 "22E" V 4550 7350 50  0000 C CNN
 F 2 "" V 4640 7190 50  0001 C CNN
-F 3 "" H 4600 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7200 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7200 50  0001 C CNN "Maufaturer"
 	1    4600 7200
 	0    1    1    0   
 $EndComp
@@ -1224,7 +1356,11 @@ P 4600 7100
 F 0 "R123" V 4550 6950 50  0000 C CNN
 F 1 "22E" V 4550 7250 50  0000 C CNN
 F 2 "" V 4640 7090 50  0001 C CNN
-F 3 "" H 4600 7100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7100 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7100 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7100 50  0001 C CNN "Maufaturer"
 	1    4600 7100
 	0    1    1    0   
 $EndComp
@@ -1235,7 +1371,11 @@ P 4600 7000
 F 0 "R122" V 4550 6850 50  0000 C CNN
 F 1 "22E" V 4550 7150 50  0000 C CNN
 F 2 "" V 4640 6990 50  0001 C CNN
-F 3 "" H 4600 7000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 7000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 7000 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 7000 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 7000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 7000 50  0001 C CNN "Maufaturer"
 	1    4600 7000
 	0    1    1    0   
 $EndComp
@@ -1246,7 +1386,11 @@ P 4600 6900
 F 0 "R121" V 4550 6750 50  0000 C CNN
 F 1 "22E" V 4550 7050 50  0000 C CNN
 F 2 "" V 4640 6890 50  0001 C CNN
-F 3 "" H 4600 6900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6900 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6900 50  0001 C CNN "Maufaturer"
 	1    4600 6900
 	0    1    1    0   
 $EndComp
@@ -1257,7 +1401,11 @@ P 4600 6800
 F 0 "R120" V 4550 6650 50  0000 C CNN
 F 1 "22E" V 4550 6950 50  0000 C CNN
 F 2 "" V 4640 6790 50  0001 C CNN
-F 3 "" H 4600 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6800 50  0001 C CNN "Maufaturer"
 	1    4600 6800
 	0    1    1    0   
 $EndComp
@@ -1268,7 +1416,11 @@ P 4600 6700
 F 0 "R119" V 4550 6550 50  0000 C CNN
 F 1 "22E" V 4550 6850 50  0000 C CNN
 F 2 "" V 4640 6690 50  0001 C CNN
-F 3 "" H 4600 6700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6700 50  0001 C CNN "Maufaturer"
 	1    4600 6700
 	0    1    1    0   
 $EndComp
@@ -1279,7 +1431,11 @@ P 4600 6500
 F 0 "R117" V 4550 6350 50  0000 C CNN
 F 1 "22E" V 4550 6650 50  0000 C CNN
 F 2 "" V 4640 6490 50  0001 C CNN
-F 3 "" H 4600 6500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6500 50  0001 C CNN "Maufaturer"
 	1    4600 6500
 	0    1    1    0   
 $EndComp
@@ -1290,7 +1446,11 @@ P 4600 6400
 F 0 "R116" V 4550 6250 50  0000 C CNN
 F 1 "22E" V 4550 6550 50  0000 C CNN
 F 2 "" V 4640 6390 50  0001 C CNN
-F 3 "" H 4600 6400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6400 50  0001 C CNN "Maufaturer"
 	1    4600 6400
 	0    1    1    0   
 $EndComp
@@ -1301,7 +1461,11 @@ P 4600 6300
 F 0 "R115" V 4550 6150 50  0000 C CNN
 F 1 "22E" V 4550 6450 50  0000 C CNN
 F 2 "" V 4640 6290 50  0001 C CNN
-F 3 "" H 4600 6300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6300 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6300 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6300 50  0001 C CNN "Maufaturer"
 	1    4600 6300
 	0    1    1    0   
 $EndComp
@@ -1312,7 +1476,11 @@ P 4600 6200
 F 0 "R114" V 4550 6050 50  0000 C CNN
 F 1 "22E" V 4550 6350 50  0000 C CNN
 F 2 "" V 4640 6190 50  0001 C CNN
-F 3 "" H 4600 6200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6200 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6200 50  0001 C CNN "Maufaturer"
 	1    4600 6200
 	0    1    1    0   
 $EndComp
@@ -1323,7 +1491,11 @@ P 4600 6100
 F 0 "R113" V 4550 5950 50  0000 C CNN
 F 1 "22E" V 4550 6250 50  0000 C CNN
 F 2 "" V 4640 6090 50  0001 C CNN
-F 3 "" H 4600 6100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6100 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6100 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6100 50  0001 C CNN "Maufaturer"
 	1    4600 6100
 	0    1    1    0   
 $EndComp
@@ -1334,7 +1506,11 @@ P 4600 6000
 F 0 "R112" V 4550 5850 50  0000 C CNN
 F 1 "22E" V 4550 6150 50  0000 C CNN
 F 2 "" V 4640 5990 50  0001 C CNN
-F 3 "" H 4600 6000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 6000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 6000 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 6000 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 6000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 6000 50  0001 C CNN "Maufaturer"
 	1    4600 6000
 	0    1    1    0   
 $EndComp
@@ -1345,7 +1521,11 @@ P 4600 5600
 F 0 "R108" V 4550 5450 50  0000 C CNN
 F 1 "22E" V 4550 5750 50  0000 C CNN
 F 2 "" V 4640 5590 50  0001 C CNN
-F 3 "" H 4600 5600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5600 50  0001 C CNN "Maufaturer"
 	1    4600 5600
 	0    1    1    0   
 $EndComp
@@ -1356,7 +1536,11 @@ P 4600 5500
 F 0 "R107" V 4550 5350 50  0000 C CNN
 F 1 "22E" V 4550 5650 50  0000 C CNN
 F 2 "" V 4640 5490 50  0001 C CNN
-F 3 "" H 4600 5500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5500 50  0001 C CNN "Maufaturer"
 	1    4600 5500
 	0    1    1    0   
 $EndComp
@@ -1367,7 +1551,11 @@ P 4600 5400
 F 0 "R106" V 4550 5250 50  0000 C CNN
 F 1 "22E" V 4550 5550 50  0000 C CNN
 F 2 "" V 4640 5390 50  0001 C CNN
-F 3 "" H 4600 5400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5400 50  0001 C CNN "Maufaturer"
 	1    4600 5400
 	0    1    1    0   
 $EndComp
@@ -1378,7 +1566,11 @@ P 4600 5300
 F 0 "R105" V 4550 5150 50  0000 C CNN
 F 1 "22E" V 4550 5450 50  0000 C CNN
 F 2 "" V 4640 5290 50  0001 C CNN
-F 3 "" H 4600 5300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5300 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5300 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5300 50  0001 C CNN "Maufaturer"
 	1    4600 5300
 	0    1    1    0   
 $EndComp
@@ -1389,7 +1581,11 @@ P 4600 5200
 F 0 "R104" V 4550 5050 50  0000 C CNN
 F 1 "22E" V 4550 5350 50  0000 C CNN
 F 2 "" V 4640 5190 50  0001 C CNN
-F 3 "" H 4600 5200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5200 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5200 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5200 50  0001 C CNN "Maufaturer"
 	1    4600 5200
 	0    1    1    0   
 $EndComp
@@ -1400,7 +1596,11 @@ P 4600 5100
 F 0 "R103" V 4550 4950 50  0000 C CNN
 F 1 "22E" V 4550 5250 50  0000 C CNN
 F 2 "" V 4640 5090 50  0001 C CNN
-F 3 "" H 4600 5100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5100 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5100 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5100 50  0001 C CNN "Maufaturer"
 	1    4600 5100
 	0    1    1    0   
 $EndComp
@@ -1411,7 +1611,11 @@ P 4600 5000
 F 0 "R102" V 4550 4850 50  0000 C CNN
 F 1 "22E" V 4550 5150 50  0000 C CNN
 F 2 "" V 4640 4990 50  0001 C CNN
-F 3 "" H 4600 5000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 5000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 5000 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 5000 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 5000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 5000 50  0001 C CNN "Maufaturer"
 	1    4600 5000
 	0    1    1    0   
 $EndComp
@@ -1422,7 +1626,11 @@ P 4600 4900
 F 0 "R101" V 4550 4750 50  0000 C CNN
 F 1 "22E" V 4550 5050 50  0000 C CNN
 F 2 "" V 4640 4890 50  0001 C CNN
-F 3 "" H 4600 4900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4900 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4900 50  0001 C CNN "Maufaturer"
 	1    4600 4900
 	0    1    1    0   
 $EndComp
@@ -1433,7 +1641,11 @@ P 4600 4800
 F 0 "R100" V 4550 4650 50  0000 C CNN
 F 1 "22E" V 4550 4950 50  0000 C CNN
 F 2 "" V 4640 4790 50  0001 C CNN
-F 3 "" H 4600 4800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4800 50  0001 C CNN "Maufaturer"
 	1    4600 4800
 	0    1    1    0   
 $EndComp
@@ -1444,7 +1656,11 @@ P 4600 4700
 F 0 "R99" V 4550 4550 50  0000 C CNN
 F 1 "22E" V 4550 4850 50  0000 C CNN
 F 2 "" V 4640 4690 50  0001 C CNN
-F 3 "" H 4600 4700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4700 50  0001 C CNN "Maufaturer"
 	1    4600 4700
 	0    1    1    0   
 $EndComp
@@ -1455,7 +1671,11 @@ P 4600 4600
 F 0 "R98" V 4550 4450 50  0000 C CNN
 F 1 "22E" V 4550 4750 50  0000 C CNN
 F 2 "" V 4640 4590 50  0001 C CNN
-F 3 "" H 4600 4600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4600 50  0001 C CNN "Maufaturer"
 	1    4600 4600
 	0    1    1    0   
 $EndComp
@@ -1466,7 +1686,11 @@ P 4600 4500
 F 0 "R97" V 4550 4350 50  0000 C CNN
 F 1 "22E" V 4550 4650 50  0000 C CNN
 F 2 "" V 4640 4490 50  0001 C CNN
-F 3 "" H 4600 4500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4500 50  0001 C CNN "Maufaturer"
 	1    4600 4500
 	0    1    1    0   
 $EndComp
@@ -1477,7 +1701,11 @@ P 4600 4400
 F 0 "R96" V 4550 4250 50  0000 C CNN
 F 1 "22E" V 4550 4550 50  0000 C CNN
 F 2 "" V 4640 4390 50  0001 C CNN
-F 3 "" H 4600 4400 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4600 4400 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4600 4400 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4600 4400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4600 4400 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4600 4400 50  0001 C CNN "Maufaturer"
 	1    4600 4400
 	0    1    1    0   
 $EndComp
@@ -1800,7 +2028,11 @@ P 1900 1050
 F 0 "R57" V 1850 900 50  0000 C CNN
 F 1 "22E" V 1850 1200 50  0000 C CNN
 F 2 "" V 1940 1040 50  0001 C CNN
-F 3 "" H 1900 1050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1050 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1050 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1050 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1050 50  0001 C CNN "Maufaturer"
 	1    1900 1050
 	0    1    1    0   
 $EndComp
@@ -1811,7 +2043,11 @@ P 1900 1150
 F 0 "R58" V 1850 1000 50  0000 C CNN
 F 1 "22E" V 1850 1300 50  0000 C CNN
 F 2 "" V 1940 1140 50  0001 C CNN
-F 3 "" H 1900 1150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1150 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1150 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1150 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1150 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1150 50  0001 C CNN "Maufaturer"
 	1    1900 1150
 	0    1    1    0   
 $EndComp
@@ -1822,7 +2058,11 @@ P 1900 1250
 F 0 "R59" V 1850 1100 50  0000 C CNN
 F 1 "22E" V 1850 1400 50  0000 C CNN
 F 2 "" V 1940 1240 50  0001 C CNN
-F 3 "" H 1900 1250 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1250 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1250 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1250 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1250 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1250 50  0001 C CNN "Maufaturer"
 	1    1900 1250
 	0    1    1    0   
 $EndComp
@@ -1833,7 +2073,11 @@ P 1900 1350
 F 0 "R60" V 1850 1200 50  0000 C CNN
 F 1 "22E" V 1850 1500 50  0000 C CNN
 F 2 "" V 1940 1340 50  0001 C CNN
-F 3 "" H 1900 1350 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1350 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1350 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1350 50  0001 C CNN "Maufaturer"
 	1    1900 1350
 	0    1    1    0   
 $EndComp
@@ -2203,11 +2447,11 @@ P 8100 5500
 F 0 "R132" V 8000 5500 50  0000 C CNN
 F 1 "0E" V 8200 5500 50  0000 C CNN
 F 2 "" V 8140 5490 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 8100 5500 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 8100 5500 50  0001 C CNN
 F 4 "NA" V 8150 5650 50  0000 C CNN "Field4"
-F 5 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 8100 5500 50  0001 C CNN "Description"
-F 6 " 541-0.0ACT-ND " H 8100 5500 50  0001 C CNN "Digikey PartNumber"
-F 7 " CRCW08050000Z0EA " H 8100 5500 50  0001 C CNN "Manufactured Part Number"
+F 5 "RES SMD 0 OHM JUMPER 1/16W 0402" H 8100 5500 50  0001 C CNN "Description"
+F 6 "541-0.0JCT-ND" H 8100 5500 50  0001 C CNN "Digikey PartNumber"
+F 7 "CRCW04020000Z0ED" H 8100 5500 50  0001 C CNN "Manufactured Part Number"
 F 8 "Vishay Dale" H 8100 5500 50  0001 C CNN "Maufaturer"
 	1    8100 5500
 	0    1    1    0   
@@ -2231,10 +2475,10 @@ P 7850 5300
 F 0 "R131" H 7900 5450 50  0000 C CNN
 F 1 "0E" H 7950 5300 50  0000 C CNN
 F 2 "" V 7890 5290 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 7850 5300 50  0001 C CNN
-F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 7850 5300 50  0001 C CNN "Description"
-F 5 " 541-0.0ACT-ND " H 7850 5300 50  0001 C CNN "Digikey PartNumber"
-F 6 " CRCW08050000Z0EA " H 7850 5300 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 7850 5300 50  0001 C CNN
+F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 7850 5300 50  0001 C CNN "Description"
+F 5 "541-0.0JCT-ND" H 7850 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "CRCW04020000Z0ED" H 7850 5300 50  0001 C CNN "Manufactured Part Number"
 F 7 "Vishay Dale" H 7850 5300 50  0001 C CNN "Maufaturer"
 	1    7850 5300
 	1    0    0    -1  
@@ -2498,7 +2742,11 @@ P 4550 1600
 F 0 "R90" V 4500 1450 50  0000 C CNN
 F 1 "22E" V 4500 1750 50  0000 C CNN
 F 2 "" V 4590 1590 50  0001 C CNN
-F 3 "" H 4550 1600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 1600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 1600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 1600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 1600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 1600 50  0001 C CNN "Maufaturer"
 	1    4550 1600
 	0    1    1    0   
 $EndComp
@@ -2509,7 +2757,11 @@ P 4550 1700
 F 0 "R91" V 4500 1550 50  0000 C CNN
 F 1 "22E" V 4500 1850 50  0000 C CNN
 F 2 "" V 4590 1690 50  0001 C CNN
-F 3 "" H 4550 1700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 1700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 1700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 1700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 1700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 1700 50  0001 C CNN "Maufaturer"
 	1    4550 1700
 	0    1    1    0   
 $EndComp
@@ -2520,7 +2772,11 @@ P 4550 1800
 F 0 "R92" V 4500 1650 50  0000 C CNN
 F 1 "22E" V 4500 1950 50  0000 C CNN
 F 2 "" V 4590 1790 50  0001 C CNN
-F 3 "" H 4550 1800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 1800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 1800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 1800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 1800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 1800 50  0001 C CNN "Maufaturer"
 	1    4550 1800
 	0    1    1    0   
 $EndComp
@@ -2531,7 +2787,11 @@ P 4550 1900
 F 0 "R93" V 4500 1750 50  0000 C CNN
 F 1 "22E" V 4500 2050 50  0000 C CNN
 F 2 "" V 4590 1890 50  0001 C CNN
-F 3 "" H 4550 1900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 1900 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 1900 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 1900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 1900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 1900 50  0001 C CNN "Maufaturer"
 	1    4550 1900
 	0    1    1    0   
 $EndComp
@@ -2558,7 +2818,11 @@ P 4550 2000
 F 0 "R94" V 4500 1850 50  0000 C CNN
 F 1 "22E" V 4500 2150 50  0000 C CNN
 F 2 "" V 4590 1990 50  0001 C CNN
-F 3 "" H 4550 2000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 2000 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 2000 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 2000 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 2000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 2000 50  0001 C CNN "Maufaturer"
 	1    4550 2000
 	0    1    1    0   
 $EndComp
@@ -2569,7 +2833,11 @@ P 4550 2100
 F 0 "R95" V 4500 1950 50  0000 C CNN
 F 1 "22E" V 4500 2250 50  0000 C CNN
 F 2 "" V 4590 2090 50  0001 C CNN
-F 3 "" H 4550 2100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 4550 2100 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 4550 2100 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 4550 2100 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 4550 2100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 4550 2100 50  0001 C CNN "Maufaturer"
 	1    4550 2100
 	0    1    1    0   
 $EndComp
@@ -2679,11 +2947,11 @@ P 9750 2500
 F 0 "C79" H 9750 2600 50  0000 L CNN
 F 1 "0.1uF" H 9750 2400 50  0000 L CNN
 F 2 "" H 9750 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 9750 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 9750 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 9750 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 9750 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 9750 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9750 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9750 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9750 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9750 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9750 2500 50  0001 C CNN "Maufaturer"
 	1    9750 2500
 	1    0    0    -1  
 $EndComp
@@ -2694,11 +2962,11 @@ P 10000 2500
 F 0 "C82" H 10000 2600 50  0000 L CNN
 F 1 "0.1uF" H 10000 2400 50  0000 L CNN
 F 2 "" H 10000 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10000 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10000 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10000 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10000 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10000 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10000 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10000 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10000 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10000 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10000 2500 50  0001 C CNN "Maufaturer"
 	1    10000 2500
 	1    0    0    -1  
 $EndComp
@@ -2722,11 +2990,11 @@ P 10250 2500
 F 0 "C85" H 10250 2600 50  0000 L CNN
 F 1 "0.1uF" H 10250 2400 50  0000 L CNN
 F 2 "" H 10250 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/murata-electronics/GRM155R71C104KA88J/490-6328-1-ND/3845525" H 10250 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 16V X7R 0402 " H 10250 2500 50  0001 C CNN "Description"
-F 5 " 490-6328-1-ND " H 10250 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "GRM155R71C104KA88J " H 10250 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "Murata" H 10250 2500 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10250 2500 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10250 2500 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10250 2500 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10250 2500 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10250 2500 50  0001 C CNN "Maufaturer"
 	1    10250 2500
 	1    0    0    -1  
 $EndComp
@@ -2792,7 +3060,11 @@ P 1900 1500
 F 0 "R61" V 1850 1350 50  0000 C CNN
 F 1 "22E" V 1850 1650 50  0000 C CNN
 F 2 "" V 1940 1490 50  0001 C CNN
-F 3 "" H 1900 1500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1500 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1500 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1500 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1500 50  0001 C CNN "Maufaturer"
 	1    1900 1500
 	0    1    1    0   
 $EndComp
@@ -2803,7 +3075,11 @@ P 1900 1600
 F 0 "R62" V 1850 1450 50  0000 C CNN
 F 1 "22E" V 1850 1750 50  0000 C CNN
 F 2 "" V 1940 1590 50  0001 C CNN
-F 3 "" H 1900 1600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1600 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1600 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1600 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1600 50  0001 C CNN "Maufaturer"
 	1    1900 1600
 	0    1    1    0   
 $EndComp
@@ -2814,7 +3090,11 @@ P 1900 1700
 F 0 "R63" V 1850 1550 50  0000 C CNN
 F 1 "22E" V 1850 1850 50  0000 C CNN
 F 2 "" V 1940 1690 50  0001 C CNN
-F 3 "" H 1900 1700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1700 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1700 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1700 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1700 50  0001 C CNN "Maufaturer"
 	1    1900 1700
 	0    1    1    0   
 $EndComp
@@ -2825,7 +3105,11 @@ P 1900 1800
 F 0 "R64" V 1850 1650 50  0000 C CNN
 F 1 "22E" V 1850 1950 50  0000 C CNN
 F 2 "" V 1940 1790 50  0001 C CNN
-F 3 "" H 1900 1800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509" H 1900 1800 50  0001 C CNN
+F 4 "RES SMD 22 OHM 1% 1/16W 0402" H 1900 1800 50  0001 C CNN "Description"
+F 5 "311-22.0LRCT-ND" H 1900 1800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-0722RL" H 1900 1800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 1900 1800 50  0001 C CNN "Maufaturer"
 	1    1900 1800
 	0    1    1    0   
 $EndComp
