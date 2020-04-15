@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -93,7 +94,7 @@ L Aardonyx-rescue:C_Small-aardonyx C10
 U 1 1 5DB80465
 P 4950 2050
 F 0 "C10" H 4950 2150 50  0000 L CNN
-F 1 "0.1uF" H 4950 1950 50  0000 L CNN
+F 1 "0.1UF,0402" H 4950 1950 50  0000 L CNN
 F 2 "" H 4950 2050 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4950 2050 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 4950 2050 50  0001 C CNN "Description"
@@ -108,7 +109,7 @@ L Aardonyx-rescue:C_Small-aardonyx C9
 U 1 1 5DB818DD
 P 4650 2050
 F 0 "C9" H 4650 2150 50  0000 L CNN
-F 1 "4.7uF" H 4650 1950 50  0000 L CNN
+F 1 "4.7UF,1206" H 4650 1950 50  0000 L CNN
 F 2 "" H 4650 2050 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C475J3RACTU/399-8203-1-ND/3471926" H 4650 2050 50  0001 C CNN
 F 4 "CAP CER 4.7UF 25V X7R 1206" H 4650 2050 50  0001 C CNN "Description"
@@ -123,7 +124,7 @@ L Aardonyx-rescue:C_Small-aardonyx C8
 U 1 1 5DB8354B
 P 4350 1550
 F 0 "C8" H 4350 1650 50  0000 L CNN
-F 1 "0.1uF" H 4350 1450 50  0000 L CNN
+F 1 "0.1UF,0402" H 4350 1450 50  0000 L CNN
 F 2 "" H 4350 1550 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4350 1550 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 4350 1550 50  0001 C CNN "Description"
@@ -138,7 +139,7 @@ L Aardonyx-rescue:C_Small-aardonyx C5
 U 1 1 5DB83551
 P 4050 1550
 F 0 "C5" H 4050 1650 50  0000 L CNN
-F 1 "4.7uF" H 4050 1450 50  0000 L CNN
+F 1 "4.7UF,1206" H 4050 1450 50  0000 L CNN
 F 2 "" H 4050 1550 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C475J3RACTU/399-8203-1-ND/3471926" H 4050 1550 50  0001 C CNN
 F 4 "CAP CER 4.7UF 25V X7R 1206" H 4050 1550 50  0001 C CNN "Description"
@@ -180,7 +181,7 @@ L Aardonyx-rescue:C_Small-aardonyx C4
 U 1 1 5DB9AA70
 P 3850 3100
 F 0 "C4" H 3850 3200 50  0000 L CNN
-F 1 "0.1uF" H 3850 3000 50  0000 L CNN
+F 1 "0.1UF,0402" H 3850 3000 50  0000 L CNN
 F 2 "" H 3850 3100 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3850 3100 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 3850 3100 50  0001 C CNN "Description"
@@ -195,7 +196,7 @@ L Aardonyx-rescue:C_Small-aardonyx C2
 U 1 1 5DB9AA76
 P 3550 3100
 F 0 "C2" H 3550 3200 50  0000 L CNN
-F 1 "4.7uF" H 3550 3000 50  0000 L CNN
+F 1 "4.7UF,1206" H 3550 3000 50  0000 L CNN
 F 2 "" H 3550 3100 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C475J3RACTU/399-8203-1-ND/3471926" H 3550 3100 50  0001 C CNN
 F 4 "CAP CER 4.7UF 25V X7R 1206" H 3550 3100 50  0001 C CNN "Description"
@@ -210,7 +211,7 @@ L Aardonyx-rescue:C_Small-aardonyx C7
 U 1 1 5DBA0960
 P 4150 3100
 F 0 "C7" H 4150 3200 50  0000 L CNN
-F 1 "0.1uF" H 4150 3000 50  0000 L CNN
+F 1 "0.1UF,0402" H 4150 3000 50  0000 L CNN
 F 2 "" H 4150 3100 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4150 3100 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 4150 3100 50  0001 C CNN "Description"
@@ -242,8 +243,11 @@ P 5650 4550
 F 0 "U1" H 4650 6650 50  0000 C CNN
 F 1 "FT2232H" H 6550 2450 50  0000 C CNN
 F 2 "" H 5650 4550 50  0001 C CNN
-F 3 "http://www.ftdichip.com/Products/ICs/FT2232H.html" H 5650 4550 50  0001 C CNN
-F 4 "Single chip USB to UART (RS232, RS422 or RS485)" H 5650 4550 50  0001 C CNN "Description"
+F 3 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT2232HL-REEL/768-1024-1-ND/1986057" H 5650 4550 50  0001 C CNN
+F 4 "IC USB HS DUAL UART/FIFO 64-LQFP" H 5650 4550 50  0001 C CNN "Description"
+F 5 "768-1024-1-ND" H 5650 4550 50  0001 C CNN "Digikey PartNumber"
+F 6 "FT2232HL-REEL" H 5650 4550 50  0001 C CNN "Manufactured Part Number"
+F 7 "FTDI, Future Technology Devices International Ltd" H 5650 4550 50  0001 C CNN "Maufaturer"
 	1    5650 4550
 	1    0    0    -1  
 $EndComp
@@ -321,13 +325,13 @@ L Aardonyx-rescue:Ferrite_Bead_Small-aardonyx FB3
 U 1 1 5E3E8B59
 P 3650 1800
 F 0 "FB3" V 3413 1800 50  0000 C CNN
-F 1 "600R" V 3504 1800 50  0000 C CNN
+F 1 "600E,FB,0402" V 3504 1800 50  0000 C CNN
 F 2 "" V 3580 1800 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 3650 1800 50  0001 C CNN
-F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 3650 1800 50  0001 C CNN "Description"
-F 5 "732-1593-1-ND" H 3650 1800 50  0001 C CNN "Digikey PartNumber"
-F 6 "742792651" H 3650 1800 50  0001 C CNN "Manufactured Part Number"
-F 7 "Würth Elektronik" H 3650 1800 50  0001 C CNN "Maufaturer"
+F 4 "FERRITE BEAD 600 OHM 0402 1LN" H 3650 1800 50  0001 C CNN "Description"
+F 5 "732-2388-1-ND" H 3650 1800 50  0001 C CNN "Digikey PartNumber"
+F 6 "7427927291" H 3650 1800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Wurth Elektronik" H 3650 1800 50  0001 C CNN "Maufaturer"
 	1    3650 1800
 	0    1    1    0   
 $EndComp
@@ -336,13 +340,13 @@ L Aardonyx-rescue:Ferrite_Bead_Small-aardonyx FB2
 U 1 1 5E3EEBCE
 P 3650 1350
 F 0 "FB2" V 3413 1350 50  0000 C CNN
-F 1 "600R" V 3504 1350 50  0000 C CNN
+F 1 "600E,FB,0402" V 3504 1350 50  0000 C CNN
 F 2 "" V 3580 1350 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 3650 1350 50  0001 C CNN
-F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 3650 1350 50  0001 C CNN "Description"
-F 5 "732-1593-1-ND" H 3650 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "742792651" H 3650 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "Würth Elektronik" H 3650 1350 50  0001 C CNN "Maufaturer"
+F 4 "FERRITE BEAD 600 OHM 0402 1LN" H 3650 1350 50  0001 C CNN "Description"
+F 5 "732-2388-1-ND" H 3650 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "7427927291" H 3650 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "Wurth Elektronik" H 3650 1350 50  0001 C CNN "Maufaturer"
 	1    3650 1350
 	0    1    1    0   
 $EndComp
@@ -445,7 +449,7 @@ L Aardonyx-rescue:C_Small-aardonyx C11
 U 1 1 5E439A51
 P 8000 1650
 F 0 "C11" H 8000 1750 50  0000 L CNN
-F 1 "0.1uF" H 8000 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 8000 1550 50  0000 L CNN
 F 2 "" H 8000 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8000 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 8000 1650 50  0001 C CNN "Description"
@@ -460,7 +464,7 @@ L Aardonyx-rescue:C_Small-aardonyx C12
 U 1 1 5E43C0DA
 P 8250 1650
 F 0 "C12" H 8250 1750 50  0000 L CNN
-F 1 "0.1uF" H 8250 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 8250 1550 50  0000 L CNN
 F 2 "" H 8250 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8250 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 8250 1650 50  0001 C CNN "Description"
@@ -475,7 +479,7 @@ L Aardonyx-rescue:C_Small-aardonyx C13
 U 1 1 5E43E6EE
 P 8500 1650
 F 0 "C13" H 8500 1750 50  0000 L CNN
-F 1 "0.1uF" H 8500 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 8500 1550 50  0000 L CNN
 F 2 "" H 8500 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8500 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 8500 1650 50  0001 C CNN "Description"
@@ -590,7 +594,7 @@ L Aardonyx-rescue:C_Small-aardonyx C16
 U 1 1 5E437345
 P 9400 1650
 F 0 "C16" H 9400 1750 50  0000 L CNN
-F 1 "0.1uF" H 9400 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 9400 1550 50  0000 L CNN
 F 2 "" H 9400 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9400 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 9400 1650 50  0001 C CNN "Description"
@@ -605,7 +609,7 @@ L Aardonyx-rescue:C_Small-aardonyx C15
 U 1 1 5E434CF2
 P 9150 1650
 F 0 "C15" H 9150 1750 50  0000 L CNN
-F 1 "0.1uF" H 9150 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 9150 1550 50  0000 L CNN
 F 2 "" H 9150 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9150 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 9150 1650 50  0001 C CNN "Description"
@@ -620,7 +624,7 @@ L Aardonyx-rescue:C_Small-aardonyx C14
 U 1 1 5E432586
 P 8900 1650
 F 0 "C14" H 8900 1750 50  0000 L CNN
-F 1 "0.1uF" H 8900 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 8900 1550 50  0000 L CNN
 F 2 "" H 8900 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8900 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 8900 1650 50  0001 C CNN "Description"
@@ -635,7 +639,7 @@ L Aardonyx-rescue:R_US-aardonyx R2
 U 1 1 5E4FC879
 P 4350 4400
 F 0 "R2" H 4400 4500 50  0000 L CNN
-F 1 "12K" H 4350 4250 50  0000 L CNN
+F 1 "12KE,0402" H 4350 4250 50  0000 L CNN
 F 2 "" V 4390 4390 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-2AEB123X/P12KDCCT-ND/1706209" H 4350 4400 50  0001 C CNN
 F 4 "RES SMD 12K OHM 0.1% 1/16W 0402" H 4350 4400 50  0001 C CNN "Description"
@@ -652,9 +656,13 @@ L Aardonyx-rescue:USB_OTG-aardonyx J1
 U 1 1 5E5092A2
 P 1150 3650
 F 0 "J1" H 1207 4117 50  0000 C CNN
-F 1 "Micro_USB" H 1400 3300 50  0000 C CNN
+F 1 "10118193-0001LF" H 1400 3300 50  0000 C CNN
 F 2 "" H 1300 3600 50  0001 C CNN
-F 3 " ~" H 1300 3600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/609-4616-1-ND/2785380" H 1300 3600 50  0001 C CNN
+F 4 "CONN RCPT USB2.0 MICRO B SMD R/A" H 1150 3650 50  0001 C CNN "Description"
+F 5 "609-4616-2-ND" H 1150 3650 50  0001 C CNN "Digikey PartNumber"
+F 6 "10118193-0001LF" H 1150 3650 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 1150 3650 50  0001 C CNN "Maufaturer"
 	1    1150 3650
 	1    0    0    -1  
 $EndComp
@@ -685,7 +693,7 @@ L Aardonyx-rescue:C_Small-aardonyx C1
 U 1 1 5E522768
 P 1750 3200
 F 0 "C1" H 1750 3300 50  0000 L CNN
-F 1 "4.7uF" H 1750 3100 50  0000 L CNN
+F 1 "4.7UF,1206" H 1750 3100 50  0000 L CNN
 F 2 "" H 1750 3200 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C1206C475J3RACTU/399-8203-1-ND/3471926" H 1750 3200 50  0001 C CNN
 F 4 "CAP CER 4.7UF 25V X7R 1206" H 1750 3200 50  0001 C CNN "Description"
@@ -719,13 +727,13 @@ L Aardonyx-rescue:Ferrite_Bead_Small-aardonyx FB1
 U 1 1 5E535651
 P 1550 2900
 F 0 "FB1" H 1450 2800 50  0000 C CNN
-F 1 "600R" H 1350 2900 50  0000 C CNN
+F 1 "600E,FB,0402" H 1350 2900 50  0000 C CNN
 F 2 "" V 1480 2900 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792651/732-1593-1-ND/1639537" H 1550 2900 50  0001 C CNN
-F 4 "FERRITE BEAD 600 OHM 0603 1LN" H 1550 2900 50  0001 C CNN "Description"
-F 5 "732-1593-1-ND" H 1550 2900 50  0001 C CNN "Digikey PartNumber"
-F 6 "742792651" H 1550 2900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Würth Elektronik" H 1550 2900 50  0001 C CNN "Maufaturer"
+F 4 "FERRITE BEAD 600 OHM 0402 1LN" H 1550 2900 50  0001 C CNN "Description"
+F 5 "732-2388-1-ND" H 1550 2900 50  0001 C CNN "Digikey PartNumber"
+F 6 "7427927291" H 1550 2900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Wurth Elektronik" H 1550 2900 50  0001 C CNN "Maufaturer"
 	1    1550 2900
 	-1   0    0    1   
 $EndComp
@@ -750,9 +758,13 @@ L Aardonyx-rescue:D_BI-aardonyx D1
 U 1 1 5E54A3DF
 P 1950 4000
 F 0 "D1" V 1950 3921 50  0000 R CNN
-F 1 "~" V 1995 3921 50  0000 R CNN
+F 1 "	CG0603MLC-12E" V 1995 3921 50  0000 R CNN
 F 2 "" H 1950 4000 50  0001 C CNN
-F 3 "~" H 1950 4000 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 1950 4000 50  0001 C CNN
+F 4 "	VARISTOR 0603" H 1950 4000 50  0001 C CNN "Description"
+F 5 "CG0603MLC-12ECT-ND" H 1950 4000 50  0001 C CNN "Digikey PartNumber"
+F 6 "	CG0603MLC-12E" H 1950 4000 50  0001 C CNN "Manufactured Part Number"
+F 7 "	Bourns Inc." H 1950 4000 50  0001 C CNN "Maufaturer"
 	1    1950 4000
 	0    -1   1    0   
 $EndComp
@@ -761,9 +773,13 @@ L Aardonyx-rescue:D_BI-aardonyx D2
 U 1 1 5E54B30F
 P 2300 4000
 F 0 "D2" V 2300 3921 50  0000 R CNN
-F 1 "~" V 2345 3921 50  0000 R CNN
+F 1 "	CG0603MLC-12E" V 2345 3921 50  0000 R CNN
 F 2 "" H 2300 4000 50  0001 C CNN
-F 3 "~" H 2300 4000 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 2300 4000 50  0001 C CNN
+F 4 "	VARISTOR 0603" H 2300 4000 50  0001 C CNN "Description"
+F 5 "CG0603MLC-12ECT-ND" H 2300 4000 50  0001 C CNN "Digikey PartNumber"
+F 6 "	CG0603MLC-12E" H 2300 4000 50  0001 C CNN "Manufactured Part Number"
+F 7 "	Bourns Inc." H 2300 4000 50  0001 C CNN "Maufaturer"
 	1    2300 4000
 	0    -1   1    0   
 $EndComp
@@ -814,7 +830,7 @@ L Aardonyx-rescue:C_Small-aardonyx C6
 U 1 1 5E5A19BF
 P 4050 6450
 F 0 "C6" H 4050 6550 50  0000 L CNN
-F 1 "18PF" H 4050 6350 50  0000 L CNN
+F 1 "18PF,0402" H 4050 6350 50  0000 L CNN
 F 2 "" H 4050 6450 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/CC0201JRNPO9BN180/311-1386-1-ND/2833692" H 4050 6450 50  0001 C CNN
 F 4 "311-1386-1-ND " H 4050 6450 50  0001 C CNN "Digikey PartNumber"
@@ -829,7 +845,7 @@ L Aardonyx-rescue:C_Small-aardonyx C3
 U 1 1 5E5A728B
 P 3550 6450
 F 0 "C3" H 3550 6550 50  0000 L CNN
-F 1 "18PF" H 3550 6350 50  0000 L CNN
+F 1 "18PF,0402" H 3550 6350 50  0000 L CNN
 F 2 "" H 3550 6450 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/CC0201JRNPO9BN180/311-1386-1-ND/2833692" H 3550 6450 50  0001 C CNN
 F 4 "311-1386-1-ND " H 3550 6450 50  0001 C CNN "Digikey PartNumber"
@@ -869,7 +885,7 @@ L Aardonyx-rescue:R_US-aardonyx R6
 U 1 1 5E5E8E68
 P 9350 3900
 F 0 "R6" H 9418 3946 50  0000 L CNN
-F 1 "1K" H 9418 3855 50  0000 L CNN
+F 1 "1KE,0402" H 9418 3855 50  0000 L CNN
 F 2 "" V 9390 3890 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9350 3900 50  0001 C CNN
 F 4 "NA" H 9450 3750 50  0000 C CNN "Field4"
@@ -891,7 +907,7 @@ L Aardonyx-rescue:C_Small-aardonyx C17
 U 1 1 5DD4FE8E
 P 9650 1650
 F 0 "C17" H 9650 1750 50  0000 L CNN
-F 1 "0.1uF" H 9650 1550 50  0000 L CNN
+F 1 "0.1UF,0402" H 9650 1550 50  0000 L CNN
 F 2 "" H 9650 1650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9650 1650 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 9650 1650 50  0001 C CNN "Description"
@@ -918,7 +934,7 @@ L Aardonyx-rescue:R_US-aardonyx R1
 U 1 1 5E7D7B0C
 P 3800 4200
 F 0 "R1" H 3850 4300 50  0000 L CNN
-F 1 "1k" H 3800 4050 50  0000 L CNN
+F 1 "1KE,0402" H 3800 4050 50  0000 L CNN
 F 2 "" V 3840 4190 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 3800 4200 50  0001 C CNN
 F 4 "RES SMD 1K OHM 5% 1/10W 0402 " H 3800 4200 50  0001 C CNN "Description"
@@ -965,7 +981,7 @@ L Aardonyx-rescue:R_US-aardonyx R5
 U 1 1 5E864C53
 P 9350 3000
 F 0 "R5" H 9418 3046 50  0000 L CNN
-F 1 "1K" H 9418 2955 50  0000 L CNN
+F 1 "1KE,0402" H 9418 2955 50  0000 L CNN
 F 2 "" V 9390 2990 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9350 3000 50  0001 C CNN
 F 4 "NA" H 9450 2850 50  0000 C CNN "Field4"
@@ -981,7 +997,7 @@ L Aardonyx-rescue:R_US-aardonyx R8
 U 1 1 5E8A7794
 P 9600 3900
 F 0 "R8" H 9668 3946 50  0000 L CNN
-F 1 "1K" H 9668 3855 50  0000 L CNN
+F 1 "1KE,0402" H 9668 3855 50  0000 L CNN
 F 2 "" V 9640 3890 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9600 3900 50  0001 C CNN
 F 4 "NA" H 9650 3750 50  0000 C CNN "Field4"
@@ -999,7 +1015,7 @@ L Aardonyx-rescue:R_US-aardonyx R7
 U 1 1 5E8A77A8
 P 9600 3000
 F 0 "R7" H 9668 3046 50  0000 L CNN
-F 1 "1K" H 9668 2955 50  0000 L CNN
+F 1 "1KE,0402" H 9668 2955 50  0000 L CNN
 F 2 "" V 9640 2990 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9600 3000 50  0001 C CNN
 F 4 "NA" H 9650 2850 50  0000 C CNN "Field4"
@@ -1015,7 +1031,7 @@ L Aardonyx-rescue:R_US-aardonyx R12
 U 1 1 5E8AF820
 P 9850 3900
 F 0 "R12" H 9918 3946 50  0000 L CNN
-F 1 "1K" H 9918 3855 50  0000 L CNN
+F 1 "1KE,0402" H 9918 3855 50  0000 L CNN
 F 2 "" V 9890 3890 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9850 3900 50  0001 C CNN
 F 4 "NA" H 9900 3750 50  0000 C CNN "Field4"
@@ -1057,7 +1073,7 @@ L Aardonyx-rescue:R_US-aardonyx R11
 U 1 1 5E8AF834
 P 9850 3000
 F 0 "R11" H 9918 3046 50  0000 L CNN
-F 1 "1K" H 9918 2955 50  0000 L CNN
+F 1 "1KE,0402" H 9918 2955 50  0000 L CNN
 F 2 "" V 9890 2990 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9850 3000 50  0001 C CNN
 F 4 "NA" H 9900 2850 50  0000 C CNN "Field4"
@@ -1073,7 +1089,7 @@ L Aardonyx-rescue:R_US-aardonyx R16
 U 1 1 5E8B77A8
 P 10100 3900
 F 0 "R16" H 10168 3946 50  0000 L CNN
-F 1 "1K" H 10168 3855 50  0000 L CNN
+F 1 "1KE,0402" H 10168 3855 50  0000 L CNN
 F 2 "" V 10140 3890 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10100 3900 50  0001 C CNN
 F 4 "NA" H 10150 3750 50  0000 C CNN "Field4"
@@ -1091,7 +1107,7 @@ L Aardonyx-rescue:R_US-aardonyx R15
 U 1 1 5E8B77BC
 P 10100 3000
 F 0 "R15" H 10168 3046 50  0000 L CNN
-F 1 "1K" H 10168 2955 50  0000 L CNN
+F 1 "1KE,0402" H 10168 2955 50  0000 L CNN
 F 2 "" V 10140 2990 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10100 3000 50  0001 C CNN
 F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 10100 3000 50  0001 C CNN "Description"
@@ -1106,7 +1122,7 @@ L Aardonyx-rescue:R_US-aardonyx R18
 U 1 1 5E8C03C4
 P 10350 3900
 F 0 "R18" H 10418 3946 50  0000 L CNN
-F 1 "1K" H 10418 3855 50  0000 L CNN
+F 1 "1KE,0402" H 10418 3855 50  0000 L CNN
 F 2 "" V 10390 3890 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10350 3900 50  0001 C CNN
 F 4 "NA" H 10400 3750 50  0000 C CNN "Field4"
@@ -1124,7 +1140,7 @@ L Aardonyx-rescue:R_US-aardonyx R17
 U 1 1 5E8C03D8
 P 10350 3000
 F 0 "R17" H 10418 3046 50  0000 L CNN
-F 1 "1K" H 10418 2955 50  0000 L CNN
+F 1 "1KE,0402" H 10418 2955 50  0000 L CNN
 F 2 "" V 10390 2990 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10350 3000 50  0001 C CNN
 F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 10350 3000 50  0001 C CNN "Description"
@@ -1208,7 +1224,7 @@ L Aardonyx-rescue:R_US-aardonyx R10
 U 1 1 5EA96A78
 P 9800 5850
 F 0 "R10" H 9868 5896 50  0000 L CNN
-F 1 "1K" H 9868 5805 50  0000 L CNN
+F 1 "1KE,0402" H 9868 5805 50  0000 L CNN
 F 2 "" V 9840 5840 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9800 5850 50  0001 C CNN
 F 4 "NA" H 9900 5700 50  0000 C CNN "Field4"
@@ -1226,7 +1242,7 @@ L Aardonyx-rescue:R_US-aardonyx R9
 U 1 1 5EA96A7F
 P 9800 4950
 F 0 "R9" H 9868 4996 50  0000 L CNN
-F 1 "1K" H 9868 4905 50  0000 L CNN
+F 1 "1KE,0402" H 9868 4905 50  0000 L CNN
 F 2 "" V 9840 4940 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 9800 4950 50  0001 C CNN
 F 4 "NA" H 9900 4800 50  0000 C CNN "Field4"
@@ -1242,7 +1258,7 @@ L Aardonyx-rescue:R_US-aardonyx R14
 U 1 1 5EA96A85
 P 10050 5850
 F 0 "R14" H 10118 5896 50  0000 L CNN
-F 1 "1K" H 10118 5805 50  0000 L CNN
+F 1 "1KE,0402" H 10118 5805 50  0000 L CNN
 F 2 "" V 10090 5840 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10050 5850 50  0001 C CNN
 F 4 "NA" H 10150 5700 50  0000 C CNN "Field4"
@@ -1260,7 +1276,7 @@ L Aardonyx-rescue:R_US-aardonyx R13
 U 1 1 5EA96A8C
 P 10050 4950
 F 0 "R13" H 10118 4996 50  0000 L CNN
-F 1 "1K" H 10118 4905 50  0000 L CNN
+F 1 "1KE,0402" H 10118 4905 50  0000 L CNN
 F 2 "" V 10090 4940 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10050 4950 50  0001 C CNN
 F 4 "NA" H 10150 4800 50  0000 C CNN "Field4"
@@ -1321,7 +1337,7 @@ L Aardonyx-rescue:R_US-aardonyx R3
 U 1 1 5EB311E9
 P 7150 4450
 F 0 "R3" V 7200 4550 50  0000 L CNN
-F 1 "0E" V 7200 4250 50  0000 L CNN
+F 1 "0E, 0402" V 7200 4250 50  0000 L CNN
 F 2 "" V 7190 4440 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 7150 4450 50  0001 C CNN
 F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 7150 4450 50  0001 C CNN "Description"
@@ -1336,7 +1352,7 @@ L Aardonyx-rescue:R_US-aardonyx R4
 U 1 1 5EB84741
 P 7150 4550
 F 0 "R4" V 7200 4650 50  0000 L CNN
-F 1 "0E" V 7200 4350 50  0000 L CNN
+F 1 "0E, 0402" V 7200 4350 50  0000 L CNN
 F 2 "" V 7190 4540 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 7150 4550 50  0001 C CNN
 F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 7150 4550 50  0001 C CNN "Description"
@@ -1427,7 +1443,11 @@ AR Path="/5D8B3761/5E5A2193" Ref="J2"  Part="1"
 F 0 "J2" H 8650 3850 50  0000 L CNN
 F 1 "Conn_1x8" H 8550 2950 50  0000 L CNN
 F 2 "" H 8700 3450 50  0001 C CNN
-F 3 "~" H 8700 3450 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/609-4616-1-ND/2785380" H 8700 3450 50  0001 C CNN
+F 4 "CONN HEADER VERT 8POS 2.54MM" H 8700 3450 50  0001 C CNN "Description"
+F 5 "	609-3264-ND" H 8700 3450 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-408HLF" H 8700 3450 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 8700 3450 50  0001 C CNN "Maufaturer"
 	1    8700 3450
 	-1   0    0    -1  
 $EndComp
@@ -1482,7 +1502,11 @@ AR Path="/5D8B3761/5E613B93" Ref="J3"  Part="1"
 F 0 "J3" H 8950 5700 50  0000 L CNN
 F 1 "Conn_1x3_M" H 8850 5300 50  0000 L CNN
 F 2 "" H 8950 5500 50  0001 C CNN
-F 3 "~" H 8950 5500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8950 5500 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 8950 5500 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 8950 5500 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 8950 5500 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 8950 5500 50  0001 C CNN "Maufaturer"
 	1    8950 5500
 	-1   0    0    -1  
 $EndComp
