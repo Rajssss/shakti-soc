@@ -1,3 +1,5 @@
 (sym_lib_table
+  (lib (name skt32e_asic)(type Legacy)(uri ${KIPRJMOD}/library/skt32e_asic.lib)(options "")(descr "")(disabled))
   (lib (name Aardonyx-rescue)(type Legacy)(uri ${KIPRJMOD}/Aardonyx-rescue.lib)(options "")(descr ""))
+  (lib (name Aardonyx)(type Legacy)(uri ${KIPRJMOD}/Aardonyx.lib)(options "")(descr "")(disabled))
 )
