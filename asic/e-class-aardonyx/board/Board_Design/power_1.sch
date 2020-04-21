@@ -32,19 +32,6 @@ Connection ~ 8500 4900
 Connection ~ 8500 5500
 Wire Wire Line
 	8500 5500 8500 5800
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR049
-U 1 1 5DC268B2
-P 8500 5800
-AR Path="/5DB8A7DC/5DC268B2" Ref="#PWR049"  Part="1" 
-AR Path="/5E6E93B2/5DC268B2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR049" H 8500 5550 50  0001 C CNN
-F 1 "GND" H 8505 5627 50  0000 C CNN
-F 2 "" H 8500 5800 50  0001 C CNN
-F 3 "" H 8500 5800 50  0001 C CNN
-	1    8500 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8100 5500 8500 5500
 Connection ~ 8100 5500
@@ -75,8 +62,8 @@ U 1 1 5DC20A36
 P 8500 5200
 AR Path="/5DB8A7DC/5DC20A36" Ref="C46"  Part="1" 
 AR Path="/5E6E93B2/5DC20A36" Ref="C?"  Part="1" 
-F 0 "C46" H 8592 5246 50  0000 L CNN
-F 1 "0.1UF,0402" H 8592 5155 50  0000 L CNN
+F 0 "C46" H 8500 5300 50  0000 L CNN
+F 1 "0.1UF,0402" V 8550 4750 50  0000 L CNN
 F 2 "" H 8500 5200 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 8500 5200 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 8500 5200 50  0001 C CNN "Description"
@@ -92,8 +79,8 @@ U 1 1 5DC1FFB2
 P 8100 5200
 AR Path="/5DB8A7DC/5DC1FFB2" Ref="C45"  Part="1" 
 AR Path="/5E6E93B2/5DC1FFB2" Ref="C?"  Part="1" 
-F 0 "C45" H 8192 5246 50  0000 L CNN
-F 1 "22UF,1206" H 8192 5155 50  0000 L CNN
+F 0 "C45" H 8100 5300 50  0000 L CNN
+F 1 "22UF,1206" V 8200 4800 50  0000 L CNN
 F 2 "" H 8100 5200 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/samsung-electro-mechanics/CL31A226KAHNNNE/1276-3047-1-ND/3891133" H 8100 5200 50  0001 C CNN
 F 4 "CAP CER 22UF 25V X5R 1206" H 8100 5200 50  0001 C CNN "Description"
@@ -109,8 +96,8 @@ U 1 1 5DC1F79E
 P 7700 5200
 AR Path="/5DB8A7DC/5DC1F79E" Ref="C43"  Part="1" 
 AR Path="/5E6E93B2/5DC1F79E" Ref="C?"  Part="1" 
-F 0 "C43" H 7792 5246 50  0000 L CNN
-F 1 "22UF,1206" H 7792 5155 50  0000 L CNN
+F 0 "C43" H 7700 5300 50  0000 L CNN
+F 1 "22UF,1206" V 7750 4750 50  0000 L CNN
 F 2 "" H 7700 5200 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/samsung-electro-mechanics/CL31A226KAHNNNE/1276-3047-1-ND/3891133" H 7700 5200 50  0001 C CNN
 F 4 "CAP CER 22UF 25V X5R 1206" H 7700 5200 50  0001 C CNN "Description"
@@ -147,40 +134,8 @@ Wire Wire Line
 Wire Wire Line
 	5300 6100 5300 5950
 Wire Wire Line
-	7250 5950 7250 6100
-Wire Wire Line
 	7250 5500 7250 5650
 Connection ~ 7250 5500
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR044
-U 1 1 5DC135E5
-P 7250 6100
-AR Path="/5DB8A7DC/5DC135E5" Ref="#PWR044"  Part="1" 
-AR Path="/5E6E93B2/5DC135E5" Ref="#PWR?"  Part="1" 
-F 0 "#PWR044" H 7250 5850 50  0001 C CNN
-F 1 "GND" H 7255 5927 50  0000 C CNN
-F 2 "" H 7250 6100 50  0001 C CNN
-F 3 "" H 7250 6100 50  0001 C CNN
-	1    7250 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx P_R28
-U 1 1 5DC11DC4
-P 7250 5800
-AR Path="/5DB8A7DC/5DC11DC4" Ref="P_R28"  Part="1" 
-AR Path="/5E6E93B2/5DC11DC4" Ref="R?"  Part="1" 
-F 0 "P_R28" H 7318 5846 50  0000 L CNN
-F 1 "22.1KE,0805" H 7318 5755 50  0000 L CNN
-F 2 "" V 7290 5790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN
-F 4 "Panasonic Electronic Components" H 7250 5800 50  0001 C CNN "Maufaturer"
-F 5 "RES 22.1K OHM 0.1% 1/8W 0805" H 7250 5800 50  0001 C CNN "Description"
-F 6 "P22.1KDACT-ND" H 7250 5800 50  0001 C CNN "Digikey PartNumber"
-F 7 "ERA-6AEB2212V" H 7250 5800 50  0001 C CNN "Manufactured Part Number"
-	1    7250 5800
-	1    0    0    -1  
-$EndComp
 Connection ~ 6900 5500
 Wire Wire Line
 	7250 5500 7250 5350
@@ -202,7 +157,7 @@ P 6900 5200
 AR Path="/5DB8A7DC/5DC0C5AC" Ref="C41"  Part="1" 
 AR Path="/5E6E93B2/5DC0C5AC" Ref="C?"  Part="1" 
 F 0 "C41" H 6992 5246 50  0000 L CNN
-F 1 "15PF,0805" H 6992 5155 50  0000 L CNN
+F 1 "15PF,0805" V 6850 4750 50  0000 L CNN
 F 2 "" H 6900 5200 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/885012007029/732-7828-1-ND/5454455" H 6900 5200 50  0001 C CNN
 F 4 "CAP CER 15PF 25V C0G/NP0 0805" H 6900 5200 50  0001 C CNN "Description"
@@ -219,8 +174,8 @@ U 1 1 5DC0AFF7
 P 6650 4900
 AR Path="/5DB8A7DC/5DC0AFF7" Ref="L2"  Part="1" 
 AR Path="/5E6E93B2/5DC0AFF7" Ref="L?"  Part="1" 
-F 0 "L2" V 6750 4900 50  0000 C CNN
-F 1 "3.3UH" V 6560 4900 50  0000 C CNN
+F 0 "L2" V 6700 5050 50  0000 C CNN
+F 1 "3.3UH" V 6600 4900 50  0000 C CNN
 F 2 "" H 6650 4900 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/78477033/732-6781-2-ND/5168775" H 6650 4900 50  0001 C CNN
 F 4 "FIXED IND 3.3UH 6.6A 17 MOHM SMD" H 6650 4900 50  0001 C CNN "Description"
@@ -242,8 +197,8 @@ U 1 1 5DC07BC9
 P 6200 4750
 AR Path="/5DB8A7DC/5DC07BC9" Ref="C40"  Part="1" 
 AR Path="/5E6E93B2/5DC07BC9" Ref="C?"  Part="1" 
-F 0 "C40" H 6292 4796 50  0000 L CNN
-F 1 "0.1UF,0402" H 6292 4705 50  0000 L CNN
+F 0 "C40" H 6050 4850 50  0000 L CNN
+F 1 "0.1UF,0402" H 6200 4700 50  0000 L CNN
 F 2 "" H 6200 4750 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 6200 4750 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 6200 4750 50  0001 C CNN "Description"
@@ -251,19 +206,6 @@ F 5 "478-10050-1-ND" H 6200 4750 50  0001 C CNN "Digikey PartNumber"
 F 6 "04023C104JAT2A" H 6200 4750 50  0001 C CNN "Manufactured Part Number"
 F 7 "AVX Corporation" H 6200 4750 50  0001 C CNN "Maufaturer"
 	1    6200 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR037
-U 1 1 5DC06DDF
-P 2250 5300
-AR Path="/5DB8A7DC/5DC06DDF" Ref="#PWR037"  Part="1" 
-AR Path="/5E6E93B2/5DC06DDF" Ref="#PWR?"  Part="1" 
-F 0 "#PWR037" H 2250 5050 50  0001 C CNN
-F 1 "GND" H 2255 5127 50  0000 C CNN
-F 2 "" H 2250 5300 50  0001 C CNN
-F 3 "" H 2250 5300 50  0001 C CNN
-	1    2250 5300
 	1    0    0    -1  
 $EndComp
 Connection ~ 2250 5150
@@ -290,8 +232,8 @@ U 1 1 5DC04203
 P 2250 4850
 AR Path="/5DB8A7DC/5DC04203" Ref="C33"  Part="1" 
 AR Path="/5E6E93B2/5DC04203" Ref="C?"  Part="1" 
-F 0 "C33" H 2342 4896 50  0000 L CNN
-F 1 "22UF,1206" H 2342 4805 50  0000 L CNN
+F 0 "C33" H 2100 4950 50  0000 L CNN
+F 1 "22UF,1206" V 2400 4600 50  0000 L CNN
 F 2 "" H 2250 4850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/samsung-electro-mechanics/CL31A226KAHNNNE/1276-3047-1-ND/3891133" H 2250 4850 50  0001 C CNN
 F 4 "CAP CER 22UF 25V X5R 1206" H 2250 4850 50  0001 C CNN "Description"
@@ -307,8 +249,8 @@ U 1 1 5DC03EB5
 P 2750 4850
 AR Path="/5DB8A7DC/5DC03EB5" Ref="C34"  Part="1" 
 AR Path="/5E6E93B2/5DC03EB5" Ref="C?"  Part="1" 
-F 0 "C34" H 2842 4896 50  0000 L CNN
-F 1 "0.1UF,0402" H 2842 4805 50  0000 L CNN
+F 0 "C34" H 2750 4950 50  0000 L CNN
+F 1 "0.1UF,0402" V 2800 4350 50  0000 L CNN
 F 2 "" H 2750 4850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2750 4850 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 2750 4850 50  0001 C CNN "Description"
@@ -373,8 +315,8 @@ U 1 1 5DBFC886
 P 4050 5700
 AR Path="/5DB8A7DC/5DBFC886" Ref="C35"  Part="1" 
 AR Path="/5E6E93B2/5DBFC886" Ref="C?"  Part="1" 
-F 0 "C35" H 4142 5746 50  0000 L CNN
-F 1 "1UF,0805" H 4142 5655 50  0000 L CNN
+F 0 "C35" H 4050 5800 50  0000 L CNN
+F 1 "1UF,0805" V 4000 5300 50  0000 L CNN
 F 2 "" H 4050 5700 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C0805C105J3RACTU/399-10060-6-ND/3739580" H 4050 5700 50  0001 C CNN
 F 4 "CAP CER 1UF 25V X7R 0805" H 4050 5700 50  0001 C CNN "Description"
@@ -387,26 +329,13 @@ $EndComp
 Wire Wire Line
 	4050 5200 4750 5200
 $Comp
-L Aardonyx-rescue:GND-aardonyx #PWR039
-U 1 1 5DBFE03A
-P 4450 6100
-AR Path="/5DB8A7DC/5DBFE03A" Ref="#PWR039"  Part="1" 
-AR Path="/5E6E93B2/5DBFE03A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR039" H 4450 5850 50  0001 C CNN
-F 1 "GND" H 4455 5927 50  0000 C CNN
-F 2 "" H 4450 6100 50  0001 C CNN
-F 3 "" H 4450 6100 50  0001 C CNN
-	1    4450 6100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:C_Small-aardonyx C36
 U 1 1 5DBFC58F
 P 4450 5700
 AR Path="/5DB8A7DC/5DBFC58F" Ref="C36"  Part="1" 
 AR Path="/5E6E93B2/5DBFC58F" Ref="C?"  Part="1" 
-F 0 "C36" H 4542 5746 50  0000 L CNN
-F 1 "7500PF,0603" H 4542 5655 50  0000 L CNN
+F 0 "C36" H 4450 5800 50  0000 L CNN
+F 1 "7500PF,0603" V 4600 5200 50  0000 L CNN
 F 2 "" H 4450 5700 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C0603C752J3GAC7867/399-9980-1-ND/3736979" H 4450 5700 50  0001 C CNN
 F 4 "CAP CER 7500PF 25V C0G/NP0 0603" H 4450 5700 50  0001 C CNN "Description"
@@ -414,19 +343,6 @@ F 5 "399-9980-1-ND " H 4450 5700 50  0001 C CNN "Digikey PartNumber"
 F 6 "C0603C752J3GAC7867 " H 4450 5700 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 4450 5700 50  0001 C CNN "Maufaturer"
 	1    4450 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR040
-U 1 1 5DBF95B1
-P 5300 6100
-AR Path="/5DB8A7DC/5DBF95B1" Ref="#PWR040"  Part="1" 
-AR Path="/5E6E93B2/5DBF95B1" Ref="#PWR?"  Part="1" 
-F 0 "#PWR040" H 5300 5850 50  0001 C CNN
-F 1 "GND" H 5305 5927 50  0000 C CNN
-F 2 "" H 5300 6100 50  0001 C CNN
-F 3 "" H 5300 6100 50  0001 C CNN
-	1    5300 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -461,53 +377,6 @@ F 7 "Texas Instruments" H 5300 5050 50  0001 C CNN "Maufaturer"
 $EndComp
 Wire Wire Line
 	3700 1600 4000 1600
-$Comp
-L Aardonyx-rescue:SW_SPST-aardonyx SW1
-U 1 1 5E7DBCC5
-P 4200 1600
-AR Path="/5DB8A7DC/5E7DBCC5" Ref="SW1"  Part="1" 
-AR Path="/5E6E93B2/5E7DBCC5" Ref="SW?"  Part="1" 
-F 0 "SW1" H 4200 1743 50  0000 C CNN
-F 1 "SW_SPST" H 4200 1744 50  0001 C CNN
-F 2 "" H 4200 1600 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/TMS6T1B1M1QE/450-2109-ND/5125729" H 4200 1600 50  0001 C CNN
-F 4 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Description"
-F 5 "450-2109-ND" H 4200 1600 50  0001 C CNN "Digikey PartNumber"
-F 6 "TMS6T1B1M1QE" H 4200 1600 50  0001 C CNN "Manufactured Part Number"
-F 7 "TE Connectivity ALCOSWITCH Switches" H 4200 1600 50  0001 C CNN "Maufaturer"
-	1    4200 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:Barrel_Jack_Switch-aardonyx J5
-U 1 1 5E7997C5
-P 3400 1700
-AR Path="/5DB8A7DC/5E7997C5" Ref="J5"  Part="1" 
-AR Path="/5E6E93B2/5E7997C5" Ref="J?"  Part="1" 
-F 0 "J5" H 3300 1900 50  0000 C CNN
-F 1 "12V" H 3550 1500 50  0000 C CNN
-F 2 "" H 3450 1660 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=PJ-202AH" H 3450 1660 50  0001 C CNN
-F 4 "CONN PWR JACK 2X5.5MM KINKED PIN" H 3400 1700 50  0001 C CNN "Description"
-F 5 "CP-202AH-ND" H 3400 1700 50  0001 C CNN "Digikey PartNumber"
-F 6 "PJ-202AH" H 3400 1700 50  0001 C CNN "Manufactured Part Number"
-F 7 "CUI Devices" H 3400 1700 50  0001 C CNN "Maufaturer"
-	1    3400 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR038
-U 1 1 5DC2CAAD
-P 3850 1950
-AR Path="/5DB8A7DC/5DC2CAAD" Ref="#PWR038"  Part="1" 
-AR Path="/5E6E93B2/5DC2CAAD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR038" H 3850 1700 50  0001 C CNN
-F 1 "GND" H 3855 1777 50  0000 C CNN
-F 2 "" H 3850 1950 50  0001 C CNN
-F 3 "" H 3850 1950 50  0001 C CNN
-	1    3850 1950
-	1    0    0    -1  
-$EndComp
 Connection ~ 3850 1800
 Wire Wire Line
 	3850 1800 3850 1950
@@ -541,7 +410,7 @@ P 5450 1850
 AR Path="/5DB8A7DC/5E824D85" Ref="C38"  Part="1" 
 AR Path="/5E6E93B2/5E824D85" Ref="C?"  Part="1" 
 F 0 "C38" H 5450 1950 50  0000 L CNN
-F 1 "1UF,0805" H 5450 1750 50  0000 L CNN
+F 1 "1UF,0805" V 5550 1500 50  0000 L CNN
 F 2 "" H 5450 1850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C0805C105J3RACTU/399-10060-6-ND/3739580" H 5450 1850 50  0001 C CNN
 F 4 "CAP CER 1UF 25V X7R 0805" H 5450 1850 50  0001 C CNN "Description"
@@ -558,7 +427,7 @@ P 5800 1850
 AR Path="/5DB8A7DC/5E8299D0" Ref="C39"  Part="1" 
 AR Path="/5E6E93B2/5E8299D0" Ref="C?"  Part="1" 
 F 0 "C39" H 5800 1950 50  0000 L CNN
-F 1 "0.1UF,0402" H 5800 1750 50  0000 L CNN
+F 1 "0.1UF,0402" V 5900 1450 50  0000 L CNN
 F 2 "" H 5800 1850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 5800 1850 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 5800 1850 50  0001 C CNN "Description"
@@ -578,19 +447,6 @@ Wire Wire Line
 Connection ~ 5800 1600
 Wire Wire Line
 	5450 1600 5800 1600
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR041
-U 1 1 5E83D54C
-P 5800 2200
-AR Path="/5DB8A7DC/5E83D54C" Ref="#PWR041"  Part="1" 
-AR Path="/5E6E93B2/5E83D54C" Ref="#PWR?"  Part="1" 
-F 0 "#PWR041" H 5800 1950 50  0001 C CNN
-F 1 "GND" H 5805 2027 50  0000 C CNN
-F 2 "" H 5800 2200 50  0001 C CNN
-F 3 "" H 5800 2200 50  0001 C CNN
-	1    5800 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 2150 5800 2200
 Connection ~ 5800 2150
@@ -671,7 +527,7 @@ P 5100 1850
 AR Path="/5DB8A7DC/5E53A053" Ref="C37"  Part="1" 
 AR Path="/5E6E93B2/5E53A053" Ref="C?"  Part="1" 
 F 0 "C37" H 5100 1950 50  0000 L CNN
-F 1 "220UF,3226" H 5100 1750 50  0000 L CNN
+F 1 "220UF,3226" V 5050 1350 50  0000 L CNN
 F 2 "" H 5100 1850 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/vishay-sprague/597D227X0025M2T/718-1945-1-ND/3985794" H 5100 1850 50  0001 C CNN
 F 4 "CAP TANT 220UF 20% 25V 3226" H 5100 1850 50  0001 C CNN "Description"
@@ -698,54 +554,11 @@ F 7 "	Laird-Signal Integrity Products" H 6600 1700 50  0001 C CNN "Maufaturer"
 	1    6600 1700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Polyfuse F1
-U 1 1 5E541C92
-P 4700 1600
-AR Path="/5DB8A7DC/5E541C92" Ref="F1"  Part="1" 
-AR Path="/5E6E93B2/5E541C92" Ref="F?"  Part="1" 
-F 0 "F1" V 4550 1600 50  0000 C CNN
-F 1 "PTCCL13H921DBE" V 4850 1600 50  0000 C CNN
-F 2 "" H 4750 1400 50  0001 L CNN
-F 3 "https://www.digikey.in/products/en?keywords=PTCCL13H921DBE" H 4700 1600 50  0001 C CNN
-F 4 "PTC RESET FUSE 30V 920MA RADIAL" H 4700 1600 50  0001 C CNN "Description"
-F 5 "BC2323-ND" H 4700 1600 50  0001 C CNN "Digikey PartNumber"
-F 6 "PTCCL13H921DBE" H 4700 1600 50  0001 C CNN "Manufactured Part Number"
-F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
-	1    4700 1600
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4400 1600 4550 1600
 Wire Wire Line
 	4850 1600 5100 1600
 Connection ~ 5100 1600
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR042
-U 1 1 5E5D54A0
-P 6200 2000
-AR Path="/5DB8A7DC/5E5D54A0" Ref="#PWR042"  Part="1" 
-AR Path="/5E6E93B2/5E5D54A0" Ref="#PWR?"  Part="1" 
-F 0 "#PWR042" H 6200 1750 50  0001 C CNN
-F 1 "GND" H 6205 1827 50  0000 C CNN
-F 2 "" H 6200 2000 50  0001 C CNN
-F 3 "" H 6200 2000 50  0001 C CNN
-	1    6200 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR043
-U 1 1 5E5D9EFD
-P 7050 2000
-AR Path="/5DB8A7DC/5E5D9EFD" Ref="#PWR043"  Part="1" 
-AR Path="/5E6E93B2/5E5D9EFD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR043" H 7050 1750 50  0001 C CNN
-F 1 "GND" H 7055 1827 50  0000 C CNN
-F 2 "" H 7050 2000 50  0001 C CNN
-F 3 "" H 7050 2000 50  0001 C CNN
-	1    7050 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6400 1800 6200 1800
 Wire Wire Line
@@ -767,7 +580,7 @@ P 7400 1850
 AR Path="/5DB8A7DC/5E5FEAFA" Ref="C42"  Part="1" 
 AR Path="/5E6E93B2/5E5FEAFA" Ref="C?"  Part="1" 
 F 0 "C42" H 7400 1950 50  0000 L CNN
-F 1 "1UF,0805" H 7400 1750 50  0000 L CNN
+F 1 "1UF,0805" V 7350 1450 50  0000 L CNN
 F 2 "" H 7400 1850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/kemet/C0805C105J3RACTU/399-10060-6-ND/3739580" H 7400 1850 50  0001 C CNN
 F 4 "CAP CER 1UF 25V X7R 0805" H 7400 1850 50  0001 C CNN "Description"
@@ -784,7 +597,7 @@ P 7750 1850
 AR Path="/5DB8A7DC/5E5FEB00" Ref="C44"  Part="1" 
 AR Path="/5E6E93B2/5E5FEB00" Ref="C?"  Part="1" 
 F 0 "C44" H 7750 1950 50  0000 L CNN
-F 1 "0.1UF,0402" H 7750 1750 50  0000 L CNN
+F 1 "0.1UF,0402" V 7950 1550 50  0000 L CNN
 F 2 "" H 7750 1850 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 7750 1850 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 7750 1850 50  0001 C CNN "Description"
@@ -800,19 +613,6 @@ Wire Wire Line
 	7400 2150 7750 2150
 Wire Wire Line
 	7750 1950 7750 2150
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR046
-U 1 1 5E5FEB09
-P 7750 2200
-AR Path="/5DB8A7DC/5E5FEB09" Ref="#PWR046"  Part="1" 
-AR Path="/5E6E93B2/5E5FEB09" Ref="#PWR?"  Part="1" 
-F 0 "#PWR046" H 7750 1950 50  0001 C CNN
-F 1 "GND" H 7755 2027 50  0000 C CNN
-F 2 "" H 7750 2200 50  0001 C CNN
-F 3 "" H 7750 2200 50  0001 C CNN
-	1    7750 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7750 2150 7750 2200
 Connection ~ 7750 2150
@@ -853,26 +653,13 @@ F 3 "" H 10000 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:GND-aardonyx #PWR051
-U 1 1 5E69E227
-P 10000 5550
-AR Path="/5DB8A7DC/5E69E227" Ref="#PWR051"  Part="1" 
-AR Path="/5E6E93B2/5E69E227" Ref="#PWR?"  Part="1" 
-F 0 "#PWR051" H 10000 5300 50  0001 C CNN
-F 1 "GND" H 10005 5377 50  0000 C CNN
-F 2 "" H 10000 5550 50  0001 C CNN
-F 3 "" H 10000 5550 50  0001 C CNN
-	1    10000 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R29_805
+L Aardonyx-rescue:R_US-aardonyx R29
 U 1 1 5E6A34B8
 P 10000 4700
-AR Path="/5DB8A7DC/5E6A34B8" Ref="R29_805"  Part="1" 
+AR Path="/5DB8A7DC/5E6A34B8" Ref="R29"  Part="1" 
 AR Path="/5E6E93B2/5E6A34B8" Ref="R?"  Part="1" 
-F 0 "R29_805" H 10050 4800 50  0000 L CNN
-F 1 "1KE,0402" H 10050 4650 50  0000 L CNN
+F 0 "R29" H 10050 4800 50  0000 L CNN
+F 1 "1KE,0402" V 9900 4450 50  0000 L CNN
 F 2 "" V 10040 4690 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 10000 4700 50  0001 C CNN
 F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 10000 4700 50  0001 C CNN "Description"
@@ -884,10 +671,6 @@ F 7 "Panasonic Electronic Components" H 10000 4700 50  0001 C CNN "Maufaturer"
 $EndComp
 Wire Wire Line
 	10000 4450 10000 4550
-Wire Wire Line
-	10000 4850 10000 5000
-Wire Wire Line
-	10000 5300 10000 5550
 Wire Wire Line
 	8550 4200 8150 4200
 $Comp
@@ -909,13 +692,13 @@ Wire Wire Line
 Wire Wire Line
 	7750 1350 7750 1600
 $Comp
-L Aardonyx-rescue:R_US-aardonyx P_R27
+L Aardonyx-rescue:R_US-aardonyx R28
 U 1 1 5DC0E17E
 P 7250 5200
-AR Path="/5DB8A7DC/5DC0E17E" Ref="P_R27"  Part="1" 
+AR Path="/5DB8A7DC/5DC0E17E" Ref="R28"  Part="1" 
 AR Path="/5E6E93B2/5DC0E17E" Ref="R?"  Part="1" 
-F 0 "P_R27" H 7318 5246 50  0000 L CNN
-F 1 "124KE,0805" H 7318 5155 50  0000 L CNN
+F 0 "R28" H 7318 5246 50  0000 L CNN
+F 1 "124KE,0805" V 7350 4750 50  0000 L CNN
 F 2 "" V 7290 5190 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-6ENF1243V/P124KCCT-ND/119578" H 7250 5200 50  0001 C CNN
 F 4 "RES SMD 124K OHM 1% 1/8W 0805" H 7250 5200 50  0001 C CNN "Description"
@@ -924,5 +707,196 @@ F 6 "ERJ-6ENF1243V" H 7250 5200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Panasonic Electronic Components" H 7250 5200 50  0001 C CNN "Maufaturer"
 	1    7250 5200
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4850 10000 5000
+Wire Wire Line
+	10000 5300 10000 5550
+$Comp
+L Aardonyx-rescue:R_US-skt32e_asic R27
+U 1 1 5EE2D8E4
+P 7250 5800
+F 0 "R27" H 7318 5846 50  0000 L CNN
+F 1 "22.1KE,0805" H 7318 5755 50  0000 L CNN
+F 2 "" V 7290 5790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN
+F 4 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Description"
+F 5 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Field4"
+F 7 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Field5"
+F 8 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Field6"
+F 9 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Field7"
+F 10 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Manufactured Part Number"
+F 11 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB2212V/P22-1KDACT-ND/3075024" H 7250 5800 50  0001 C CNN "Maufaturer"
+	1    7250 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5950 7250 6100
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0143
+U 1 1 5EE6F664
+P 2250 5300
+F 0 "#PWR0143" H 2250 5050 50  0001 C CNN
+F 1 "GND" H 2255 5127 50  0000 C CNN
+F 2 "" H 2250 5300 50  0001 C CNN
+F 3 "" H 2250 5300 50  0001 C CNN
+	1    2250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0144
+U 1 1 5EE71DA1
+P 4450 6100
+F 0 "#PWR0144" H 4450 5850 50  0001 C CNN
+F 1 "GND" H 4455 5927 50  0000 C CNN
+F 2 "" H 4450 6100 50  0001 C CNN
+F 3 "" H 4450 6100 50  0001 C CNN
+	1    4450 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0147
+U 1 1 5EE727ED
+P 5300 6100
+F 0 "#PWR0147" H 5300 5850 50  0001 C CNN
+F 1 "GND" H 5305 5927 50  0000 C CNN
+F 2 "" H 5300 6100 50  0001 C CNN
+F 3 "" H 5300 6100 50  0001 C CNN
+	1    5300 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0148
+U 1 1 5EE72E68
+P 7250 6100
+F 0 "#PWR0148" H 7250 5850 50  0001 C CNN
+F 1 "GND" H 7255 5927 50  0000 C CNN
+F 2 "" H 7250 6100 50  0001 C CNN
+F 3 "" H 7250 6100 50  0001 C CNN
+	1    7250 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0150
+U 1 1 5EE7D0B1
+P 10000 5550
+F 0 "#PWR0150" H 10000 5300 50  0001 C CNN
+F 1 "GND" H 10005 5377 50  0000 C CNN
+F 2 "" H 10000 5550 50  0001 C CNN
+F 3 "" H 10000 5550 50  0001 C CNN
+	1    10000 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0151
+U 1 1 5EE7ED73
+P 3850 1950
+F 0 "#PWR0151" H 3850 1700 50  0001 C CNN
+F 1 "GND" H 3855 1777 50  0000 C CNN
+F 2 "" H 3850 1950 50  0001 C CNN
+F 3 "" H 3850 1950 50  0001 C CNN
+	1    3850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0152
+U 1 1 5EE7FF2C
+P 5800 2200
+F 0 "#PWR0152" H 5800 1950 50  0001 C CNN
+F 1 "GND" H 5805 2027 50  0000 C CNN
+F 2 "" H 5800 2200 50  0001 C CNN
+F 3 "" H 5800 2200 50  0001 C CNN
+	1    5800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0153
+U 1 1 5EE81813
+P 6200 2000
+F 0 "#PWR0153" H 6200 1750 50  0001 C CNN
+F 1 "GND" H 6205 1827 50  0000 C CNN
+F 2 "" H 6200 2000 50  0001 C CNN
+F 3 "" H 6200 2000 50  0001 C CNN
+	1    6200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0154
+U 1 1 5EE81F60
+P 7050 2000
+F 0 "#PWR0154" H 7050 1750 50  0001 C CNN
+F 1 "GND" H 7055 1827 50  0000 C CNN
+F 2 "" H 7050 2000 50  0001 C CNN
+F 3 "" H 7050 2000 50  0001 C CNN
+	1    7050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0155
+U 1 1 5EE824AC
+P 7750 2200
+F 0 "#PWR0155" H 7750 1950 50  0001 C CNN
+F 1 "GND" H 7755 2027 50  0000 C CNN
+F 2 "" H 7750 2200 50  0001 C CNN
+F 3 "" H 7750 2200 50  0001 C CNN
+	1    7750 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0149
+U 1 1 5EE84285
+P 8500 5800
+F 0 "#PWR0149" H 8500 5550 50  0001 C CNN
+F 1 "GND" H 8505 5627 50  0000 C CNN
+F 2 "" H 8500 5800 50  0001 C CNN
+F 3 "" H 8500 5800 50  0001 C CNN
+	1    8500 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J5
+U 1 1 5E9E6D33
+P 3400 1700
+F 0 "J5" H 3457 2017 50  0000 C CNN
+F 1 "12V" H 3457 1926 50  0000 C CNN
+F 2 "" H 3450 1660 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=PJ-202AH" H 3450 1660 50  0001 C CNN
+F 4 "CONN PWR JACK 2X5.5MM KINKED PIN" H 3400 1700 50  0001 C CNN "Description"
+F 5 "CP-202AH-ND" H 3400 1700 50  0001 C CNN "Digikey PartNumber"
+F 6 "PJ-202AH" H 3400 1700 50  0001 C CNN "Manufactured Part Number"
+F 7 "CUI Devices" H 3400 1700 50  0001 C CNN "Maufaturer"
+	1    3400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5E9F450C
+P 4200 1600
+F 0 "SW1" H 4200 1835 50  0000 C CNN
+F 1 "SW_SPST" H 4200 1744 50  0000 C CNN
+F 2 "" H 4200 1600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/TMS6T1B1M1QE/450-2109-ND/5125729" H 4200 1600 50  0001 C CNN
+F 4 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Description"
+F 5 "450-2109-ND" H 4200 1600 50  0001 C CNN "Digikey PartNumber"
+F 6 "TMS6T1B1M1QE" H 4200 1600 50  0001 C CNN "Manufactured Part Number"
+F 7 "TE Connectivity ALCOSWITCH Switches" H 4200 1600 50  0001 C CNN "Maufaturer"
+	1    4200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 5E9F4F23
+P 4700 1600
+F 0 "F1" V 4475 1600 50  0000 C CNN
+F 1 "PTCCL13H921DBE" V 4566 1600 50  0000 C CNN
+F 2 "" H 4750 1400 50  0001 L CNN
+F 3 "https://www.digikey.in/products/en?keywords=PTCCL13H921DBE" H 4700 1600 50  0001 C CNN
+F 4 "PTC RESET FUSE 30V 920MA RADIAL" H 4700 1600 50  0001 C CNN "Description"
+F 5 "BC2323-ND" H 4700 1600 50  0001 C CNN "Digikey PartNumber"
+F 6 "PTCCL13H921DBE" H 4700 1600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
+	1    4700 1600
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

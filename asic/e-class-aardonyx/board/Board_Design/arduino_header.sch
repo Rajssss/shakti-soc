@@ -220,17 +220,6 @@ F 7 "KOA Speer Electronics, Inc." H 9900 1400 50  0001 C CNN "Maufaturer"
 	1    9900 1400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR092
-U 1 1 5E2602C3
-P 10500 1550
-F 0 "#PWR092" H 10500 1300 50  0001 C CNN
-F 1 "GND" H 10505 1377 50  0000 C CNN
-F 2 "" H 10500 1550 50  0001 C CNN
-F 3 "" H 10500 1550 50  0001 C CNN
-	1    10500 1550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10500 1450 10500 1550
 Wire Wire Line
@@ -259,17 +248,6 @@ F 5 "478-10050-1-ND" H 9150 1350 50  0001 C CNN "Digikey PartNumber"
 F 6 "04023C104JAT2A" H 9150 1350 50  0001 C CNN "Manufactured Part Number"
 F 7 "AVX Corporation" H 9150 1350 50  0001 C CNN "Maufaturer"
 	1    9150 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR086
-U 1 1 5E266919
-P 9150 1550
-F 0 "#PWR086" H 9150 1300 50  0001 C CNN
-F 1 "GND" H 9155 1377 50  0000 C CNN
-F 2 "" H 9150 1550 50  0001 C CNN
-F 3 "" H 9150 1550 50  0001 C CNN
-	1    9150 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -462,7 +440,7 @@ L Aardonyx-rescue:R_US-aardonyx R32
 U 1 1 5E2B4C89
 P 2150 1350
 F 0 "R32" H 2150 1500 50  0000 L CNN
-F 1 "10KE,0805" H 2150 1200 50  0000 L CNN
+F 1 "10KE,0805" V 2050 1050 50  0000 L CNN
 F 2 "" V 2190 1340 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 2150 1350 50  0001 C CNN
 F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 2150 1350 50  0001 C CNN "Description"
@@ -508,7 +486,7 @@ L Aardonyx-rescue:R_US-aardonyx R30
 U 1 1 5E2C54E1
 P 1650 1350
 F 0 "R30" H 1650 1500 50  0000 L CNN
-F 1 "10KE,0805" H 1650 1200 50  0000 L CNN
+F 1 "10KE,0805" V 1550 1050 50  0000 L CNN
 F 2 "" V 1690 1340 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 1650 1350 50  0001 C CNN
 F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 1650 1350 50  0001 C CNN "Description"
@@ -523,7 +501,7 @@ L Aardonyx-rescue:R_US-aardonyx R31
 U 1 1 5E2C33CD
 P 1900 1350
 F 0 "R31" H 1900 1500 50  0000 L CNN
-F 1 "10KE,0805" H 1900 1200 50  0000 L CNN
+F 1 "10KE,0805" V 1800 1050 50  0000 L CNN
 F 2 "" V 1940 1340 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 1900 1350 50  0001 C CNN
 F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 1900 1350 50  0001 C CNN "Description"
@@ -555,7 +533,7 @@ L Aardonyx-rescue:C_Small-aardonyx C47
 U 1 1 5E3046A9
 P 2050 5000
 F 0 "C47" H 2142 5046 50  0000 L CNN
-F 1 "0.1UF,0402" H 2142 4955 50  0000 L CNN
+F 1 "0.1UF,0402" V 1950 4700 50  0000 L CNN
 F 2 "" H 2050 5000 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2050 5000 50  0001 C CNN
 F 4 "CAP CER 0.1UF 25V X7R 0402" H 2050 5000 50  0001 C CNN "Description"
@@ -606,7 +584,7 @@ L Aardonyx-rescue:R_US-aardonyx R33
 U 1 1 5E31A792
 P 2450 5150
 F 0 "R33" H 2450 5300 50  0000 L CNN
-F 1 "10KE,0805" H 2450 5000 50  0000 L CNN
+F 1 "10KE,0805" V 2350 4950 50  0000 L CNN
 F 2 "" V 2490 5140 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 2450 5150 50  0001 C CNN
 F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 2450 5150 50  0001 C CNN "Description"
@@ -1134,8 +1112,6 @@ Entry Wire Line
 	5800 2950 5900 2850
 Entry Wire Line
 	5800 3050 5900 2950
-Text HLabel 5850 400  0    50   BiDi ~ 0
-IO_0-7
 Wire Wire Line
 	9150 2300 8750 2300
 Wire Wire Line
@@ -1165,7 +1141,7 @@ Entry Wire Line
 Entry Wire Line
 	8750 2800 8650 2700
 Text HLabel 8650 2150 0    50   BiDi ~ 0
-IO_8-13
+IO_[8..13]
 Text HLabel 8750 2900 0    50   BiDi ~ 0
 I2C1_SCL
 Text HLabel 8750 3000 0    50   BiDi ~ 0
@@ -1280,7 +1256,7 @@ Wire Notes Line
 Wire Wire Line
 	10550 5250 10200 5250
 Text HLabel 5800 2250 0    50   BiDi ~ 0
-IO_0-7
+IO_[0..7]
 Text Label 3450 6150 0    50   ~ 0
 A7
 Text Label 3450 6250 0    50   ~ 0
@@ -1697,6 +1673,30 @@ Wire Wire Line
 Wire Wire Line
 	4200 4850 4200 4900
 Connection ~ 4200 4900
+NoConn ~ 9050 4600
+NoConn ~ 9050 5300
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0145
+U 1 1 5EE696CA
+P 9150 1550
+F 0 "#PWR0145" H 9150 1300 50  0001 C CNN
+F 1 "GND" H 9155 1377 50  0000 C CNN
+F 2 "" H 9150 1550 50  0001 C CNN
+F 3 "" H 9150 1550 50  0001 C CNN
+	1    9150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-skt32e_asic #PWR0146
+U 1 1 5EE6C80F
+P 10500 1550
+F 0 "#PWR0146" H 10500 1300 50  0001 C CNN
+F 1 "GND" H 10505 1377 50  0000 C CNN
+F 2 "" H 10500 1550 50  0001 C CNN
+F 3 "" H 10500 1550 50  0001 C CNN
+	1    10500 1550
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	8650 2150 8650 2700
 Wire Bus Line
