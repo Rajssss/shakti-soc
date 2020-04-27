@@ -1,17 +1,18 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
-Title "AARDONYX_DEVELOPMENT_BOARD"
+Title "AARDONYX SKT32E DEVELOPMENT BOARD"
 Date ""
 Rev "R1V0"
 Comp "IIT_MADRAS"
 Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment2 "SKT32E - POWER SUPPLY PINS"
+Comment3 "SKT32E - PERIPHERALS PINS"
+Comment4 "SKT32E - SDRAM PINS"
 $EndDescr
 $Comp
 L Aardonyx-rescue:C_Small-aardonyx C63
@@ -252,8 +253,6 @@ F 3 "" H 8500 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	500  500  11200 500 
-Wire Notes Line
 	11200 500  11200 6500
 Wire Notes Line
 	11200 6500 6950 6500
@@ -261,7 +260,7 @@ Wire Notes Line
 	6950 6500 6950 7750
 Wire Notes Line
 	500  7750 500  500 
-Text Notes 6700 950  0    79   Italic 0
+Text Notes 6700 950  0    100  ~ 20
 SKT32E - POWER
 Connection ~ 6250 3050
 Connection ~ 6250 3850
@@ -1931,7 +1930,7 @@ Text Label 1400 7050 0    39   ~ 0
 SDRAM_CLK
 Text Label 1400 7150 0    39   ~ 0
 SDRAM_CKE
-Text Notes 4050 4100 0    79   Italic 0
+Text Notes 1200 7500 0    100  ~ 20
 SKT32E - SDRAM
 Wire Wire Line
 	10750 1700 10750 1750
@@ -1966,7 +1965,7 @@ Wire Wire Line
 	6250 3150 6450 3150
 Wire Wire Line
 	6250 3050 6450 3050
-Text Notes 2500 700  0    79   Italic 0
+Text Notes 2400 750  0    100  ~ 20
 SKT32E - PERIPHERALS
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R57
@@ -2345,180 +2344,180 @@ UART0_RX
 $Comp
 L Aardonyx-rescue:SW_DIP_x03-aardonyx SW3
 U 1 1 60474CCF
-P 9900 5600
-F 0 "SW3" H 9850 5950 50  0000 C CNN
-F 1 "SW_DIP_x03" H 10100 5450 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx03_Slide_6.7x9.18mm_W7.62mm_P2.54mm_LowProfile" H 9900 5600 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/418117270903/732-3833-5-ND/3174487" H 9900 5600 50  0001 C CNN
-F 4 "	SWITCH SLIDE DIP SPST 25MA 24V" H 9900 5600 50  0001 C CNN "Description"
-F 5 "	732-3833-5-ND" H 9900 5600 50  0001 C CNN "Digikey PartNumber"
-F 6 "732-3833-5-ND" H 9900 5600 50  0001 C CNN "Field4"
-F 7 "418117270903" H 9900 5600 50  0001 C CNN "Manufactured Part Number"
-F 8 "Würth Elektronik" H 9900 5600 50  0001 C CNN "Maufaturer"
-	1    9900 5600
+P 9950 5700
+F 0 "SW3" H 9900 6050 50  0000 C CNN
+F 1 "SW_DIP_x03" H 10150 5550 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx03_Slide_6.7x9.18mm_W7.62mm_P2.54mm_LowProfile" H 9950 5700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/418117270903/732-3833-5-ND/3174487" H 9950 5700 50  0001 C CNN
+F 4 "	SWITCH SLIDE DIP SPST 25MA 24V" H 9950 5700 50  0001 C CNN "Description"
+F 5 "	732-3833-5-ND" H 9950 5700 50  0001 C CNN "Digikey PartNumber"
+F 6 "732-3833-5-ND" H 9950 5700 50  0001 C CNN "Field4"
+F 7 "418117270903" H 9950 5700 50  0001 C CNN "Manufactured Part Number"
+F 8 "Würth Elektronik" H 9950 5700 50  0001 C CNN "Maufaturer"
+	1    9950 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:V3P3-aardonyx #PWR0130
 U 1 1 604A31C5
-P 10350 5000
-F 0 "#PWR0130" H 10500 4950 50  0001 C CNN
-F 1 "V3P3" H 10355 5175 50  0000 C CNN
-F 2 "" H 10350 5000 50  0001 C CNN
-F 3 "" H 10350 5000 50  0001 C CNN
-	1    10350 5000
+P 10400 5100
+F 0 "#PWR0130" H 10550 5050 50  0001 C CNN
+F 1 "V3P3" H 10405 5275 50  0000 C CNN
+F 2 "" H 10400 5100 50  0001 C CNN
+F 3 "" H 10400 5100 50  0001 C CNN
+	1    10400 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:V1P8-aardonyx #PWR0133
 U 1 1 604D0ACB
-P 10850 5250
-F 0 "#PWR0133" H 11000 5200 50  0001 C CNN
-F 1 "V1P8" H 10855 5425 50  0000 C CNN
-F 2 "" H 10850 5250 50  0001 C CNN
-F 3 "" H 10850 5250 50  0001 C CNN
-	1    10850 5250
+P 10900 5350
+F 0 "#PWR0133" H 11050 5300 50  0001 C CNN
+F 1 "V1P8" H 10905 5525 50  0000 C CNN
+F 2 "" H 10900 5350 50  0001 C CNN
+F 3 "" H 10900 5350 50  0001 C CNN
+	1    10900 5350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10200 5400 10350 5400
+	10250 5500 10400 5500
 Wire Wire Line
-	10200 5500 10350 5500
+	10250 5600 10400 5600
 Wire Wire Line
-	10350 5500 10350 5400
-Connection ~ 10350 5400
+	10400 5600 10400 5500
+Connection ~ 10400 5500
 Wire Wire Line
-	10200 5600 10350 5600
+	10250 5700 10400 5700
 Wire Wire Line
-	10350 5600 10350 5500
-Connection ~ 10350 5500
+	10400 5700 10400 5600
+Connection ~ 10400 5600
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R132
 U 1 1 605E3FF9
-P 10600 5400
-F 0 "R132" V 10500 5400 50  0000 C CNN
-F 1 "0E, 0402" V 10650 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 10640 5390 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 10600 5400 50  0001 C CNN
-F 4 "NA" V 10700 5400 50  0000 C CNN "Field4"
-F 5 "RES SMD 0 OHM JUMPER 1/16W 0402" H 10600 5400 50  0001 C CNN "Description"
-F 6 "541-0.0JCT-ND" H 10600 5400 50  0001 C CNN "Digikey PartNumber"
-F 7 "CRCW04020000Z0ED" H 10600 5400 50  0001 C CNN "Manufactured Part Number"
-F 8 "Vishay Dale" H 10600 5400 50  0001 C CNN "Maufaturer"
-	1    10600 5400
+P 10650 5500
+F 0 "R132" V 10550 5500 50  0000 C CNN
+F 1 "0E, 0402" V 10700 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10690 5490 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 10650 5500 50  0001 C CNN
+F 4 "NA" V 10750 5500 50  0000 C CNN "Field4"
+F 5 "RES SMD 0 OHM JUMPER 1/16W 0402" H 10650 5500 50  0001 C CNN "Description"
+F 6 "541-0.0JCT-ND" H 10650 5500 50  0001 C CNN "Digikey PartNumber"
+F 7 "CRCW04020000Z0ED" H 10650 5500 50  0001 C CNN "Manufactured Part Number"
+F 8 "Vishay Dale" H 10650 5500 50  0001 C CNN "Maufaturer"
+	1    10650 5500
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	10350 5400 10450 5400
+	10400 5500 10500 5500
 Wire Wire Line
-	10750 5400 10850 5400
+	10800 5500 10900 5500
 Wire Wire Line
-	10850 5400 10850 5250
-Text Label 8800 5600 0    39   ~ 0
+	10900 5500 10900 5350
+Text Label 8850 5700 0    39   ~ 0
 TEST_MODE
-Text Label 8800 5500 0    39   ~ 0
+Text Label 8850 5600 0    39   ~ 0
 BOOT_MODE1
-Text Label 8800 5400 0    39   ~ 0
+Text Label 8850 5500 0    39   ~ 0
 BOOT_MODE0
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R131
 U 1 1 6070079E
-P 10350 5200
-F 0 "R131" V 10300 5200 50  0000 C CNN
-F 1 "0E, 0402" V 10450 5200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 10390 5190 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 10350 5200 50  0001 C CNN
-F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 10350 5200 50  0001 C CNN "Description"
-F 5 "541-0.0JCT-ND" H 10350 5200 50  0001 C CNN "Digikey PartNumber"
-F 6 "CRCW04020000Z0ED" H 10350 5200 50  0001 C CNN "Manufactured Part Number"
-F 7 "Vishay Dale" H 10350 5200 50  0001 C CNN "Maufaturer"
-	1    10350 5200
+P 10400 5300
+F 0 "R131" V 10350 5300 50  0000 C CNN
+F 1 "0E, 0402" V 10500 5300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10440 5290 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 10400 5300 50  0001 C CNN
+F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 10400 5300 50  0001 C CNN "Description"
+F 5 "541-0.0JCT-ND" H 10400 5300 50  0001 C CNN "Digikey PartNumber"
+F 6 "CRCW04020000Z0ED" H 10400 5300 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 10400 5300 50  0001 C CNN "Maufaturer"
+	1    10400 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R130
 U 1 1 6081E442
-P 9550 5800
-F 0 "R130" V 9500 5900 50  0000 C CNN
-F 1 "10KE,0805" V 9600 5550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9590 5790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9550 5800 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9550 5800 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 9550 5800 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 9550 5800 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 9550 5800 50  0001 C CNN "Maufaturer"
-	1    9550 5800
+P 9600 5900
+F 0 "R130" V 9550 6000 50  0000 C CNN
+F 1 "10KE,0805" V 9650 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9640 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9600 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9600 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 9600 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0805FR-0710KL" H 9600 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9600 5900 50  0001 C CNN "Maufaturer"
+	1    9600 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R129
 U 1 1 6084D5E3
-P 9350 5800
-F 0 "R129" V 9300 5950 50  0000 C CNN
-F 1 "10KE,0805" V 9400 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9390 5790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9350 5800 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9350 5800 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 9350 5800 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 9350 5800 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 9350 5800 50  0001 C CNN "Maufaturer"
-	1    9350 5800
+P 9400 5900
+F 0 "R129" V 9350 6050 50  0000 C CNN
+F 1 "10KE,0805" V 9450 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9440 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9400 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9400 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 9400 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0805FR-0710KL" H 9400 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9400 5900 50  0001 C CNN "Maufaturer"
+	1    9400 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R128
 U 1 1 6087C5F5
-P 9200 5800
-F 0 "R128" V 9100 5900 50  0000 C CNN
-F 1 "10KE,0805" V 9150 5500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9240 5790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9200 5800 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9200 5800 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 9200 5800 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 9200 5800 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 9200 5800 50  0001 C CNN "Maufaturer"
-	1    9200 5800
+P 9250 5900
+F 0 "R128" V 9150 6000 50  0000 C CNN
+F 1 "10KE,0805" V 9200 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9290 5890 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 9250 5900 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 9250 5900 50  0001 C CNN "Description"
+F 5 "311-10.0KCRCT-ND" H 9250 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0805FR-0710KL" H 9250 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 9250 5900 50  0001 C CNN "Maufaturer"
+	1    9250 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 5650 9350 5500
+	9400 5750 9400 5600
 Wire Wire Line
-	9350 5500 9600 5500
+	9400 5600 9650 5600
 Wire Wire Line
-	9200 5650 9200 5600
+	9250 5750 9250 5700
 Wire Wire Line
-	9200 5600 9600 5600
+	9250 5700 9650 5700
 Wire Wire Line
-	9200 5950 9200 6050
+	9250 6050 9250 6150
 Wire Wire Line
-	9200 6050 9350 6050
+	9250 6150 9400 6150
 Wire Wire Line
-	9350 5950 9350 6050
-Connection ~ 9350 6050
+	9400 6050 9400 6150
+Connection ~ 9400 6150
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR0129
 U 1 1 60AEF531
-P 9350 6100
-F 0 "#PWR0129" H 9350 5850 50  0001 C CNN
-F 1 "GND" H 9355 5927 50  0000 C CNN
-F 2 "" H 9350 6100 50  0001 C CNN
-F 3 "" H 9350 6100 50  0001 C CNN
-	1    9350 6100
+P 9400 6200
+F 0 "#PWR0129" H 9400 5950 50  0001 C CNN
+F 1 "GND" H 9405 6027 50  0000 C CNN
+F 2 "" H 9400 6200 50  0001 C CNN
+F 3 "" H 9400 6200 50  0001 C CNN
+	1    9400 6200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 6050 9350 6100
+	9400 6150 9400 6200
 Wire Wire Line
-	8800 5500 9350 5500
-Connection ~ 9350 5500
+	8850 5600 9400 5600
+Connection ~ 9400 5600
 Wire Wire Line
-	8800 5600 9200 5600
-Connection ~ 9200 5600
+	8850 5700 9250 5700
+Connection ~ 9250 5700
 Wire Wire Line
-	10350 5000 10350 5050
+	10400 5100 10400 5150
 Wire Wire Line
-	10350 5350 10350 5400
-Text Notes 9150 4650 0    79   Italic 0
+	10400 5450 10400 5500
+Text Notes 9150 4750 0    100  ~ 20
 MODE SELECT SWITCH
 Entry Wire Line
 	5350 7400 5450 7500
@@ -2627,16 +2626,16 @@ Entry Wire Line
 Entry Wire Line
 	1250 5700 1350 5600
 Wire Wire Line
-	8800 5400 9550 5400
+	8850 5500 9600 5500
 Wire Wire Line
-	9550 5650 9550 5400
-Connection ~ 9550 5400
+	9600 5750 9600 5500
+Connection ~ 9600 5500
 Wire Wire Line
-	9550 5400 9600 5400
+	9600 5500 9650 5500
 Wire Wire Line
-	9550 5950 9550 6050
+	9600 6050 9600 6150
 Wire Wire Line
-	9350 6050 9550 6050
+	9400 6150 9600 6150
 Text HLabel 1250 4350 0    50   Output ~ 0
 SDRAM_A[0..12]
 Entry Wire Line
@@ -2919,30 +2918,8 @@ Wire Wire Line
 Wire Wire Line
 	9750 2750 10000 2750
 Connection ~ 10000 2750
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C85
-U 1 1 5E8200C2
-P 10250 2500
-F 0 "C85" H 10250 2600 50  0000 L CNN
-F 1 "0.1UF,0402" V 10350 2100 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 10250 2500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10250 2500 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 10250 2500 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 10250 2500 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 10250 2500 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 10250 2500 50  0001 C CNN "Maufaturer"
-	1    10250 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10000 2750 10250 2750
-Wire Wire Line
-	10250 2600 10250 2750
-Wire Wire Line
-	10250 2400 10250 2250
-Wire Wire Line
-	10250 2250 10000 2250
-Connection ~ 10000 2250
 Connection ~ 9750 2250
 Wire Wire Line
 	9000 2250 9250 2250
@@ -2960,7 +2937,6 @@ Connection ~ 9250 2750
 Connection ~ 9000 2750
 Wire Wire Line
 	10250 2750 10250 2800
-Connection ~ 10250 2750
 Text HLabel 4900 3200 2    50   Output ~ 0
 TD0
 Text HLabel 4900 3100 2    50   Input ~ 0
@@ -3085,10 +3061,14 @@ $Comp
 L Aardonyx-rescue:SKT32E-skt32e_asic U15
 U 1 1 5ED74BCE
 P 3250 2250
-F 0 "U15" H 3225 3815 50  0000 C CNN
-F 1 "SKT32E" H 3225 3724 50  0000 C CNN
+F 0 "U15" H 2550 600 50  0000 C CNN
+F 1 "SKT32E" H 4000 600 50  0000 C CNN
 F 2 "Aardonyx:SKT32E_IITM" H 2400 3650 50  0001 C CNN
-F 3 "" H 2400 3650 50  0001 C CNN
+F 3 "https://gitlab.com/shaktiproject/cores/shakti-soc/-/tree/master/asic/e-class-aardonyx" H 2400 3650 50  0001 C CNN
+F 4 "E class Shakti Processor" H 3250 2250 50  0001 C CNN "Description"
+F 5 "NA" H 3250 2250 50  0001 C CNN "Digikey PartNumber"
+F 6 "SKT32E" H 3250 2250 50  0001 C CNN "Manufactured Part Number"
+F 7 "SCL / IITM" H 3250 2250 50  0001 C CNN "Maufaturer"
 	1    3250 2250
 	1    0    0    -1  
 $EndComp
@@ -3096,10 +3076,14 @@ $Comp
 L Aardonyx-rescue:SKT32E-skt32e_asic U15
 U 2 1 5ED8877B
 P 3350 5800
-F 0 "U15" H 3375 7515 50  0000 C CNN
-F 1 "SKT32E" H 3375 7424 50  0000 C CNN
+F 0 "U15" H 2800 7400 50  0000 C CNN
+F 1 "SKT32E" H 3950 7400 50  0000 C CNN
 F 2 "Aardonyx:SKT32E_IITM" H 2500 7200 50  0001 C CNN
-F 3 "" H 2500 7200 50  0001 C CNN
+F 3 "https://gitlab.com/shaktiproject/cores/shakti-soc/-/tree/master/asic/e-class-aardonyx" H 2500 7200 50  0001 C CNN
+F 4 "E class Shakti Processor" H 3350 5800 50  0001 C CNN "Description"
+F 5 "NA" H 3350 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "SKT32E" H 3350 5800 50  0001 C CNN "Manufactured Part Number"
+F 7 "SCL / IITM" H 3350 5800 50  0001 C CNN "Maufaturer"
 	2    3350 5800
 	1    0    0    -1  
 $EndComp
@@ -3107,13 +3091,209 @@ $Comp
 L Aardonyx-rescue:SKT32E-skt32e_asic U15
 U 3 1 5EDACC65
 P 7250 2700
-F 0 "U15" H 7225 4415 50  0000 C CNN
-F 1 "SKT32E" H 7225 4324 50  0000 C CNN
+F 0 "U15" H 6750 4300 50  0000 C CNN
+F 1 "SKT32E" H 7650 4300 50  0000 C CNN
 F 2 "Aardonyx:SKT32E_IITM" H 6400 4100 50  0001 C CNN
-F 3 "" H 6400 4100 50  0001 C CNN
+F 3 "https://gitlab.com/shaktiproject/cores/shakti-soc/-/tree/master/asic/e-class-aardonyx" H 6400 4100 50  0001 C CNN
+F 4 "E class Shakti Processor" H 7250 2700 50  0001 C CNN "Description"
+F 5 "NA" H 7250 2700 50  0001 C CNN "Digikey PartNumber"
+F 6 "SKT32E" H 7250 2700 50  0001 C CNN "Manufactured Part Number"
+F 7 "SCL / IITM" H 7250 2700 50  0001 C CNN "Maufaturer"
 	3    7250 2700
 	1    0    0    -1  
 $EndComp
+Wire Notes Line
+	6450 4050 6450 7750
+Wire Notes Line
+	6450 4500 11200 4500
+Wire Notes Line
+	6000 500  6000 2400
+Wire Notes Line
+	6000 2400 5500 2400
+Wire Notes Line
+	500  500  11200 500 
+Wire Notes Line
+	5500 2400 5500 4050
+Wire Notes Line
+	500  4050 6450 4050
+$Comp
+L Device:LED_ALT D?
+U 1 1 5EBA1A90
+P 7850 5200
+AR Path="/5DB8A7DC/5EBA1A90" Ref="D?"  Part="1" 
+AR Path="/5E6E93B2/5EBA1A90" Ref="D?"  Part="1" 
+AR Path="/5D8B3740/5EBA1A90" Ref="D6"  Part="1" 
+F 0 "D6" H 8050 5150 50  0000 R CNN
+F 1 "LED,1206" H 7800 5300 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7850 5200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 7850 5200 50  0001 C CNN
+F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5200 50  0001 C CNN "Description"
+F 5 "67-1002-1-ND" H 7850 5200 50  0001 C CNN "Digikey PartNumber"
+F 6 "SML-LX1206GW-TR" H 7850 5200 50  0001 C CNN "Manufactured Part Number"
+F 7 "	Lumex Opto/Components Inc." H 7850 5200 50  0001 C CNN "Maufaturer"
+	1    7850 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR?
+U 1 1 5EBA1A96
+P 8250 5200
+AR Path="/5DB8A7DC/5EBA1A96" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5EBA1A96" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B3740/5EBA1A96" Ref="#PWR0161"  Part="1" 
+F 0 "#PWR0161" H 8250 4950 50  0001 C CNN
+F 1 "GND" H 8255 5027 50  0000 C CNN
+F 2 "" H 8250 5200 50  0001 C CNN
+F 3 "" H 8250 5200 50  0001 C CNN
+	1    8250 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R?
+U 1 1 5EBA1AA0
+P 7400 5200
+AR Path="/5DB8A7DC/5EBA1AA0" Ref="R?"  Part="1" 
+AR Path="/5E6E93B2/5EBA1AA0" Ref="R?"  Part="1" 
+AR Path="/5D8B3740/5EBA1AA0" Ref="R42"  Part="1" 
+F 0 "R42" V 7450 5300 50  0000 L CNN
+F 1 "220E,0402" V 7300 4950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5190 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5200 50  0001 C CNN
+F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5200 50  0001 C CNN "Description"
+F 5 "311-120LRCT-ND" H 7400 5200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07120RL" H 7400 5200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 7400 5200 50  0001 C CNN "Maufaturer"
+	1    7400 5200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7550 5200 7700 5200
+Wire Wire Line
+	8000 5200 8250 5200
+$Comp
+L Device:LED_ALT D?
+U 1 1 5EC90632
+P 7850 5450
+AR Path="/5DB8A7DC/5EC90632" Ref="D?"  Part="1" 
+AR Path="/5E6E93B2/5EC90632" Ref="D?"  Part="1" 
+AR Path="/5D8B3740/5EC90632" Ref="D7"  Part="1" 
+F 0 "D7" H 8050 5400 50  0000 R CNN
+F 1 "LED,1206" H 7800 5550 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7850 5450 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 7850 5450 50  0001 C CNN
+F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5450 50  0001 C CNN "Description"
+F 5 "67-1002-1-ND" H 7850 5450 50  0001 C CNN "Digikey PartNumber"
+F 6 "SML-LX1206GW-TR" H 7850 5450 50  0001 C CNN "Manufactured Part Number"
+F 7 "	Lumex Opto/Components Inc." H 7850 5450 50  0001 C CNN "Maufaturer"
+	1    7850 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR?
+U 1 1 5EC90638
+P 8250 5450
+AR Path="/5DB8A7DC/5EC90638" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5EC90638" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B3740/5EC90638" Ref="#PWR0162"  Part="1" 
+F 0 "#PWR0162" H 8250 5200 50  0001 C CNN
+F 1 "GND" H 8255 5277 50  0000 C CNN
+F 2 "" H 8250 5450 50  0001 C CNN
+F 3 "" H 8250 5450 50  0001 C CNN
+	1    8250 5450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R?
+U 1 1 5EC90642
+P 7400 5450
+AR Path="/5DB8A7DC/5EC90642" Ref="R?"  Part="1" 
+AR Path="/5E6E93B2/5EC90642" Ref="R?"  Part="1" 
+AR Path="/5D8B3740/5EC90642" Ref="R43"  Part="1" 
+F 0 "R43" V 7450 5550 50  0000 L CNN
+F 1 "220E,0402" V 7300 5200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5440 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5450 50  0001 C CNN
+F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5450 50  0001 C CNN "Description"
+F 5 "311-120LRCT-ND" H 7400 5450 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07120RL" H 7400 5450 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 7400 5450 50  0001 C CNN "Maufaturer"
+	1    7400 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7550 5450 7700 5450
+Wire Wire Line
+	8000 5450 8250 5450
+Wire Wire Line
+	6700 5200 7250 5200
+Text Label 6700 5200 0    50   ~ 0
+IO_13
+Text Label 6750 5450 0    50   ~ 0
+IO_14
+Wire Wire Line
+	6750 5450 7250 5450
+$Comp
+L Device:LED_ALT D?
+U 1 1 5EDB8D01
+P 7850 5800
+AR Path="/5DB8A7DC/5EDB8D01" Ref="D?"  Part="1" 
+AR Path="/5E6E93B2/5EDB8D01" Ref="D?"  Part="1" 
+AR Path="/5D8B3740/5EDB8D01" Ref="D8"  Part="1" 
+F 0 "D8" H 8050 5750 50  0000 R CNN
+F 1 "LED,1206" H 7800 5900 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7850 5800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 7850 5800 50  0001 C CNN
+F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5800 50  0001 C CNN "Description"
+F 5 "67-1002-1-ND" H 7850 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "SML-LX1206GW-TR" H 7850 5800 50  0001 C CNN "Manufactured Part Number"
+F 7 "	Lumex Opto/Components Inc." H 7850 5800 50  0001 C CNN "Maufaturer"
+	1    7850 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR?
+U 1 1 5EDB8D07
+P 8250 5800
+AR Path="/5DB8A7DC/5EDB8D07" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5EDB8D07" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B3740/5EDB8D07" Ref="#PWR0163"  Part="1" 
+F 0 "#PWR0163" H 8250 5550 50  0001 C CNN
+F 1 "GND" H 8255 5627 50  0000 C CNN
+F 2 "" H 8250 5800 50  0001 C CNN
+F 3 "" H 8250 5800 50  0001 C CNN
+	1    8250 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R?
+U 1 1 5EDB8D11
+P 7400 5800
+AR Path="/5DB8A7DC/5EDB8D11" Ref="R?"  Part="1" 
+AR Path="/5E6E93B2/5EDB8D11" Ref="R?"  Part="1" 
+AR Path="/5D8B3740/5EDB8D11" Ref="R44"  Part="1" 
+F 0 "R44" V 7450 5900 50  0000 L CNN
+F 1 "220E,0402" V 7300 5550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5790 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5800 50  0001 C CNN
+F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5800 50  0001 C CNN "Description"
+F 5 "311-120LRCT-ND" H 7400 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07120RL" H 7400 5800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 7400 5800 50  0001 C CNN "Maufaturer"
+	1    7400 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7550 5800 7700 5800
+Wire Wire Line
+	8000 5800 8250 5800
+Text Label 6750 5800 0    50   ~ 0
+IO_15
+Wire Wire Line
+	6750 5800 7250 5800
+Wire Notes Line
+	8650 4500 8650 6500
+Text Notes 7100 4900 0    100  ~ 20
+DEBUG LEDS\n
 Wire Bus Line
 	1250 5800 1250 6350
 Wire Bus Line

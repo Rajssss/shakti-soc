@@ -1,17 +1,18 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title "AARDONYX_DEVELOPMENT_BOARD"
+Title "AARDONYX SKT32E DEVELOPMENT BOARD"
 Date ""
 Rev "R1V0"
 Comp "IIT_MADRAS"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "Aardonyx - SKT32E"
+Comment4 "Hierarchial Sheet"
 $EndDescr
 $Sheet
 S 8150 4100 850  900 
@@ -225,4 +226,8 @@ Wire Wire Line
 	5100 5600 4350 5600
 Wire Bus Line
 	7050 2450 8150 2450
+Text Notes 4600 1050 0    100  ~ 20
+AARDONYX SKT32E - DEVELOPMENT BOARD
+Text Notes 4700 1300 0    100  ~ 20
+WITH ARDUINO COMPATIBLE HEADERS
 $EndSCHEMATC

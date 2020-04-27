@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
-Title "AARDONYX_DEVELOPMENT_BOARD"
+Title "AARDONYX SKT32E DEVELOPMENT BOARD"
 Date ""
 Rev "R1V0"
 Comp "IIT_MADRAS"
@@ -639,12 +640,12 @@ F 3 "" H 2450 4750 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	500  7750 500  500 
-Text Notes 2750 650  0    79   Italic 0
-QSPI FLASH\n
-Text Notes 1200 4150 0    79   Italic 0
-I2C EEPROM\n
-Text Notes 7100 650  0    79   Italic 0
-LEVEL TRASLATOR FOR ARDUINO HEADER\n
+Text Notes 1750 750  0    100  ~ 20
+SKT32E - QSPI FLASH INTERFACE\n
+Text Notes 1100 4550 0    100  ~ 20
+SKT32E - I2C EEPROM \nINTERFACE\n\n
+Text Notes 6700 750  0    100  ~ 20
+LEVEL TRANSLATOR FOR ARDUINO HEADER\n
 Wire Notes Line
 	11200 500  11200 6500
 Wire Notes Line
@@ -732,9 +733,9 @@ P 10750 5900
 F 0 "J16" H 10700 6300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 10600 5400 50  0000 L CNN
 F 2 "" H 10750 5900 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/609-4616-1-ND/2785380" H 10750 5900 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 10750 5900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 10750 5900 50  0001 C CNN "Description"
-F 5 "	609-3264-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
+F 5 "609-3589-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
 F 6 "	68685-308LF" H 10750 5900 50  0001 C CNN "Manufactured Part Number"
 F 7 "Amphenol ICC (FCI)" H 10750 5900 50  0001 C CNN "Maufaturer"
 	1    10750 5900
@@ -762,9 +763,9 @@ P 9650 4900
 F 0 "J13" H 9600 5300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 9550 4400 50  0000 L CNN
 F 2 "" H 9650 4900 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/609-4616-1-ND/2785380" H 9650 4900 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 9650 4900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 9650 4900 50  0001 C CNN "Description"
-F 5 "	609-3264-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
+F 5 "609-3589-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
 F 6 "	68685-308LF" H 9650 4900 50  0001 C CNN "Manufactured Part Number"
 F 7 "Amphenol ICC (FCI)" H 9650 4900 50  0001 C CNN "Maufaturer"
 F 8 "609-3589-ND" H 9650 4900 50  0001 C CNN "Field4"
@@ -1001,17 +1002,6 @@ F 3 "" H 4300 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR063
-U 1 1 5F723E34
-P 4200 4850
-F 0 "#PWR063" H 4350 4800 50  0001 C CNN
-F 1 "V3P3" H 4205 5025 50  0000 C CNN
-F 2 "" H 4200 4850 50  0001 C CNN
-F 3 "" H 4200 4850 50  0001 C CNN
-	1    4200 4850
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:C_Small-aardonyx C49
 U 1 1 5F723E3A
 P 3700 5050
@@ -1068,10 +1058,10 @@ Wire Notes Line
 	500  3950 11200 3950
 Wire Notes Line
 	5850 3950 5850 7750
-Text Notes 8050 4150 0    79   Italic 0
-ARDUINO HEADER\n
-Text Notes 4200 4150 0    79   Italic 0
-ADC\n
+Text Notes 7100 4200 0    100  ~ 20
+SKT32E - ARDUINO COMPATIBLE HEADERS\n
+Text Notes 3650 4500 0    100  ~ 20
+SKT32E SPI - 8 CHANNEL \nADC INTERFACE\n
 Text HLabel 2300 7100 0    50   BiDi ~ 0
 I2C0_SDA
 Connection ~ 2150 1950
@@ -1333,7 +1323,7 @@ P 4900 1750
 F 0 "J9" H 4850 2150 50  0000 L CNN
 F 1 "Conn_1x8" H 4750 1250 50  0000 L CNN
 F 2 "" H 4900 1750 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/609-4616-1-ND/2785380" H 4900 1750 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=68000-408HLF" H 4900 1750 50  0001 C CNN
 F 4 "CONN HEADER VERT 8POS 2.54MM" H 4900 1750 50  0001 C CNN "Description"
 F 5 "	609-3264-ND" H 4900 1750 50  0001 C CNN "Digikey PartNumber"
 F 6 "68000-408HLF" H 4900 1750 50  0001 C CNN "Manufactured Part Number"
@@ -1696,6 +1686,97 @@ F 3 "" H 10500 1550 50  0001 C CNN
 	1    10500 1550
 	1    0    0    -1  
 $EndComp
+Text Notes 1750 2600 0    50   ~ 0
+256Mb - QSPI Flash\n16 pin SOIC
+Text Notes 1950 6000 0    50   ~ 0
+1Mb I2C Serial EEPROM\n8PIN - SOIC
+Text Notes 3450 6550 0    50   ~ 0
+8 Ch, 10bit ADC\n16pin TSSOP
+$Comp
+L Aardonyx-rescue:VAC #PWR0156
+U 1 1 5F0884B4
+P 4200 4850
+F 0 "#PWR0156" H 4350 4800 50  0001 C CNN
+F 1 "VAC" H 4205 5025 50  0000 C CNN
+F 2 "" H 4200 4850 50  0001 C CNN
+F 3 "" H 4200 4850 50  0001 C CNN
+	1    4200 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx #PWR0158
+U 1 1 5F08B124
+P 4250 7200
+F 0 "#PWR0158" H 4400 7150 50  0001 C CNN
+F 1 "V3P3" H 4255 7375 50  0000 C CNN
+F 2 "" H 4250 7200 50  0001 C CNN
+F 3 "" H 4250 7200 50  0001 C CNN
+	1    4250 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0-aardonyx #PWR0157
+U 1 1 5F08B12A
+P 4250 7000
+F 0 "#PWR0157" H 4400 6950 50  0001 C CNN
+F 1 "V5P0" H 4255 7175 50  0000 C CNN
+F 2 "" H 4250 7000 50  0001 C CNN
+F 3 "" H 4250 7000 50  0001 C CNN
+	1    4250 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x3_M-aardonyx J19
+U 1 1 5F09B665
+P 5150 7100
+F 0 "J19" H 5150 7300 50  0000 L CNN
+F 1 "Conn_1x3_M" H 4800 6900 50  0000 L CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 5150 7100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 5150 7100 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 5150 7100 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 5150 7100 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 5150 7100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 5150 7100 50  0001 C CNN "Maufaturer"
+	1    5150 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 7100 4950 7100
+Wire Wire Line
+	4250 7000 4950 7000
+Wire Wire Line
+	4250 7200 4950 7200
+$Comp
+L Aardonyx-rescue:VAC #PWR0159
+U 1 1 5F100A5C
+P 4550 7100
+F 0 "#PWR0159" H 4700 7050 50  0001 C CNN
+F 1 "VAC" V 4555 7229 50  0000 L CNN
+F 2 "" H 4550 7100 50  0001 C CNN
+F 3 "" H 4550 7100 50  0001 C CNN
+	1    4550 7100
+	0    -1   -1   0   
+$EndComp
+Text Notes 4100 7600 0    50   ~ 0
+Short 1 & 2, VAC = 5V\nShort 2 & 3, VAC = 3.3V
+Text Notes 2300 3750 0    50   ~ 0
+Short 1 & 2, Allow Access to flash from SKT32E\nShort 2 & 3, Allow Access to Flash through J9
+Wire Notes Line
+	2200 3550 4300 3550
+Wire Notes Line
+	4300 3800 2200 3800
+Wire Notes Line
+	2200 3800 2200 3550
+Wire Notes Line
+	4300 3550 4300 3800
+Wire Notes Line
+	5250 7400 5250 7650
+Wire Notes Line
+	5250 7650 3950 7650
+Wire Notes Line
+	3950 7650 3950 7400
+Wire Notes Line
+	3950 7400 5250 7400
 Wire Bus Line
 	8650 2150 8650 2700
 Wire Bus Line

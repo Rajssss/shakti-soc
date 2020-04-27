@@ -1,17 +1,18 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
-Title "AARDONYX_DEVELOPMENT_BOARD"
+Title "AARDONYX SKT32E DEVELOPMENT BOARD"
 Date ""
 Rev "R1V0"
 Comp "IIT_MADRAS"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "SKT32E - Clock Multiplier"
+Comment4 "SKT32E - SDRAM Interface"
 $EndDescr
 $Comp
 L Aardonyx-rescue:IS42S32160F-TSOP2-aardonyx U2
@@ -847,7 +848,7 @@ Wire Wire Line
 	7150 1950 7150 2050
 Text Label 10200 2600 0    50   ~ 0
 CLK
-Text Notes 8100 1100 0    79   Italic 0
+Text Notes 7300 900  0    200  ~ 40
 CLOCK MULTIPLIER\n
 Wire Wire Line
 	8600 1350 7850 1350
@@ -1433,11 +1434,15 @@ AR Path="/5D8B37B8/5ED5EB9F" Ref="U3"  Part="1"
 F 0 "U3" H 8750 2970 50  0000 C CNN
 F 1 "CDCE913PW" H 9100 2850 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 8900 2000 50  0001 L BNN
-F 3 "" H 8750 2200 50  0001 L BNN
+F 3 "https://www.digikey.com/product-detail/en/texas-instruments/CDCE913PWR/296-38908-1-ND/5143014" H 8750 2200 50  0001 L BNN
 F 4 "58M0317" H 8750 2200 50  0001 L BNN "Field4"
 F 5 "TSSOP-14" H 8750 2200 50  0001 L BNN "Field5"
 F 6 "Texas Instruments" H 8750 2200 50  0001 L BNN "Field6"
 F 7 "1543748" H 8750 2200 50  0001 L BNN "Field7"
+F 8 "	IC PROG PLL VCXO CLK SYN 14TSSOP" H 8750 2200 50  0001 C CNN "Description"
+F 9 "296-38908-1-ND" H 8750 2200 50  0001 C CNN "Digikey PartNumber"
+F 10 "CDCE913PWR" H 8750 2200 50  0001 C CNN "Manufactured Part Number"
+F 11 "	Texas Instruments" H 8750 2200 50  0001 C CNN "Maufaturer"
 	1    8750 2200
 	1    0    0    -1  
 $EndComp
@@ -1445,10 +1450,14 @@ $Comp
 L Aardonyx-rescue:SKT32E-skt32e_asic U15
 U 4 1 5ED60D0C
 P 9100 4500
-F 0 "U15" V 9479 1806 50  0000 R CNN
-F 1 "SKT32E" V 9570 1806 50  0000 R CNN
+F 0 "U15" V 8200 5950 50  0000 R CNN
+F 1 "SKT32E" V 9100 4000 50  0000 R CNN
 F 2 "Aardonyx:SKT32E_IITM" H 8250 5900 50  0001 C CNN
-F 3 "" H 8250 5900 50  0001 C CNN
+F 3 "https://gitlab.com/shaktiproject/cores/shakti-soc/-/tree/master/asic/e-class-aardonyx" H 8250 5900 50  0001 C CNN
+F 4 "E class Shakti Processor" H 9100 4500 50  0001 C CNN "Description"
+F 5 "NA" H 9100 4500 50  0001 C CNN "Digikey PartNumber"
+F 6 "SKT32E" H 9100 4500 50  0001 C CNN "Manufactured Part Number"
+F 7 "SCL / IITM" H 9100 4500 50  0001 C CNN "Maufaturer"
 	4    9100 4500
 	0    1    1    0   
 $EndComp
@@ -1463,10 +1472,22 @@ F 3 "" H 7650 1350 50  0001 C CNN
 	1    7650 1350
 	1    0    0    -1  
 $EndComp
+Wire Notes Line
+	11200 3300 5950 3300
+Wire Notes Line
+	5950 500  5950 7800
+Text Notes 1250 800  0    200  ~ 40
+SKT32E - SDRAM INTERFACE\n
+Text Notes 7200 4950 0    200  ~ 40
+SKT32E NC PINS\n
 Wire Bus Line
 	1550 5700 1550 6100
 Wire Bus Line
 	1550 4150 1550 5550
 Wire Bus Line
 	4650 3000 4650 6600
+Text Notes 4250 6950 0    50   ~ 0
+512Mb - SDRAM (16 x 32Mbit)
+Text Notes 4250 7100 0    50   ~ 0
+86-pin TSOP-ll
 $EndSCHEMATC
