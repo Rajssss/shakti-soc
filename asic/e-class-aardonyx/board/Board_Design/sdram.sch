@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Aardonyx-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,7 +19,7 @@ U 1 1 5DB67858
 P 3100 4800
 F 0 "U2" H 2350 6950 50  0000 C CNN
 F 1 "IS42S32160F-TSOP2" H 3050 4800 50  0000 C CNN
-F 2 "" H 3100 4950 50  0001 C CNN
+F 2 "Aardonyx:TSSOP-II-86_10.16x22.2mm_P0.5mm" H 3100 4950 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/issi-integrated-silicon-solution-inc/IS42S32160F-7TLI/706-1417-5-ND/5319838" H 3100 4950 50  0001 C CNN
 F 4 "IC DRAM 512M PARALLEL 86TSOP II" H 3100 4800 50  0001 C CNN "Description"
 F 5 "706-1417-5-ND" H 3100 4800 50  0001 C CNN "Digikey PartNumber"
@@ -1233,7 +1232,7 @@ U 1 1 63AEA5D7
 P 6350 2450
 F 0 "J4" H 6430 2442 50  0000 L CNN
 F 1 "Conn_1x4" H 6200 2100 50  0000 L CNN
-F 2 "" H 6350 2450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6350 2450 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-404HLF/609-3262-ND/1878463" H 6350 2450 50  0001 C CNN
 F 4 "CONN HEADER VERT 4POS 2.54MM" H 6350 2450 50  0001 C CNN "Description"
 F 5 "609-3262-ND" H 6350 2450 50  0001 C CNN "Digikey PartNumber"
@@ -1480,14 +1479,14 @@ Text Notes 1250 800  0    200  ~ 40
 SKT32E - SDRAM INTERFACE\n
 Text Notes 7200 4950 0    200  ~ 40
 SKT32E NC PINS\n
+Text Notes 4250 6950 0    50   ~ 0
+512Mb - SDRAM (16 x 32Mbit)
+Text Notes 4250 7100 0    50   ~ 0
+86-pin TSOP-ll
 Wire Bus Line
 	1550 5700 1550 6100
 Wire Bus Line
 	1550 4150 1550 5550
 Wire Bus Line
 	4650 3000 4650 6600
-Text Notes 4250 6950 0    50   ~ 0
-512Mb - SDRAM (16 x 32Mbit)
-Text Notes 4250 7100 0    50   ~ 0
-86-pin TSOP-ll
 $EndSCHEMATC

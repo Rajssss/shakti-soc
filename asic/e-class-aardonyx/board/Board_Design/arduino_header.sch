@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Aardonyx-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -717,7 +716,7 @@ U 1 1 5DD23867
 P 9700 5900
 F 0 "J14" H 9650 6200 50  0000 L CNN
 F 1 "Conn_1x6_F" H 9550 5500 50  0000 L CNN
-F 2 "" H 9700 5900 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 9700 5900 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 9700 5900 50  0001 C CNN
 F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 9700 5900 50  0001 C CNN "Description"
 F 5 "609-3558-ND" H 9700 5900 50  0001 C CNN "Digikey PartNumber"
@@ -732,7 +731,7 @@ U 1 1 5DD2482F
 P 10750 5900
 F 0 "J16" H 10700 6300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 10600 5400 50  0000 L CNN
-F 2 "" H 10750 5900 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 10750 5900 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 10750 5900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 10750 5900 50  0001 C CNN "Description"
 F 5 "609-3589-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
@@ -747,7 +746,7 @@ U 1 1 5DD25582
 P 10750 4750
 F 0 "J15" H 10700 5250 50  0000 L CNN
 F 1 "Conn_1x10" H 10600 4150 50  0000 L CNN
-F 2 "" H 10750 4750 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 10750 4750 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68685-310LF/609-3584-ND/1525202" H 10750 4750 50  0001 C CNN
 F 4 "CONN RCPT 10POS 0.1 GOLD PCB" H 10750 4750 50  0001 C CNN "Description"
 F 5 "609-3584-ND" H 10750 4750 50  0001 C CNN "Digikey PartNumber"
@@ -762,7 +761,7 @@ U 1 1 5DD27E26
 P 9650 4900
 F 0 "J13" H 9600 5300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 9550 4400 50  0000 L CNN
-F 2 "" H 9650 4900 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 9650 4900 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 9650 4900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 9650 4900 50  0001 C CNN "Description"
 F 5 "609-3589-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
@@ -1280,7 +1279,7 @@ U 1 1 628F7F78
 P 7250 4600
 F 0 "J10" H 7200 4900 50  0000 L CNN
 F 1 "Conn_1x6_F" H 7100 4200 50  0000 L CNN
-F 2 "" H 7250 4600 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7250 4600 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 7250 4600 50  0001 C CNN
 F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 7250 4600 50  0001 C CNN "Description"
 F 5 "609-3558-ND" H 7250 4600 50  0001 C CNN "Digikey PartNumber"
@@ -1322,7 +1321,7 @@ U 1 1 62CC8452
 P 4900 1750
 F 0 "J9" H 4850 2150 50  0000 L CNN
 F 1 "Conn_1x8" H 4750 1250 50  0000 L CNN
-F 2 "" H 4900 1750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4900 1750 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=68000-408HLF" H 4900 1750 50  0001 C CNN
 F 4 "CONN HEADER VERT 8POS 2.54MM" H 4900 1750 50  0001 C CNN "Description"
 F 5 "	609-3264-ND" H 4900 1750 50  0001 C CNN "Digikey PartNumber"
@@ -1367,7 +1366,7 @@ U 1 1 62DE9728
 P 2900 7000
 F 0 "J7" H 2980 6992 50  0000 L CNN
 F 1 "Conn_1x4" H 2800 6700 50  0000 L CNN
-F 2 "" H 2900 7000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2900 7000 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-404HLF/609-3262-ND/1878463" H 2900 7000 50  0001 C CNN
 F 4 "CONN HEADER VERT 4POS 2.54MM" H 2900 7000 50  0001 C CNN "Description"
 F 5 "609-3262-ND" H 2900 7000 50  0001 C CNN "Digikey PartNumber"
@@ -1498,7 +1497,7 @@ U 1 1 638C40B5
 P 7250 5600
 F 0 "J11" H 7200 5900 50  0000 L CNN
 F 1 "Conn_1x6_F" H 7100 5200 50  0000 L CNN
-F 2 "" H 7250 5600 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7250 5600 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 7250 5600 50  0001 C CNN
 F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 7250 5600 50  0001 C CNN "Description"
 F 5 "609-3558-ND" H 7250 5600 50  0001 C CNN "Digikey PartNumber"
