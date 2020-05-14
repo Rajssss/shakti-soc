@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Aardonyx-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -861,7 +860,7 @@ U 1 1 5E9F4F23
 P 4700 1600
 F 0 "F1" V 4475 1600 50  0000 C CNN
 F 1 "PTCCL13H921DBE" V 4550 1700 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P7.50mm" H 4750 1400 50  0001 L CNN
+F 2 "Aardonyx:vishay_ptccl_d1mm_w5mm" H 4750 1400 50  0001 L CNN
 F 3 "https://www.digikey.in/products/en?keywords=PTCCL13H921DBE" H 4700 1600 50  0001 C CNN
 F 4 "PTC RESET FUSE 30V 920MA RADIAL" H 4700 1600 50  0001 C CNN "Description"
 F 5 "BC2323-ND" H 4700 1600 50  0001 C CNN "Digikey PartNumber"
@@ -913,7 +912,7 @@ U 1 1 5F4560B0
 P 4200 1600
 F 0 "SW1" H 4200 1835 50  0000 C CNN
 F 1 "SW_SPST" H 4200 1744 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_NKK_G1xJP" H 4200 1600 50  0001 C CNN
+F 2 "Aardonyx:SW_toggle_spst_2.54mm" H 4200 1600 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/TMS6T1B1M1QE/450-2109-ND/5125729" H 4200 1600 50  0001 C CNN
 F 4 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Description"
 F 5 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Digikey PartNumber"
