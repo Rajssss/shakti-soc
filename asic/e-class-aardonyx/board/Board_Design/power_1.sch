@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -175,7 +176,7 @@ AR Path="/5DB8A7DC/5DC0AFF7" Ref="L2"  Part="1"
 AR Path="/5E6E93B2/5DC0AFF7" Ref="L?"  Part="1" 
 F 0 "L2" V 6700 5050 50  0000 C CNN
 F 1 "3.3UH" V 6600 4900 50  0000 C CNN
-F 2 "Aardonyx:L_Wuerth_WE_PDA_SMT-1280" H 6650 4900 50  0001 C CNN
+F 2 "Inductor_SMD:L_Wuerth_WE-PD-Typ-LS" H 6650 4900 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/78477033/732-6781-2-ND/5168775" H 6650 4900 50  0001 C CNN
 F 4 "FIXED IND 3.3UH 6.6A 17 MOHM SMD" H 6650 4900 50  0001 C CNN "Description"
 F 5 "732-6781-2-ND" H 6650 4900 50  0001 C CNN "Digikey PartNumber"
@@ -500,7 +501,7 @@ AR Path="/5DB8A7DC/5E52467C" Ref="J6"  Part="1"
 AR Path="/5E6E93B2/5E52467C" Ref="J?"  Part="1" 
 F 0 "J6" H 8750 4400 50  0000 L CNN
 F 1 "Conn_1x3_M" H 8650 4000 50  0000 L CNN
-F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 8750 4200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8750 4200 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8750 4200 50  0001 C CNN
 F 4 "CONN HEADER VERT 3POS 2.54MM" H 8750 4200 50  0001 C CNN "Description"
 F 5 "609-3464-ND" H 8750 4200 50  0001 C CNN "Digikey PartNumber"

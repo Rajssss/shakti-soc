@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -38,7 +39,7 @@ U 1 1 5DF07821
 P 1500 5650
 F 0 "U5" H 1200 6150 50  0000 C CNN
 F 1 "CAT24M01WI-GT3" H 1900 5150 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 1500 5650 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1500 5650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/CAT24M01WI-GT3/CAT24M01WI-GT3OSCT-ND/2698362" H 1500 5650 50  0001 C CNN
 F 4 "IC EEPROM 1M I2C 1MHZ 8SOIC" H 1500 5650 50  0001 C CNN "Description"
 F 5 "CAT24M01WI-GT3OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
@@ -731,7 +732,7 @@ U 1 1 5DD2482F
 P 10750 5900
 F 0 "J16" H 10700 6300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 10600 5400 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 10750 5900 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10750 5900 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 10750 5900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 10750 5900 50  0001 C CNN "Description"
 F 5 "609-3589-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
@@ -761,7 +762,7 @@ U 1 1 5DD27E26
 P 9650 4900
 F 0 "J13" H 9600 5300 50  0000 L CNN
 F 1 "Conn_1x8_F" H 9550 4400 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 9650 4900 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 9650 4900 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 9650 4900 50  0001 C CNN
 F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 9650 4900 50  0001 C CNN "Description"
 F 5 "609-3589-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
@@ -777,7 +778,7 @@ U 1 1 5DDA74A4
 P 8750 6050
 F 0 "J12" H 8750 6250 50  0000 L CNN
 F 1 "Conn_1x3_M" H 8400 5850 50  0000 L CNN
-F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 8750 6050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8750 6050 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8750 6050 50  0001 C CNN
 F 4 "CONN HEADER VERT 3POS 2.54MM" H 8750 6050 50  0001 C CNN "Description"
 F 5 "609-3464-ND" H 8750 6050 50  0001 C CNN "Digikey PartNumber"
@@ -1448,7 +1449,7 @@ U 1 1 630DABF4
 P 3550 3200
 F 0 "J8" H 3550 3400 50  0000 L CNN
 F 1 "Conn_1x3_M" H 3200 3000 50  0000 L CNN
-F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 3550 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3550 3200 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 3550 3200 50  0001 C CNN
 F 4 "CONN HEADER VERT 3POS 2.54MM" H 3550 3200 50  0001 C CNN "Description"
 F 5 "609-3464-ND" H 3550 3200 50  0001 C CNN "Digikey PartNumber"
@@ -1730,7 +1731,7 @@ U 1 1 5F09B665
 P 5150 7100
 F 0 "J19" H 5150 7300 50  0000 L CNN
 F 1 "Conn_1x3_M" H 4800 6900 50  0000 L CNN
-F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 5150 7100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5150 7100 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 5150 7100 50  0001 C CNN
 F 4 "CONN HEADER VERT 3POS 2.54MM" H 5150 7100 50  0001 C CNN "Description"
 F 5 "609-3464-ND" H 5150 7100 50  0001 C CNN "Digikey PartNumber"
