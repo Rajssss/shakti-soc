@@ -1,4 +1,4 @@
-(module USB_2.0_Micro-B_AMPHENOL_HPL_510 (layer F.Cu) (tedit 5EA80905)
+(module USB_2.0_Micro-B_AMPHENOL_HPL_510 (layer F.Cu) (tedit 5EC7C368)
   (descr "GCT Micro USB https://gct.co/files/drawings/usb3076.pdf")
   (tags "Micro-USB SMD Typ-B GCT")
   (attr smd)
