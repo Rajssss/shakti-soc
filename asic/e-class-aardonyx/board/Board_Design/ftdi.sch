@@ -156,8 +156,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 1800 4650 1950
 Wire Wire Line
-	5150 2350 5150 1800
-Wire Wire Line
 	5150 1800 4950 1800
 Connection ~ 4950 1800
 Wire Wire Line
@@ -1226,10 +1224,6 @@ Wire Wire Line
 Connection ~ 10400 5450
 Wire Wire Line
 	10400 5450 10400 5650
-Wire Wire Line
-	9500 5450 10150 5450
-Wire Wire Line
-	10150 5450 10400 5450
 $Comp
 L Aardonyx-rescue:V3P3-aardonyx #PWR022
 U 1 1 5EAF36CD
@@ -1333,8 +1327,6 @@ Wire Wire Line
 	9500 5350 10150 5350
 Text Label 9700 5350 0    39   ~ 0
 UART0_RX
-Wire Wire Line
-	10150 5350 10150 5450
 NoConn ~ 6850 3250
 NoConn ~ 6850 3350
 NoConn ~ 6850 3550
@@ -1348,11 +1340,6 @@ NoConn ~ 6850 4250
 NoConn ~ 6850 3050
 NoConn ~ 6850 4650
 NoConn ~ 6850 4750
-NoConn ~ 6850 4850
-NoConn ~ 6850 4950
-NoConn ~ 6850 5050
-NoConn ~ 6850 5150
-NoConn ~ 6850 5350
 NoConn ~ 6850 5450
 NoConn ~ 6850 5550
 NoConn ~ 6850 5650
@@ -1479,21 +1466,6 @@ F 5 "609-4618-1-ND" H 1600 3650 50  0001 C CNN "Digikey PartNumber"
 F 6 "10118194-0001LF" H 1600 3650 50  0001 C CNN "Manufactured Part Number"
 F 7 "Amphenol ICC (FCI)" H 1600 3650 50  0001 C CNN "Maufaturer"
 	1    1600 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:FT2232H-aardonyx U1
-U 1 1 5DB6C49B
-P 5650 4550
-F 0 "U1" H 4650 6650 50  0000 C CNN
-F 1 "FT2232H" H 6550 2450 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5650 4550 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT2232HL-REEL/768-1024-1-ND/1986057" H 5650 4550 50  0001 C CNN
-F 4 "IC USB HS DUAL UART/FIFO 64-LQFP" H 5650 4550 50  0001 C CNN "Description"
-F 5 "768-1024-1-ND" H 5650 4550 50  0001 C CNN "Digikey PartNumber"
-F 6 "FT2232HL-REEL" H 5650 4550 50  0001 C CNN "Manufactured Part Number"
-F 7 "FTDI, Future Technology Devices International Ltd" H 5650 4550 50  0001 C CNN "Maufaturer"
-	1    5650 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1871,9 +1843,6 @@ F 3 "" H 2000 2700 50  0001 C CNN
 	1    2000 2700
 	1    0    0    -1  
 $EndComp
-Connection ~ 10150 5450
-Wire Wire Line
-	10150 5450 10150 5650
 $Comp
 L Aardonyx-rescue:Conn_1x3_M-aardonyx J?
 U 1 1 5F28F40A
@@ -2070,4 +2039,30 @@ Wire Notes Line
 	1800 3150 650  3150
 Wire Notes Line
 	650  3150 650  3000
+Wire Wire Line
+	5150 2350 5150 1800
+$Comp
+L Aardonyx-rescue:FT2232H-aardonyx U1
+U 1 1 5DB6C49B
+P 5650 4550
+F 0 "U1" H 4650 6650 50  0000 C CNN
+F 1 "FT2232H" H 6550 2450 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5650 4550 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT2232HL-REEL/768-1024-1-ND/1986057" H 5650 4550 50  0001 C CNN
+F 4 "IC USB HS DUAL UART/FIFO 64-LQFP" H 5650 4550 50  0001 C CNN "Description"
+F 5 "768-1024-1-ND" H 5650 4550 50  0001 C CNN "Digikey PartNumber"
+F 6 "FT2232HL-REEL" H 5650 4550 50  0001 C CNN "Manufactured Part Number"
+F 7 "FTDI, Future Technology Devices International Ltd" H 5650 4550 50  0001 C CNN "Maufaturer"
+	1    5650 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6850 5350
+NoConn ~ 6850 5150
+NoConn ~ 6850 5050
+NoConn ~ 6850 4950
+NoConn ~ 6850 4850
+Wire Wire Line
+	9500 5450 10400 5450
+Wire Wire Line
+	10150 5350 10150 5650
 $EndSCHEMATC
