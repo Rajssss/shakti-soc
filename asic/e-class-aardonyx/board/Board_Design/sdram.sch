@@ -776,7 +776,7 @@ AR Path="/5D8B3740/5EFB4D0D" Ref="Y?"  Part="1"
 AR Path="/5D8B37B8/5EFB4D0D" Ref="Y2"  Part="1" 
 F 0 "Y2" H 8750 1200 50  0000 L CNN
 F 1 "27MHz" H 8650 1500 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_HC49-SD_HandSoldering" H 8750 1350 50  0001 C CNN
+F 2 "Aardonyx:Crystal_SMD_ROHS_CSM_7XDN_HandSoldering" H 8750 1350 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/ecs-inc/ECS-270-18-5PX-F-TR/XC1002CT-ND/813243" H 8750 1350 50  0001 C CNN
 F 4 "CRYSTAL 27.0000MHZ 18PF SMD" H 8750 1350 50  0001 C CNN "Description"
 F 5 "XC1002CT-ND" H 8750 1350 50  0001 C CNN "Digikey PartNumber"
