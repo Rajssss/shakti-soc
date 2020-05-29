@@ -477,7 +477,7 @@ Wire Notes Line
 Wire Notes Line
 	500  7750 500  500 
 Wire Notes Line
-	500  3300 11200 3300
+	-1250 2800 9450 2800
 Text Notes 3950 4100 0    100  ~ 20
 12V to 5V conversion using Switcher
 Text Notes 5250 900  0    100  ~ 20
@@ -869,7 +869,7 @@ F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
 	1    4700 1600
 	0    1    1    0   
 $EndComp
-Text Notes 7800 3850 0    50   ~ 0
+Text Notes 6050 3350 0    50   ~ 0
 Short 1 & 2, 5V from 12V to 5V converter\nShort 2 & 3, 5V from USB
 $Comp
 L Aardonyx-rescue:VCC5V #PWR092
@@ -1284,11 +1284,11 @@ F 3 "" H 7950 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	7750 3650 9500 3650
+	6000 3150 7750 3150
 Wire Notes Line
-	9500 3650 9500 3850
+	7750 3150 7750 3350
 Wire Notes Line
-	9500 3850 7750 3850
+	7750 3350 6000 3350
 Wire Notes Line
 	7750 3850 7750 3650
 $EndSCHEMATC
