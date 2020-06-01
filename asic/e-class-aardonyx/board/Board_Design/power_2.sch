@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 7
 Title "AARDONYX SKT32E DEVELOPMENT BOARD"
 Date ""
 Rev "R1V0"
@@ -262,19 +262,6 @@ F 1 "V3P3" H 5105 1425 50  0000 C CNN
 F 2 "" H 5100 1250 50  0001 C CNN
 F 3 "" H 5100 1250 50  0001 C CNN
 	1    5100 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR?
-U 1 1 5E7CB63B
-P 1650 1250
-AR Path="/5DB8A7DC/5E7CB63B" Ref="#PWR?"  Part="1" 
-AR Path="/5E6E93B2/5E7CB63B" Ref="#PWR095"  Part="1" 
-F 0 "#PWR095" H 1800 1200 50  0001 C CNN
-F 1 "V5P0" H 1645 1425 50  0000 C CNN
-F 2 "" H 1650 1250 50  0001 C CNN
-F 3 "" H 1650 1250 50  0001 C CNN
-	1    1650 1250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1399,4 +1386,17 @@ $EndComp
 Wire Wire Line
 	3450 1650 3000 1650
 Connection ~ 3000 1650
+$Comp
+L Aardonyx-rescue:V5P0-aardonyx #PWR?
+U 1 1 5ED69FF2
+P 1650 1250
+AR Path="/5DB8A7DC/5ED69FF2" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5ED69FF2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1800 1200 50  0001 C CNN
+F 1 "V5P0" H 1645 1425 50  0000 C CNN
+F 2 "" H 1650 1250 50  0001 C CNN
+F 3 "" H 1650 1250 50  0001 C CNN
+	1    1650 1250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
