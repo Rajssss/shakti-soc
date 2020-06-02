@@ -661,7 +661,7 @@ F 3 "" H 7700 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VREF_AH-aardonyx #PWR076
+L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR076
 U 1 1 5DCD16BF
 P 6950 1050
 F 0 "#PWR076" H 7100 1000 50  0001 C CNN
@@ -683,7 +683,7 @@ F 3 "" H 8000 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VREF_AH-aardonyx #PWR089
+L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR089
 U 1 1 5DCDE768
 P 9900 1100
 F 0 "#PWR089" H 10050 1050 50  0001 C CNN
@@ -694,7 +694,7 @@ F 3 "" H 9900 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VREF_AH-aardonyx #PWR081
+L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR081
 U 1 1 5DCEB777
 P 8300 5850
 F 0 "#PWR081" H 8450 5800 50  0001 C CNN
@@ -844,7 +844,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 4550 10550 4550
 $Comp
-L Aardonyx-rescue:VREF_AH-aardonyx #PWR085
+L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR085
 U 1 1 5DE472F1
 P 8950 4550
 F 0 "#PWR085" H 9100 4500 50  0001 C CNN
@@ -1692,7 +1692,7 @@ Text Notes 1950 6000 0    50   ~ 0
 Text Notes 3450 6550 0    50   ~ 0
 8 Ch, 10bit ADC\n16pin TSSOP
 $Comp
-L Aardonyx-rescue:VAC #PWR0156
+L Aardonyx-rescue:VAC-Aardonyx-rescue #PWR0156
 U 1 1 5F0884B4
 P 4200 4850
 F 0 "#PWR0156" H 4350 4800 50  0001 C CNN
@@ -1746,7 +1746,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 7200 4950 7200
 $Comp
-L Aardonyx-rescue:VAC #PWR0159
+L Aardonyx-rescue:VAC-Aardonyx-rescue #PWR0159
 U 1 1 5F100A5C
 P 4550 7100
 F 0 "#PWR0159" H 4700 7050 50  0001 C CNN

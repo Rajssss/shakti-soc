@@ -1275,11 +1275,11 @@ X SHLD4 9 -500 200 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_V12P0-aardonyx
+# Aardonyx-rescue_V12P0-aardonyx-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_V12P0-aardonyx #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_V12P0-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_V12P0-aardonyx" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_V12P0-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1356,11 +1356,11 @@ X V5P0 1 0 0 0 L 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VAC
+# Aardonyx-rescue_VAC-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VAC #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VAC-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VAC" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VAC-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1369,11 +1369,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VBUS
+# Aardonyx-rescue_VBUS-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VBUS #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VBUS" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1382,11 +1382,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VBUS_USB1
+# Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VBUS_USB1 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VBUS_USB1" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1395,11 +1395,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VBUS_USB2
+# Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VBUS_USB2 #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VBUS_USB2" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1408,11 +1408,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VCC5V
+# Aardonyx-rescue_VCC5V-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VCC5V #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VCC5V-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VCC5V" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VCC5V-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1421,11 +1421,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VCORE_FTDI-aardonyx
+# Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VCORE_FTDI-aardonyx #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VCORE_FTDI-aardonyx" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1434,11 +1434,11 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VREF_AH-aardonyx
+# Aardonyx-rescue_VREF_AH-aardonyx-Aardonyx-rescue
 #
-DEF Aardonyx-rescue_VREF_AH-aardonyx #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VREF_AH-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VREF_AH-aardonyx" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VREF_AH-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1505,9 +1505,9 @@ $FPLIST
  LED_THT:*
 $ENDFPLIST
 DRAW
-P 2 0 1 10 -50 -50 -50 50 N
+P 2 0 1 8 -50 -50 -50 50 N
 P 2 0 1 0 -50 0 50 0 N
-P 4 0 1 10 50 -50 50 50 -50 0 50 -50 F
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
 P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
 P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
 X K 1 -150 0 100 R 50 50 1 1 P

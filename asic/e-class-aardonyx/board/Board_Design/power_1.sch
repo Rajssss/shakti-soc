@@ -15,11 +15,12 @@ Comment4 "SKT32E - 12V to 5V converter"
 $EndDescr
 Connection ~ 2250 4600
 $Comp
-L Aardonyx-rescue:V12P0-aardonyx #PWR036
+L Aardonyx-rescue:V12P0-aardonyx-Aardonyx-rescue #PWR036
 U 1 1 5E79C895
 P 2250 4450
 AR Path="/5DB8A7DC/5E79C895" Ref="#PWR036"  Part="1" 
 AR Path="/5E6E93B2/5E79C895" Ref="#PWR?"  Part="1" 
+AR Path="/5E79C895" Ref="#PWR036"  Part="1" 
 F 0 "#PWR036" H 2400 4400 50  0001 C CNN
 F 1 "V12P0" H 2255 4625 50  0000 C CNN
 F 2 "" H 2250 4450 50  0001 C CNN
@@ -388,11 +389,12 @@ Wire Wire Line
 Wire Wire Line
 	5450 1600 5450 1750
 $Comp
-L Aardonyx-rescue:V12P0-aardonyx #PWR045
+L Aardonyx-rescue:V12P0-aardonyx-Aardonyx-rescue #PWR045
 U 1 1 5E820603
 P 7750 1350
 AR Path="/5DB8A7DC/5E820603" Ref="#PWR045"  Part="1" 
 AR Path="/5E6E93B2/5E820603" Ref="#PWR?"  Part="1" 
+AR Path="/5E820603" Ref="#PWR045"  Part="1" 
 F 0 "#PWR045" H 7900 1300 50  0001 C CNN
 F 1 "V12P0" H 7755 1525 50  0000 C CNN
 F 2 "" H 7750 1350 50  0001 C CNN
@@ -872,7 +874,7 @@ $EndComp
 Text Notes 6050 3350 0    50   ~ 0
 Short 1 & 2, 5V from 12V to 5V converter\nShort 2 & 3, 5V from USB
 $Comp
-L Aardonyx-rescue:VCC5V #PWR092
+L Aardonyx-rescue:VCC5V-Aardonyx-rescue #PWR092
 U 1 1 5F41BD16
 P 7700 4900
 F 0 "#PWR092" H 7850 4850 50  0001 C CNN
@@ -883,7 +885,7 @@ F 3 "" H 7700 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VCC5V #PWR0125
+L Aardonyx-rescue:VCC5V-Aardonyx-rescue #PWR0125
 U 1 1 5F41E343
 P 9650 6050
 F 0 "#PWR0125" H 9800 6000 50  0001 C CNN
@@ -1273,7 +1275,7 @@ A3 52 A9 70 D7 D6 D6 76 EE DC B9 00 80 6E F9 E2 A4 05 66 D6 18 03 C0 A9 53 A7 1C
 EndData
 $EndBitmap
 $Comp
-L Aardonyx-rescue:VBUS #PWR0166
+L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR0166
 U 1 1 5F47ABB3
 P 7950 4250
 F 0 "#PWR0166" H 8100 4200 50  0001 C CNN

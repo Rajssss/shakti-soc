@@ -283,7 +283,7 @@ F 3 "" H 3300 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx #PWR04
+L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR04
 U 1 1 5E3E23EC
 P 2950 2800
 F 0 "#PWR04" H 3100 2750 50  0001 C CNN
@@ -407,7 +407,7 @@ F 3 "" H 6150 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx #PWR011
+L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR011
 U 1 1 5E3E1553
 P 5650 2050
 F 0 "#PWR011" H 5800 2000 50  0001 C CNN
@@ -480,7 +480,7 @@ Connection ~ 9350 1550
 Wire Wire Line
 	9350 1550 9600 1550
 $Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx #PWR013
+L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR013
 U 1 1 5E454E04
 P 9100 1050
 F 0 "#PWR013" H 9250 1000 50  0001 C CNN
@@ -1822,7 +1822,7 @@ USB_DP
 Text Label 1700 1850 0    50   ~ 0
 USB_DM
 $Comp
-L Aardonyx-rescue:VBUS_USB1 #PWR032
+L Aardonyx-rescue:VBUS_USB1-Aardonyx-rescue #PWR032
 U 1 1 5F2114E5
 P 1550 850
 F 0 "#PWR032" H 1700 800 50  0001 C CNN
@@ -1833,7 +1833,7 @@ F 3 "" H 1550 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VBUS_USB2 #PWR040
+L Aardonyx-rescue:VBUS_USB2-Aardonyx-rescue #PWR040
 U 1 1 5F2124AB
 P 2000 2700
 F 0 "#PWR040" H 2150 2650 50  0001 C CNN
@@ -1871,7 +1871,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 1850 1450 1850
 $Comp
-L Aardonyx-rescue:VBUS_USB1 #PWR047
+L Aardonyx-rescue:VBUS_USB1-Aardonyx-rescue #PWR047
 U 1 1 5F343AAF
 P 2400 1550
 F 0 "#PWR047" H 2550 1500 50  0001 C CNN
@@ -1884,7 +1884,7 @@ $EndComp
 Wire Wire Line
 	2400 1550 2750 1550
 $Comp
-L Aardonyx-rescue:VBUS_USB2 #PWR042
+L Aardonyx-rescue:VBUS_USB2-Aardonyx-rescue #PWR042
 U 1 1 5F345441
 P 2250 1750
 F 0 "#PWR042" H 2400 1700 50  0001 C CNN
@@ -1895,7 +1895,7 @@ F 3 "" H 2250 1750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Aardonyx-rescue:VBUS #PWR044
+L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR044
 U 1 1 5F3CB671
 P 2350 1650
 F 0 "#PWR044" H 2500 1600 50  0001 C CNN
@@ -1938,7 +1938,7 @@ F 8 "Yageo" H 8200 5950 50  0001 C CNN "Maufaturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:VBUS #PWR0164
+L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR0164
 U 1 1 5F511686
 P 8200 5200
 F 0 "#PWR0164" H 8350 5150 50  0001 C CNN
