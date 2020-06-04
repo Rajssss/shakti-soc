@@ -1890,7 +1890,7 @@
   )
 
   (module Aardonyx:Pwr_Jack_DC_PJ-202AH_Horizontal (layer F.Cu) (tedit 5EC3BA12) (tstamp 5EC04A2E)
-    (at 252.01 124.82 90)
+    (at 252.38 149.19 90)
     (descr "Thin-pin DC Barrel Jack, https://cdn-shop.adafruit.com/datasheets/21mmdcjackDatasheet.pdf")
     (tags "Power Jack")
     (path /5DB8A7DC/5E9E6D33)

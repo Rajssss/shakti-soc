@@ -1,4 +1,4 @@
-18340387620205787
+18341978819050787
 Aardonyx
 CP_EIA-7260-38_VISHAY_Pad2.68x7.50mm_HandSolder
 Tantalum Capacitor SMD AVX-R (7260-38 Metric), IPC_7351 nominal, (Body size from: http://datasheets.avx.com/F72-F75.pdf), generated with kicad-footprint-generator
@@ -62,6 +62,13 @@ SKT32E_IITM
 0
 256
 256
+Aardonyx
+SKT32E_IITM_TH_SOCKET
+
+
+0
+192
+129
 Aardonyx
 SW_PUSH_SPST_NO_4.5MM_7MM
 MEC 5G single pole normally-open tactile switch
