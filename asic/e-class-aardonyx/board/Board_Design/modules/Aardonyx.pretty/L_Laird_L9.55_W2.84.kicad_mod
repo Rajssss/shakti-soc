@@ -1,4 +1,4 @@
-(module L_Laird_L9.55_W2.84 (layer F.Cu) (tedit 5EC7A4AF)
+(module L_Laird_L9.55_W2.84 (layer F.Cu) (tedit 5ED8D0DB)
   (descr "Shielded Coupled Inductor, Wuerth Elektronik, WE-DD, SMD, Typ L, Typ XL, Typ XXL, https://katalog.we-online.com/pbs/datasheet/744874001.pdf")
   (tags "Choke Coupled Double Inductor SMD Wuerth WE-DD TypL TypXL TypXXL ")
   (attr smd)
@@ -18,8 +18,8 @@
   (fp_line (start -6.1 -2.6) (end 6.1 -2.6) (layer F.Fab) (width 0.1))
   (pad 2 smd rect (at -4.21 1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
   (pad 1 smd rect (at -4.21 -1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
-  (pad 4 smd rect (at 4.21 1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
-  (pad 3 smd rect (at 4.21 -1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
+  (pad 3 smd rect (at 4.21 1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
+  (pad 4 smd rect (at 4.21 -1.4225) (size 3.66 2.085) (layers F.Cu F.Paste F.Mask))
   (model ${KISYS3DMOD}/Inductor_SMD.3dshapes/L_Wuerth_WE-DD-Typ-L-Typ-XL-Typ-XXL.wrl
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))

@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/nambirajan/shakti-soc/asic/e-class-aardonyx/board/Board_Design/Aardonyx.sch)
-    (date "Mon Jun  1 12:44:39 2020")
+    (source /home/nambirajan/Desktop/shakti-soc/asic/e-class-aardonyx/board/Board_Design/Aardonyx.sch)
+    (date "Thu Jun  4 16:28:16 2020")
     (tool "Eeschema 5.1.5-52549c5~86~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -4539,7 +4539,7 @@
         (pin (num 2) (name ~) (type passive)))))
   (libraries
     (library (logical Aardonyx-rescue)
-      (uri /home/nambirajan/shakti-soc/asic/e-class-aardonyx/board/Board_Design/Aardonyx-rescue.lib))
+      (uri /home/nambirajan/Desktop/shakti-soc/asic/e-class-aardonyx/board/Board_Design/Aardonyx-rescue.lib))
     (library (logical Connector)
       (uri /usr/share/kicad/library/Connector.lib))
     (library (logical Device)
