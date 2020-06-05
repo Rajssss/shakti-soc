@@ -32,6 +32,7 @@ set_property board_part digilentinc.com:arty-a7-100:part0:1.0 [current_project]
 source $home_dir/tcl/create_axi_converter.tcl
 source $home_dir/tcl/create_clock_div.tcl
 source $home_dir/tcl/create_mig.tcl
+source $home_dir/tcl/create_proc_reset.tcl
 
 # capture all runs except the default synth_1
 set run_list [get_runs *_synth_1]

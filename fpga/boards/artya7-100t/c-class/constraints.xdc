@@ -5,8 +5,8 @@ set_multicycle_path -hold 3 -from [get_clocks tck] -to [get_clocks clk_out1_clk_
 set_multicycle_path -setup 4 -from [get_clocks clk_out1_clk_divider] -to [get_clocks tck] -start
 set_multicycle_path -hold 4 -from [get_clocks clk_out1_clk_divider] -to [get_clocks tck] -start
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pin_tck_IBUF]
-set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets sys_clk_IBUF]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pin_tck_IBUF]
+#set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets sys_clk_IBUF]
 
 
 set_property -dict { PACKAGE_PIN C2    IOSTANDARD LVCMOS33 } [get_ports { sys_rst             }]; #IO_L16P_T2_35 Sch=ck_rst

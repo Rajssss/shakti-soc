@@ -1,9 +1,9 @@
 set curdir [ file dirname [ file normalize [ info script ] ] ]
 source $curdir/env.tcl
 
-if { $argc != 4 } {
+if { $argc != 5 } {
   puts "Please pass the top modu le name that needs to be synthesized along with the fpga part"
-  puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa> <jtag_type>"
+  puts " -tclargs <top-module> <xc7a100tcsg324-1> <riscv-isa> <jtag_type> <verilogdir>"
   exit 2
 } else {
   puts "Synthesizing with Top Module: [lindex $argv 0] for ISA: [lindex $argv 2] with Jtag: [lindex $argv 3]"
@@ -14,6 +14,7 @@ set fpga_part [lindex $argv 1]
 set isa [lindex $argv 2]
 set base_version [string range [version -short] 0 3]
 set jtag_type [lindex $argv 3]
+set verilogdir [lindex $argv 4]
 # create folders
 file mkdir $fpga_dir
 
@@ -32,10 +33,10 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 }
 
 # Set 'sources_1' fileset object
-add_files -norecurse -fileset [get_filesets sources_1] $home_dir/verilog/ ./fpga_top.v
+add_files -norecurse -fileset [get_filesets sources_1] $verilogdir ./fpga_top.v
 
 # add include path
-set_property include_dirs $home_dir/verilog/ [get_filesets sources_1]
+set_property include_dirs $verilogdir [get_filesets sources_1]
 
 # Set 'sources_1' fileset properties
 set_property "top" $top_module [get_filesets sources_1]
@@ -53,6 +54,7 @@ if { $jtag_type eq "JTAG_EXTERNAL" } {
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_divider/clk_divider.xci
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/clk_converter/clk_converter.xci
 import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/mig_ddr3/mig_ddr3.xci
+import_ip $ip_project_dir/manage_ip.srcs/sources_1/ip/proc_sys_reset_0/proc_sys_reset_0.xci
 
 # force create the synth_1 path (need to make soft link in Makefile)
 if {[string equal [get_runs -quiet core_synth_1] ""]} {

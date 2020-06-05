@@ -33,9 +33,9 @@ package Soc;
 	import Semi_FIFOF:: *;
 	import AXI4_Types:: *;
 	import AXI4_Fabric:: *;
-  import cclass:: * ;
+  import ccore:: * ;
   import Clocks :: *;
-  import common_types::*;
+  import ccore_types::*;
   `include "Soc.defines"
 
   // peripheral imports
@@ -66,6 +66,8 @@ package Soc;
     Bit#(TLog#(`Num_Slaves)) slave_num = 0;
     if(addr >= `MemoryBase && addr<= `MemoryEnd)
       slave_num = `Memory_slave_num;
+    else if(addr >= `BootRomBase && addr<= `BootRomEnd)
+      slave_num = `BootRom_slave_num;
     else if(addr>= `UartBase && addr<= `UartEnd)
       slave_num = `Uart_slave_num;
     else if(addr>= `ClintBase && addr<= `ClintEnd)
@@ -120,13 +122,15 @@ package Soc;
   module mkSoc#(Clock tck_clk, Reset trst)(Ifc_Soc);
     let curr_clk<-exposeCurrentClock;
     let curr_reset<-exposeCurrentReset;
-    Ifc_cclass_axi4 cclass <- mkcclass_axi4(`resetpc, 0);
+    Ifc_ccore_axi4 ccore <- mkccore_axi4(`resetpc, 0);
 
     AXI4_Fabric_IFC #(`Num_Masters, `Num_Slaves, `paddr, ELEN, USERSPACE) 
                                                     fabric <- mkAXI4_Fabric(fn_slave_map);
     Ifc_debug_halt_loop_axi4#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop_axi4;
-	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 68, 0, 0);
-    Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 16) clint <- mkclint_axi4();
+    Ifc_bram_axi4#(`paddr, ELEN, USERSPACE, 13) bootmem <- mkbram_axi4(`BootRomBase,
+                                                "boot.mem", "MainMEM");
+	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 325);
+    Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 256) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
 		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
 		Ifc_gpio_axi4#(`paddr, ELEN, 0, 32) gpio <- mkgpio_axi4;
@@ -202,25 +206,24 @@ package Soc;
 		//Rule to connect PLIC interrupt to the core's sideband
 		rule rl_core_plic_connection;
 			let {lv_plic_intr, x}<- plic.intrpt_note_sb.get;
-			cclass.sb_externalinterrupt.put(pack(lv_plic_intr));
+			ccore.sb_externalinterrupt.put(pack(lv_plic_intr));
 		endrule
 
 		//Rule to connect interrupts from various sources to PLIC
 		rule rl_connect_plic_connections;
 			let tmp<- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= truncate(pack(tmp));
-			Bit#(27) plic_inputs= {1'b0, uart.interrupt, i2c.isint, lv_gpio_intr, wr_external_interrupts};
+			Bit#(27) plic_inputs= {2'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
 
 
-    mkConnection (cclass.debug_server ,debug_module.hart);
+    mkConnection (ccore.debug_server ,debug_module.hart);
       
     // ------------------------------------------------------------------------------------------//
     mkConnection(debug_module.debug_master,fabric.v_from_masters[`Debug_master_num]);
-   	mkConnection(cclass.master_d,	fabric.v_from_masters[`Mem_master_num]);
-   	mkConnection(cclass.master_i, fabric.v_from_masters[`Fetch_master_num]);
-  	mkConnection(cclass.master_io, fabric.v_from_masters[`IO_master_num]);
+   	mkConnection(ccore.master_d,	fabric.v_from_masters[`Mem_master_num]);
+   	mkConnection(ccore.master_i, fabric.v_from_masters[`Fetch_master_num]);
 
  	  mkConnection (fabric.v_to_slaves [`Uart_slave_num ],uart.slave);
   	mkConnection (fabric.v_to_slaves [`Clint_slave_num ],clint.slave);
@@ -229,11 +232,12 @@ package Soc;
    	mkConnection (fabric.v_to_slaves [`I2C_slave_num ],		i2c.slave);
 		mkConnection (fabric.v_to_slaves [`PLIC_slave_num ], plic.slave);
 		mkConnection (fabric.v_to_slaves [`GPIO_slave_num ], gpio.slave);
+		mkConnection (fabric.v_to_slaves [`BootRom_slave_num], bootmem.slave);
 
     // sideband connection
-    mkConnection(cclass.sb_clint_msip,clint.sb_clint_msip);
-    mkConnection(cclass.sb_clint_mtip,clint.sb_clint_mtip);
-    mkConnection(cclass.sb_clint_mtime,clint.sb_clint_mtime);
+    mkConnection(ccore.sb_clint_msip,clint.sb_clint_msip);
+    mkConnection(ccore.sb_clint_mtip,clint.sb_clint_mtip);
+    mkConnection(ccore.sb_clint_mtime,clint.sb_clint_mtime);
 
     interface uart_io=uart.io;
 	
