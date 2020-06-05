@@ -12,3 +12,7 @@ asic/e-class-aardonyx/INCA_libs/
 asic/e-class-aardonyx/irun.history
 
 asic/e-class-aardonyx/sim_main.h
+
+fpga/boards/artya7-100t/c-class_new/depends.mk
+
+fpga/boards/artya7-100t/c-class_new/makefile.inc

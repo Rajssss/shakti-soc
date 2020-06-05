@@ -27,7 +27,9 @@ Details:
 
 --------------------------------------------------------------------------------------------------
 */
-module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
+
+module fpga_top#( parameter AXI_ID_WIDTH = 1, parameter AXI_ADDR_WIDTH = 28,
+                  parameter GPIO_NUM = 32) (
   // ---- DDR ports --------------//
   inout  [15:0] ddr3_dq,
   inout  [1:0]  ddr3_dqs_n,
@@ -68,7 +70,10 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   // ---- System Clock ------//
   input         sys_clk);
 
-  // ---                       Wire Instantioations                       --- //
+  // ---                       Register Instantiations                    --- //
+  reg                               aresetn;
+
+  // ---                       Wire Instantiations                       --- //
   wire                              soc_reset;      // reset to the SoC
   wire                              core_clk;       // clock to the SoC
   wire                              ddr3_main;      // main clock to the ddr3-mig
@@ -77,8 +82,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   wire                              clk;            // mig ui clk            
   wire                              rst;            // mig ui reset
   wire                              mmcm_locked;    // indicates the ui clock from mig is stable
-  reg                               aresetn;
-  reg                               aresetn_s;
+
   // Signals driven by axi converter to DDR slave ports
   wire [AXI_ID_WIDTH-1:0]           m_axi_awid;
   wire [AXI_ADDR_WIDTH-1:0]         m_axi_awaddr;
@@ -111,7 +115,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   wire                              m_axi_arready;    
   wire                              m_axi_rready;
   wire [AXI_ID_WIDTH-1:0]           m_axi_rid;
-  wire [127:0]                      m_axi_rdata;
+  wire [63:0]                       m_axi_rdata;
   wire [1:0]                        m_axi_rresp;
   wire                              m_axi_rlast;
   wire                              m_axi_rvalid;   
@@ -154,7 +158,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   wire [11:0]                       device_temp;    
   wire i2c_scl_out, i2c_scl_in, i2c_scl_out_en;
   wire i2c_sda_out, i2c_sda_in, i2c_sda_out_en;
-  wire [31:0] gpio_in, gpio_out, gpio_out_en;
+  wire [GPIO_NUM:0] gpio_in, gpio_out, gpio_out_en;
 
    // ---------------------------------------------------------------------------- //
   `ifdef JTAG_BSCAN2E
@@ -191,7 +195,19 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
   wire [31:0] temp_s_axi_awaddr, temp_s_axi_araddr;
   assign s_axi_awaddr= temp_s_axi_awaddr [AXI_ADDR_WIDTH-1:0];
   assign s_axi_araddr= temp_s_axi_araddr [AXI_ADDR_WIDTH-1:0];
-  assign soc_reset = locked & init_calib_complete;
+
+  proc_sys_reset_0 proc_reset_inst (
+      .slowest_sync_clk (core_clk),
+      .ext_reset_in     (sys_rst),
+      .aux_reset_in     (init_calib_complete),
+      .mb_debug_sys_rst (0),
+      .dcm_locked       (locked),
+      .mb_reset         (soc_reset),
+      .bus_struct_reset (),
+      .peripheral_reset (),
+      .interconnect_aresetn (),
+      .peripheral_aresetn ()
+  );
   // ---------------------------------------------------------------------------- //
   // ---------- Clock divider ----------------//
   clk_divider clk_div (
@@ -199,8 +215,9 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
                     .clk_out1(core_clk),
                     .clk_out2(ddr3_main),
                     .clk_out3(ddr3_ref),
-                    .resetn(sys_rst), 
-                    .locked(locked) );
+    .resetn   (1'b1), 
+    .locked   (locked)
+  );
   // ----------------------------------------- //
   // ------------ MIG for DDR3 ---------------//
   mig_ddr3 mig_ddr3 (
@@ -288,7 +305,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
    // Instantiating the clock converter between the SoC and DDR3 MIG
    clk_converter clock_converter (
        .s_axi_aclk(core_clk),
-       .s_axi_aresetn(locked),
+    .s_axi_aresetn(~soc_reset),
        .s_axi_awid(s_axi_awid),
        .s_axi_awaddr(s_axi_awaddr),
        .s_axi_awlen(s_axi_awlen),
@@ -376,7 +393,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
    mkSoc core(
        // Main Clock and Reset to the SoC
        .CLK(core_clk),
-       .RST_N(soc_reset),
+       .RST_N(~soc_reset),
 `ifndef JTAG_BSCAN2E       
        // JTAG port definitions
        .CLK_tck_clk(pin_tck),
@@ -458,7 +475,7 @@ module fpga_top#( parameter AXI_ID_WIDTH   = 4, parameter AXI_ADDR_WIDTH = 28) (
    // ---- Instantiating the C-class SoC -------------//
    genvar index;
    generate
-   for(index=0; index<32; index= index+1) 
+   for(index=0; index<GPIO_NUM; index= index+1) 
       begin: connect_gpio_tristates
       IOBUF gpio_iobuf_inst (
              .O(gpio_in[index]),

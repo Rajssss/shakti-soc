@@ -11,9 +11,10 @@ Features Available
 Please see Soc.defines for the memory-map. Given below are the default configs that have been used.
 
 * **C-class Config**:
-1. RV64IMAFDC
-2. 9KiB caches
-3. No Branch Predictor 
+1. RV64IMACSU
+2. 16KiB I$ and 16KiB D$
+3. Gshare branch predictor
+
 
 * **Devices**:
 1. **UART** : Refer `here	<https://gitlab.com/shaktiproject/uncore/devices/blob/master/uart/uart_driver.c>`_ for more info on the uart.
@@ -33,16 +34,19 @@ Requirements
 Quick Start (default Config) :: Get started with an Arty A7 100t
 ----------------------------------------------------------------
 
-[A] Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
+Debug Interface over integrated Xilinx tunneled bscan tap (recomended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: yaml
+.. code-block:: shell-session
 
   $ git clone https://gitlab.com/shaktiproject/cores/shakti-soc.git
   $ cd shakti-soc/fpga/boards/artya7-100t/c-class
-  $ sed -i 's/BSCAN2E=.*/BSCAN2E=enable/g' core_config.inc 
-  $ make quick_build_xilinx
-  echo "Please Disconnect and Reconnect and Reset The Arty Board ! "
+  $ pip3 install -r requirements.txt
+  $ python -m configure.main
+  $ make -j<jobs> generate_verilog
+  $ make ip_build arty_build generate_mcs program_mcs JOBS=<jobs>
+
+Please Disconnect and Reconnect and Reset The Arty Board ! 
 
 Connect to target and Launch Debugger
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,11 +137,11 @@ Currently the arty build only supports booting in debug mode. On reset the, the 
 
   $ riscv64-unknown-elf-gdb -x gdb.script
 
-3. Open another terminal to capture UART output (The default baud rate is 19200)
+3. Open another terminal to capture UART output (The default baud rate is 9600)
 
 .. code-block:: yaml
 
-  $ sudo miniterm /dev/ttyUSB1 19200
+  $ sudo miniterm /dev/ttyUSB1 9600
 
 You can now use the gdb to load programs into the memory (DDR3) and run them.
 

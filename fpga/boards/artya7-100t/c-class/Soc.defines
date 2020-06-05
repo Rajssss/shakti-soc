@@ -1,10 +1,9 @@
-`define Num_Masters 4
+`define Num_Masters 3
 `define Debug_master_num 0
 `define Mem_master_num 1
-`define IO_master_num 2
-`define Fetch_master_num 3
+`define Fetch_master_num 2
 
-`define Num_Slaves 8
+`define Num_Slaves 9
 `define Memory_slave_num 0
 `define Uart_slave_num 1
 `define Clint_slave_num 2
@@ -12,20 +11,23 @@
 `define I2C_slave_num 4
 `define PLIC_slave_num 5
 `define GPIO_slave_num 6
-`define Err_slave_num 7
+`define BootRom_slave_num 7
+`define Err_slave_num 8
 
 
 `define MemoryBase  'h8000_0000                                                                     
-`define MemoryEnd   'h87FF_FFFF                                                                     
-`define UartBase    'h11300                                                                         
-`define UartEnd     'h11340                                                                         
+`define MemoryEnd   'h8FFF_FFFF                                                                     
+`define BootRomBase 'h0001_0000
+`define BootRomEnd  'h0001_0FFF
+`define UartBase    'h0001_1300                                                                         
+`define UartEnd     'h0001_13FF
 `define ClintBase   'h0200_0000                                                                     
 `define ClintEnd    'h020B_FFFF                                                                     
-`define DebugBase   'h0000_0000                                                                     
-`define DebugEnd    'h0000_000F                                                                     
+`define DebugBase   'h0000_0100                                                                     
+`define DebugEnd    'h0000_010F                                                                     
 `define I2CBase     'h020C_0000                                                                     
 `define I2CEnd      'h020C_00FF                                                                     
 `define GPIOBase    'h020D_0000                                                                     
 `define GPIOEnd     'h020D_00FF                                                                     
 `define PLICBase    'h0C00_0000                                                                     
-`define PLICEnd     'h0C02_0000 
+`define PLICEnd     'h0FFF_FFFF

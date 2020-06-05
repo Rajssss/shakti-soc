@@ -1,0 +1,72 @@
+ISA: RV64IMACSU
+iepoch_size: 2
+depoch_size: 1
+dtvec_base: 0
+s_extension:
+  mode: sv39
+  itlb_size: 2
+  dtlb_size: 2
+  asid_width: 9
+pmp: 
+  enable: false
+  entries: 4
+  granularity: 8
+m_extension:
+  mul_stages: 1
+  div_stages: 32
+branch_predictor:
+  instantiate: True
+  predictor: gshare
+  on_reset: enable
+  btb_depth: 32
+  bht_depth: 512
+  history_len: 8
+  history_bits: 5
+  ras_depth: 8
+icache_configuration:
+  instantiate: true
+  on_reset: enable
+  sets: 64
+  word_size: 4
+  block_size: 16
+  ways: 4
+  fb_size: 4
+  replacement: RR
+  ecc_enable: false
+  one_hot_select: false
+dcache_configuration:
+  instantiate: true
+  on_reset: enable
+  sets: 64
+  word_size: 8
+  block_size: 8
+  ways: 4
+  fb_size: 8
+  sb_size: 2
+  replacement: RR
+  ecc_enable: false
+  one_hot_select: false
+  rwports: 1
+reset_pc: 65536
+physical_addr_size: 32
+bus_protocol: AXI4
+fpu_trap: false
+debugger_support: True
+no_of_triggers: 0
+csr_configuration:
+  structure: daisy
+  counters_in_grp4: 2
+  counters_in_grp5: 0
+  counters_in_grp6: 0
+  counters_in_grp7: 0
+bsc_compile_options:
+  assertions: false
+  trace_dump: false
+  compile_target: 'fpga'
+  suppress_warnings: ["all"]
+  verilog_dir: build/hw/verilog
+  build_dir: build/hw/intermediate
+  top_module: mSoc
+  top_file: Soc.bsv
+  top_dir: ./
+  open_ocd: False

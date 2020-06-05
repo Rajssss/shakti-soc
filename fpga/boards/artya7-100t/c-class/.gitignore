@@ -1,4 +1,5 @@
 c-class
+configure/__pycache__
 common_bsv
 common_verilog
 devices
@@ -8,4 +9,5 @@ fpga_project
 *.jou
 
 *.log
-
+makefile.inc
+depends.mk
