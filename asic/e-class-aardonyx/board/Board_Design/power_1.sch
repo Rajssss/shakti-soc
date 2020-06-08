@@ -901,7 +901,7 @@ U 1 1 5F423AEC
 P 10150 6050
 F 0 "TP5" V 10104 6238 50  0000 L CNN
 F 1 "TestPoint" V 10195 6238 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill0.7mm" H 10350 6050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 10350 6050 50  0001 C CNN
 F 3 "" H 10350 6050 50  0001 C CNN
 	1    10150 6050
 	0    1    1    0   
