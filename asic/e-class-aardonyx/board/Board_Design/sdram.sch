@@ -743,9 +743,9 @@ AR Path="/5D8B37B8/5EFB4D01" Ref="R20"  Part="1"
 F 0 "R20" H 7050 2400 50  0000 L CNN
 F 1 "4.7KE, 0402" V 7050 1900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7190 2190 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 7150 2200 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 7150 2200 50  0001 C CNN
 F 4 "RES SMD 4.7K OHM 5% 1/16W 0402" H 7150 2200 50  0001 C CNN "Description"
-F 5 "311-4.7KJRTR-ND" H 7150 2200 50  0001 C CNN "Digikey PartNumber"
+F 5 "311-4.7KJRCT-ND" H 7150 2200 50  0001 C CNN "Digikey PartNumber"
 F 6 "RC0402JR-074K7L" H 7150 2200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7150 2200 50  0001 C CNN "Maufaturer"
 	1    7150 2200
@@ -760,9 +760,9 @@ AR Path="/5D8B37B8/5EFB4D07" Ref="R19"  Part="1"
 F 0 "R19" H 6850 2350 50  0000 L CNN
 F 1 "4.7KE, 0402" V 6750 1900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6890 2190 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 6850 2200 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 6850 2200 50  0001 C CNN
 F 4 "RES SMD 4.7K OHM 5% 1/16W 0402" H 6850 2200 50  0001 C CNN "Description"
-F 5 "311-4.7KJRTR-ND" H 6850 2200 50  0001 C CNN "Digikey PartNumber"
+F 5 "311-4.7KJRCT-ND" H 6850 2200 50  0001 C CNN "Digikey PartNumber"
 F 6 "RC0402JR-074K7L" H 6850 2200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 6850 2200 50  0001 C CNN "Maufaturer"
 	1    6850 2200
@@ -975,9 +975,9 @@ AR Path="/5D8B37B8/5F80E136" Ref="R21"  Part="1"
 F 0 "R21" H 7400 2350 50  0000 L CNN
 F 1 "4.7KE, 0402" V 7300 1900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 2190 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 7400 2200 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 7400 2200 50  0001 C CNN
 F 4 "RES SMD 4.7K OHM 5% 1/16W 0402" H 7400 2200 50  0001 C CNN "Description"
-F 5 "311-4.7KJRTR-ND" H 7400 2200 50  0001 C CNN "Digikey PartNumber"
+F 5 "311-4.7KJRCT-ND" H 7400 2200 50  0001 C CNN "Digikey PartNumber"
 F 6 "RC0402JR-074K7L" H 7400 2200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7400 2200 50  0001 C CNN "Maufaturer"
 	1    7400 2200
@@ -999,10 +999,10 @@ AR Path="/5D8B37B8/5F82D0FE" Ref="R23"  Part="1"
 F 0 "R23" H 7450 2800 50  0000 L CNN
 F 1 "4.7KE, 0402" H 7650 2700 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7690 2790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 7650 2800 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 7650 2800 50  0001 C CNN
 F 4 "NA" H 7750 2800 50  0000 C CNN "Field4"
 F 5 "RES SMD 4.7K OHM 5% 1/16W 0402" H 7650 2800 50  0001 C CNN "Description"
-F 6 "311-4.7KJRTR-ND" H 7650 2800 50  0001 C CNN "Digikey PartNumber"
+F 6 "311-4.7KJRCT-ND" H 7650 2800 50  0001 C CNN "Digikey PartNumber"
 F 7 "RC0402JR-074K7L" H 7650 2800 50  0001 C CNN "Manufactured Part Number"
 F 8 "Yageo" H 7650 2800 50  0001 C CNN "Maufaturer"
 	1    7650 2800
@@ -1043,10 +1043,10 @@ AR Path="/5D8B37B8/5F8A4363" Ref="R22"  Part="1"
 F 0 "R22" H 7650 2150 50  0000 L CNN
 F 1 "4.7KE, 0402" H 7700 1950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7690 1990 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 7650 2000 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 7650 2000 50  0001 C CNN
 F 4 "NA" H 7750 2050 50  0000 C CNN "Field4"
 F 5 "RES SMD 4.7K OHM 5% 1/16W 0402" H 7650 2000 50  0001 C CNN "Description"
-F 6 "311-4.7KJRTR-ND" H 7650 2000 50  0001 C CNN "Digikey PartNumber"
+F 6 "311-4.7KJRCT-ND" H 7650 2000 50  0001 C CNN "Digikey PartNumber"
 F 7 "RC0402JR-074K7L" H 7650 2000 50  0001 C CNN "Manufactured Part Number"
 F 8 "Yageo" H 7650 2000 50  0001 C CNN "Maufaturer"
 	1    7650 2000
@@ -1438,10 +1438,10 @@ F 4 "58M0317" H 8750 2200 50  0001 L BNN "Field4"
 F 5 "TSSOP-14" H 8750 2200 50  0001 L BNN "Field5"
 F 6 "Texas Instruments" H 8750 2200 50  0001 L BNN "Field6"
 F 7 "1543748" H 8750 2200 50  0001 L BNN "Field7"
-F 8 "	IC PROG PLL VCXO CLK SYN 14TSSOP" H 8750 2200 50  0001 C CNN "Description"
+F 8 "IC PROG PLL VCXO CLK SYN 14TSSOP" H 8750 2200 50  0001 C CNN "Description"
 F 9 "296-38908-1-ND" H 8750 2200 50  0001 C CNN "Digikey PartNumber"
 F 10 "CDCE913PWR" H 8750 2200 50  0001 C CNN "Manufactured Part Number"
-F 11 "	Texas Instruments" H 8750 2200 50  0001 C CNN "Maufaturer"
+F 11 "Texas Instruments" H 8750 2200 50  0001 C CNN "Maufaturer"
 	1    8750 2200
 	1    0    0    -1  
 $EndComp

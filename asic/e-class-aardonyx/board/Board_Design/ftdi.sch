@@ -102,10 +102,10 @@ P 4650 2050
 F 0 "C9" H 4650 2150 50  0000 L CNN
 F 1 "4.7UF,1206" V 4550 1850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 4650 2050 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 4650 2050 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 4650 2050 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 4650 2050 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 4650 2050 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 4650 2050 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 4650 2050 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 4650 2050 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 4650 2050 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 4650 2050 50  0001 C CNN "Maufaturer"
 	1    4650 2050
 	1    0    0    -1  
@@ -132,10 +132,10 @@ P 4050 1550
 F 0 "C5" H 4050 1650 50  0000 L CNN
 F 1 "4.7UF,1206" V 3950 1300 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 4050 1550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 4050 1550 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 4050 1550 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 4050 1550 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 4050 1550 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 4050 1550 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 4050 1550 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 4050 1550 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 4050 1550 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 4050 1550 50  0001 C CNN "Maufaturer"
 	1    4050 1550
 	1    0    0    -1  
@@ -187,10 +187,10 @@ P 3550 3100
 F 0 "C2" H 3550 3200 50  0000 L CNN
 F 1 "4.7UF,1206" V 3450 2900 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 3550 3100 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 3550 3100 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 3550 3100 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 3550 3100 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 3550 3100 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 3550 3100 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 3550 3100 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 3550 3100 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 3550 3100 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 3550 3100 50  0001 C CNN "Maufaturer"
 	1    3550 3100
 	1    0    0    -1  
@@ -646,10 +646,10 @@ P 2200 3200
 F 0 "C1" H 2100 3300 50  0000 L CNN
 F 1 "4.7UF,1206" V 2300 2850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 2200 3200 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 2200 3200 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 2200 3200 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 2200 3200 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 2200 3200 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 2200 3200 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 2200 3200 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 2200 3200 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 2200 3200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 2200 3200 50  0001 C CNN "Maufaturer"
 	1    2200 3200
 	1    0    0    -1  
@@ -701,10 +701,10 @@ F 0 "D1" V 2400 3921 50  0000 R CNN
 F 1 "CG0603MLC-12E" H 2850 4100 50  0000 R CNN
 F 2 "Diode_SMD:D_0603_1608Metric" H 2400 4000 50  0001 C CNN
 F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 2400 4000 50  0001 C CNN
-F 4 "	VARISTOR 0603" H 2400 4000 50  0001 C CNN "Description"
+F 4 "VARISTOR 0603" H 2400 4000 50  0001 C CNN "Description"
 F 5 "CG0603MLC-12ECT-ND" H 2400 4000 50  0001 C CNN "Digikey PartNumber"
-F 6 "	CG0603MLC-12E" H 2400 4000 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Bourns Inc." H 2400 4000 50  0001 C CNN "Maufaturer"
+F 6 "CG0603MLC-12E" H 2400 4000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Bourns Inc." H 2400 4000 50  0001 C CNN "Maufaturer"
 	1    2400 4000
 	0    -1   1    0   
 $EndComp
@@ -716,10 +716,10 @@ F 0 "D2" V 2750 3921 50  0000 R CNN
 F 1 "CG0603MLC-12E" H 3200 4100 50  0000 R CNN
 F 2 "Diode_SMD:D_0603_1608Metric" H 2750 4000 50  0001 C CNN
 F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 2750 4000 50  0001 C CNN
-F 4 "	VARISTOR 0603" H 2750 4000 50  0001 C CNN "Description"
+F 4 "VARISTOR 0603" H 2750 4000 50  0001 C CNN "Description"
 F 5 "CG0603MLC-12ECT-ND" H 2750 4000 50  0001 C CNN "Digikey PartNumber"
-F 6 "	CG0603MLC-12E" H 2750 4000 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Bourns Inc." H 2750 4000 50  0001 C CNN "Maufaturer"
+F 6 "CG0603MLC-12E" H 2750 4000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Bourns Inc." H 2750 4000 50  0001 C CNN "Maufaturer"
 	1    2750 4000
 	0    -1   1    0   
 $EndComp
@@ -1357,7 +1357,7 @@ F 1 "Conn_1x8" H 8950 2950 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 9100 3450 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=68000-408HLF" H 9100 3450 50  0001 C CNN
 F 4 "CONN HEADER VERT 8POS 2.54MM" H 9100 3450 50  0001 C CNN "Description"
-F 5 "	609-3264-ND" H 9100 3450 50  0001 C CNN "Digikey PartNumber"
+F 5 "609-3264-ND" H 9100 3450 50  0001 C CNN "Digikey PartNumber"
 F 6 "68000-408HLF" H 9100 3450 50  0001 C CNN "Manufactured Part Number"
 F 7 "Amphenol ICC (FCI)" H 9100 3450 50  0001 C CNN "Maufaturer"
 	1    9100 3450
@@ -1727,8 +1727,8 @@ F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 1300 1750 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/61729-0010BLF/609-1039-ND/1001353" H 1300 1750 50  0001 C CNN
 F 4 "CONN RCPT USB2.0 TYPEB 4POS R/A" H 1150 1800 50  0001 C CNN "Description"
 F 5 "609-1039-ND" H 1150 1800 50  0001 C CNN "Digikey PartNumber"
-F 6 "	61729-0010BLF" H 1150 1800 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Amphenol ICC (FCI)" H 1150 1800 50  0001 C CNN "Maufaturer"
+F 6 "61729-0010BLF" H 1150 1800 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 1150 1800 50  0001 C CNN "Maufaturer"
 	1    1150 1800
 	1    0    0    -1  
 $EndComp
@@ -1741,10 +1741,10 @@ P 1900 1200
 F 0 "C91" H 1800 1300 50  0000 L CNN
 F 1 "4.7UF,1206" V 2000 850 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 1900 1200 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 1900 1200 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 1900 1200 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 1900 1200 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 1900 1200 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 1900 1200 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 1900 1200 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 1900 1200 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 1900 1200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 1900 1200 50  0001 C CNN "Maufaturer"
 	1    1900 1200
 	0    -1   -1   0   
@@ -1912,10 +1912,10 @@ P 8200 5350
 F 0 "R50" H 8200 5550 50  0000 L CNN
 F 1 "4.7KE,0402" V 8100 5200 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8240 5340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 8200 5350 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 8200 5350 50  0001 C CNN
 F 4 "NA" H 8300 5200 50  0000 C CNN "Field4"
 F 5 "RES SMD 4.7K OHM 5% 1/16W 0402" H 8200 5350 50  0001 C CNN "Description"
-F 6 "311-4.7KJRTR-ND" H 8200 5350 50  0001 C CNN "Digikey PartNumber"
+F 6 "311-4.7KJRCT-ND" H 8200 5350 50  0001 C CNN "Digikey PartNumber"
 F 7 "RC0402JR-074K7L" H 8200 5350 50  0001 C CNN "Manufactured Part Number"
 F 8 "Yageo" H 8200 5350 50  0001 C CNN "Maufaturer"
 	1    8200 5350

@@ -130,10 +130,10 @@ AR Path="/5E6E93B2/5E722846" Ref="C55"  Part="1"
 F 0 "C55" H 1350 1600 50  0000 L CNN
 F 1 "4.7UF,1206" V 1150 1300 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 1300 1500 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 1300 1500 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 1300 1500 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 1300 1500 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 1300 1500 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 1300 1500 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 1300 1500 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 1300 1500 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 1300 1500 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 1300 1500 50  0001 C CNN "Maufaturer"
 	1    1300 1500
 	1    0    0    -1  
@@ -151,7 +151,7 @@ F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 5100 2000 50  0001 C CNN "Description"
 F 5 "67-1002-1-ND" H 5100 2000 50  0001 C CNN "Digikey PartNumber"
 F 6 "SML-LX1206GW-TR" H 5100 2000 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Lumex Opto/Components Inc." H 5100 2000 50  0001 C CNN "Maufaturer"
+F 7 "Lumex Opto/Components Inc." H 5100 2000 50  0001 C CNN "Maufaturer"
 	1    5100 2000
 	0    -1   -1   0   
 $EndComp
@@ -422,10 +422,10 @@ AR Path="/5E6E93B2/5EC50BA4" Ref="C59"  Part="1"
 F 0 "C59" H 6350 1800 50  0000 L CNN
 F 1 "4.7UF,1206" H 6350 1650 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 6300 1700 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-3697-1-ND/819022" H 6300 1700 50  0001 C CNN
-F 4 "	CAP TANT 4.7UF 10% 16V 1206" H 6300 1700 50  0001 C CNN "Description"
-F 5 "	399-3697-1-ND" H 6300 1700 50  0001 C CNN "Digikey PartNumber"
-F 6 "	T491A475K016AT" H 6300 1700 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/kemet/T491A475K016AT/399-18027-1-ND/819022" H 6300 1700 50  0001 C CNN
+F 4 "CAP TANT 4.7UF 10% 16V 1206" H 6300 1700 50  0001 C CNN "Description"
+F 5 "399-18027-1-ND" H 6300 1700 50  0001 C CNN "Digikey PartNumber"
+F 6 "T491A475K016AT" H 6300 1700 50  0001 C CNN "Manufactured Part Number"
 F 7 "Kemet" H 6300 1700 50  0001 C CNN "Maufaturer"
 	1    6300 1700
 	1    0    0    -1  
@@ -537,7 +537,7 @@ F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 10500 1800 50  0001 C CNN "Description"
 F 5 "67-1002-1-ND" H 10500 1800 50  0001 C CNN "Digikey PartNumber"
 F 6 "SML-LX1206GW-TR" H 10500 1800 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Lumex Opto/Components Inc." H 10500 1800 50  0001 C CNN "Maufaturer"
+F 7 "Lumex Opto/Components Inc." H 10500 1800 50  0001 C CNN "Maufaturer"
 	1    10500 1800
 	0    -1   -1   0   
 $EndComp
@@ -1043,9 +1043,9 @@ AR Path="/5E6E93B2/5EDCF57A" Ref="R45"  Part="1"
 F 0 "R45" H 7150 5100 50  0000 L CNN
 F 1 "4.7KE, 0402" H 7150 4950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7140 4940 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRTR-ND/726477" H 7100 4950 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477" H 7100 4950 50  0001 C CNN
 F 4 "RES SMD 4.7K OHM 5% 1/16W 0402" H 7100 4950 50  0001 C CNN "Description"
-F 5 "311-4.7KJRTR-ND" H 7100 4950 50  0001 C CNN "Digikey PartNumber"
+F 5 "311-4.7KJRCT-ND" H 7100 4950 50  0001 C CNN "Digikey PartNumber"
 F 6 "RC0402JR-074K7L" H 7100 4950 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7100 4950 50  0001 C CNN "Maufaturer"
 	1    7100 4950

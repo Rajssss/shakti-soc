@@ -534,7 +534,7 @@ F 3 "https://www.digikey.com/product-detail/en/avx-corporation/TCN4227M025R0100/
 F 4 "CAP TANT POLY 220UF 25V 2924" H 5100 1850 50  0001 C CNN "Description"
 F 5 "478-12518-1-ND" H 5100 1850 50  0001 C CNN "Digikey PartNumber"
 F 6 "TCN4227M025R0100" H 5100 1850 50  0001 C CNN "Manufactured Part Number"
-F 7 "	AVX Corporation" H 5100 1850 50  0001 C CNN "Maufaturer"
+F 7 "AVX Corporation" H 5100 1850 50  0001 C CNN "Maufaturer"
 	1    5100 1850
 	1    0    0    -1  
 $EndComp
@@ -548,10 +548,10 @@ F 0 "L1" H 6600 1981 50  0000 C CNN
 F 1 "CM3421Y600R-10" H 6600 1550 50  0000 C CNN
 F 2 "Aardonyx:L_Laird_L9.55_W2.84" H 6600 1700 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/laird-signal-integrity-products/CM3421Y600R-10/240-2501-1-ND/935987" H 6600 1700 50  0001 C CNN
-F 4 "	CMC 15A 2LN 60 OHM SMD" H 6600 1700 50  0001 C CNN "Description"
+F 4 "CMC 15A 2LN 60 OHM SMD" H 6600 1700 50  0001 C CNN "Description"
 F 5 "240-2501-1-ND" H 6600 1700 50  0001 C CNN "Digikey PartNumber"
 F 6 "CM3421Y600R-10" H 6600 1700 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Laird-Signal Integrity Products" H 6600 1700 50  0001 C CNN "Maufaturer"
+F 7 "Laird-Signal Integrity Products" H 6600 1700 50  0001 C CNN "Maufaturer"
 	1    6600 1700
 	1    0    0    -1  
 $EndComp
@@ -634,7 +634,7 @@ F 1 "LED,1206" V 9750 5100 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 10000 5150 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1206GW-TR/67-1002-1-ND/270799" H 10000 5150 50  0001 C CNN
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 10000 5150 50  0001 C CNN "Description"
-F 5 "	Lumex Opto/Components Inc." H 10000 5150 50  0001 C CNN "Maufaturer"
+F 5 "Lumex Opto/Components Inc." H 10000 5150 50  0001 C CNN "Maufaturer"
 F 6 "67-1002-1-ND" H 10000 5150 50  0001 C CNN "Digikey PartNumber"
 F 7 "SML-LX1206GW-TR" H 10000 5150 50  0001 C CNN "Manufactured Part Number"
 	1    10000 5150
@@ -917,7 +917,7 @@ F 1 "SW_SPST" H 4200 1744 50  0000 C CNN
 F 2 "Aardonyx:SW_toggle_spst_2.54mm" H 4200 1600 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/TMS6T1B1M1QE/450-2109-ND/5125729" H 4200 1600 50  0001 C CNN
 F 4 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Description"
-F 5 "SWITCH TOGGLE SPST 3A 120V" H 4200 1600 50  0001 C CNN "Digikey PartNumber"
+F 5 "TMS6T1B1M1QE" H 4200 1600 50  0001 C CNN "Digikey PartNumber"
 F 6 "TMS6T1B1M1QE (2267080-1)" H 4200 1600 50  0001 C CNN "Manufactured Part Number"
 F 7 "TE Connectivity ALCOSWITCH Switches" H 4200 1600 50  0001 C CNN "Maufaturer"
 	1    4200 1600

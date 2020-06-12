@@ -2348,8 +2348,8 @@ F 0 "SW3" H 9900 6050 50  0000 C CNN
 F 1 "SW_DIP_x03" H 10150 5550 50  0000 C CNN
 F 2 "Button_Switch_THT:SW_DIP_SPSTx03_Slide_6.7x9.18mm_W7.62mm_P2.54mm_LowProfile" H 9950 5700 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/418117270903/732-3833-5-ND/3174487" H 9950 5700 50  0001 C CNN
-F 4 "	SWITCH SLIDE DIP SPST 25MA 24V" H 9950 5700 50  0001 C CNN "Description"
-F 5 "	732-3833-5-ND" H 9950 5700 50  0001 C CNN "Digikey PartNumber"
+F 4 "SWITCH SLIDE DIP SPST 25MA 24V" H 9950 5700 50  0001 C CNN "Description"
+F 5 "732-3833-5-ND" H 9950 5700 50  0001 C CNN "Digikey PartNumber"
 F 6 "732-3833-5-ND" H 9950 5700 50  0001 C CNN "Field4"
 F 7 "418117270903" H 9950 5700 50  0001 C CNN "Manufactured Part Number"
 F 8 "Würth Elektronik" H 9950 5700 50  0001 C CNN "Maufaturer"
@@ -3129,7 +3129,7 @@ F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5200 50  0001 C CNN "Description"
 F 5 "67-1002-1-ND" H 7850 5200 50  0001 C CNN "Digikey PartNumber"
 F 6 "SML-LX1206GW-TR" H 7850 5200 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Lumex Opto/Components Inc." H 7850 5200 50  0001 C CNN "Maufaturer"
+F 7 "Lumex Opto/Components Inc." H 7850 5200 50  0001 C CNN "Maufaturer"
 	1    7850 5200
 	-1   0    0    1   
 $EndComp
@@ -3183,7 +3183,7 @@ F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5450 50  0001 C CNN "Description"
 F 5 "67-1002-1-ND" H 7850 5450 50  0001 C CNN "Digikey PartNumber"
 F 6 "SML-LX1206GW-TR" H 7850 5450 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Lumex Opto/Components Inc." H 7850 5450 50  0001 C CNN "Maufaturer"
+F 7 "Lumex Opto/Components Inc." H 7850 5450 50  0001 C CNN "Maufaturer"
 	1    7850 5450
 	-1   0    0    1   
 $EndComp
@@ -3245,7 +3245,7 @@ F 3 "https://www.digikey.com/product-detail/en/lumex-opto-components-inc/SML-LX1
 F 4 "LED GREEN DIFFUSED 1206 SMD" H 7850 5800 50  0001 C CNN "Description"
 F 5 "67-1002-1-ND" H 7850 5800 50  0001 C CNN "Digikey PartNumber"
 F 6 "SML-LX1206GW-TR" H 7850 5800 50  0001 C CNN "Manufactured Part Number"
-F 7 "	Lumex Opto/Components Inc." H 7850 5800 50  0001 C CNN "Maufaturer"
+F 7 "Lumex Opto/Components Inc." H 7850 5800 50  0001 C CNN "Maufaturer"
 	1    7850 5800
 	-1   0    0    1   
 $EndComp
