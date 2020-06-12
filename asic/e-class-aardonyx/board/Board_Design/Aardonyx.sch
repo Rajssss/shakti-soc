@@ -229,4 +229,92 @@ U 5DB8A7DC
 F0 "power_1" 50
 F1 "power_1.sch" 50
 $EndSheet
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5EE1DA72
+P 3450 7250
+F 0 "FID2" H 3535 7296 50  0000 L CNN
+F 1 "Fiducial" H 3535 7205 50  0000 L CNN
+F 2 "" H 3450 7250 50  0001 C CNN
+F 3 "~" H 3450 7250 50  0001 C CNN
+	1    3450 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5EE1DFF3
+P 3450 6750
+F 0 "FID1" H 3535 6796 50  0000 L CNN
+F 1 "Fiducial" H 3535 6705 50  0000 L CNN
+F 2 "" H 3450 6750 50  0001 C CNN
+F 3 "~" H 3450 6750 50  0001 C CNN
+	1    3450 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5EE1E985
+P 2450 6650
+F 0 "H5" H 2550 6696 50  0000 L CNN
+F 1 "MountingHole" H 2550 6605 50  0000 L CNN
+F 2 "" H 2450 6650 50  0001 C CNN
+F 3 "~" H 2450 6650 50  0001 C CNN
+	1    2450 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5EE1F2FA
+P 2450 7200
+F 0 "H6" H 2550 7246 50  0000 L CNN
+F 1 "MountingHole" H 2550 7155 50  0000 L CNN
+F 2 "" H 2450 7200 50  0001 C CNN
+F 3 "~" H 2450 7200 50  0001 C CNN
+	1    2450 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5EE1F909
+P 1650 6650
+F 0 "H3" H 1750 6696 50  0000 L CNN
+F 1 "MountingHole" H 1750 6605 50  0000 L CNN
+F 2 "" H 1650 6650 50  0001 C CNN
+F 3 "~" H 1650 6650 50  0001 C CNN
+	1    1650 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5EE1FEDB
+P 1650 7200
+F 0 "H4" H 1750 7246 50  0000 L CNN
+F 1 "MountingHole" H 1750 7155 50  0000 L CNN
+F 2 "" H 1650 7200 50  0001 C CNN
+F 3 "~" H 1650 7200 50  0001 C CNN
+	1    1650 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5EE20245
+P 800 7200
+F 0 "H2" H 900 7246 50  0000 L CNN
+F 1 "MountingHole" H 900 7155 50  0000 L CNN
+F 2 "" H 800 7200 50  0001 C CNN
+F 3 "~" H 800 7200 50  0001 C CNN
+	1    800  7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5EE204B7
+P 800 6650
+F 0 "H1" H 900 6696 50  0000 L CNN
+F 1 "MountingHole" H 900 6605 50  0000 L CNN
+F 2 "" H 800 6650 50  0001 C CNN
+F 3 "~" H 800 6650 50  0001 C CNN
+	1    800  6650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
