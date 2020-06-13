@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -3157,10 +3158,10 @@ AR Path="/5D8B3740/5EBA1AA0" Ref="R42"  Part="1"
 F 0 "R42" V 7450 5300 50  0000 L CNN
 F 1 "220E,0402" V 7300 4950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5190 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5200 50  0001 C CNN
-F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5200 50  0001 C CNN "Description"
-F 5 "311-120LRCT-ND" H 7400 5200 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0402FR-07120RL" H 7400 5200 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402FR-07220RL/311-220LRDKR-ND/732459" H 7400 5200 50  0001 C CNN
+F 4 "RES SMD 220 OHM 1% 1/16W 0402" H 7400 5200 50  0001 C CNN "Description"
+F 5 "311-220LRDKR-ND" H 7400 5200 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07220RL" H 7400 5200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7400 5200 50  0001 C CNN "Maufaturer"
 	1    7400 5200
 	0    -1   -1   0   
@@ -3211,10 +3212,10 @@ AR Path="/5D8B3740/5EC90642" Ref="R43"  Part="1"
 F 0 "R43" V 7450 5550 50  0000 L CNN
 F 1 "220E,0402" V 7300 5200 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5440 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5450 50  0001 C CNN
-F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5450 50  0001 C CNN "Description"
-F 5 "311-120LRCT-ND" H 7400 5450 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0402FR-07120RL" H 7400 5450 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402FR-07220RL/311-220LRDKR-ND/732459" H 7400 5450 50  0001 C CNN
+F 4 "RES SMD 220 OHM 1% 1/16W 0402" H 7400 5450 50  0001 C CNN "Description"
+F 5 "311-220LRDKR-ND" H 7400 5450 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07220RL" H 7400 5450 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7400 5450 50  0001 C CNN "Maufaturer"
 	1    7400 5450
 	0    -1   -1   0   
@@ -3273,10 +3274,10 @@ AR Path="/5D8B3740/5EDB8D11" Ref="R44"  Part="1"
 F 0 "R44" V 7450 5900 50  0000 L CNN
 F 1 "220E,0402" V 7300 5550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7440 5790 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 7400 5800 50  0001 C CNN
-F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 7400 5800 50  0001 C CNN "Description"
-F 5 "311-120LRCT-ND" H 7400 5800 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0402FR-07120RL" H 7400 5800 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402FR-07220RL/311-220LRDKR-ND/732459" H 7400 5800 50  0001 C CNN
+F 4 "RES SMD 220 OHM 1% 1/16W 0402" H 7400 5800 50  0001 C CNN "Description"
+F 5 "311-220LRDKR-ND" H 7400 5800 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07220RL" H 7400 5800 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 7400 5800 50  0001 C CNN "Maufaturer"
 	1    7400 5800
 	0    -1   -1   0   

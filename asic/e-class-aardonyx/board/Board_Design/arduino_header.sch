@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -41,8 +42,8 @@ F 1 "CAT24M01WI-GT3" H 1900 5150 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1500 5650 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/CAT24M01WI-GT3/CAT24M01WI-GT3OSCT-ND/2698362" H 1500 5650 50  0001 C CNN
 F 4 "IC EEPROM 1M I2C 1MHZ 8SOIC" H 1500 5650 50  0001 C CNN "Description"
-F 5 "CAT24M01WI-GT3OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
-F 6 "CAT24M01WI-GT3" H 1500 5650 50  0001 C CNN "Manufactured Part Number"
+F 5 "CAT24M01XI-T2OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
+F 6 "CAT24M01XI-T2" H 1500 5650 50  0001 C CNN "Manufactured Part Number"
 F 7 "ON Semiconductor" H 1500 5650 50  0001 C CNN "Maufaturer"
 	1    1500 5650
 	1    0    0    -1  

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -177,11 +178,11 @@ AR Path="/5E6E93B2/5DC0AFF7" Ref="L?"  Part="1"
 F 0 "L2" V 6700 5050 50  0000 C CNN
 F 1 "3.3UH" V 6600 4900 50  0000 C CNN
 F 2 "Inductor_SMD:L_Wuerth_WE-PD-Typ-LS" H 6650 4900 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/w%C3%BCrth-elektronik/78477033/732-6781-2-ND/5168775" H 6650 4900 50  0001 C CNN
-F 4 "FIXED IND 3.3UH 6.6A 17 MOHM SMD" H 6650 4900 50  0001 C CNN "Description"
-F 5 "732-6781-2-ND" H 6650 4900 50  0001 C CNN "Digikey PartNumber"
-F 6 "78477033" H 6650 4900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Wurth Elektronik" H 6650 4900 50  0001 C CNN "Maufaturer"
+F 3 "https://www.digikey.in/product-detail/en/bourns-inc/SRN8040TA-3R3Y/SRN8040TA-3R3YCT-ND/6155255" H 6650 4900 50  0001 C CNN
+F 4 "	FIXED IND 3.3UH 6.6A 15 MOHM SMD" H 6650 4900 50  0001 C CNN "Description"
+F 5 "SRN8040TA-3R3YCT-ND" H 6650 4900 50  0001 C CNN "Digikey PartNumber"
+F 6 "	SRN8040TA-3R3Y" H 6650 4900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Bourns Inc." H 6650 4900 50  0001 C CNN "Maufaturer"
 	1    6650 4900
 	0    -1   -1   0   
 $EndComp

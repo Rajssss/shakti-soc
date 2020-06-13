@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -177,10 +178,10 @@ AR Path="/5E6E93B2/5E7228B7" Ref="P_R44"  Part="1"
 F 0 "P_R44" H 5150 1650 50  0000 L CNN
 F 1 "220E,0402" H 5150 1500 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5140 1540 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162" H 5100 1550 50  0001 C CNN
-F 4 "RES SMD 120 OHM 1% 1/16W 0402" H 5100 1550 50  0001 C CNN "Description"
-F 5 "311-120LRCT-ND" H 5100 1550 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0402FR-07120RL" H 5100 1550 50  0001 C CNN "Manufactured Part Number"
+F 3 "https://www.digikey.in/product-detail/en/yageo/RC0402FR-07220RL/311-220LRDKR-ND/732459" H 5100 1550 50  0001 C CNN
+F 4 "RES SMD 220 OHM 1% 1/16W 0402" H 5100 1550 50  0001 C CNN "Description"
+F 5 "311-220LRDKR-ND" H 5100 1550 50  0001 C CNN "Digikey PartNumber"
+F 6 "RC0402FR-07220RL" H 5100 1550 50  0001 C CNN "Manufactured Part Number"
 F 7 "Yageo" H 5100 1550 50  0001 C CNN "Maufaturer"
 	1    5100 1550
 	1    0    0    -1  
