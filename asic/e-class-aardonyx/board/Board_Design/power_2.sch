@@ -724,8 +724,6 @@ Wire Wire Line
 	3650 6700 3800 6700
 Wire Wire Line
 	3800 6700 3800 6750
-Text Label 3700 6500 0    50   ~ 0
-RESET_ASIC
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECF805D
@@ -1126,8 +1124,6 @@ Wire Wire Line
 Connection ~ 7650 5250
 Wire Wire Line
 	7650 5250 8950 5250
-Wire Wire Line
-	3650 6500 4250 6500
 Text Label 7600 6200 0    50   ~ 0
 RESET_ASIC
 Wire Wire Line
@@ -1400,4 +1396,10 @@ F 3 "" H 1650 1250 50  0001 C CNN
 	1    1650 1250
 	1    0    0    -1  
 $EndComp
+Text Label 4300 6500 0    50   ~ 0
+RESET_ASIC
+Wire Wire Line
+	4300 6500 3650 6500
+Text Label 4200 4700 0    50   ~ 0
+V18_EN
 $EndSCHEMATC
