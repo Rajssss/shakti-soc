@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Aardonyx-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -651,9 +650,9 @@ F 0 "P_R39" V 2650 4750 50  0000 L CNN
 F 1 "0E, 0805" V 2450 4800 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 2590 4790 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2550 4800 50  0001 C CNN
-F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 2550 4800 50  0001 C CNN "Description"
+F 4 "RES SMD 0 OHM JUMPER 1/8W 0805 " H 2550 4800 50  0001 C CNN "Description"
 F 5 " 541-0.0ACT-ND " H 2550 4800 50  0001 C CNN "Digikey PartNumber"
-F 6 " CRCW08050000Z0EA " H 2550 4800 50  0001 C CNN "Manufactured Part Number"
+F 6 "CRCW08050000Z0EA " H 2550 4800 50  0001 C CNN "Manufactured Part Number"
 F 7 "Vishay Dale" H 2550 4800 50  0001 C CNN "Maufaturer"
 	1    2550 4800
 	0    -1   -1   0   
@@ -766,9 +765,9 @@ F 0 "P_R40" V 2700 6550 50  0000 L CNN
 F 1 "0E, 0805" V 2500 6600 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 2640 6590 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/vishay-dale/CRCW08050000Z0EA/541-0-0ACT-ND/1180267" H 2600 6600 50  0001 C CNN
-F 4 " RES SMD 0 OHM JUMPER 1/8W 0805 " H 2600 6600 50  0001 C CNN "Description"
+F 4 "RES SMD 0 OHM JUMPER 1/8W 0805 " H 2600 6600 50  0001 C CNN "Description"
 F 5 " 541-0.0ACT-ND " H 2600 6600 50  0001 C CNN "Digikey PartNumber"
-F 6 " CRCW08050000Z0EA " H 2600 6600 50  0001 C CNN "Manufactured Part Number"
+F 6 "CRCW08050000Z0EA " H 2600 6600 50  0001 C CNN "Manufactured Part Number"
 F 7 "Vishay Dale" H 2600 6600 50  0001 C CNN "Maufaturer"
 	1    2600 6600
 	0    -1   -1   0   
