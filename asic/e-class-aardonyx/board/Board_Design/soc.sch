@@ -2333,9 +2333,9 @@ QSPI0_IO2
 Text HLabel 5450 2100 2    50   BiDi ~ 0
 QSPI0_IO3
 Text HLabel 4900 2250 2    50   BiDi ~ 0
-I2C0_SCL
-Text HLabel 4900 2350 2    50   BiDi ~ 0
 I2C0_SDA
+Text HLabel 4900 2350 2    50   BiDi ~ 0
+I2C0_SCL
 Text HLabel 4900 1350 2    50   Output ~ 0
 UART0_TX
 Text HLabel 4900 1450 2    50   Input ~ 0
