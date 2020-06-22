@@ -1484,12 +1484,8 @@ Wire Wire Line
 	900  3650 900  3750
 Wire Wire Line
 	1100 3750 900  3750
-Connection ~ 900  3750
-Wire Wire Line
-	900  3750 900  3850
 Wire Wire Line
 	1100 3850 900  3850
-Connection ~ 900  3850
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR049
 U 1 1 5EAD8365
@@ -1784,31 +1780,12 @@ Wire Wire Line
 Connection ~ 1550 1200
 Wire Wire Line
 	1550 850  1550 950 
-$Comp
-L Aardonyx-rescue:GND-aardonyx #PWR02
-U 1 1 5F1918CD
-P 1000 2700
-F 0 "#PWR02" H 1000 2450 50  0001 C CNN
-F 1 "GND" H 1005 2527 50  0000 C CNN
-F 2 "" H 1000 2700 50  0001 C CNN
-F 3 "" H 1000 2700 50  0001 C CNN
-	1    1000 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1000 2200 1000 2350
 Wire Wire Line
-	1450 2000 1500 2000
-Wire Wire Line
-	1500 2000 1500 2350
-Wire Wire Line
-	1500 2350 1100 2350
-Connection ~ 1000 2350
-Wire Wire Line
-	1000 2350 1000 2700
+	1700 2000 1700 2350
 Wire Wire Line
 	1100 2200 1100 2350
-Connection ~ 1100 2350
 Wire Wire Line
 	1100 2350 1000 2350
 Text Label 2100 3650 0    50   ~ 0
@@ -1928,12 +1905,12 @@ P 8200 5950
 F 0 "R52" H 8200 6150 50  0000 L CNN
 F 1 "10KE,0402" V 8100 5800 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8240 5940 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 8200 5950 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 8200 5950 50  0001 C CNN
 F 4 "NA" H 8300 5800 50  0000 C CNN "Field4"
-F 5 "RES SMD 10K OHM 1% 1/8W 0805" H 8200 5950 50  0001 C CNN "Description"
-F 6 "311-10.0KCRCT-ND" H 8200 5950 50  0001 C CNN "Digikey PartNumber"
-F 7 "RC0805FR-0710KL" H 8200 5950 50  0001 C CNN "Manufactured Part Number"
-F 8 "Yageo" H 8200 5950 50  0001 C CNN "Maufaturer"
+F 5 "RES 10K OHM 5% 1/8W 0402" H 8200 5950 50  0001 C CNN "Description"
+F 6 "2019-SG73S1ETTP103JCT-ND" H 8200 5950 50  0001 C CNN "Digikey PartNumber"
+F 7 "SG73S1ETTP103J" H 8200 5950 50  0001 C CNN "Manufactured Part Number"
+F 8 "KOA Speer Electronics, Inc." H 8200 5950 50  0001 C CNN "Maufaturer"
 	1    8200 5950
 	1    0    0    -1  
 $EndComp
@@ -2065,4 +2042,67 @@ Wire Wire Line
 	9500 5450 10400 5450
 Wire Wire Line
 	10150 5350 10150 5650
+$Comp
+L Aardonyx-rescue:Ferrite_Bead_Small-aardonyx FB7
+U 1 1 5EF1A57F
+P 800 3750
+F 0 "FB7" V 700 3850 50  0000 C CNN
+F 1 "47E,FB,0402" V 900 3750 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" V 730 3750 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792608/732-1596-1-ND/1639540" H 800 3750 50  0001 C CNN
+F 4 "FERRITE BEAD 47 OHM 0603 1LN" H 800 3750 50  0001 C CNN "Description"
+F 5 "732-1596-1-ND" H 800 3750 50  0001 C CNN "Digikey PartNumber"
+F 6 "742792608" H 800 3750 50  0001 C CNN "Manufactured Part Number"
+F 7 "Wurth Elektronik" H 800 3750 50  0001 C CNN "Maufaturer"
+	1    800  3750
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1100 2350
+$Comp
+L Aardonyx-rescue:Ferrite_Bead_Small-aardonyx FB6
+U 1 1 5EF19677
+P 1500 2350
+F 0 "FB6" H 1400 2250 50  0000 C CNN
+F 1 "47E,FB,0402" V 1600 2350 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" V 1430 2350 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/w%C3%BCrth-elektronik/742792608/732-1596-1-ND/1639540" H 1500 2350 50  0001 C CNN
+F 4 "FERRITE BEAD 47 OHM 0603 1LN" H 1500 2350 50  0001 C CNN "Description"
+F 5 "732-1596-1-ND" H 1500 2350 50  0001 C CNN "Digikey PartNumber"
+F 6 "742792608" H 1500 2350 50  0001 C CNN "Manufactured Part Number"
+F 7 "Wurth Elektronik" H 1500 2350 50  0001 C CNN "Maufaturer"
+	1    1500 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1100 2350 1400 2350
+Wire Wire Line
+	1450 2000 1700 2000
+Wire Wire Line
+	1600 2350 1700 2350
+Connection ~ 900  3750
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR0168
+U 1 1 5EFC7B53
+P 700 3750
+F 0 "#PWR0168" H 700 3500 50  0001 C CNN
+F 1 "GND" H 705 3577 50  0000 C CNN
+F 2 "" H 700 3750 50  0001 C CNN
+F 3 "" H 700 3750 50  0001 C CNN
+	1    700  3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR0173
+U 1 1 5EFEBA59
+P 1700 2700
+F 0 "#PWR0173" H 1700 2450 50  0001 C CNN
+F 1 "GND" H 1705 2527 50  0000 C CNN
+F 2 "" H 1700 2700 50  0001 C CNN
+F 3 "" H 1700 2700 50  0001 C CNN
+	1    1700 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2350 1700 2700
+Connection ~ 1700 2350
 $EndSCHEMATC

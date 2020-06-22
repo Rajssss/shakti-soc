@@ -439,13 +439,13 @@ L Aardonyx-rescue:R_US-aardonyx R32
 U 1 1 5E2B4C89
 P 2150 1350
 F 0 "R32" H 2150 1500 50  0000 L CNN
-F 1 "10KE,0805" V 2050 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2190 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 2150 1350 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 2150 1350 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 2150 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 2150 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 2150 1350 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" V 2050 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2190 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2150 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2150 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2150 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2150 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2150 1350 50  0001 C CNN "Maufaturer"
 	1    2150 1350
 	1    0    0    -1  
 $EndComp
@@ -485,13 +485,13 @@ L Aardonyx-rescue:R_US-aardonyx R30
 U 1 1 5E2C54E1
 P 1650 1350
 F 0 "R30" H 1650 1500 50  0000 L CNN
-F 1 "10KE,0805" V 1550 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1690 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 1650 1350 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 1650 1350 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 1650 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 1650 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 1650 1350 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" V 1550 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1690 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1650 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 1650 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 1650 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 1650 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 1650 1350 50  0001 C CNN "Maufaturer"
 	1    1650 1350
 	1    0    0    -1  
 $EndComp
@@ -500,13 +500,13 @@ L Aardonyx-rescue:R_US-aardonyx R31
 U 1 1 5E2C33CD
 P 1900 1350
 F 0 "R31" H 1900 1500 50  0000 L CNN
-F 1 "10KE,0805" V 1800 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 1940 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 1900 1350 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 1900 1350 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 1900 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 1900 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 1900 1350 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" V 1800 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1940 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1900 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 1900 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 1900 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 1900 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 1900 1350 50  0001 C CNN "Maufaturer"
 	1    1900 1350
 	1    0    0    -1  
 $EndComp
@@ -583,13 +583,13 @@ L Aardonyx-rescue:R_US-aardonyx R33
 U 1 1 5E31A792
 P 2450 5150
 F 0 "R33" H 2450 5300 50  0000 L CNN
-F 1 "10KE,0805" V 2350 4950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2490 5140 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 2450 5150 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 2450 5150 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 2450 5150 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 2450 5150 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 2450 5150 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" V 2350 4950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2490 5140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2450 5150 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2450 5150 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2450 5150 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2450 5150 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2450 5150 50  0001 C CNN "Maufaturer"
 	1    2450 5150
 	1    0    0    -1  
 $EndComp
@@ -598,13 +598,13 @@ L Aardonyx-rescue:R_US-aardonyx R34
 U 1 1 5E31A798
 P 2650 5150
 F 0 "R34" H 2650 5300 50  0000 L CNN
-F 1 "10KE,0805" H 2650 5000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2690 5140 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 2650 5150 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 2650 5150 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 2650 5150 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 2650 5150 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 2650 5150 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" H 2650 5000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2690 5140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2650 5150 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2650 5150 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2650 5150 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2650 5150 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2650 5150 50  0001 C CNN "Maufaturer"
 	1    2650 5150
 	1    0    0    -1  
 $EndComp
@@ -968,13 +968,13 @@ L Aardonyx-rescue:R_US-aardonyx R35
 U 1 1 5F6D0204
 P 5450 6400
 F 0 "R35" V 5550 6350 50  0000 L CNN
-F 1 "10KE,0805" V 5350 6300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5490 6390 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482" H 5450 6400 50  0001 C CNN
-F 4 "RES SMD 10K OHM 1% 1/8W 0805" H 5450 6400 50  0001 C CNN "Description"
-F 5 "311-10.0KCRCT-ND" H 5450 6400 50  0001 C CNN "Digikey PartNumber"
-F 6 "RC0805FR-0710KL" H 5450 6400 50  0001 C CNN "Manufactured Part Number"
-F 7 "Yageo" H 5450 6400 50  0001 C CNN "Maufaturer"
+F 1 "10KE,0402" V 5350 6300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5490 6390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 5450 6400 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 5450 6400 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 5450 6400 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 5450 6400 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 5450 6400 50  0001 C CNN "Maufaturer"
 	1    5450 6400
 	0    -1   -1   0   
 $EndComp
