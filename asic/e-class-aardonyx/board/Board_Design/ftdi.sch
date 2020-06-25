@@ -863,7 +863,7 @@ F 0 "R1" H 3850 4300 50  0000 L CNN
 F 1 "1KE,0402" V 3700 4050 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3840 4190 50  0001 C CNN
 F 3 "https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERJ-2GEJ102X/P1-0KJCT-ND/146897" H 3800 4200 50  0001 C CNN
-F 4 "RES SMD 1K OHM 5% 1/10W 0402 " H 3800 4200 50  0001 C CNN "Description"
+F 4 "RES SMD 1K OHM 5% 1/10W 0402" H 3800 4200 50  0001 C CNN "Description"
 F 5 "P1.0KJCT-ND " H 3800 4200 50  0001 C CNN "Digikey PartNumber"
 F 6 "ERJ-2GEJ102X " H 3800 4200 50  0001 C CNN "Manufactured Part Number"
 F 7 "Panasonic Electronic " H 3800 4200 50  0001 C CNN "Maufaturer"
@@ -1960,21 +1960,6 @@ F 3 "" H 3250 4450 50  0001 C CNN
 	1    3050 4450
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R49
-U 1 1 5F59FAB5
-P 2800 4700
-F 0 "R49" V 2850 4800 50  0000 L CNN
-F 1 "0E, 0402" V 2900 4400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2840 4690 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 2800 4700 50  0001 C CNN
-F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 2800 4700 50  0001 C CNN "Description"
-F 5 "541-0.0JCT-ND" H 2800 4700 50  0001 C CNN "Digikey PartNumber"
-F 6 "CRCW04020000Z0ED" H 2800 4700 50  0001 C CNN "Manufactured Part Number"
-F 7 "Vishay Dale" H 2800 4700 50  0001 C CNN "Maufaturer"
-	1    2800 4700
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2950 4700 3050 4700
 Wire Wire Line
@@ -1982,11 +1967,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 4450 3800 4450
 Connection ~ 3050 4450
-Wire Wire Line
-	2250 4700 2650 4700
-Text Label 2400 4700 0    39   ~ 0
-RESET
-Text HLabel 2250 4700 0    50   Input ~ 0
+Text HLabel 2200 4700 0    50   Input ~ 0
 RESET
 Text Notes 750  3100 0    60   ~ 0
 Use J1 for high loads
@@ -2105,4 +2086,23 @@ $EndComp
 Wire Wire Line
 	1700 2350 1700 2700
 Connection ~ 1700 2350
+Wire Wire Line
+	2200 4700 2650 4700
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R49
+U 1 1 5F59FAB5
+P 2800 4700
+F 0 "R49" V 2850 4800 50  0000 L CNN
+F 1 "0E, 0402" V 2900 4400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2840 4690 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/vishay-dale/CRCW04020000Z0ED/541-0-0JCT-ND/1182611" H 2800 4700 50  0001 C CNN
+F 4 "RES SMD 0 OHM JUMPER 1/16W 0402" H 2800 4700 50  0001 C CNN "Description"
+F 5 "541-0.0JCT-ND" H 2800 4700 50  0001 C CNN "Digikey PartNumber"
+F 6 "CRCW04020000Z0ED" H 2800 4700 50  0001 C CNN "Manufactured Part Number"
+F 7 "Vishay Dale" H 2800 4700 50  0001 C CNN "Maufaturer"
+	1    2800 4700
+	0    -1   -1   0   
+$EndComp
+Text Label 2350 4700 0    50   ~ 0
+RESET
 $EndSCHEMATC
