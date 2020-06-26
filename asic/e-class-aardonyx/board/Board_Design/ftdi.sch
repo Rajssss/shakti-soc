@@ -1432,7 +1432,7 @@ U 1 1 5E8C6648
 P 6900 6250
 F 0 "TP1" V 6900 6438 50  0000 L CNN
 F 1 "TestPoint" V 6945 6438 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7100 6250 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 7100 6250 50  0001 C CNN
 F 3 "~" H 7100 6250 50  0001 C CNN
 	1    6900 6250
 	0    1    1    0   
@@ -1443,7 +1443,7 @@ U 1 1 5E8D220A
 P 6900 6350
 F 0 "TP2" V 6900 6538 50  0000 L CNN
 F 1 "TestPoint" V 6945 6538 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7100 6350 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 7100 6350 50  0001 C CNN
 F 3 "~" H 7100 6350 50  0001 C CNN
 	1    6900 6350
 	0    1    1    0   
@@ -1955,7 +1955,7 @@ U 1 1 5F54E4A3
 P 3050 4450
 F 0 "TP6" V 3050 4750 50  0000 R CNN
 F 1 "TestPoint" V 3000 4950 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3250 4450 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3250 4450 50  0001 C CNN
 F 3 "" H 3250 4450 50  0001 C CNN
 	1    3050 4450
 	0    -1   -1   0   
