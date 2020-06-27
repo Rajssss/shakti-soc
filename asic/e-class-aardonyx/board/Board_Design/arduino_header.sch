@@ -1685,7 +1685,7 @@ F 3 "" H 10500 1550 50  0001 C CNN
 	1    10500 1550
 	1    0    0    -1  
 $EndComp
-Text Notes 1750 2600 0    50   ~ 0
+Text Notes 1650 2850 0    50   ~ 0
 256Mb - QSPI Flash\n16 pin SOIC
 Text Notes 1950 6000 0    50   ~ 0
 1Mb I2C Serial EEPROM\n8PIN - SOIC
@@ -1776,6 +1776,36 @@ Wire Notes Line
 	3950 7650 3950 7400
 Wire Notes Line
 	3950 7400 5250 7400
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R142
+U 1 1 5EFF848B
+P 950 3250
+F 0 "R142" H 950 3400 50  0000 L CNN
+F 1 "10KE,0402" V 850 2950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 990 3240 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 950 3250 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 950 3250 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 950 3250 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 950 3250 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 950 3250 50  0001 C CNN "Maufaturer"
+	1    950  3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx #PWR02
+U 1 1 5F019B05
+P 800 3250
+F 0 "#PWR02" H 950 3200 50  0001 C CNN
+F 1 "V3P3" H 805 3425 50  0000 C CNN
+F 2 "" H 800 3250 50  0001 C CNN
+F 3 "" H 800 3250 50  0001 C CNN
+	1    800  3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 3250 1100 3250
+Text Label 1850 3250 0    50   ~ 0
+QSPI0_CLK
 Wire Bus Line
 	8650 2150 8650 2700
 Wire Bus Line

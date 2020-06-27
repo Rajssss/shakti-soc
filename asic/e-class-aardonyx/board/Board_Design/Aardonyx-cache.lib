@@ -1379,29 +1379,45 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue
+# Aardonyx-rescue_VBUS_USB1
 #
-DEF Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS_USB1 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VBUS_USB1-Aardonyx-rescue" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS_USB1" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
+P 2 0 1 0 0 0 0 100 N
+X VBUS_USB1 1 0 0 0 U 50 50 0 1 W N
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue
+# Aardonyx-rescue_VBUS_USB2
 #
-DEF Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VBUS_USB2 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VBUS_USB2-Aardonyx-rescue" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VBUS_USB2" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
+P 2 0 1 0 0 0 0 100 N
+X VBUS_USB2 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# Aardonyx-rescue_VCC5V
+#
+DEF Aardonyx-rescue_VCC5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 150 -50 50 H I C CNN
+F1 "Aardonyx-rescue_VCC5V" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -50 100 50 100 N
+P 2 0 1 0 0 0 0 100 N
+X VCC5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -1418,16 +1434,18 @@ X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue
+# Aardonyx-rescue_VCORE_FTDI
 #
-DEF Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
+DEF Aardonyx-rescue_VCORE_FTDI #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "Aardonyx-rescue_VCORE_FTDI-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
+F1 "Aardonyx-rescue_VCORE_FTDI" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
+S 0 100 0 0 0 1 0 N
 P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
+P 2 0 1 0 0 0 0 0 N
+X VCORE_FTDI 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

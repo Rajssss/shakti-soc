@@ -348,14 +348,14 @@ $EndComp
 $Comp
 L Aardonyx-rescue:V5P0-aardonyx #PWR048
 U 1 1 5DC202F3
-P 8150 4100
+P 8700 4450
 AR Path="/5DB8A7DC/5DC202F3" Ref="#PWR048"  Part="1" 
 AR Path="/5E6E93B2/5DC202F3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR048" H 8300 4050 50  0001 C CNN
-F 1 "V5P0" H 8145 4275 50  0000 C CNN
-F 2 "" H 8150 4100 50  0001 C CNN
-F 3 "" H 8150 4100 50  0001 C CNN
-	1    8150 4100
+F 0 "#PWR048" H 8850 4400 50  0001 C CNN
+F 1 "V5P0" H 8695 4625 50  0000 C CNN
+F 2 "" H 8700 4450 50  0001 C CNN
+F 3 "" H 8700 4450 50  0001 C CNN
+	1    8700 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -493,34 +493,12 @@ Wire Wire Line
 Wire Wire Line
 	5100 2150 5450 2150
 Connection ~ 5450 2150
-$Comp
-L Aardonyx-rescue:Conn_1x3_M-aardonyx J?
-U 1 1 5E52467C
-P 8750 4200
-AR Path="/5D8B37DE/5E52467C" Ref="J?"  Part="1" 
-AR Path="/5DB8A7DC/5E52467C" Ref="J6"  Part="1" 
-AR Path="/5E6E93B2/5E52467C" Ref="J?"  Part="1" 
-F 0 "J6" H 8750 4400 50  0000 L CNN
-F 1 "Conn_1x3_M" H 8650 4000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8750 4200 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8750 4200 50  0001 C CNN
-F 4 "CONN HEADER VERT 3POS 2.54MM" H 8750 4200 50  0001 C CNN "Description"
-F 5 "609-3464-ND" H 8750 4200 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-203HLF" H 8750 4200 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 8750 4200 50  0001 C CNN "Maufaturer"
-	1    8750 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7950 4250 7950 4300
+	8900 4450 9200 4450
 Wire Wire Line
-	7950 4300 8550 4300
+	8700 4550 8700 4450
 Wire Wire Line
-	8150 4200 8150 4100
-Wire Wire Line
-	8500 4100 8550 4100
-Wire Wire Line
-	8500 4100 8500 4900
+	9150 4650 9200 4650
 $Comp
 L Device:CP1_Small C37
 U 1 1 5E53A053
@@ -673,7 +651,7 @@ $EndComp
 Wire Wire Line
 	10000 4450 10000 4550
 Wire Wire Line
-	8550 4200 8150 4200
+	9200 4550 8700 4550
 Wire Wire Line
 	2250 4450 2250 4600
 Wire Wire Line
@@ -871,19 +849,8 @@ F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
 	1    4700 1600
 	0    1    1    0   
 $EndComp
-Text Notes 6050 3350 0    50   ~ 0
+Text Notes 8150 4150 0    50   ~ 0
 Short 1 & 2, 5V from 12V to 5V converter\nShort 2 & 3, 5V from USB
-$Comp
-L Aardonyx-rescue:VCC5V-Aardonyx-rescue #PWR092
-U 1 1 5F41BD16
-P 7700 4900
-F 0 "#PWR092" H 7850 4850 50  0001 C CNN
-F 1 "VCC5V" H 7705 5075 50  0000 C CNN
-F 2 "" H 7700 4900 50  0001 C CNN
-F 3 "" H 7700 4900 50  0001 C CNN
-	1    7700 4900
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:VCC5V-Aardonyx-rescue #PWR0125
 U 1 1 5F41E343
@@ -901,7 +868,7 @@ U 1 1 5F423AEC
 P 10150 6050
 F 0 "TP5" V 10104 6238 50  0000 L CNN
 F 1 "TestPoint" V 10195 6238 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 10350 6050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10350 6050 50  0001 C CNN
 F 3 "" H 10350 6050 50  0001 C CNN
 	1    10150 6050
 	0    1    1    0   
@@ -1277,20 +1244,74 @@ $EndBitmap
 $Comp
 L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR0166
 U 1 1 5F47ABB3
-P 7950 4250
-F 0 "#PWR0166" H 8100 4200 50  0001 C CNN
-F 1 "VBUS" H 7955 4425 50  0000 C CNN
-F 2 "" H 7950 4250 50  0001 C CNN
-F 3 "" H 7950 4250 50  0001 C CNN
-	1    7950 4250
+P 8900 4450
+F 0 "#PWR0166" H 9050 4400 50  0001 C CNN
+F 1 "VBUS" H 8905 4625 50  0000 C CNN
+F 2 "" H 8900 4450 50  0001 C CNN
+F 3 "" H 8900 4450 50  0001 C CNN
+	1    8900 4450
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	6000 3150 7750 3150
+	8100 3950 9850 3950
 Wire Notes Line
-	7750 3150 7750 3350
+	9850 3950 9850 4150
 Wire Notes Line
-	7750 3350 6000 3350
+	9850 4150 8100 4150
 Wire Notes Line
-	7750 3850 7750 3650
+	8100 4150 8100 3950
+$Comp
+L Aardonyx-rescue:R_US-aardonyx P_R3
+U 1 1 5EF6EBAD
+P 8900 4900
+AR Path="/5DB8A7DC/5EF6EBAD" Ref="P_R3"  Part="1" 
+AR Path="/5E6E93B2/5EF6EBAD" Ref="P_R?"  Part="1" 
+F 0 "P_R3" V 8850 4550 50  0000 L CNN
+F 1 "0.02E,2512" V 8950 5050 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric" V 8940 4890 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/PA2512FKF7W0R002E/YAG2142CT-ND/5139590" H 8900 4900 50  0001 C CNN
+F 4 "RES 0.002 OHM 1% 2W 2512" H 8900 4900 50  0001 C CNN "Description"
+F 5 "YAG2142CT-ND" H 8900 4900 50  0001 C CNN "Digikey PartNumber"
+F 6 "PA2512FKF7W0R002E" H 8900 4900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Yageo" H 8900 4900 50  0001 C CNN "Maufaturer"
+	1    8900 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9150 4900 9050 4900
+Wire Wire Line
+	8500 4900 8750 4900
+Wire Wire Line
+	9150 4650 9150 4900
+$Comp
+L Aardonyx-rescue:Conn_1x3_M-aardonyx J?
+U 1 1 5E52467C
+P 9400 4550
+AR Path="/5D8B37DE/5E52467C" Ref="J?"  Part="1" 
+AR Path="/5DB8A7DC/5E52467C" Ref="J6"  Part="1" 
+AR Path="/5E6E93B2/5E52467C" Ref="J?"  Part="1" 
+F 0 "J6" H 9400 4750 50  0000 L CNN
+F 1 "Conn_1x3_M" H 9300 4350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9400 4550 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 9400 4550 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 9400 4550 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 9400 4550 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 9400 4550 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 9400 4550 50  0001 C CNN "Maufaturer"
+	1    9400 4550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8100 4750 8100 4900
+$Comp
+L Aardonyx-rescue:VCC5V #PWR?
+U 1 1 5F02C564
+P 8100 4750
+F 0 "#PWR?" H 8250 4700 50  0001 C CNN
+F 1 "VCC5V" H 8105 4923 50  0000 C CNN
+F 2 "" H 8100 4750 50  0001 C CNN
+F 3 "" H 8100 4750 50  0001 C CNN
+	1    8100 4750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -198,32 +198,24 @@ $EndComp
 $Comp
 L Aardonyx-rescue:C_Small-aardonyx C7
 U 1 1 5DBA0960
-P 4150 3100
-F 0 "C7" H 4150 3200 50  0000 L CNN
-F 1 "0.1UF,0402" V 4050 2900 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4150 3100 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4150 3100 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 4150 3100 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 4150 3100 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 4150 3100 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 4150 3100 50  0001 C CNN "Maufaturer"
-	1    4150 3100
-	1    0    0    -1  
+P 3100 2450
+F 0 "C7" H 3100 2550 50  0000 L CNN
+F 1 "0.1UF,0402" V 3000 2250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3100 2450 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3100 2450 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3100 2450 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3100 2450 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3100 2450 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3100 2450 50  0001 C CNN "Maufaturer"
+	1    3100 2450
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4450 2850 3850 2850
 Wire Wire Line
 	3550 2850 3550 3000
 Wire Wire Line
 	3850 3000 3850 2850
-Connection ~ 3850 2850
 Wire Wire Line
 	3850 2850 3550 2850
-Wire Wire Line
-	4150 3000 4150 2650
-Wire Wire Line
-	4150 2650 4450 2650
-Connection ~ 4150 2650
 Connection ~ 3550 2850
 Wire Wire Line
 	4350 6850 4350 7050
@@ -280,17 +272,6 @@ F 1 "V3P3" H 3305 1225 50  0000 C CNN
 F 2 "" H 3300 1050 50  0001 C CNN
 F 3 "" H 3300 1050 50  0001 C CNN
 	1    3300 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR04
-U 1 1 5E3E23EC
-P 2950 2800
-F 0 "#PWR04" H 3100 2750 50  0001 C CNN
-F 1 "VCORE_FTDI" H 2955 2975 50  0000 C CNN
-F 2 "" H 2950 2800 50  0001 C CNN
-F 3 "" H 2950 2800 50  0001 C CNN
-	1    2950 2800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -352,14 +333,9 @@ Wire Wire Line
 Wire Wire Line
 	3750 1350 4050 1350
 Wire Wire Line
-	3300 2650 4150 2650
-Wire Wire Line
 	3300 1050 3300 1350
 Wire Wire Line
 	3550 1800 3300 1800
-Connection ~ 3300 1800
-Wire Wire Line
-	3300 1800 3300 2650
 Wire Wire Line
 	3550 1350 3300 1350
 Connection ~ 3300 1350
@@ -378,17 +354,12 @@ TRST
 Wire Wire Line
 	3550 3200 3550 3300
 Wire Wire Line
-	4150 3300 4150 3200
+	3300 2450 3200 2450
 Wire Wire Line
 	3550 3300 3850 3300
 Connection ~ 3550 3300
 Wire Wire Line
-	3550 3300 3550 3350
-Wire Wire Line
 	3850 3200 3850 3300
-Connection ~ 3850 3300
-Wire Wire Line
-	3850 3300 4150 3300
 Connection ~ 6150 2250
 Connection ~ 5650 2250
 Wire Wire Line
@@ -404,17 +375,6 @@ F 1 "V3P3" H 6155 2225 50  0000 C CNN
 F 2 "" H 6150 2050 50  0001 C CNN
 F 3 "" H 6150 2050 50  0001 C CNN
 	1    6150 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR011
-U 1 1 5E3E1553
-P 5650 2050
-F 0 "#PWR011" H 5800 2000 50  0001 C CNN
-F 1 "VCORE_FTDI" H 5655 2225 50  0000 C CNN
-F 2 "" H 5650 2050 50  0001 C CNN
-F 3 "" H 5650 2050 50  0001 C CNN
-	1    5650 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -479,17 +439,6 @@ Wire Wire Line
 Connection ~ 9350 1550
 Wire Wire Line
 	9350 1550 9600 1550
-$Comp
-L Aardonyx-rescue:VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR013
-U 1 1 5E454E04
-P 9100 1050
-F 0 "#PWR013" H 9250 1000 50  0001 C CNN
-F 1 "VCORE_FTDI" H 9105 1225 50  0000 C CNN
-F 2 "" H 9100 1050 50  0001 C CNN
-F 3 "" H 9100 1050 50  0001 C CNN
-	1    9100 1050
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR014
 U 1 1 5E456D74
@@ -1432,7 +1381,7 @@ U 1 1 5E8C6648
 P 6900 6250
 F 0 "TP1" V 6900 6438 50  0000 L CNN
 F 1 "TestPoint" V 6945 6438 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 7100 6250 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7100 6250 50  0001 C CNN
 F 3 "~" H 7100 6250 50  0001 C CNN
 	1    6900 6250
 	0    1    1    0   
@@ -1443,7 +1392,7 @@ U 1 1 5E8D220A
 P 6900 6350
 F 0 "TP2" V 6900 6538 50  0000 L CNN
 F 1 "TestPoint" V 6945 6538 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 7100 6350 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7100 6350 50  0001 C CNN
 F 3 "~" H 7100 6350 50  0001 C CNN
 	1    6900 6350
 	0    1    1    0   
@@ -1799,28 +1748,6 @@ USB_DP
 Text Label 1700 1850 0    50   ~ 0
 USB_DM
 $Comp
-L Aardonyx-rescue:VBUS_USB1-Aardonyx-rescue #PWR032
-U 1 1 5F2114E5
-P 1550 850
-F 0 "#PWR032" H 1700 800 50  0001 C CNN
-F 1 "VBUS_USB1" H 1555 1025 50  0000 C CNN
-F 2 "" H 1550 850 50  0001 C CNN
-F 3 "" H 1550 850 50  0001 C CNN
-	1    1550 850 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VBUS_USB2-Aardonyx-rescue #PWR040
-U 1 1 5F2124AB
-P 2000 2700
-F 0 "#PWR040" H 2150 2650 50  0001 C CNN
-F 1 "VBUS_USB2" H 2005 2875 50  0000 C CNN
-F 2 "" H 2000 2700 50  0001 C CNN
-F 3 "" H 2000 2700 50  0001 C CNN
-	1    2000 2700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:Conn_1x3_M-aardonyx J?
 U 1 1 5F28F40A
 P 2950 1650
@@ -1847,30 +1774,8 @@ Wire Wire Line
 	1700 1750 1450 1750
 Wire Wire Line
 	1700 1850 1450 1850
-$Comp
-L Aardonyx-rescue:VBUS_USB1-Aardonyx-rescue #PWR047
-U 1 1 5F343AAF
-P 2400 1550
-F 0 "#PWR047" H 2550 1500 50  0001 C CNN
-F 1 "VBUS_USB1" H 2405 1725 50  0000 C CNN
-F 2 "" H 2400 1550 50  0001 C CNN
-F 3 "" H 2400 1550 50  0001 C CNN
-	1    2400 1550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2400 1550 2750 1550
-$Comp
-L Aardonyx-rescue:VBUS_USB2-Aardonyx-rescue #PWR042
-U 1 1 5F345441
-P 2250 1750
-F 0 "#PWR042" H 2400 1700 50  0001 C CNN
-F 1 "VBUS_USB2" H 2255 1924 50  0000 C CNN
-F 2 "" H 2250 1750 50  0001 C CNN
-F 3 "" H 2250 1750 50  0001 C CNN
-	1    2250 1750
-	-1   0    0    1   
-$EndComp
 $Comp
 L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR044
 U 1 1 5F3CB671
@@ -1955,7 +1860,7 @@ U 1 1 5F54E4A3
 P 3050 4450
 F 0 "TP6" V 3050 4750 50  0000 R CNN
 F 1 "TestPoint" V 3000 4950 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3250 4450 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3250 4450 50  0001 C CNN
 F 3 "" H 3250 4450 50  0001 C CNN
 	1    3050 4450
 	0    -1   -1   0   
@@ -2105,4 +2010,115 @@ F 7 "Vishay Dale" H 2800 4700 50  0001 C CNN "Maufaturer"
 $EndComp
 Text Label 2350 4700 0    50   ~ 0
 RESET
+Wire Wire Line
+	3550 3300 3550 3450
+Wire Wire Line
+	4450 2850 3850 2850
+Wire Wire Line
+	3000 2450 2650 2450
+Wire Wire Line
+	3300 2650 4450 2650
+Connection ~ 3850 2850
+Wire Wire Line
+	3300 2450 3300 2650
+$Comp
+L Aardonyx-rescue:GND-aardonyx #PWR0184
+U 1 1 5EFD404B
+P 2650 2450
+F 0 "#PWR0184" H 2650 2200 50  0001 C CNN
+F 1 "GND" H 2655 2277 50  0000 C CNN
+F 2 "" H 2650 2450 50  0001 C CNN
+F 3 "" H 2650 2450 50  0001 C CNN
+	1    2650 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3-aardonyx #PWR0185
+U 1 1 5EFD5776
+P 3300 2450
+F 0 "#PWR0185" H 3450 2400 50  0001 C CNN
+F 1 "V3P3" H 3305 2625 50  0000 C CNN
+F 2 "" H 3300 2450 50  0001 C CNN
+F 3 "" H 3300 2450 50  0001 C CNN
+	1    3300 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 2450
+$Comp
+L Aardonyx-rescue:VBUS_USB2 #PWR0187
+U 1 1 5EFF1550
+P 2000 2700
+F 0 "#PWR0187" H 2150 2650 50  0001 C CNN
+F 1 "VBUS_USB2" H 2005 2873 50  0000 C CNN
+F 2 "" H 2000 2700 50  0001 C CNN
+F 3 "" H 2000 2700 50  0001 C CNN
+	1    2000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VBUS_USB2 #PWR0188
+U 1 1 5EFF366E
+P 2250 1750
+F 0 "#PWR0188" H 2400 1700 50  0001 C CNN
+F 1 "VBUS_USB2" H 2255 1923 50  0000 C CNN
+F 2 "" H 2250 1750 50  0001 C CNN
+F 3 "" H 2250 1750 50  0001 C CNN
+	1    2250 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Aardonyx-rescue:VBUS_USB1 #PWR0189
+U 1 1 5EFF6B2A
+P 1550 850
+F 0 "#PWR0189" H 1700 800 50  0001 C CNN
+F 1 "VBUS_USB1" H 1555 1023 50  0000 C CNN
+F 2 "" H 1550 850 50  0001 C CNN
+F 3 "" H 1550 850 50  0001 C CNN
+	1    1550 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VBUS_USB1 #PWR0190
+U 1 1 5EFF7C90
+P 2400 1550
+F 0 "#PWR0190" H 2550 1500 50  0001 C CNN
+F 1 "VBUS_USB1" H 2405 1723 50  0000 C CNN
+F 2 "" H 2400 1550 50  0001 C CNN
+F 3 "" H 2400 1550 50  0001 C CNN
+	1    2400 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VCORE_FTDI #PWR0191
+U 1 1 5F010E56
+P 2950 2800
+F 0 "#PWR0191" H 3100 2750 50  0001 C CNN
+F 1 "VCORE_FTDI" H 2955 2973 50  0000 C CNN
+F 2 "" H 2950 2800 50  0001 C CNN
+F 3 "" H 2950 2800 50  0001 C CNN
+	1    2950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VCORE_FTDI #PWR0192
+U 1 1 5F011F32
+P 5650 2050
+F 0 "#PWR0192" H 5800 2000 50  0001 C CNN
+F 1 "VCORE_FTDI" H 5655 2223 50  0000 C CNN
+F 2 "" H 5650 2050 50  0001 C CNN
+F 3 "" H 5650 2050 50  0001 C CNN
+	1    5650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VCORE_FTDI #PWR?
+U 1 1 5F026E9B
+P 9100 1050
+F 0 "#PWR?" H 9250 1000 50  0001 C CNN
+F 1 "VCORE_FTDI" H 9105 1223 50  0000 C CNN
+F 2 "" H 9100 1050 50  0001 C CNN
+F 3 "" H 9100 1050 50  0001 C CNN
+	1    9100 1050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
