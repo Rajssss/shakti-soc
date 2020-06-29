@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,20 +15,6 @@ Comment3 ""
 Comment4 "SKT32E - 12V to 5V converter"
 $EndDescr
 Connection ~ 2250 4600
-$Comp
-L Aardonyx-rescue:V12P0-aardonyx-Aardonyx-rescue #PWR036
-U 1 1 5E79C895
-P 2250 4450
-AR Path="/5DB8A7DC/5E79C895" Ref="#PWR036"  Part="1" 
-AR Path="/5E6E93B2/5E79C895" Ref="#PWR?"  Part="1" 
-AR Path="/5E79C895" Ref="#PWR036"  Part="1" 
-F 0 "#PWR036" H 2400 4400 50  0001 C CNN
-F 1 "V12P0" H 2255 4625 50  0000 C CNN
-F 2 "" H 2250 4450 50  0001 C CNN
-F 3 "" H 2250 4450 50  0001 C CNN
-	1    2250 4450
-	1    0    0    -1  
-$EndComp
 Connection ~ 8500 4900
 Connection ~ 8500 5500
 Wire Wire Line
@@ -346,19 +333,6 @@ F 7 "Kemet" H 4450 5700 50  0001 C CNN "Maufaturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR048
-U 1 1 5DC202F3
-P 8700 4450
-AR Path="/5DB8A7DC/5DC202F3" Ref="#PWR048"  Part="1" 
-AR Path="/5E6E93B2/5DC202F3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR048" H 8850 4400 50  0001 C CNN
-F 1 "V5P0" H 8695 4625 50  0000 C CNN
-F 2 "" H 8700 4450 50  0001 C CNN
-F 3 "" H 8700 4450 50  0001 C CNN
-	1    8700 4450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:TPS54627DDAR-aardonyx U4
 U 1 1 5DC17243
 P 5300 5050
@@ -388,20 +362,6 @@ Wire Wire Line
 	3700 1700 3850 1700
 Wire Wire Line
 	5450 1600 5450 1750
-$Comp
-L Aardonyx-rescue:V12P0-aardonyx-Aardonyx-rescue #PWR045
-U 1 1 5E820603
-P 7750 1350
-AR Path="/5DB8A7DC/5E820603" Ref="#PWR045"  Part="1" 
-AR Path="/5E6E93B2/5E820603" Ref="#PWR?"  Part="1" 
-AR Path="/5E820603" Ref="#PWR045"  Part="1" 
-F 0 "#PWR045" H 7900 1300 50  0001 C CNN
-F 1 "V12P0" H 7755 1525 50  0000 C CNN
-F 2 "" H 7750 1350 50  0001 C CNN
-F 3 "" H 7750 1350 50  0001 C CNN
-	1    7750 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5450 2150 5450 1950
 $Comp
@@ -493,8 +453,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 2150 5450 2150
 Connection ~ 5450 2150
-Wire Wire Line
-	8900 4450 9200 4450
 Wire Wire Line
 	8700 4550 8700 4450
 Wire Wire Line
@@ -617,19 +575,6 @@ F 6 "67-1002-1-ND" H 10000 5150 50  0001 C CNN "Digikey PartNumber"
 F 7 "SML-LX1206GW-TR" H 10000 5150 50  0001 C CNN "Manufactured Part Number"
 	1    10000 5150
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR050
-U 1 1 5E699359
-P 10000 4450
-AR Path="/5DB8A7DC/5E699359" Ref="#PWR050"  Part="1" 
-AR Path="/5E6E93B2/5E699359" Ref="#PWR?"  Part="1" 
-F 0 "#PWR050" H 10150 4400 50  0001 C CNN
-F 1 "V5P0" H 9995 4625 50  0000 C CNN
-F 2 "" H 10000 4450 50  0001 C CNN
-F 3 "" H 10000 4450 50  0001 C CNN
-	1    10000 4450
-	1    0    0    -1  
 $EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R29
@@ -851,17 +796,6 @@ F 7 "Vishay BC Components" H 4700 1600 50  0001 C CNN "Maufaturer"
 $EndComp
 Text Notes 8150 4150 0    50   ~ 0
 Short 1 & 2, 5V from 12V to 5V converter\nShort 2 & 3, 5V from USB
-$Comp
-L Aardonyx-rescue:VCC5V-Aardonyx-rescue #PWR0125
-U 1 1 5F41E343
-P 9650 6050
-F 0 "#PWR0125" H 9800 6000 50  0001 C CNN
-F 1 "VCC5V" H 9655 6225 50  0000 C CNN
-F 2 "" H 9650 6050 50  0001 C CNN
-F 3 "" H 9650 6050 50  0001 C CNN
-	1    9650 6050
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Aardonyx-rescue:TestPoint-aardonyx TP5
 U 1 1 5F423AEC
@@ -1241,17 +1175,6 @@ A3 52 A9 70 D7 D6 D6 76 EE DC B9 00 80 6E F9 E2 A4 05 66 D6 18 03 C0 A9 53 A7 1C
 27 E8 38 1E 29 78 64 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-$Comp
-L Aardonyx-rescue:VBUS-Aardonyx-rescue #PWR0166
-U 1 1 5F47ABB3
-P 8900 4450
-F 0 "#PWR0166" H 9050 4400 50  0001 C CNN
-F 1 "VBUS" H 8905 4625 50  0000 C CNN
-F 2 "" H 8900 4450 50  0001 C CNN
-F 3 "" H 8900 4450 50  0001 C CNN
-	1    8900 4450
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	8100 3950 9850 3950
 Wire Notes Line
@@ -1304,14 +1227,86 @@ $EndComp
 Wire Wire Line
 	8100 4750 8100 4900
 $Comp
-L Aardonyx-rescue:VCC5V #PWR?
+L Aardonyx-rescue:VCC5V #PWR0225
 U 1 1 5F02C564
 P 8100 4750
-F 0 "#PWR?" H 8250 4700 50  0001 C CNN
+F 0 "#PWR0225" H 8250 4700 50  0001 C CNN
 F 1 "VCC5V" H 8105 4923 50  0000 C CNN
 F 2 "" H 8100 4750 50  0001 C CNN
 F 3 "" H 8100 4750 50  0001 C CNN
 	1    8100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V12P0 #PWR0226
+U 1 1 5EFA7796
+P 7750 1350
+F 0 "#PWR0226" H 7900 1300 50  0001 C CNN
+F 1 "V12P0" H 7755 1523 50  0000 C CNN
+F 2 "" H 7750 1350 50  0001 C CNN
+F 3 "" H 7750 1350 50  0001 C CNN
+	1    7750 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V12P0 #PWR0227
+U 1 1 5EFA86DC
+P 2250 4450
+F 0 "#PWR0227" H 2400 4400 50  0001 C CNN
+F 1 "V12P0" H 2255 4623 50  0000 C CNN
+F 2 "" H 2250 4450 50  0001 C CNN
+F 3 "" H 2250 4450 50  0001 C CNN
+	1    2250 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0228
+U 1 1 5EFB992C
+P 8700 4450
+F 0 "#PWR0228" H 8850 4400 50  0001 C CNN
+F 1 "V5P0" H 8705 4623 50  0000 C CNN
+F 2 "" H 8700 4450 50  0001 C CNN
+F 3 "" H 8700 4450 50  0001 C CNN
+	1    8700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0229
+U 1 1 5EFBBE6F
+P 10000 4450
+F 0 "#PWR0229" H 10150 4400 50  0001 C CNN
+F 1 "V5P0" H 10005 4623 50  0000 C CNN
+F 2 "" H 10000 4450 50  0001 C CNN
+F 3 "" H 10000 4450 50  0001 C CNN
+	1    10000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:VBUS #PWR?
+U 1 1 5F00BE83
+P 8900 4450
+AR Path="/5D8B3761/5F00BE83" Ref="#PWR?"  Part="1" 
+AR Path="/5DB8A7DC/5F00BE83" Ref="#PWR0230"  Part="1" 
+F 0 "#PWR0230" H 9050 4400 50  0001 C CNN
+F 1 "VBUS" H 8905 4623 50  0000 C CNN
+F 2 "" H 8900 4450 50  0001 C CNN
+F 3 "" H 8900 4450 50  0001 C CNN
+	1    8900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4450 9200 4450
+Wire Wire Line
+	9650 5900 9650 6050
+$Comp
+L Aardonyx-rescue:VCC5V #PWR0231
+U 1 1 5F47499F
+P 9650 5900
+F 0 "#PWR0231" H 9800 5850 50  0001 C CNN
+F 1 "VCC5V" H 9655 6073 50  0000 C CNN
+F 2 "" H 9650 5900 50  0001 C CNN
+F 3 "" H 9650 5900 50  0001 C CNN
+	1    9650 5900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

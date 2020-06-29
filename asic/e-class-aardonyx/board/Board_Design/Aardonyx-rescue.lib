@@ -1780,11 +1780,11 @@ X Shield 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# V12P0-aardonyx
+# V12P0
 #
-DEF V12P0-aardonyx #PWR 0 0 Y Y 1 F P
+DEF V12P0 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V12P0-aardonyx" 0 150 50 H V C CNN
+F1 "V12P0" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1794,24 +1794,11 @@ X V12P0 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# V12P0-aardonyx-Aardonyx-rescue
+# V1P8
 #
-DEF V12P0-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
+DEF V1P8 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V12P0-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
-# V1P8-aardonyx
-#
-DEF V1P8-aardonyx #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V1P8-aardonyx" 0 150 50 H V C CNN
+F1 "V1P8" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1821,43 +1808,17 @@ X V1P8 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# V1P8-skt32e_asic
+# V3P3
 #
-DEF V1P8-skt32e_asic #PWR 0 0 Y Y 1 F P
+DEF V3P3 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V1P8-skt32e_asic" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
-# V3P3-aardonyx
-#
-DEF V3P3-aardonyx #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V3P3-aardonyx" 0 150 50 H V C CNN
+F1 "V3P3" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -50 100 50 100 N
 P 2 0 1 0 0 100 0 0 N
 X V3P3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# V3P3-skt32e_asic
-#
-DEF V3P3-skt32e_asic #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V3P3-skt32e_asic" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -1875,20 +1836,6 @@ X V5P0 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# V5P0-aardonyx
-#
-DEF V5P0-aardonyx #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "V5P0-aardonyx" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-P 2 0 1 0 0 100 0 0 N
-X V5P0 1 0 0 0 L 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # VAC
 #
 DEF VAC #PWR 0 0 Y Y 1 F P
@@ -1900,19 +1847,6 @@ DRAW
 P 2 0 1 0 -50 100 50 100 N
 P 2 0 1 0 0 0 0 100 N
 X VAC 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# VAC-Aardonyx-rescue
-#
-DEF VAC-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VAC-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -1930,19 +1864,6 @@ X VBUS 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# VBUS-Aardonyx-rescue
-#
-DEF VBUS-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VBUS-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
 # VBUS_USB1
 #
 DEF VBUS_USB1 #PWR 0 0 Y Y 1 F P
@@ -1954,19 +1875,6 @@ DRAW
 P 2 0 1 0 -50 100 50 100 N
 P 2 0 1 0 0 0 0 100 N
 X VBUS_USB1 1 0 0 0 U 50 50 0 1 W N
-ENDDRAW
-ENDDEF
-#
-# VBUS_USB1-Aardonyx-rescue
-#
-DEF VBUS_USB1-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VBUS_USB1-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -1984,19 +1892,6 @@ X VBUS_USB2 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# VBUS_USB2-Aardonyx-rescue
-#
-DEF VBUS_USB2-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VBUS_USB2-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
 # VCC5V
 #
 DEF VCC5V #PWR 0 0 Y Y 1 F P
@@ -2008,19 +1903,6 @@ DRAW
 P 2 0 1 0 -50 100 50 100 N
 P 2 0 1 0 0 0 0 100 N
 X VCC5V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# VCC5V-Aardonyx-rescue
-#
-DEF VCC5V-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VCC5V-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -2039,43 +1921,17 @@ X VCORE_FTDI 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# VCORE_FTDI-aardonyx-Aardonyx-rescue
+# VREF_AH
 #
-DEF VCORE_FTDI-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
+DEF VREF_AH #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VCORE_FTDI-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
-# VREF_AH-aardonyx
-#
-DEF VREF_AH-aardonyx #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VREF_AH-aardonyx" 0 150 50 H V C CNN
+F1 "VREF_AH" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -50 100 50 100 N
 P 2 0 1 0 0 0 0 100 N
 X VREF_AH 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# VREF_AH-aardonyx-Aardonyx-rescue
-#
-DEF VREF_AH-aardonyx-Aardonyx-rescue #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 150 -50 50 H I C CNN
-F1 "VREF_AH-aardonyx-Aardonyx-rescue" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-X ~ ~ 0 0 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -17,36 +18,6 @@ Wire Wire Line
 	6950 1650 6950 1550
 Wire Wire Line
 	6950 1550 7450 1550
-$Comp
-L Aardonyx-rescue:IS25LP256x-xM-aardonyx U6
-U 1 1 5DEF65AC
-P 2750 1950
-F 0 "U6" H 2400 2400 50  0000 C CNN
-F 1 "IS25LP256x-xM" H 3150 1500 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 2800 2550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/issi-integrated-silicon-solution-inc/IS25LP256D-JMLE/706-1611-ND/7567432" H 2800 1450 50  0001 C CNN
-F 4 "IC FLASH 256M SPI 133MHZ 16SOIC" H 2750 1950 50  0001 C CNN "Description"
-F 5 "706-1611-ND" H 2750 1950 50  0001 C CNN "Digikey PartNumber"
-F 6 "IS25LP256D-JMLE" H 2750 1950 50  0001 C CNN "Manufactured Part Number"
-F 7 "ISSI, Integrated Silicon Solution Inc" H 2750 1950 50  0001 C CNN "Maufaturer"
-	1    2750 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:CAT24M01WI-GT3-aardonyx U5
-U 1 1 5DF07821
-P 1500 5650
-F 0 "U5" H 1200 6150 50  0000 C CNN
-F 1 "CAT24M01WI-GT3" H 1900 5150 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1500 5650 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/CAT24M01WI-GT3/CAT24M01WI-GT3OSCT-ND/2698362" H 1500 5650 50  0001 C CNN
-F 4 "IC EEPROM 1M I2C 1MHZ 8SOIC" H 1500 5650 50  0001 C CNN "Description"
-F 5 "CAT24M01XI-T2OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
-F 6 "CAT24M01XI-T2" H 1500 5650 50  0001 C CNN "Manufactured Part Number"
-F 7 "ON Semiconductor" H 1500 5650 50  0001 C CNN "Maufaturer"
-	1    1500 5650
-	1    0    0    -1  
-$EndComp
 Text Label 5900 2250 0    39   ~ 0
 IO_0
 Text Label 5900 2350 0    39   ~ 0
@@ -79,21 +50,6 @@ Text Label 7700 2950 2    39   ~ 0
 AH_IO_7
 Text Label 7700 2850 2    39   ~ 0
 AH_IO_6
-$Comp
-L Aardonyx-rescue:LSF0108PWR-aardonyx U9
-U 1 1 5E250FD7
-P 9750 2600
-F 0 "U9" H 9400 3350 50  0000 C CNN
-F 1 "LSF0108PWR" H 10050 1850 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9750 2600 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 9750 2600 50  0001 C CNN
-F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 9750 2600 50  0001 C CNN "Description"
-F 5 "296-37828-1-ND" H 9750 2600 50  0001 C CNN "Digikey PartNumber"
-F 6 "LSF0108PWR" H 9750 2600 50  0001 C CNN "Manufactured Part Number"
-F 7 "Texas Instruments" H 9750 2600 50  0001 C CNN "Maufaturer"
-	1    9750 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9900 1700 9900 1600
 Wire Wire Line
@@ -130,47 +86,6 @@ Text Label 10750 3000 2    39   ~ 0
 AH_I2C1_SDA
 Text Label 10750 2900 2    39   ~ 0
 AH_I2C1_SCL
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR087
-U 1 1 5E251C55
-P 9600 1100
-F 0 "#PWR087" H 9750 1050 50  0001 C CNN
-F 1 "V3P3" H 9605 1275 50  0000 C CNN
-F 2 "" H 9600 1100 50  0001 C CNN
-F 3 "" H 9600 1100 50  0001 C CNN
-	1    9600 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R36
-U 1 1 5E2531D9
-P 6950 1350
-F 0 "R36" H 7018 1396 50  0000 L CNN
-F 1 "200KE,0402" H 7018 1305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 6990 1340 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 6950 1350 50  0001 C CNN
-F 4 "RES 200K OHM 0.1% 1/16W 0402 " H 6950 1350 50  0001 C CNN "Description"
-F 5 "2019-RN73H1ETTP2003B25CT-ND " H 6950 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "RN73H1ETTP2003B25" H 6950 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 6950 1350 50  0001 C CNN "Maufaturer"
-	1    6950 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C52
-U 1 1 5E253D0A
-P 7550 1300
-F 0 "C52" H 7642 1346 50  0000 L CNN
-F 1 "0.1UF,0402" H 7642 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7550 1300 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 7550 1300 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 7550 1300 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 7550 1300 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 7550 1300 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 7550 1300 50  0001 C CNN "Maufaturer"
-	1    7550 1300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7450 2050 7450 1550
 Wire Wire Line
@@ -198,27 +113,9 @@ Wire Wire Line
 Wire Wire Line
 	7550 1100 6950 1100
 Wire Wire Line
-	6950 1050 6950 1100
-Connection ~ 6950 1100
-Wire Wire Line
 	10400 1600 10400 2100
 Wire Wire Line
 	10400 2100 10350 2100
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R37
-U 1 1 5E2602B7
-P 9900 1400
-F 0 "R37" H 9968 1446 50  0000 L CNN
-F 1 "200KE,0402" H 9968 1355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9940 1390 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 9900 1400 50  0001 C CNN
-F 4 "RES 200K OHM 0.1% 1/16W 0402 " H 9900 1400 50  0001 C CNN "Description"
-F 5 "2019-RN73H1ETTP2003B25CT-ND " H 9900 1400 50  0001 C CNN "Digikey PartNumber"
-F 6 "RN73H1ETTP2003B25" H 9900 1400 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 9900 1400 50  0001 C CNN "Maufaturer"
-	1    9900 1400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10500 1450 10500 1550
 Wire Wire Line
@@ -230,25 +127,7 @@ Wire Wire Line
 Wire Wire Line
 	10500 1150 9900 1150
 Wire Wire Line
-	9900 1100 9900 1150
-Connection ~ 9900 1150
-Wire Wire Line
 	9600 1100 9600 1150
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C53
-U 1 1 5E266913
-P 9150 1350
-F 0 "C53" H 9242 1396 50  0000 L CNN
-F 1 "0.1UF,0402" H 9242 1305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9150 1350 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9150 1350 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 9150 1350 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 9150 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 9150 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 9150 1350 50  0001 C CNN "Maufaturer"
-	1    9150 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9150 1450 9150 1550
 Wire Wire Line
@@ -256,23 +135,6 @@ Wire Wire Line
 Wire Wire Line
 	9150 1150 9600 1150
 Connection ~ 9600 1150
-Wire Wire Line
-	9600 1150 9600 1700
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C51
-U 1 1 5E26A35A
-P 6250 1300
-F 0 "C51" H 6342 1346 50  0000 L CNN
-F 1 "0.1UF,0402" H 6342 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6250 1300 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 6250 1300 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 6250 1300 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 6250 1300 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 6250 1300 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 6250 1300 50  0001 C CNN "Maufaturer"
-	1    6250 1300
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR070
 U 1 1 5E26A360
@@ -290,52 +152,9 @@ Wire Wire Line
 	6250 1200 6250 1100
 Wire Wire Line
 	6650 1100 6250 1100
-$Comp
-L Aardonyx-rescue:LSF0108PWR-aardonyx U8
-U 1 1 5DEE23A8
-P 6800 2550
-F 0 "U8" H 6450 3300 50  0000 C CNN
-F 1 "LSF0108PWR" H 7100 1800 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6800 2550 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 6800 2550 50  0001 C CNN
-F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 6800 2550 50  0001 C CNN "Description"
-F 5 "296-37828-1-ND" H 6800 2550 50  0001 C CNN "Digikey PartNumber"
-F 6 "LSF0108PWR" H 6800 2550 50  0001 C CNN "Manufactured Part Number"
-F 7 "Texas Instruments" H 6800 2550 50  0001 C CNN "Maufaturer"
-	1    6800 2550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6650 1100 6650 1650
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR072
-U 1 1 5E27579B
-P 6650 1050
-F 0 "#PWR072" H 6800 1000 50  0001 C CNN
-F 1 "V3P3" H 6655 1225 50  0000 C CNN
-F 2 "" H 6650 1050 50  0001 C CNN
-F 3 "" H 6650 1050 50  0001 C CNN
-	1    6650 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 1050 6650 1100
 Connection ~ 6650 1100
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C54
-U 1 1 5E2602BD
-P 10500 1350
-F 0 "C54" H 10592 1396 50  0000 L CNN
-F 1 "0.1UF,0402" H 10592 1305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 10500 1350 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10500 1350 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 10500 1350 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 10500 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 10500 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 10500 1350 50  0001 C CNN "Maufaturer"
-	1    10500 1350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR074
 U 1 1 5E27D3CE
@@ -387,32 +206,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 6300 1500 6350
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR057
-U 1 1 5E2AB2D6
-P 2750 1000
-F 0 "#PWR057" H 2900 950 50  0001 C CNN
-F 1 "V3P3" H 2755 1175 50  0000 C CNN
-F 2 "" H 2750 1000 50  0001 C CNN
-F 3 "" H 2750 1000 50  0001 C CNN
-	1    2750 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C48
-U 1 1 5E2ABAA3
-P 3300 1200
-F 0 "C48" H 3392 1246 50  0000 L CNN
-F 1 "0.1UF,0402" H 3392 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 1200 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3300 1200 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 3300 1200 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 3300 1200 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 3300 1200 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 3300 1200 50  0001 C CNN "Maufaturer"
-	1    3300 1200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:GND-aardonyx #PWR061
 U 1 1 5E2ACA86
 P 3300 1400
@@ -426,29 +219,12 @@ $EndComp
 Wire Wire Line
 	3300 1300 3300 1400
 Wire Wire Line
-	2750 1000 2750 1050
-Wire Wire Line
 	3300 1100 3300 1050
 Wire Wire Line
 	3300 1050 2750 1050
 Connection ~ 2750 1050
 Wire Wire Line
 	2750 1050 2750 1450
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R32
-U 1 1 5E2B4C89
-P 2150 1350
-F 0 "R32" H 2150 1500 50  0000 L CNN
-F 1 "10KE,0402" V 2050 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2190 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2150 1350 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 2150 1350 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 2150 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 2150 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 2150 1350 50  0001 C CNN "Maufaturer"
-	1    2150 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2150 1950 2150 1500
 Wire Wire Line
@@ -456,17 +232,6 @@ Wire Wire Line
 NoConn ~ 3250 2050
 Wire Wire Line
 	1900 1000 1900 1050
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR054
-U 1 1 5E2E3983
-P 1900 1000
-F 0 "#PWR054" H 2050 950 50  0001 C CNN
-F 1 "V3P3" H 1905 1175 50  0000 C CNN
-F 2 "" H 1900 1000 50  0001 C CNN
-F 3 "" H 1900 1000 50  0001 C CNN
-	1    1900 1000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1900 1050 2150 1050
 Connection ~ 1900 1050
@@ -480,68 +245,12 @@ Wire Wire Line
 	1650 1500 1650 2150
 Wire Wire Line
 	1900 1500 1900 2050
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R30
-U 1 1 5E2C54E1
-P 1650 1350
-F 0 "R30" H 1650 1500 50  0000 L CNN
-F 1 "10KE,0402" V 1550 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1690 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1650 1350 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 1650 1350 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 1650 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 1650 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 1650 1350 50  0001 C CNN "Maufaturer"
-	1    1650 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R31
-U 1 1 5E2C33CD
-P 1900 1350
-F 0 "R31" H 1900 1500 50  0000 L CNN
-F 1 "10KE,0402" V 1800 1050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1940 1340 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1900 1350 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 1900 1350 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 1900 1350 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 1900 1350 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 1900 1350 50  0001 C CNN "Maufaturer"
-	1    1900 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2150 1950 2250 1950
 Wire Wire Line
 	1900 2050 2250 2050
 Wire Wire Line
 	1650 2150 2250 2150
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR052
-U 1 1 5E3046A3
-P 1500 4750
-F 0 "#PWR052" H 1650 4700 50  0001 C CNN
-F 1 "V3P3" H 1505 4925 50  0000 C CNN
-F 2 "" H 1500 4750 50  0001 C CNN
-F 3 "" H 1500 4750 50  0001 C CNN
-	1    1500 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C47
-U 1 1 5E3046A9
-P 2050 5000
-F 0 "C47" H 2142 5046 50  0000 L CNN
-F 1 "0.1UF,0402" V 1950 4700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2050 5000 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2050 5000 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 2050 5000 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 2050 5000 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 2050 5000 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 2050 5000 50  0001 C CNN "Maufaturer"
-	1    2050 5000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR055
 U 1 1 5E3046AF
@@ -578,36 +287,6 @@ Wire Wire Line
 	2050 5750 2450 5750
 Wire Wire Line
 	2450 5000 2450 4850
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R33
-U 1 1 5E31A792
-P 2450 5150
-F 0 "R33" H 2450 5300 50  0000 L CNN
-F 1 "10KE,0402" V 2350 4950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2490 5140 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2450 5150 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 2450 5150 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 2450 5150 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 2450 5150 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 2450 5150 50  0001 C CNN "Maufaturer"
-	1    2450 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R34
-U 1 1 5E31A798
-P 2650 5150
-F 0 "R34" H 2650 5300 50  0000 L CNN
-F 1 "10KE,0402" H 2650 5000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2690 5140 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2650 5150 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 2650 5150 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 2650 5150 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 2650 5150 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 2650 5150 50  0001 C CNN "Maufaturer"
-	1    2650 5150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1500 5000 1500 4800
 Wire Wire Line
@@ -616,27 +295,12 @@ Wire Wire Line
 	2050 4800 2050 4900
 Connection ~ 1500 4800
 Wire Wire Line
-	1500 4800 1500 4750
-Wire Wire Line
 	2050 5100 2050 5200
 Wire Wire Line
 	2450 5300 2450 5750
 Wire Wire Line
 	2450 4850 2650 4850
-Wire Wire Line
-	2450 4850 2450 4750
 Connection ~ 2450 4850
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR056
-U 1 1 5E345B7F
-P 2450 4750
-F 0 "#PWR056" H 2600 4700 50  0001 C CNN
-F 1 "V3P3" H 2455 4925 50  0000 C CNN
-F 2 "" H 2450 4750 50  0001 C CNN
-F 3 "" H 2450 4750 50  0001 C CNN
-	1    2450 4750
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	500  7750 500  500 
 Text Notes 1750 750  0    100  ~ 20
@@ -649,143 +313,8 @@ Wire Notes Line
 	11200 500  11200 6500
 Wire Notes Line
 	500  500  11200 500 
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR079
-U 1 1 5DCCD713
-P 7700 5850
-F 0 "#PWR079" H 7850 5800 50  0001 C CNN
-F 1 "V3P3" H 7705 6025 50  0000 C CNN
-F 2 "" H 7700 5850 50  0001 C CNN
-F 3 "" H 7700 5850 50  0001 C CNN
-	1    7700 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR076
-U 1 1 5DCD16BF
-P 6950 1050
-F 0 "#PWR076" H 7100 1000 50  0001 C CNN
-F 1 "VREF_AH" H 6955 1225 50  0000 C CNN
-F 2 "" H 6950 1050 50  0001 C CNN
-F 3 "" H 6950 1050 50  0001 C CNN
-	1    6950 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR080
-U 1 1 5DCD1AC5
-P 8000 5850
-F 0 "#PWR080" H 8150 5800 50  0001 C CNN
-F 1 "V5P0" H 8005 6025 50  0000 C CNN
-F 2 "" H 8000 5850 50  0001 C CNN
-F 3 "" H 8000 5850 50  0001 C CNN
-	1    8000 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR089
-U 1 1 5DCDE768
-P 9900 1100
-F 0 "#PWR089" H 10050 1050 50  0001 C CNN
-F 1 "VREF_AH" H 9905 1275 50  0000 C CNN
-F 2 "" H 9900 1100 50  0001 C CNN
-F 3 "" H 9900 1100 50  0001 C CNN
-	1    9900 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR081
-U 1 1 5DCEB777
-P 8300 5850
-F 0 "#PWR081" H 8450 5800 50  0001 C CNN
-F 1 "VREF_AH" H 8305 6025 50  0000 C CNN
-F 2 "" H 8300 5850 50  0001 C CNN
-F 3 "" H 8300 5850 50  0001 C CNN
-	1    8300 5850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8000 5850 8000 6150
-Wire Wire Line
-	7700 5850 7700 5950
-Wire Wire Line
-	8300 5850 8300 6050
-$Comp
-L Aardonyx-rescue:Conn_1x6_F-aardonyx J14
-U 1 1 5DD23867
-P 9700 5900
-F 0 "J14" H 9650 6200 50  0000 L CNN
-F 1 "Conn_1x6_F" H 9550 5500 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 9700 5900 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 9700 5900 50  0001 C CNN
-F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 9700 5900 50  0001 C CNN "Description"
-F 5 "609-3558-ND" H 9700 5900 50  0001 C CNN "Digikey PartNumber"
-F 6 "75915-306LF" H 9700 5900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 9700 5900 50  0001 C CNN "Maufaturer"
-	1    9700 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:Conn_1x8-aardonyx J16
-U 1 1 5DD2482F
-P 10750 5900
-F 0 "J16" H 10700 6300 50  0000 L CNN
-F 1 "Conn_1x8_F" H 10600 5400 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10750 5900 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 10750 5900 50  0001 C CNN
-F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 10750 5900 50  0001 C CNN "Description"
-F 5 "609-3589-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
-F 6 "68685-308LF" H 10750 5900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 10750 5900 50  0001 C CNN "Maufaturer"
-	1    10750 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:Conn_1x10-aardonyx J15
-U 1 1 5DD25582
-P 10750 4750
-F 0 "J15" H 10700 5250 50  0000 L CNN
-F 1 "Conn_1x10" H 10600 4150 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 10750 4750 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68685-310LF/609-3584-ND/1525202" H 10750 4750 50  0001 C CNN
-F 4 "CONN RCPT 10POS 0.1 GOLD PCB" H 10750 4750 50  0001 C CNN "Description"
-F 5 "609-3584-ND" H 10750 4750 50  0001 C CNN "Digikey PartNumber"
-F 6 "68685-310LF" H 10750 4750 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 10750 4750 50  0001 C CNN "Maufaturer"
-	1    10750 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:Conn_1x8-aardonyx J13
-U 1 1 5DD27E26
-P 9650 4900
-F 0 "J13" H 9600 5300 50  0000 L CNN
-F 1 "Conn_1x8_F" H 9550 4400 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 9650 4900 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 9650 4900 50  0001 C CNN
-F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 9650 4900 50  0001 C CNN "Description"
-F 5 "609-3589-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
-F 6 "68685-308LF" H 9650 4900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 9650 4900 50  0001 C CNN "Maufaturer"
-F 8 "609-3589-ND" H 9650 4900 50  0001 C CNN "Field4"
-	1    9650 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:Conn_1x3_M-aardonyx J12
-U 1 1 5DDA74A4
-P 8750 6050
-F 0 "J12" H 8750 6250 50  0000 L CNN
-F 1 "Conn_1x3_M" H 8400 5850 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8750 6050 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8750 6050 50  0001 C CNN
-F 4 "CONN HEADER VERT 3POS 2.54MM" H 8750 6050 50  0001 C CNN "Description"
-F 5 "609-3464-ND" H 8750 6050 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-203HLF" H 8750 6050 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 8750 6050 50  0001 C CNN "Maufaturer"
-	1    8750 6050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8000 6150 8550 6150
 Wire Wire Line
@@ -840,33 +369,9 @@ Wire Wire Line
 Wire Wire Line
 	9950 4650 10550 4650
 Wire Wire Line
-	9950 4550 9950 4500
-Wire Wire Line
 	9950 4550 10550 4550
-$Comp
-L Aardonyx-rescue:VREF_AH-aardonyx-Aardonyx-rescue #PWR085
-U 1 1 5DE472F1
-P 8950 4550
-F 0 "#PWR085" H 9100 4500 50  0001 C CNN
-F 1 "VREF_AH" H 8955 4725 50  0000 C CNN
-F 2 "" H 8950 4550 50  0001 C CNN
-F 3 "" H 8950 4550 50  0001 C CNN
-	1    8950 4550
-	1    0    0    -1  
-$EndComp
 Text Label 9200 4800 0    50   ~ 0
 RESET
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR082
-U 1 1 5DE4FA75
-P 8500 4950
-F 0 "#PWR082" H 8650 4900 50  0001 C CNN
-F 1 "V5P0" H 8505 5125 50  0000 C CNN
-F 2 "" H 8500 4950 50  0001 C CNN
-F 3 "" H 8500 4950 50  0001 C CNN
-	1    8500 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8700 5150 8700 5100
 Wire Wire Line
@@ -878,8 +383,6 @@ Wire Wire Line
 Connection ~ 9300 5100
 Wire Wire Line
 	9300 5100 9450 5100
-Wire Wire Line
-	8950 4550 8950 4700
 Wire Wire Line
 	8950 4700 9450 4700
 Wire Wire Line
@@ -918,32 +421,6 @@ SPI0_CLK
 Text Label 5350 6050 2    39   ~ 0
 SPI0_nCS
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR065
-U 1 1 5F693FFB
-P 4400 4850
-F 0 "#PWR065" H 4550 4800 50  0001 C CNN
-F 1 "V3P3" H 4405 5025 50  0000 C CNN
-F 2 "" H 4400 4850 50  0001 C CNN
-F 3 "" H 4400 4850 50  0001 C CNN
-	1    4400 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C50
-U 1 1 5F6A55DE
-P 4900 5050
-F 0 "C50" H 4992 5096 50  0000 L CNN
-F 1 "0.1UF,0402" H 4992 5005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 5050 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4900 5050 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 4900 5050 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 4900 5050 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 4900 5050 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 4900 5050 50  0001 C CNN "Maufaturer"
-	1    4900 5050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:GND-aardonyx #PWR068
 U 1 1 5F6A55E4
 P 4900 5200
@@ -955,40 +432,12 @@ F 3 "" H 4900 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 4850 4400 4900
-Wire Wire Line
 	4400 4900 4900 4900
 Wire Wire Line
 	4900 4900 4900 4950
 Connection ~ 4400 4900
 Wire Wire Line
 	4400 4900 4400 5250
-$Comp
-L Aardonyx-rescue:R_US-aardonyx R35
-U 1 1 5F6D0204
-P 5450 6400
-F 0 "R35" V 5550 6350 50  0000 L CNN
-F 1 "10KE,0402" V 5350 6300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5490 6390 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 5450 6400 50  0001 C CNN
-F 4 "RES 10K OHM 5% 1/8W 0402" H 5450 6400 50  0001 C CNN "Description"
-F 5 "2019-SG73S1ETTP103JCT-ND" H 5450 6400 50  0001 C CNN "Digikey PartNumber"
-F 6 "SG73S1ETTP103J" H 5450 6400 50  0001 C CNN "Manufactured Part Number"
-F 7 "KOA Speer Electronics, Inc." H 5450 6400 50  0001 C CNN "Maufaturer"
-	1    5450 6400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR069
-U 1 1 5F6D89CB
-P 5650 6350
-F 0 "#PWR069" H 5800 6300 50  0001 C CNN
-F 1 "V3P3" H 5655 6525 50  0000 C CNN
-F 2 "" H 5650 6350 50  0001 C CNN
-F 3 "" H 5650 6350 50  0001 C CNN
-	1    5650 6350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR064
 U 1 1 5F710746
@@ -999,21 +448,6 @@ F 2 "" H 4300 6650 50  0001 C CNN
 F 3 "" H 4300 6650 50  0001 C CNN
 	1    4300 6650
 	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:C_Small-aardonyx C49
-U 1 1 5F723E3A
-P 3700 5050
-F 0 "C49" H 3792 5096 50  0000 L CNN
-F 1 "0.1UF,0402" H 3792 5005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3700 5050 50  0001 C CNN
-F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3700 5050 50  0001 C CNN
-F 4 "CAP CER 0.1UF 25V X7R 0402" H 3700 5050 50  0001 C CNN "Description"
-F 5 "478-10050-1-ND" H 3700 5050 50  0001 C CNN "Digikey PartNumber"
-F 6 "04023C104JAT2A" H 3700 5050 50  0001 C CNN "Manufactured Part Number"
-F 7 "AVX Corporation" H 3700 5050 50  0001 C CNN "Maufaturer"
-	1    3700 5050
-	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	4200 4900 3700 4900
@@ -1029,17 +463,6 @@ F 2 "" H 3700 5200 50  0001 C CNN
 F 3 "" H 3700 5200 50  0001 C CNN
 	1    3700 5200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR090
-U 1 1 5F7AE970
-P 9950 4500
-F 0 "#PWR090" H 10100 4450 50  0001 C CNN
-F 1 "V3P3" H 9955 4675 50  0000 C CNN
-F 2 "" H 9950 4500 50  0001 C CNN
-F 3 "" H 9950 4500 50  0001 C CNN
-	1    9950 4500
-	-1   0    0    -1  
 $EndComp
 Text Label 3450 5550 0    50   ~ 0
 A0
@@ -1152,8 +575,6 @@ Wire Wire Line
 	5000 6050 5250 6050
 Wire Wire Line
 	5600 6400 5650 6400
-Wire Wire Line
-	5650 6400 5650 6350
 Wire Wire Line
 	5300 6400 5250 6400
 Wire Wire Line
@@ -1273,74 +694,20 @@ Text HLabel 6450 4600 0    50   Output ~ 0
 SPI1_MISO
 Text HLabel 6450 4500 0    50   Input ~ 0
 SPI1_MOSI
-$Comp
-L Aardonyx-rescue:Conn_1x6_F-aardonyx J10
-U 1 1 628F7F78
-P 7250 4600
-F 0 "J10" H 7200 4900 50  0000 L CNN
-F 1 "Conn_1x6_F" H 7100 4200 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7250 4600 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 7250 4600 50  0001 C CNN
-F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 7250 4600 50  0001 C CNN "Description"
-F 5 "609-3558-ND" H 7250 4600 50  0001 C CNN "Digikey PartNumber"
-F 6 "75915-306LF" H 7250 4600 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 7250 4600 50  0001 C CNN "Maufaturer"
-	1    7250 4600
-	1    0    0    -1  
-$EndComp
 Text HLabel 6450 4700 0    50   Input ~ 0
 SPI1_CLK
 Wire Wire Line
 	6450 4700 7050 4700
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR083
-U 1 1 5DE4FA6F
-P 8700 4850
-F 0 "#PWR083" H 8850 4800 50  0001 C CNN
-F 1 "V3P3" H 8705 5025 50  0000 C CNN
-F 2 "" H 8700 4850 50  0001 C CNN
-F 3 "" H 8700 4850 50  0001 C CNN
-	1    8700 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8500 4950 8500 5000
 Wire Wire Line
 	8500 5000 9450 5000
-Wire Wire Line
-	8700 4850 8700 4900
 Wire Wire Line
 	8700 4900 9450 4900
 Wire Notes Line
 	3300 3950 3300 7750
 Wire Notes Line
 	5400 500  5400 3950
-$Comp
-L Aardonyx-rescue:Conn_1x8-aardonyx J9
-U 1 1 62CC8452
-P 4900 1750
-F 0 "J9" H 4850 2150 50  0000 L CNN
-F 1 "Conn_1x8" H 4750 1250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4900 1750 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=68000-408HLF" H 4900 1750 50  0001 C CNN
-F 4 "CONN HEADER VERT 8POS 2.54MM" H 4900 1750 50  0001 C CNN "Description"
-F 5 "609-3264-ND" H 4900 1750 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-408HLF" H 4900 1750 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 4900 1750 50  0001 C CNN "Maufaturer"
-	1    4900 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR066
-U 1 1 62D5EE95
-P 4650 1350
-F 0 "#PWR066" H 4800 1300 50  0001 C CNN
-F 1 "V3P3" H 4655 1525 50  0000 C CNN
-F 2 "" H 4650 1350 50  0001 C CNN
-F 3 "" H 4650 1350 50  0001 C CNN
-	1    4650 1350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR067
 U 1 1 62D6B15F
@@ -1353,28 +720,11 @@ F 3 "" H 4650 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 1350 4650 1450
-Wire Wire Line
 	4650 1450 4700 1450
 Wire Wire Line
 	4700 2150 4650 2150
 Wire Wire Line
 	4650 2150 4650 2250
-$Comp
-L Aardonyx-rescue:Conn_01x04-aardonyx J7
-U 1 1 62DE9728
-P 2900 7000
-F 0 "J7" H 2980 6992 50  0000 L CNN
-F 1 "Conn_1x4" H 2800 6700 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2900 7000 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-404HLF/609-3262-ND/1878463" H 2900 7000 50  0001 C CNN
-F 4 "CONN HEADER VERT 4POS 2.54MM" H 2900 7000 50  0001 C CNN "Description"
-F 5 "609-3262-ND" H 2900 7000 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-404HLF" H 2900 7000 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 2900 7000 50  0001 C CNN "Maufaturer"
-	1    2900 7000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2300 7000 2700 7000
 Wire Wire Line
@@ -1401,23 +751,10 @@ F 3 "" H 2650 7300 50  0001 C CNN
 	1    2650 7300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR059
-U 1 1 62E6C197
-P 2650 6800
-F 0 "#PWR059" H 2800 6750 50  0001 C CNN
-F 1 "V3P3" H 2655 6975 50  0000 C CNN
-F 2 "" H 2650 6800 50  0001 C CNN
-F 3 "" H 2650 6800 50  0001 C CNN
-	1    2650 6800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2650 7300 2650 7200
 Wire Wire Line
 	2650 7200 2700 7200
-Wire Wire Line
-	2650 6800 2650 6900
 Wire Wire Line
 	2650 6900 2700 6900
 Wire Wire Line
@@ -1442,21 +779,6 @@ Wire Wire Line
 	4700 1650 4300 1650
 Text Label 2950 3100 0    39   ~ 0
 QSPI0_NCS
-$Comp
-L Aardonyx-rescue:Conn_1x3_M-aardonyx J8
-U 1 1 630DABF4
-P 3550 3200
-F 0 "J8" H 3550 3400 50  0000 L CNN
-F 1 "Conn_1x3_M" H 3200 3000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3550 3200 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 3550 3200 50  0001 C CNN
-F 4 "CONN HEADER VERT 3POS 2.54MM" H 3550 3200 50  0001 C CNN "Description"
-F 5 "609-3464-ND" H 3550 3200 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-203HLF" H 3550 3200 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 3550 3200 50  0001 C CNN "Maufaturer"
-	1    3550 3200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1250 1750 2250 1750
 Wire Wire Line
@@ -1491,21 +813,6 @@ Text HLabel 6650 5600 0    50   BiDi ~ 0
 IO_14
 Text HLabel 6650 5700 0    50   BiDi ~ 0
 IO_15
-$Comp
-L Aardonyx-rescue:Conn_1x6_F-aardonyx J11
-U 1 1 638C40B5
-P 7250 5600
-F 0 "J11" H 7200 5900 50  0000 L CNN
-F 1 "Conn_1x6_F" H 7100 5200 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7250 5600 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 7250 5600 50  0001 C CNN
-F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 7250 5600 50  0001 C CNN "Description"
-F 5 "609-3558-ND" H 7250 5600 50  0001 C CNN "Digikey PartNumber"
-F 6 "75915-306LF" H 7250 5600 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 7250 5600 50  0001 C CNN "Maufaturer"
-	1    7250 5600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6650 5600 7050 5600
 Wire Wire Line
@@ -1516,19 +823,6 @@ Wire Wire Line
 	6850 4900 6850 5000
 Wire Wire Line
 	6850 5000 6550 5000
-Wire Wire Line
-	6550 5000 6550 4950
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR071
-U 1 1 62927744
-P 6550 4950
-F 0 "#PWR071" H 6700 4900 50  0001 C CNN
-F 1 "V3P3" H 6555 5125 50  0000 C CNN
-F 2 "" H 6550 4950 50  0001 C CNN
-F 3 "" H 6550 4950 50  0001 C CNN
-	1    6550 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6950 4800 7050 4800
 Wire Wire Line
@@ -1544,19 +838,6 @@ F 3 "" H 6950 5050 50  0001 C CNN
 	1    6950 5050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR073
-U 1 1 639F397E
-P 6650 6000
-F 0 "#PWR073" H 6800 5950 50  0001 C CNN
-F 1 "V3P3" H 6655 6175 50  0000 C CNN
-F 2 "" H 6650 6000 50  0001 C CNN
-F 3 "" H 6650 6000 50  0001 C CNN
-	1    6650 6000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 6000 6650 6050
 Wire Wire Line
 	6650 6050 6850 6050
 Wire Wire Line
@@ -1610,21 +891,6 @@ Text Label 3650 1750 2    39   ~ 0
 QSPI0_IO1
 Text Label 1250 1750 0    39   ~ 0
 QSPI0_IO0
-$Comp
-L Aardonyx-rescue:ADC108S102CIMTX_NOPB-aardonyx U7
-U 1 1 5E6CD7B1
-P 4300 5900
-F 0 "U7" H 3900 6400 50  0000 C CNN
-F 1 "ADC128S102CIMTX/NOPB" H 4750 5400 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4300 5900 50  0001 L BNN
-F 3 "https://www.digikey.in/product-detail/en/texas-instruments/ADC128S102CIMTX-NOPB/296-41184-1-ND/5222639" H 4300 5900 50  0001 L BNN
-F 4 "IC ADC 12BIT SAR 16TSSOP" H 4300 5900 50  0001 C CNN "Description"
-F 5 "296-41184-1-ND" H 4300 5900 50  0001 C CNN "Digikey PartNumber"
-F 6 "ADC128S102CIMTX/NOPB" H 4300 5900 50  0001 C CNN "Manufactured Part Number"
-F 7 "Texas Instruments" H 4300 5900 50  0001 C CNN "Maufaturer"
-	1    4300 5900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 5550 3450 5550
 Wire Wire Line
@@ -1658,9 +924,6 @@ Wire Wire Line
 	4200 4900 4200 5250
 Wire Wire Line
 	3700 5150 3700 5200
-Wire Wire Line
-	4200 4850 4200 4900
-Connection ~ 4200 4900
 NoConn ~ 9050 4600
 NoConn ~ 9050 5300
 $Comp
@@ -1691,71 +954,10 @@ Text Notes 1950 6000 0    50   ~ 0
 1Mb I2C Serial EEPROM\n8PIN - SOIC
 Text Notes 3450 6550 0    50   ~ 0
 8 Ch, 10bit ADC\n16pin TSSOP
-$Comp
-L Aardonyx-rescue:VAC-Aardonyx-rescue #PWR0156
-U 1 1 5F0884B4
-P 4200 4850
-F 0 "#PWR0156" H 4350 4800 50  0001 C CNN
-F 1 "VAC" H 4205 5025 50  0000 C CNN
-F 2 "" H 4200 4850 50  0001 C CNN
-F 3 "" H 4200 4850 50  0001 C CNN
-	1    4200 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0158
-U 1 1 5F08B124
-P 4250 7200
-F 0 "#PWR0158" H 4400 7150 50  0001 C CNN
-F 1 "V3P3" H 4255 7375 50  0000 C CNN
-F 2 "" H 4250 7200 50  0001 C CNN
-F 3 "" H 4250 7200 50  0001 C CNN
-	1    4250 7200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR0157
-U 1 1 5F08B12A
-P 4250 7000
-F 0 "#PWR0157" H 4400 6950 50  0001 C CNN
-F 1 "V5P0" H 4255 7175 50  0000 C CNN
-F 2 "" H 4250 7000 50  0001 C CNN
-F 3 "" H 4250 7000 50  0001 C CNN
-	1    4250 7000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Aardonyx-rescue:Conn_1x3_M-aardonyx J19
-U 1 1 5F09B665
-P 5150 7100
-F 0 "J19" H 5150 7300 50  0000 L CNN
-F 1 "Conn_1x3_M" H 4800 6900 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5150 7100 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 5150 7100 50  0001 C CNN
-F 4 "CONN HEADER VERT 3POS 2.54MM" H 5150 7100 50  0001 C CNN "Description"
-F 5 "609-3464-ND" H 5150 7100 50  0001 C CNN "Digikey PartNumber"
-F 6 "68000-203HLF" H 5150 7100 50  0001 C CNN "Manufactured Part Number"
-F 7 "Amphenol ICC (FCI)" H 5150 7100 50  0001 C CNN "Maufaturer"
-	1    5150 7100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4550 7100 4950 7100
 Wire Wire Line
 	4250 7000 4950 7000
-Wire Wire Line
-	4250 7200 4950 7200
-$Comp
-L Aardonyx-rescue:VAC-Aardonyx-rescue #PWR0159
-U 1 1 5F100A5C
-P 4550 7100
-F 0 "#PWR0159" H 4700 7050 50  0001 C CNN
-F 1 "VAC" V 4555 7229 50  0000 L CNN
-F 2 "" H 4550 7100 50  0001 C CNN
-F 3 "" H 4550 7100 50  0001 C CNN
-	1    4550 7100
-	0    -1   -1   0   
-$EndComp
 Text Notes 4100 7600 0    50   ~ 0
 Short 1 & 2, VAC = 5V\nShort 2 & 3, VAC = 3.3V
 Text Notes 2300 3750 0    50   ~ 0
@@ -1776,6 +978,323 @@ Wire Notes Line
 	3950 7650 3950 7400
 Wire Notes Line
 	3950 7400 5250 7400
+Wire Wire Line
+	1850 3250 1100 3250
+Text Label 1850 3250 0    50   ~ 0
+QSPI0_CLK
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0157
+U 1 1 5EFAA36B
+P 8000 5850
+F 0 "#PWR0157" H 8150 5800 50  0001 C CNN
+F 1 "V5P0" H 8005 6023 50  0000 C CNN
+F 2 "" H 8000 5850 50  0001 C CNN
+F 3 "" H 8000 5850 50  0001 C CNN
+	1    8000 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0158
+U 1 1 5EFABCFD
+P 8500 4950
+F 0 "#PWR0158" H 8650 4900 50  0001 C CNN
+F 1 "V5P0" H 8505 5123 50  0000 C CNN
+F 2 "" H 8500 4950 50  0001 C CNN
+F 3 "" H 8500 4950 50  0001 C CNN
+	1    8500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0159
+U 1 1 5EFB14DD
+P 4250 7000
+F 0 "#PWR0159" H 4400 6950 50  0001 C CNN
+F 1 "V5P0" H 4255 7173 50  0000 C CNN
+F 2 "" H 4250 7000 50  0001 C CNN
+F 3 "" H 4250 7000 50  0001 C CNN
+	1    4250 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F15DDC8
+P 9600 1100
+AR Path="/5D8B3761/5F15DDC8" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F15DDC8" Ref="#PWR0160"  Part="1" 
+F 0 "#PWR0160" H 9750 1050 50  0001 C CNN
+F 1 "V3P3" H 9605 1273 50  0000 C CNN
+F 2 "" H 9600 1100 50  0001 C CNN
+F 3 "" H 9600 1100 50  0001 C CNN
+	1    9600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1150 9600 1700
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F182E9C
+P 6650 1050
+AR Path="/5D8B3761/5F182E9C" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F182E9C" Ref="#PWR0164"  Part="1" 
+F 0 "#PWR0164" H 6800 1000 50  0001 C CNN
+F 1 "V3P3" H 6655 1223 50  0000 C CNN
+F 2 "" H 6650 1050 50  0001 C CNN
+F 3 "" H 6650 1050 50  0001 C CNN
+	1    6650 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1050 6650 1100
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F1A476A
+P 4650 1250
+AR Path="/5D8B3761/5F1A476A" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F1A476A" Ref="#PWR0166"  Part="1" 
+F 0 "#PWR0166" H 4800 1200 50  0001 C CNN
+F 1 "V3P3" H 4655 1423 50  0000 C CNN
+F 2 "" H 4650 1250 50  0001 C CNN
+F 3 "" H 4650 1250 50  0001 C CNN
+	1    4650 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1250 4650 1450
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F1B54FA
+P 1900 1000
+AR Path="/5D8B3761/5F1B54FA" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F1B54FA" Ref="#PWR0167"  Part="1" 
+F 0 "#PWR0167" H 2050 950 50  0001 C CNN
+F 1 "V3P3" H 1905 1173 50  0000 C CNN
+F 2 "" H 1900 1000 50  0001 C CNN
+F 3 "" H 1900 1000 50  0001 C CNN
+	1    1900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F1C5D61
+P 2750 1000
+AR Path="/5D8B3761/5F1C5D61" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F1C5D61" Ref="#PWR0171"  Part="1" 
+F 0 "#PWR0171" H 2900 950 50  0001 C CNN
+F 1 "V3P3" H 2755 1173 50  0000 C CNN
+F 2 "" H 2750 1000 50  0001 C CNN
+F 3 "" H 2750 1000 50  0001 C CNN
+	1    2750 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1000 2750 1050
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F208833
+P 600 3150
+AR Path="/5D8B3761/5F208833" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F208833" Ref="#PWR0172"  Part="1" 
+F 0 "#PWR0172" H 750 3100 50  0001 C CNN
+F 1 "V3P3" H 605 3323 50  0000 C CNN
+F 2 "" H 600 3150 50  0001 C CNN
+F 3 "" H 600 3150 50  0001 C CNN
+	1    600  3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	600  3250 600  3150
+Wire Wire Line
+	600  3250 800  3250
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F22A687
+P 1500 4650
+AR Path="/5D8B3761/5F22A687" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F22A687" Ref="#PWR0174"  Part="1" 
+F 0 "#PWR0174" H 1650 4600 50  0001 C CNN
+F 1 "V3P3" H 1505 4823 50  0000 C CNN
+F 2 "" H 1500 4650 50  0001 C CNN
+F 3 "" H 1500 4650 50  0001 C CNN
+	1    1500 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4650 1500 4800
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F23B3BA
+P 2450 4650
+AR Path="/5D8B3761/5F23B3BA" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F23B3BA" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 2600 4600 50  0001 C CNN
+F 1 "V3P3" H 2455 4823 50  0000 C CNN
+F 2 "" H 2450 4650 50  0001 C CNN
+F 3 "" H 2450 4650 50  0001 C CNN
+	1    2450 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4650 2450 4850
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F24C31A
+P 2650 6700
+AR Path="/5D8B3761/5F24C31A" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F24C31A" Ref="#PWR0177"  Part="1" 
+F 0 "#PWR0177" H 2800 6650 50  0001 C CNN
+F 1 "V3P3" H 2655 6873 50  0000 C CNN
+F 2 "" H 2650 6700 50  0001 C CNN
+F 3 "" H 2650 6700 50  0001 C CNN
+	1    2650 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6700 2650 6900
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F25D2A3
+P 4400 4750
+AR Path="/5D8B3761/5F25D2A3" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F25D2A3" Ref="#PWR0178"  Part="1" 
+F 0 "#PWR0178" H 4550 4700 50  0001 C CNN
+F 1 "V3P3" H 4405 4923 50  0000 C CNN
+F 2 "" H 4400 4750 50  0001 C CNN
+F 3 "" H 4400 4750 50  0001 C CNN
+	1    4400 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4750 4400 4900
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F26EEC2
+P 5650 6300
+AR Path="/5D8B3761/5F26EEC2" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F26EEC2" Ref="#PWR0179"  Part="1" 
+F 0 "#PWR0179" H 5800 6250 50  0001 C CNN
+F 1 "V3P3" H 5655 6473 50  0000 C CNN
+F 2 "" H 5650 6300 50  0001 C CNN
+F 3 "" H 5650 6300 50  0001 C CNN
+	1    5650 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6400 5650 6300
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F27FD4C
+P 7700 5850
+AR Path="/5D8B3761/5F27FD4C" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F27FD4C" Ref="#PWR0180"  Part="1" 
+F 0 "#PWR0180" H 7850 5800 50  0001 C CNN
+F 1 "V3P3" H 7705 6023 50  0000 C CNN
+F 2 "" H 7700 5850 50  0001 C CNN
+F 3 "" H 7700 5850 50  0001 C CNN
+	1    7700 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 5950 7700 5850
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2908DF
+P 6650 5950
+AR Path="/5D8B3761/5F2908DF" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F2908DF" Ref="#PWR0181"  Part="1" 
+F 0 "#PWR0181" H 6800 5900 50  0001 C CNN
+F 1 "V3P3" H 6655 6123 50  0000 C CNN
+F 2 "" H 6650 5950 50  0001 C CNN
+F 3 "" H 6650 5950 50  0001 C CNN
+	1    6650 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 6050 6650 5950
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2A15DE
+P 6550 4900
+AR Path="/5D8B3761/5F2A15DE" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F2A15DE" Ref="#PWR0183"  Part="1" 
+F 0 "#PWR0183" H 6700 4850 50  0001 C CNN
+F 1 "V3P3" H 6555 5073 50  0000 C CNN
+F 2 "" H 6550 4900 50  0001 C CNN
+F 3 "" H 6550 4900 50  0001 C CNN
+	1    6550 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 5000 6550 4900
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2B227B
+P 8700 4800
+AR Path="/5D8B3761/5F2B227B" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F2B227B" Ref="#PWR0185"  Part="1" 
+F 0 "#PWR0185" H 8850 4750 50  0001 C CNN
+F 1 "V3P3" H 8705 4973 50  0000 C CNN
+F 2 "" H 8700 4800 50  0001 C CNN
+F 3 "" H 8700 4800 50  0001 C CNN
+	1    8700 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 4900 8700 4800
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2C2F06
+P 9950 4450
+AR Path="/5D8B3761/5F2C2F06" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F2C2F06" Ref="#PWR0186"  Part="1" 
+F 0 "#PWR0186" H 10100 4400 50  0001 C CNN
+F 1 "V3P3" H 9955 4623 50  0000 C CNN
+F 2 "" H 9950 4450 50  0001 C CNN
+F 3 "" H 9950 4450 50  0001 C CNN
+	1    9950 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 4550 9950 4450
+$Comp
+L Aardonyx-rescue:VREF_AH #PWR0193
+U 1 1 5F61B32C
+P 6950 1050
+F 0 "#PWR0193" H 7100 1000 50  0001 C CNN
+F 1 "VREF_AH" H 6955 1223 50  0000 C CNN
+F 2 "" H 6950 1050 50  0001 C CNN
+F 3 "" H 6950 1050 50  0001 C CNN
+	1    6950 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1100 6950 1050
+$Comp
+L Aardonyx-rescue:VREF_AH #PWR0194
+U 1 1 5F62D50F
+P 9900 1100
+F 0 "#PWR0194" H 10050 1050 50  0001 C CNN
+F 1 "VREF_AH" H 9905 1273 50  0000 C CNN
+F 2 "" H 9900 1100 50  0001 C CNN
+F 3 "" H 9900 1100 50  0001 C CNN
+	1    9900 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1150 9900 1100
+Connection ~ 9900 1150
+$Comp
+L Aardonyx-rescue:VREF_AH #PWR0195
+U 1 1 5F63E770
+P 8300 5800
+F 0 "#PWR0195" H 8450 5750 50  0001 C CNN
+F 1 "VREF_AH" H 8305 5973 50  0000 C CNN
+F 2 "" H 8300 5800 50  0001 C CNN
+F 3 "" H 8300 5800 50  0001 C CNN
+	1    8300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 5800 8300 6050
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R142
 U 1 1 5EFF848B
@@ -1792,20 +1311,528 @@ F 7 "KOA Speer Electronics, Inc." H 950 3250 50  0001 C CNN "Maufaturer"
 	0    1    1    0   
 $EndComp
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR02
-U 1 1 5F019B05
-P 800 3250
-F 0 "#PWR02" H 950 3200 50  0001 C CNN
-F 1 "V3P3" H 805 3425 50  0000 C CNN
-F 2 "" H 800 3250 50  0001 C CNN
-F 3 "" H 800 3250 50  0001 C CNN
-	1    800  3250
+L Aardonyx-rescue:Conn_1x3_M-aardonyx J19
+U 1 1 5F09B665
+P 5150 7100
+F 0 "J19" H 5150 7300 50  0000 L CNN
+F 1 "Conn_1x3_M" H 4800 6900 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5150 7100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 5150 7100 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 5150 7100 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 5150 7100 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 5150 7100 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 5150 7100 50  0001 C CNN "Maufaturer"
+	1    5150 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:ADC108S102CIMTX_NOPB-aardonyx U7
+U 1 1 5E6CD7B1
+P 4300 5900
+F 0 "U7" H 3900 6400 50  0000 C CNN
+F 1 "ADC128S102CIMTX/NOPB" H 4750 5400 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4300 5900 50  0001 L BNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/ADC128S102CIMTX-NOPB/296-41184-1-ND/5222639" H 4300 5900 50  0001 L BNN
+F 4 "IC ADC 12BIT SAR 16TSSOP" H 4300 5900 50  0001 C CNN "Description"
+F 5 "296-41184-1-ND" H 4300 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "ADC128S102CIMTX/NOPB" H 4300 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 4300 5900 50  0001 C CNN "Maufaturer"
+	1    4300 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x6_F-aardonyx J11
+U 1 1 638C40B5
+P 7250 5600
+F 0 "J11" H 7200 5900 50  0000 L CNN
+F 1 "Conn_1x6" H 7100 5200 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7250 5600 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=68000-406HLF" H 7250 5600 50  0001 C CNN
+F 4 "CONN HEADER VERT 6POS 2.54MM" H 7250 5600 50  0001 C CNN "Description"
+F 5 "609-3263-ND" H 7250 5600 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-406HLF" H 7250 5600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 7250 5600 50  0001 C CNN "Maufaturer"
+	1    7250 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x3_M-aardonyx J8
+U 1 1 630DABF4
+P 3550 3200
+F 0 "J8" H 3550 3400 50  0000 L CNN
+F 1 "Conn_1x3_M" H 3200 3000 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3550 3200 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 3550 3200 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 3550 3200 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 3550 3200 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 3550 3200 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 3550 3200 50  0001 C CNN "Maufaturer"
+	1    3550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_01x04-aardonyx J7
+U 1 1 62DE9728
+P 2900 7000
+F 0 "J7" H 2980 6992 50  0000 L CNN
+F 1 "Conn_1x4" H 2800 6700 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2900 7000 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-404HLF/609-3262-ND/1878463" H 2900 7000 50  0001 C CNN
+F 4 "CONN HEADER VERT 4POS 2.54MM" H 2900 7000 50  0001 C CNN "Description"
+F 5 "609-3262-ND" H 2900 7000 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-404HLF" H 2900 7000 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 2900 7000 50  0001 C CNN "Maufaturer"
+	1    2900 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x8-aardonyx J9
+U 1 1 62CC8452
+P 4900 1750
+F 0 "J9" H 4850 2150 50  0000 L CNN
+F 1 "Conn_1x8" H 4750 1250 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4900 1750 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=68000-408HLF" H 4900 1750 50  0001 C CNN
+F 4 "CONN HEADER VERT 8POS 2.54MM" H 4900 1750 50  0001 C CNN "Description"
+F 5 "609-3264-ND" H 4900 1750 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-408HLF" H 4900 1750 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 4900 1750 50  0001 C CNN "Maufaturer"
+	1    4900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x6_F-aardonyx J10
+U 1 1 628F7F78
+P 7250 4600
+F 0 "J10" H 7200 4900 50  0000 L CNN
+F 1 "Conn_1x6" H 7100 4200 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7250 4600 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=68000-406HLF" H 7250 4600 50  0001 C CNN
+F 4 "CONN HEADER VERT 6POS 2.54MM" H 7250 4600 50  0001 C CNN "Description"
+F 5 "609-3263-ND" H 7250 4600 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-406HLF" H 7250 4600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 7250 4600 50  0001 C CNN "Maufaturer"
+	1    7250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C49
+U 1 1 5F723E3A
+P 3700 5050
+F 0 "C49" H 3792 5096 50  0000 L CNN
+F 1 "0.1UF,0402" H 3792 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3700 5050 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3700 5050 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3700 5050 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3700 5050 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3700 5050 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3700 5050 50  0001 C CNN "Maufaturer"
+	1    3700 5050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R35
+U 1 1 5F6D0204
+P 5450 6400
+F 0 "R35" V 5550 6350 50  0000 L CNN
+F 1 "10KE,0402" V 5350 6300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5490 6390 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 5450 6400 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 5450 6400 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 5450 6400 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 5450 6400 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 5450 6400 50  0001 C CNN "Maufaturer"
+	1    5450 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C50
+U 1 1 5F6A55DE
+P 4900 5050
+F 0 "C50" H 4992 5096 50  0000 L CNN
+F 1 "0.1UF,0402" H 4992 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 5050 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 4900 5050 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 4900 5050 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 4900 5050 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 4900 5050 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 4900 5050 50  0001 C CNN "Maufaturer"
+	1    4900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x3_M-aardonyx J12
+U 1 1 5DDA74A4
+P 8750 6050
+F 0 "J12" H 8750 6250 50  0000 L CNN
+F 1 "Conn_1x3_M" H 8400 5850 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8750 6050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305" H 8750 6050 50  0001 C CNN
+F 4 "CONN HEADER VERT 3POS 2.54MM" H 8750 6050 50  0001 C CNN "Description"
+F 5 "609-3464-ND" H 8750 6050 50  0001 C CNN "Digikey PartNumber"
+F 6 "68000-203HLF" H 8750 6050 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 8750 6050 50  0001 C CNN "Maufaturer"
+	1    8750 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x8-aardonyx J13
+U 1 1 5DD27E26
+P 9650 4900
+F 0 "J13" H 9600 5300 50  0000 L CNN
+F 1 "Conn_1x8_F" H 9550 4400 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 9650 4900 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 9650 4900 50  0001 C CNN
+F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 9650 4900 50  0001 C CNN "Description"
+F 5 "609-3589-ND" H 9650 4900 50  0001 C CNN "Digikey PartNumber"
+F 6 "68685-308LF" H 9650 4900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 9650 4900 50  0001 C CNN "Maufaturer"
+F 8 "609-3589-ND" H 9650 4900 50  0001 C CNN "Field4"
+	1    9650 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x10-aardonyx J15
+U 1 1 5DD25582
+P 10750 4750
+F 0 "J15" H 10700 5250 50  0000 L CNN
+F 1 "Conn_1x10_F" H 10600 4150 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 10750 4750 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/68685-310LF/609-3584-ND/1525202" H 10750 4750 50  0001 C CNN
+F 4 "CONN RCPT 10POS 0.1 GOLD PCB" H 10750 4750 50  0001 C CNN "Description"
+F 5 "609-3584-ND" H 10750 4750 50  0001 C CNN "Digikey PartNumber"
+F 6 "68685-310LF" H 10750 4750 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 10750 4750 50  0001 C CNN "Maufaturer"
+	1    10750 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x8-aardonyx J16
+U 1 1 5DD2482F
+P 10750 5900
+F 0 "J16" H 10700 6300 50  0000 L CNN
+F 1 "Conn_1x8_F" H 10600 5400 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10750 5900 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=%0968685-308LF" H 10750 5900 50  0001 C CNN
+F 4 "CONN RCPT 8POS 0.1 GOLD PCB" H 10750 5900 50  0001 C CNN "Description"
+F 5 "609-3589-ND" H 10750 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "68685-308LF" H 10750 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 10750 5900 50  0001 C CNN "Maufaturer"
+	1    10750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:Conn_1x6_F-aardonyx J14
+U 1 1 5DD23867
+P 9700 5900
+F 0 "J14" H 9650 6200 50  0000 L CNN
+F 1 "Conn_1x6_F" H 9550 5500 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 9700 5900 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584" H 9700 5900 50  0001 C CNN
+F 4 "CONN RCPT 6POS 0.1 GOLD PCB" H 9700 5900 50  0001 C CNN "Description"
+F 5 "609-3558-ND" H 9700 5900 50  0001 C CNN "Digikey PartNumber"
+F 6 "75915-306LF" H 9700 5900 50  0001 C CNN "Manufactured Part Number"
+F 7 "Amphenol ICC (FCI)" H 9700 5900 50  0001 C CNN "Maufaturer"
+	1    9700 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R34
+U 1 1 5E31A798
+P 2650 5150
+F 0 "R34" H 2650 5300 50  0000 L CNN
+F 1 "10KE,0402" H 2650 5000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2690 5140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2650 5150 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2650 5150 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2650 5150 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2650 5150 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2650 5150 50  0001 C CNN "Maufaturer"
+	1    2650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R33
+U 1 1 5E31A792
+P 2450 5150
+F 0 "R33" H 2450 5300 50  0000 L CNN
+F 1 "10KE,0402" V 2350 4950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2490 5140 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2450 5150 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2450 5150 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2450 5150 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2450 5150 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2450 5150 50  0001 C CNN "Maufaturer"
+	1    2450 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C47
+U 1 1 5E3046A9
+P 2050 5000
+F 0 "C47" H 2142 5046 50  0000 L CNN
+F 1 "0.1UF,0402" V 1950 4700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2050 5000 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 2050 5000 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 2050 5000 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 2050 5000 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 2050 5000 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 2050 5000 50  0001 C CNN "Maufaturer"
+	1    2050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R31
+U 1 1 5E2C33CD
+P 1900 1350
+F 0 "R31" H 1900 1500 50  0000 L CNN
+F 1 "10KE,0402" V 1800 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1940 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1900 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 1900 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 1900 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 1900 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 1900 1350 50  0001 C CNN "Maufaturer"
+	1    1900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R30
+U 1 1 5E2C54E1
+P 1650 1350
+F 0 "R30" H 1650 1500 50  0000 L CNN
+F 1 "10KE,0402" V 1550 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1690 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 1650 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 1650 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 1650 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 1650 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 1650 1350 50  0001 C CNN "Maufaturer"
+	1    1650 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R32
+U 1 1 5E2B4C89
+P 2150 1350
+F 0 "R32" H 2150 1500 50  0000 L CNN
+F 1 "10KE,0402" V 2050 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2190 1340 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218" H 2150 1350 50  0001 C CNN
+F 4 "RES 10K OHM 5% 1/8W 0402" H 2150 1350 50  0001 C CNN "Description"
+F 5 "2019-SG73S1ETTP103JCT-ND" H 2150 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "SG73S1ETTP103J" H 2150 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 2150 1350 50  0001 C CNN "Maufaturer"
+	1    2150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C48
+U 1 1 5E2ABAA3
+P 3300 1200
+F 0 "C48" H 3392 1246 50  0000 L CNN
+F 1 "0.1UF,0402" H 3392 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 1200 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 3300 1200 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 3300 1200 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 3300 1200 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 3300 1200 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 3300 1200 50  0001 C CNN "Maufaturer"
+	1    3300 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C54
+U 1 1 5E2602BD
+P 10500 1350
+F 0 "C54" H 10592 1396 50  0000 L CNN
+F 1 "0.1UF,0402" H 10592 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10500 1350 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 10500 1350 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 10500 1350 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 10500 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 10500 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 10500 1350 50  0001 C CNN "Maufaturer"
+	1    10500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:LSF0108PWR-aardonyx U8
+U 1 1 5DEE23A8
+P 6800 2550
+F 0 "U8" H 6450 3300 50  0000 C CNN
+F 1 "LSF0108PWR" H 7100 1800 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6800 2550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 6800 2550 50  0001 C CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 6800 2550 50  0001 C CNN "Description"
+F 5 "296-37828-1-ND" H 6800 2550 50  0001 C CNN "Digikey PartNumber"
+F 6 "LSF0108PWR" H 6800 2550 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 6800 2550 50  0001 C CNN "Maufaturer"
+	1    6800 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C51
+U 1 1 5E26A35A
+P 6250 1300
+F 0 "C51" H 6342 1346 50  0000 L CNN
+F 1 "0.1UF,0402" H 6342 1255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6250 1300 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 6250 1300 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 6250 1300 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 6250 1300 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 6250 1300 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 6250 1300 50  0001 C CNN "Maufaturer"
+	1    6250 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C53
+U 1 1 5E266913
+P 9150 1350
+F 0 "C53" H 9242 1396 50  0000 L CNN
+F 1 "0.1UF,0402" H 9242 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9150 1350 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 9150 1350 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 9150 1350 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 9150 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 9150 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 9150 1350 50  0001 C CNN "Maufaturer"
+	1    9150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R37
+U 1 1 5E2602B7
+P 9900 1400
+F 0 "R37" H 9968 1446 50  0000 L CNN
+F 1 "200KE,0402" H 9968 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9940 1390 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 9900 1400 50  0001 C CNN
+F 4 "RES 200K OHM 0.1% 1/16W 0402 " H 9900 1400 50  0001 C CNN "Description"
+F 5 "2019-RN73H1ETTP2003B25CT-ND " H 9900 1400 50  0001 C CNN "Digikey PartNumber"
+F 6 "RN73H1ETTP2003B25" H 9900 1400 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 9900 1400 50  0001 C CNN "Maufaturer"
+	1    9900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:C_Small-aardonyx C52
+U 1 1 5E253D0A
+P 7550 1300
+F 0 "C52" H 7642 1346 50  0000 L CNN
+F 1 "0.1UF,0402" H 7642 1255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7550 1300 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/avx-corporation/04023C104JAT2A/478-10050-1-ND/6564273" H 7550 1300 50  0001 C CNN
+F 4 "CAP CER 0.1UF 25V X7R 0402" H 7550 1300 50  0001 C CNN "Description"
+F 5 "478-10050-1-ND" H 7550 1300 50  0001 C CNN "Digikey PartNumber"
+F 6 "04023C104JAT2A" H 7550 1300 50  0001 C CNN "Manufactured Part Number"
+F 7 "AVX Corporation" H 7550 1300 50  0001 C CNN "Maufaturer"
+	1    7550 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:R_US-aardonyx R36
+U 1 1 5E2531D9
+P 6950 1350
+F 0 "R36" H 7018 1396 50  0000 L CNN
+F 1 "200KE,0402" H 7018 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6990 1340 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/koa-speer-electronics-inc/RN73H1ETTP2003B25/2019-RN73H1ETTP2003B25CT-ND/9916930" H 6950 1350 50  0001 C CNN
+F 4 "RES 200K OHM 0.1% 1/16W 0402 " H 6950 1350 50  0001 C CNN "Description"
+F 5 "2019-RN73H1ETTP2003B25CT-ND " H 6950 1350 50  0001 C CNN "Digikey PartNumber"
+F 6 "RN73H1ETTP2003B25" H 6950 1350 50  0001 C CNN "Manufactured Part Number"
+F 7 "KOA Speer Electronics, Inc." H 6950 1350 50  0001 C CNN "Maufaturer"
+	1    6950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:LSF0108PWR-aardonyx U9
+U 1 1 5E250FD7
+P 9750 2600
+F 0 "U9" H 9400 3350 50  0000 C CNN
+F 1 "LSF0108PWR" H 10050 1850 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9750 2600 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/texas-instruments/LSF0108PWR/296-37828-1-ND/4876357" H 9750 2600 50  0001 C CNN
+F 4 "IC TRNSLTR BIDIRECTIONAL 20TSSOP" H 9750 2600 50  0001 C CNN "Description"
+F 5 "296-37828-1-ND" H 9750 2600 50  0001 C CNN "Digikey PartNumber"
+F 6 "LSF0108PWR" H 9750 2600 50  0001 C CNN "Manufactured Part Number"
+F 7 "Texas Instruments" H 9750 2600 50  0001 C CNN "Maufaturer"
+	1    9750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:CAT24M01WI-GT3-aardonyx U5
+U 1 1 5DF07821
+P 1500 5650
+F 0 "U5" H 1200 6150 50  0000 C CNN
+F 1 "CAT24M01WI-GT3" H 1900 5150 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1500 5650 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/on-semiconductor/CAT24M01WI-GT3/CAT24M01WI-GT3OSCT-ND/2698362" H 1500 5650 50  0001 C CNN
+F 4 "IC EEPROM 1M I2C 1MHZ 8SOIC" H 1500 5650 50  0001 C CNN "Description"
+F 5 "CAT24M01XI-T2OSCT-ND" H 1500 5650 50  0001 C CNN "Digikey PartNumber"
+F 6 "CAT24M01XI-T2" H 1500 5650 50  0001 C CNN "Manufactured Part Number"
+F 7 "ON Semiconductor" H 1500 5650 50  0001 C CNN "Maufaturer"
+	1    1500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:IS25LP256x-xM-aardonyx U6
+U 1 1 5DEF65AC
+P 2750 1950
+F 0 "U6" H 2400 2400 50  0000 C CNN
+F 1 "IS25LP256x-xM" H 3150 1500 50  0000 C CNN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 2800 2550 50  0001 C CNN
+F 3 "https://www.digikey.in/product-detail/en/issi-integrated-silicon-solution-inc/IS25LP256D-JMLE/706-1611-ND/7567432" H 2800 1450 50  0001 C CNN
+F 4 "IC FLASH 256M SPI 133MHZ 16SOIC" H 2750 1950 50  0001 C CNN "Description"
+F 5 "706-1611-ND" H 2750 1950 50  0001 C CNN "Digikey PartNumber"
+F 6 "IS25LP256D-JMLE" H 2750 1950 50  0001 C CNN "Manufactured Part Number"
+F 7 "ISSI, Integrated Silicon Solution Inc" H 2750 1950 50  0001 C CNN "Maufaturer"
+	1    2750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4550 8950 4700
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F68F124
+P 4050 7200
+AR Path="/5D8B3761/5F68F124" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37DE/5F68F124" Ref="#PWR0196"  Part="1" 
+F 0 "#PWR0196" H 4200 7150 50  0001 C CNN
+F 1 "V3P3" H 4055 7373 50  0000 C CNN
+F 2 "" H 4050 7200 50  0001 C CNN
+F 3 "" H 4050 7200 50  0001 C CNN
+	1    4050 7200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1850 3250 1100 3250
-Text Label 1850 3250 0    50   ~ 0
-QSPI0_CLK
+	4050 7200 4950 7200
+$Comp
+L Aardonyx-rescue:VAC #PWR0197
+U 1 1 5F6B0B1F
+P 4550 7100
+F 0 "#PWR0197" H 4700 7050 50  0001 C CNN
+F 1 "VAC" H 4555 7273 50  0000 C CNN
+F 2 "" H 4550 7100 50  0001 C CNN
+F 3 "" H 4550 7100 50  0001 C CNN
+	1    4550 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aardonyx-rescue:VAC #PWR0198
+U 1 1 5F6C2E4F
+P 4200 4750
+F 0 "#PWR0198" H 4350 4700 50  0001 C CNN
+F 1 "VAC" H 4205 4923 50  0000 C CNN
+F 2 "" H 4200 4750 50  0001 C CNN
+F 3 "" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 4900
+Wire Wire Line
+	4200 4750 4200 4900
 Wire Bus Line
 	8650 2150 8650 2700
 Wire Bus Line

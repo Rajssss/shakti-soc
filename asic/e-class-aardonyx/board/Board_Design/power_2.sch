@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -190,41 +191,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 2150 5100 2400
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR099
-U 1 1 5E72DA50
-P 3950 4850
-F 0 "#PWR099" H 4100 4800 50  0001 C CNN
-F 1 "V3P3" H 3955 5025 50  0000 C CNN
-F 2 "" H 3950 4850 50  0001 C CNN
-F 3 "" H 3950 4850 50  0001 C CNN
-	1    3950 4850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5100 1250 5100 1400
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0103
-U 1 1 5E745C1C
-P 4300 1550
-F 0 "#PWR0103" H 4450 1500 50  0001 C CNN
-F 1 "V3P3" H 4305 1725 50  0000 C CNN
-F 2 "" H 4300 1550 50  0001 C CNN
-F 3 "" H 4300 1550 50  0001 C CNN
-	1    4300 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0108
-U 1 1 5E789A61
-P 5100 1250
-F 0 "#PWR0108" H 5250 1200 50  0001 C CNN
-F 1 "V3P3" H 5105 1425 50  0000 C CNN
-F 2 "" H 5100 1250 50  0001 C CNN
-F 3 "" H 5100 1250 50  0001 C CNN
-	1    5100 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:GND-aardonyx #PWR?
 U 1 1 5E722879
 P 2300 2600
@@ -306,8 +272,6 @@ Wire Wire Line
 Wire Wire Line
 	8450 1850 8450 2000
 Wire Wire Line
-	9200 1750 9200 1850
-Wire Wire Line
 	8800 1850 9200 1850
 Wire Wire Line
 	7300 2700 7300 2800
@@ -352,19 +316,6 @@ F 1 "GND" H 7305 2627 50  0000 C CNN
 F 2 "" H 7300 2800 50  0001 C CNN
 F 3 "" H 7300 2800 50  0001 C CNN
 	1    7300 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR?
-U 1 1 5EC50BB0
-P 6650 1450
-AR Path="/5DB8A7DC/5EC50BB0" Ref="#PWR?"  Part="1" 
-AR Path="/5E6E93B2/5EC50BB0" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H 6800 1400 50  0001 C CNN
-F 1 "V5P0" H 6645 1625 50  0000 C CNN
-F 2 "" H 6650 1450 50  0001 C CNN
-F 3 "" H 6650 1450 50  0001 C CNN
-	1    6650 1450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -527,32 +478,10 @@ F 7 "Yageo" H 10500 1350 50  0001 C CNN "Maufaturer"
 $EndComp
 Wire Wire Line
 	10500 1500 10500 1650
-$Comp
-L Aardonyx-rescue:V1P8-aardonyx #PWR0119
-U 1 1 5EC6CCEE
-P 9200 1750
-F 0 "#PWR0119" H 9350 1700 50  0001 C CNN
-F 1 "V1P8" H 9205 1925 50  0000 C CNN
-F 2 "" H 9200 1750 50  0001 C CNN
-F 3 "" H 9200 1750 50  0001 C CNN
-	1    9200 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6850 2250 5900 2250
 Text Label 5900 2250 0    50   ~ 0
 V18_EN
-$Comp
-L Aardonyx-rescue:V1P8-aardonyx #PWR0123
-U 1 1 5ECE1375
-P 10500 1000
-F 0 "#PWR0123" H 10650 950 50  0001 C CNN
-F 1 "V1P8" H 10505 1175 50  0000 C CNN
-F 2 "" H 10500 1000 50  0001 C CNN
-F 3 "" H 10500 1000 50  0001 C CNN
-	1    10500 1000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5ECF805D
@@ -572,19 +501,6 @@ F 7 "KOA Speer Electronics, Inc." H 8550 5800 50  0001 C CNN "Maufaturer"
 $EndComp
 Wire Wire Line
 	8550 5950 8550 6200
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0116
-U 1 1 5ECF8066
-P 8550 5550
-F 0 "#PWR0116" H 8700 5500 50  0001 C CNN
-F 1 "V3P3" H 8555 5725 50  0000 C CNN
-F 2 "" H 8550 5550 50  0001 C CNN
-F 3 "" H 8550 5550 50  0001 C CNN
-	1    8550 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 5550 8550 5650
 Text Label 4350 4250 2    50   ~ 0
 RESET_ASIC
 $Comp
@@ -638,17 +554,6 @@ F 7 "KOA Speer Electronics, Inc." H 9550 5000 50  0001 C CNN "Maufaturer"
 	1    9550 5000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0121
-U 1 1 5ED5149E
-P 9250 4500
-F 0 "#PWR0121" H 9400 4450 50  0001 C CNN
-F 1 "V3P3" H 9255 4675 50  0000 C CNN
-F 2 "" H 9250 4500 50  0001 C CNN
-F 3 "" H 9250 4500 50  0001 C CNN
-	1    9250 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9550 4750 9550 4850
 Wire Wire Line
@@ -678,8 +583,6 @@ F 7 "AVX Corporation" H 8900 4750 50  0001 C CNN "Maufaturer"
 	1    8900 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 4500 9250 4550
 Wire Wire Line
 	9250 4550 8900 4550
 Wire Wire Line
@@ -741,19 +644,6 @@ Wire Wire Line
 	10300 5150 10300 5300
 Wire Wire Line
 	10300 5300 10200 5300
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0124
-U 1 1 5ED773E3
-P 10300 4600
-F 0 "#PWR0124" H 10450 4550 50  0001 C CNN
-F 1 "V3P3" H 10305 4775 50  0000 C CNN
-F 2 "" H 10300 4600 50  0001 C CNN
-F 3 "" H 10300 4600 50  0001 C CNN
-	1    10300 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10300 4600 10300 4850
 Wire Wire Line
 	10300 5300 10700 5300
 Connection ~ 10300 5300
@@ -822,19 +712,6 @@ F 7 "Yageo" H 7100 4950 50  0001 C CNN "Maufaturer"
 	1    7100 4950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0112
-U 1 1 5EDCF581
-P 7100 4550
-F 0 "#PWR0112" H 7250 4500 50  0001 C CNN
-F 1 "V3P3" H 7105 4725 50  0000 C CNN
-F 2 "" H 7100 4550 50  0001 C CNN
-F 3 "" H 7100 4550 50  0001 C CNN
-	1    7100 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7100 4550 7100 4800
 Wire Wire Line
 	7100 5100 7100 5250
 Connection ~ 7100 5250
@@ -945,8 +822,6 @@ Wire Wire Line
 Connection ~ 1650 1850
 Wire Wire Line
 	3950 4850 3800 4850
-Wire Wire Line
-	10500 1000 10500 1200
 $Comp
 L Aardonyx-rescue:FDN339AN-aardonyx Q1
 U 1 1 5EC7C18A
@@ -1000,22 +875,8 @@ Wire Wire Line
 	10500 1950 10500 2150
 Wire Wire Line
 	10500 2550 10500 2950
-$Comp
-L Aardonyx-rescue:V1P8-aardonyx #PWR0160
-U 1 1 5EC93A0D
-P 9700 2300
-F 0 "#PWR0160" H 9850 2250 50  0001 C CNN
-F 1 "V1P8" H 9705 2475 50  0000 C CNN
-F 2 "" H 9700 2300 50  0001 C CNN
-F 3 "" H 9700 2300 50  0001 C CNN
-	1    9700 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9700 2300 9700 2450
 Wire Wire Line
 	9700 2450 9850 2450
-Connection ~ 9700 2450
 Wire Wire Line
 	9700 2450 9700 2550
 Wire Wire Line
@@ -1065,26 +926,11 @@ F 7 "Yageo" H 4050 1650 50  0001 C CNN "Maufaturer"
 	0    1    1    0   
 $EndComp
 Connection ~ 3000 1650
-$Comp
-L Aardonyx-rescue:V5P0-aardonyx #PWR?
-U 1 1 5ED69FF2
-P 1650 1250
-AR Path="/5DB8A7DC/5ED69FF2" Ref="#PWR?"  Part="1" 
-AR Path="/5E6E93B2/5ED69FF2" Ref="#PWR0167"  Part="1" 
-F 0 "#PWR0167" H 1800 1200 50  0001 C CNN
-F 1 "V5P0" H 1645 1425 50  0000 C CNN
-F 2 "" H 1650 1250 50  0001 C CNN
-F 3 "" H 1650 1250 50  0001 C CNN
-	1    1650 1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 1650 3650 1650
 Connection ~ 3650 1650
 Wire Wire Line
 	4300 1650 4200 1650
-Wire Wire Line
-	4300 1550 4300 1650
 Wire Wire Line
 	3650 1650 3900 1650
 Connection ~ 8450 1850
@@ -1107,8 +953,6 @@ F 7 "AVX Corporation" H 4950 5700 50  0001 C CNN "Maufaturer"
 	1    4950 5700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 5500 4950 5600
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR?
 U 1 1 5EF66C3B
@@ -1141,8 +985,6 @@ F 7 "AVX Corporation" H 4350 5650 50  0001 C CNN "Maufaturer"
 	1    4350 5650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4350 5450 4350 5550
 $Comp
 L Aardonyx-rescue:GND-aardonyx #PWR?
 U 1 1 5EF6BD4D
@@ -1158,28 +1000,6 @@ F 3 "" H 4350 5800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4350 5750 4350 5800
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0171
-U 1 1 5EF721CD
-P 4350 5450
-F 0 "#PWR0171" H 4500 5400 50  0001 C CNN
-F 1 "V3P3" H 4355 5625 50  0000 C CNN
-F 2 "" H 4350 5450 50  0001 C CNN
-F 3 "" H 4350 5450 50  0001 C CNN
-	1    4350 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0172
-U 1 1 5EF77196
-P 4950 5500
-F 0 "#PWR0172" H 5100 5450 50  0001 C CNN
-F 1 "V3P3" H 4955 5675 50  0000 C CNN
-F 2 "" H 4950 5500 50  0001 C CNN
-F 3 "" H 4950 5500 50  0001 C CNN
-	1    4950 5500
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:ADM1186 U11
 U 1 1 5EF5A16B
@@ -1448,19 +1268,6 @@ F 3 "" H 1900 7400 50  0001 C CNN
 	1    1900 7400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 6250 1900 6550
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0174
-U 1 1 5F0935F3
-P 1100 6300
-F 0 "#PWR0174" H 1250 6250 50  0001 C CNN
-F 1 "V3P3" H 1105 6475 50  0000 C CNN
-F 2 "" H 1100 6300 50  0001 C CNN
-F 3 "" H 1100 6300 50  0001 C CNN
-	1    1100 6300
-	1    0    0    -1  
-$EndComp
 $Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5F0935FD
@@ -1508,8 +1315,6 @@ F 3 "" H 1100 7450 50  0001 C CNN
 	1    1100 7450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1100 6300 1100 6600
 Text Label 2100 4150 0    50   ~ 0
 V3P3_MON
 Wire Wire Line
@@ -1532,19 +1337,6 @@ F 7 "KOA Speer Electronics, Inc." H 4800 4250 50  0001 C CNN "Maufaturer"
 	0    1    1    0   
 $EndComp
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0176
-U 1 1 5F10DD07
-P 5050 4250
-F 0 "#PWR0176" H 5200 4200 50  0001 C CNN
-F 1 "V3P3" H 5055 4425 50  0000 C CNN
-F 2 "" H 5050 4250 50  0001 C CNN
-F 3 "" H 5050 4250 50  0001 C CNN
-	1    5050 4250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5050 4250 4950 4250
-$Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5F113ABC
 P 5000 6800
@@ -1559,17 +1351,6 @@ F 5 "2019-SG73S1ETTP103JCT-ND" H 5000 6800 50  0001 C CNN "Digikey PartNumber"
 F 6 "SG73S1ETTP103J" H 5000 6800 50  0001 C CNN "Manufactured Part Number"
 F 7 "KOA Speer Electronics, Inc." H 5000 6800 50  0001 C CNN "Maufaturer"
 	1    5000 6800
-	0    1    1    0   
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0177
-U 1 1 5F113AC2
-P 5250 6800
-F 0 "#PWR0177" H 5400 6750 50  0001 C CNN
-F 1 "V3P3" H 5255 6975 50  0000 C CNN
-F 2 "" H 5250 6800 50  0001 C CNN
-F 3 "" H 5250 6800 50  0001 C CNN
-	1    5250 6800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1592,19 +1373,6 @@ F 7 "KOA Speer Electronics, Inc." H 4950 6450 50  0001 C CNN "Maufaturer"
 	0    1    1    0   
 $EndComp
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0178
-U 1 1 5F119D18
-P 5200 6450
-F 0 "#PWR0178" H 5350 6400 50  0001 C CNN
-F 1 "V3P3" H 5205 6625 50  0000 C CNN
-F 2 "" H 5200 6450 50  0001 C CNN
-F 3 "" H 5200 6450 50  0001 C CNN
-	1    5200 6450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5200 6450 5100 6450
-$Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5F11FDAC
 P 5000 7150
@@ -1622,19 +1390,6 @@ F 7 "KOA Speer Electronics, Inc." H 5000 7150 50  0001 C CNN "Maufaturer"
 	0    1    1    0   
 $EndComp
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0179
-U 1 1 5F11FDB2
-P 5250 7150
-F 0 "#PWR0179" H 5400 7100 50  0001 C CNN
-F 1 "V3P3" H 5255 7325 50  0000 C CNN
-F 2 "" H 5250 7150 50  0001 C CNN
-F 3 "" H 5250 7150 50  0001 C CNN
-	1    5250 7150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5250 7150 5150 7150
-$Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5F142CB9
 P 4800 4000
@@ -1651,19 +1406,6 @@ F 7 "KOA Speer Electronics, Inc." H 4800 4000 50  0001 C CNN "Maufaturer"
 	1    4800 4000
 	0    1    1    0   
 $EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0180
-U 1 1 5F142CBF
-P 5050 4000
-F 0 "#PWR0180" H 5200 3950 50  0001 C CNN
-F 1 "V3P3" H 5055 4175 50  0000 C CNN
-F 2 "" H 5050 4000 50  0001 C CNN
-F 3 "" H 5050 4000 50  0001 C CNN
-	1    5050 4000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5050 4000 4950 4000
 $Comp
 L Aardonyx-rescue:TestPoint-aardonyx TP7
 U 1 1 5F176795
@@ -1750,17 +1492,6 @@ Wire Wire Line
 Wire Wire Line
 	3950 6450 4800 6450
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR0181
-U 1 1 5F2A4CFB
-P 2700 6250
-F 0 "#PWR0181" H 2850 6200 50  0001 C CNN
-F 1 "V3P3" H 2705 6425 50  0000 C CNN
-F 2 "" H 2700 6250 50  0001 C CNN
-F 3 "" H 2700 6250 50  0001 C CNN
-	1    2700 6250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:R_US-aardonyx R?
 U 1 1 5F2A4D05
 P 2700 7250
@@ -1807,8 +1538,6 @@ F 3 "" H 2700 7400 50  0001 C CNN
 	1    2700 7400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2700 6250 2700 6550
 Text Label 3250 7000 2    50   ~ 0
 UP_DOWN#
 Wire Wire Line
@@ -1823,14 +1552,292 @@ UP_DOWN#
 Wire Wire Line
 	2100 4600 2650 4600
 $Comp
-L Aardonyx-rescue:V1P8-aardonyx #PWR0183
-U 1 1 5F2ED247
-P 1900 6250
-F 0 "#PWR0183" H 2050 6200 50  0001 C CNN
-F 1 "V1P8" H 1905 6425 50  0000 C CNN
-F 2 "" H 1900 6250 50  0001 C CNN
-F 3 "" H 1900 6250 50  0001 C CNN
-	1    1900 6250
+L Aardonyx-rescue:V5P0 #PWR0199
+U 1 1 5EFB4425
+P 6650 1450
+F 0 "#PWR0199" H 6800 1400 50  0001 C CNN
+F 1 "V5P0" H 6655 1623 50  0000 C CNN
+F 2 "" H 6650 1450 50  0001 C CNN
+F 3 "" H 6650 1450 50  0001 C CNN
+	1    6650 1450
 	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V5P0 #PWR0200
+U 1 1 5EFB6C42
+P 1650 1250
+F 0 "#PWR0200" H 1800 1200 50  0001 C CNN
+F 1 "V5P0" H 1655 1423 50  0000 C CNN
+F 2 "" H 1650 1250 50  0001 C CNN
+F 3 "" H 1650 1250 50  0001 C CNN
+	1    1650 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2E7457
+P 4300 1550
+AR Path="/5D8B3761/5F2E7457" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F2E7457" Ref="#PWR0201"  Part="1" 
+F 0 "#PWR0201" H 4450 1500 50  0001 C CNN
+F 1 "V3P3" H 4305 1723 50  0000 C CNN
+F 2 "" H 4300 1550 50  0001 C CNN
+F 3 "" H 4300 1550 50  0001 C CNN
+	1    4300 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1650 4300 1550
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2F5044
+P 5100 1300
+AR Path="/5D8B3761/5F2F5044" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F2F5044" Ref="#PWR0202"  Part="1" 
+F 0 "#PWR0202" H 5250 1250 50  0001 C CNN
+F 1 "V3P3" H 5105 1473 50  0000 C CNN
+F 2 "" H 5100 1300 50  0001 C CNN
+F 3 "" H 5100 1300 50  0001 C CNN
+	1    5100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1400 5100 1300
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F2FC54A
+P 1100 6250
+AR Path="/5D8B3761/5F2FC54A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F2FC54A" Ref="#PWR0203"  Part="1" 
+F 0 "#PWR0203" H 1250 6200 50  0001 C CNN
+F 1 "V3P3" H 1105 6423 50  0000 C CNN
+F 2 "" H 1100 6250 50  0001 C CNN
+F 3 "" H 1100 6250 50  0001 C CNN
+	1    1100 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 6250 1100 6600
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F303411
+P 2700 6200
+AR Path="/5D8B3761/5F303411" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F303411" Ref="#PWR0204"  Part="1" 
+F 0 "#PWR0204" H 2850 6150 50  0001 C CNN
+F 1 "V3P3" H 2705 6373 50  0000 C CNN
+F 2 "" H 2700 6200 50  0001 C CNN
+F 3 "" H 2700 6200 50  0001 C CNN
+	1    2700 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 6200 2700 6550
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F30A39A
+P 4950 5400
+AR Path="/5D8B3761/5F30A39A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F30A39A" Ref="#PWR0205"  Part="1" 
+F 0 "#PWR0205" H 5100 5350 50  0001 C CNN
+F 1 "V3P3" H 4955 5573 50  0000 C CNN
+F 2 "" H 4950 5400 50  0001 C CNN
+F 3 "" H 4950 5400 50  0001 C CNN
+	1    4950 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5400 4950 5600
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F3112F4
+P 4350 5350
+AR Path="/5D8B3761/5F3112F4" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F3112F4" Ref="#PWR0206"  Part="1" 
+F 0 "#PWR0206" H 4500 5300 50  0001 C CNN
+F 1 "V3P3" H 4355 5523 50  0000 C CNN
+F 2 "" H 4350 5350 50  0001 C CNN
+F 3 "" H 4350 5350 50  0001 C CNN
+	1    4350 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 5350 4350 5550
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F3181BE
+P 5400 3900
+AR Path="/5D8B3761/5F3181BE" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F3181BE" Ref="#PWR0207"  Part="1" 
+F 0 "#PWR0207" H 5550 3850 50  0001 C CNN
+F 1 "V3P3" H 5405 4073 50  0000 C CNN
+F 2 "" H 5400 3900 50  0001 C CNN
+F 3 "" H 5400 3900 50  0001 C CNN
+	1    5400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4000 5400 3900
+Wire Wire Line
+	4950 4000 5400 4000
+Wire Wire Line
+	5400 4250 5400 4000
+Wire Wire Line
+	4950 4250 5400 4250
+Connection ~ 5400 4000
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F335303
+P 5600 6350
+AR Path="/5D8B3761/5F335303" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F335303" Ref="#PWR0208"  Part="1" 
+F 0 "#PWR0208" H 5750 6300 50  0001 C CNN
+F 1 "V3P3" H 5605 6523 50  0000 C CNN
+F 2 "" H 5600 6350 50  0001 C CNN
+F 3 "" H 5600 6350 50  0001 C CNN
+	1    5600 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6450 5600 6350
+Wire Wire Line
+	5100 6450 5600 6450
+Wire Wire Line
+	5600 7150 5600 6450
+Wire Wire Line
+	5150 7150 5600 7150
+Connection ~ 5600 6450
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F34CD3A
+P 7100 4500
+AR Path="/5D8B3761/5F34CD3A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F34CD3A" Ref="#PWR0209"  Part="1" 
+F 0 "#PWR0209" H 7250 4450 50  0001 C CNN
+F 1 "V3P3" H 7105 4673 50  0000 C CNN
+F 2 "" H 7100 4500 50  0001 C CNN
+F 3 "" H 7100 4500 50  0001 C CNN
+	1    7100 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4500 7100 4800
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F35419A
+P 9250 4400
+AR Path="/5D8B3761/5F35419A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F35419A" Ref="#PWR0210"  Part="1" 
+F 0 "#PWR0210" H 9400 4350 50  0001 C CNN
+F 1 "V3P3" H 9255 4573 50  0000 C CNN
+F 2 "" H 9250 4400 50  0001 C CNN
+F 3 "" H 9250 4400 50  0001 C CNN
+	1    9250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4400 9250 4550
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F35B366
+P 8550 5600
+AR Path="/5D8B3761/5F35B366" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F35B366" Ref="#PWR0211"  Part="1" 
+F 0 "#PWR0211" H 8700 5550 50  0001 C CNN
+F 1 "V3P3" H 8555 5773 50  0000 C CNN
+F 2 "" H 8550 5600 50  0001 C CNN
+F 3 "" H 8550 5600 50  0001 C CNN
+	1    8550 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5600 8550 5650
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F36BE7A
+P 10300 4750
+AR Path="/5D8B3761/5F36BE7A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F36BE7A" Ref="#PWR0212"  Part="1" 
+F 0 "#PWR0212" H 10450 4700 50  0001 C CNN
+F 1 "V3P3" H 10305 4923 50  0000 C CNN
+F 2 "" H 10300 4750 50  0001 C CNN
+F 3 "" H 10300 4750 50  0001 C CNN
+	1    10300 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 4850 10300 4750
+$Comp
+L Aardonyx-rescue:V1P8 #PWR?
+U 1 1 5F4A286A
+P 9200 1750
+AR Path="/5D8B37B8/5F4A286A" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F4A286A" Ref="#PWR0213"  Part="1" 
+F 0 "#PWR0213" H 9350 1700 50  0001 C CNN
+F 1 "V1P8" H 9205 1923 50  0000 C CNN
+F 2 "" H 9200 1750 50  0001 C CNN
+F 3 "" H 9200 1750 50  0001 C CNN
+	1    9200 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 1850 9200 1750
+$Comp
+L Aardonyx-rescue:V1P8 #PWR?
+U 1 1 5F4AAE96
+P 9700 2350
+AR Path="/5D8B37B8/5F4AAE96" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F4AAE96" Ref="#PWR0214"  Part="1" 
+F 0 "#PWR0214" H 9850 2300 50  0001 C CNN
+F 1 "V1P8" H 9705 2523 50  0000 C CNN
+F 2 "" H 9700 2350 50  0001 C CNN
+F 3 "" H 9700 2350 50  0001 C CNN
+	1    9700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 2450 9700 2350
+$Comp
+L Aardonyx-rescue:V1P8 #PWR?
+U 1 1 5F4B2DD8
+P 10500 1100
+AR Path="/5D8B37B8/5F4B2DD8" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F4B2DD8" Ref="#PWR0215"  Part="1" 
+F 0 "#PWR0215" H 10650 1050 50  0001 C CNN
+F 1 "V1P8" H 10505 1273 50  0000 C CNN
+F 2 "" H 10500 1100 50  0001 C CNN
+F 3 "" H 10500 1100 50  0001 C CNN
+	1    10500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 1200 10500 1100
+$Comp
+L Aardonyx-rescue:V1P8 #PWR?
+U 1 1 5F4BBE42
+P 1900 6350
+AR Path="/5D8B37B8/5F4BBE42" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F4BBE42" Ref="#PWR0216"  Part="1" 
+F 0 "#PWR0216" H 2050 6300 50  0001 C CNN
+F 1 "V1P8" H 1905 6523 50  0000 C CNN
+F 2 "" H 1900 6350 50  0001 C CNN
+F 3 "" H 1900 6350 50  0001 C CNN
+	1    1900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6350 1900 6550
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F70DAFE
+P 3950 4850
+AR Path="/5D8B3761/5F70DAFE" Ref="#PWR?"  Part="1" 
+AR Path="/5E6E93B2/5F70DAFE" Ref="#PWR0217"  Part="1" 
+F 0 "#PWR0217" H 4100 4800 50  0001 C CNN
+F 1 "V3P3" V 3955 4978 50  0000 L CNN
+F 2 "" H 3950 4850 50  0001 C CNN
+F 3 "" H 3950 4850 50  0001 C CNN
+	1    3950 4850
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

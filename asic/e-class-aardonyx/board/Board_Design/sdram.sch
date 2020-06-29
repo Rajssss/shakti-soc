@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Aardonyx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -143,8 +144,6 @@ Wire Wire Line
 Connection ~ 2650 2400
 Wire Wire Line
 	2650 2400 2750 2400
-Wire Wire Line
-	2550 2400 2550 2200
 Connection ~ 2550 2400
 Wire Wire Line
 	4100 3000 4550 3000
@@ -548,8 +547,6 @@ Wire Wire Line
 Connection ~ 4150 1650
 Wire Wire Line
 	4150 1650 4400 1650
-Wire Wire Line
-	1650 1150 1650 1000
 Connection ~ 1650 1150
 Wire Wire Line
 	4400 1650 4400 1800
@@ -665,28 +662,6 @@ SDRAM_CLK
 Text Label 1650 3050 0    39   ~ 0
 SDRAM_CKE
 $Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR024
-U 1 1 5DC441F1
-P 1650 1000
-F 0 "#PWR024" H 1800 950 50  0001 C CNN
-F 1 "V3P3" H 1655 1175 50  0000 C CNN
-F 2 "" H 1650 1000 50  0001 C CNN
-F 3 "" H 1650 1000 50  0001 C CNN
-	1    1650 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR025
-U 1 1 5DC4BA51
-P 2550 2200
-F 0 "#PWR025" H 2700 2150 50  0001 C CNN
-F 1 "V3P3" H 2555 2375 50  0000 C CNN
-F 2 "" H 2550 2200 50  0001 C CNN
-F 3 "" H 2550 2200 50  0001 C CNN
-	1    2550 2200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Aardonyx-rescue:GND-aardonyx #PWR026
 U 1 1 5DC6067F
 P 3650 7450
@@ -719,19 +694,6 @@ F 1 "GND" H 7855 2877 50  0000 C CNN
 F 2 "" H 7850 3050 50  0001 C CNN
 F 3 "" H 7850 3050 50  0001 C CNN
 	1    7850 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR?
-U 1 1 5EFB4CFB
-P 9850 1800
-AR Path="/5D8B3740/5EFB4CFB" Ref="#PWR?"  Part="1" 
-AR Path="/5D8B37B8/5EFB4CFB" Ref="#PWR034"  Part="1" 
-F 0 "#PWR034" H 10000 1750 50  0001 C CNN
-F 1 "V3P3" H 9855 1975 50  0000 C CNN
-F 2 "" H 9850 1800 50  0001 C CNN
-F 3 "" H 9850 1800 50  0001 C CNN
-	1    9850 1800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -821,23 +783,8 @@ F 7 "AVX Corporation" H 10250 2000 50  0001 C CNN "Maufaturer"
 $EndComp
 Wire Wire Line
 	9550 2600 9800 2600
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR?
-U 1 1 5EFB4D20
-P 7000 1850
-AR Path="/5D8B3740/5EFB4D20" Ref="#PWR?"  Part="1" 
-AR Path="/5D8B37B8/5EFB4D20" Ref="#PWR030"  Part="1" 
-F 0 "#PWR030" H 7150 1800 50  0001 C CNN
-F 1 "V3P3" H 7005 2025 50  0000 C CNN
-F 2 "" H 7000 1850 50  0001 C CNN
-F 3 "" H 7000 1850 50  0001 C CNN
-	1    7000 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6850 1950 7000 1950
-Wire Wire Line
-	7000 1950 7000 1850
 Wire Wire Line
 	7000 1950 7150 1950
 Connection ~ 7000 1950
@@ -872,8 +819,6 @@ Wire Wire Line
 	7850 2850 7850 3000
 Wire Wire Line
 	9550 1950 9850 1950
-Wire Wire Line
-	9850 1800 9850 1850
 Wire Wire Line
 	9850 1950 9850 2050
 Wire Wire Line
@@ -913,21 +858,6 @@ Wire Wire Line
 Wire Wire Line
 	10250 2150 10250 2100
 Connection ~ 10150 2150
-$Comp
-L Aardonyx-rescue:V3P3-aardonyx #PWR?
-U 1 1 5EFB4D70
-P 6650 2300
-AR Path="/5D8B3740/5EFB4D70" Ref="#PWR?"  Part="1" 
-AR Path="/5D8B37B8/5EFB4D70" Ref="#PWR028"  Part="1" 
-F 0 "#PWR028" H 6800 2250 50  0001 C CNN
-F 1 "V3P3" H 6655 2475 50  0000 C CNN
-F 2 "" H 6650 2300 50  0001 C CNN
-F 3 "" H 6650 2300 50  0001 C CNN
-	1    6650 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 2300 6650 2350
 Wire Wire Line
 	6650 2350 6550 2350
 $Comp
@@ -1075,13 +1005,10 @@ F 3 "" H 7450 1700 50  0001 C CNN
 	1    7450 1700
 	1    0    0    -1  
 $EndComp
-Connection ~ 7650 1400
 Wire Wire Line
 	7450 1400 7450 1450
 Wire Wire Line
 	7650 1400 7450 1400
-Wire Wire Line
-	7650 1350 7650 1400
 $Comp
 L Aardonyx-rescue:C_Small-aardonyx C?
 U 1 1 5F8E5F7E
@@ -1460,17 +1387,6 @@ F 7 "SCL / IITM" H 9100 4500 50  0001 C CNN "Maufaturer"
 	4    9100 4500
 	0    1    1    0   
 $EndComp
-$Comp
-L Aardonyx-rescue:V1P8-skt32e_asic #PWR0140
-U 1 1 5ED7320E
-P 7650 1350
-F 0 "#PWR0140" H 7800 1300 50  0001 C CNN
-F 1 "V1P8" H 7655 1525 50  0000 C CNN
-F 2 "" H 7650 1350 50  0001 C CNN
-F 3 "" H 7650 1350 50  0001 C CNN
-	1    7650 1350
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	11200 3300 5950 3300
 Wire Notes Line
@@ -1483,10 +1399,99 @@ Text Notes 4250 6950 0    50   ~ 0
 512Mb - SDRAM (16 x 32Mbit)
 Text Notes 4250 7100 0    50   ~ 0
 86-pin TSOP-ll
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F10B8C3
+P 1650 1050
+AR Path="/5D8B3761/5F10B8C3" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37B8/5F10B8C3" Ref="#PWR0133"  Part="1" 
+F 0 "#PWR0133" H 1800 1000 50  0001 C CNN
+F 1 "V3P3" H 1655 1223 50  0000 C CNN
+F 2 "" H 1650 1050 50  0001 C CNN
+F 3 "" H 1650 1050 50  0001 C CNN
+	1    1650 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1050 1650 1150
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F1273CB
+P 2550 2200
+AR Path="/5D8B3761/5F1273CB" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37B8/5F1273CB" Ref="#PWR0134"  Part="1" 
+F 0 "#PWR0134" H 2700 2150 50  0001 C CNN
+F 1 "V3P3" H 2555 2373 50  0000 C CNN
+F 2 "" H 2550 2200 50  0001 C CNN
+F 3 "" H 2550 2200 50  0001 C CNN
+	1    2550 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2200 2550 2400
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F135917
+P 9850 1700
+AR Path="/5D8B3761/5F135917" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37B8/5F135917" Ref="#PWR0135"  Part="1" 
+F 0 "#PWR0135" H 10000 1650 50  0001 C CNN
+F 1 "V3P3" H 9855 1873 50  0000 C CNN
+F 2 "" H 9850 1700 50  0001 C CNN
+F 3 "" H 9850 1700 50  0001 C CNN
+	1    9850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 1700 9850 1850
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F142818
+P 7000 1750
+AR Path="/5D8B3761/5F142818" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37B8/5F142818" Ref="#PWR0136"  Part="1" 
+F 0 "#PWR0136" H 7150 1700 50  0001 C CNN
+F 1 "V3P3" H 7005 1923 50  0000 C CNN
+F 2 "" H 7000 1750 50  0001 C CNN
+F 3 "" H 7000 1750 50  0001 C CNN
+	1    7000 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 1750 7000 1950
+$Comp
+L Aardonyx-rescue:V3P3 #PWR?
+U 1 1 5F14ED8D
+P 6650 2200
+AR Path="/5D8B3761/5F14ED8D" Ref="#PWR?"  Part="1" 
+AR Path="/5D8B37B8/5F14ED8D" Ref="#PWR0140"  Part="1" 
+F 0 "#PWR0140" H 6800 2150 50  0001 C CNN
+F 1 "V3P3" H 6655 2373 50  0000 C CNN
+F 2 "" H 6650 2200 50  0001 C CNN
+F 3 "" H 6650 2200 50  0001 C CNN
+	1    6650 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2200 6650 2350
+$Comp
+L Aardonyx-rescue:V1P8 #PWR0156
+U 1 1 5F4938CA
+P 7650 1300
+F 0 "#PWR0156" H 7800 1250 50  0001 C CNN
+F 1 "V1P8" H 7655 1473 50  0000 C CNN
+F 2 "" H 7650 1300 50  0001 C CNN
+F 3 "" H 7650 1300 50  0001 C CNN
+	1    7650 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1400 7650 1300
 Wire Bus Line
 	1550 5700 1550 6100
 Wire Bus Line
 	1550 4150 1550 5550
 Wire Bus Line
 	4650 3000 4650 6600
+Connection ~ 7650 1400
 $EndSCHEMATC
