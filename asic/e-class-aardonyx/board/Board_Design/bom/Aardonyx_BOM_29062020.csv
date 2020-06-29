@@ -18,13 +18,14 @@ Conn_1x8,https://www.digikey.com/products/en?keywords=68000-408HLF,CONN HEADER V
 Conn_1x3_M,https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-203HLF/609-3464-ND/2023305,CONN HEADER VERT 3POS 2.54MM,609-3464-ND,68000-203HLF,Amphenol ICC (FCI),6
 Conn_1x4,https://www.digikey.com/product-detail/en/amphenol-icc-fci/68000-404HLF/609-3262-ND/1878463,CONN HEADER VERT 4POS 2.54MM,609-3262-ND,68000-404HLF,Amphenol ICC (FCI),2
 PJ-202H PWRJACK,https://www.digikey.com/products/en?keywords=PJ-202AH,CONN PWR JACK 2X5.5MM KINKED PIN,CP-202AH-ND,PJ-202AH,CUI Devices,1
-Conn_1x6_F,https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584,CONN RCPT 6POS 0.1 GOLD PCB,609-3558-ND,75915-306LF,Amphenol ICC (FCI),3
-Conn_1x10,https://www.digikey.com/product-detail/en/amphenol-icc-fci/68685-310LF/609-3584-ND/1525202,CONN RCPT 10POS 0.1 GOLD PCB,609-3584-ND,68685-310LF,Amphenol ICC (FCI),1
+Conn_1x6,https://www.digikey.com/products/en?keywords=68000-406HLF,CONN HEADER VERT 6POS 2.54MM,609-3263-ND,68000-406HLF,Amphenol ICC (FCI),2
 Conn_1x8_F,https://www.digikey.com/products/en?keywords=%0968685-308LF,CONN RCPT 8POS 0.1 GOLD PCB,609-3589-ND,68685-308LF,Amphenol ICC (FCI),2
+Conn_1x6_F,https://www.digikey.com/product-detail/en/amphenol-icc-fci/75915-306LF/609-3558-ND/1523584,CONN RCPT 6POS 0.1 GOLD PCB,609-3558-ND,75915-306LF,Amphenol ICC (FCI),1
+Conn_1x10_F,https://www.digikey.com/product-detail/en/amphenol-icc-fci/68685-310LF/609-3584-ND/1525202,CONN RCPT 10POS 0.1 GOLD PCB,609-3584-ND,68685-310LF,Amphenol ICC (FCI),1
 USB_OTG,https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118194-0001LF/609-4618-1-ND/2785382,CONN RCPT USB2.0 MICRO B SMD R/A,609-4618-1-ND,10118194-0001LF,Amphenol ICC (FCI),1
 CM3421Y600R-10,https://www.digikey.com/product-detail/en/laird-signal-integrity-products/CM3421Y600R-10/240-2501-1-ND/935987,CMC 15A 2LN 60 OHM SMD,240-2501-1-ND,CM3421Y600R-10,Laird-Signal Integrity Products,1
 3.3UH,https://www.digikey.in/product-detail/en/bourns-inc/SRN8040TA-3R3Y/SRN8040TA-3R3YCT-ND/6155255,FIXED IND 3.3UH 6.6A 15 MOHM SMD,SRN8040TA-3R3YCT-ND,SRN8040TA-3R3Y,Bourns Inc.,1
-"0.02E,2512",https://www.digikey.com/product-detail/en/yageo/PA2512FKF7W0R002E/YAG2142CT-ND/5139590,RES 0.002 OHM 1% 2W 2512,YAG2142CT-ND,PA2512FKF7W0R002E,Yageo,2
+"0.02E,2512",https://www.digikey.com/product-detail/en/yageo/PA2512FKF7W0R002E/YAG2142CT-ND/5139590,RES 0.002 OHM 1% 2W 2512,YAG2142CT-ND,PA2512FKF7W0R002E,Yageo,3
 "10KE,0805",https://www.digikey.in/product-detail/en/yageo/RC0805FR-0710KL/311-10-0KCRCT-ND/730482,RES SMD 10K OHM 1% 1/8W 0805,311-10.0KCRCT-ND,RC0805FR-0710KL,Yageo,2
 "169KE,0805",https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB1693V/P169KDACT-ND/3074985,RES 169K OHM 0.1% 1/8W 0805,P169KDACT-ND,ERA-6AEB1693V,Panasonic Electronic Components,1
 "30.1KE,0805",https://www.digikey.in/product-detail/en/panasonic-electronic-components/ERA-6AEB3012V/P30-1KDACT-ND/3075076,RES 30.1K OHM 0.1% 1/8W 0805,P30.1KDACT-ND,ERA-6AEB3012V,Panasonic Electronic Components,2
@@ -42,7 +43,7 @@ FDN339AN,https://www.digikey.com/product-detail/en/on-semiconductor/FDN339AN/FDN
 "22E,0402",https://www.digikey.com/product-detail/en/yageo/RC0402FR-0722RL/311-22-0LRCT-ND/729509,RES SMD 22 OHM 1% 1/16W 0402,311-22.0LRCT-ND,RC0402FR-0722RL,Yageo,76
 "220E,0402",https://www.digikey.in/product-detail/en/yageo/RC0402FR-07220RL/311-220LRDKR-ND/732459,RES SMD 220 OHM 1% 1/16W 0402,311-220LRDKR-ND,RC0402FR-07220RL,Yageo,3
 "4.7KE,0402",https://www.digikey.in/product-detail/en/yageo/RC0402JR-074K7L/311-4-7KJRCT-ND/726477,RES SMD 4.7K OHM 5% 1/16W 0402,311-4.7KJRCT-ND,RC0402JR-074K7L,Yageo,10
-"10KE,0402",https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218,RES 10K OHM 5% 1/8W 0402,2019-SG73S1ETTP103JCT-ND,SG73S1ETTP103J,"KOA Speer Electronics, Inc.",18
+"10KE,0402",https://www.digikey.in/product-detail/en/koa-speer-electronics-inc/SG73S1ETTP103J/2019-SG73S1ETTP103JCT-ND/10280218,RES 10K OHM 5% 1/8W 0402,2019-SG73S1ETTP103JCT-ND,SG73S1ETTP103J,"KOA Speer Electronics, Inc.",19
 "3.3kE, 0402",https://www.digikey.com/product-detail/en/yageo/RC0402JR-073K3L/311-3-3KJRCT-ND/729403,RES SMD 3.3K OHM 5% 1/16W 0402,311-3.3KJRCT-ND,RC0402JR-073K3L,Yageo,1
 "1.2kE, 0402",https://www.digikey.com/product-detail/en/yageo/RT0402DRE071K2L/311-2241-1-ND/6128660,RES SMD 1.2K OHM 5% 1/16W 0402,311-2241-1-ND,RT0402DRE071K2L,Yageo,2
 SW_SPST,https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/TMS6T1B1M1QE/450-2109-ND/5125729,SWITCH TOGGLE SPST 3A 120V,TMS6T1B1M1QE,TMS6T1B1M1QE (2267080-1),TE Connectivity ALCOSWITCH Switches,1
