@@ -1,4 +1,3 @@
-# See LICENSE.incore for license details
 
 class ValidationError(Exception):
     def __init__(self,message,errors):

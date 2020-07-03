@@ -1,4 +1,3 @@
-# See LICENSE.incore for license details
 import pathlib
 import subprocess
 import logging
