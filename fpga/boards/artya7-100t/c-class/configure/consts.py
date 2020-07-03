@@ -1,4 +1,3 @@
-# See LICENSE.incore for license details
 
 length_check_fields=['reset_pc', 'physical_addr_size']
 
