@@ -129,7 +129,7 @@ package Soc;
     Ifc_debug_halt_loop_axi4#(`paddr, ELEN, USERSPACE) debug_memory <- mkdebug_halt_loop_axi4;
     Ifc_bram_axi4#(`paddr, ELEN, USERSPACE, 13) bootmem <- mkbram_axi4(`BootRomBase,
                                                 "boot.mem", "MainMEM");
-	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 325);
+	  Ifc_uart_axi4#(`paddr,ELEN,0, 16) uart <- mkuart_axi4(curr_clk,curr_reset, 325, 0, 0);
     Ifc_clint_axi4#(`paddr, ELEN, 0, 1, 256) clint <- mkclint_axi4();
     Ifc_err_slave_axi4#(`paddr,ELEN,0) err_slave <- mkerr_slave_axi4;
 		Ifc_i2c_axi4#(`paddr, ELEN, 0) i2c <- mki2c_axi4(curr_clk, curr_reset);
@@ -213,7 +213,7 @@ package Soc;
 		rule rl_connect_plic_connections;
 			let tmp<- gpio.sb_gpio_to_plic.get;
 			Bit#(16) lv_gpio_intr= truncate(pack(tmp));
-			Bit#(27) plic_inputs= {2'b0, i2c.isint, lv_gpio_intr, wr_external_interrupts};
+			Bit#(27) plic_inputs= {1'b0, uart.interrupt, i2c.isint, lv_gpio_intr, wr_external_interrupts};
 			plic.ifc_external_irq_io(plic_inputs);
 		endrule
 

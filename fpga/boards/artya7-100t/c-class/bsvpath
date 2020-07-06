@@ -15,7 +15,7 @@ common_bsv/
 common_verilog/bsvwrappers/
 devices/bootrom
 devices/pwm
-devices/uart
+devices/uart_v2
 devices/clint
 devices/bram
 devices/riscvDebug013
