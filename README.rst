@@ -1,7 +1,9 @@
-###################################
-Central repository for Shakti SoC's
-###################################
-
+###########################################  
+Central Mirror-repository for Shakti SoC's
+##########################################  
+  
+Original Repo can be found at: https://gitlab.com/shaktiproject/cores/shakti-soc 
+  
 Getting Started
 ---------------
 
